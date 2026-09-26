@@ -32,4 +32,6 @@ fig.get_layout_engine().set(rect=(0,.12,1,.88))
 fig.text(.015,.028,'32 synthetic cases × 7 methods × 2 repeats. a: descriptive case bootstrap 95% intervals; b: 8 cases per group.' if en else '32 个合成案例 × 7 种方法 × 2 次重复。a：案例级描述性 95% 区间；b：每组 8 例。',fontsize=6.7,color='#52606b')
 suffix='.en' if en else ''
 for ext in ['png','svg','pdf']:fig.savefig(folder/f'experiment-overview{suffix}.{ext}',dpi=300)
+svg=folder/f'experiment-overview{suffix}.svg'
+svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf8').splitlines())+'\n',encoding='utf8',newline='\n')
 plt.close(fig);print(folder/f'experiment-overview{suffix}.png')
