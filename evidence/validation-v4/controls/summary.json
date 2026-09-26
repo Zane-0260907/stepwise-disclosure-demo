@@ -1,0 +1,92 @@
+{
+  "protocolId": "v4-controls-20260927",
+  "sourceCompletedAt": "2026-09-26T17:11:53.266Z",
+  "jobs": 256,
+  "verifiedProviderCalls": 272,
+  "summary": [
+    {
+      "method": "joint",
+      "runs": 64,
+      "passed": 57,
+      "success": 0.890625,
+      "extra": 0.03125,
+      "disclosed": 0.03125,
+      "modelCalls": 80,
+      "promptTokens": 59382,
+      "completionTokens": 7596,
+      "latencyP50": 1218.2088000000022,
+      "latencyP95": 2055.1294600000024
+    },
+    {
+      "method": "allowed_eager",
+      "runs": 64,
+      "passed": 58,
+      "success": 0.90625,
+      "extra": 0.5625,
+      "disclosed": 0.5625,
+      "modelCalls": 64,
+      "promptTokens": 43470,
+      "completionTokens": 5887,
+      "latencyP50": 971.5759999999991,
+      "latencyP95": 1981.323444999995
+    },
+    {
+      "method": "numeric_prefetch",
+      "runs": 64,
+      "passed": 58,
+      "success": 0.90625,
+      "extra": 0.0625,
+      "disclosed": 0.0625,
+      "modelCalls": 64,
+      "promptTokens": 43062,
+      "completionTokens": 5599,
+      "latencyP50": 896.9608500000002,
+      "latencyP95": 1827.3695550000018
+    },
+    {
+      "method": "no_acquisition",
+      "runs": 64,
+      "passed": 50,
+      "success": 0.78125,
+      "extra": 0,
+      "disclosed": 0,
+      "modelCalls": 64,
+      "promptTokens": 42822,
+      "completionTokens": 5563,
+      "latencyP50": 918.9627499999988,
+      "latencyP95": 1840.2700800000011
+    }
+  ],
+  "paired": {
+    "joint_vs_allowed_eager": {
+      "caseMeanDifference": -0.015625,
+      "descriptiveClusterBootstrap95": [
+        -0.15625,
+        0.125
+      ],
+      "clusters": 32
+    },
+    "joint_vs_numeric_prefetch": {
+      "caseMeanDifference": -0.015625,
+      "descriptiveClusterBootstrap95": [
+        -0.046875,
+        0
+      ],
+      "clusters": 32
+    },
+    "joint_vs_no_acquisition": {
+      "caseMeanDifference": 0.109375,
+      "descriptiveClusterBootstrap95": [
+        0.015625,
+        0.21875
+      ],
+      "clusters": 32
+    }
+  },
+  "limits": [
+    "Re-evaluation of the 32 previously published v3 cases; this is a stronger-control study, not a new holdout.",
+    "Aggregate repetitions within case; paired case bootstrap, 4000 draws, descriptive for this author-designed set.",
+    "No human text-quality score, cryptographic privacy, semantic non-disclosure, data-minimization optimality, or external-system superiority claim.",
+    "Counts describe observed disclosure through registered requests, not resistance to reconstruction or inference."
+  ]
+}

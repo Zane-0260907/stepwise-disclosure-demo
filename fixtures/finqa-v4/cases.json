@@ -1,0 +1,5161 @@
+[
+  {
+    "id": "finqa-a716046936d4",
+    "sourceId": "AMT/2007/page_29.pdf-1",
+    "sourceFile": "AMT/2007/page_29.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the square footage of properties in massachusetts?\\\\n\\\\n",
+      "en": "what is the square footage of properties in massachusetts?\\\\n\\\\n"
+    },
+    "question": "what is the square footage of properties in massachusetts?\\\\n\\\\n",
+    "schema": [
+      {
+        "id": "r1c2",
+        "row": "Boston, MA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r2c2",
+        "row": "Southborough, MA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r3c2",
+        "row": "Woburn, MA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r4c2",
+        "row": "Atlanta, GA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r5c2",
+        "row": "Cary, North Carolina",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r6c2",
+        "row": "Mexico City, Mexico",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r7c2",
+        "row": "Sao Paulo, Brazil",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      }
+    ],
+    "facts": {
+      "r1c2": 19600,
+      "r2c2": 13900,
+      "r3c2": 57800,
+      "r4c2": 21400,
+      "r5c2": 17500,
+      "r6c2": 11000,
+      "r7c2": 5200
+    },
+    "source": "FinQA/AMT/2007/page_29.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-3ee223ad3c39",
+    "sourceId": "MSI/2008/page_69.pdf-3",
+    "sourceFile": "MSI/2008/page_69.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in 2006 what was the percent of the operating earnings to the segment net sales",
+      "en": "in 2006 what was the percent of the operating earnings to the segment net sales"
+    },
+    "question": "in 2006 what was the percent of the operating earnings to the segment net sales",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "(Dollars in millions)",
+        "column": "<i>Years Ended December 31</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "(Dollars in millions)",
+        "column": "<i>Percent Change</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "(Dollars in millions)",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Segment net sales",
+        "column": "<i>Years Ended December 31</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Segment net sales",
+        "column": "<i>Percent Change</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Segment net sales",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "Segment net sales",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "Segment net sales",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Operating earnings (loss)",
+        "column": "<i>Years Ended December 31</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Operating earnings (loss)",
+        "column": "<i>Percent Change</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Operating earnings (loss)",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "Operating earnings (loss)",
+        "column": "column 4",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2008,
+      "r1c2": 2007,
+      "r1c3": 2006,
+      "r2c1": 12099,
+      "r2c2": 18988,
+      "r2c3": 28383,
+      "r2c4": -36,
+      "r2c5": -33,
+      "r3c1": -2199,
+      "r3c2": -1201,
+      "r3c3": 2690,
+      "r3c4": 83
+    },
+    "source": "FinQA/MSI/2008/page_69.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-f09190f397c1",
+    "sourceId": "GS/2014/page_165.pdf-1",
+    "sourceFile": "GS/2014/page_165.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what percentage of total other liabilities and accrued expenses in 2013 are due to compensation and benefits?",
+      "en": "what percentage of total other liabilities and accrued expenses in 2013 are due to compensation and benefits?"
+    },
+    "question": "what percentage of total other liabilities and accrued expenses in 2013 are due to compensation and benefits?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "$ in millions",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "$ in millions",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Compensation and benefits",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Compensation and benefits",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Noncontrolling interests1",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Noncontrolling interests1",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Income tax-related liabilities",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Income tax-related liabilities",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Employee interests in consolidated funds",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Employee interests in consolidated funds",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Subordinated liabilities issued by consolidated VIEs",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Subordinated liabilities issued by consolidated VIEs",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Accrued expenses and other",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c2",
+        "row": "Accrued expenses and other",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Total",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c2",
+        "row": "Total",
+        "column": "column 2",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2014,
+      "r1c2": 2013,
+      "r2c1": 8368,
+      "r2c2": 7874,
+      "r3c1": 404,
+      "r3c2": 326,
+      "r4c1": 1533,
+      "r4c2": 1974,
+      "r5c1": 176,
+      "r5c2": 210,
+      "r6c1": 843,
+      "r6c2": 477,
+      "r7c1": 4751,
+      "r7c2": 5183,
+      "r8c1": 16075,
+      "r8c2": 16044
+    },
+    "source": "FinQA/GS/2014/page_165.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-800c1900f403",
+    "sourceId": "ETR/2016/page_374.pdf-2",
+    "sourceFile": "ETR/2016/page_374.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the growth rate in net revenue in 20016 for entergy mississippi , inc.?",
+      "en": "what is the growth rate in net revenue in 20016 for entergy mississippi , inc.?"
+    },
+    "question": "what is the growth rate in net revenue in 20016 for entergy mississippi , inc.?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2015 net revenue",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Retail electric price",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Volume/weather",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Net wholesale revenue",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Reserve equalization",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Other",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "2016 net revenue",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 696.3,
+      "r2c1": 12.9,
+      "r3c1": 4.7,
+      "r4c1": -2.4,
+      "r5c1": -2.8,
+      "r6c1": -3.3,
+      "r7c1": 705.4
+    },
+    "source": "FinQA/ETR/2016/page_374.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-0cf68248784a",
+    "sourceId": "FBHS/2017/page_22.pdf-1",
+    "sourceFile": "FBHS/2017/page_22.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in 2017 what was the ratio of the cabinets sales to the doors",
+      "en": "in 2017 what was the ratio of the cabinets sales to the doors"
+    },
+    "question": "in 2017 what was the ratio of the cabinets sales to the doors",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Cabinets",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r1c2",
+        "row": "Cabinets",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r2c1",
+        "row": "Plumbing",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r2c2",
+        "row": "Plumbing",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r3c1",
+        "row": "Doors",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r3c2",
+        "row": "Doors",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r4c1",
+        "row": "Security",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r4c2",
+        "row": "Security",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r5c1",
+        "row": "Total",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r5c2",
+        "row": "Total",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      }
+    ],
+    "facts": {
+      "r1c1": 2467.1,
+      "r1c2": 47,
+      "r2c1": 1720.8,
+      "r2c2": 33,
+      "r3c1": 502.9,
+      "r3c2": 9,
+      "r4c1": 592.5,
+      "r4c2": 11,
+      "r5c1": 5283.3,
+      "r5c2": 100
+    },
+    "source": "FinQA/FBHS/2017/page_22.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-ac5f527290e8",
+    "sourceId": "UNP/2006/page_15.pdf-2",
+    "sourceFile": "UNP/2006/page_15.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "as of december 31 , 2006 what was the percent of the total route miles covered by the main line",
+      "en": "as of december 31 , 2006 what was the percent of the total route miles covered by the main line"
+    },
+    "question": "as of december 31 , 2006 what was the percent of the total route miles covered by the main line",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Main line",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Main line",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Branch line",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Branch line",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Yards, sidings and other lines",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Yards, sidings and other lines",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 27318,
+      "r1c2": 27301,
+      "r2c1": 5021,
+      "r2c2": 5125,
+      "r3c1": 19257,
+      "r3c2": 20241,
+      "r4c1": 51596,
+      "r4c2": 52667
+    },
+    "source": "FinQA/UNP/2006/page_15.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-a9d26f4af6c8",
+    "sourceId": "GS/2013/page_72.pdf-1",
+    "sourceFile": "GS/2013/page_72.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net effect of adjustment from common shareholders 2019 equity to basel iii cet1?",
+      "en": "what is the net effect of adjustment from common shareholders 2019 equity to basel iii cet1?"
+    },
+    "question": "what is the net effect of adjustment from common shareholders 2019 equity to basel iii cet1?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Common shareholders’ equity",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "Goodwill",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "Identifiable intangible assets",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "Deferred tax liabilities",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r5c1",
+        "row": "Goodwill and identifiable intangible assets, net of deferred tax liabilities",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r6c1",
+        "row": "Deductions for investments in nonconsolidated financial institutions1",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r7c1",
+        "row": "Otheradjustments2",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r8c1",
+        "row": "Basel III CET1",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r9c1",
+        "row": "Basel III Advanced RWAs",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      },
+      {
+        "id": "r10c1",
+        "row": "Basel III Advanced CET1 Ratio",
+        "column": "As of December 2013",
+        "unitHint": "<i>$ in millions</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 71267,
+      "r2c1": -3705,
+      "r3c1": -671,
+      "r4c1": 908,
+      "r5c1": -3468,
+      "r6c1": -9091,
+      "r7c1": -489,
+      "r8c1": 58219,
+      "r9c1": 594662,
+      "r10c1": 9.8
+    },
+    "source": "FinQA/GS/2013/page_72.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-54dbf1344e6d",
+    "sourceId": "LMT/2014/page_50.pdf-2",
+    "sourceFile": "LMT/2014/page_50.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the change in millions in backlog at year-end between 2013 and 2014?",
+      "en": "what was the change in millions in backlog at year-end between 2013 and 2014?"
+    },
+    "question": "what was the change in millions in backlog at year-end between 2013 and 2014?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Net sales",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Net sales",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Net sales",
+        "column": "2012",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Operating profit",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Operating profit",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Operating profit",
+        "column": "2012",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Operating margins",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Operating margins",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Operating margins",
+        "column": "2012",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Backlog at year-end",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Backlog at year-end",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Backlog at year-end",
+        "column": "2012",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 8065,
+      "r1c2": 7958,
+      "r1c3": 8347,
+      "r2c1": 1039,
+      "r2c2": 1045,
+      "r2c3": 1083,
+      "r3c1": 12.9,
+      "r3c2": 13.1,
+      "r3c3": 13,
+      "r4c1": 18900,
+      "r4c2": 20500,
+      "r4c3": 18100
+    },
+    "source": "FinQA/LMT/2014/page_50.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-cab91d08d5a2",
+    "sourceId": "UNP/2010/page_21.pdf-1",
+    "sourceFile": "UNP/2010/page_21.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "for the quarter ended december 312010 what was percent of the total number of shares purchased in november",
+      "en": "for the quarter ended december 312010 what was percent of the total number of shares purchased in november"
+    },
+    "question": "for the quarter ended december 312010 what was percent of the total number of shares purchased in november",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Oct. 1 through Oct. 31",
+        "column": "<i>Total Number ofSharesPurchased [a]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r1c2",
+        "row": "Oct. 1 through Oct. 31",
+        "column": "<i>AveragePrice PaidPer Share</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r1c3",
+        "row": "Oct. 1 through Oct. 31",
+        "column": "<i>Total Number of SharesPurchased as Part of aPublicly Announced Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r1c4",
+        "row": "Oct. 1 through Oct. 31",
+        "column": "<i>Maximum Number ofShares That May Yet</i><i>Be Purchased Under the Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "Nov. 1 through Nov. 30",
+        "column": "<i>Total Number ofSharesPurchased [a]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r2c2",
+        "row": "Nov. 1 through Nov. 30",
+        "column": "<i>AveragePrice PaidPer Share</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r2c3",
+        "row": "Nov. 1 through Nov. 30",
+        "column": "<i>Total Number of SharesPurchased as Part of aPublicly Announced Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r2c4",
+        "row": "Nov. 1 through Nov. 30",
+        "column": "<i>Maximum Number ofShares That May Yet</i><i>Be Purchased Under the Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "Dec. 1 through Dec. 31",
+        "column": "<i>Total Number ofSharesPurchased [a]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r3c2",
+        "row": "Dec. 1 through Dec. 31",
+        "column": "<i>AveragePrice PaidPer Share</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r3c3",
+        "row": "Dec. 1 through Dec. 31",
+        "column": "<i>Total Number of SharesPurchased as Part of aPublicly Announced Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r3c4",
+        "row": "Dec. 1 through Dec. 31",
+        "column": "<i>Maximum Number ofShares That May Yet</i><i>Be Purchased Under the Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "<i>Total Number ofSharesPurchased [a]</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "<i>AveragePrice PaidPer Share</i>",
+        "unitHint": "<i>Period</i>"
+      },
+      {
+        "id": "r4c3",
+        "row": "Total",
+        "column": "<i>Total Number of SharesPurchased as Part of aPublicly Announced Planor Program [b]</i>",
+        "unitHint": "<i>Period</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 725450,
+      "r1c2": 84.65,
+      "r1c3": 519554,
+      "r1c4": 17917736,
+      "r2c1": 1205260,
+      "r2c2": 89.92,
+      "r2c3": 1106042,
+      "r2c4": 16811694,
+      "r3c1": 1133106,
+      "r3c2": 92.59,
+      "r3c3": 875000,
+      "r3c4": 15936694,
+      "r4c1": 3063816,
+      "r4c2": 89.66,
+      "r4c3": 2500596
+    },
+    "source": "FinQA/UNP/2010/page_21.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-608aa18cb7ff",
+    "sourceId": "GS/2013/page_85.pdf-3",
+    "sourceFile": "GS/2013/page_85.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what percentage of total average securities and certain overnight cash deposits that are included in gce during 2012 were non-u.s . dollar-denominated?",
+      "en": "what percentage of total average securities and certain overnight cash deposits that are included in gce during 2012 were non-u.s . dollar-denominated?"
+    },
+    "question": "what percentage of total average securities and certain overnight cash deposits that are included in gce during 2012 were non-u.s . dollar-denominated?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "in millions",
+        "column": "Average for theYear Ended December",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "in millions",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "U.S. dollar-denominated",
+        "column": "Average for theYear Ended December",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "U.S. dollar-denominated",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Non-U.S. dollar-denominated",
+        "column": "Average for theYear Ended December",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Non-U.S. dollar-denominated",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "Average for theYear Ended December",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "column 2",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2013,
+      "r1c2": 2012,
+      "r2c1": 136824,
+      "r2c2": 125111,
+      "r3c1": 45826,
+      "r3c2": 46984,
+      "r4c1": 182650,
+      "r4c2": 172095
+    },
+    "source": "FinQA/GS/2013/page_85.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-cbb311fed646",
+    "sourceId": "AMT/2006/page_113.pdf-2",
+    "sourceFile": "AMT/2006/page_113.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net change in the balance of employee separations liability during 2004?",
+      "en": "what is the net change in the balance of employee separations liability during 2004?"
+    },
+    "question": "what is the net change in the balance of employee separations liability during 2004?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Employee separations",
+        "column": "Liability as of January 1, 2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Employee separations",
+        "column": "2004 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Employee separations",
+        "column": "2004 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c4",
+        "row": "Employee separations",
+        "column": "Liability as of December 31, 2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c5",
+        "row": "Employee separations",
+        "column": "2005 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c6",
+        "row": "Employee separations",
+        "column": "2005 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c7",
+        "row": "Employee separations",
+        "column": "Liability as of December 31, 2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c8",
+        "row": "Employee separations",
+        "column": "2006 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c9",
+        "row": "Employee separations",
+        "column": "2006 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c10",
+        "row": "Employee separations",
+        "column": "Liability as of December 31, 2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "Liability as of January 1, 2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "2004 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "2004 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "Liability as of December 31, 2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "2005 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c6",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "2005 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c7",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "Liability as of December 31, 2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c8",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "2006 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c9",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "2006 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c10",
+        "row": "Lease terminations and other facility closing costs",
+        "column": "Liability as of December 31, 2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Total",
+        "column": "Liability as of January 1, 2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Total",
+        "column": "2004 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Total",
+        "column": "2004 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "Total",
+        "column": "Liability as of December 31, 2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c5",
+        "row": "Total",
+        "column": "2005 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c6",
+        "row": "Total",
+        "column": "2005 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c7",
+        "row": "Total",
+        "column": "Liability as of December 31, 2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c8",
+        "row": "Total",
+        "column": "2006 Expense",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c9",
+        "row": "Total",
+        "column": "2006 Cash Payments",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c10",
+        "row": "Total",
+        "column": "Liability as of December 31, 2006",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2239,
+      "r1c2": 823,
+      "r1c3": -2397,
+      "r1c4": 665,
+      "r1c5": 84,
+      "r1c6": -448,
+      "r1c7": 301,
+      "r1c8": -267,
+      "r1c9": -34,
+      "r1c10": 0,
+      "r2c1": 1450,
+      "r2c2": -131,
+      "r2c3": -888,
+      "r2c4": 431,
+      "r2c5": 12,
+      "r2c6": -325,
+      "r2c7": 118,
+      "r2c8": -10,
+      "r2c9": -108,
+      "r2c10": 0,
+      "r3c1": 3689,
+      "r3c2": 692,
+      "r3c3": -3285,
+      "r3c4": 1096,
+      "r3c5": 96,
+      "r3c6": -773,
+      "r3c7": 419,
+      "r3c8": -277,
+      "r3c9": -142,
+      "r3c10": 0
+    },
+    "source": "FinQA/AMT/2006/page_113.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-46c940dd5b60",
+    "sourceId": "UA/2007/page_70.pdf-1",
+    "sourceFile": "UA/2007/page_70.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "as of december 312007 what was the percent of the schedule of the company 2019s future minimum payments to the total future minimum sponsorship and other marketing payments in 2008",
+      "en": "as of december 312007 what was the percent of the schedule of the company 2019s future minimum payments to the total future minimum sponsorship and other marketing payments in 2008"
+    },
+    "question": "as of december 312007 what was the percent of the schedule of the company 2019s future minimum payments to the total future minimum sponsorship and other marketing payments in 2008",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2008",
+        "column": "December 31,  2007",
+        "unitHint": "<i>(In thousands)</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "2009",
+        "column": "December 31,  2007",
+        "unitHint": "<i>(In thousands)</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "2010",
+        "column": "December 31,  2007",
+        "unitHint": "<i>(In thousands)</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "2011",
+        "column": "December 31,  2007",
+        "unitHint": "<i>(In thousands)</i>"
+      },
+      {
+        "id": "r5c1",
+        "row": "2012 and thereafter",
+        "column": "December 31,  2007",
+        "unitHint": "<i>(In thousands)</i>"
+      },
+      {
+        "id": "r6c1",
+        "row": "Total future minimum sponsorship and other marketing payments",
+        "column": "December 31,  2007",
+        "unitHint": "<i>(In thousands)</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 14684,
+      "r2c1": 14660,
+      "r3c1": 13110,
+      "r4c1": 10125,
+      "r5c1": 1005,
+      "r6c1": 53584
+    },
+    "source": "FinQA/UA/2007/page_70.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-53f343a337ad",
+    "sourceId": "MAS/2017/page_27.pdf-4",
+    "sourceFile": "MAS/2017/page_27.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the ratio of the value of the common stock masco to s&p 500 index in 2015",
+      "en": "what was the ratio of the value of the common stock masco to s&p 500 index in 2015"
+    },
+    "question": "what was the ratio of the value of the common stock masco to s&p 500 index in 2015",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Masco",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Masco",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Masco",
+        "column": "2015",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c4",
+        "row": "Masco",
+        "column": "2016",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c5",
+        "row": "Masco",
+        "column": "2017",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "S&P 500 Index",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "S&P 500 Index",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "S&P 500 Index",
+        "column": "2015",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "S&P 500 Index",
+        "column": "2016",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "S&P 500 Index",
+        "column": "2017",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "S&P Industrials Index",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "S&P Industrials Index",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "S&P Industrials Index",
+        "column": "2015",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "S&P Industrials Index",
+        "column": "2016",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c5",
+        "row": "S&P Industrials Index",
+        "column": "2017",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "S&P Consumer Durables & Apparel Index",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "S&P Consumer Durables & Apparel Index",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "S&P Consumer Durables & Apparel Index",
+        "column": "2015",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c4",
+        "row": "S&P Consumer Durables & Apparel Index",
+        "column": "2016",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c5",
+        "row": "S&P Consumer Durables & Apparel Index",
+        "column": "2017",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 138.48,
+      "r1c2": 155.26,
+      "r1c3": 200.79,
+      "r1c4": 227.08,
+      "r1c5": 318.46,
+      "r2c1": 132.04,
+      "r2c2": 149.89,
+      "r2c3": 151.94,
+      "r2c4": 169.82,
+      "r2c5": 206.49,
+      "r3c1": 140.18,
+      "r3c2": 153.73,
+      "r3c3": 149.83,
+      "r3c4": 177.65,
+      "r3c5": 214.55,
+      "r4c1": 135.84,
+      "r4c2": 148.31,
+      "r4c3": 147.23,
+      "r4c4": 138.82,
+      "r4c5": 164.39
+    },
+    "source": "FinQA/MAS/2017/page_27.pdf-4",
+    "split": "test"
+  },
+  {
+    "id": "finqa-833e3c9d11f6",
+    "sourceId": "DXC/2018/page_56.pdf-2",
+    "sourceFile": "DXC/2018/page_56.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in fiscal 2018 what percentage of total costs and expenses was selling general and administrative ( excludes depreciation and amortization and restructuring costs ) ?",
+      "en": "in fiscal 2018 what percentage of total costs and expenses was selling general and administrative ( excludes depreciation and amortization and restructuring costs ) ?"
+    },
+    "question": "in fiscal 2018 what percentage of total costs and expenses was selling general and administrative ( excludes depreciation and amortization and restructuring costs ) ?",
+    "schema": [
+      {
+        "id": "r1c4",
+        "row": "(in millions)",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Costs of services (excludes depreciation and amortization and restructuring costs)",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Costs of services (excludes depreciation and amortization and restructuring costs)",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Costs of services (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "Costs of services (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "Costs of services (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c6",
+        "row": "Costs of services (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Selling, general and administrative (excludes depreciation and amortization and restructuring costs)",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Selling, general and administrative (excludes depreciation and amortization and restructuring costs)",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Selling, general and administrative (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "Selling, general and administrative (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c5",
+        "row": "Selling, general and administrative (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c6",
+        "row": "Selling, general and administrative (excludes depreciation and amortization and restructuring costs)",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Depreciation and amortization",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Depreciation and amortization",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Depreciation and amortization",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c4",
+        "row": "Depreciation and amortization",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c5",
+        "row": "Depreciation and amortization",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c6",
+        "row": "Depreciation and amortization",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Restructuring costs",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Restructuring costs",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c3",
+        "row": "Restructuring costs",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c4",
+        "row": "Restructuring costs",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c5",
+        "row": "Restructuring costs",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c6",
+        "row": "Restructuring costs",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Interest expense, net",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Interest expense, net",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c3",
+        "row": "Interest expense, net",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c4",
+        "row": "Interest expense, net",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c5",
+        "row": "Interest expense, net",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c6",
+        "row": "Interest expense, net",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c3",
+        "row": "Debt extinguishment costs",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c6",
+        "row": "Debt extinguishment costs",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Other income, net",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c2",
+        "row": "Other income, net",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c3",
+        "row": "Other income, net",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c4",
+        "row": "Other income, net",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c5",
+        "row": "Other income, net",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c6",
+        "row": "Other income, net",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c1",
+        "row": "Total costs and expenses",
+        "column": "Fiscal Years Ended",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c2",
+        "row": "Total costs and expenses",
+        "column": "Percentage of Revenues",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c3",
+        "row": "Total costs and expenses",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c4",
+        "row": "Total costs and expenses",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c5",
+        "row": "Total costs and expenses",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c6",
+        "row": "Total costs and expenses",
+        "column": "column 6",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c4": 2018,
+      "r2c1": 17944,
+      "r2c2": 5545,
+      "r2c3": 5185,
+      "r2c4": 73,
+      "r2c5": 72.9,
+      "r2c6": 73,
+      "r3c1": 2010,
+      "r3c2": 1279,
+      "r3c3": 1059,
+      "r3c4": 8.2,
+      "r3c5": 16.8,
+      "r3c6": 14.9,
+      "r4c1": 1964,
+      "r4c2": 647,
+      "r4c3": 658,
+      "r4c4": 8,
+      "r4c5": 8.5,
+      "r4c6": 9.3,
+      "r5c1": 803,
+      "r5c2": 238,
+      "r5c3": 23,
+      "r5c4": 3.3,
+      "r5c5": 3.1,
+      "r5c6": 0.3,
+      "r6c1": 246,
+      "r6c2": 82,
+      "r6c3": 85,
+      "r6c4": 1,
+      "r6c5": 1.1,
+      "r6c6": 1.2,
+      "r7c3": 95,
+      "r7c6": 1.3,
+      "r8c1": -82,
+      "r8c2": -10,
+      "r8c3": -9,
+      "r8c4": -0.3,
+      "r8c5": -0.1,
+      "r8c6": -0.1,
+      "r9c1": 22885,
+      "r9c2": 7781,
+      "r9c3": 7096,
+      "r9c4": 93.2,
+      "r9c5": 102.3,
+      "r9c6": 99.9
+    },
+    "source": "FinQA/DXC/2018/page_56.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-201d2f029659",
+    "sourceId": "GS/2012/page_142.pdf-1",
+    "sourceFile": "GS/2012/page_142.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percentage change in net derivative liabilities under bilateral agreements between 2011 and 2012?",
+      "en": "what was the percentage change in net derivative liabilities under bilateral agreements between 2011 and 2012?"
+    },
+    "question": "what was the percentage change in net derivative liabilities under bilateral agreements between 2011 and 2012?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "in millions",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "in millions",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Net derivative liabilities under bilateral agreements",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Net derivative liabilities under bilateral agreements",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Collateral posted",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Collateral posted",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Additional collateral or termination payments for a one-notch downgrade",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Additional collateral or termination payments for a one-notch downgrade",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Additional collateral or termination payments for a two-notch downgrade",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Additional collateral or termination payments for a two-notch downgrade",
+        "column": "column 2",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2012,
+      "r1c2": 2011,
+      "r2c1": 27885,
+      "r2c2": 35066,
+      "r3c1": 24296,
+      "r3c2": 29002,
+      "r4c1": 1534,
+      "r4c2": 1303,
+      "r5c1": 2500,
+      "r5c2": 2183
+    },
+    "source": "FinQA/GS/2012/page_142.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-b668ff0468f6",
+    "sourceId": "HIG/2011/page_53.pdf-1",
+    "sourceFile": "HIG/2011/page_53.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "of the total net reserves , what portion is related to london market?",
+      "en": "of the total net reserves , what portion is related to london market?"
+    },
+    "question": "of the total net reserves , what portion is related to london market?",
+    "schema": [
+      {
+        "id": "r2c1",
+        "row": "Direct",
+        "column": "Total Reserves",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Assumed Reinsurance",
+        "column": "Total Reserves",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "London Market",
+        "column": "Total Reserves",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Total",
+        "column": "Total Reserves",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Ceded",
+        "column": "Total Reserves",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Net",
+        "column": "Total Reserves",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r2c1": 271,
+      "r3c1": 39,
+      "r4c1": 57,
+      "r5c1": 367,
+      "r6c1": -47,
+      "r7c1": 320
+    },
+    "source": "FinQA/HIG/2011/page_53.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-f6fd551b92ab",
+    "sourceId": "JPM/2009/page_175.pdf-4",
+    "sourceFile": "JPM/2009/page_175.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the total equity in 2009 , in millions of dollars?",
+      "en": "what is the total equity in 2009 , in millions of dollars?"
+    },
+    "question": "what is the total equity in 2009 , in millions of dollars?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Trading assets – debt and equity instruments",
+        "column": "2009",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r1c2",
+        "row": "Trading assets – debt and equity instruments",
+        "column": "2008",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r1c3",
+        "row": "Trading assets – debt and equity instruments",
+        "column": "2007",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r2c1",
+        "row": "Trading assets – derivative receivables",
+        "column": "2009",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r2c2",
+        "row": "Trading assets – derivative receivables",
+        "column": "2008",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r2c3",
+        "row": "Trading assets – derivative receivables",
+        "column": "2007",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r3c1",
+        "row": "Trading liabilities – debt and equityinstruments(a)",
+        "column": "2009",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r3c2",
+        "row": "Trading liabilities – debt and equityinstruments(a)",
+        "column": "2008",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r3c3",
+        "row": "Trading liabilities – debt and equityinstruments(a)",
+        "column": "2007",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r4c1",
+        "row": "Trading liabilities – derivative payables",
+        "column": "2009",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r4c2",
+        "row": "Trading liabilities – derivative payables",
+        "column": "2008",
+        "unitHint": "Year ended December 31, (in millions)"
+      },
+      {
+        "id": "r4c3",
+        "row": "Trading liabilities – derivative payables",
+        "column": "2007",
+        "unitHint": "Year ended December 31, (in millions)"
+      }
+    ],
+    "facts": {
+      "r1c1": 318063,
+      "r1c2": 384102,
+      "r1c3": 381415,
+      "r2c1": 110457,
+      "r2c2": 121417,
+      "r2c3": 65439,
+      "r3c1": 60224,
+      "r3c2": 78841,
+      "r3c3": 94737,
+      "r4c1": 77901,
+      "r4c2": 93200,
+      "r4c3": 65198
+    },
+    "source": "FinQA/JPM/2009/page_175.pdf-4",
+    "split": "test"
+  },
+  {
+    "id": "finqa-150cfb4e3ad5",
+    "sourceId": "GPN/2018/page_94.pdf-2",
+    "sourceFile": "GPN/2018/page_94.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the value in thousands of unvested restricted stock and performance awards at the weighted-averagegrant-datefair value as of december 31 , 2018?\\\\n",
+      "en": "what was the value in thousands of unvested restricted stock and performance awards at the weighted-averagegrant-datefair value as of december 31 , 2018?\\\\n"
+    },
+    "question": "what was the value in thousands of unvested restricted stock and performance awards at the weighted-averagegrant-datefair value as of december 31 , 2018?\\\\n",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Unvested at May 31, 2015",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Unvested at May 31, 2015",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Granted",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Granted",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Vested",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Vested",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Forfeited",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Forfeited",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Unvested at May 31, 2016",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Unvested at May 31, 2016",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Granted",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Granted",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Vested",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c2",
+        "row": "Vested",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Forfeited",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c2",
+        "row": "Forfeited",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c1",
+        "row": "Unvested at December 31, 2016",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c2",
+        "row": "Unvested at December 31, 2016",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r10c1",
+        "row": "Granted",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r10c2",
+        "row": "Granted",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r11c1",
+        "row": "Vested",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r11c2",
+        "row": "Vested",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r12c1",
+        "row": "Forfeited",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r12c2",
+        "row": "Forfeited",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r13c1",
+        "row": "Unvested at December 31, 2017",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r13c2",
+        "row": "Unvested at December 31, 2017",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r14c1",
+        "row": "Granted",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r14c2",
+        "row": "Granted",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r15c1",
+        "row": "Vested",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r15c2",
+        "row": "Vested",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r16c1",
+        "row": "Forfeited",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r16c2",
+        "row": "Forfeited",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      },
+      {
+        "id": "r17c1",
+        "row": "Unvested at December 31, 2018",
+        "column": "Shares (in thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r17c2",
+        "row": "Unvested at December 31, 2018",
+        "column": "Weighted-AverageGrant-DateFair Value",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 1848,
+      "r1c2": 28.97,
+      "r2c1": 461,
+      "r2c2": 57.04,
+      "r3c1": -633,
+      "r3c2": 27.55,
+      "r4c1": -70,
+      "r4c2": 34.69,
+      "r5c1": 1606,
+      "r5c2": 37.25,
+      "r6c1": 348,
+      "r6c2": 74.26,
+      "r7c1": -639,
+      "r7c2": 31.38,
+      "r8c1": -52,
+      "r8c2": 45.27,
+      "r9c1": 1263,
+      "r9c2": 49.55,
+      "r10c1": 899,
+      "r10c2": 79.79,
+      "r11c1": -858,
+      "r11c2": 39.26,
+      "r12c1": -78,
+      "r12c2": 59.56,
+      "r13c1": 1226,
+      "r13c2": 78.29,
+      "r14c1": 650,
+      "r14c2": 109.85,
+      "r15c1": -722,
+      "r15c2": 60.08,
+      "r16c1": -70,
+      "r16c2": 91.47,
+      "r17c1": 1084,
+      "r17c2": 108.51
+    },
+    "source": "FinQA/GPN/2018/page_94.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-dfa126d2b437",
+    "sourceId": "CDNS/2018/page_66.pdf-3",
+    "sourceFile": "CDNS/2018/page_66.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net effect of the adoption of new accounting standards?",
+      "en": "what is the net effect of the adoption of new accounting standards?"
+    },
+    "question": "what is the net effect of the adoption of new accounting standards?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Balance, December 30, 2017, as previously reported",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Revenue from Contracts with Customers (Topic 606)*",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Financial Instruments—Overall (Subtopic 825-10): Recognition and Measurement of Financial Assets and Financial Liabilities",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Income taxes (Topic 740): Intra-entity Transfers of Assets Other Than Inventory",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Balance, December 30, 2017, as adjusted",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Net Income",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Balance, December 29, 2018",
+        "column": "Retained Earnings (In thousands)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 341003,
+      "r3c1": 91640,
+      "r4c1": 2638,
+      "r5c1": -8349,
+      "r6c1": 426932,
+      "r7c1": 345777,
+      "r8c1": 772709
+    },
+    "source": "FinQA/CDNS/2018/page_66.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-4634aaeb6977",
+    "sourceId": "DRE/2008/page_46.pdf-3",
+    "sourceFile": "DRE/2008/page_46.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the average basic net income available for common shareholders from 2006 to 2008 in millions",
+      "en": "what was the average basic net income available for common shareholders from 2006 to 2008 in millions"
+    },
+    "question": "what was the average basic net income available for common shareholders from 2006 to 2008 in millions",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Basic net income available for common shareholders",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Basic net income available for common shareholders",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Basic net income available for common shareholders",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Minority interest in earnings of common unitholders",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Minority interest in earnings of common unitholders",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Minority interest in earnings of common unitholders",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Diluted net income available for common shareholders",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Diluted net income available for common shareholders",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Diluted net income available for common shareholders",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Weighted average number of common shares outstanding",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Weighted average number of common shares outstanding",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Weighted average number of common shares outstanding",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Weighted average partnership Units outstanding",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Weighted average partnership Units outstanding",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c3",
+        "row": "Weighted average partnership Units outstanding",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Dilutive shares for stock-based compensation plans (1)",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Dilutive shares for stock-based compensation plans (1)",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c3",
+        "row": "Dilutive shares for stock-based compensation plans (1)",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Weighted average number of common shares and potential dilutive securities",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c2",
+        "row": "Weighted average number of common shares and potential dilutive securities",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c3",
+        "row": "Weighted average number of common shares and potential dilutive securities",
+        "column": "2006",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 56616,
+      "r1c2": 217692,
+      "r1c3": 145095,
+      "r2c1": 2968,
+      "r2c2": 14399,
+      "r2c3": 14238,
+      "r3c1": 59584,
+      "r3c2": 232091,
+      "r3c3": 159333,
+      "r4c1": 146915,
+      "r4c2": 139255,
+      "r4c3": 134883,
+      "r5c1": 7619,
+      "r5c2": 9204,
+      "r5c3": 13186,
+      "r6c1": 507,
+      "r6c2": 1155,
+      "r6c3": 1324,
+      "r7c1": 155041,
+      "r7c2": 149614,
+      "r7c3": 149393
+    },
+    "source": "FinQA/DRE/2008/page_46.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-3be16351b526",
+    "sourceId": "C/2009/page_45.pdf-1",
+    "sourceFile": "C/2009/page_45.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what percent of net interest revenue where total operating expenses in 2009?",
+      "en": "what percent of net interest revenue where total operating expenses in 2009?"
+    },
+    "question": "what percent of net interest revenue where total operating expenses in 2009?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Net interest revenue",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r1c2",
+        "row": "Net interest revenue",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r1c3",
+        "row": "Net interest revenue",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r1c4",
+        "row": "Net interest revenue",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r1c5",
+        "row": "Net interest revenue",
+        "column": "% Change 2008 vs. 2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r2c1",
+        "row": "Non-interest revenue",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r2c2",
+        "row": "Non-interest revenue",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r2c3",
+        "row": "Non-interest revenue",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r2c4",
+        "row": "Non-interest revenue",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r3c1",
+        "row": "Revenues, net of interest expense",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r3c2",
+        "row": "Revenues, net of interest expense",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r3c3",
+        "row": "Revenues, net of interest expense",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r3c4",
+        "row": "Revenues, net of interest expense",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r4c1",
+        "row": "Total operating expenses",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r4c2",
+        "row": "Total operating expenses",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r4c3",
+        "row": "Total operating expenses",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r4c4",
+        "row": "Total operating expenses",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r4c5",
+        "row": "Total operating expenses",
+        "column": "% Change 2008 vs. 2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r5c1",
+        "row": "Net credit losses",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r5c2",
+        "row": "Net credit losses",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r5c3",
+        "row": "Net credit losses",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r6c1",
+        "row": "Provision for unfunded lending commitments",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r6c2",
+        "row": "Provision for unfunded lending commitments",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r6c3",
+        "row": "Provision for unfunded lending commitments",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r7c1",
+        "row": "Credit reserve builds/(release)",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r7c2",
+        "row": "Credit reserve builds/(release)",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r7c3",
+        "row": "Credit reserve builds/(release)",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r8c1",
+        "row": "Provisions for credit losses and for benefits and claims",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r8c2",
+        "row": "Provisions for credit losses and for benefits and claims",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r8c3",
+        "row": "Provisions for credit losses and for benefits and claims",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r8c4",
+        "row": "Provisions for credit losses and for benefits and claims",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r9c1",
+        "row": "(Loss) from continuing operations before taxes",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r9c2",
+        "row": "(Loss) from continuing operations before taxes",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r9c3",
+        "row": "(Loss) from continuing operations before taxes",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r9c4",
+        "row": "(Loss) from continuing operations before taxes",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r10c1",
+        "row": "Income taxes (benefits)",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r10c2",
+        "row": "Income taxes (benefits)",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r10c3",
+        "row": "Income taxes (benefits)",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r10c4",
+        "row": "Income taxes (benefits)",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r11c1",
+        "row": "(Loss) from continuing operations",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r11c2",
+        "row": "(Loss) from continuing operations",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r11c3",
+        "row": "(Loss) from continuing operations",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r11c4",
+        "row": "(Loss) from continuing operations",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r12c1",
+        "row": "Net income (loss) attributable to noncontrolling interests",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r12c2",
+        "row": "Net income (loss) attributable to noncontrolling interests",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r12c3",
+        "row": "Net income (loss) attributable to noncontrolling interests",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r12c4",
+        "row": "Net income (loss) attributable to noncontrolling interests",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r13c1",
+        "row": "Net (loss)",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r13c2",
+        "row": "Net (loss)",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r13c3",
+        "row": "Net (loss)",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r13c4",
+        "row": "Net (loss)",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r14c1",
+        "row": "EOP assets(in billions of dollars)",
+        "column": "2009",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r14c2",
+        "row": "EOP assets(in billions of dollars)",
+        "column": "2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r14c3",
+        "row": "EOP assets(in billions of dollars)",
+        "column": "2007",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r14c4",
+        "row": "EOP assets(in billions of dollars)",
+        "column": "% Change 2009 vs. 2008",
+        "unitHint": "In millions of dollars"
+      },
+      {
+        "id": "r14c5",
+        "row": "EOP assets(in billions of dollars)",
+        "column": "% Change 2008 vs. 2007",
+        "unitHint": "In millions of dollars"
+      }
+    ],
+    "facts": {
+      "r1c1": 3173,
+      "r1c2": 3332,
+      "r1c3": 2723,
+      "r1c4": -5,
+      "r1c5": 22,
+      "r2c1": -6855,
+      "r2c2": -42906,
+      "r2c3": -20619,
+      "r2c4": 84,
+      "r3c1": -3682,
+      "r3c2": -39574,
+      "r3c3": -17896,
+      "r3c4": 91,
+      "r4c1": 896,
+      "r4c2": 988,
+      "r4c3": 1070,
+      "r4c4": -9,
+      "r4c5": -8,
+      "r5c1": 5420,
+      "r5c2": 909,
+      "r5c3": 436,
+      "r6c1": 111,
+      "r6c2": -172,
+      "r6c3": 71,
+      "r7c1": -483,
+      "r7c2": 2844,
+      "r7c3": 378,
+      "r8c1": 5048,
+      "r8c2": 3581,
+      "r8c3": 885,
+      "r8c4": 41,
+      "r9c1": -9626,
+      "r9c2": -44143,
+      "r9c3": -19851,
+      "r9c4": 78,
+      "r10c1": -4323,
+      "r10c2": -17149,
+      "r10c3": -7740,
+      "r10c4": 75,
+      "r11c1": -5303,
+      "r11c2": -26994,
+      "r11c3": -12111,
+      "r11c4": 80,
+      "r12c1": -17,
+      "r12c2": -205,
+      "r12c3": 149,
+      "r12c4": 92,
+      "r13c1": -5286,
+      "r13c2": -26789,
+      "r13c3": -12260,
+      "r13c4": 80,
+      "r14c1": 154,
+      "r14c2": 241,
+      "r14c3": 351,
+      "r14c4": -36,
+      "r14c5": -31
+    },
+    "source": "FinQA/C/2009/page_45.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-fb8355d87c9f",
+    "sourceId": "ABMD/2006/page_43.pdf-3",
+    "sourceFile": "ABMD/2006/page_43.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what percentage of total obligations are operating lease obligations in 2008?",
+      "en": "what percentage of total obligations are operating lease obligations in 2008?"
+    },
+    "question": "what percentage of total obligations are operating lease obligations in 2008?",
+    "schema": [
+      {
+        "id": "r1c2",
+        "row": "Contractual Obligations",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Contractual Obligations",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c4",
+        "row": "Contractual Obligations",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c5",
+        "row": "Contractual Obligations",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Operating Lease Obligations",
+        "column": "Payments Due By Fiscal Year",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Operating Lease Obligations",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Operating Lease Obligations",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "Operating Lease Obligations",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "Operating Lease Obligations",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Other Obligations",
+        "column": "Payments Due By Fiscal Year",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Other Obligations",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Other Obligations",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "Other Obligations",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Total Obligations",
+        "column": "Payments Due By Fiscal Year",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Total Obligations",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Total Obligations",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c4",
+        "row": "Total Obligations",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c5",
+        "row": "Total Obligations",
+        "column": "column 5",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c2": 2007,
+      "r1c3": 2008,
+      "r1c4": 2009,
+      "r1c5": 2010,
+      "r2c1": 4819,
+      "r2c2": 1703,
+      "r2c3": 1371,
+      "r2c4": 1035,
+      "r2c5": 710,
+      "r3c1": 600,
+      "r3c2": 200,
+      "r3c3": 200,
+      "r3c4": 200,
+      "r4c1": 5419,
+      "r4c2": 1903,
+      "r4c3": 1571,
+      "r4c4": 1235,
+      "r4c5": 710
+    },
+    "source": "FinQA/ABMD/2006/page_43.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-8d6a0c40cb17",
+    "sourceId": "ABMD/2005/page_29.pdf-4",
+    "sourceFile": "ABMD/2005/page_29.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the percentage change in the risk-free rate from 2004 to 2005?",
+      "en": "what is the percentage change in the risk-free rate from 2004 to 2005?"
+    },
+    "question": "what is the percentage change in the risk-free rate from 2004 to 2005?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Risk-free interest rate",
+        "column": "2003",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Risk-free interest rate",
+        "column": "2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Risk-free interest rate",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Assumed stock price volatility",
+        "column": "2003",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Assumed stock price volatility",
+        "column": "2004",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Assumed stock price volatility",
+        "column": "2005",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2.92,
+      "r1c2": 2.56,
+      "r1c3": 3.87,
+      "r4c1": 85,
+      "r4c2": 86,
+      "r4c3": 84
+    },
+    "source": "FinQA/ABMD/2005/page_29.pdf-4",
+    "split": "test"
+  },
+  {
+    "id": "finqa-f036232828c0",
+    "sourceId": "BKR/2017/page_56.pdf-4",
+    "sourceFile": "BKR/2017/page_56.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net change in cash during 2016?",
+      "en": "what is the net change in cash during 2016?"
+    },
+    "question": "what is the net change in cash during 2016?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Operating activities",
+        "column": "2017",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r1c2",
+        "row": "Operating activities",
+        "column": "2016",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r1c3",
+        "row": "Operating activities",
+        "column": "2015",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r2c1",
+        "row": "Investing activities",
+        "column": "2017",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r2c2",
+        "row": "Investing activities",
+        "column": "2016",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r2c3",
+        "row": "Investing activities",
+        "column": "2015",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r3c1",
+        "row": "Financing activities",
+        "column": "2017",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r3c2",
+        "row": "Financing activities",
+        "column": "2016",
+        "unitHint": "(In millions)"
+      },
+      {
+        "id": "r3c3",
+        "row": "Financing activities",
+        "column": "2015",
+        "unitHint": "(In millions)"
+      }
+    ],
+    "facts": {
+      "r1c1": -799,
+      "r1c2": 262,
+      "r1c3": 1277,
+      "r2c1": -4130,
+      "r2c2": -472,
+      "r2c3": -466,
+      "r3c1": 10919,
+      "r3c2": -102,
+      "r3c3": -515
+    },
+    "source": "FinQA/BKR/2017/page_56.pdf-4",
+    "split": "test"
+  },
+  {
+    "id": "finqa-d36917ead636",
+    "sourceId": "HOLX/2009/page_151.pdf-2",
+    "sourceFile": "HOLX/2009/page_151.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the total fair value of non-vested shares as of september 27 , 2008?",
+      "en": "what is the total fair value of non-vested shares as of september 27 , 2008?"
+    },
+    "question": "what is the total fair value of non-vested shares as of september 27 , 2008?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Non-vested at September 27, 2008",
+        "column": "Number of Shares",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r1c2",
+        "row": "Non-vested at September 27, 2008",
+        "column": "Weighted-Average Grant-Date Fair Value",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r2c1",
+        "row": "Granted.",
+        "column": "Number of Shares",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r2c2",
+        "row": "Granted.",
+        "column": "Weighted-Average Grant-Date Fair Value",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r3c1",
+        "row": "Vested",
+        "column": "Number of Shares",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r3c2",
+        "row": "Vested",
+        "column": "Weighted-Average Grant-Date Fair Value",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r4c1",
+        "row": "Forfeited",
+        "column": "Number of Shares",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r4c2",
+        "row": "Forfeited",
+        "column": "Weighted-Average Grant-Date Fair Value",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r5c1",
+        "row": "Non-vested at September 26, 2009",
+        "column": "Number of Shares",
+        "unitHint": "Non-vested Shares"
+      },
+      {
+        "id": "r5c2",
+        "row": "Non-vested at September 26, 2009",
+        "column": "Weighted-Average Grant-Date Fair Value",
+        "unitHint": "Non-vested Shares"
+      }
+    ],
+    "facts": {
+      "r1c1": 1461,
+      "r1c2": 31.23,
+      "r2c1": 1669,
+      "r2c2": 14.46,
+      "r3c1": -210,
+      "r3c2": 23.87,
+      "r4c1": -150,
+      "r4c2": 23.44,
+      "r5c1": 2770,
+      "r5c2": 21.96
+    },
+    "source": "FinQA/HOLX/2009/page_151.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-e98007720c76",
+    "sourceId": "UNP/2016/page_52.pdf-2",
+    "sourceFile": "UNP/2016/page_52.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in 2015 what was the percent of the total operating revenue that was from chemical freight",
+      "en": "in 2015 what was the percent of the total operating revenue that was from chemical freight"
+    },
+    "question": "in 2015 what was the percent of the total operating revenue that was from chemical freight",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Agricultural Products",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r1c2",
+        "row": "Agricultural Products",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r1c3",
+        "row": "Agricultural Products",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r2c1",
+        "row": "Automotive",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r2c2",
+        "row": "Automotive",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r2c3",
+        "row": "Automotive",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r3c1",
+        "row": "Chemicals",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r3c2",
+        "row": "Chemicals",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r3c3",
+        "row": "Chemicals",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r4c1",
+        "row": "Coal",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r4c2",
+        "row": "Coal",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r4c3",
+        "row": "Coal",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r5c1",
+        "row": "Industrial Products",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r5c2",
+        "row": "Industrial Products",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r5c3",
+        "row": "Industrial Products",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r6c1",
+        "row": "Intermodal",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r6c2",
+        "row": "Intermodal",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r6c3",
+        "row": "Intermodal",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r7c1",
+        "row": "Total freight revenues",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r7c2",
+        "row": "Total freight revenues",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r7c3",
+        "row": "Total freight revenues",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r8c1",
+        "row": "Other revenues",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r8c2",
+        "row": "Other revenues",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r8c3",
+        "row": "Other revenues",
+        "column": "2014",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r9c1",
+        "row": "Total operating revenues",
+        "column": "2016",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r9c2",
+        "row": "Total operating revenues",
+        "column": "2015",
+        "unitHint": "Millions"
+      },
+      {
+        "id": "r9c3",
+        "row": "Total operating revenues",
+        "column": "2014",
+        "unitHint": "Millions"
+      }
+    ],
+    "facts": {
+      "r1c1": 3625,
+      "r1c2": 3581,
+      "r1c3": 3777,
+      "r2c1": 2000,
+      "r2c2": 2154,
+      "r2c3": 2103,
+      "r3c1": 3474,
+      "r3c2": 3543,
+      "r3c3": 3664,
+      "r4c1": 2440,
+      "r4c2": 3237,
+      "r4c3": 4127,
+      "r5c1": 3348,
+      "r5c2": 3808,
+      "r5c3": 4400,
+      "r6c1": 3714,
+      "r6c2": 4074,
+      "r6c3": 4489,
+      "r7c1": 18601,
+      "r7c2": 20397,
+      "r7c3": 22560,
+      "r8c1": 1340,
+      "r8c2": 1416,
+      "r8c3": 1428,
+      "r9c1": 19941,
+      "r9c2": 21813,
+      "r9c3": 23988
+    },
+    "source": "FinQA/UNP/2016/page_52.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-9575e18c09bc",
+    "sourceId": "ZBH/2007/page_67.pdf-2",
+    "sourceFile": "ZBH/2007/page_67.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the percent change in total acquisition integration and other expenses from 2006 to 2007?",
+      "en": "what is the percent change in total acquisition integration and other expenses from 2006 to 2007?"
+    },
+    "question": "what is the percent change in total acquisition integration and other expenses from 2006 to 2007?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "(Gain)/loss on disposition or impairment of acquired assets and obligations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "(Gain)/loss on disposition or impairment of acquired assets and obligations",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "(Gain)/loss on disposition or impairment of acquired assets and obligations",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Consulting and professional fees",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Consulting and professional fees",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Consulting and professional fees",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Employee severance and retention",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Employee severance and retention",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Employee severance and retention",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Information technology integration",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Information technology integration",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Information technology integration",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "In-process research & development",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "In-process research & development",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Integration personnel",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c3",
+        "row": "Integration personnel",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c2",
+        "row": "Facility and employee relocation",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c3",
+        "row": "Facility and employee relocation",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Distributor acquisitions",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c1",
+        "row": "Sales agent and lease contract terminations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c2",
+        "row": "Sales agent and lease contract terminations",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c3",
+        "row": "Sales agent and lease contract terminations",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r10c1",
+        "row": "Other",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r10c2",
+        "row": "Other",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r10c3",
+        "row": "Other",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r11c1",
+        "row": "Acquisition, integration and other",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r11c2",
+        "row": "Acquisition, integration and other",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r11c3",
+        "row": "Acquisition, integration and other",
+        "column": "2005",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": -1.2,
+      "r1c2": -19.2,
+      "r1c3": 3.2,
+      "r2c1": 1,
+      "r2c2": 8.8,
+      "r2c3": 5.6,
+      "r3c1": 1.6,
+      "r3c2": 3.3,
+      "r3c3": 13.3,
+      "r4c1": 2.6,
+      "r4c2": 3,
+      "r4c3": 6.9,
+      "r5c1": 6.5,
+      "r5c2": 2.9,
+      "r6c2": 2.5,
+      "r6c3": 3.1,
+      "r7c2": 1,
+      "r7c3": 6.2,
+      "r8c1": 4.1,
+      "r9c1": 5.4,
+      "r9c2": 0.2,
+      "r9c3": 12.7,
+      "r10c1": 5.2,
+      "r10c2": 3.6,
+      "r10c3": 5.6,
+      "r11c1": 25.2,
+      "r11c2": 6.1,
+      "r11c3": 56.6
+    },
+    "source": "FinQA/ZBH/2007/page_67.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-11e90da00052",
+    "sourceId": "TFX/2017/page_78.pdf-1",
+    "sourceFile": "TFX/2017/page_78.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what portion of the total number of securities approved by security holders is issued?",
+      "en": "what portion of the total number of securities approved by security holders is issued?"
+    },
+    "question": "what portion of the total number of securities approved by security holders is issued?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Equity compensation plans approved by security holders",
+        "column": "Number of Securitiesto be Issued UponExercise ofOutstanding Options, Warrants and Rights (A)(B)",
+        "unitHint": "Plan Category"
+      },
+      {
+        "id": "r1c2",
+        "row": "Equity compensation plans approved by security holders",
+        "column": "Weighted-AverageExercise Price ofOutstanding Options, Warrants and Rights",
+        "unitHint": "Plan Category"
+      },
+      {
+        "id": "r1c3",
+        "row": "Equity compensation plans approved by security holders",
+        "column": "Number of SecuritiesRemaining Available forFuture Issuance UnderEquity CompensationPlans (ExcludingSecurities Reflected in Column (A)) (C)",
+        "unitHint": "Plan Category"
+      }
+    ],
+    "facts": {
+      "r1c1": 1708928,
+      "r1c2": 113.49,
+      "r1c3": 3629455
+    },
+    "source": "FinQA/TFX/2017/page_78.pdf-1",
+    "split": "test"
+  },
+  {
+    "id": "finqa-01b2334eb0e0",
+    "sourceId": "PM/2017/page_32.pdf-2",
+    "sourceFile": "PM/2017/page_32.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the change in basis points of the rate of postretirement plans from 2016 to 2017?",
+      "en": "what is the change in basis points of the rate of postretirement plans from 2016 to 2017?"
+    },
+    "question": "what is the change in basis points of the rate of postretirement plans from 2016 to 2017?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Pension plans",
+        "column": "2017",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Pension plans",
+        "column": "2016",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Postretirement plans",
+        "column": "2017",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Postretirement plans",
+        "column": "2016",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 1.51,
+      "r1c2": 1.52,
+      "r2c1": 3.79,
+      "r2c2": 3.68
+    },
+    "source": "FinQA/PM/2017/page_32.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-48e7cf093f54",
+    "sourceId": "AWK/2014/page_121.pdf-3",
+    "sourceFile": "AWK/2014/page_121.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "by how much did company 2019s gross liability , excluding interest and penalties , for unrecognized tax benefits increase from 2014 to 2014?",
+      "en": "by how much did company 2019s gross liability , excluding interest and penalties , for unrecognized tax benefits increase from 2014 to 2014?"
+    },
+    "question": "by how much did company 2019s gross liability , excluding interest and penalties , for unrecognized tax benefits increase from 2014 to 2014?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Increases in current period tax positions",
+        "column": "$180,993",
+        "unitHint": "Balance at January 1, 2013"
+      },
+      {
+        "id": "r2c1",
+        "row": "Decreases in prior period measurement of tax positions",
+        "column": "$180,993",
+        "unitHint": "Balance at January 1, 2013"
+      },
+      {
+        "id": "r3c1",
+        "row": "Balance at December 31, 2013",
+        "column": "$180,993",
+        "unitHint": "Balance at January 1, 2013"
+      },
+      {
+        "id": "r4c1",
+        "row": "Increases in current period tax positions",
+        "column": "$180,993",
+        "unitHint": "Balance at January 1, 2013"
+      },
+      {
+        "id": "r5c1",
+        "row": "Decreases in prior period measurement of tax positions",
+        "column": "$180,993",
+        "unitHint": "Balance at January 1, 2013"
+      },
+      {
+        "id": "r6c1",
+        "row": "Balance at December 31, 2014",
+        "column": "$180,993",
+        "unitHint": "Balance at January 1, 2013"
+      }
+    ],
+    "facts": {
+      "r1c1": 27229,
+      "r2c1": -30275,
+      "r3c1": 177947,
+      "r4c1": 53818,
+      "r5c1": -36528,
+      "r6c1": 195237
+    },
+    "source": "FinQA/AWK/2014/page_121.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-a476d11d5390",
+    "sourceId": "IP/2009/page_45.pdf-2",
+    "sourceFile": "IP/2009/page_45.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2012 are maturities of long-term debt?",
+      "en": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2012 are maturities of long-term debt?"
+    },
+    "question": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2012 are maturities of long-term debt?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Maturities of long-term debt (a)",
+        "column": "2010",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r1c2",
+        "row": "Maturities of long-term debt (a)",
+        "column": "2011",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r1c3",
+        "row": "Maturities of long-term debt (a)",
+        "column": "2012",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r1c4",
+        "row": "Maturities of long-term debt (a)",
+        "column": "2013",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r1c5",
+        "row": "Maturities of long-term debt (a)",
+        "column": "2014",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r1c6",
+        "row": "Maturities of long-term debt (a)",
+        "column": "Thereafter",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "Debt obligations with right of offset (b)",
+        "column": "2010",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r2c2",
+        "row": "Debt obligations with right of offset (b)",
+        "column": "2011",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r2c6",
+        "row": "Debt obligations with right of offset (b)",
+        "column": "Thereafter",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "Lease obligations",
+        "column": "2010",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r3c2",
+        "row": "Lease obligations",
+        "column": "2011",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r3c3",
+        "row": "Lease obligations",
+        "column": "2012",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r3c4",
+        "row": "Lease obligations",
+        "column": "2013",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r3c5",
+        "row": "Lease obligations",
+        "column": "2014",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r3c6",
+        "row": "Lease obligations",
+        "column": "Thereafter",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "Purchase obligations (c)",
+        "column": "2010",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r4c2",
+        "row": "Purchase obligations (c)",
+        "column": "2011",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r4c3",
+        "row": "Purchase obligations (c)",
+        "column": "2012",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r4c4",
+        "row": "Purchase obligations (c)",
+        "column": "2013",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r4c5",
+        "row": "Purchase obligations (c)",
+        "column": "2014",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r4c6",
+        "row": "Purchase obligations (c)",
+        "column": "Thereafter",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r5c1",
+        "row": "Total (d)",
+        "column": "2010",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r5c2",
+        "row": "Total (d)",
+        "column": "2011",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r5c3",
+        "row": "Total (d)",
+        "column": "2012",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r5c4",
+        "row": "Total (d)",
+        "column": "2013",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r5c5",
+        "row": "Total (d)",
+        "column": "2014",
+        "unitHint": "<i>In millions</i>"
+      },
+      {
+        "id": "r5c6",
+        "row": "Total (d)",
+        "column": "Thereafter",
+        "unitHint": "<i>In millions</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 304,
+      "r1c2": 574,
+      "r1c3": 199,
+      "r1c4": 131,
+      "r1c5": 562,
+      "r1c6": 7263,
+      "r2c1": 519,
+      "r2c2": 28,
+      "r2c6": 5108,
+      "r3c1": 177,
+      "r3c2": 148,
+      "r3c3": 124,
+      "r3c4": 96,
+      "r3c5": 79,
+      "r3c6": 184,
+      "r4c1": 2262,
+      "r4c2": 657,
+      "r4c3": 623,
+      "r4c4": 556,
+      "r4c5": 532,
+      "r4c6": 3729,
+      "r5c1": 3262,
+      "r5c2": 1407,
+      "r5c3": 946,
+      "r5c4": 783,
+      "r5c5": 1173,
+      "r5c6": 16284
+    },
+    "source": "FinQA/IP/2009/page_45.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-58f4454f6a6d",
+    "sourceId": "UNP/2007/page_25.pdf-3",
+    "sourceFile": "UNP/2007/page_25.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was change in millions of free cash flow from 2005 to 2007?",
+      "en": "what was change in millions of free cash flow from 2005 to 2007?"
+    },
+    "question": "what was change in millions of free cash flow from 2005 to 2007?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Cash provided by operating activities",
+        "column": "2007",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r1c2",
+        "row": "Cash provided by operating activities",
+        "column": "2006",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r1c3",
+        "row": "Cash provided by operating activities",
+        "column": "2005",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "Cash used in investing activities",
+        "column": "2007",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r2c2",
+        "row": "Cash used in investing activities",
+        "column": "2006",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r2c3",
+        "row": "Cash used in investing activities",
+        "column": "2005",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "Dividends paid",
+        "column": "2007",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r3c2",
+        "row": "Dividends paid",
+        "column": "2006",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r3c3",
+        "row": "Dividends paid",
+        "column": "2005",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "Free cash flow",
+        "column": "2007",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r4c2",
+        "row": "Free cash flow",
+        "column": "2006",
+        "unitHint": "<i>Millions of Dollars</i>"
+      },
+      {
+        "id": "r4c3",
+        "row": "Free cash flow",
+        "column": "2005",
+        "unitHint": "<i>Millions of Dollars</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 3277,
+      "r1c2": 2880,
+      "r1c3": 2595,
+      "r2c1": -2426,
+      "r2c2": -2042,
+      "r2c3": -2047,
+      "r3c1": -364,
+      "r3c2": -322,
+      "r3c3": -314,
+      "r4c1": 487,
+      "r4c2": 516,
+      "r4c3": 234
+    },
+    "source": "FinQA/UNP/2007/page_25.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-917ef293d274",
+    "sourceId": "BKNG/2016/page_33.pdf-2",
+    "sourceFile": "BKNG/2016/page_33.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percent of the growth in measurement of the the priceline group inc . from 2014 to 2015",
+      "en": "what was the percent of the growth in measurement of the the priceline group inc . from 2014 to 2015"
+    },
+    "question": "what was the percent of the growth in measurement of the the priceline group inc . from 2014 to 2015",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2011",
+        "column": "The Priceline Group Inc.",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r1c2",
+        "row": "2011",
+        "column": "NASDAQComposite Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r1c3",
+        "row": "2011",
+        "column": "S&P 500Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r1c4",
+        "row": "2011",
+        "column": "RDG InternetComposite",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r2c1",
+        "row": "2012",
+        "column": "The Priceline Group Inc.",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r2c2",
+        "row": "2012",
+        "column": "NASDAQComposite Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r2c3",
+        "row": "2012",
+        "column": "S&P 500Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r2c4",
+        "row": "2012",
+        "column": "RDG InternetComposite",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r3c1",
+        "row": "2013",
+        "column": "The Priceline Group Inc.",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r3c2",
+        "row": "2013",
+        "column": "NASDAQComposite Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r3c3",
+        "row": "2013",
+        "column": "S&P 500Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r3c4",
+        "row": "2013",
+        "column": "RDG InternetComposite",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r4c1",
+        "row": "2014",
+        "column": "The Priceline Group Inc.",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r4c2",
+        "row": "2014",
+        "column": "NASDAQComposite Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r4c3",
+        "row": "2014",
+        "column": "S&P 500Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r4c4",
+        "row": "2014",
+        "column": "RDG InternetComposite",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r5c1",
+        "row": "2015",
+        "column": "The Priceline Group Inc.",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r5c2",
+        "row": "2015",
+        "column": "NASDAQComposite Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r5c3",
+        "row": "2015",
+        "column": "S&P 500Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r5c4",
+        "row": "2015",
+        "column": "RDG InternetComposite",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r6c1",
+        "row": "2016",
+        "column": "The Priceline Group Inc.",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r6c2",
+        "row": "2016",
+        "column": "NASDAQComposite Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r6c3",
+        "row": "2016",
+        "column": "S&P 500Index",
+        "unitHint": "Measurement PointDecember 31"
+      },
+      {
+        "id": "r6c4",
+        "row": "2016",
+        "column": "RDG InternetComposite",
+        "unitHint": "Measurement PointDecember 31"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 100,
+      "r1c3": 100,
+      "r1c4": 100,
+      "r2c1": 132.64,
+      "r2c2": 116.41,
+      "r2c3": 116,
+      "r2c4": 119.34,
+      "r3c1": 248.53,
+      "r3c2": 165.47,
+      "r3c3": 153.58,
+      "r3c4": 195.83,
+      "r4c1": 243.79,
+      "r4c2": 188.69,
+      "r4c3": 174.6,
+      "r4c4": 192.42,
+      "r5c1": 272.59,
+      "r5c2": 200.32,
+      "r5c3": 177.01,
+      "r5c4": 264.96,
+      "r6c1": 313.45,
+      "r6c2": 216.54,
+      "r6c3": 198.18,
+      "r6c4": 277.56
+    },
+    "source": "FinQA/BKNG/2016/page_33.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-138da9c306b9",
+    "sourceId": "AOS/2010/page_18.pdf-2",
+    "sourceFile": "AOS/2010/page_18.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in the cumulative total return for a o smith corp and the russell 1000 index for the five year period ended 12/31/10?",
+      "en": "what was the difference in the cumulative total return for a o smith corp and the russell 1000 index for the five year period ended 12/31/10?"
+    },
+    "question": "what was the difference in the cumulative total return for a o smith corp and the russell 1000 index for the five year period ended 12/31/10?",
+    "schema": [
+      {
+        "id": "r2c1",
+        "row": "A O SMITH CORP",
+        "column": "BasePeriod",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "A O SMITH CORP",
+        "column": "INDEXED RETURNS",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "A O SMITH CORP",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "A O SMITH CORP",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "A O SMITH CORP",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c6",
+        "row": "A O SMITH CORP",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "S&P SMALL CAP 600 INDEX",
+        "column": "BasePeriod",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "S&P SMALL CAP 600 INDEX",
+        "column": "INDEXED RETURNS",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "S&P SMALL CAP 600 INDEX",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "S&P SMALL CAP 600 INDEX",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c5",
+        "row": "S&P SMALL CAP 600 INDEX",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c6",
+        "row": "S&P SMALL CAP 600 INDEX",
+        "column": "column 6",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "RUSSELL 1000 INDEX",
+        "column": "BasePeriod",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "RUSSELL 1000 INDEX",
+        "column": "INDEXED RETURNS",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "RUSSELL 1000 INDEX",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c4",
+        "row": "RUSSELL 1000 INDEX",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c5",
+        "row": "RUSSELL 1000 INDEX",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c6",
+        "row": "RUSSELL 1000 INDEX",
+        "column": "column 6",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r2c1": 100,
+      "r2c2": 108.7,
+      "r2c3": 103.3,
+      "r2c4": 88.8,
+      "r2c5": 133.6,
+      "r2c6": 178.8,
+      "r3c1": 100,
+      "r3c2": 115.1,
+      "r3c3": 114.8,
+      "r3c4": 78.1,
+      "r3c5": 98,
+      "r3c6": 123.8,
+      "r4c1": 100,
+      "r4c2": 115.5,
+      "r4c3": 122.1,
+      "r4c4": 76.2,
+      "r4c5": 97.9,
+      "r4c6": 113.6
+    },
+    "source": "FinQA/AOS/2010/page_18.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-e3f33816fce6",
+    "sourceId": "DRE/2007/page_56.pdf-3",
+    "sourceFile": "DRE/2007/page_56.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the average basic net income available for common shareholders from 2005 to 2007",
+      "en": "what was the average basic net income available for common shareholders from 2005 to 2007"
+    },
+    "question": "what was the average basic net income available for common shareholders from 2005 to 2007",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Basic net income available for common shareholders",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Basic net income available for common shareholders",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Basic net income available for common shareholders",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Minority interest in earnings of common unitholders",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Minority interest in earnings of common unitholders",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Minority interest in earnings of common unitholders",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Diluted net income available for common shareholders",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Diluted net income available for common shareholders",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Diluted net income available for common shareholders",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Weighted average number of common shares outstanding",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Weighted average number of common shares outstanding",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c3",
+        "row": "Weighted average number of common shares outstanding",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Weighted average partnership Units outstanding",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Weighted average partnership Units outstanding",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c3",
+        "row": "Weighted average partnership Units outstanding",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Dilutive shares for stock-based compensation plans (1)",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Dilutive shares for stock-based compensation plans (1)",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c3",
+        "row": "Dilutive shares for stock-based compensation plans (1)",
+        "column": "2005",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Weighted average number of common shares and potential dilutive common equivalents",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c2",
+        "row": "Weighted average number of common shares and potential dilutive common equivalents",
+        "column": "2006",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c3",
+        "row": "Weighted average number of common shares and potential dilutive common equivalents",
+        "column": "2005",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 217692,
+      "r1c2": 145095,
+      "r1c3": 309183,
+      "r2c1": 14399,
+      "r2c2": 14238,
+      "r2c3": 29649,
+      "r3c1": 232091,
+      "r3c2": 159333,
+      "r3c3": 338832,
+      "r4c1": 139255,
+      "r4c2": 134883,
+      "r4c3": 141508,
+      "r5c1": 9204,
+      "r5c2": 13186,
+      "r5c3": 13551,
+      "r6c1": 1155,
+      "r6c2": 1324,
+      "r6c3": 818,
+      "r7c1": 149614,
+      "r7c2": 149393,
+      "r7c3": 155877
+    },
+    "source": "FinQA/DRE/2007/page_56.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-fbae6b342728",
+    "sourceId": "ETR/2004/page_239.pdf-2",
+    "sourceFile": "ETR/2004/page_239.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net change in net revenue entergy mississippi , inc . during 2003?",
+      "en": "what is the net change in net revenue entergy mississippi , inc . during 2003?"
+    },
+    "question": "what is the net change in net revenue entergy mississippi , inc . during 2003?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2002 net revenue",
+        "column": "(In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Base rates",
+        "column": "(In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Other",
+        "column": "(In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "2003 net revenue",
+        "column": "(In Millions)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 380.2,
+      "r2c1": 48.3,
+      "r3c1": -1.9,
+      "r4c1": 426.6
+    },
+    "source": "FinQA/ETR/2004/page_239.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-3c0eaac64d36",
+    "sourceId": "MS/2013/page_139.pdf-2",
+    "sourceFile": "MS/2013/page_139.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the total exposure to government related derivatives , in millions?",
+      "en": "what is the total exposure to government related derivatives , in millions?"
+    },
+    "question": "what is the total exposure to government related derivatives , in millions?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Utilities",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r2c1",
+        "row": "Banks and securities firms",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r3c1",
+        "row": "Funds, exchanges and other financial services(2)",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r4c1",
+        "row": "Special purpose vehicles",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r5c1",
+        "row": "Regional governments",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r6c1",
+        "row": "Healthcare",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r7c1",
+        "row": "Industrials",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r8c1",
+        "row": "Sovereign governments",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r9c1",
+        "row": "Not-for-profit organizations",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r10c1",
+        "row": "Insurance",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r11c1",
+        "row": "Real Estate",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r12c1",
+        "row": "Consumer staples",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r13c1",
+        "row": "Other",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      },
+      {
+        "id": "r14c1",
+        "row": "Total",
+        "column": "OTC Derivative Products(1)  (dollars in millions)",
+        "unitHint": "Industry"
+      }
+    ],
+    "facts": {
+      "r1c1": 3142,
+      "r2c1": 2358,
+      "r3c1": 2433,
+      "r4c1": 1908,
+      "r5c1": 1597,
+      "r6c1": 1089,
+      "r7c1": 914,
+      "r8c1": 816,
+      "r9c1": 672,
+      "r10c1": 538,
+      "r11c1": 503,
+      "r12c1": 487,
+      "r13c1": 1157,
+      "r14c1": 17614
+    },
+    "source": "FinQA/MS/2013/page_139.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-5ae1c0a3087e",
+    "sourceId": "LMT/2014/page_77.pdf-2",
+    "sourceFile": "LMT/2014/page_77.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the change in millions of the weighted average common shares outstanding for diluted computations from 2013 to 2014?",
+      "en": "what was the change in millions of the weighted average common shares outstanding for diluted computations from 2013 to 2014?"
+    },
+    "question": "what was the change in millions of the weighted average common shares outstanding for diluted computations from 2013 to 2014?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2012",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2012",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2014",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2013",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2012",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 316.8,
+      "r1c2": 320.9,
+      "r1c3": 323.7,
+      "r2c1": 5.6,
+      "r2c2": 5.6,
+      "r2c3": 4.7,
+      "r3c1": 322.4,
+      "r3c2": 326.5,
+      "r3c3": 328.4
+    },
+    "source": "FinQA/LMT/2014/page_77.pdf-2",
+    "split": "test"
+  },
+  {
+    "id": "finqa-90ba52df25a5",
+    "sourceId": "GPN/2008/page_78.pdf-3",
+    "sourceFile": "GPN/2008/page_78.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what portion of the net assets acquired is related to goodwill?",
+      "en": "what portion of the net assets acquired is related to goodwill?"
+    },
+    "question": "what portion of the net assets acquired is related to goodwill?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Goodwill",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Customer-related intangible assets",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Contract-based intangible assets",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Property and equipment",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Other current assets",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Total assets acquired",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Current liabilities",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Minority interest in equity of subsidiary",
+        "column": "Total",
+        "unitHint": ""
+      },
+      {
+        "id": "r9c1",
+        "row": "Net assets acquired",
+        "column": "Total",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 13536,
+      "r2c1": 4091,
+      "r3c1": 1031,
+      "r4c1": 267,
+      "r5c1": 502,
+      "r6c1": 19427,
+      "r7c1": -2347,
+      "r8c1": -486,
+      "r9c1": 16594
+    },
+    "source": "FinQA/GPN/2008/page_78.pdf-3",
+    "split": "test"
+  },
+  {
+    "id": "finqa-cce0f188d7ef",
+    "sourceId": "ADI/2019/page_29.pdf-2",
+    "sourceFile": "ADI/2019/page_29.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the total cash used of the stock repurchase during september 2019 , ( in millions ) ?",
+      "en": "what is the total cash used of the stock repurchase during september 2019 , ( in millions ) ?"
+    },
+    "question": "what is the total cash used of the stock repurchase during september 2019 , ( in millions ) ?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "August 4, 2019 through August 31, 2019",
+        "column": "Total Number ofShares Purchased (1)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r1c2",
+        "row": "August 4, 2019 through August 31, 2019",
+        "column": "Average Price PaidPer Share (2)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r1c3",
+        "row": "August 4, 2019 through August 31, 2019",
+        "column": "Total Number of SharesPurchased as Part ofPublicly AnnouncedPlans or Programs (3)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r1c4",
+        "row": "August 4, 2019 through August 31, 2019",
+        "column": "Approximate DollarValue of Shares thatMay Yet Be PurchasedUnder the Plans or Programs",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r2c1",
+        "row": "September 1, 2019 through September 28, 2019",
+        "column": "Total Number ofShares Purchased (1)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r2c2",
+        "row": "September 1, 2019 through September 28, 2019",
+        "column": "Average Price PaidPer Share (2)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r2c3",
+        "row": "September 1, 2019 through September 28, 2019",
+        "column": "Total Number of SharesPurchased as Part ofPublicly AnnouncedPlans or Programs (3)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r2c4",
+        "row": "September 1, 2019 through September 28, 2019",
+        "column": "Approximate DollarValue of Shares thatMay Yet Be PurchasedUnder the Plans or Programs",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r3c1",
+        "row": "September 29, 2019 through November 2, 2019",
+        "column": "Total Number ofShares Purchased (1)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r3c2",
+        "row": "September 29, 2019 through November 2, 2019",
+        "column": "Average Price PaidPer Share (2)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r3c3",
+        "row": "September 29, 2019 through November 2, 2019",
+        "column": "Total Number of SharesPurchased as Part ofPublicly AnnouncedPlans or Programs (3)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r3c4",
+        "row": "September 29, 2019 through November 2, 2019",
+        "column": "Approximate DollarValue of Shares thatMay Yet Be PurchasedUnder the Plans or Programs",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "Total Number ofShares Purchased (1)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "Average Price PaidPer Share (2)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r4c3",
+        "row": "Total",
+        "column": "Total Number of SharesPurchased as Part ofPublicly AnnouncedPlans or Programs (3)",
+        "unitHint": "Period"
+      },
+      {
+        "id": "r4c4",
+        "row": "Total",
+        "column": "Approximate DollarValue of Shares thatMay Yet Be PurchasedUnder the Plans or Programs",
+        "unitHint": "Period"
+      }
+    ],
+    "facts": {
+      "r1c1": 199231,
+      "r1c2": 109,
+      "r1c3": 194849,
+      "r1c4": 2213017633,
+      "r2c1": 342313,
+      "r2c2": 113.39,
+      "r2c3": 338534,
+      "r2c4": 2174639499,
+      "r3c1": 1023202,
+      "r3c2": 109.32,
+      "r3c3": 949531,
+      "r3c4": 2070927831,
+      "r4c1": 1564746,
+      "r4c2": 110.17,
+      "r4c3": 1482914,
+      "r4c4": 2070927831
+    },
+    "source": "FinQA/ADI/2019/page_29.pdf-2",
+    "split": "test"
+  }
+]

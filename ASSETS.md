@@ -1,5 +1,7 @@
 # Assets and provenance
 
+Current additions: `fixtures/finqa-v4/` is a deterministic subset of the public FinQA corpus, pinned in its provenance manifest and retaining `LICENSE.FinQA` (MIT). These are public corporate-report tables, not customer data. The financial preview PDF is a readable rendering of the structured fixture, not the original corporate report. `evidence/financial-showcase/ui/` contains actual browser captures. The v4 figures are drawn from re-scored real records, including unfavorable outcomes. `paper/zh-CN/assets/system.png` is a conceptual design illustration; it is not a measurement or a product screenshot.
+
 This repository contains the independent research interface, its `H`/“氢” visual mark, screenshots captured from the runnable interface, synthetic PDF fixtures, and charts derived from the saved experiment records. The interface and screenshots are presented as this project's research demo, not as a release of the commercial client.
 
 - `web/assets/hy-mark-dark.svg` is the visual mark used by this demo. Apache-2.0 licenses the included software and other copyrightable material to the extent the repository maintainer has rights to release it; it does **not** grant trademark rights in the mark or product name.

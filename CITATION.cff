@@ -12,4 +12,4 @@ authors:
 repository-code: "https://github.com/Zane-0260907/stepwise-disclosure-demo"
 url: "https://github.com/Zane-0260907/stepwise-disclosure-demo"
 license: "Apache-2.0"
-abstract: "An independent runnable research prototype and synthetic evidence bundle for stepwise execution and recipient-specific disclosure decisions."
+abstract: "An independent runnable prototype for stepwise execution and recipient-specific disclosure, with synthetic controls, a restricted public FinQA subset, finite local computation and preserved provider records."

@@ -1,0 +1,71 @@
+{
+  "protocolId": "v4-finqa-20260927",
+  "sourceCompletedAt": "2026-09-26T17:10:51.248Z",
+  "jobs": 240,
+  "verifiedProviderCalls": 320,
+  "summary": [
+    {
+      "method": "eager_allowed",
+      "runs": 80,
+      "passed": 62,
+      "success": 0.775,
+      "extra": 13.275,
+      "disclosed": 15.425,
+      "modelCalls": 80,
+      "promptTokens": 103510,
+      "completionTokens": 6044,
+      "latencyP50": 718.4784999999974,
+      "latencyP95": 907.5924949999956
+    },
+    {
+      "method": "requested_cells",
+      "runs": 80,
+      "passed": 53,
+      "success": 0.6625,
+      "extra": 0.6125,
+      "disclosed": 2.425,
+      "modelCalls": 160,
+      "promptTokens": 183069,
+      "completionTokens": 9738,
+      "latencyP50": 1329.9998,
+      "latencyP95": 1747.483279999998
+    },
+    {
+      "method": "local_program",
+      "runs": 80,
+      "passed": 51,
+      "success": 0.6375,
+      "extra": 0,
+      "disclosed": 0,
+      "modelCalls": 80,
+      "promptTokens": 93514,
+      "completionTokens": 5957,
+      "latencyP50": 704.1835999999994,
+      "latencyP95": 957.2314049999995
+    }
+  ],
+  "paired": {
+    "local_program_vs_eager_allowed": {
+      "caseMeanDifference": -0.1375,
+      "descriptiveClusterBootstrap95": [
+        -0.24433139534883716,
+        -0.039473684210526314
+      ],
+      "clusters": 38
+    },
+    "local_program_vs_requested_cells": {
+      "caseMeanDifference": -0.025,
+      "descriptiveClusterBootstrap95": [
+        -0.10526315789473684,
+        0.05128205128205128
+      ],
+      "clusters": 38
+    }
+  },
+  "limits": [
+    "40 selected test pages from FinQA: 38 company-year reports, 28 companies; fixed eligibility and hash ordering. Restricted table-only subset.",
+    "Aggregate repeats within case; paired cluster bootstrap by company-year report, 4000 draws. Descriptive uncertainty for this selected subset; no general-population or non-inferiority claim.",
+    "No human text-quality score, cryptographic privacy, semantic non-disclosure, data-minimization optimality, or external-system superiority claim.",
+    "Counts describe observed disclosure through registered requests, not resistance to reconstruction or inference."
+  ]
+}

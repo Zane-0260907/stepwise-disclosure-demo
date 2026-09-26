@@ -14,7 +14,7 @@ http.createServer(async(req,res)=>{
  try{
    const pathname=decodeURIComponent(new URL(req.url||'/',`http://${host}:${port}`).pathname);
    if(pathname.startsWith('/api/research/'))return await researchApi(req,res,pathname);
-   if(req.method==='GET'&&pathname==='/api/health'){res.writeHead(200,{'content-type':'application/json'});res.end(JSON.stringify({ok:true,protocol:'research-v3-progressive-facts',liveProvider:liveProvider.provider,liveModel:liveProvider.model,offlineAvailable:true,deepseekAvailable:liveProvider.deepseekAvailable}));return;}
+   if(req.method==='GET'&&pathname==='/api/health'){res.writeHead(200,{'content-type':'application/json'});res.end(JSON.stringify({ok:true,protocol:'research-v4-matched-controls',liveProvider:liveProvider.provider,liveModel:liveProvider.model,offlineAvailable:true,deepseekAvailable:liveProvider.deepseekAvailable}));return;}
    const asset=/^\/vendor\/pdfjs\/(build\/(?:pdf|pdf\.worker)\.min\.mjs|cmaps\/[\w.-]+\.bcmap|standard_fonts\/[\w.-]+\.(?:ttf|pfb)|wasm\/[\w.-]+\.wasm)$/.exec(pathname);
    if(req.method==='GET'&&asset)return await send(res,path.join(ROOT,'node_modules','pdfjs-dist',asset[1]),asset[1].endsWith('.mjs')?'text/javascript':asset[1].endsWith('.wasm')?'application/wasm':'application/octet-stream');
    const file=path.resolve(WEB,pathname==='/'?'index.html':pathname.slice(1));

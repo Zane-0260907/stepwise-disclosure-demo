@@ -41,7 +41,7 @@ An agent can discover a new step only after reading local material or receiving 
 </p>
 <p align="center"><em>Recorded DeepSeek run in the English interface. The right pane can also show the selected step's recipient view and receiver record.</em></p>
 
-This is an independent research demo with synthetic contracts and study records, not the commercial client. Its offline executor uses finite rules; the saved DeepSeek runs are real provider calls presented as replay. The interface labels those modes separately.
+This is an independent research demo with synthetic contracts, study records and a restricted public FinQA table subset, not the commercial client. Its offline executor uses finite rules; the saved DeepSeek runs are real provider calls presented as replay. The interface labels those modes separately. The new table route lets a model propose a bounded calculation over a schema, then reads the numerical dependencies locally.
 
 ### Built with
 
@@ -68,9 +68,42 @@ npm ci
 npm start
 ```
 
-Open **http://127.0.0.1:4793/**. The server binds to localhost by default. Windows is the verified runtime; Docker and Linux are provided as starting points but have not been acceptance-tested.
+Open **http://127.0.0.1:4793/** and keep the terminal running. The server binds to localhost. Automated reproduction checks run on Windows and Ubuntu; interactive browser acceptance is checked on Windows. Docker is supplied but has not been independently acceptance-tested.
 
 For a new live DeepSeek call, set `DEEPSEEK_API_KEY` in your local environment and restart. The adapter uses `deepseek-flash` in non-thinking mode. Do not commit the key or expose a key-bearing instance publicly; this demo has no multi-user authentication.
+
+### Choose a run mode
+
+| Mode | Key | What actually executes |
+|:--|:--:|:--|
+| Local rule executor | None | Parses synthetic input, applies finite rules and saves fresh records |
+| Recorded DeepSeek run | None | Replays a preserved provider call and its original requests/results |
+| DeepSeek live run | Your own | Makes new provider calls and records the resulting steps |
+| Batch verification | None | Recomputes scores from the published archives |
+
+Start with **Request missing facts** in the recorded-run list. The timeline advances automatically. Click any step to inspect its actual recipient and input; **Follow current step** resumes following. **Files** and **Preview** show the source or report. After completion, download the report or raw trace. Slower playback is shown separately from measured execution time.
+
+### Configure live calls locally
+
+Windows PowerShell, from the repository root:
+
+```powershell
+./scripts/start-demo.ps1 -UseDeepSeek
+```
+
+The script requests the key without displaying it. Stop the existing server terminal before restarting. Credentials are kept in the local process environment, not in the source, browser bundle or public trace.
+
+Bash:
+
+```bash
+read -rsp 'DeepSeek API key: ' DEEPSEEK_API_KEY; echo
+export DEEPSEEK_API_KEY
+npm start
+# After stopping the server:
+unset DEEPSEEK_API_KEY
+```
+
+Select **DeepSeek · bring your key** in the interface. If port 4793 is occupied, set `DEMO_PORT=4794` before starting and open that port. More fixes appear in the [troubleshooting guide](docs/reproduction-v4.md#7-troubleshooting).
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
@@ -90,7 +123,72 @@ Click a step in the middle pane to inspect its selected recipient, facts sent, f
 
 ## Reproduce the experiment
 
-The current study freezes **32 synthetic cases × 7 methods × 2 repeats = 448 tasks**, using `deepseek-flash`. Its 560 real provider calls have matching receiver and provider-egress records. All planned tasks, including failures, are retained. These are author-created inputs in two existing task domains, not an external benchmark.
+The current release adds **496 tasks and 592 real DeepSeek requests**, with all failures retained. Inputs, code, labels and prompts were frozen before the calls.
+
+| Same-capability control | Correct | Extra fields/task | Model calls |
+|:--|--:|--:|--:|
+| No fact acquisition | 50/64 | 0 | 64 |
+| All permitted business fields | 58/64 | 0.5625 | 64 |
+| Prefetch numerical task fields | 58/64 | 0.0625 | 64 |
+| Progressive fact acquisition | 57/64 | 0.03125 | 80 |
+
+These controls share the local executor and rebuild reference-service inputs separately. Both new prefetch controls exclude all five private-field types. The 32 cases were previously published: this is a stronger-control re-evaluation, not a new holdout. The result supports a disclosure/call-cost tradeoff, not superior task accuracy.
+
+| Restricted FinQA table subset | Correct | Raw numeric cells/task | Model calls |
+|:--|--:|--:|--:|
+| All values | 62/80 | 15.425 | 80 |
+| Requested cells | 53/80 | 2.425 | 160 |
+| Schema plan + local calculation | 51/80 | 0 | 80 |
+
+Forty selected public test pages span 38 company-year reports. The schema-only route reduces numeric-cell transmission but loses **13.75 percentage points** against full values (paired report-cluster descriptive interval: **−24.43 to −3.95** points). It is an experimental route, not a universal default or privacy without utility loss. Question text and table labels remain visible.
+
+<p align="center"><img src="evidence/validation-v4/tradeoffs.en.svg" alt="Verified outcomes, disclosure and measured runtime, including the accuracy loss on public tables" width="1000"></p>
+
+### Verify the published evidence without a key
+
+Python 3.10+ is required only for standard-library ZIP extraction. Use `python3` where appropriate.
+
+```sh
+npm test
+python -m zipfile -e evidence/validation-v4/finqa/reproduction-records.zip .
+python -m zipfile -e evidence/validation-v4/controls/reproduction-records.zip .
+npm run verify:v4
+node scripts/verify-financial-showcase.mjs
+```
+
+Expected totals: **240 tasks / 320 provider requests** for FinQA, and **256 / 272** for the synthetic controls. Verification re-executes numerical programs, recomputes outcomes, checks frozen hashes and matches each model request to a distinct provider record. Extraction writes ignored `data/research/validation/` files; it makes no model calls.
+
+### Run new experiments separately
+
+With your own key in the environment:
+
+```sh
+npm run experiment:finqa -- --run-id=my-finqa-01
+npm run experiment:controls -- --run-id=my-controls-01
+node scripts/verify-v4.mjs --finqa --run-id=my-finqa-01
+node scripts/verify-v4.mjs --controls --run-id=my-controls-01
+```
+
+A named run resumes missing jobs only. A new ID creates a new experiment; omitting the ID creates a timestamped folder. Results and new summaries stay under `data/research/validation/<run-id>/`, leaving published evidence unchanged. Completed failures are not silently retried.
+
+### Redraw figures
+
+```sh
+pip install -r requirements-plots.txt
+python scripts/plot-v4.py --lang en
+python scripts/plot-v4.py --lang zh
+```
+
+The **[complete reproduction guide](docs/reproduction-v4.md)** explains data selection, method definitions, credentials, output files, scoring, uncertainty and troubleshooting. [Current protocols and results](evidence/validation-v4/) include all raw archives and failures.
+
+The same **Public table** scenario is available in the UI. Compare all values, selected cells and local calculation; select the local step to inspect its expression and dependency record.
+
+<p align="center"><img src="evidence/financial-showcase/ui/financial.en.png" alt="English replay showing a real schema-only request and the numerical values retained locally" width="920"></p>
+
+<details>
+<summary><strong>Preserved v3 results and earlier history</strong></summary>
+
+The previous v3 study froze **32 synthetic cases × 7 methods × 2 repeats = 448 tasks**, using `deepseek-flash`. Its 560 real provider calls have matching receiver and provider-egress records. These numbers are retained separately and are not pooled with v4.
 
 | Method | Structured success | Extra facts/task | Model calls |
 | :-- | --: | --: | --: |
@@ -138,12 +236,16 @@ The deterministic request-binding study blocks 52/52 altered requests versus 12/
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
+</details>
+
 ## Evidence and limitations
+
+The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v4 evidence. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
 
 The [progressive showcase](evidence/progressive-showcase/) is one additional real run, excluded from batch totals. It preserves the model's request for a needed late-day count **and an unnecessary contract amount**, followed by the CNY 1,150 result. The [earlier reference-lookup pair](evidence/research/deepseek-live-20260926/) is also retained separately. Neither is a substitute for batch evaluation.
 
 - Success is checked against author-defined structured labels, not expert assessment of free-text advice. A 24-output blinded author-review packet is prepared; **human ratings are pending**.
-- All seven methods are implemented here as mechanism controls. No external-system baseline has been run. [Research positioning and closest work](docs/research-position.md) states the overlap with MINIM, ToolMinimize, PlanTwin and SplitAgent.
+- The methods are implemented here as mechanism controls. No external-system baseline has been run. [Research positioning and closest work](docs/research-position.md) states the overlap with MINIM, ToolMinimize, PlanTwin and prior minimization work. Local abstraction, active acquisition and calculation pushdown are not claimed as first inventions.
 - The trusted local controller binds the used source values, recipient, current policy and exact application request. The separate local receiver and adapter record actual bytes; they are not cloud-provider certification.
 - Field counts do not detect inferred sensitive information. Allowlisted facts can still be unnecessary. Arbitrary network bypasses and a compromised local controller are outside the model.
 - Revocation blocks a future dispatch; it cannot retract a previous disclosure. Playback delays are never counted as model execution time.
@@ -157,7 +259,9 @@ The [progressive showcase](evidence/progressive-showcase/) is one additional rea
 | [`src/research/`](src/research/) | Planner, views, policy checks, receiver, model adapter and evaluator |
 | [`web/`](web/) | Bilingual research interface, separate from the commercial product |
 | [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld labels |
-| [`evidence/validation-v3/`](evidence/validation-v3/) | Current frozen protocol, full run archive, scores, failures and figures |
+| [`evidence/validation-v4/`](evidence/validation-v4/) | Current frozen protocols, complete records, failures and figures |
+| [`fixtures/finqa-v4/`](fixtures/finqa-v4/) | Public subset, separate labels, pinned provenance and original license |
+| [`paper/zh-CN/`](paper/zh-CN/) | Latest Chinese manuscript and native Word formula source |
 | [`evidence/research/`](evidence/research/) | Unchanged original study and earlier live-call records |
 | [`evidence/progressive-showcase/`](evidence/progressive-showcase/) | Current preserved trace and bilingual browser screenshots |
 | [`scripts/`](scripts/) | Input checks, independent score verification, summaries and plots |
@@ -172,6 +276,6 @@ Bug reports and reproducibility questions are welcome through [GitHub Issues](ht
 
 ## License and citation
 
-Software is released under [Apache-2.0](LICENSE). The included mark and product name identify this research demo; the software license does not grant trademark rights. See [ASSETS.md](ASSETS.md) for provenance and [CITATION.cff](CITATION.cff) for the software citation. A paper citation can be added when the manuscript has a stable publication record.
+Software is released under [Apache-2.0](LICENSE). The FinQA subset retains its [MIT notice](fixtures/finqa-v4/LICENSE.FinQA). The included mark and product name identify this research demo; the software license does not grant trademark rights. See [ASSETS.md](ASSETS.md) for provenance and [CITATION.cff](CITATION.cff) for the software citation. A paper citation can be added when the manuscript has a stable publication record.
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>

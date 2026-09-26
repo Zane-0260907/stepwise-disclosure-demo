@@ -1,0 +1,4015 @@
+[
+  {
+    "at": 1790443559388,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        }
+      ],
+      "receipts": [],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 0
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443559389,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "running",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {},
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": null
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        }
+      ],
+      "receipts": [],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 0
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443559389,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        }
+      ],
+      "receipts": [],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 0
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443559389,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "running",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {},
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": null
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        }
+      ],
+      "receipts": [],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 0
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443559389,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "running",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": null,
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ]
+          }
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        }
+      ],
+      "receipts": [],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 0
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443559389,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "running",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [],
+          "output": null,
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ]
+          }
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        }
+      ],
+      "receipts": [],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 0
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443560028,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "running",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": null,
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          }
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 0,
+        "toolCalls": 0,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443560028,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443560028,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        },
+        {
+          "id": "step-3",
+          "operation": "evaluate_local",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          },
+          "reason": {
+            "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+            "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+          },
+          "location": "local",
+          "status": "running",
+          "startedAt": "2026-09-26T17:26:00.028Z",
+          "parentStepId": "step-2",
+          "input": {},
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": null
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        },
+        {
+          "index": 9,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          }
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443560028,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        },
+        {
+          "id": "step-3",
+          "operation": "evaluate_local",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          },
+          "reason": {
+            "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+            "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+          },
+          "location": "local",
+          "status": "running",
+          "startedAt": "2026-09-26T17:26:00.028Z",
+          "parentStepId": "step-2",
+          "input": {
+            "program": [
+              {
+                "op": "divide",
+                "args": [
+                  {
+                    "field": "r1c1"
+                  },
+                  {
+                    "field": "r2c1"
+                  }
+                ]
+              }
+            ]
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": null,
+          "introducedAtRuntime": true,
+          "trigger": {
+            "modelStepId": "step-2",
+            "toolCallId": "call_00_ILjOAxYcQvu0UrrJd80s8557"
+          }
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        },
+        {
+          "index": 9,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          }
+        },
+        {
+          "index": 10,
+          "type": "step.discovered",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "parentStepId": "step-2",
+          "toolCall": {
+            "index": 0,
+            "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+            "type": "function",
+            "function": {
+              "name": "submit_calculation",
+              "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+            }
+          }
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": []
+    }
+  },
+  {
+    "at": 1790443560029,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        },
+        {
+          "id": "step-3",
+          "operation": "evaluate_local",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          },
+          "reason": {
+            "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+            "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:26:00.028Z",
+          "parentStepId": "step-2",
+          "input": {
+            "program": [
+              {
+                "op": "divide",
+                "args": [
+                  {
+                    "field": "r1c1"
+                  },
+                  {
+                    "field": "r2c1"
+                  }
+                ]
+              }
+            ]
+          },
+          "retained": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "value": 0.10198233616656054,
+            "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              }
+            ]
+          },
+          "introducedAtRuntime": true,
+          "trigger": {
+            "modelStepId": "step-2",
+            "toolCallId": "call_00_ILjOAxYcQvu0UrrJd80s8557"
+          },
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "finishedAt": "2026-09-26T17:26:00.029Z"
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        },
+        {
+          "index": 9,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          }
+        },
+        {
+          "index": 10,
+          "type": "step.discovered",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "parentStepId": "step-2",
+          "toolCall": {
+            "index": 0,
+            "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+            "type": "function",
+            "function": {
+              "name": "submit_calculation",
+              "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-3"
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": null,
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": [
+        {
+          "value": 0.10198233616656054,
+          "program": [
+            {
+              "op": "divide",
+              "args": [
+                {
+                  "field": "r1c1"
+                },
+                {
+                  "field": "r2c1"
+                }
+              ]
+            }
+          ],
+          "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "intermediates": [
+            0.10198233616656054
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "at": 1790443560029,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        },
+        {
+          "id": "step-3",
+          "operation": "evaluate_local",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          },
+          "reason": {
+            "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+            "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:26:00.028Z",
+          "parentStepId": "step-2",
+          "input": {
+            "program": [
+              {
+                "op": "divide",
+                "args": [
+                  {
+                    "field": "r1c1"
+                  },
+                  {
+                    "field": "r2c1"
+                  }
+                ]
+              }
+            ]
+          },
+          "retained": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "value": 0.10198233616656054,
+            "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              }
+            ]
+          },
+          "introducedAtRuntime": true,
+          "trigger": {
+            "modelStepId": "step-2",
+            "toolCallId": "call_00_ILjOAxYcQvu0UrrJd80s8557"
+          },
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "finishedAt": "2026-09-26T17:26:00.029Z"
+        },
+        {
+          "id": "step-4",
+          "operation": "assemble",
+          "title": {
+            "zh": "在本地生成可核对结果",
+            "en": "Assemble the inspectable result locally"
+          },
+          "reason": {
+            "zh": "结果与计算依赖可下载；耗时不含展示延迟。",
+            "en": "Download the result and dependencies; runtime excludes presentation delay."
+          },
+          "location": "local",
+          "status": "running",
+          "startedAt": "2026-09-26T17:26:00.029Z",
+          "parentStepId": "step-3",
+          "input": {},
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": null
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        },
+        {
+          "index": 9,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          }
+        },
+        {
+          "index": 10,
+          "type": "step.discovered",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "parentStepId": "step-2",
+          "toolCall": {
+            "index": 0,
+            "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+            "type": "function",
+            "function": {
+              "name": "submit_calculation",
+              "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-3"
+        },
+        {
+          "index": 12,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-4",
+          "title": {
+            "zh": "在本地生成可核对结果",
+            "en": "Assemble the inspectable result locally"
+          }
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": {
+        "issueCodes": [
+          "NUMERICAL_RESULT"
+        ],
+        "amount": 0.10198233616656054,
+        "summary": "0.10198233616656054",
+        "recommendation": "",
+        "evidenceIds": [
+          "r1c1",
+          "r2c1"
+        ],
+        "citations": [
+          "finqa-b972a5ad0246.pdf"
+        ]
+      },
+      "report": null,
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": [
+        {
+          "value": 0.10198233616656054,
+          "program": [
+            {
+              "op": "divide",
+              "args": [
+                {
+                  "field": "r1c1"
+                },
+                {
+                  "field": "r2c1"
+                }
+              ]
+            }
+          ],
+          "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "intermediates": [
+            0.10198233616656054
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "at": 1790443560029,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "running",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        },
+        {
+          "id": "step-3",
+          "operation": "evaluate_local",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          },
+          "reason": {
+            "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+            "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:26:00.028Z",
+          "parentStepId": "step-2",
+          "input": {
+            "program": [
+              {
+                "op": "divide",
+                "args": [
+                  {
+                    "field": "r1c1"
+                  },
+                  {
+                    "field": "r2c1"
+                  }
+                ]
+              }
+            ]
+          },
+          "retained": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "value": 0.10198233616656054,
+            "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              }
+            ]
+          },
+          "introducedAtRuntime": true,
+          "trigger": {
+            "modelStepId": "step-2",
+            "toolCallId": "call_00_ILjOAxYcQvu0UrrJd80s8557"
+          },
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "finishedAt": "2026-09-26T17:26:00.029Z"
+        },
+        {
+          "id": "step-4",
+          "operation": "assemble",
+          "title": {
+            "zh": "在本地生成可核对结果",
+            "en": "Assemble the inspectable result locally"
+          },
+          "reason": {
+            "zh": "结果与计算依赖可下载；耗时不含展示延迟。",
+            "en": "Download the result and dependencies; runtime excludes presentation delay."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:26:00.029Z",
+          "parentStepId": "step-3",
+          "input": {},
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "value": 0.10198233616656054,
+            "fileName": "result.md"
+          },
+          "finishedAt": "2026-09-26T17:26:00.029Z"
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        },
+        {
+          "index": 9,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          }
+        },
+        {
+          "index": 10,
+          "type": "step.discovered",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "parentStepId": "step-2",
+          "toolCall": {
+            "index": 0,
+            "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+            "type": "function",
+            "function": {
+              "name": "submit_calculation",
+              "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-3"
+        },
+        {
+          "index": 12,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-4",
+          "title": {
+            "zh": "在本地生成可核对结果",
+            "en": "Assemble the inspectable result locally"
+          }
+        },
+        {
+          "index": 13,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-4"
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": {
+        "issueCodes": [
+          "NUMERICAL_RESULT"
+        ],
+        "amount": 0.10198233616656054,
+        "summary": "0.10198233616656054",
+        "recommendation": "",
+        "evidenceIds": [
+          "r1c1",
+          "r2c1"
+        ],
+        "citations": [
+          "finqa-b972a5ad0246.pdf"
+        ]
+      },
+      "report": "# FinQA · AWK/2013/page_132.pdf-2\n\nwhat is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\n\nResult: 0.10198233616656054\n\nSource: finqa-b972a5ad0246.pdf\n\nProgram:\n\n```json\n[\n  {\n    \"op\": \"divide\",\n    \"args\": [\n      {\n        \"field\": \"r1c1\"\n      },\n      {\n        \"field\": \"r2c1\"\n      }\n    ]\n  }\n]\n```\n\nDependencies: r1c1, r2c1\n\nPublic table-only benchmark subset. Numeric correctness is checked separately against withheld FinQA labels. No semantic privacy guarantee.\n",
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": [
+        {
+          "value": 0.10198233616656054,
+          "program": [
+            {
+              "op": "divide",
+              "args": [
+                {
+                  "field": "r1c1"
+                },
+                {
+                  "field": "r2c1"
+                }
+              ]
+            }
+          ],
+          "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "intermediates": [
+            0.10198233616656054
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "at": 1790443560029,
+    "snapshot": {
+      "protocol": "research-v4-local-program",
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "source": "live",
+      "caseId": "finqa-b972a5ad0246",
+      "family": "finance",
+      "title": {
+        "zh": "公开财务表格 · 在本地完成计算",
+        "en": "Public financial table · calculate locally"
+      },
+      "task": {
+        "zh": "根据公开财报表格，计算参数上升 1 个百分点时，服务与利息成本变动占其他退休福利义务变动的比例。",
+        "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+      },
+      "input": {
+        "r1c1": 7367,
+        "r1c2": -5974,
+        "r2c1": 72238,
+        "r2c2": -60261
+      },
+      "sourceFile": "finqa-b972a5ad0246.pdf",
+      "method": "eager_allowed",
+      "condition": "normal",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "status": "completed",
+      "policy": {
+        "version": 1,
+        "allowed": true,
+        "allowDerived": true
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "operation": "read",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          },
+          "reason": {
+            "zh": "公开 FinQA 数据；标签不进入执行输入。",
+            "en": "Public FinQA data; evaluation labels are excluded from execution."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": null,
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "source": "finqa-b972a5ad0246.pdf",
+            "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+            "cells": 4
+          },
+          "finishedAt": "2026-09-26T17:25:59.389Z"
+        },
+        {
+          "id": "step-2",
+          "operation": "analyze",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          },
+          "reason": {
+            "zh": "按本对照的方法构造可见输入。",
+            "en": "Construct the visible input according to this control. "
+          },
+          "location": "cloud",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:25:59.389Z",
+          "parentStepId": "step-1",
+          "input": {
+            "r1c1": 7367,
+            "r1c2": -5974,
+            "r2c1": 72238,
+            "r2c2": -60261
+          },
+          "retained": [],
+          "checks": [
+            {
+              "kind": "serialized-request",
+              "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+              "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+              "policyVersion": 1,
+              "overheadMs": 0.11580000000000723
+            }
+          ],
+          "receipts": [
+            "ddc23d07-19a9-471f-bd53-cd6c31729700"
+          ],
+          "output": {
+            "requestedTool": {
+              "index": 0,
+              "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+              }
+            }
+          },
+          "recipient": "cloud-model",
+          "required": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "plannedPolicyVersion": 1,
+          "requestPlan": {
+            "id": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+            "recipient": "cloud-model",
+            "policyVersion": 1,
+            "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r2c1",
+              "r2c2"
+            ],
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r1c2",
+                "sha256": "33cc19475102acfb804d8df9befc529bbe9a7cfafa7f965414fe86349a80a89a"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              },
+              {
+                "field": "r2c2",
+                "sha256": "ff5c92de945d0367dcf427dc147329d070cbd93cbcf53a841fcf6388efe79b45"
+              }
+            ],
+            "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+            "receiptVerified": true
+          },
+          "providerResponse": {
+            "id": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+            "model": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 879,
+              "completion_tokens": 64,
+              "total_tokens": 943,
+              "prompt_tokens_details": {
+                "cached_tokens": 640
+              },
+              "prompt_cache_hit_tokens": 640,
+              "prompt_cache_miss_tokens": 239
+            },
+            "message": {
+              "role": "assistant",
+              "content": "",
+              "tool_calls": [
+                {
+                  "index": 0,
+                  "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+                  "type": "function",
+                  "function": {
+                    "name": "submit_calculation",
+                    "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+                  }
+                }
+              ]
+            }
+          },
+          "finishedAt": "2026-09-26T17:26:00.028Z"
+        },
+        {
+          "id": "step-3",
+          "operation": "evaluate_local",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          },
+          "reason": {
+            "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+            "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:26:00.028Z",
+          "parentStepId": "step-2",
+          "input": {
+            "program": [
+              {
+                "op": "divide",
+                "args": [
+                  {
+                    "field": "r1c1"
+                  },
+                  {
+                    "field": "r2c1"
+                  }
+                ]
+              }
+            ]
+          },
+          "retained": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "value": 0.10198233616656054,
+            "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+            "dependencies": [
+              {
+                "field": "r1c1",
+                "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+              },
+              {
+                "field": "r2c1",
+                "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+              }
+            ]
+          },
+          "introducedAtRuntime": true,
+          "trigger": {
+            "modelStepId": "step-2",
+            "toolCallId": "call_00_ILjOAxYcQvu0UrrJd80s8557"
+          },
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "finishedAt": "2026-09-26T17:26:00.029Z"
+        },
+        {
+          "id": "step-4",
+          "operation": "assemble",
+          "title": {
+            "zh": "在本地生成可核对结果",
+            "en": "Assemble the inspectable result locally"
+          },
+          "reason": {
+            "zh": "结果与计算依赖可下载；耗时不含展示延迟。",
+            "en": "Download the result and dependencies; runtime excludes presentation delay."
+          },
+          "location": "local",
+          "status": "completed",
+          "startedAt": "2026-09-26T17:26:00.029Z",
+          "parentStepId": "step-3",
+          "input": {},
+          "retained": [],
+          "checks": [],
+          "receipts": [],
+          "output": {
+            "value": 0.10198233616656054,
+            "fileName": "result.md"
+          },
+          "finishedAt": "2026-09-26T17:26:00.029Z"
+        }
+      ],
+      "events": [
+        {
+          "index": 1,
+          "type": "task.started",
+          "at": "2026-09-26T17:25:59.388Z",
+          "caseId": "finqa-b972a5ad0246"
+        },
+        {
+          "index": 2,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1",
+          "title": {
+            "zh": "读取本地财务表格",
+            "en": "Read the local financial table"
+          }
+        },
+        {
+          "index": 3,
+          "type": "step.completed",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-1"
+        },
+        {
+          "index": 4,
+          "type": "step.started",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "title": {
+            "zh": "规划当前计算步骤",
+            "en": "Plan the current calculation"
+          }
+        },
+        {
+          "index": 5,
+          "type": "view.prepared",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "keys": [
+            "r1c1",
+            "r1c2",
+            "r2c1",
+            "r2c2"
+          ]
+        },
+        {
+          "index": 6,
+          "type": "request.bound",
+          "at": "2026-09-26T17:25:59.389Z",
+          "stepId": "step-2",
+          "ticketId": "291a23bf-23fb-4349-bfc6-c22d8e5a2be9",
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f"
+        },
+        {
+          "index": 7,
+          "type": "receiver.received",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2",
+          "receiptId": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "recipient": "cloud-model"
+        },
+        {
+          "index": 8,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-2"
+        },
+        {
+          "index": 9,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "title": {
+            "zh": "在本地执行计算",
+            "en": "Execute the calculation locally"
+          }
+        },
+        {
+          "index": 10,
+          "type": "step.discovered",
+          "at": "2026-09-26T17:26:00.028Z",
+          "stepId": "step-3",
+          "parentStepId": "step-2",
+          "toolCall": {
+            "index": 0,
+            "id": "call_00_ILjOAxYcQvu0UrrJd80s8557",
+            "type": "function",
+            "function": {
+              "name": "submit_calculation",
+              "arguments": "{\"program\": [{\"op\": \"divide\", \"args\": [{\"field\": \"r1c1\"}, {\"field\": \"r2c1\"}]}]}"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-3"
+        },
+        {
+          "index": 12,
+          "type": "step.started",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-4",
+          "title": {
+            "zh": "在本地生成可核对结果",
+            "en": "Assemble the inspectable result locally"
+          }
+        },
+        {
+          "index": 13,
+          "type": "step.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "stepId": "step-4"
+        },
+        {
+          "index": 14,
+          "type": "run.completed",
+          "at": "2026-09-26T17:26:00.029Z",
+          "status": "completed"
+        }
+      ],
+      "receipts": [
+        {
+          "id": "ddc23d07-19a9-471f-bd53-cd6c31729700",
+          "runId": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+          "stepId": "step-2",
+          "recipient": "cloud-model",
+          "receivedAt": "2026-09-26T17:25:59.401Z",
+          "bytes": 2945,
+          "sha256": "a853a7a13721dc4c3a9fcd784a846e76d1b27818a510aa4cdbd61503a8e0052f",
+          "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r1c2\\\",\\\"row\\\":\\\"Effect on total of service and interest cost components\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointIncrease\\\",\\\"unitHint\\\":\\\"\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Effect on other postretirement benefit obligation\\\",\\\"column\\\":\\\"One-Percentage-PointDecrease\\\",\\\"unitHint\\\":\\\"\\\"}],\\\"facts\\\":{\\\"r1c1\\\":7367,\\\"r1c2\\\":-5974,\\\"r2c1\\\":72238,\\\"r2c2\\\":-60261},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+          "processId": 28700,
+          "responseSha256": "3fa3e8ef2b231f935e06bf3e5ac78206163057910d70f248def855d2eb8f69d1",
+          "usage": {
+            "prompt_tokens": 879,
+            "completion_tokens": 64,
+            "total_tokens": 943,
+            "prompt_tokens_details": {
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 239
+          },
+          "providerId": "6c38b84c-a5a9-4630-93ce-e650ca7c2e91",
+          "status": 200,
+          "finishedAt": "2026-09-26T17:26:00.024Z"
+        }
+      ],
+      "result": {
+        "issueCodes": [
+          "NUMERICAL_RESULT"
+        ],
+        "amount": 0.10198233616656054,
+        "summary": "0.10198233616656054",
+        "recommendation": "",
+        "evidenceIds": [
+          "r1c1",
+          "r2c1"
+        ],
+        "citations": [
+          "finqa-b972a5ad0246.pdf"
+        ]
+      },
+      "report": "# FinQA · AWK/2013/page_132.pdf-2\n\nwhat is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?\n\nResult: 0.10198233616656054\n\nSource: finqa-b972a5ad0246.pdf\n\nProgram:\n\n```json\n[\n  {\n    \"op\": \"divide\",\n    \"args\": [\n      {\n        \"field\": \"r1c1\"\n      },\n      {\n        \"field\": \"r2c1\"\n      }\n    ]\n  }\n]\n```\n\nDependencies: r1c1, r2c1\n\nPublic table-only benchmark subset. Numeric correctness is checked separately against withheld FinQA labels. No semantic privacy guarantee.\n",
+      "error": null,
+      "metrics": {
+        "controlMs": [
+          0.11580000000000723
+        ],
+        "modelCalls": 1,
+        "toolCalls": 0,
+        "promptTokens": 879,
+        "completionTokens": 64,
+        "totalBytes": 2945,
+        "elapsedMs": 640.5803
+      },
+      "executionMode": "deepseek",
+      "startedAt": "2026-09-26T17:25:59.388Z",
+      "document": {
+        "file": "finqa-b972a5ad0246.pdf",
+        "sourceArtifact": "fixtures/finqa-v4/development.json",
+        "sha256": "ce9d542e1ff246fe13c5a2890a16900e897ea5446362d5f8a01bd650664a0aef",
+        "bytes": 13447,
+        "pages": 1
+      },
+      "evaluationMethod": "eager_allowed",
+      "programCertificates": [
+        {
+          "value": 0.10198233616656054,
+          "program": [
+            {
+              "op": "divide",
+              "args": [
+                {
+                  "field": "r1c1"
+                },
+                {
+                  "field": "r2c1"
+                }
+              ]
+            }
+          ],
+          "programSha256": "526c6572193ab578814150676e7878aea5735e1161254a7ccd880ff2393f41a7",
+          "dependencies": [
+            {
+              "field": "r1c1",
+              "sha256": "b5bf10f0b7d29480034eeb57c95a2cbb3a94a9a6c8b83d7f0433fe898330c59d"
+            },
+            {
+              "field": "r2c1",
+              "sha256": "dde54184fc14a2e5bb3aeb0df4a3682582f57b70373424df825b46c820230c89"
+            }
+          ],
+          "intermediates": [
+            0.10198233616656054
+          ]
+        }
+      ],
+      "finishedAt": "2026-09-26T17:26:00.029Z"
+    }
+  }
+]

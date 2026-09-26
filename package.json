@@ -16,7 +16,13 @@
     "verify:v2": "node scripts/summarize-validation.mjs v2",
     "verify:v3": "node scripts/summarize-validation.mjs v3",
     "plot:v3": "python scripts/plot-validation.py",
-    "experiment:v3": "node scripts/run-progressive.mjs"
+    "experiment:v3": "node scripts/run-progressive.mjs",
+    "verify:v4": "node scripts/verify-v4.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "experiment:finqa": "node scripts/run-new-experiment.mjs",
+    "experiment:controls": "node scripts/run-new-experiment.mjs --controls",
+    "test:financial-ui": "node test/financial-ui.mjs",
+    "plot:v4": "python scripts/plot-v4.py"
   },
   "dependencies": {
     "pdfjs-dist": "^6.3.289"

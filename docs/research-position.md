@@ -1,5 +1,15 @@
 # Research position and evidence boundaries
 
+## Current stronger-control update
+
+The v4 extension adds a finite local arithmetic interpreter and records its actual source dependencies. This is a concrete executable capability, but local program execution and computation pushdown are established ideas. It is not presented as a first invention. The schema-only path is an experimental route with a measured accuracy loss; it does not replace the original contract/study route as a universal default.
+
+The new same-capability controls produce 57/64 correct tasks for progressive acquisition and 58/64 for both permitted-field eager sharing and numeric prefetch. Progressive acquisition reduces extra fields but uses 80 model calls versus 64. A 40-page restricted FinQA test subset produces 51/80 for schema-only planning versus 62/80 for full values. These outcomes rule out a current claim of universal accuracy improvement or cost dominance. See [claim-to-evidence map](claims-and-evidence.md) and [current records](../evidence/validation-v4/).
+
+[Operationalizing Data Minimization for Privacy-Preserving LLM Prompting](https://arxiv.org/abs/2510.03662) formalizes utility-preserving minimization and searches transformation choices. This reinforces why requesting allowed fields is not itself evidence of semantic necessity. [FinQA](https://aclanthology.org/2021.emnlp-main.300/) supplies public numerical questions and reasoning labels; the subset used here is restricted by an explicit compatibility rule and is not a full FinQA evaluation.
+
+The remainder documents the original v3 mechanism and evidence rather than replacing its historical results.
+
 The system studies a data-management problem in a running agent task: the next recipient and its useful input may become known only after an earlier operation returns. A fixed entry projection can be excessive for a lookup but insufficient for a later calculation. The prototype maintains a recipient-specific view, lets a model request missing authorized business facts, and checks the current policy, used source values and exact serialized request before dispatch.
 
 This is a bounded systems demonstration. It does not claim to infer a mathematically minimal sufficient view, defend arbitrary network bypasses, or outperform other papers' full systems.

@@ -1,0 +1,38 @@
+{
+  "source": "https://github.com/czyssrs/FinQA",
+  "commit": "0f16e2867befa6840783e58be38c9efb9229d742",
+  "origins": {
+    "dev.json": {
+      "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/dev.json",
+      "sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51",
+      "bytes": 10954658
+    },
+    "test.json": {
+      "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/test.json",
+      "sha256": "831dbfb2e785dbc227f895ce3f24046433467aec67b09db2bd6ac7692a8a30dc",
+      "bytes": 14395143
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/LICENSE",
+      "sha256": "92c0e67bd762c15c07ba60de09558338315a8ebf99aac4f51f487179809ac087",
+      "bytes": 1067
+    }
+  },
+  "selection": {
+    "dev": {
+      "total": 883,
+      "eligible": 359,
+      "selected": 6,
+      "distinctSourceFiles": 6
+    },
+    "test": {
+      "total": 1147,
+      "eligible": 444,
+      "selected": 40,
+      "distinctSourceFiles": 40
+    }
+  },
+  "seed": "stepwise-v4-20260927",
+  "rule": "Table-only annotated questions; 3–80 parseable cells; 1–8 add/subtract/multiply/divide steps; >=2 uniquely locatable gold operands; one question per source page; SHA256 order. Selection never uses a model response.",
+  "limitation": "A restricted table-only subset, not the full FinQA benchmark. Public data may occur in model training. Gold annotations are used only for eligibility and scoring, never for model inputs."
+}

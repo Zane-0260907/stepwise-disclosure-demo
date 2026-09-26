@@ -1,0 +1,38 @@
+{
+  "scope": "Three additional runs of the first deterministic development case, excluded from all batch counts. No success-based choice.",
+  "runs": [
+    {
+      "id": "cd25f516-0c3d-4fd7-812b-a1e0b2b3e511",
+      "caseId": "finqa-b972a5ad0246",
+      "method": "eager_allowed",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:25:59.387Z",
+      "label": {
+        "zh": "公开表格 · 全数值对照",
+        "en": "Public table · all values"
+      }
+    },
+    {
+      "id": "da05f96d-909c-4f57-8a66-17c08680d1b6",
+      "caseId": "finqa-b972a5ad0246",
+      "method": "requested_cells",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:26:00.044Z",
+      "label": {
+        "zh": "公开表格 · 按需单元格",
+        "en": "Public table · selected cells"
+      }
+    },
+    {
+      "id": "adc2c0c7-7c57-4afc-811f-455add00a00d",
+      "caseId": "finqa-b972a5ad0246",
+      "method": "local_program",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T17:26:01.511Z",
+      "label": {
+        "zh": "公开表格 · 本地计算",
+        "en": "Public table · local calculation"
+      }
+    }
+  ]
+}

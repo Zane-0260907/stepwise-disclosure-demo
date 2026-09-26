@@ -3,7 +3,11 @@
 *.jpg binary
 *.jpeg binary
 *.pdf binary
+*.docx binary
 *.zip binary
 *.woff binary
 *.woff2 binary
 *.ttf binary
+# Preserve the exact pre-run bytes hashed by the v4 protocol on every OS.
+src/research/sealed-request-v4.mjs -text whitespace=cr-at-eol,-blank-at-eof
+src/research/controlled-execution-v4.mjs -text whitespace=cr-at-eol,-blank-at-eof

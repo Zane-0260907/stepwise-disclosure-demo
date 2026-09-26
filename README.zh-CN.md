@@ -39,7 +39,7 @@
 <p align="center"><img src="evidence/progressive-showcase/ui/progressive.zh-CN.png" alt="中文界面中保存的 DeepSeek 运行记录、步骤时间线和接收方视图" width="920"></p>
 <p align="center"><em>中文界面中的 DeepSeek 真实记录重放。右栏可逐步检查实际发送内容与接收记录。</em></p>
 
-这是使用合成合同与学情记录的独立研究原型，不是商业客户端。离线执行器采用有限规则；保存的 DeepSeek 记录来自真实模型调用，但在页面中作为重放展示。界面明确区分两种模式。
+这是使用合成合同、学情记录及公开 FinQA 表格子集的独立研究原型，不是商业客户端。离线执行器采用有限规则；保存的 DeepSeek 记录来自真实模型调用，在页面中作为重放展示。新增数值路径由模型根据表结构提出有限表达式，再由本地解释器读取依赖的数值并计算。
 
 ### 技术栈
 
@@ -66,9 +66,42 @@ npm ci
 npm start
 ```
 
-打开 **http://127.0.0.1:4793/**。服务默认只监听本机。目前完成验收的是 Windows；Docker 与 Linux 入口可供尝试，尚未完成接受性验证。
+打开 **http://127.0.0.1:4793/**，保留启动终端。服务默认只监听本机。自动复算检查覆盖 Windows 和 Ubuntu；交互浏览器验收在 Windows 完成。Docker 配置已提供，但未单独完成部署验收。
 
 若要重新发起 DeepSeek 现场调用，请在本地设置 `DEEPSEEK_API_KEY` 后重启。适配器使用 `deepseek-flash` 非思考模式。不要把密钥提交到仓库，也不要把带密钥的实例直接暴露到公网；本演示没有多用户鉴权。
+
+### 第一次应该选择什么
+
+| 方式 | 是否需要密钥 | 实际发生的事情 |
+|:--|:--:|:--|
+| 本机规则执行器 | 否 | 重新读取合成输入、执行有限规则、生成新记录 |
+| 真实模型记录重放 | 否 | 按原有事件顺序展示已经保存的真实请求和回复 |
+| DeepSeek 现场运行 | 自备 | 重新请求模型，产生新的步骤、接收记录和结果 |
+| 批量实验复核 | 否 | 从公开原始记录重新评分，不请求模型 |
+
+先点击左侧真实模型记录中的**补充必要事实**。步骤会自动推进；点击某一步查看右栏中的实际输入和接收记录，点击**跟随当前步骤**恢复自动跟随。**文件**和**预览**显示源材料与结果；执行结束后可下载报告和原始记录。页面放慢展示，不把展示时间算成实验耗时。
+
+### 配置自己的 DeepSeek 现场调用
+
+Windows PowerShell，在仓库根目录执行：
+
+```powershell
+./scripts/start-demo.ps1 -UseDeepSeek
+```
+
+脚本会以隐藏输入方式询问密钥。先停止已运行的服务终端再重启。密钥只保存在本机进程环境中，不写入源码、网页脚本或公开记录。
+
+Linux / Bash：
+
+```bash
+read -rsp 'DeepSeek API key: ' DEEPSEEK_API_KEY; echo
+export DEEPSEEK_API_KEY
+npm start
+# 停止服务后清除变量：
+unset DEEPSEEK_API_KEY
+```
+
+在页面选择 **DeepSeek · 自备密钥**。若 4793 被占用，启动前设置 `DEMO_PORT=4794`，再访问对应端口。离线演示不需要 Python；下方的 ZIP 解包复算需要 Python 3.10 以上。
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
@@ -87,6 +120,73 @@ npm start
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
 ## 复核实验
+
+本轮增加 **496 次任务、592 次真实 DeepSeek 调用**，全部失败保留；代码、输入、标签和提示在调用前冻结。
+
+| 同能力强对照 | 通过 | 多余字段／任务 | 模型调用 |
+|:--|--:|--:|--:|
+| 关闭事实补充 | 50/64 | 0 | 64 |
+| 全部获准业务字段 | 58/64 | 0.5625 | 64 |
+| 预取登记业务数值 | 58/64 | 0.0625 | 64 |
+| 按需补充 | 57/64 | 0.03125 | 80 |
+
+四种方法使用相同本地能力，并为资料服务单独构造输入；新增预取对照均排除五类私有字段。32 个案例已在此前版本公开，因此本轮是强对照复验，不是新留出集。结果表明减少共享需要付出额外调用代价，不能宣称完成率全面领先。
+
+| FinQA 受限表格子集 | 通过 | 外发原始数值单元格／任务 | 模型调用 |
+|:--|--:|--:|--:|
+| 全部数值 | 62/80 | 15.425 | 80 |
+| 按需获取单元格 | 53/80 | 2.425 | 160 |
+| 结构规划与本地计算 | 51/80 | 0 | 80 |
+
+公开测试集按固定规则选出 40 个页面，覆盖 38 份公司年度报告。本地表达式路径比全量数值下降 **13.75 个百分点**，按报告聚类的描述性区间为 **[−24.43, −3.95]**。该路径保留为可检查的实验能力，不作为所有任务的默认策略；问题、行列标签和单位仍会发送，零单元格外发不等于零信息泄露。
+
+<p align="center"><img src="evidence/validation-v4/tradeoffs.zh-CN.svg" alt="强对照与公开表格的真实通过率、共享量和执行耗时，保留准确率下降" width="1000"></p>
+
+### 无密钥复算最新实验
+
+在仓库根目录执行；部分系统应将 `python` 改为 `python3`。
+
+```sh
+npm test
+python -m zipfile -e evidence/validation-v4/finqa/reproduction-records.zip .
+python -m zipfile -e evidence/validation-v4/controls/reproduction-records.zip .
+npm run verify:v4
+node scripts/verify-financial-showcase.mjs
+```
+
+预期输出：FinQA **240 次任务 / 320 次供应商请求**；合成强对照 **256 / 272**。脚本会重新执行数值程序、重新评分、校验冻结摘要，并将每次模型请求对应到独立供应商记录。解包目录为 Git 忽略的 `data/research/validation/`，不会请求模型。
+
+### 用自己的密钥产生新结果
+
+先按上方教程将密钥放入环境，再执行：
+
+```sh
+npm run experiment:finqa -- --run-id=my-finqa-01
+npm run experiment:controls -- --run-id=my-controls-01
+node scripts/verify-v4.mjs --finqa --run-id=my-finqa-01
+node scripts/verify-v4.mjs --controls --run-id=my-controls-01
+```
+
+指定同一 ID 时只续跑尚未执行的任务；更换 ID 才是新实验。不指定 ID 会自动创建带时间戳的新目录。新运行和统计写在 `data/research/validation/<run-id>/`，不会覆盖公开结果。已完成的失败不会被自动重试后择优保留。
+
+### 根据记录重新绘图
+
+```sh
+pip install -r requirements-plots.txt
+python scripts/plot-v4.py --lang zh
+python scripts/plot-v4.py --lang en
+```
+
+输出 PNG、可编辑文字的 SVG 和 PDF。图中文字需要微软雅黑或 Noto Sans CJK。方法定义、数据筛选、评分容差、统计单位、失败定位和故障处理见[完整复现指南](docs/reproduction-v4.md)。
+
+页面中的**公开表格**场景可以直接比较三种执行方式；选中本地计算步骤可检查模型提出的表达式和实际依赖。三个展示记录是额外调用，不计入上述批量实验。
+
+<p align="center"><img src="evidence/financial-showcase/ui/financial.zh-CN.png" alt="公开表格真实回放中发送的结构和留在本地的数值" width="920"></p>
+
+最新正文：[中文 PDF](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf) · [可编辑 Word](paper/zh-CN/按步执行与信息共享_中文最新稿.docx) · [公式与伪代码](paper/zh-CN/公式与算法源码.md)。这是中文工作稿，不代表已经录用或已完成正式英文 ACM 投稿准备。
+
+<details>
+<summary><strong>此前 v3 结果及版本沿革（单独保留）</strong></summary>
 
 当前实验为 **32 个合成案例 × 7 种方法 × 每例 2 次，共 448 次任务运行**，模型为 `deepseek-flash`。其中 560 次实际供应商调用均有匹配的接收记录与出站记录；所有计划任务和失败均保留。输入由作者在原有两个领域中编写，不是外部基准。
 
@@ -136,6 +236,8 @@ npm run test:binding
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
+</details>
+
 ## 证据与边界
 
 [渐进共享演示](evidence/progressive-showcase/)另保存一次真实调用，不计入批次。该记录保留模型索取逾期天数时同时索取多余合同金额的事实，随后得到 1,150 元结果。[此前的资料查询对照](evidence/research/deepseek-live-20260926/)也单独保留。单条轨迹不能替代批量评价。
@@ -155,8 +257,12 @@ npm run test:binding
 | [`src/research/`](src/research/) | 规划、视图、策略复核、接收进程、模型适配与评价 |
 | [`web/`](web/) | 与商业产品分离的双语研究界面 |
 | [`fixtures/research/`](fixtures/research/) | 合成 PDF、任务目录、引用资料与独立评价标签 |
+| [`fixtures/finqa-v4/`](fixtures/finqa-v4/) | 公开表格受限子集、原始数值标签、选择规则与数据许可 |
+| [`evidence/validation-v4/`](evidence/validation-v4/) | 当前 496 次任务的冻结协议、原始记录、复算统计及中英文图表 |
+| [`evidence/financial-showcase/`](evidence/financial-showcase/) | 同一公开表格三种方法的真实记录与双语截图 |
 | [`evidence/research/`](evidence/research/) | 冻结协议、运行记录、统计、边界测试、真实调用与截图 |
 | [`scripts/`](scripts/) | 输入核验、独立复算、汇总与绘图 |
+| [`paper/zh-CN/`](paper/zh-CN/) | 最新中文 Word、四页 PDF、原生公式与构建源文件 |
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 

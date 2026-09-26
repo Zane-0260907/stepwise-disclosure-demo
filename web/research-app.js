@@ -15,7 +15,7 @@ const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className
 function icon(name){const n=document.createElementNS('http://www.w3.org/2000/svg','svg');const u=document.createElementNS(n.namespaceURI,'use');u.setAttribute('href',`#i-${name}`);n.append(u);return n;}
 const caseItem=()=>S.bootstrap?.cases.find(c=>c.id===(S.run?.caseId||S.caseId));
 const methodName=m=>l(S.bootstrap?.methods[m]||m);
-const factName=k=>S.bootstrap?.labels[k]?.[S.lang==='zh'?0:1]||k;
+const factName=k=>({question:S.lang==='zh'?'当前问题':'Question',schema:S.lang==='zh'?'表结构（不含单元格数值）':'Table schema (without cell values)'})[k]||S.bootstrap?.labels[k]?.[S.lang==='zh'?0:1]||k;
 const value=v=>S.lang==='en'&&typeof v==='string'&&S.bootstrap?.presentationTranslations?.values?.[v]?S.bootstrap.presentationTranslations.values[v]:typeof v==='object'?JSON.stringify(v):String(v??'');
 const time=d=>d?new Date(d).toLocaleTimeString(S.lang==='zh'?'zh-CN':'en-GB',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'}):'';
 const active=run=>['queued','running'].includes(run?.status)||(run?.status==='completed'&&!run.finishedAt);
@@ -49,17 +49,26 @@ function englishFinding(run){
  const issue=run?.result?.issueCodes?.[0];const [base,recommendation]=EN_ISSUES[issue]||['The structured result requires further review.','Review the original evidence before acting.'];
  const amount=run?.result?.amount;return {summary:amount===null||amount===undefined?base:base+' Calculated amount: CNY '+amount.toLocaleString('en-US')+'.',recommendation};
 }
-const resultSummary=run=>S.lang==='zh'?run?.result?.summary||'':englishFinding(run).summary;
-const resultRecommendation=run=>S.lang==='zh'?run?.result?.recommendation||'':englishFinding(run).recommendation;
+const resultSummary=run=>run?.family==='finance'?(S.lang==='zh'?'计算结果：':'Computed result: ')+Number(run.result.amount.toPrecision(8)):S.lang==='zh'?run?.result?.summary||'':englishFinding(run).summary;
+const resultRecommendation=run=>run?.family==='finance'?(S.lang==='zh'?'本地按模型提出的表达式计算；公式正确性由实验标签单独检验。':'Computed locally from the proposed expression; correctness is checked separately against benchmark labels.'):S.lang==='zh'?run?.result?.recommendation||'':englishFinding(run).recommendation;
 function englishReport(run){
+ if(run.family==='finance')return run.report;
  const result=run.result||{};const identity=value(run.input?.identity||'synthetic parties').replace(/合成采购方(\d+)/g,'Synthetic buyer $1').replace(/合成供应方(\d+)/g,'Synthetic supplier $1');
  return ['# Contract risk review (synthetic case)','',`Parties: ${identity}`,`Run: ${run.id}`,'','## Finding',englishFinding(run).summary,'',`Issue code: ${(result.issueCodes||[]).join(', ')}`,result.amount===null||result.amount===undefined?'':`Calculated amount: CNY ${result.amount.toLocaleString('en-US')}`,'','## Recommendation',englishFinding(run).recommendation,'','## Evidence',...(result.evidenceIds||[]).map(key=>'- '+key),...(result.citations||[]).map(citation=>'- '+citation),'','## Execution record',`Local steps: ${(run.steps||[]).filter(step=>step.location==='local').length}; ${run.executionMode==='offline'?'local driver':'model'} calls: ${run.metrics?.modelCalls||0}; reference lookups: ${run.metrics?.toolCalls||0}.`,'This English presentation is derived from the saved structured result. The original model response and request bodies remain in the trace.',''].filter(line=>line!==undefined).join('\n');
 }
+function syncMethods(){
+ const finance=caseItem()?.family==='finance';
+ const list=finance?['local_program','requested_cells','eager_allowed']:['joint','allowed_eager','numeric_prefetch','full'];
+ const select=$('#method-select');if([...select.options].map(o=>o.value).join()!==list.join()){const previous=select.value;select.replaceChildren(...list.map(id=>{const o=el('option','',methodName(id));o.value=id;return o;}));select.value=list.includes(previous)?previous:list[0];}
+ $('.input-adjust').hidden=finance;
+}
 function applyText(){
+ syncMethods();
  document.documentElement.lang=S.lang==='zh'?'zh-CN':'en';
  document.querySelectorAll('[data-i18n]').forEach(n=>{if(D[S.lang][n.dataset.i18n])n.textContent=t(n.dataset.i18n);});
  $('#lang-zh').classList.toggle('is-active',S.lang==='zh');$('#lang-en').classList.toggle('is-active',S.lang==='en');
- const c=caseItem();$('.conversation-header h1').textContent=c?l(c.title):t('taskTitle');
+ const c=caseItem();if(c?.family==='finance'){$('[data-i18n="caseTitle"]').textContent=S.lang==='zh'?'公开财务表格计算':'Public table calculation';$('[data-i18n="agentIntro"]').textContent=S.lang==='zh'?'我会先读取表结构，让模型提出计算，再在本地核验并执行。':'I will read the schema, ask for a calculation, then validate and execute it locally.';$('[data-i18n="syntheticCase"]').textContent=S.lang==='zh'?'FinQA 公开数据 · 可核对记录':'Public FinQA data · inspectable records';$('[data-i18n="sampleDocument"]').textContent=S.lang==='zh'?'公开表格 · 阅读预览':'Public table · reading preview';}
+ $('.conversation-header h1').textContent=c?l(c.title):t('taskTitle');
  $('[data-i18n="taskPrompt"]').textContent=l(S.run?.task||c?.task||'');
  $('#attachment-link strong').textContent=c?.source||'contract-21.pdf';
  $('#scenario-label').textContent=t('selectScenario');
@@ -78,13 +87,13 @@ function applyText(){
  $('#featured-label').textContent=S.lang==='zh'?'真实模型记录':'Recorded model runs';
  const status=S.starting||S.run?.status==='completed'&&!S.run?.finishedAt?'running':S.run?.status||'ready';const statusText=status==='queued'?(S.lang==='zh'?'等待启动':'Queued'):t(status);$('#header-state').textContent=statusText;$('#run-state').textContent=statusText;$('#run-state').classList.toggle('is-failed',['failed','blocked'].includes(status));
  const badge=$('#source-badge');badge.hidden=!S.run;badge.textContent=S.run?`${t(S.run.source==='recorded'?'replay':'live')}${S.run.metrics?.modelCalls?` · ${S.run.model||'—'}`:''}`:'';
- const unavailable=(S.mode==='deepseek'&&!S.bootstrap?.deepseekAvailable)||(S.scenario==='facts'&&S.mode!=='deepseek');
+ const unavailable=(S.mode==='deepseek'&&!S.bootstrap?.deepseekAvailable)||(S.bootstrap?.scenarios.find(s=>s.id===S.scenario)?.requiresLive&&S.mode!=='deepseek');
  $('#live-button').disabled=active(S.run)||S.starting||unavailable;$('#live-button').title=unavailable?(S.lang==='zh'?'需在启动前配置 DEEPSEEK_API_KEY':'Set DEEPSEEK_API_KEY before starting'):'';
  $('#scenario-select').disabled=active(S.run);$('#method-select').disabled=active(S.run);$('#execution-mode').disabled=active(S.run);
  $('#replay-button').disabled=!S.lastLive||active(S.run);$('#replay-button').title=t('replay');$('#replay-button').setAttribute('aria-label',t('replay'));
  const note=$('#execution-note');note.textContent=S.run?.source==='recorded'?t('recordedNote'):S.run?.executionMode==='offline'?(S.lang==='zh'?'本次为新执行：本机规则执行器处理分析请求；独立接收进程记录实际请求。它不能证明 DeepSeek 的判断质量。':'Fresh run: a local rule driver handles analysis; a separate receiver records actual requests. This does not evaluate DeepSeek quality.'):S.run?.executionMode==='deepseek'?(S.lang==='zh'?'本次为 DeepSeek 现场调用；请自行配置密钥，密钥不会写入记录。':'Live DeepSeek call with your own key; the key is not recorded.'):(S.lang==='zh'?'选择案例后点击开始；可调整合成输入观察结果变化。':'Choose a case and run it; adjust synthetic inputs to inspect changes.');
  if(S.presentation?.queued>0)note.textContent+=S.lang==='zh'?' 已执行事件按原始顺序放慢展示，尚有 '+S.presentation.queued+' 帧；这不是执行耗时。':' '+S.presentation.queued+' recorded event frames remain in the paced view; this is not execution time.';
- if(S.run?.startedAt&&S.run?.finishedAt)note.textContent+=S.lang==='zh'?' 实际运行耗时 '+(new Date(S.run.finishedAt)-new Date(S.run.startedAt))+' 毫秒（含 PDF 解析）；核心执行 '+S.run.metrics.elapsedMs.toFixed(1)+' 毫秒。':' Actual runtime '+(new Date(S.run.finishedAt)-new Date(S.run.startedAt))+' ms including PDF parsing; execution core '+S.run.metrics.elapsedMs.toFixed(1)+' ms.';
+ if(S.run?.startedAt&&S.run?.finishedAt)note.textContent+=S.lang==='zh'?' 实际运行耗时 '+(new Date(S.run.finishedAt)-new Date(S.run.startedAt))+' 毫秒；核心执行 '+S.run.metrics.elapsedMs.toFixed(1)+' 毫秒。':' Actual runtime '+(new Date(S.run.finishedAt)-new Date(S.run.startedAt))+' ms; execution core '+S.run.metrics.elapsedMs.toFixed(1)+' ms.';
  if(Object.keys(S.run?.overrides||{}).length)note.textContent+=S.lang==='zh'?' 本次输入已覆盖 PDF 中的对应数值，原文件未改。':' This run overrides values from the PDF; the source file is unchanged.';
  $('#request-time').textContent=time(S.run?.createdAt);$('#agent-time').textContent=time(S.run?.createdAt);
  document.title=`Agent · ${c?l(c.title):t('taskTitle')}`;
@@ -123,10 +132,16 @@ function renderSteps(){
 }
 function factsCard(title,facts,local=false){
  const card=el('section',`view-card${local?' local':''}`);const h=el('h3');h.append(icon(local?'lock':'cloud'),el('span','',title));card.append(h);
- const list=el('ul');for(const[k,v]of Object.entries(facts||{}))list.append(el('li','',`${factName(k)}：${value(v)}`));if(!list.children.length)list.append(el('li','',t('none')));card.append(list);return card;
+ const list=el('ul');for(const[k,v]of Object.entries(facts||{})){
+ if(k==='schema'&&Array.isArray(v)){
+  const item=el('li'),details=el('details','schema-details');details.append(el('summary','',S.lang==='zh'?`表结构：${v.length} 个单元格（查看标签）`:`Schema: ${v.length} cells (inspect labels)`));
+  for(const cell of v)details.append(el('p','',`${cell.id} · ${cell.row} · ${cell.column}`));item.append(details);list.append(item);
+ }else list.append(el('li','',`${factName(k)}：${value(v)}`));
+}if(!list.children.length)list.append(el('li','',t('none')));card.append(list);return card;
 }
 function outputText(output){if(!output)return '';if(typeof output==='string')return output;if(S.lang==='en'){
  if(output.issueCodes||output.fileName)return resultSummary(S.run);
+ if(output.requestedTool&&S.run?.family==='finance')return output.requestedTool.function?.name==='submit_calculation'?'The model proposed a finite calculation to execute locally.':'The model requested selected numeric cells.';
  if(output.requestedTool)return output.requestedTool.function?.name==='request_task_facts'?'The model requested missing business facts from the local controller.':'The model requested the specified version of the reference.';
  if(output.approvedFields)return 'Locally authorized fields: '+output.approvedFields.join(', ');
  if(output.text&&S.run?.caseId==='contract-21')return S.bootstrap?.presentationTranslations?.referenceC01||'The versioned reference was retrieved.';
@@ -139,10 +154,12 @@ function processPane(){
  if(S.run.awaitingDecision?.stepId===step.id){const panel=el('div','decision-prompt');panel.append(el('strong','',S.lang==='zh'?'发送前授权核验':'Authorization check before sending'));const actions=el('div','result-actions');for(const [action,zh,en] of [['allow','允许发送','Allow send'],['revoke','撤销授权','Revoke access']]){const button=el('button','file-preview',S.lang==='zh'?zh:en);button.onclick=async()=>{button.disabled=true;try{await api('/runs/'+S.run.id+'/decision',{action});}catch(error){S.error=error.message;render();}};actions.append(button);}panel.append(actions);root.append(panel);}
  const receipts=(S.run.receipts||[]).filter(r=>r.stepId===step.id);
  if(receipts.length){const summary=el('div','receipt-line');summary.append(el('strong','',`${t('receipt')} · ${receipts.reduce((sum,r)=>sum+r.bytes,0)} bytes`),el('small','',` · ${time(receipts.at(-1).receivedAt)}`));root.append(summary);}
- if(Object.keys(step.input||{}).length){
+ let visibleInput=step.input;
+ if(S.run.family==='finance'&&step.location==='cloud'&&receipts.length){const body=JSON.parse(JSON.parse(receipts.at(-1).rawBody).messages[1].content);visibleInput={question:body.task,schema:body.schema,...body.facts};}
+ if(Object.keys(visibleInput||{}).length){
    const columns=el('div',step.location==='local'?'local-input':'view-columns');
    const inputTitle=step.location==='local'?t('input'):S.run.executionMode==='offline'&&step.location==='cloud'?(receipts.length?(S.lang==='zh'?'发给本机执行器':'Sent to local driver'):(S.lang==='zh'?'拟交给本机执行器':'Prepared for local driver')):receipts.length?t('sent'):t('prepared');
-   columns.append(factsCard(inputTitle,step.input));
+   columns.append(factsCard(inputTitle,visibleInput));
    if(step.location!=='local'){
      const kept=Object.fromEntries((step.retained||[]).map(k=>[k,S.run.input[k]??'—']));columns.append(factsCard(t('retained'),kept,true));
    }
@@ -219,7 +236,7 @@ async function start(replay=false){
  const created=await api(replay?'/replay':'/runs',replay?{runId:S.lastLive}:{caseId:S.caseId,condition:scenario.condition,method:$('#method-select').value,mode:S.mode,overrides,deferStart:true});S.starting=false;connect(created.id,!replay);
  }catch(error){S.starting=false;S.error=error.message;render();}
 }
-function renderFeatured(){const root=$('#featured-runs');root.replaceChildren();for(const run of S.bootstrap?.featuredRuns||[]){const button=el('button','history-run featured-run',(S.lang==='zh'?'DeepSeek 重放 · ':'DeepSeek replay · ')+(run.label?l(run.label):methodName(run.method)));button.type='button';button.onclick=()=>{if(run.caseId?.startsWith('progressive-')){S.scenario='facts';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='facts';$('#execution-mode').value='deepseek';}S.lastLive=run.id;start(true);};root.append(button);}}
+function renderFeatured(){const root=$('#featured-runs');root.replaceChildren();for(const run of S.bootstrap?.featuredRuns||[]){const button=el('button','history-run featured-run',(S.lang==='zh'?'DeepSeek 重放 · ':'DeepSeek replay · ')+(run.label?l(run.label):methodName(run.method)));button.type='button';button.onclick=()=>{if(run.caseId?.startsWith('finqa-')){S.scenario='financial';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='financial';$('#execution-mode').value='deepseek';}else if(run.caseId?.startsWith('progressive-')){S.scenario='facts';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='facts';$('#execution-mode').value='deepseek';}S.lastLive=run.id;start(true);};root.append(button);}}
 function renderHistory(){const root=$('#run-history');root.replaceChildren();for(const run of S.history.slice(0,6)){const b=el('button','history-run',`${l(run.title)} · ${methodName(run.method)}`);b.title=`${time(run.createdAt)} · ${t(run.status)}`;b.onclick=async()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.run=await api(`/runs/${run.id}`);S.caseId=S.run.caseId;S.follow=true;S.tab='process';S.showCompare=false;render();};root.append(b);}}
 async function loadHistory(){try{S.history=await api('/history');renderHistory();}catch{}}
 async function showComparison(){S.showCompare=true;S.pairs=[];const candidates=S.history.filter(r=>r.caseId===S.run.caseId&&(r.condition||'normal')===(S.run.condition||'normal')&&r.id!==S.run.id&&r.method!==S.run.method);for(const candidate of candidates){const other=await api(`/runs/${candidate.id}`);if(other.executionMode===S.run.executionMode&&JSON.stringify(other.overrides||{})===JSON.stringify(S.run.overrides||{})){S.pairs=[S.run,other];break;}}render();}
@@ -234,7 +251,7 @@ async function init(){
  $('#task-nav').onclick=()=>{S.tab='process';render();};
  try{
    S.bootstrap=await api('/bootstrap');if(S.lastLive){try{const previous=await api(`/runs/${S.lastLive}`);if(previous.status!=='completed')S.lastLive=null;}catch{S.lastLive=null;}}S.lastLive ||= S.bootstrap.sampleRunId;$('#scenario-select').replaceChildren();for(const scenario of S.bootstrap.scenarios){const o=el('option','',l(scenario.title));o.value=scenario.id;$('#scenario-select').append(o);}$('#scenario-select').value=S.scenario;
-   $('#scenario-select').onchange=()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.scenario=$('#scenario-select').value;S.caseId=S.bootstrap.scenarios.find(x=>x.id===S.scenario).caseId;if(S.scenario==='facts'){S.mode='deepseek';$('#execution-mode').value='deepseek';}S.run=null;S.error='';S.tab='process';S.showCompare=false;render();};
+   $('#scenario-select').onchange=()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.scenario=$('#scenario-select').value;S.caseId=S.bootstrap.scenarios.find(x=>x.id===S.scenario).caseId;if(S.bootstrap.scenarios.find(s=>s.id===S.scenario)?.requiresLive){S.mode='deepseek';$('#execution-mode').value='deepseek';}S.run=null;S.error='';S.tab='process';S.showCompare=false;render();};
    $('#method-select').replaceChildren();for(const method of ['joint','full','pii','entry','per_step']){const o=el('option','',methodName(method));o.value=method;$('#method-select').append(o);}
    render();renderFeatured();loadHistory();
  }catch(error){S.error=error.message;render();}

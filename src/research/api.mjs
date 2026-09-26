@@ -3,7 +3,9 @@ import { randomUUID } from 'node:crypto';
 import { createTransport } from './transport.mjs';
 import { getCase as getFrozenCase, loadCases as loadFrozenCases, METHODS, METHOD_NAMES, publicCase, LABELS } from './catalog.mjs';
 import { createRun, acceptReceipt } from './engine.mjs';
-import { executeAdaptiveRun as executeRun } from './adaptive-execution.mjs';
+import { executeControlledRun as executeRun } from './controlled-execution-v4.mjs';
+import { executeFinancialRun,FINANCIAL_METHODS } from './financial-execution.mjs';
+import { financialCases,readFinancialCase } from './financial-showcase.mjs';
 import { readCaseDocument as readFrozenDocument } from './documents.mjs';
 import { showcaseCases,readShowcaseDocument } from './showcase.mjs';
 import { OFFLINE_MODEL } from './offline-driver.mjs';
@@ -13,10 +15,11 @@ const root=new URL('../../data/research/runs/',import.meta.url);
 const bundled=new URL('../../evidence/research/sample-run.json',import.meta.url);
 const featuredRoot=new URL('../../evidence/research/deepseek-live-20260926/',import.meta.url);
 const progressiveRoot=new URL('../../evidence/progressive-showcase/',import.meta.url);
-const featuredDirectory=entry=>entry.bundle==='progressive'?new URL(`${entry.method}/`,progressiveRoot):new URL(`${entry.method}/`,featuredRoot);
-const getCase=async id=>(await showcaseCases()).find(c=>c.id===id)||getFrozenCase(id);
-const loadCases=async()=>[...await loadFrozenCases(),...await showcaseCases()];
-const readCaseDocument=id=>id.startsWith('progressive-')?readShowcaseDocument(id):readFrozenDocument(id);
+const financialRoot=new URL('../../evidence/financial-showcase/',import.meta.url);
+const featuredDirectory=entry=>entry.bundle==='financial'?new URL(`${entry.method}/`,financialRoot):entry.bundle==='progressive'?new URL(`${entry.method}/`,progressiveRoot):new URL(`${entry.method}/`,featuredRoot);
+const getCase=async id=>(await financialCases()).find(c=>c.id===id)||(await showcaseCases()).find(c=>c.id===id)||getFrozenCase(id);
+const loadCases=async()=>[...await loadFrozenCases(),...await showcaseCases(),...await financialCases()];
+const readCaseDocument=id=>id.startsWith('finqa-')?readFinancialCase(id):id.startsWith('progressive-')?readShowcaseDocument(id):readFrozenDocument(id);
 const runs=new Map(),clients=new Map(),frames=new Map(),pending=new Map(),decisions=new Map();
 const json=(res,status,data)=>{res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify(data));};
 let transportPromise;
@@ -42,6 +45,7 @@ async function save(run){
 async function featured(){
  try{const original=JSON.parse(await readFile(new URL('manifest.json',featuredRoot),'utf8'));
   try{const added=JSON.parse(await readFile(new URL('manifest.json',progressiveRoot),'utf8'));original.runs.push(...added.runs.map(r=>({...r,bundle:'progressive'})));}catch(e){if(e.code!=='ENOENT')throw e;}
+  try{const added=JSON.parse(await readFile(new URL('manifest.json',financialRoot),'utf8'));original.runs.push(...added.runs.map(r=>({...r,bundle:'financial'})));}catch(e){if(e.code!=='ENOENT')throw e;}
   return original;}
  catch(error){if(error.code==='ENOENT')return {runs:[]};throw error;}
 }
@@ -77,6 +81,7 @@ function launch(run,options){
    const parse={id:`step-${run.steps.length+1}`,operation:'parse_document',title:{zh:'读取并核对合成 PDF',en:'Read and verify synthetic PDF'},reason:{zh:'本地提取文档字段并核对文件摘要。',en:'Extract local fields and verify the file digest.'},location:'local',status:'running',startedAt:new Date().toISOString(),input:{caseId:run.caseId},retained:[],receipts:[],output:null,checks:[]};
    run.steps.push(parse);addEvent(run,'step.started',{stepId:parse.id},notify);
    const item=await readCaseDocument(run.caseId);
+   if(item.family==='finance'){parse.title={zh:'读取本地表格与来源记录',en:'Read the local table and source record'};parse.reason={zh:'载入 FinQA 结构化公开数据；PDF 为阅读预览。',en:'Load structured public FinQA data; the PDF is a reading preview.'};}
    const changed=overridesOf(options.overrides);
    for(const [key,value] of Object.entries(changed)){
     if(!(key in item.facts))throw new Error(`Input field ${key} is not present in this case`);
@@ -85,7 +90,7 @@ function launch(run,options){
    run.overrides=changed;run.input=structuredClone(item.facts);run.document=item.document;
    parse.source=item.document;parse.output={document:item.document,overrides:changed,fieldCount:Object.keys(item.facts).length};parse.status='completed';parse.finishedAt=new Date().toISOString();addEvent(run,'step.completed',{stepId:parse.id},notify);
    const recordEvent=(current,event)=>{normalizeOfflineReport(current);notify(current,event);};
-   await executeRun(run,item,await transport(),{notify:recordEvent,hook:async(stage,context)=>{
+   await (item.family==='finance'?executeFinancialRun:executeRun)(run,item,await transport(),{notify:recordEvent,hook:async(stage,context)=>{
     if(stage!=='beforeSend'||run.condition!=='guided_revoke'||run.decisionUsed||context.step.operation!=='analyze')return;
     run.decisionUsed=true;run.awaitingDecision={stepId:context.step.id,recipient:context.step.recipient,preparedAt:new Date().toISOString()};
     addEvent(run,'decision.awaiting',{stepId:context.step.id},notify);
@@ -107,7 +112,7 @@ export async function researchApi(req,res,pathname){
       let presentationTranslations={};try{presentationTranslations=JSON.parse(await readFile(new URL('translations.json',featuredRoot),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
       try{const extra=JSON.parse(await readFile(new URL('translations.json',progressiveRoot),'utf8'));presentationTranslations.runs={...presentationTranslations.runs,...extra.runs};presentationTranslations.values={...presentationTranslations.values,...extra.values};}catch(e){if(e.code!=='ENOENT')throw e;}
       let sampleRunId=featuredRuns.find(entry=>entry.method==='joint')?.id||null;try{sampleRunId ||=JSON.parse(await readFile(bundled,'utf8')).id;}catch{}
-      return json(res,200,{protocol:'research-v1',offlineAvailable:true,deepseekAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',liveAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',sampleRunId,featuredRuns:featuredRuns.map(({id,method,model,createdAt,label,caseId})=>({id,method,model,createdAt,label,caseId})),presentationTranslations,methods:METHOD_NAMES,labels:LABELS,cases:(await loadCases()).filter(c=>c.split==='evaluation'||c.requiresLive).map(publicCase),defaultCase:'contract-21',scenarios:[{id:'facts',caseId:'progressive-09',condition:'normal',requiresLive:true,title:{zh:'补充必要事实 · DeepSeek',en:'Request missing facts · DeepSeek'}},{id:'local',caseId:'contract-01',condition:'normal',title:{zh:'标准条款 · 本地完成',en:'Standard clause · local'}},{id:'dynamic',caseId:'contract-21',condition:'normal',title:{zh:'引用条款 · 动态查询',en:'Cited clause · dynamic lookup'}},{id:'revoked',caseId:'contract-21',condition:'guided_revoke',title:{zh:'发送前人工撤权',en:'Revoke before sending'}}]});
+      return json(res,200,{protocol:'research-v1',offlineAvailable:true,deepseekAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',liveAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',sampleRunId,featuredRuns:featuredRuns.map(({id,method,model,createdAt,label,caseId})=>({id,method,model,createdAt,label,caseId})),presentationTranslations,methods:{...METHOD_NAMES,allowed_eager:{zh:'获准业务字段全量',en:'All allowed business fields'},numeric_prefetch:{zh:'预取业务数值',en:'Prefetch numeric facts'},eager_allowed:{zh:'发送全部表格数值',en:'Send all table values'},requested_cells:{zh:'按需获取单元格',en:'Request selected cells'},local_program:{zh:'结构规划 · 本地计算',en:'Schema plan · local calculation'}},labels:LABELS,cases:(await loadCases()).filter(c=>c.split==='evaluation'||c.requiresLive).map(publicCase),defaultCase:'contract-21',scenarios:[{id:'financial',caseId:(await financialCases())[0].id,condition:'normal',requiresLive:true,title:{zh:'公开表格 · 本地计算',en:'Public table · local calculation'}},{id:'facts',caseId:'progressive-09',condition:'normal',requiresLive:true,title:{zh:'补充必要事实 · DeepSeek',en:'Request missing facts · DeepSeek'}},{id:'local',caseId:'contract-01',condition:'normal',title:{zh:'标准条款 · 本地完成',en:'Standard clause · local'}},{id:'dynamic',caseId:'contract-21',condition:'normal',title:{zh:'引用条款 · 动态查询',en:'Cited clause · dynamic lookup'}},{id:'revoked',caseId:'contract-21',condition:'guided_revoke',title:{zh:'发送前人工撤权',en:'Revoke before sending'}}]});
     }
     if(req.method==='GET'&&route==='/history'){
       const visible=new Map([...runs.values()].filter(r=>r.source==='live'&&r.uiVisible&&!r.caseId.startsWith('dev-')).map(r=>[r.id,r]));
@@ -118,13 +123,16 @@ export async function researchApi(req,res,pathname){
     }
     if(req.method==='POST'&&route==='/runs'){
       const options=await input(req);
-      if(!METHODS.includes(options.method||'joint')||!['normal','revoke_after_plan','guided_revoke'].includes(options.condition||'normal'))return json(res,400,{error:'Invalid method or condition'});
+      if(![...METHODS,...FINANCIAL_METHODS,'allowed_eager','numeric_prefetch'].includes(options.method||'joint')||!['normal','revoke_after_plan','guided_revoke'].includes(options.condition||'normal'))return json(res,400,{error:'Invalid method or condition'});
       const mode=options.mode||'offline';if(!['offline','deepseek'].includes(mode))return json(res,400,{error:'Invalid execution mode'});
       if(mode==='deepseek'&&process.env.DEMO_DEEPSEEK_AVAILABLE!=='true')return json(res,409,{error:'DeepSeek API key is not configured'});
       const overrides=overridesOf(options.overrides);
       const item=await getCase(options.caseId||'contract-21');
       if(item.requiresLive&&mode!=='deepseek')return json(res,409,{error:'This scenario requires a live model. Use its saved DeepSeek replay without a key.'});
-      const run=createRun(item,{...options,model:mode==='offline'?OFFLINE_MODEL:'deepseek-flash'});run.status='queued';run.executionMode=mode;run.uiVisible=options.captureFrames!==false;runs.set(run.id,run);
+      const selectedMethod=options.method||'joint';
+      if(item.family==='finance'&&!FINANCIAL_METHODS.includes(selectedMethod))return json(res,400,{error:'Select a financial-table method'});
+      if(item.family!=='finance'&&FINANCIAL_METHODS.includes(selectedMethod))return json(res,400,{error:'Financial method requires a table task'});
+      const run=createRun(item,{...options,method:METHODS.includes(selectedMethod)?selectedMethod:'joint',model:mode==='offline'?OFFLINE_MODEL:'deepseek-flash'});run.method=selectedMethod;run.status='queued';run.executionMode=mode;run.uiVisible=options.captureFrames!==false;runs.set(run.id,run);
       if(options.captureFrames!==false)frames.set(run.id,[]);
       pending.set(run.id,{...options,overrides});
       if(options.deferStart!==true)launch(run,pending.get(run.id));
@@ -148,7 +156,7 @@ export async function researchApi(req,res,pathname){
     }
     const documentMatch=/^\/documents\/([a-z0-9-]+)\.pdf$/.exec(route);
     if(req.method==='GET'&&documentMatch){
-      const item=await getCase(documentMatch[1]);const data=await readFile(new URL(`../../fixtures/${item.requiresLive?'showcase':'research'}/documents/${item.source}`,import.meta.url));
+      const item=await getCase(documentMatch[1]);const data=await readFile(new URL(`../../fixtures/${item.family==='finance'?'financial-showcase':item.requiresLive?'showcase':'research'}/documents/${item.source}`,import.meta.url));
       res.writeHead(200,{'content-type':'application/pdf','content-length':data.length,'cache-control':'no-store'});res.end(data);return true;
     }
     const match=/^\/runs\/([a-f0-9-]{36})(?:\/(stream|report|evidence|source|revoke|start|decision))?$/.exec(route);

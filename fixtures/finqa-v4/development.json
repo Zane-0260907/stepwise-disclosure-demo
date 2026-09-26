@@ -1,0 +1,485 @@
+[
+  {
+    "id": "finqa-b972a5ad0246",
+    "sourceId": "AWK/2013/page_132.pdf-2",
+    "sourceFile": "AWK/2013/page_132.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+      "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+    },
+    "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Effect on total of service and interest cost components",
+        "column": "One-Percentage-PointIncrease",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Effect on total of service and interest cost components",
+        "column": "One-Percentage-PointDecrease",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Effect on other postretirement benefit obligation",
+        "column": "One-Percentage-PointIncrease",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Effect on other postretirement benefit obligation",
+        "column": "One-Percentage-PointDecrease",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 7367,
+      "r1c2": -5974,
+      "r2c1": 72238,
+      "r2c2": -60261
+    },
+    "source": "FinQA/AWK/2013/page_132.pdf-2",
+    "split": "dev"
+  },
+  {
+    "id": "finqa-f3ff7366ea2d",
+    "sourceId": "MRO/2009/page_56.pdf-1",
+    "sourceFile": "MRO/2009/page_56.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+      "en": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?"
+    },
+    "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "WTI crude oil (Dollars per barrel)",
+        "column": "2009",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r1c2",
+        "row": "WTI crude oil (Dollars per barrel)",
+        "column": "2008",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r1c3",
+        "row": "WTI crude oil (Dollars per barrel)",
+        "column": "2007",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r2c1",
+        "row": "Dated Brent crude oil (Dollars per barrel)",
+        "column": "2009",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r2c2",
+        "row": "Dated Brent crude oil (Dollars per barrel)",
+        "column": "2008",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r2c3",
+        "row": "Dated Brent crude oil (Dollars per barrel)",
+        "column": "2007",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r3c1",
+        "row": "Henry Hub natural gas (Dollars per mcf)(a)",
+        "column": "2009",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r3c2",
+        "row": "Henry Hub natural gas (Dollars per mcf)(a)",
+        "column": "2008",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r3c3",
+        "row": "Henry Hub natural gas (Dollars per mcf)(a)",
+        "column": "2007",
+        "unitHint": "Benchmark"
+      }
+    ],
+    "facts": {
+      "r1c1": 62.09,
+      "r1c2": 99.75,
+      "r1c3": 72.41,
+      "r2c1": 61.67,
+      "r2c2": 97.26,
+      "r2c3": 72.39,
+      "r3c1": 3.99,
+      "r3c2": 9.04,
+      "r3c3": 6.86
+    },
+    "source": "FinQA/MRO/2009/page_56.pdf-1",
+    "split": "dev"
+  },
+  {
+    "id": "finqa-83cf7b4e8487",
+    "sourceId": "OKE/2008/page_86.pdf-1",
+    "sourceFile": "OKE/2008/page_86.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the total net change in net fair value of derivatives outstanding at between 2007 and 2008 in thousands?",
+      "en": "what was the total net change in net fair value of derivatives outstanding at between 2007 and 2008 in thousands?"
+    },
+    "question": "what was the total net change in net fair value of derivatives outstanding at between 2007 and 2008 in thousands?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Net fair value of derivatives outstanding at December 31, 2007",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Derivatives reclassified or otherwise settled during the period",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Fair value of new derivatives entered into during the period",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Other changes in fair value",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Net fair value of derivatives outstanding at December 31, 2008 (a)",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 25171,
+      "r2c1": -55874,
+      "r3c1": 236772,
+      "r4c1": 52731,
+      "r5c1": 258800
+    },
+    "source": "FinQA/OKE/2008/page_86.pdf-1",
+    "split": "dev"
+  },
+  {
+    "id": "finqa-0950db29929b",
+    "sourceId": "BLK/2012/page_37.pdf-3",
+    "sourceFile": "BLK/2012/page_37.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what portion of the fixed income is related to americas?",
+      "en": "what portion of the fixed income is related to americas?"
+    },
+    "question": "what portion of the fixed income is related to americas?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Equity",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r1c2",
+        "row": "Equity",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r1c3",
+        "row": "Equity",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r1c4",
+        "row": "Equity",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "Fixed income",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c2",
+        "row": "Fixed income",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c3",
+        "row": "Fixed income",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c4",
+        "row": "Fixed income",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "Multi-asset class",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c2",
+        "row": "Multi-asset class",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c3",
+        "row": "Multi-asset class",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c4",
+        "row": "Multi-asset class",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "Alternatives",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c2",
+        "row": "Alternatives",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c3",
+        "row": "Alternatives",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c4",
+        "row": "Alternatives",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c1",
+        "row": "Long-term retail/HNW",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c2",
+        "row": "Long-term retail/HNW",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c3",
+        "row": "Long-term retail/HNW",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c4",
+        "row": "Long-term retail/HNW",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 94805,
+      "r1c2": 53140,
+      "r1c3": 16803,
+      "r1c4": 164748,
+      "r2c1": 121640,
+      "r2c2": 11444,
+      "r2c3": 5341,
+      "r2c4": 138425,
+      "r3c1": 76714,
+      "r3c2": 9538,
+      "r3c3": 4374,
+      "r3c4": 90626,
+      "r4c1": 4865,
+      "r4c2": 3577,
+      "r4c3": 1243,
+      "r4c4": 9685,
+      "r5c1": 298024,
+      "r5c2": 77699,
+      "r5c3": 27761,
+      "r5c4": 403484
+    },
+    "source": "FinQA/BLK/2012/page_37.pdf-3",
+    "split": "dev"
+  },
+  {
+    "id": "finqa-e7ac68cd43b8",
+    "sourceId": "ETR/2013/page_118.pdf-2",
+    "sourceFile": "ETR/2013/page_118.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2013 , in millions?",
+      "en": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2013 , in millions?"
+    },
+    "question": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2013 , in millions?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2014",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "2015",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "2016",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "2017",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "2018",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 385373,
+      "r2c1": 1110566,
+      "r3c1": 270852,
+      "r4c1": 766801,
+      "r5c1": 1324616
+    },
+    "source": "FinQA/ETR/2013/page_118.pdf-2",
+    "split": "dev"
+  },
+  {
+    "id": "finqa-870c48d83470",
+    "sourceId": "HIG/2008/page_318.pdf-3",
+    "sourceFile": "HIG/2008/page_318.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net change in total statutory capital from 2007 to 2008?",
+      "en": "what is the net change in total statutory capital from 2007 to 2008?"
+    },
+    "question": "what is the net change in total statutory capital from 2007 to 2008?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Life Operations",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Life Operations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Japan Life Operations",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Japan Life Operations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Property & Casualty Operations",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Property & Casualty Operations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "2007",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 6047,
+      "r1c2": 5786,
+      "r2c1": 1718,
+      "r2c2": 1620,
+      "r3c1": 6012,
+      "r3c2": 8509,
+      "r4c1": 13777,
+      "r4c2": 15915
+    },
+    "source": "FinQA/HIG/2008/page_318.pdf-3",
+    "split": "dev"
+  }
+]

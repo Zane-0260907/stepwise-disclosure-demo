@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+const out=new URL('../evidence/financial-showcase/ui/',import.meta.url);await mkdir(out,{recursive:true});
+const browser=await chromium.launch({executablePath:process.env.EDGE_PATH||(process.platform==='win32'?'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe':undefined),headless:true});
+try{
+ const page=await browser.newPage({baseURL:process.env.DEMO_BASE||'http://127.0.0.1:4793',viewport:{width:1440,height:900},deviceScaleFactor:1.5}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/',{waitUntil:'networkidle'});
+ await page.selectOption('#scenario-select','financial');
+ assert.deepEqual(await page.locator('#method-select option').evaluateAll(ns=>ns.map(n=>n.value)),['local_program','requested_cells','eager_allowed']);
+ assert.equal(await page.locator('.input-adjust').isVisible(),false);
+ await page.locator('.featured-run').filter({hasText:'公开表格 · 本地计算'}).click();
+ await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('页面逐步展示'),null,{timeout:90000});
+ const run=await(await page.request.get('/api/research/runs/adc2c0c7-7c57-4afc-811f-455add00a00d')).json();
+ assert.equal(run.status,'completed');assert.equal(run.receipts.length,1);
+ assert.deepEqual(JSON.parse(JSON.parse(run.receipts[0].rawBody).messages[1].content).facts,{});
+ const modelStep=run.steps.find(s=>s.location==='cloud');await page.locator(`button[data-step-id="${modelStep.id}"]`).click();
+ assert.match(await page.locator('#runtime-content').innerText(),/表结构/);
+ await page.locator('#agent-result').scrollIntoViewIfNeeded();
+ await page.screenshot({path:fileURLToPath(new URL('financial.zh-CN.png',out))});
+ await page.locator('#lang-en').click();
+ assert.doesNotMatch(await page.locator('#agent-result').innerText(),/[\u3400-\u9fff]/u);
+ assert.doesNotMatch(await page.locator('#agent-result').innerText(),/CNY|penalty/i);
+ await page.screenshot({path:fileURLToPath(new URL('financial.en.png',out))});
+ await page.locator('#agent-result .file-preview').first().click();await page.waitForSelector('.report-preview');
+ assert.match(await page.locator('.report-preview').innerText(),/FinQA/);
+ assert.deepEqual(errors,[]);
+ await writeFile(new URL('verification.json',out),JSON.stringify({runId:run.id,receipts:1,rawNumericCellsSent:0,languages:['zh','en'],errors},null,2)+'\n');
+ console.log('Financial replay, schema view, local result and bilingual UI verified.');
+}finally{await browser.close();}
