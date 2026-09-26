@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "evaluationCases": 60,
+  "developmentCases": 12,
+  "caseSha256": "281e036e3bd4f8b1d2393b03b6036bb1755cebb229e727b2c04d465d76d02abd",
+  "synthetic": true,
+  "provenance": "Controlled synthetic workloads; labels are evaluation-only. Development and evaluation share operation families; no claim of unseen-template generalization.",
+  "humanTextReview": "pending"
+}

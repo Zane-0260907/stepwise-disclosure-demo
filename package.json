@@ -1,0 +1,22 @@
+{
+  "name": "trust-execution-contract-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/app-server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "summarize": "node scripts/summarize-research.mjs",
+    "test:ui": "node test/research-ui.mjs",
+    "test:boundaries": "node scripts/run-boundaries.mjs",
+    "check:inputs": "node scripts/check-research-inputs.mjs",
+    "experiment:pilot": "node scripts/run-research.mjs --pilot",
+    "experiment:batch": "node scripts/run-research.mjs --batch",
+    "plot": "python scripts/plot-research.py"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.3.289"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

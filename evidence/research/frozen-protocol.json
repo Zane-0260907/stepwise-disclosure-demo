@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "frozenAt": "2026-09-25T15:08:37.014Z",
+  "cases": 60,
+  "methods": [
+    "full",
+    "pii",
+    "entry",
+    "per_step",
+    "joint"
+  ],
+  "repeats": 3,
+  "totalTaskRuns": 900,
+  "unitOfAnalysis": "independent case; repeats aggregated within case",
+  "bootstrapResamples": 2000,
+  "model": "qwen-plus",
+  "syntheticOnly": true,
+  "primaryEndpoint": "structuredTaskSuccess",
+  "secondaryEndpoints": [
+    "unnecessaryFactTransmissions",
+    "forbiddenFactTransmissions",
+    "elapsedMs",
+    "controlMs"
+  ],
+  "humanTextReview": "not performed; no human-validated prose quality claim",
+  "developmentChanges": [
+    "Reference tool disabled once its requested version has returned.",
+    "Returned reference results are available to the entry-only baseline.",
+    "Ambiguous duty/trigger wording accepts UNDEFINED_TRIGGER or UNDEFINED_OBLIGATION, consistently across methods."
+  ],
+  "hashes": {
+    "src/research/engine.mjs": "88e7e55a865c7dd445c7123dc393bb49364c52020b7577090b83dddf69a192d4",
+    "src/research/policy.mjs": "e76fccbbefeccb17ecdf7984a8804d989d1a8667fb1db3d0f5a7bb3d44493f9e",
+    "src/research/receiver-worker.mjs": "e94606c2ae995a5c76eb0771cfeaa8a9b8e669647ab9b798a71bdedad3993bd9",
+    "src/research/transport.mjs": "e12978c2a5985ab4cb13bb58a8de8607ccd7b96c61205eb5255a2d0a15427fe7",
+    "src/research/evaluate.mjs": "ad5a0c2403fa6ca82d91e4e8d847e098eab54ef470a0643d485b366a6e070285",
+    "src/research/documents.mjs": "8dca33b0152313f3b65a5166f7eb88ffb19e9d7444d68296d6359e6962c17adf",
+    "src/research/catalog.mjs": "b33fc7b351015048c239049491561a25eaaca578d137fa666215f96729aeefb6",
+    "src/pdf.mjs": "1ef48e2a38e4ef84d49e94c5c525921ba7455f16bca59295b150fc0e6929b03d",
+    "fixtures/research/cases.json": "281e036e3bd4f8b1d2393b03b6036bb1755cebb229e727b2c04d465d76d02abd",
+    "fixtures/research/ground-truth.json": "fdaafb90dc5caaaa9ae06a0539e79864ac58d8f38966be4d5c68896055bec706",
+    "fixtures/research/references.json": "738da37cc96943e9a64ed00b1b225664d1cb6a0445fd8eda931e4ea0f53bd006",
+    "package-lock.json": "5e6f7831ac498807e76c2458d8f36d1a2bdfe0dd0178d4e62570b215665972bd"
+  }
+}

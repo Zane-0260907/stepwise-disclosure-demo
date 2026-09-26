@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this research prototype or its saved experiment records, please cite this software repository."
+title: "Stepwise Disclosure Demo: Joint Execution-Location and Recipient-View Decisions"
+type: software
+authors:
+  - given-names: "Yaojunzhe"
+    family-names: "Zhai"
+    affiliation: "Monash University Malaysia"
+  - given-names: "Chao-Hsien"
+    family-names: "Hsieh"
+    affiliation: "Xi’an International University"
+repository-code: "https://github.com/Zane-0260907/stepwise-disclosure-demo"
+url: "https://github.com/Zane-0260907/stepwise-disclosure-demo"
+license: "Apache-2.0"
+abstract: "An independent runnable research prototype and synthetic evidence bundle for stepwise execution and recipient-specific disclosure decisions."

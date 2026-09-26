@@ -1,0 +1,29 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check:inputs
+      - run: npm test
+      - run: npm run test:boundaries
+      - run: node scripts/verify-deepseek-records.mjs
+      - name: Verify frozen saved-run scores
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath evidence/research/reproduction-records.zip -DestinationPath . -Force
+          node scripts/verify-recorded-scores.mjs frozen-v1-20260925

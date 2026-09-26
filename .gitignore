@@ -1,0 +1,9 @@
+node_modules/
+data/runs/
+data/layout-audit/
+data/research/
+data/release-check/
+release/
+__pycache__/
+.env
+*.log

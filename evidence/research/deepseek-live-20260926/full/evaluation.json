@@ -1,0 +1,41 @@
+{
+  "runId": "fe5ff933-8369-4f89-8cb7-9c1495d021a2",
+  "caseId": "contract-21",
+  "family": "contract",
+  "method": "full",
+  "status": "completed",
+  "structuredTaskSuccess": true,
+  "classificationCorrect": true,
+  "amountCorrect": true,
+  "referenceCorrect": true,
+  "receiptIntegrity": true,
+  "unnecessaryFactTransmissions": 19,
+  "totalFactTransmissions": 29,
+  "forbiddenFactTransmissions": 15,
+  "recipients": {
+    "cloud-model": {
+      "totalFacts": 20,
+      "unnecessaryFacts": 12,
+      "requests": 2
+    },
+    "reference-service": {
+      "totalFacts": 9,
+      "unnecessaryFacts": 7,
+      "requests": 1
+    }
+  },
+  "modelCalls": 2,
+  "toolCalls": 1,
+  "promptTokens": 1446,
+  "completionTokens": 191,
+  "bytes": 6273,
+  "elapsedMs": 1995.6253000000142,
+  "controlMs": [
+    0.003599999996367842,
+    0.21510000000125729,
+    0.10610000000451691,
+    0.5199000000138767
+  ],
+  "humanTextQuality": "not_reviewed",
+  "error": null
+}

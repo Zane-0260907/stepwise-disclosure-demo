@@ -1,0 +1,720 @@
+{
+  "protocol": "research-v1",
+  "id": "6c9f58d2-af2c-410a-b990-5df35f6d4a6a",
+  "source": "live",
+  "caseId": "contract-21",
+  "family": "contract",
+  "title": {
+    "zh": "查阅条款资料 · 21",
+    "en": "Contract tool case 21"
+  },
+  "task": {
+    "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+    "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+  },
+  "input": {
+    "identity": "合成采购方21 / 合成供应方21",
+    "contact": "模拟联系人21；电话 13900000021",
+    "account": "LOCAL-CONTRACT-0021",
+    "internal_note": "仅限内部：下一季度谈判底价与利润目标-21",
+    "unrelated_record": "其他项目记录：办公用品采购预算-21",
+    "payment_terms": "交货验收后 15 天付款",
+    "reference_code": "C01",
+    "reference_version": "2026.1",
+    "clause": "本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。"
+  },
+  "sourceFile": "contract-21.pdf",
+  "method": "joint",
+  "condition": "normal",
+  "model": "qwen-plus",
+  "createdAt": "2026-09-25T15:38:12.012Z",
+  "status": "completed",
+  "policy": {
+    "version": 1,
+    "allowed": true
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "operation": "read",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      },
+      "reason": {
+        "zh": "原始身份和业务资料在本地读取。",
+        "en": "Read original identity and business records locally."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-25T15:38:12.196Z",
+      "parentStepId": null,
+      "input": {
+        "identity": "合成采购方21 / 合成供应方21",
+        "contact": "模拟联系人21；电话 13900000021",
+        "account": "LOCAL-CONTRACT-0021",
+        "internal_note": "仅限内部：下一季度谈判底价与利润目标-21",
+        "unrelated_record": "其他项目记录：办公用品采购预算-21",
+        "payment_terms": "交货验收后 15 天付款",
+        "reference_code": "C01",
+        "reference_version": "2026.1",
+        "clause": "本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。"
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fieldCount": 9,
+        "source": {
+          "file": "contract-21.pdf",
+          "sha256": "eccea1dc03490f9582c245b00ffa7ce349b1a4792b9e524fca836d1f2ee3ac0a",
+          "bytes": 100789,
+          "pages": 1
+        }
+      },
+      "checks": [],
+      "source": {
+        "file": "contract-21.pdf",
+        "sha256": "eccea1dc03490f9582c245b00ffa7ce349b1a4792b9e524fca836d1f2ee3ac0a",
+        "bytes": 100789,
+        "pages": 1
+      },
+      "finishedAt": "2026-09-25T15:38:12.196Z"
+    },
+    {
+      "id": "step-2",
+      "operation": "analyze",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      },
+      "reason": {
+        "zh": "当前条款或记录超出本地规则范围，使用获准云端分析。",
+        "en": "This input is outside the local rule coverage; use the authorized cloud capability."
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-25T15:38:12.196Z",
+      "parentStepId": null,
+      "input": {
+        "clause": "本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。",
+        "reference_code": "C01",
+        "reference_version": "2026.1"
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record",
+        "payment_terms"
+      ],
+      "receipts": [
+        "2670f91f-bdfc-4dd0-b0ac-165d5917cc0b"
+      ],
+      "output": {
+        "requestedTool": {
+          "index": 0,
+          "id": "call_886729dd34334074ad120c",
+          "type": "function",
+          "function": {
+            "name": "lookup_reference",
+            "arguments": "{\"code\": \"C01\", \"version\": \"2026.1\"}"
+          }
+        },
+        "summary": {
+          "zh": "模型提出查询指定版本资料。",
+          "en": "The model requested a versioned reference."
+        }
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-25T15:38:12.198Z",
+          "policyVersion": 1,
+          "allowedFields": [
+            "clause",
+            "reference_code",
+            "reference_version"
+          ],
+          "overheadMs": 0.05969999999797437
+        }
+      ],
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ],
+      "required": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "recipient": "cloud-model",
+      "plannedPolicyVersion": 1,
+      "providerResponse": {
+        "id": "chatcmpl-2169f7d9-b510-9f89-a450-20f9fe542622",
+        "model": "qwen-plus",
+        "usage": {
+          "total_tokens": 653,
+          "completion_tokens": 32,
+          "prompt_tokens": 621,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "message": {
+          "content": "",
+          "tool_calls": [
+            {
+              "index": 0,
+              "id": "call_886729dd34334074ad120c",
+              "type": "function",
+              "function": {
+                "name": "lookup_reference",
+                "arguments": "{\"code\": \"C01\", \"version\": \"2026.1\"}"
+              }
+            }
+          ],
+          "role": "assistant"
+        }
+      },
+      "finishedAt": "2026-09-25T15:38:13.432Z"
+    },
+    {
+      "id": "step-3",
+      "operation": "lookup_reference",
+      "title": {
+        "zh": "查询运行中发现的资料需求",
+        "en": "Look up a newly requested reference"
+      },
+      "reason": {
+        "zh": "由模型实际工具调用触发；查询只需要资料编号和版本。",
+        "en": "Triggered by an actual tool call; the lookup needs only a code and version."
+      },
+      "location": "tool",
+      "status": "completed",
+      "startedAt": "2026-09-25T15:38:13.432Z",
+      "parentStepId": "step-2",
+      "input": {
+        "reference_code": "C01",
+        "reference_version": "2026.1"
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record",
+        "payment_terms",
+        "clause"
+      ],
+      "receipts": [
+        "4047946c-4afa-4af3-bb3d-bde710e011e9"
+      ],
+      "output": {
+        "code": "C01",
+        "version": "2026.1",
+        "text": "逾期履约按合同额 10% 支付违约金，但未说明履约指交货、验收还是付款。",
+        "citation": "synthetic-reference://C01/2026.1",
+        "title": "采购示例条款 C01"
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-25T15:38:13.433Z",
+          "policyVersion": 1,
+          "allowedFields": [
+            "reference_code",
+            "reference_version"
+          ],
+          "overheadMs": 0.03220000000146683
+        }
+      ],
+      "introducedAtRuntime": true,
+      "trigger": {
+        "modelStepId": "step-2",
+        "toolCallId": "call_886729dd34334074ad120c"
+      },
+      "required": [
+        "reference_code",
+        "reference_version"
+      ],
+      "recipient": "reference-service",
+      "plannedPolicyVersion": 1,
+      "finishedAt": "2026-09-25T15:38:13.445Z"
+    },
+    {
+      "id": "step-4",
+      "operation": "analyze",
+      "title": {
+        "zh": "结合查得资料继续分析",
+        "en": "Continue with retrieved reference"
+      },
+      "reason": {
+        "zh": "重新构造当前分析步骤的输入，不沿用工具收到的参数。",
+        "en": "Rebuild the analysis view for this step."
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-25T15:38:13.445Z",
+      "parentStepId": "step-3",
+      "input": {
+        "clause": "本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。",
+        "reference_code": "C01",
+        "reference_version": "2026.1",
+        "reference_text": "逾期履约按合同额 10% 支付违约金，但未说明履约指交货、验收还是付款。",
+        "reference_citation": "synthetic-reference://C01/2026.1"
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record",
+        "payment_terms"
+      ],
+      "receipts": [
+        "384ddea6-addb-450a-8f64-c0061d01ddde"
+      ],
+      "output": {
+        "issueCodes": [
+          "UNDEFINED_TRIGGER"
+        ],
+        "amount": null,
+        "summary": "条款C01（2026.1）规定逾期履约按合同额10%支付违约金，但未明确定义'履约'具体指交货、验收还是付款等哪一义务节点，导致触发条件模糊。",
+        "recommendation": "需复核并明确定义'履约'的具体行为及对应时间节点，避免执行争议。",
+        "evidenceIds": [
+          "clause",
+          "reference_text"
+        ],
+        "citations": [
+          "synthetic-reference://C01/2026.1"
+        ]
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-25T15:38:13.446Z",
+          "policyVersion": 1,
+          "allowedFields": [
+            "clause",
+            "reference_code",
+            "reference_version",
+            "reference_text",
+            "reference_citation"
+          ],
+          "overheadMs": 0.04739999999583233
+        }
+      ],
+      "required": [
+        "clause",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ],
+      "recipient": "cloud-model",
+      "plannedPolicyVersion": 1,
+      "providerResponse": {
+        "id": "chatcmpl-11bacbdb-6fe9-9876-af3d-43ad57523be7",
+        "model": "qwen-plus",
+        "usage": {
+          "total_tokens": 641,
+          "completion_tokens": 135,
+          "prompt_tokens": 506,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "message": {
+          "content": "{\n  \"issueCodes\": [\"UNDEFINED_TRIGGER\"],\n  \"amount\": null,\n  \"summary\": \"条款C01（2026.1）规定逾期履约按合同额10%支付违约金，但未明确定义'履约'具体指交货、验收还是付款等哪一义务节点，导致触发条件模糊。\",\n  \"recommendation\": \"需复核并明确定义'履约'的具体行为及对应时间节点，避免执行争议。\",\n  \"evidenceIds\": [\"clause\", \"reference_text\"],\n  \"citations\": [\"synthetic-reference://C01/2026.1\"]\n}",
+          "role": "assistant"
+        }
+      },
+      "finishedAt": "2026-09-25T15:38:16.714Z"
+    },
+    {
+      "id": "step-5",
+      "operation": "assemble",
+      "title": {
+        "zh": "在本地关联合同方并生成结果",
+        "en": "Assemble the result locally"
+      },
+      "reason": {
+        "zh": "在本地恢复身份关联，生成带来源的业务文件。",
+        "en": "Reconnect identity locally and produce a report with sources."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-25T15:38:16.715Z",
+      "parentStepId": "step-4",
+      "input": {
+        "identity": "合成采购方21 / 合成供应方21",
+        "assessment": {
+          "issueCodes": [
+            "UNDEFINED_TRIGGER"
+          ],
+          "amount": null,
+          "summary": "条款C01（2026.1）规定逾期履约按合同额10%支付违约金，但未明确定义'履约'具体指交货、验收还是付款等哪一义务节点，导致触发条件模糊。",
+          "recommendation": "需复核并明确定义'履约'的具体行为及对应时间节点，避免执行争议。",
+          "evidenceIds": [
+            "clause",
+            "reference_text"
+          ],
+          "citations": [
+            "synthetic-reference://C01/2026.1"
+          ]
+        }
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fileName": "result.md",
+        "summary": "条款C01（2026.1）规定逾期履约按合同额10%支付违约金，但未明确定义'履约'具体指交货、验收还是付款等哪一义务节点，导致触发条件模糊。"
+      },
+      "checks": [],
+      "finishedAt": "2026-09-25T15:38:16.715Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "task.started",
+      "at": "2026-09-25T15:38:12.195Z",
+      "caseId": "contract-21"
+    },
+    {
+      "index": 2,
+      "type": "step.started",
+      "at": "2026-09-25T15:38:12.196Z",
+      "stepId": "step-1",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      }
+    },
+    {
+      "index": 3,
+      "type": "step.completed",
+      "at": "2026-09-25T15:38:12.196Z",
+      "stepId": "step-1"
+    },
+    {
+      "index": 4,
+      "type": "step.started",
+      "at": "2026-09-25T15:38:12.197Z",
+      "stepId": "step-2",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      }
+    },
+    {
+      "index": 5,
+      "type": "location.decided",
+      "at": "2026-09-25T15:38:12.197Z",
+      "stepId": "step-2",
+      "location": "cloud",
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "type": "view.prepared",
+      "at": "2026-09-25T15:38:12.197Z",
+      "stepId": "step-2",
+      "keys": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ]
+    },
+    {
+      "index": 7,
+      "type": "exit.checked",
+      "at": "2026-09-25T15:38:12.198Z",
+      "stepId": "step-2",
+      "checkedAt": "2026-09-25T15:38:12.198Z",
+      "policyVersion": 1,
+      "allowedFields": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "overheadMs": 0.05969999999797437
+    },
+    {
+      "index": 8,
+      "type": "request.sent",
+      "at": "2026-09-25T15:38:12.198Z",
+      "stepId": "step-2",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 9,
+      "type": "receiver.received",
+      "at": "2026-09-25T15:38:12.233Z",
+      "stepId": "step-2",
+      "receiptId": "2670f91f-bdfc-4dd0-b0ac-165d5917cc0b",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 10,
+      "type": "step.completed",
+      "at": "2026-09-25T15:38:13.432Z",
+      "stepId": "step-2"
+    },
+    {
+      "index": 11,
+      "type": "step.started",
+      "at": "2026-09-25T15:38:13.432Z",
+      "stepId": "step-3",
+      "title": {
+        "zh": "查询运行中发现的资料需求",
+        "en": "Look up a newly requested reference"
+      }
+    },
+    {
+      "index": 12,
+      "type": "step.discovered",
+      "at": "2026-09-25T15:38:13.432Z",
+      "stepId": "step-3",
+      "parentStepId": "step-2",
+      "toolCall": {
+        "index": 0,
+        "id": "call_886729dd34334074ad120c",
+        "type": "function",
+        "function": {
+          "name": "lookup_reference",
+          "arguments": "{\"code\": \"C01\", \"version\": \"2026.1\"}"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "type": "exit.checked",
+      "at": "2026-09-25T15:38:13.433Z",
+      "stepId": "step-3",
+      "checkedAt": "2026-09-25T15:38:13.433Z",
+      "policyVersion": 1,
+      "allowedFields": [
+        "reference_code",
+        "reference_version"
+      ],
+      "overheadMs": 0.03220000000146683
+    },
+    {
+      "index": 14,
+      "type": "request.sent",
+      "at": "2026-09-25T15:38:13.433Z",
+      "stepId": "step-3",
+      "recipient": "reference-service"
+    },
+    {
+      "index": 15,
+      "type": "receiver.received",
+      "at": "2026-09-25T15:38:13.441Z",
+      "stepId": "step-3",
+      "receiptId": "4047946c-4afa-4af3-bb3d-bde710e011e9",
+      "recipient": "reference-service"
+    },
+    {
+      "index": 16,
+      "type": "step.completed",
+      "at": "2026-09-25T15:38:13.445Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 17,
+      "type": "step.started",
+      "at": "2026-09-25T15:38:13.445Z",
+      "stepId": "step-4",
+      "title": {
+        "zh": "结合查得资料继续分析",
+        "en": "Continue with retrieved reference"
+      }
+    },
+    {
+      "index": 18,
+      "type": "view.prepared",
+      "at": "2026-09-25T15:38:13.446Z",
+      "stepId": "step-4",
+      "keys": [
+        "clause",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ]
+    },
+    {
+      "index": 19,
+      "type": "exit.checked",
+      "at": "2026-09-25T15:38:13.446Z",
+      "stepId": "step-4",
+      "checkedAt": "2026-09-25T15:38:13.446Z",
+      "policyVersion": 1,
+      "allowedFields": [
+        "clause",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ],
+      "overheadMs": 0.04739999999583233
+    },
+    {
+      "index": 20,
+      "type": "request.sent",
+      "at": "2026-09-25T15:38:13.446Z",
+      "stepId": "step-4",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 21,
+      "type": "receiver.received",
+      "at": "2026-09-25T15:38:13.454Z",
+      "stepId": "step-4",
+      "receiptId": "384ddea6-addb-450a-8f64-c0061d01ddde",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 22,
+      "type": "step.completed",
+      "at": "2026-09-25T15:38:16.714Z",
+      "stepId": "step-4"
+    },
+    {
+      "index": 23,
+      "type": "step.started",
+      "at": "2026-09-25T15:38:16.715Z",
+      "stepId": "step-5",
+      "title": {
+        "zh": "在本地关联合同方并生成结果",
+        "en": "Assemble the result locally"
+      }
+    },
+    {
+      "index": 24,
+      "type": "step.completed",
+      "at": "2026-09-25T15:38:16.715Z",
+      "stepId": "step-5"
+    },
+    {
+      "index": 25,
+      "type": "report.created",
+      "at": "2026-09-25T15:38:16.716Z",
+      "stepId": "step-5"
+    },
+    {
+      "index": 26,
+      "type": "run.completed",
+      "at": "2026-09-25T15:38:16.716Z",
+      "status": "completed"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "2670f91f-bdfc-4dd0-b0ac-165d5917cc0b",
+      "runId": "6c9f58d2-af2c-410a-b990-5df35f6d4a6a",
+      "stepId": "step-2",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-25T15:38:12.228Z",
+      "bytes": 2432,
+      "sha256": "01a8a1f9dac53dc34865c27dd77a153cb92c409181820c9dc6c0254cde031fd6",
+      "rawBody": "{\"model\":\"qwen-plus\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"auto\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。\\\",\\\"reference_code\\\":\\\"C01\\\",\\\"reference_version\\\":\\\"2026.1\\\"}}\"}]}",
+      "processId": 31580,
+      "responseSha256": "b5ea28fe69c59704d0af72b8c23849a49edfd24b1f0bcdc847fe574e881438d3",
+      "usage": {
+        "total_tokens": 653,
+        "completion_tokens": 32,
+        "prompt_tokens": 621,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "providerId": "chatcmpl-2169f7d9-b510-9f89-a450-20f9fe542622",
+      "status": 200,
+      "finishedAt": "2026-09-25T15:38:13.418Z"
+    },
+    {
+      "id": "4047946c-4afa-4af3-bb3d-bde710e011e9",
+      "runId": "6c9f58d2-af2c-410a-b990-5df35f6d4a6a",
+      "stepId": "step-3",
+      "recipient": "reference-service",
+      "receivedAt": "2026-09-25T15:38:13.438Z",
+      "bytes": 33,
+      "sha256": "c42003814bd29942e18359e5d13737c4eb749c421a42c8f60715f74e3e274e41",
+      "rawBody": "{\"code\":\"C01\",\"version\":\"2026.1\"}",
+      "processId": 31580,
+      "status": 200,
+      "finishedAt": "2026-09-25T15:38:13.440Z"
+    },
+    {
+      "id": "384ddea6-addb-450a-8f64-c0061d01ddde",
+      "runId": "6c9f58d2-af2c-410a-b990-5df35f6d4a6a",
+      "stepId": "step-4",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-25T15:38:13.451Z",
+      "bytes": 2614,
+      "sha256": "1edf176bb34d844640fdeab914d1d59a75ee9d902cbfb0734f63fdb80e87cc90",
+      "rawBody": "{\"model\":\"qwen-plus\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"none\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。\\\",\\\"reference_code\\\":\\\"C01\\\",\\\"reference_version\\\":\\\"2026.1\\\",\\\"reference_text\\\":\\\"逾期履约按合同额 10% 支付违约金，但未说明履约指交货、验收还是付款。\\\",\\\"reference_citation\\\":\\\"synthetic-reference://C01/2026.1\\\"}}\"}]}",
+      "processId": 31580,
+      "responseSha256": "f3859f94bc1cb17562a2aae6758984114e30f70dd2090376dc91692ede07aa66",
+      "usage": {
+        "total_tokens": 641,
+        "completion_tokens": 135,
+        "prompt_tokens": 506,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "providerId": "chatcmpl-11bacbdb-6fe9-9876-af3d-43ad57523be7",
+      "status": 200,
+      "finishedAt": "2026-09-25T15:38:16.709Z"
+    }
+  ],
+  "result": {
+    "issueCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "amount": null,
+    "summary": "条款C01（2026.1）规定逾期履约按合同额10%支付违约金，但未明确定义'履约'具体指交货、验收还是付款等哪一义务节点，导致触发条件模糊。",
+    "recommendation": "需复核并明确定义'履约'的具体行为及对应时间节点，避免执行争议。",
+    "evidenceIds": [
+      "clause",
+      "reference_text"
+    ],
+    "citations": [
+      "synthetic-reference://C01/2026.1"
+    ]
+  },
+  "report": "# 合同风险提示（合成案例）\n\n对象：合成采购方21 / 合成供应方21\n运行：6c9f58d2-af2c-410a-b990-5df35f6d4a6a\n\n## 分析结果\n条款C01（2026.1）规定逾期履约按合同额10%支付违约金，但未明确定义'履约'具体指交货、验收还是付款等哪一义务节点，导致触发条件模糊。\n\n问题分类：UNDEFINED_TRIGGER\n\n\n## 建议\n需复核并明确定义'履约'的具体行为及对应时间节点，避免执行争议。\n\n## 依据\n- clause\n- reference_text\n- synthetic-reference://C01/2026.1\n\n## 执行记录\n本地步骤：2；模型调用：2；资料查询：1\n数据来源：合成案例 contract-21；本机独立接收进程记录请求，不是云厂商独立回执。\n\n合同分析为输入条款的系统演示，不作法律效力判断。学习分析仅针对合成记录。\n",
+  "error": null,
+  "metrics": {
+    "controlMs": [
+      0.2504999999946449,
+      0.9637000000075204,
+      0.18869999999878928,
+      0.5546000000031199
+    ],
+    "modelCalls": 2,
+    "toolCalls": 1,
+    "promptTokens": 1127,
+    "completionTokens": 167,
+    "totalBytes": 5079,
+    "elapsedMs": 4521.340899999996
+  },
+  "uiVisible": true,
+  "finishedAt": "2026-09-25T15:38:16.716Z"
+}

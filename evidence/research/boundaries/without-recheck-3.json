@@ -1,0 +1,683 @@
+{
+  "protocol": "research-v1",
+  "id": "9f84cdef-2893-4a81-8d6f-f5dc9dc81eae",
+  "source": "live",
+  "caseId": "study-21",
+  "family": "study",
+  "title": {
+    "zh": "学习分析 · 21",
+    "en": "Study tool case 21"
+  },
+  "task": {
+    "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+    "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+  },
+  "input": {
+    "identity": "合成学生21",
+    "contact": "模拟联系人21；电话 13900000021",
+    "account": "LOCAL-STUDY-0021",
+    "internal_note": "仅限内部：内部人员安排与联络备注-21",
+    "unrelated_record": "其他项目记录：其他班级活动预算-21",
+    "observations": "课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。",
+    "reference_code": "S01",
+    "reference_version": "2026.1"
+  },
+  "sourceFile": "study-21.pdf",
+  "method": "joint",
+  "condition": "revoke_after_plan",
+  "model": "qwen-plus",
+  "createdAt": "2026-09-26T03:49:01.088Z",
+  "status": "completed",
+  "policy": {
+    "allowed": false,
+    "version": 2
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "operation": "read",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      },
+      "reason": {
+        "zh": "原始身份和业务资料在本地读取。",
+        "en": "Read original identity and business records locally."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:01.088Z",
+      "parentStepId": null,
+      "input": {
+        "identity": "合成学生21",
+        "contact": "模拟联系人21；电话 13900000021",
+        "account": "LOCAL-STUDY-0021",
+        "internal_note": "仅限内部：内部人员安排与联络备注-21",
+        "unrelated_record": "其他项目记录：其他班级活动预算-21",
+        "observations": "课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。",
+        "reference_code": "S01",
+        "reference_version": "2026.1"
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fieldCount": 8,
+        "source": {
+          "file": "study-21.pdf",
+          "sha256": "8f3e563fb84f1f597da68134b31dc1ab7bc54e1a0a0952aa3623a0e35ead785b"
+        }
+      },
+      "checks": [],
+      "source": {
+        "file": "study-21.pdf",
+        "sha256": "8f3e563fb84f1f597da68134b31dc1ab7bc54e1a0a0952aa3623a0e35ead785b"
+      },
+      "finishedAt": "2026-09-26T03:49:01.088Z"
+    },
+    {
+      "id": "step-2",
+      "operation": "analyze",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      },
+      "reason": {
+        "zh": "当前条款或记录超出本地规则范围，使用获准云端分析。",
+        "en": "This input is outside the local rule coverage; use the authorized cloud capability."
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:01.088Z",
+      "parentStepId": null,
+      "input": {
+        "observations": "课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。",
+        "reference_code": "S01",
+        "reference_version": "2026.1"
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record"
+      ],
+      "receipts": [
+        "9980859a-6277-4be3-afc2-7d9a1fdccf9e"
+      ],
+      "output": {
+        "requestedTool": {
+          "id": "boundary-tool-call",
+          "type": "function",
+          "function": {
+            "name": "lookup_reference",
+            "arguments": "{\"code\":\"S01\",\"version\":\"2026.1\"}"
+          }
+        },
+        "summary": {
+          "zh": "模型提出查询指定版本资料。",
+          "en": "The model requested a versioned reference."
+        }
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-26T03:49:01.088Z",
+          "policyVersion": 2,
+          "allowedFields": [
+            "observations",
+            "reference_code",
+            "reference_version"
+          ],
+          "overheadMs": 0.014400000000023283
+        }
+      ],
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ],
+      "required": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "recipient": "cloud-model",
+      "plannedPolicyVersion": 1,
+      "providerResponse": {
+        "id": "deterministic-boundary-fixture",
+        "message": {
+          "tool_calls": [
+            {
+              "id": "boundary-tool-call",
+              "type": "function",
+              "function": {
+                "name": "lookup_reference",
+                "arguments": "{\"code\":\"S01\",\"version\":\"2026.1\"}"
+              }
+            }
+          ]
+        }
+      },
+      "finishedAt": "2026-09-26T03:49:01.117Z"
+    },
+    {
+      "id": "step-3",
+      "operation": "lookup_reference",
+      "title": {
+        "zh": "查询运行中发现的资料需求",
+        "en": "Look up a newly requested reference"
+      },
+      "reason": {
+        "zh": "由模型实际工具调用触发；查询只需要资料编号和版本。",
+        "en": "Triggered by an actual tool call; the lookup needs only a code and version."
+      },
+      "location": "tool",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:01.117Z",
+      "parentStepId": "step-2",
+      "input": {
+        "reference_code": "S01",
+        "reference_version": "2026.1"
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record",
+        "observations"
+      ],
+      "receipts": [
+        "72535237-5ef5-4ab4-97ee-e86b2dd555f0"
+      ],
+      "output": {
+        "code": "S01",
+        "version": "2026.1",
+        "text": "针对以下学习记录：课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。 本版建议：先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+        "citation": "synthetic-reference://S01/2026.1",
+        "title": "学习资源 S01"
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-26T03:49:01.117Z",
+          "policyVersion": 2,
+          "allowedFields": [
+            "reference_code",
+            "reference_version"
+          ],
+          "overheadMs": 0.010300000000029286
+        }
+      ],
+      "introducedAtRuntime": true,
+      "trigger": {
+        "modelStepId": "step-2",
+        "toolCallId": "boundary-tool-call"
+      },
+      "required": [
+        "reference_code",
+        "reference_version"
+      ],
+      "recipient": "reference-service",
+      "plannedPolicyVersion": 2,
+      "finishedAt": "2026-09-26T03:49:01.132Z"
+    },
+    {
+      "id": "step-4",
+      "operation": "analyze",
+      "title": {
+        "zh": "结合查得资料继续分析",
+        "en": "Continue with retrieved reference"
+      },
+      "reason": {
+        "zh": "重新构造当前分析步骤的输入，不沿用工具收到的参数。",
+        "en": "Rebuild the analysis view for this step."
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:01.132Z",
+      "parentStepId": "step-3",
+      "input": {
+        "observations": "课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。",
+        "reference_code": "S01",
+        "reference_version": "2026.1",
+        "reference_text": "针对以下学习记录：课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。 本版建议：先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+        "reference_citation": "synthetic-reference://S01/2026.1"
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record"
+      ],
+      "receipts": [
+        "2b86f1f0-bd17-4054-8d82-ea2ce006fa08"
+      ],
+      "output": {
+        "issueCodes": [
+          "UNDEFINED_TRIGGER"
+        ],
+        "amount": null,
+        "summary": "边界测试的确定性响应。",
+        "recommendation": "仅用于控制路径核验。",
+        "evidenceIds": [
+          "observations"
+        ],
+        "citations": [
+          "synthetic-reference://S01/2026.1"
+        ]
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-26T03:49:01.132Z",
+          "policyVersion": 2,
+          "allowedFields": [
+            "observations",
+            "reference_code",
+            "reference_version",
+            "reference_text",
+            "reference_citation"
+          ],
+          "overheadMs": 0.016200000000026193
+        }
+      ],
+      "required": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ],
+      "recipient": "cloud-model",
+      "plannedPolicyVersion": 2,
+      "providerResponse": {
+        "id": "deterministic-boundary-fixture",
+        "message": {
+          "content": "{\"issueCodes\":[\"UNDEFINED_TRIGGER\"],\"amount\":null,\"summary\":\"边界测试的确定性响应。\",\"recommendation\":\"仅用于控制路径核验。\",\"evidenceIds\":[\"observations\"],\"citations\":[\"synthetic-reference://S01/2026.1\"]}"
+        }
+      },
+      "finishedAt": "2026-09-26T03:49:01.148Z"
+    },
+    {
+      "id": "step-5",
+      "operation": "assemble",
+      "title": {
+        "zh": "在本地关联学生并生成建议",
+        "en": "Assemble student advice locally"
+      },
+      "reason": {
+        "zh": "在本地恢复身份关联，生成带来源的业务文件。",
+        "en": "Reconnect identity locally and produce a report with sources."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:01.148Z",
+      "parentStepId": "step-4",
+      "input": {
+        "identity": "合成学生21",
+        "assessment": {
+          "issueCodes": [
+            "UNDEFINED_TRIGGER"
+          ],
+          "amount": null,
+          "summary": "边界测试的确定性响应。",
+          "recommendation": "仅用于控制路径核验。",
+          "evidenceIds": [
+            "observations"
+          ],
+          "citations": [
+            "synthetic-reference://S01/2026.1"
+          ]
+        }
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fileName": "result.md",
+        "summary": "边界测试的确定性响应。"
+      },
+      "checks": [],
+      "finishedAt": "2026-09-26T03:49:01.148Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "task.started",
+      "at": "2026-09-26T03:49:01.088Z",
+      "caseId": "study-21"
+    },
+    {
+      "index": 2,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-1",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      }
+    },
+    {
+      "index": 3,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-1"
+    },
+    {
+      "index": 4,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-2",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      }
+    },
+    {
+      "index": 5,
+      "type": "location.decided",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-2",
+      "location": "cloud",
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "type": "view.prepared",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-2",
+      "keys": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ]
+    },
+    {
+      "index": 7,
+      "type": "policy.changed",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-2",
+      "policy": {
+        "allowed": false,
+        "version": 2
+      },
+      "reason": {
+        "zh": "规划完成后撤销云端授权",
+        "en": "Cloud authorization revoked after planning"
+      }
+    },
+    {
+      "index": 8,
+      "type": "exit.checked",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-2",
+      "checkedAt": "2026-09-26T03:49:01.088Z",
+      "policyVersion": 2,
+      "allowedFields": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "overheadMs": 0.014400000000023283
+    },
+    {
+      "index": 9,
+      "type": "request.sent",
+      "at": "2026-09-26T03:49:01.088Z",
+      "stepId": "step-2",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 10,
+      "type": "receiver.received",
+      "at": "2026-09-26T03:49:01.117Z",
+      "stepId": "step-2",
+      "receiptId": "9980859a-6277-4be3-afc2-7d9a1fdccf9e",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 11,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:01.117Z",
+      "stepId": "step-2"
+    },
+    {
+      "index": 12,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:01.117Z",
+      "stepId": "step-3",
+      "title": {
+        "zh": "查询运行中发现的资料需求",
+        "en": "Look up a newly requested reference"
+      }
+    },
+    {
+      "index": 13,
+      "type": "step.discovered",
+      "at": "2026-09-26T03:49:01.117Z",
+      "stepId": "step-3",
+      "parentStepId": "step-2",
+      "toolCall": {
+        "id": "boundary-tool-call",
+        "type": "function",
+        "function": {
+          "name": "lookup_reference",
+          "arguments": "{\"code\":\"S01\",\"version\":\"2026.1\"}"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "type": "exit.checked",
+      "at": "2026-09-26T03:49:01.117Z",
+      "stepId": "step-3",
+      "checkedAt": "2026-09-26T03:49:01.117Z",
+      "policyVersion": 2,
+      "allowedFields": [
+        "reference_code",
+        "reference_version"
+      ],
+      "overheadMs": 0.010300000000029286
+    },
+    {
+      "index": 15,
+      "type": "request.sent",
+      "at": "2026-09-26T03:49:01.117Z",
+      "stepId": "step-3",
+      "recipient": "reference-service"
+    },
+    {
+      "index": 16,
+      "type": "receiver.received",
+      "at": "2026-09-26T03:49:01.132Z",
+      "stepId": "step-3",
+      "receiptId": "72535237-5ef5-4ab4-97ee-e86b2dd555f0",
+      "recipient": "reference-service"
+    },
+    {
+      "index": 17,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:01.132Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 18,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:01.132Z",
+      "stepId": "step-4",
+      "title": {
+        "zh": "结合查得资料继续分析",
+        "en": "Continue with retrieved reference"
+      }
+    },
+    {
+      "index": 19,
+      "type": "view.prepared",
+      "at": "2026-09-26T03:49:01.132Z",
+      "stepId": "step-4",
+      "keys": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ]
+    },
+    {
+      "index": 20,
+      "type": "exit.checked",
+      "at": "2026-09-26T03:49:01.132Z",
+      "stepId": "step-4",
+      "checkedAt": "2026-09-26T03:49:01.132Z",
+      "policyVersion": 2,
+      "allowedFields": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ],
+      "overheadMs": 0.016200000000026193
+    },
+    {
+      "index": 21,
+      "type": "request.sent",
+      "at": "2026-09-26T03:49:01.132Z",
+      "stepId": "step-4",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 22,
+      "type": "receiver.received",
+      "at": "2026-09-26T03:49:01.148Z",
+      "stepId": "step-4",
+      "receiptId": "2b86f1f0-bd17-4054-8d82-ea2ce006fa08",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 23,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:01.148Z",
+      "stepId": "step-4"
+    },
+    {
+      "index": 24,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:01.148Z",
+      "stepId": "step-5",
+      "title": {
+        "zh": "在本地关联合同方并生成结果",
+        "en": "Assemble the result locally"
+      }
+    },
+    {
+      "index": 25,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:01.148Z",
+      "stepId": "step-5"
+    },
+    {
+      "index": 26,
+      "type": "report.created",
+      "at": "2026-09-26T03:49:01.148Z",
+      "stepId": "step-5"
+    },
+    {
+      "index": 27,
+      "type": "run.completed",
+      "at": "2026-09-26T03:49:01.148Z",
+      "status": "completed"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "9980859a-6277-4be3-afc2-7d9a1fdccf9e",
+      "runId": "9f84cdef-2893-4a81-8d6f-f5dc9dc81eae",
+      "stepId": "step-2",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-26T03:49:01.100Z",
+      "bytes": 2415,
+      "sha256": "dc793ad0200488bb7943ca8a224695c35291bfb2922b2ca8082a67b141dc5f42",
+      "rawBody": "{\"model\":\"qwen-plus\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"auto\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"observations\\\":\\\"课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。\\\",\\\"reference_code\\\":\\\"S01\\\",\\\"reference_version\\\":\\\"2026.1\\\"}}\"}]}",
+      "processId": 28016,
+      "responseSha256": "6a29313c0568330523e90f4b295cc3f90bc441f0e3d26ee78a301c9e8ce074a1",
+      "usage": null,
+      "providerId": "deterministic-boundary-fixture",
+      "status": 200,
+      "finishedAt": "2026-09-26T03:49:01.116Z"
+    },
+    {
+      "id": "72535237-5ef5-4ab4-97ee-e86b2dd555f0",
+      "runId": "9f84cdef-2893-4a81-8d6f-f5dc9dc81eae",
+      "stepId": "step-3",
+      "recipient": "reference-service",
+      "receivedAt": "2026-09-26T03:49:01.130Z",
+      "bytes": 33,
+      "sha256": "7e7d851506105eec8c9e480ed7d98c145fd0883424be551c8f76c852f5b011a4",
+      "rawBody": "{\"code\":\"S01\",\"version\":\"2026.1\"}",
+      "processId": 28016,
+      "status": 200,
+      "finishedAt": "2026-09-26T03:49:01.131Z"
+    },
+    {
+      "id": "2b86f1f0-bd17-4054-8d82-ea2ce006fa08",
+      "runId": "9f84cdef-2893-4a81-8d6f-f5dc9dc81eae",
+      "stepId": "step-4",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-26T03:49:01.133Z",
+      "bytes": 2734,
+      "sha256": "de74baf7bd8974e58653d7fe54a53a07f50d61f3f1e08ac4ca98e89790299315",
+      "rawBody": "{\"model\":\"qwen-plus\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"none\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"observations\\\":\\\"课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。\\\",\\\"reference_code\\\":\\\"S01\\\",\\\"reference_version\\\":\\\"2026.1\\\",\\\"reference_text\\\":\\\"针对以下学习记录：课堂测验掌握基础概念，但课后练习经常未完成，近两周仅完成三分之一。 本版建议：先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。\\\",\\\"reference_citation\\\":\\\"synthetic-reference://S01/2026.1\\\"}}\"}]}",
+      "processId": 28016,
+      "responseSha256": "1f0cf3616315ced00d932e96e70d722e5331bc23bab3ea79e459c8b5e1f3cb72",
+      "usage": null,
+      "providerId": "deterministic-boundary-fixture",
+      "status": 200,
+      "finishedAt": "2026-09-26T03:49:01.147Z"
+    }
+  ],
+  "result": {
+    "issueCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "amount": null,
+    "summary": "边界测试的确定性响应。",
+    "recommendation": "仅用于控制路径核验。",
+    "evidenceIds": [
+      "observations"
+    ],
+    "citations": [
+      "synthetic-reference://S01/2026.1"
+    ]
+  },
+  "report": "# 学习支持建议（合成案例）\n\n对象：合成学生21\n运行：9f84cdef-2893-4a81-8d6f-f5dc9dc81eae\n\n## 分析结果\n边界测试的确定性响应。\n\n问题分类：UNDEFINED_TRIGGER\n\n\n## 建议\n仅用于控制路径核验。\n\n## 依据\n- observations\n- synthetic-reference://S01/2026.1\n\n## 执行记录\n本地步骤：2；模型调用：2；资料查询：1\n数据来源：合成案例 study-21；本机独立接收进程记录请求，不是云厂商独立回执。\n\n合同分析为输入条款的系统演示，不作法律效力判断。学习分析仅针对合成记录。\n",
+  "error": null,
+  "metrics": {
+    "controlMs": [
+      0.0025000000000545697,
+      0.0543999999999869,
+      0.026799999999980173,
+      0.07439999999996871
+    ],
+    "modelCalls": 2,
+    "toolCalls": 1,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalBytes": 5182,
+    "elapsedMs": 60.722099999999955
+  },
+  "finishedAt": "2026-09-26T03:49:01.148Z"
+}

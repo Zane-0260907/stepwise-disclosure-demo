@@ -1,0 +1,26 @@
+[
+  {
+    "id": "8ccb308b-4003-4196-9f1b-15f9c9a6e9ff",
+    "at": "2026-09-26T04:18:19.365Z",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "receiverBodySha256": "99cba8b92a6b80d3bf6120d2db461dde193fc9ebb15afe01e1271052222c3d3c",
+    "providerBodySha256": "8c83257b09b93b419f8539e447a9dff9b50d0d1fa6878c3d375dae6029912f94",
+    "providerBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"auto\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。\\\",\\\"reference_code\\\":\\\"C01\\\",\\\"reference_version\\\":\\\"2026.1\\\"}}\"}],\"thinking\":{\"type\":\"disabled\"}}",
+    "responseStatus": 200,
+    "responseSha256": "ecc36b10bb2f990e9360880ed6e88213b9410ddac33a3928b2db50c082929046"
+  },
+  {
+    "id": "b2937c4b-7d8d-4bb9-8127-8d5e03d60dc0",
+    "at": "2026-09-26T04:18:20.386Z",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "receiverBodySha256": "02651a4cca06a6dda8c21c40221c454605fd778529d9f689a69d7a053b82b4c2",
+    "providerBodySha256": "a7fab16e4f00c347dbf78ccc0a2219337711e88cf320b625c1a0e4bed1c82bf8",
+    "providerBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"none\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"本合同违约与付款责任采用示例条款 C01（版本 2026.1），请查阅该条款后指出其中需要复核的缺口。\\\",\\\"reference_code\\\":\\\"C01\\\",\\\"reference_version\\\":\\\"2026.1\\\",\\\"reference_text\\\":\\\"逾期履约按合同额 10% 支付违约金，但未说明履约指交货、验收还是付款。\\\",\\\"reference_citation\\\":\\\"synthetic-reference://C01/2026.1\\\"}}\"}],\"thinking\":{\"type\":\"disabled\"}}",
+    "responseStatus": 200,
+    "responseSha256": "a6676a6321569e019fc92c344314c365825ccb87e55d2513c50323ed2db8f187"
+  }
+]

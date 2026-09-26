@@ -1,0 +1,395 @@
+{
+  "protocol": "research-v1",
+  "id": "10e65ecb-e032-4c9d-9ebb-a1daac3d3bab",
+  "source": "live",
+  "caseId": "study-03",
+  "family": "study",
+  "title": {
+    "zh": "学习分析 · 3",
+    "en": "Study local case 3"
+  },
+  "task": {
+    "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+    "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+  },
+  "input": {
+    "identity": "合成学生3",
+    "contact": "模拟联系人3；电话 13900000003",
+    "account": "LOCAL-STUDY-0003",
+    "internal_note": "仅限内部：内部人员安排与联络备注-3",
+    "unrelated_record": "其他项目记录：其他班级活动预算-3",
+    "scores": [
+      75,
+      80,
+      83
+    ],
+    "homework": 40,
+    "absences": 0,
+    "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。"
+  },
+  "sourceFile": "study-03.pdf",
+  "method": "joint",
+  "condition": "normal",
+  "model": "qwen-plus",
+  "createdAt": "2026-09-26T03:49:00.841Z",
+  "status": "completed",
+  "policy": {
+    "version": 1,
+    "allowed": true
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "operation": "read",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      },
+      "reason": {
+        "zh": "原始身份和业务资料在本地读取。",
+        "en": "Read original identity and business records locally."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:00.841Z",
+      "parentStepId": null,
+      "input": {
+        "identity": "合成学生3",
+        "contact": "模拟联系人3；电话 13900000003",
+        "account": "LOCAL-STUDY-0003",
+        "internal_note": "仅限内部：内部人员安排与联络备注-3",
+        "unrelated_record": "其他项目记录：其他班级活动预算-3",
+        "scores": [
+          75,
+          80,
+          83
+        ],
+        "homework": 40,
+        "absences": 0,
+        "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。"
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fieldCount": 9,
+        "source": {
+          "file": "study-03.pdf",
+          "sha256": "ece7e3701849c93bf40fe52e0103a0072f749da376c6a8e5409cf7003d5f90af"
+        }
+      },
+      "checks": [],
+      "source": {
+        "file": "study-03.pdf",
+        "sha256": "ece7e3701849c93bf40fe52e0103a0072f749da376c6a8e5409cf7003d5f90af"
+      },
+      "finishedAt": "2026-09-26T03:49:00.841Z"
+    },
+    {
+      "id": "step-2",
+      "operation": "analyze",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      },
+      "reason": {
+        "zh": "当前条款或记录超出本地规则范围，使用获准云端分析。",
+        "en": "This input is outside the local rule coverage; use the authorized cloud capability."
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:00.841Z",
+      "parentStepId": null,
+      "input": {
+        "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。",
+        "scores": [
+          75,
+          80,
+          83
+        ],
+        "homework": 40,
+        "absences": 0
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record"
+      ],
+      "receipts": [
+        "b61251f3-ce49-4709-880a-f48badf36e9b"
+      ],
+      "output": {
+        "issueCodes": [
+          "SUPPORT_NEEDED"
+        ],
+        "amount": null,
+        "summary": "平均分 79.3；作业完成率 40%；缺勤 0 次。满足学习支持条件。",
+        "recommendation": "按未达标项目安排学习支持并复核后续记录。",
+        "evidenceIds": [
+          "observations",
+          "scores",
+          "homework",
+          "absences"
+        ],
+        "citations": []
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-26T03:49:00.841Z",
+          "policyVersion": 1,
+          "allowedFields": [
+            "observations",
+            "scores",
+            "homework",
+            "absences"
+          ],
+          "overheadMs": 0.026999999999986812
+        }
+      ],
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ],
+      "required": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "recipient": "cloud-model",
+      "plannedPolicyVersion": 1,
+      "providerResponse": {
+        "id": "deterministic-boundary-fixture",
+        "message": {
+          "content": "{\"issueCodes\":[\"SUPPORT_NEEDED\"],\"amount\":null,\"summary\":\"平均分 79.3；作业完成率 40%；缺勤 0 次。满足学习支持条件。\",\"recommendation\":\"按未达标项目安排学习支持并复核后续记录。\",\"evidenceIds\":[\"observations\",\"scores\",\"homework\",\"absences\"],\"citations\":[]}"
+        }
+      },
+      "finishedAt": "2026-09-26T03:49:00.862Z"
+    },
+    {
+      "id": "step-3",
+      "operation": "assemble",
+      "title": {
+        "zh": "在本地关联学生并生成建议",
+        "en": "Assemble student advice locally"
+      },
+      "reason": {
+        "zh": "在本地恢复身份关联，生成带来源的业务文件。",
+        "en": "Reconnect identity locally and produce a report with sources."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:00.862Z",
+      "parentStepId": "step-2",
+      "input": {
+        "identity": "合成学生3",
+        "assessment": {
+          "issueCodes": [
+            "SUPPORT_NEEDED"
+          ],
+          "amount": null,
+          "summary": "平均分 79.3；作业完成率 40%；缺勤 0 次。满足学习支持条件。",
+          "recommendation": "按未达标项目安排学习支持并复核后续记录。",
+          "evidenceIds": [
+            "observations",
+            "scores",
+            "homework",
+            "absences"
+          ],
+          "citations": []
+        }
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fileName": "result.md",
+        "summary": "平均分 79.3；作业完成率 40%；缺勤 0 次。满足学习支持条件。"
+      },
+      "checks": [],
+      "finishedAt": "2026-09-26T03:49:00.862Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "task.started",
+      "at": "2026-09-26T03:49:00.841Z",
+      "caseId": "study-03"
+    },
+    {
+      "index": 2,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-1",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      }
+    },
+    {
+      "index": 3,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-1"
+    },
+    {
+      "index": 4,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-2",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      }
+    },
+    {
+      "index": 5,
+      "type": "location.decided",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-2",
+      "location": "cloud",
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "type": "view.prepared",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-2",
+      "keys": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ]
+    },
+    {
+      "index": 7,
+      "type": "exit.checked",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-2",
+      "checkedAt": "2026-09-26T03:49:00.841Z",
+      "policyVersion": 1,
+      "allowedFields": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "overheadMs": 0.026999999999986812
+    },
+    {
+      "index": 8,
+      "type": "request.sent",
+      "at": "2026-09-26T03:49:00.841Z",
+      "stepId": "step-2",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 9,
+      "type": "receiver.received",
+      "at": "2026-09-26T03:49:00.862Z",
+      "stepId": "step-2",
+      "receiptId": "b61251f3-ce49-4709-880a-f48badf36e9b",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 10,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:00.862Z",
+      "stepId": "step-2"
+    },
+    {
+      "index": 11,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:00.862Z",
+      "stepId": "step-3",
+      "title": {
+        "zh": "在本地关联合同方并生成结果",
+        "en": "Assemble the result locally"
+      }
+    },
+    {
+      "index": 12,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:00.862Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 13,
+      "type": "report.created",
+      "at": "2026-09-26T03:49:00.862Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 14,
+      "type": "run.completed",
+      "at": "2026-09-26T03:49:00.862Z",
+      "status": "completed"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "b61251f3-ce49-4709-880a-f48badf36e9b",
+      "runId": "10e65ecb-e032-4c9d-9ebb-a1daac3d3bab",
+      "stepId": "step-2",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-26T03:49:00.851Z",
+      "bytes": 2468,
+      "sha256": "53d47a141499587301adb824bf8e38342584990b85814af11b714f61d3e66c50",
+      "rawBody": "{\"model\":\"qwen-plus\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"auto\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"observations\\\":\\\"执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。\\\",\\\"scores\\\":[75,80,83],\\\"homework\\\":40,\\\"absences\\\":0}}\"}]}",
+      "processId": 28016,
+      "responseSha256": "1691862f3ded28e7f3466201734d36b54f2205eb5c76bd09af75fe8b5960f247",
+      "usage": null,
+      "providerId": "deterministic-boundary-fixture",
+      "status": 200,
+      "finishedAt": "2026-09-26T03:49:00.861Z"
+    }
+  ],
+  "result": {
+    "issueCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "amount": null,
+    "summary": "平均分 79.3；作业完成率 40%；缺勤 0 次。满足学习支持条件。",
+    "recommendation": "按未达标项目安排学习支持并复核后续记录。",
+    "evidenceIds": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "citations": []
+  },
+  "report": "# 学习支持建议（合成案例）\n\n对象：合成学生3\n运行：10e65ecb-e032-4c9d-9ebb-a1daac3d3bab\n\n## 分析结果\n平均分 79.3；作业完成率 40%；缺勤 0 次。满足学习支持条件。\n\n问题分类：SUPPORT_NEEDED\n\n\n## 建议\n按未达标项目安排学习支持并复核后续记录。\n\n## 依据\n- observations\n- scores\n- homework\n- absences\n\n## 执行记录\n本地步骤：2；模型调用：1；资料查询：0\n数据来源：合成案例 study-03；本机独立接收进程记录请求，不是云厂商独立回执。\n\n合同分析为输入条款的系统演示，不作法律效力判断。学习分析仅针对合成记录。\n",
+  "error": null,
+  "metrics": {
+    "controlMs": [
+      0.0007999999999697138,
+      0.06839999999999691
+    ],
+    "modelCalls": 1,
+    "toolCalls": 0,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalBytes": 2468,
+    "elapsedMs": 21.220299999999952
+  },
+  "finishedAt": "2026-09-26T03:49:00.862Z",
+  "testEnvironment": "deterministic HTTP model fixture; real separate receiver process"
+}

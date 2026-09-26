@@ -1,0 +1,371 @@
+{
+  "environment": "Deterministic HTTP model fixture with actual separate receiver; not live model quality evaluation",
+  "cases": [
+    {
+      "type": "revoked",
+      "variant": 1,
+      "caseId": "contract-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.21879999999998745
+      ],
+      "runId": "f0b6a845-09a9-48eb-9f92-3ab93530f9d2"
+    },
+    {
+      "type": "revoked",
+      "variant": 2,
+      "caseId": "contract-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.004399999999975535
+      ],
+      "runId": "f9a5a8b2-d5a4-4976-9b79-ebdab4923437"
+    },
+    {
+      "type": "revoked",
+      "variant": 3,
+      "caseId": "study-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.004199999999997317
+      ],
+      "runId": "6693ad9d-cfba-4c81-a2d1-ecf9e8ecfbda"
+    },
+    {
+      "type": "revoked",
+      "variant": 4,
+      "caseId": "study-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0033999999999991815
+      ],
+      "runId": "07bc8380-e88b-4747-a662-82f5935e39dc"
+    },
+    {
+      "type": "recipient",
+      "variant": 1,
+      "caseId": "contract-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0033999999999991815
+      ],
+      "runId": "9d63031b-f3f9-4676-a0d9-ac33ba6b03f8"
+    },
+    {
+      "type": "recipient",
+      "variant": 2,
+      "caseId": "contract-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0036999999999807187
+      ],
+      "runId": "619ac54d-2c88-467e-bbe9-f45dd9e0b41f"
+    },
+    {
+      "type": "recipient",
+      "variant": 3,
+      "caseId": "study-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.00380000000001246
+      ],
+      "runId": "b415d170-ce10-4808-9c0a-4854a88a94c4"
+    },
+    {
+      "type": "recipient",
+      "variant": 4,
+      "caseId": "study-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.003999999999962256
+      ],
+      "runId": "2441ded9-0cf9-4410-976d-f9ab49574382"
+    },
+    {
+      "type": "extra",
+      "variant": 1,
+      "caseId": "contract-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.004099999999993997
+      ],
+      "runId": "8fcccf45-71fa-4ac4-b6b3-38fdc7b5215a"
+    },
+    {
+      "type": "extra",
+      "variant": 2,
+      "caseId": "contract-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.006199999999978445
+      ],
+      "runId": "3b854317-26c5-43d8-824d-019fd0e92895"
+    },
+    {
+      "type": "extra",
+      "variant": 3,
+      "caseId": "study-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.010199999999997544
+      ],
+      "runId": "4547e464-6f6e-42dd-a3fb-59a18c473b67"
+    },
+    {
+      "type": "extra",
+      "variant": 4,
+      "caseId": "study-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.005999999999971806
+      ],
+      "runId": "8783e1c5-d025-418f-a4d1-f97d96b3c8b7"
+    },
+    {
+      "type": "missing",
+      "variant": 1,
+      "caseId": "contract-21",
+      "expected": "failed",
+      "status": "failed",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0049999999999954525
+      ],
+      "runId": "19c5112e-5ce8-4fe7-ac08-5560e6c462e5"
+    },
+    {
+      "type": "missing",
+      "variant": 2,
+      "caseId": "contract-22",
+      "expected": "failed",
+      "status": "failed",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.006199999999978445
+      ],
+      "runId": "5f3dec98-a01d-4b57-a4b4-d2f4ca7ab2da"
+    },
+    {
+      "type": "missing",
+      "variant": 3,
+      "caseId": "study-21",
+      "expected": "failed",
+      "status": "failed",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.007000000000005002
+      ],
+      "runId": "ba8b87d8-a61d-4291-89ec-87859df7a3e3"
+    },
+    {
+      "type": "missing",
+      "variant": 4,
+      "caseId": "study-22",
+      "expected": "failed",
+      "status": "failed",
+      "correct": true,
+      "receivedRequests": 0,
+      "toolRequests": 0,
+      "controlMs": [
+        0.006700000000023465
+      ],
+      "runId": "cef5c5b1-3393-4649-b8d3-7f1e54fa4830"
+    },
+    {
+      "type": "capability",
+      "variant": 1,
+      "caseId": "contract-01",
+      "expected": "completed",
+      "status": "completed",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0019000000000346517,
+        0.09770000000003165
+      ],
+      "runId": "95c3d330-1cc8-42db-9f2e-dc663809a3ac"
+    },
+    {
+      "type": "capability",
+      "variant": 2,
+      "caseId": "contract-03",
+      "expected": "completed",
+      "status": "completed",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.001699999999971169,
+        0.07279999999997244
+      ],
+      "runId": "e0b8690e-b8ce-4811-8b1d-d2e081a773fb"
+    },
+    {
+      "type": "capability",
+      "variant": 3,
+      "caseId": "study-01",
+      "expected": "completed",
+      "status": "completed",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.003999999999962256,
+        0.1735999999999649
+      ],
+      "runId": "022b8be3-2854-463f-966b-129cfe0fe7e1"
+    },
+    {
+      "type": "capability",
+      "variant": 4,
+      "caseId": "study-03",
+      "expected": "completed",
+      "status": "completed",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0007999999999697138,
+        0.06839999999999691
+      ],
+      "runId": "10e65ecb-e032-4c9d-9ebb-a1daac3d3bab"
+    },
+    {
+      "type": "restricted",
+      "variant": 1,
+      "caseId": "contract-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.008499999999969532,
+        0.05129999999996926
+      ],
+      "runId": "f47a4e99-7e02-4d68-9be3-07bb225ab9ae"
+    },
+    {
+      "type": "restricted",
+      "variant": 2,
+      "caseId": "contract-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0019000000000346517,
+        0.050299999999992906
+      ],
+      "runId": "50a93de9-343f-412a-9f1e-189c439c1e77"
+    },
+    {
+      "type": "restricted",
+      "variant": 3,
+      "caseId": "study-21",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0056000000000153705,
+        0.049000000000035016
+      ],
+      "runId": "9c4975d0-712d-4bb0-ba14-83a1c673d7a6"
+    },
+    {
+      "type": "restricted",
+      "variant": 4,
+      "caseId": "study-22",
+      "expected": "blocked",
+      "status": "blocked",
+      "correct": true,
+      "receivedRequests": 1,
+      "toolRequests": 0,
+      "controlMs": [
+        0.0026000000000294676,
+        0.050299999999992906
+      ],
+      "runId": "0962845b-321c-4c47-b7af-093d03ae07cf"
+    }
+  ],
+  "withoutRecheck": [
+    {
+      "caseId": "contract-21",
+      "status": "completed",
+      "receivedAfterRevocation": 3
+    },
+    {
+      "caseId": "contract-22",
+      "status": "completed",
+      "receivedAfterRevocation": 3
+    },
+    {
+      "caseId": "study-21",
+      "status": "completed",
+      "receivedAfterRevocation": 3
+    },
+    {
+      "caseId": "study-22",
+      "status": "completed",
+      "receivedAfterRevocation": 3
+    }
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "experiment": "frozen-v1-20260925",
+  "manifest": {
+    "id": "frozen-v1-20260925",
+    "startedAt": "2026-09-25T15:11:11.517Z",
+    "jobs": 900,
+    "concurrency": 4,
+    "repeats": 3,
+    "methods": [
+      "full",
+      "pii",
+      "entry",
+      "per_step",
+      "joint"
+    ],
+    "caseIds": [
+      "contract-01",
+      "contract-02",
+      "contract-03",
+      "contract-04",
+      "contract-05",
+      "contract-06",
+      "contract-07",
+      "contract-08",
+      "contract-09",
+      "contract-10",
+      "contract-11",
+      "contract-12",
+      "contract-13",
+      "contract-14",
+      "contract-15",
+      "contract-16",
+      "contract-17",
+      "contract-18",
+      "contract-19",
+      "contract-20",
+      "contract-21",
+      "contract-22",
+      "contract-23",
+      "contract-24",
+      "contract-25",
+      "contract-26",
+      "contract-27",
+      "contract-28",
+      "contract-29",
+      "contract-30",
+      "study-01",
+      "study-02",
+      "study-03",
+      "study-04",
+      "study-05",
+      "study-06",
+      "study-07",
+      "study-08",
+      "study-09",
+      "study-10",
+      "study-11",
+      "study-12",
+      "study-13",
+      "study-14",
+      "study-15",
+      "study-16",
+      "study-17",
+      "study-18",
+      "study-19",
+      "study-20",
+      "study-21",
+      "study-22",
+      "study-23",
+      "study-24",
+      "study-25",
+      "study-26",
+      "study-27",
+      "study-28",
+      "study-29",
+      "study-30"
+    ],
+    "caseSha256": "281e036e3bd4f8b1d2393b03b6036bb1755cebb229e727b2c04d465d76d02abd",
+    "model": "qwen-plus",
+    "source": "live",
+    "protocol": {
+      "version": "1.0",
+      "frozenAt": "2026-09-25T15:08:37.014Z",
+      "cases": 60,
+      "methods": [
+        "full",
+        "pii",
+        "entry",
+        "per_step",
+        "joint"
+      ],
+      "repeats": 3,
+      "totalTaskRuns": 900,
+      "unitOfAnalysis": "independent case; repeats aggregated within case",
+      "bootstrapResamples": 2000,
+      "model": "qwen-plus",
+      "syntheticOnly": true,
+      "primaryEndpoint": "structuredTaskSuccess",
+      "secondaryEndpoints": [
+        "unnecessaryFactTransmissions",
+        "forbiddenFactTransmissions",
+        "elapsedMs",
+        "controlMs"
+      ],
+      "humanTextReview": "not performed; no human-validated prose quality claim",
+      "developmentChanges": [
+        "Reference tool disabled once its requested version has returned.",
+        "Returned reference results are available to the entry-only baseline.",
+        "Ambiguous duty/trigger wording accepts UNDEFINED_TRIGGER or UNDEFINED_OBLIGATION, consistently across methods."
+      ],
+      "hashes": {
+        "src/research/engine.mjs": "88e7e55a865c7dd445c7123dc393bb49364c52020b7577090b83dddf69a192d4",
+        "src/research/policy.mjs": "e76fccbbefeccb17ecdf7984a8804d989d1a8667fb1db3d0f5a7bb3d44493f9e",
+        "src/research/receiver-worker.mjs": "e94606c2ae995a5c76eb0771cfeaa8a9b8e669647ab9b798a71bdedad3993bd9",
+        "src/research/transport.mjs": "e12978c2a5985ab4cb13bb58a8de8607ccd7b96c61205eb5255a2d0a15427fe7",
+        "src/research/evaluate.mjs": "ad5a0c2403fa6ca82d91e4e8d847e098eab54ef470a0643d485b366a6e070285",
+        "src/research/documents.mjs": "8dca33b0152313f3b65a5166f7eb88ffb19e9d7444d68296d6359e6962c17adf",
+        "src/research/catalog.mjs": "b33fc7b351015048c239049491561a25eaaca578d137fa666215f96729aeefb6",
+        "src/pdf.mjs": "1ef48e2a38e4ef84d49e94c5c525921ba7455f16bca59295b150fc0e6929b03d",
+        "fixtures/research/cases.json": "281e036e3bd4f8b1d2393b03b6036bb1755cebb229e727b2c04d465d76d02abd",
+        "fixtures/research/ground-truth.json": "fdaafb90dc5caaaa9ae06a0539e79864ac58d8f38966be4d5c68896055bec706",
+        "fixtures/research/references.json": "738da37cc96943e9a64ed00b1b225664d1cb6a0445fd8eda931e4ea0f53bd006",
+        "package-lock.json": "5e6f7831ac498807e76c2458d8f36d1a2bdfe0dd0178d4e62570b215665972bd"
+      }
+    },
+    "evaluation": "Structured checks only; prose quality requires separate review."
+  },
+  "runs": 900,
+  "caseUnit": "60 cases; three repeats aggregated within case; percentile bootstrap 2000 samples",
+  "summary": [
+    {
+      "method": "full",
+      "runs": 180,
+      "cases": 60,
+      "structuredSuccess": 0.7666666666666665,
+      "successCI": [
+        0.6555555555555556,
+        0.861111111111111
+      ],
+      "completed": 179,
+      "blocked": 0,
+      "failed": 1,
+      "unnecessary": 9.6,
+      "unnecessaryCI": [
+        8.183333333333334,
+        11.05
+      ],
+      "totalFacts": 14.333333333333334,
+      "forbiddenTasks": 180,
+      "latencyP50": 2496.7506500000018,
+      "latencyP95": 4523.88040500005,
+      "controlP50": 0.10565000001952285,
+      "controlP95": 0.39421999996993673,
+      "modelCalls": 240,
+      "toolCalls": 60,
+      "promptTokens": 159867,
+      "completionTokens": 20498,
+      "bytes": 689361,
+      "byRecipient": {
+        "cloud-model": {
+          "total": 11.5,
+          "unnecessary": 7.433333333333334
+        },
+        "reference-service": {
+          "total": 2.8333333333333335,
+          "unnecessary": 2.1666666666666665
+        }
+      }
+    },
+    {
+      "method": "pii",
+      "runs": 180,
+      "cases": 60,
+      "structuredSuccess": 0.75,
+      "successCI": [
+        0.6444444444444444,
+        0.85
+      ],
+      "completed": 177,
+      "blocked": 0,
+      "failed": 3,
+      "unnecessary": 4.6,
+      "unnecessaryCI": [
+        3.9166666666666665,
+        5.35
+      ],
+      "totalFacts": 9.333333333333334,
+      "forbiddenTasks": 180,
+      "latencyP50": 2516.7079000000376,
+      "latencyP95": 4578.579784999964,
+      "controlP50": 0.10884999997506384,
+      "controlP95": 0.4002900000312365,
+      "modelCalls": 240,
+      "toolCalls": 60,
+      "promptTokens": 149082,
+      "completionTokens": 20190,
+      "bytes": 650316,
+      "byRecipient": {
+        "cloud-model": {
+          "total": 7.5,
+          "unnecessary": 3.433333333333333
+        },
+        "reference-service": {
+          "total": 1.8333333333333333,
+          "unnecessary": 1.1666666666666667
+        }
+      }
+    },
+    {
+      "method": "entry",
+      "runs": 180,
+      "cases": 60,
+      "structuredSuccess": 0.8222222222222223,
+      "successCI": [
+        0.7222222222222222,
+        0.9111111111111111
+      ],
+      "completed": 179,
+      "blocked": 0,
+      "failed": 1,
+      "unnecessary": 0.3333333333333333,
+      "unnecessaryCI": [
+        0.21666666666666667,
+        0.45
+      ],
+      "totalFacts": 5.066666666666666,
+      "forbiddenTasks": 0,
+      "latencyP50": 2391.7216999999655,
+      "latencyP95": 4165.837985,
+      "controlP50": 0.10764999998900748,
+      "controlP95": 0.38371999999217193,
+      "modelCalls": 240,
+      "toolCalls": 60,
+      "promptTokens": 139248,
+      "completionTokens": 18878,
+      "bytes": 597750,
+      "byRecipient": {
+        "cloud-model": {
+          "total": 4.066666666666666,
+          "unnecessary": 0
+        },
+        "reference-service": {
+          "total": 1,
+          "unnecessary": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "method": "per_step",
+      "runs": 180,
+      "cases": 60,
+      "structuredSuccess": 0.8277777777777778,
+      "successCI": [
+        0.7333333333333335,
+        0.9111111111111112
+      ],
+      "completed": 176,
+      "blocked": 0,
+      "failed": 4,
+      "unnecessary": 0,
+      "unnecessaryCI": [
+        0,
+        0
+      ],
+      "totalFacts": 4.733333333333333,
+      "forbiddenTasks": 0,
+      "latencyP50": 2379.6522500000137,
+      "latencyP95": 4253.078724999982,
+      "controlP50": 0.10420000003068708,
+      "controlP95": 0.39048500003118525,
+      "modelCalls": 240,
+      "toolCalls": 60,
+      "promptTokens": 139248,
+      "completionTokens": 19257,
+      "bytes": 589692,
+      "byRecipient": {
+        "cloud-model": {
+          "total": 4.066666666666666,
+          "unnecessary": 0
+        },
+        "reference-service": {
+          "total": 0.6666666666666666,
+          "unnecessary": 0
+        }
+      }
+    },
+    {
+      "method": "joint",
+      "runs": 180,
+      "cases": 60,
+      "structuredSuccess": 0.9111111111111112,
+      "successCI": [
+        0.8388888888888889,
+        0.9722222222222222
+      ],
+      "completed": 177,
+      "blocked": 0,
+      "failed": 3,
+      "unnecessary": 0,
+      "unnecessaryCI": [
+        0,
+        0
+      ],
+      "totalFacts": 3.6666666666666665,
+      "forbiddenTasks": 0,
+      "latencyP50": 2061.402999999962,
+      "latencyP95": 4209.138129999945,
+      "controlP50": 0.040950000009615906,
+      "controlP95": 0.38290499996001,
+      "modelCalls": 180,
+      "toolCalls": 60,
+      "promptTokens": 102414,
+      "completionTokens": 13603,
+      "bytes": 445740,
+      "byRecipient": {
+        "cloud-model": {
+          "total": 3,
+          "unnecessary": 0
+        },
+        "reference-service": {
+          "total": 0.6666666666666666,
+          "unnecessary": 0
+        }
+      }
+    }
+  ],
+  "paired": {
+    "jointVsFull": {
+      "success": {
+        "difference": 0.1444444444444445,
+        "ci": [
+          0.06097222222222222,
+          0.23888888888888887
+        ]
+      },
+      "unnecessary": {
+        "difference": -9.6,
+        "ci": [
+          -11.05,
+          -8.166666666666666
+        ]
+      }
+    },
+    "jointVsPerStep": {
+      "success": {
+        "difference": 0.08333333333333333,
+        "ci": [
+          0.022222222222222223,
+          0.1611111111111111
+        ]
+      },
+      "unnecessary": {
+        "difference": 0,
+        "ci": [
+          0,
+          0
+        ]
+      },
+      "elapsedMs": {
+        "difference": -791.6566088888928,
+        "ci": [
+          -1143.2712863194472,
+          -466.6831388611156
+        ]
+      }
+    }
+  },
+  "errors": {
+    "INVALID_OUTPUT": 12
+  },
+  "postHocSensitivity": {
+    "description": "Exploratory only: accept null instead of numeric zero for a completed no-penalty case. Original primary results unchanged.",
+    "methods": [
+      {
+        "method": "full",
+        "zeroVsNull": 4,
+        "relaxedSuccess": 0.7888888888888889
+      },
+      {
+        "method": "pii",
+        "zeroVsNull": 8,
+        "relaxedSuccess": 0.7944444444444444
+      },
+      {
+        "method": "entry",
+        "zeroVsNull": 9,
+        "relaxedSuccess": 0.8722222222222222
+      },
+      {
+        "method": "per_step",
+        "zeroVsNull": 9,
+        "relaxedSuccess": 0.8777777777777778
+      },
+      {
+        "method": "joint",
+        "zeroVsNull": 0,
+        "relaxedSuccess": 0.9111111111111111
+      }
+    ]
+  },
+  "limitations": [
+    "Synthetic inputs and explicitly supported operation contracts.",
+    "Self-authored mechanism baselines; no claim of outperforming MINIM/ToolMinimize/Fides.",
+    "Structured outcome checking is not independent human validation of prose.",
+    "Control timings are wall-clock intervals including event recording and scheduling, not isolated CPU costs.",
+    "No observed forbidden fields is limited to known fields through registered adapters.",
+    "Development and evaluation share operation families; no unseen-template generalization claim."
+  ],
+  "humanTextReview": "not performed"
+}

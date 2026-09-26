@@ -1,0 +1,6448 @@
+[
+  {
+    "runId": "705f19e9-8540-4ac0-9387-c46fe8ac0b63",
+    "caseId": "contract-02",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "无迟延交货事实（late_days=0），违约金条款未触发",
+      "recommendation": "无需支付违约金；持续监控交付进度",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "27fc6513-2b4e-4d00-a391-da9fc7777fb8",
+    "caseId": "contract-02",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "a5c241d8-7403-4820-8cbd-c3a5b4ec12d0",
+    "caseId": "contract-02",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "130e2007-8dfa-4fe3-8ae9-d47651b9471e",
+    "caseId": "contract-02",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "无逾期交货事实（late_days=0），违约金条款未触发。",
+      "recommendation": "保持按期交付；若后续发生迟延，按合同总额108,000元的2%即2,160元计收违约金。",
+      "evidenceIds": [
+        "late_days",
+        "amount",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "9c3cbdc3-e2d8-4e63-9e32-a572b9d9f13e",
+    "caseId": "contract-04",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "amount": null,
+      "summary": "条款中规定了迟延交货的违约金标准（200元/天），但未明确约定交货截止日期，无法判断是否发生迟延及计算具体违约天数。",
+      "recommendation": "需补充合同中明确的交货截止日期，方可核算违约金额。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "401b2698-4fad-4763-8ccb-89642aadcdf8",
+    "caseId": "contract-04",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同约定迟延交货每日违约金200元，但当前late_days为0，无逾期事实，不触发违约金计算。",
+      "recommendation": "无需支付违约金；持续监控交付进度以避免后续迟延。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "c40f5ea0-1351-4fca-89e3-05bbd2ae13b6",
+    "caseId": "contract-05",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 660,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计，共660元，未超上限0.3%（396元）。",
+      "recommendation": "确认是否已验收及起算日；违约金总额未超上限，可按660元主张。",
+      "evidenceIds": [
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "acb26f98-3b99-401f-9701-86ffaac5a68a",
+    "caseId": "contract-05",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 660,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计，违约金为132000×0.1%×5=660，未超上限0.3%（396），金额可确定。",
+      "recommendation": "收取违约金660元，并确认是否已书面通知对方违约事实。",
+      "evidenceIds": [
+        "payment_terms",
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "234209ec-d173-4da0-a215-a9da452b08fa",
+    "caseId": "contract-05",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 132000,
+      "summary": "迟延交货5天，按合同总额0.1%/天计收违约金，累计上限0.3%；计算得132000元在合理范围内。",
+      "recommendation": "确认合同总额是否为1320000元，并核实是否已达累计上限。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "07425b0e-85a7-4f39-9990-5df23fdcb2d3",
+    "caseId": "contract-05",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 6600,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计算，违约金为132000×0.1%×5=6600，未超上限0.3%（3960）。",
+      "recommendation": "确认合同总额是否确为132000；核实迟延天数起算点及是否含法定节假日。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1b22b8de-9ffc-4464-9213-d09d6b124fa9",
+    "caseId": "contract-06",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延天数为0，不触发违约金条款。",
+      "recommendation": "无需支付违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "880779a8-c3df-49b8-abb9-da5015eee6e6",
+    "caseId": "contract-06",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "9bbecc80-bf86-4039-8033-687bf0c960bf",
+    "caseId": "contract-08",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未超出3天宽限期，不触发违约金计收。",
+      "recommendation": "无需支付违约金。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "c39e4b04-3546-4576-bbfc-67dc1a344526",
+    "caseId": "contract-10",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "79fc487c-4e24-4a9c-9004-b00ad33c29c8",
+    "caseId": "contract-10",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同约定迟延交货超2天计收1000元违约金，当前late_days=0，无逾期事实，不触发违约金。",
+      "recommendation": "无需支付违约金；持续关注交付进度，确保按期履约。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "cb500f3a-13b5-4750-9067-9b3db8184749",
+    "caseId": "contract-09",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1000,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 2000,
+      "summary": "迟延交货5天，超过2天阈值3次（第3、4、5天），每次1000元，共3000元；但条款未明确计收频次逻辑，按常见‘每超1天’理解则为3天×1000=3000元，此处保守取整数倍最简解释：超2天即触发一次，后续未说明累加规则，故仅计1次1000元；但事实中late_days=5且clause写'超过2天时一次计收'，通常解读为满足条件即发生一次，不随天数增加而累加，因此金额为1000元。然而标准商业实践常为按日累计，条款表述模糊导致歧义，但任务要求'能够确定的违约金额'，唯一无争议的是至少触发一次，故取1000元。",
+      "recommendation": "明确违约金计收是按日累计还是单次封顶，并在合同中补充计算逻辑。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "c4261d16-4652-4fef-a280-5684f0cf4d37",
+    "caseId": "contract-09",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1000,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 2000,
+      "summary": "迟延交货5天，超过2天阈值3次（第3、4、5天），每次1000元，共3000元；但条款未明确计收频次逻辑，按常见理解为‘超过部分每满1天计1次’，则超期3天计3次；然而示例计算取2000元，说明可能按‘超2天即触发一次，再超2天再触发一次’，即5天对应2次（第3-4天、第5天不足2天不计），故取2000元。",
+      "recommendation": "明确‘超过2天’是累计超期天数达2天即触发首次计收，还是每连续超期2天触发一次；建议统一为‘每超期1天计1000元，自第3天起算’以避免歧义。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f5d3cf2e-02fe-4f4e-87f1-cce8f3e4fd0f",
+    "caseId": "contract-10",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "0be4fc1a-a396-426d-9bc0-1eefc8592d3b",
+    "caseId": "contract-10",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "130487c7-b8ff-470d-99e7-f4fa278d2897",
+    "caseId": "contract-16",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未约定验收标准和验收责任人，导致付款前提条件不明确，无法确定是否满足付款触发条件。",
+      "recommendation": "补充约定明确的验收标准及指定验收责任人。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ee49795b-ff60-4adf-91cd-5cc0d5b3de6d",
+    "caseId": "contract-16",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "条款未约定验收标准和验收责任人，导致付款前提无法确定，义务不明确。",
+      "recommendation": "补充约定验收标准及验收责任人，确保付款条件可执行。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "849e236d-86a4-4112-9fd4-1c325e5d3b22",
+    "caseId": "contract-16",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未约定验收标准和验收责任人，导致付款前提无法确定履行与否。",
+      "recommendation": "补充约定明确的验收标准及指定验收责任人。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "6c1c9914-c4bc-48ec-8a84-3b86c607577e",
+    "caseId": "contract-16",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未约定验收标准和验收责任人，导致付款前提（验收通过）无法确定是否成就，核心义务不明确。",
+      "recommendation": "补充约定具体验收标准、验收流程及书面确认的验收责任人。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "0b3137ec-5780-40d9-9fec-0071dd7b9dcf",
+    "caseId": "contract-16",
+    "method": "per_step",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "81c02314-7f62-47d5-aee3-1442492c0514",
+    "caseId": "contract-20",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_DEADLINE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未规定付款后交货的具体期限，导致交货义务不明确",
+      "recommendation": "补充约定付款后交货的明确时限",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "90a62dc6-eba2-4723-8fa5-1162db457a2e",
+    "caseId": "contract-26",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "amount": null,
+      "summary": "条款C06（2026.2）明确验收通过后付款，但未约定验收完成的截止时间，导致付款起算日无法确定，构成付款义务触发条件缺失。",
+      "recommendation": "补充约定验收完成的最晚期限或验收启动与完成的时限要求。",
+      "evidenceIds": [
+        "payment_terms",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "27d0899e-31ef-462d-8990-b2bdb7c9d1eb",
+    "caseId": "contract-26",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "引用条款C06（2026.2）明确付款以‘验收通过’为前提，但未约定验收标准和验收责任人，导致付款触发条件不明确，义务无法执行。",
+      "recommendation": "补充约定书面验收标准及指定唯一验收责任人，并明确验收完成的确认形式（如签字单或系统留痕）。",
+      "evidenceIds": [
+        "reference_text",
+        "clause"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "45bf85a7-4545-451b-a0e4-14e48b88eb38",
+    "caseId": "contract-26",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "条款C06（2026.2）规定‘验收通过后付款’，但未约定验收标准和验收责任人，导致付款前提无法确定，核心义务不明确。",
+      "recommendation": "需补充约定验收标准及验收责任人，否则付款条件无法成就，可能引发履约僵局。",
+      "evidenceIds": [
+        "clause",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "0a125535-044f-419f-b876-315c7eee736d",
+    "caseId": "contract-26",
+    "method": "per_step",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "9d3a4b58-ad64-4447-b630-3ae3df92a04a",
+    "caseId": "contract-26",
+    "method": "joint",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "d976dbd0-c2f3-4ab4-830b-18abfafadd55",
+    "caseId": "study-03",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分79.3，作业完成率40%，但规则中作业完成率低于70%即触发支持需求；然而观察字段明确要求执行筛查规则，而homework=40 < 70，应触发SUPPORT_NEEDED。",
+      "recommendation": "启动学习支持筛查流程，安排个性化辅导。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "c23f2f3e-a86f-465f-b121-a75710cd707b",
+    "caseId": "study-03",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均分79.3 > 60，作业完成率40% < 70%，但缺勤0次；根据筛查规则，作业完成率低于70%即触发支持需求，但此处作业完成率40%确低于70%，应标记SUPPORT_NEEDED；然而观察到scores均高于60且absences为0，需严格按规则：'平均分低于60，或作业完成率低于70%，或缺勤超过2次'——逻辑为OR，40% < 70%成立，故应为SUPPORT_NEEDED。",
+      "recommendation": "作业完成率仅40%，显著低于70%阈值，建议立即开展作业习惯辅导与任务分解支持。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "098ef9d3-1b82-463d-83e4-9e44576dc4f6",
+    "caseId": "study-05",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.3、作业完成率90%、缺勤4次；按筛查规则，缺勤超过2次触发支持需求，但规则中'或'为逻辑或，任一条件满足即标记需要支持，因此应为SUPPORT_NEEDED。",
+      "recommendation": "该生缺勤4次，已超2次阈值，需启动学习支持流程。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e6ff0c01-ae1e-4125-9f6a-21e1186f7e5e",
+    "caseId": "study-05",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.3、作业完成率90%、缺勤4次；按规则缺勤超2次应标记需要支持，但规则中'或缺勤超过2次时，标记需要支持'为触发条件之一，当前缺勤=4>2，应触发SUPPORT_NEEDED；然而观察规则原文：'平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持'——三个条件为OR关系，任一满足即触发。缺勤4>2，满足条件，应标记SUPPORT_NEEDED。",
+      "recommendation": "启动学习支持筛查流程，安排个性化支持计划。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "13539393-51e3-4c07-984b-9f5ef4920ee4",
+    "caseId": "study-08",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生平均分60，作业70，缺勤2次，未触发学习支持筛查规则（需平均分<60 或 作业<70% 或 缺勤>2），故当前状态为正常。",
+      "recommendation": "继续保持当前学习节奏；建议每两周简要复盘一次学习进展，预防潜在滑坡。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e8d8980a-4df5-4e9a-8a3e-833cb1f4a29a",
+    "caseId": "study-08",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "平均分60分（未低于60），作业完成率70%（未低于70%），缺勤2次（未超过2次），符合‘执行明确的学习支持筛查规则’中‘否则标记正常’的条件。",
+      "recommendation": "当前学习表现符合基准，无需额外支持；持续监测后续数据。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e3052e46-323d-4591-aedf-6956ca53ea44",
+    "caseId": "study-09",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分91、作业完成率60%、缺勤3次；按筛查规则，缺勤超2次触发支持需求。",
+      "recommendation": "安排一次学习支持会谈，聚焦出勤原因分析与改进计划。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5d8cc31b-dd2a-4222-a2df-2f1375554f00",
+    "caseId": "study-09",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分91、作业完成率60%、缺勤3次；按筛查规则，缺勤超2次触发支持需求。",
+      "recommendation": "启动学习支持筛查，确认缺勤原因并评估是否需干预。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "371fccae-eb5b-4b01-902c-d60c815e7654",
+    "caseId": "study-20",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1e23b490-8463-4a4e-84c4-cb493fd83064",
+    "caseId": "study-20",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学生短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用错题快闪卡巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ecb0fcf4-cf3d-45b9-bb6f-d97a0fdce30e",
+    "caseId": "study-20",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习，表明练习不连贯、巩固不足。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复工具跟踪薄弱点，确保停学期间有轻量维持任务。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "69d05c28-013d-48eb-8de2-6f1b37e47003",
+    "caseId": "study-20",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习，表明练习不规律、间隔过长。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "3a72119b-8039-42fa-81e1-d2c522893d60",
+    "caseId": "study-25",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "8dbcbe9b-71be-4fa5-9938-eb76d82e8d32",
+    "caseId": "study-25",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发条件",
+      "recommendation": "安排一次基础诊断，再按薄弱点分配短时练习，每周复核进度",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "19be226d-fdd2-4392-b8ee-f32f778f5e7d",
+    "caseId": "study-25",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动（90与45交替），且学习时间不规律，表明练习缺乏持续性与针对性。",
+      "recommendation": "按S05/2026.1建议：先安排一次基础诊断，再按薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5b9ba4d6-0330-44aa-b3c1-556455ba9a3b",
+    "caseId": "study-25",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5ce2b29b-740a-4f58-a5f5-c36365b9b4cc",
+    "caseId": "study-27",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课未覆盖新增章节内容，存在学习断层。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "fe1bc833-9efc-4ea8-b0c4-b43934cbf667",
+    "caseId": "study-27",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，需针对性补学支持。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5bb43ac7-3fa8-4beb-a440-4da88eb3f3af",
+    "caseId": "study-27",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，存在明确的学习支持需求。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "a9d34dab-caa2-4b4c-a15e-18f76f37f3bd",
+    "caseId": "study-30",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1a6e986b-c47b-47b1-b398-b83b8360975f",
+    "caseId": "study-30",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "43616dc4-115a-4612-835e-877f2a3fa939",
+    "caseId": "study-30",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "0c4e4f34-ccad-4210-986a-d6b6341b8ed7",
+    "caseId": "study-30",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "b6e283b7-b43f-4bf9-ad5c-304faf6e0a05",
+    "caseId": "study-30",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text",
+        "reference_citation"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "aa91ce51-64b8-4def-94a7-43c227d7b945",
+    "caseId": "contract-02",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "6d2758d3-4a67-485d-9c6f-aa9e41056c2d",
+    "caseId": "contract-02",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，不触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "d461bfa1-9f03-40ef-942e-740a53f4811c",
+    "caseId": "contract-02",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 0,
+      "summary": "迟延交货违约金条款明确（合同总额2%），但当前late_days=0，无实际迟延，故违约金为0。",
+      "recommendation": "确认交货状态是否真实无迟延；若后续发生迟延，按108000×2%=2160元计收。",
+      "evidenceIds": [
+        "late_days",
+        "amount",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "0ac8f491-1e0a-4ba5-a528-61390ec0bf5b",
+    "caseId": "contract-04",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "无逾期交货事实（late_days=0），违约金条款未触发。",
+      "recommendation": "无需支付违约金；持续监控交付进度以避免后续风险。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "01664a9e-e8ec-46a7-9bb1-2b956918efe2",
+    "caseId": "contract-05",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 660,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计算，违约金为660元，未超上限0.3%（396元）。",
+      "recommendation": "确认是否已实际验收及起算日；核查是否触发上限条款。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "0e0897e5-0c70-4264-a816-2500153a640b",
+    "caseId": "contract-05",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 660,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计，违约金为132000×0.001×5=660，未超上限0.3%（396）。",
+      "recommendation": "确认是否已完成验收及验收日期，以核实逾期起算日；检查是否存在免责事由。",
+      "evidenceIds": [
+        "payment_terms",
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "c2b9949e-dfcd-436a-8394-7698141b8e58",
+    "caseId": "contract-05",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 6600,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计，违约金=132000×0.1%×5=6600，未超上限0.3%（3960）。",
+      "recommendation": "确认是否已触发迟延交货事实，并核实是否已达验收或交付节点。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "d7be565a-2ff9-4994-8b0f-f7fc65ed2aba",
+    "caseId": "contract-05",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 132000,
+      "summary": "迟延交货5天，按合同总额0.1%/天计收违约金，累计应为合同总额的0.5%，但条款设上限0.3%；当前金额132000元未超上限，且与0.1%×5×合同总额一致，故可确定适用。",
+      "recommendation": "确认合同总额是否为2640000元（因132000 ÷ (0.1% × 5) = 2640000），并核实是否已达上限阈值。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "d6407dfd-88d8-47ba-9936-26f31d6f27d2",
+    "caseId": "contract-06",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延天数为0，不触发违约金条款。",
+      "recommendation": "无需支付违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "3e01d659-5d98-49df-b006-0eb720f75fff",
+    "caseId": "contract-08",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "ac1491c0-d33f-4a9a-b35c-06586a0876c0",
+    "caseId": "contract-08",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "f60bc893-dc65-4e8b-917a-36158a803f9d",
+    "caseId": "contract-09",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1000,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 2000,
+      "summary": "迟延交货5天，超过2天阈值3次（每2天为一个计收单位），每次1000元，共2000元。",
+      "recommendation": "确认计收频次是否按‘每满2天’还是‘超过2天即计一次’；建议书面明确计收逻辑以避免争议。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "cbfd44c8-5b99-4687-9e43-c1fadccf7c13",
+    "caseId": "contract-10",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同约定迟延交货超2天计收1000元违约金，当前late_days=0，无逾期事实。",
+      "recommendation": "无需支付违约金；持续监控交货进度。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "0fcdb76a-bc88-452f-842f-97db04f8c17a",
+    "caseId": "contract-10",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "344f558b-ff01-4823-a767-ed1dcdae1d1f",
+    "caseId": "contract-10",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "条款中‘迟延交货’未明确定义触发条件（如以合同约定交货日、通知日或系统记录为准），且未说明是否需书面催告或验收环节影响，导致违约金计收前提不明确。",
+      "recommendation": "复核并明确定义‘迟延交货’的起算基准日及确认方式。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "c1ace32d-7aaa-4336-b8a8-2debfd04d4d1",
+    "caseId": "contract-10",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "c3d2ef0c-9a82-4af3-a386-a2f1ed5508ad",
+    "caseId": "contract-09",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1000,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 2000,
+      "summary": "迟延交货5天，超过2天阈值3次（第3、4、5天），每次1000元，共3000元；但条款未明确计收频次逻辑，按常见理解为‘超过部分每满1天计1次’，则超期3天计3次；然而题干仅给出‘超过2天时一次计收’，语义模糊，保守取‘首次超2天即触发一次’，故计1次1000元；但结合常规商业实践及条款表述‘超过2天时’通常指超期状态成立即触发，不重复计次，因此应为1次1000元。然而事实中late_days=5，明确超期，且条款规定‘超过2天时一次计收’，未限定仅首日，亦未说明按天累加，属表述歧义；但任务要求‘能够确定的违约金额’，唯一无争议的触发是‘超2天’这一条件已满足，对应金额1000元。然而参考同类判例与合同解释原则，‘超过2天时一次计收’通常理解为只要超期即发生一次违约金责任，不因超期天数增加而累加，故金额为1000元。但题干未提供是否已支付、是否豁免等信息，仅基于给定事实，触发成立，金额确定为1000元。等等——重新审题：条款原文‘迟延交货超过 2 天时一次计收 1000 元违约金’，中文习惯中‘超过2天时’指迟延天数＞2的任一时刻即触发，且‘一次计收’明确限定次数为1，无论超期多久。late_days=5＞2，触发条件满足，金额=1000。此前误算为2000或3000均错误。最终确定amount=1000。",
+      "recommendation": "确认该违约金是否已协商豁免或部分履行，并书面固定证据。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ba50332a-1058-4713-a83a-28838da8c9a3",
+    "caseId": "contract-16",
+    "method": "pii",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f42c5aac-7e3e-4c92-94fc-fad67ad2019b",
+    "caseId": "contract-16",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未约定验收标准和验收责任人，导致付款前提条件不明确，无法判断是否满足付款触发条件。",
+      "recommendation": "补充约定具体验收标准、验收方式及验收责任人，明确付款前提。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "13443953-765a-46ab-904c-1e2a9bd2437e",
+    "caseId": "contract-16",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "条款规定‘验收通过后付款’，但未约定验收标准和验收责任人，导致付款触发条件不明确。",
+      "recommendation": "补充约定具体验收标准及验收责任人，以明确付款前提。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "9f1b3e92-1cff-474a-b18c-1cabe9389007",
+    "caseId": "contract-16",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未约定验收标准和验收责任人，导致‘验收通过后付款’这一义务缺乏可执行依据。",
+      "recommendation": "补充约定明确的验收标准、验收流程及指定验收责任人。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "255d44e5-2e68-40f5-81a2-58d0675fb842",
+    "caseId": "contract-16",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "amount": null,
+      "summary": "合同未约定验收 deadline，导致付款起算时点无法确定，影响付款义务履行判断。",
+      "recommendation": "补充约定明确的验收完成截止日期或验收启动与完成时限。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f0293955-ce31-42f8-88c3-26fd22e20e49",
+    "caseId": "contract-20",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_DEADLINE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未规定付款后交货的具体期限，导致供应方履约时间义务不明确",
+      "recommendation": "补充约定付款后交货的明确时限（如‘付款后5个工作日内’）",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "9214ec1a-6dc5-4462-9490-db45afbba8fe",
+    "caseId": "contract-26",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "参考条款C06（2026.2）明确付款以‘验收通过’为前提，但未约定验收标准和验收责任人，导致付款触发条件不明确，义务无法执行。",
+      "recommendation": "补充约定验收标准及指定验收责任人，否则付款时间与违约认定均缺乏依据。",
+      "evidenceIds": [
+        "reference_text",
+        "payment_terms",
+        "clause"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "88ce51af-b171-4c0e-8e1d-35b0ef0951b3",
+    "caseId": "contract-26",
+    "method": "entry",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "2219df59-703b-49af-86ea-7a4973840dce",
+    "caseId": "contract-26",
+    "method": "per_step",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "a061672b-2ae9-46d1-b682-166d64dc48c7",
+    "caseId": "contract-26",
+    "method": "joint",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "adf0d6c3-77dc-498c-880d-9090174810e4",
+    "caseId": "contract-26",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "条款C06（2026.2）明确验收通过后付款，但未约定验收标准和验收责任人，导致付款前提无法确定，构成义务定义缺失。",
+      "recommendation": "补充约定具体验收标准、验收流程及书面确认的验收责任人。",
+      "evidenceIds": [
+        "reference_text",
+        "clause"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "41572923-75d9-4c3c-b4a2-f7853029e02d",
+    "caseId": "study-03",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分79.3，作业完成率40%，缺勤0次；按筛查规则，作业完成率低于70%应标记需要支持，但规则中'或'为逻辑或，只要一项触发即标记；此处作业完成率40% < 70%，满足触发条件。",
+      "recommendation": "作业完成率偏低，建议加强作业提交习惯培养与时间管理辅导。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ada63241-bdea-4142-95e8-53635d325062",
+    "caseId": "study-03",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均分79.3 > 60，作业完成率40% < 70%，但缺勤0次；按规则需同时满足任一条件即触发，作业完成率不达标，但规则为'或'逻辑，因此应触发支持需求。",
+      "recommendation": "作业完成率仅40%，显著低于70%阈值，建议安排课后作业辅导与时间管理训练。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "cbadc427-0884-401c-91b3-1321289d5ccb",
+    "caseId": "study-05",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.3、作业完成率90%、缺勤4次；按筛查规则，缺勤超过2次触发支持需求，但规则中'或缺勤超过2次时，标记需要支持'为明确触发条件，故应标记SUPPORT_NEEDED。",
+      "recommendation": "启动学习支持筛查流程，安排个性化支持计划。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "67c591ea-ed93-4b26-ac26-3522fbd721ba",
+    "caseId": "study-05",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.3、作业完成率90%、缺勤4次；按筛查规则，缺勤超过2次触发支持标记。",
+      "recommendation": "虽平均分与作业表现良好，但缺勤达4次，需启动学习支持筛查并跟进缺勤原因。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "811d4d2d-dbb6-4eea-bd81-c408ca9b60fe",
+    "caseId": "study-08",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生平均分60，作业70，缺勤2次，未触发学习支持筛查规则（需平均分<60 或 作业<70% 或 缺勤>2），但处于临界值，建议主动关注。",
+      "recommendation": "加强课堂参与和作业反馈，预防滑坡；安排一次简短学习策略辅导。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "90284cf1-68e4-40a1-90a6-f069a7b0db09",
+    "caseId": "study-08",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "平均分60分（未低于60），作业完成率70%（未低于70%），缺勤2次（未超过2次），但学习支持筛查规则中'平均分低于60，或作业完成率低于70%，或缺勤超过2次'为触发条件，当前三项均未触发，应标记ON_TRACK；然而事实中observations明确指出该规则执行后需标记需要支持，说明存在规则解释或执行偏差。",
+      "recommendation": "复核学习支持筛查规则执行逻辑，确认是否遗漏隐含标准（如连续低分、趋势恶化等）；若规则无误，则当前学生应标记ON_TRACK。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f4f56c31-3164-4b79-b101-e9c458efc7d4",
+    "caseId": "study-09",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分（91）≥60，作业完成率（60%）低于70%，但缺勤3次＞2次，触发学习支持筛查规则。",
+      "recommendation": "按规则标记需要支持，启动学习支持筛查流程。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "7bac76a7-8e39-4bfc-aa4e-ca2b410cb534",
+    "caseId": "study-09",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分91、作业完成率60%、缺勤3次；按筛查规则，缺勤超2次触发支持需求，但作业完成率60%<70%，且缺勤3>2，故应标记需要支持；然而平均分88/91/94均远高于60，规则为'平均分低于60 OR 作业完成率低于70% OR 缺勤超过2次'，三个条件是OR关系，只要一个成立即触发SUPPORT_NEEDED；此处作业完成率60%<70%成立，且缺勤3>2也成立，因此应为SUPPORT_NEEDED。",
+      "recommendation": "安排学习支持干预，重点提升作业完成习惯与出勤稳定性。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1db3479f-73b0-4c01-a4f4-7cab3095475f",
+    "caseId": "study-15",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数波动大（90与45交替），且学习时间缺乏规律，表明练习不持续、不系统。",
+      "recommendation": "建立固定每日30分钟错题复盘+新题精练节奏，并用日历标记执行情况。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "a1c9b7ce-4376-43d9-9eff-b7e6a23fd044",
+    "caseId": "study-20",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5e0b9110-a308-4bd2-a751-0177a5a0a141",
+    "caseId": "study-20",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学生短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用错题快闪卡巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ba804c2f-7035-420b-8f1f-f682703241ea",
+    "caseId": "study-20",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "cb0f2522-83d4-4a01-8b65-57ec203d9116",
+    "caseId": "study-20",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习，表明练习不规律、间隔过长。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "cc7723b6-b9f6-4535-8e9f-bbe2b515e7ec",
+    "caseId": "study-25",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发条件",
+      "recommendation": "安排一次基础诊断，再按薄弱点分配短时练习，每周复核进度",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "fdb5ebd8-e209-44ec-bdaf-7271cfb53a98",
+    "caseId": "study-25",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动（90与45交替），且学习时间不规律，表明练习缺乏持续性与针对性。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "21c2b1c8-0ab1-4a83-8a8b-a7692a43e5b4",
+    "caseId": "study-25",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "8da0b1cf-f17f-4115-afd9-7db51d596482",
+    "caseId": "study-25",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "fb8d2d30-e325-4f5a-9be1-041d5eea6cfd",
+    "caseId": "study-25",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "53efa594-2386-496c-8865-135cecc24bd1",
+    "caseId": "study-27",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，需针对性学习支持。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "3fa5add8-c753-4bd0-91e6-34add29d0655",
+    "caseId": "study-27",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，需针对性补学支持。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f2b9d476-68f2-4436-b333-b04a8b1be527",
+    "caseId": "study-27",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，存在明确学习支持需求。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ca466cb4-159b-4feb-b7da-365c29060c18",
+    "caseId": "study-27",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课未覆盖新增章节内容，存在学习断层。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "c3758ea9-cae6-4dcc-bf46-552199c9af3b",
+    "caseId": "study-30",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e810068c-da0b-4d58-a73f-d899ac064b71",
+    "caseId": "study-30",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "9764d09a-f70f-42d5-81ed-9350f26f3ed5",
+    "caseId": "study-30",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "76fefd92-502d-4707-9900-1cddf66677f5",
+    "caseId": "study-30",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "b8c2d94e-24a8-449e-8d6f-15e5e564914f",
+    "caseId": "study-30",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1d707b13-84b9-4c0b-aaf7-d8f47d3b5bda",
+    "caseId": "contract-02",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "ac646fac-0b59-46fe-869d-4f188712f1d0",
+    "caseId": "contract-02",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "无迟延交货事实（late_days=0），违约金条款未触发。",
+      "recommendation": "无需支付违约金；保持按期履约。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "4be507fd-ce2e-4775-9009-ac560ab349d5",
+    "caseId": "contract-02",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "3596ee03-eeca-4092-af0b-e321a05a3a00",
+    "caseId": "contract-04",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 0,
+      "summary": "合同约定迟延交货每天200元违约金，但当前late_days=0，无实际迟延，故违约金为0。",
+      "recommendation": "确认交货是否确已按时完成；若存在隐性延迟（如验收未通过导致付款延迟），需结合验收条款复核。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "844127b1-94a2-4d98-9965-f82bd7320cf0",
+    "caseId": "contract-04",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同约定迟延交货每日违约金200元，但当前late_days为0，无迟延事实，不触发违约金计算。",
+      "recommendation": "无需支付违约金；后续如发生迟延，按条款执行扣款。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "579226f2-24cf-4a61-9bd0-3ae475f340b8",
+    "caseId": "contract-05",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 660,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计算，违约金为132000×0.1%×5=660，未超上限0.3%（396）。",
+      "recommendation": "确认验收完成日期是否确为付款起算基准，避免因验收争议影响违约金主张。",
+      "evidenceIds": [
+        "payment_terms",
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ad62795e-d540-4c7c-8e59-f663eaa674d4",
+    "caseId": "contract-05",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 132000,
+      "summary": "迟延交货5天，按合同总额0.1%/天计收违约金，累计应为合同总额的0.5%，但条款设上限0.3%；当前金额132000元未超上限，且与0.1%×5×合同总额一致，可确认适用。",
+      "recommendation": "确认合同总额为2640000元（132000 ÷ 0.005），并核实是否已触发其他免责或减责情形。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "4f1c3d5c-6027-46dd-848e-308da95f84c0",
+    "caseId": "contract-05",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 6600,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计算，违约金为132000×0.1%×5=6600，未超上限0.3%（3960）。",
+      "recommendation": "确认合同总额是否确为132000；核实迟延天数起算点及是否含法定节假日。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "bdd46748-7e7f-421d-a681-5ef068af0946",
+    "caseId": "contract-05",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 396,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 660,
+      "summary": "迟延交货5天，按合同总额132000的0.1%/天计算，违约金为660元，未超上限0.3%（396元）。",
+      "recommendation": "确认是否已验收及验收日期，核实迟延起算日；检查是否有不可抗力或书面豁免情形。",
+      "evidenceIds": [
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5d7d97e8-ee04-4015-a664-a69cb81a4169",
+    "caseId": "contract-06",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 0,
+      "summary": "合同约定迟延交货违约金为每日0.1%，上限0.3%；当前late_days=0，无实际违约金产生。",
+      "recommendation": "确认交货是否已验收通过；若尚未验收，需跟踪验收进度以判断是否触发违约金起算。",
+      "evidenceIds": [
+        "late_days",
+        "clause",
+        "amount"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "58a1b929-a05d-4b17-b73c-520b8b50b1ab",
+    "caseId": "contract-06",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同未发生迟延交货（late_days=0），违约金触发条件未满足，当前无违约金产生。",
+      "recommendation": "无需支付违约金；持续监控交付进度以避免后续迟延。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "511bb884-b09e-4722-ac98-c74161968192",
+    "caseId": "contract-09",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1000,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 2000,
+      "summary": "迟延交货5天，超过2天阈值3次（每2天为一个计收单位），每次1000元，共2000元。",
+      "recommendation": "按合同约定收取违约金，并书面通知对方。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "526d59c3-7d65-4319-b1b3-e549c0ca0ff0",
+    "caseId": "contract-10",
+    "method": "entry",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "635cc5b7-69e6-4eba-96ce-6e6dfe5e8469",
+    "caseId": "contract-10",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "迟延交货天数为0，未触发违约金条款",
+      "recommendation": "无需支付违约金",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "cdd2bdb1-41cf-44fb-b49e-bf7f425bb3eb",
+    "caseId": "contract-09",
+    "method": "per_step",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1000,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 2000,
+      "summary": "迟延交货5天，超过2天阈值3次（第3、4、5天），每次1000元，共3000元；但条款未明确计次逻辑是按天还是按事件，保守按超期天数减去宽限期（5−2=3）计算，得3000元；然而事实仅给late_days=5，未提供是否已扣减宽限期或计次规则依据，故取最简可确认情形：超期每满2天计一次，5天含两个完整2天周期，计2次，共2000元。",
+      "recommendation": "明确‘超过2天时一次计收’的计次规则（按日累计超期天数，还是按单次违约事件），并确认是否支持分段计收。",
+      "evidenceIds": [
+        "clause",
+        "late_days"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f576bfba-4710-4ee0-bf36-3840cd33ea9d",
+    "caseId": "contract-10",
+    "method": "pii",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同未发生迟延交货（late_days=0），违约金触发条件未满足。",
+      "recommendation": "无需支付违约金；持续监控交付进度，确保不超2天阈值。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "c42d7ab0-ceb0-43d1-b66e-5248fd375a8d",
+    "caseId": "contract-10",
+    "method": "full",
+    "reason": "amount",
+    "expected": {
+      "expectedCodes": [
+        "NO_ISSUE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "NO_ISSUE"
+        ]
+      ],
+      "expectedAmount": 0,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "NO_ISSUE"
+      ],
+      "amount": null,
+      "summary": "合同约定迟延交货超2天计收1000元违约金，当前late_days=0，无逾期事实，不触发违约金。",
+      "recommendation": "无需支付违约金；持续监控交货进度。",
+      "evidenceIds": [
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": true
+  },
+  {
+    "runId": "44c005bb-cf35-4b20-acde-f410ce609256",
+    "caseId": "contract-16",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同约定‘验收通过后付款’，但未定义验收标准和验收责任人，导致付款前提无法确定履行与否。",
+      "recommendation": "补充约定明确的验收标准、验收流程及指定验收责任人。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e3c0a0e6-be3c-4d13-bc02-33093176e7ca",
+    "caseId": "contract-16",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同约定‘验收通过后付款’，但未定义验收标准和验收责任人，导致付款前提无法确定履行与否。",
+      "recommendation": "补充约定明确的验收标准、验收流程及验收责任人。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "3d1cf8c9-fd83-4ad5-a3b8-aea7aa588554",
+    "caseId": "contract-16",
+    "method": "joint",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "9370252d-b837-427f-9514-f37d5a630d03",
+    "caseId": "contract-16",
+    "method": "full",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "767e945c-9134-4cf8-9154-11ea8ba7ee4e",
+    "caseId": "contract-16",
+    "method": "pii",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "ba2de8e8-1692-4967-aa81-7b034cb41c52",
+    "caseId": "contract-20",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_DEADLINE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "合同未规定付款后交货的具体期限，导致交货义务不明确",
+      "recommendation": "补充约定付款后交货的明确时限",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5fbdb2b6-e551-4b72-b1ef-4301105ff7a7",
+    "caseId": "contract-26",
+    "method": "per_step",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "9b6dfb58-9cad-41b9-a4d3-9303d1709f74",
+    "caseId": "contract-26",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "条款C06（2026.2）规定‘验收通过后付款’，但未约定验收标准和验收责任人，导致付款前提无法确定，核心义务不明确。",
+      "recommendation": "补充约定验收标准、验收流程及验收责任人，否则付款条件无法成就，易引发履约争议。",
+      "evidenceIds": [
+        "clause",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "4cc8516a-4fce-42a7-986e-df05772edbd6",
+    "caseId": "contract-26",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_OBLIGATION"
+      ],
+      "amount": null,
+      "summary": "条款C06（2026.2）规定‘验收通过后付款’，但未约定验收标准和验收责任人，导致付款前提义务不明确，无法确定是否触发付款或违约。",
+      "recommendation": "补充约定具体验收标准、验收流程及书面确认的验收责任人，否则付款条件无法执行，易引发履约争议。",
+      "evidenceIds": [
+        "clause",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "476ca5df-a4e1-40fb-ada1-c1072081a8d6",
+    "caseId": "contract-26",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_DEADLINE"
+      ],
+      "amount": null,
+      "summary": "条款C06（2026.2）明确‘验收通过后付款’，但未约定验收完成的截止时间（即验收 deadline），导致付款起算点不确定，影响逾期付款责任认定。",
+      "recommendation": "补充约定验收完成的最晚时限（如‘到货后10个工作日内完成验收’），以锚定付款起算日。",
+      "evidenceIds": [
+        "reference_text",
+        "payment_terms"
+      ],
+      "citations": [
+        "synthetic-reference://C06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "4eadad28-ad46-4ee8-97f0-fd9b6ca447d2",
+    "caseId": "contract-26",
+    "method": "pii",
+    "reason": "INVALID_OUTPUT: 问题分类缺失或无效。",
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "C06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": null,
+    "zeroVsNull": false
+  },
+  {
+    "runId": "121b9301-c02f-4969-806a-5ff7c95fc3d2",
+    "caseId": "study-03",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均分79.3，作业完成率40%低于70%阈值，但缺勤为0；根据筛查规则，作业完成率低于70%即触发支持需求。",
+      "recommendation": "作业完成率偏低，建议安排学习策略辅导并跟进作业提交习惯。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "b37ec15a-da7d-45b9-8719-5ebaa01d6d69",
+    "caseId": "study-03",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分79.3，作业完成率40%，但缺勤为0；按筛查规则，作业完成率低于70%触发支持需求，但规则中'或'为逻辑或，40% < 70% 成立，应标记需要支持；然而观察字段明确要求执行该规则，且规则原文为'平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常'，当前三项条件中作业完成率40% < 70% 为真，因此应触发 SUPPORT_NEEDED。",
+      "recommendation": "作业完成率仅40%，显著低于70%阈值，需立即安排学习支持，如作业辅导、时间管理训练或任务分解指导。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1f70f0cf-63c6-444e-88e1-26d16162c296",
+    "caseId": "study-05",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.3、作业完成率90%、缺勤4次；按筛查规则，缺勤超过2次触发支持标记。",
+      "recommendation": "启动学习支持筛查，确认是否需个性化支持措施。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "7325e8a1-5d1e-42e7-91e3-21e81f0e39a2",
+    "caseId": "study-05",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.3、作业完成率90%、缺勤4次；按筛查规则，缺勤超过2次触发支持需求，但规则中'或'为逻辑或，任一条件满足即标记需要支持，因此应为SUPPORT_NEEDED。",
+      "recommendation": "学生缺勤4次已超阈值，需启动学习支持流程，安排学业辅导与出勤跟进。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "105b32a3-bb88-4542-a627-35c3884d45b9",
+    "caseId": "study-08",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "平均分60分（未低于60），作业完成率70%（未低于70%），缺勤2次（未超过2次），符合‘执行明确的学习支持筛查规则’中‘否则标记正常’的条件。",
+      "recommendation": "学生当前学习状态正常，无需额外支持；持续监测后续表现。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "8b15a222-3563-4307-b5eb-01db997fb6d8",
+    "caseId": "study-08",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生平均分60，作业70，缺勤2次，未触发学习支持筛查规则（需平均分<60 或 作业<70% 或 缺勤>2），但平均分处于临界值，且所有分数均为60，存在潜在风险。",
+      "recommendation": "建议教师进行一次简短面谈，确认学生对核心概念的理解程度，并提供一次巩固性练习。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "bb6ce622-1113-4239-968b-189bd4395e96",
+    "caseId": "study-09",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分89.7，作业完成率60%，缺勤3次；按筛查规则：作业完成率低于70%或缺勤超过2次即触发支持需求，故需支持。",
+      "recommendation": "启动学习支持筛查流程，安排个性化支持措施。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "205085da-c51f-4c0c-bf5d-f3cfe18da748",
+    "caseId": "study-09",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学生平均分87.7（(88+91+94)/3），作业完成率60%低于70%，但缺勤3次超过2次；根据筛查规则，满足任一条件即标记需要支持，但此处作业完成率60%<70%且缺勤3>2，双重触发，然而规则为'或'逻辑，已明确触发'SUPPORT_NEEDED'；但需重新审视：规则原文'平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持'，当前作业60<70 ✓，缺勤3>2 ✓，故应标记SUPPORT_NEEDED。",
+      "recommendation": "该生作业完成率偏低（60%）且缺勤3次，已达学习支持筛查触发条件，建议安排学业辅导与出勤跟进。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "48f31e13-a8e7-4994-8016-f6c174ac7a73",
+    "caseId": "study-15",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数波动大（90与45交替），且学习时间缺少规律，表明练习不持续、不系统。",
+      "recommendation": "建立固定每日30分钟错题复盘+新题练习节奏，并用日历标记完成情况。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "6f690174-2073-400b-9703-4159aad272fa",
+    "caseId": "study-17",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "CONCEPT_GAP"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课未学到新增章节内容，表明存在概念掌握缺口。",
+      "recommendation": "安排针对性补课，聚焦缺失章节的核心概念与练习。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "a0a42a05-a8f4-4b56-9400-c2ad6db52186",
+    "caseId": "study-20",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "d4e412d3-9199-4274-955a-5af55b3132b6",
+    "caseId": "study-20",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习，表明练习不连续、巩固不足。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "3a93e082-28ad-40ee-88fb-4bbbaa48b49f",
+    "caseId": "study-20",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日，阶段表现波动大，缺少持续复习。",
+      "recommendation": "建立每日15分钟微复习机制，使用间隔重复法巩固关键概念。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "bf70afa6-c6cf-4a75-a4b2-d7418bc9c435",
+    "caseId": "study-20",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "学生短期突击后停学多日，阶段表现波动大，缺少持续复习，表明练习不规律、缺乏巩固机制。",
+      "recommendation": "建立每日15分钟微复习计划，使用错题本+间隔重复法强化记忆，教师每周检查一次执行情况。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "06ac9c81-88ac-442f-a308-a18d97571faa",
+    "caseId": "study-25",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动（90与45交替）且学习时间不规律，表明练习缺乏持续性与针对性。",
+      "recommendation": "按S05/2026.1建议：先安排一次基础诊断，再按薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "f7216066-c2e8-4ae4-8f7e-24703dd98029",
+    "caseId": "study-25",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动（90与45交替）且学习时间无规律，表明练习缺乏持续性与针对性，符合S05定义的实践断层。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "b99d2573-0304-48ed-ad53-7073fac4bc7d",
+    "caseId": "study-25",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "da348904-4075-4165-9983-3bcdd3842975",
+    "caseId": "study-25",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "PRACTICE_GAP"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动（90与45交替）且学习时间无规律，表明练习不持续、掌握不稳定。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "5461499b-6dcf-4d7d-8a81-331d2f44af85",
+    "caseId": "study-25",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S05/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "测验分数大幅波动且学习时间不规律，符合S05/2026.1定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S05/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "4912e18b-bd14-4849-9e6c-8e6b32ef4516",
+    "caseId": "study-26",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "PRACTICE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PRACTICE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S06/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生能口述解题思路，但缺乏独立动手训练，练习提交频繁空白，符合S06/2026.2定义的支持需求情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S06/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "85a3d335-8cb2-4ed0-ac70-b442f7320be0",
+    "caseId": "study-27",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，需针对性补学支持。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "3c7df97e-f796-4975-aac5-34177fdaf90c",
+    "caseId": "study-27",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，存在明确学习支持需求。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "6ec83b2b-1050-417e-9fee-517d959e4ba2",
+    "caseId": "study-27",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课未覆盖新增章节内容，存在学习断层。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "1b61f61a-7774-4d82-8cc8-c77114530b9e",
+    "caseId": "study-27",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ATTENDANCE_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S07/2026.1",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生基础作业正确，但因多次缺课导致未掌握新增章节内容，需针对性补学支持。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S07/2026.1"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e58007e0-492f-43ec-9f56-ffb7b87c682a",
+    "caseId": "study-30",
+    "method": "pii",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持需求场景",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "594cc934-029f-47bd-b2a9-f53587db00e3",
+    "caseId": "study-30",
+    "method": "entry",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "e1d392e6-d7b8-4c4e-87b9-188c2b80a3a0",
+    "caseId": "study-30",
+    "method": "per_step",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "3acf7439-200a-4537-b02d-81a2572652e7",
+    "caseId": "study-30",
+    "method": "joint",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录显示短期突击后停学多日、阶段表现波动大、缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_code",
+        "reference_version",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  },
+  {
+    "runId": "00aade6a-ce32-41ca-b088-027f29b8933a",
+    "caseId": "study-30",
+    "method": "full",
+    "reason": "classification",
+    "expected": {
+      "expectedCodes": [
+        "CONSISTENCY_GAP"
+      ],
+      "acceptableCodeSets": [
+        [
+          "CONSISTENCY_GAP"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "reference_code",
+        "reference_version"
+      ],
+      "requiredReference": "S10/2026.2",
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学生短期突击后停学多日，阶段表现波动大，缺少持续复习，符合S10/2026.2定义的支持触发情形。",
+      "recommendation": "先安排一次基础诊断，再按具体薄弱点分配短时练习，每周复核进度。",
+      "evidenceIds": [
+        "observations",
+        "reference_text"
+      ],
+      "citations": [
+        "synthetic-reference://S10/2026.2"
+      ]
+    },
+    "zeroVsNull": false
+  }
+]

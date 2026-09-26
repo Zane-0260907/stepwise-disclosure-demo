@@ -1,0 +1,62 @@
+import { fileURLToPath } from 'node:url';
+import assert from 'node:assert/strict';
+import { chromium } from 'playwright';
+import { mkdir,writeFile } from 'node:fs/promises';
+const out=new URL('../evidence/research/ui/',import.meta.url);await mkdir(out,{recursive:true});
+const base=process.env.DEMO_BASE||'http://127.0.0.1:4793';
+const executablePath=process.env.EDGE_PATH||(process.platform==='win32'?'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe':undefined);
+const browser=await chromium.launch({executablePath,headless:true});
+try{
+ const page=await browser.newPage({baseURL:base,viewport:{width:1534,height:718},deviceScaleFactor:1.25});const errors=[];page.on('pageerror',error=>errors.push(error.message));
+ let pdfRequests=0;page.on('request',request=>{if(request.url().includes('/api/research/documents/'))pdfRequests++;});
+ await page.goto(base,{waitUntil:'networkidle'});await page.waitForSelector('#scenario-select option', { state: 'attached' });
+ const bootstrap=await(await page.request.get('/api/research/bootstrap')).json();assert.equal(bootstrap.offlineAvailable,true);
+ assert.equal(bootstrap.featuredRuns.length,2);assert.equal(await page.locator('.featured-run').count(),2);
+ if(!bootstrap.deepseekAvailable){await page.locator('#execution-mode').selectOption('deepseek');assert.equal(await page.locator('#live-button').isDisabled(),true);await page.locator('#execution-mode').selectOption('offline');}
+ await page.screenshot({path:fileURLToPath(new URL('01-before.png',out))});
+ await page.locator('.featured-run').first().click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('实际运行'),null,{timeout:90000});assert.match(await page.locator('#source-badge').innerText(),/重放/);
+ const replayPaced=Number((await page.locator('#agent-result').innerText()).match(/页面逐步展示 (\d+) 毫秒/)?.[1]);assert.ok(replayPaced>=15000,`Recorded playback too short: ${replayPaced} ms`);
+ const featuredReplay=await(await page.request.get('/api/research/runs/'+bootstrap.sampleRunId)).json();assert.equal(featuredReplay.model,'deepseek-flash');assert.equal(featuredReplay.receipts.length,3);
+ await page.screenshot({path:fileURLToPath(new URL('07-deepseek-recorded-result.png',out))});
+ await page.locator('#lang-en').click();assert.doesNotMatch(await page.locator('#agent-result').innerText(),/[\u3400-\u9fff]/u);
+ assert.doesNotMatch(await page.locator('#run-history').innerText(),/[\u3400-\u9fff]/u);
+ await page.locator('#agent-result .file-preview').first().click();await page.waitForSelector('.report-preview');assert.doesNotMatch(await page.locator('.report-preview').innerText(),/[\u3400-\u9fff]/u);
+ await page.screenshot({path:fileURLToPath(new URL('08-deepseek-english-report.png',out))});await page.locator('#lang-zh').click();await page.locator('[data-tab="process"]').click();
+ await page.locator('#live-button').click();await page.waitForSelector('.task-step.is-running');
+ await page.waitForSelector('.view-columns');
+ await page.screenshot({path:fileURLToPath(new URL('02-running.png',out))});
+ await page.locator('[data-tab="preview"]').click();await page.waitForSelector('.pdf-preview[data-status="ready"] .pdf-page');
+ await page.evaluate(()=>{window.previewNode=document.querySelector('.pdf-page');});
+ await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('页面逐步展示'),null,{timeout:90000});
+ assert.equal(await page.evaluate(()=>window.previewNode===document.querySelector('.pdf-page')),true);
+ const paced=await page.locator('#agent-result').innerText();const pacedMs=Number(paced.match(/页面逐步展示 (\d+) 毫秒/)?.[1]);assert.ok(pacedMs>=10000,`Paced presentation too short: ${pacedMs} ms; result text: ${paced}`);
+ await page.locator('[data-tab="preview"]').click();await page.locator('#lang-en').click();
+ assert.equal(await page.evaluate(()=>window.previewNode===document.querySelector('.pdf-page')),true);assert.equal(pdfRequests,1);
+ await page.screenshot({path:fileURLToPath(new URL('04-original-pdf.png',out))});
+ assert.doesNotMatch(await page.locator('#agent-result').innerText(),/[\u3400-\u9fff]/u);
+ await page.locator('#agent-result .file-preview').first().click();await page.waitForSelector('.report-preview');assert.doesNotMatch(await page.locator('.report-preview').innerText(),/[\u3400-\u9fff]/u);
+ await page.locator('#lang-zh').click();await page.locator('[data-tab="process"]').click();
+ await page.screenshot({path:fileURLToPath(new URL('03-result.png',out))});
+ const runId=await page.evaluate(()=>localStorage.getItem('research-last-live'));const run=await(await page.request.get(`/api/research/runs/${runId}`)).json();
+ assert.equal(run.status,'completed',run.error);assert.equal(run.metrics.toolCalls,1);assert.equal(run.receipts.length,3);assert.ok(run.receipts.every(r=>r.processId));
+ const toolStep=run.steps.find(s=>s.operation==='lookup_reference');await page.locator(`[data-step-id="${toolStep.id}"]`).click();assert.match(await page.locator('#runtime-content').innerText(),/编号和版本/);
+ await page.screenshot({path:fileURLToPath(new URL('05-tool-step.png',out))});
+ await page.locator('.file-preview').first().click();await page.waitForSelector('.report-preview');const previewText=await page.locator('.report-preview').innerText();assert.match(previewText,/合成采购方21/);assert.match(previewText,/本机规则执行器调用/);assert.doesNotMatch(previewText,/模型调用：/);
+ await page.locator('[data-tab="files"]').click();assert.equal(await page.locator('.file-row').count(),2);
+ await page.locator('#scenario-select').selectOption('local');await page.locator('#live-button').click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('页面逐步展示'));
+ const localId=await page.evaluate(()=>localStorage.getItem('research-last-live'));const localRun=await(await page.request.get(`/api/research/runs/${localId}`)).json();assert.equal(localRun.receipts.length,0);assert.equal(localRun.result.amount,2000);
+ await page.locator('.input-adjust summary').click();await page.locator('#amount-override').fill('200000');await page.locator('#live-button').click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('页面逐步展示'));
+ const changedId=await page.evaluate(()=>localStorage.getItem('research-last-live'));const changed=await(await page.request.get(`/api/research/runs/${changedId}`)).json();assert.equal(changed.result.amount,4000);assert.equal(changed.overrides.amount,200000);assert.equal(changed.document.file,'contract-01.pdf');
+ await page.locator('#amount-override').fill('');
+ await page.locator('#scenario-select').selectOption('revoked');await page.locator('#live-button').click();await page.waitForSelector('.decision-prompt');
+ const awaiting=await(await page.request.get('/api/research/history')).json();const blockedId=awaiting[0].id;const beforeDecision=await(await page.request.get(`/api/research/runs/${blockedId}`)).json();assert.equal(beforeDecision.receipts.length,0);
+ await page.locator('.decision-prompt button').last().click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已阻止');
+ const blocked=await(await page.request.get(`/api/research/runs/${blockedId}`)).json();assert.equal(blocked.receipts.length,0);assert.equal(blocked.policy.version,2);
+ await page.screenshot({path:fileURLToPath(new URL('06-revoked.png',out))});
+ for(const [width,height] of [[1280,720],[1024,600],[800,600]]){
+   await page.setViewportSize({width,height});const bounds=await page.evaluate(()=>({w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,right:document.querySelector('.runtime-content').getBoundingClientRect().bottom,center:document.querySelector('.conversation-scroll').getBoundingClientRect().bottom}));
+   assert.ok(bounds.w<=width&&bounds.h<=height&&bounds.right<=height&&bounds.center<=height,JSON.stringify({width,height,bounds}));
+ }
+ assert.deepEqual(errors,[]);await writeFile(new URL('verification.json',out),JSON.stringify({dynamic:runId,local:localId,changed:changedId,revoked:blockedId,pdfRequests,errors},null,2));
+ console.log(JSON.stringify({dynamic:runId,local:localId,changed:changedId,revoked:blockedId,pdfRequests,errors}));
+}finally{await browser.close();}

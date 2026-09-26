@@ -1,0 +1,1339 @@
+{
+  "contract-01": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 2000,
+    "analysisNecessary": [
+      "clause",
+      "late_days",
+      "amount"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-02": {
+    "expectedCodes": [
+      "NO_ISSUE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "NO_ISSUE"
+      ]
+    ],
+    "expectedAmount": 0,
+    "analysisNecessary": [
+      "clause",
+      "late_days",
+      "amount"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-03": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 1000,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-04": {
+    "expectedCodes": [
+      "NO_ISSUE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "NO_ISSUE"
+      ]
+    ],
+    "expectedAmount": 0,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-05": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 396,
+    "analysisNecessary": [
+      "clause",
+      "late_days",
+      "amount"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-06": {
+    "expectedCodes": [
+      "NO_ISSUE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "NO_ISSUE"
+      ]
+    ],
+    "expectedAmount": 0,
+    "analysisNecessary": [
+      "clause",
+      "late_days",
+      "amount"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-07": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 600,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-08": {
+    "expectedCodes": [
+      "NO_ISSUE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "NO_ISSUE"
+      ]
+    ],
+    "expectedAmount": 0,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-09": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 1000,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-10": {
+    "expectedCodes": [
+      "NO_ISSUE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "NO_ISSUE"
+      ]
+    ],
+    "expectedAmount": 0,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-11": {
+    "expectedCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_TRIGGER"
+      ],
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-12": {
+    "expectedCodes": [
+      "MISSING_RATE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_RATE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-13": {
+    "expectedCodes": [
+      "MISSING_BASE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_BASE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-14": {
+    "expectedCodes": [
+      "MISSING_CAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_CAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-15": {
+    "expectedCodes": [
+      "MISSING_START"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_START"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-16": {
+    "expectedCodes": [
+      "AMBIGUOUS_ACCEPTANCE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "AMBIGUOUS_ACCEPTANCE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-17": {
+    "expectedCodes": [
+      "CONFLICTING_TERMS"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONFLICTING_TERMS"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-18": {
+    "expectedCodes": [
+      "MISSING_DEADLINE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_DEADLINE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-19": {
+    "expectedCodes": [
+      "UNDEFINED_OBLIGATION"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-20": {
+    "expectedCodes": [
+      "MISSING_DEADLINE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_DEADLINE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-21": {
+    "expectedCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_TRIGGER"
+      ],
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C01/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-22": {
+    "expectedCodes": [
+      "MISSING_RATE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_RATE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C02/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-23": {
+    "expectedCodes": [
+      "MISSING_BASE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_BASE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C03/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-24": {
+    "expectedCodes": [
+      "MISSING_CAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_CAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C04/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-25": {
+    "expectedCodes": [
+      "MISSING_START"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_START"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C05/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-26": {
+    "expectedCodes": [
+      "AMBIGUOUS_ACCEPTANCE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "AMBIGUOUS_ACCEPTANCE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C06/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-27": {
+    "expectedCodes": [
+      "CONFLICTING_TERMS"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONFLICTING_TERMS"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C07/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-28": {
+    "expectedCodes": [
+      "MISSING_DEADLINE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_DEADLINE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C08/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-29": {
+    "expectedCodes": [
+      "UNDEFINED_OBLIGATION"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C09/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "contract-30": {
+    "expectedCodes": [
+      "MISSING_DEADLINE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_DEADLINE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C10/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-01": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-02": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-03": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-04": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-05": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-06": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-07": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-08": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-09": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-10": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-11": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-12": {
+    "expectedCodes": [
+      "ATTENDANCE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ATTENDANCE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-13": {
+    "expectedCodes": [
+      "WORKLOAD_HIGH"
+    ],
+    "acceptableCodeSets": [
+      [
+        "WORKLOAD_HIGH"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-14": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-15": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-16": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-17": {
+    "expectedCodes": [
+      "ATTENDANCE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ATTENDANCE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-18": {
+    "expectedCodes": [
+      "WORKLOAD_HIGH"
+    ],
+    "acceptableCodeSets": [
+      [
+        "WORKLOAD_HIGH"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-19": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-20": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-21": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S01/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-22": {
+    "expectedCodes": [
+      "ATTENDANCE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ATTENDANCE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S02/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-23": {
+    "expectedCodes": [
+      "WORKLOAD_HIGH"
+    ],
+    "acceptableCodeSets": [
+      [
+        "WORKLOAD_HIGH"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S03/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-24": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S04/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-25": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S05/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-26": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S06/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-27": {
+    "expectedCodes": [
+      "ATTENDANCE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ATTENDANCE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S07/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-28": {
+    "expectedCodes": [
+      "WORKLOAD_HIGH"
+    ],
+    "acceptableCodeSets": [
+      [
+        "WORKLOAD_HIGH"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S08/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-29": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S09/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "study-30": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S10/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-contract-1": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 2340,
+    "analysisNecessary": [
+      "clause",
+      "late_days",
+      "amount"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-contract-2": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 1000,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-contract-3": {
+    "expectedCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_TRIGGER"
+      ],
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-contract-4": {
+    "expectedCodes": [
+      "MISSING_CAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_CAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-contract-5": {
+    "expectedCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_TRIGGER"
+      ],
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C01/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-contract-6": {
+    "expectedCodes": [
+      "MISSING_START"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_START"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C05/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-study-1": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-study-2": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-study-3": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-study-4": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-study-5": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S01/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  },
+  "dev-study-6": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S05/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成"
+  }
+}

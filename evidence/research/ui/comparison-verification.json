@@ -1,0 +1,10 @@
+{
+  "sameCase": true,
+  "sameCondition": true,
+  "revokedRunExcluded": true,
+  "rows": [
+    "方法\t状态\t模型调用\t资料查询\t发送字节",
+    "完整上下文\t已完成\t2\t1\t6263",
+    "逐步执行与共享判定\t已完成\t2\t1\t5079"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "provenance": "English presentation text translated from the two saved Chinese DeepSeek results; raw model responses remain unchanged in trace.json.",
+  "runs": {
+    "53dc44f1-9da0-49d0-93d4-12dc5a929401": {
+      "summary": "Reference C01 (2026.1) sets liquidated damages at 10% of the contract amount for late performance, but does not say whether performance means delivery, acceptance, or payment. The trigger is therefore unclear, and the amount cannot be determined.",
+      "recommendation": "Clarify which obligation constitutes performance and when delay begins before calculating liquidated damages."
+    },
+    "fe5ff933-8369-4f89-8cb7-9c1495d021a2": {
+      "summary": "Reference C01 (2026.1) sets liquidated damages at 10% of the contract amount for late performance, but does not say whether performance means delivery, acceptance, or payment. The trigger is therefore unclear, and the amount cannot be determined.",
+      "recommendation": "Clarify which obligation constitutes performance and the starting date for delay before calculating liquidated damages."
+    }
+  },
+  "referenceC01": "Late performance incurs liquidated damages equal to 10% of the contract amount. The text does not specify whether performance means delivery, acceptance, or payment."
+}

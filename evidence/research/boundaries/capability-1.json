@@ -1,0 +1,376 @@
+{
+  "protocol": "research-v1",
+  "id": "95c3d330-1cc8-42db-9f2e-dc663809a3ac",
+  "source": "live",
+  "caseId": "contract-01",
+  "family": "contract",
+  "title": {
+    "zh": "标准条款核算 · 1",
+    "en": "Contract local case 1"
+  },
+  "task": {
+    "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+    "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+  },
+  "input": {
+    "identity": "合成采购方1 / 合成供应方1",
+    "contact": "模拟联系人1；电话 13900000001",
+    "account": "LOCAL-CONTRACT-0001",
+    "internal_note": "仅限内部：下一季度谈判底价与利润目标-1",
+    "unrelated_record": "其他项目记录：办公用品采购预算-1",
+    "payment_terms": "交货验收后 15 天付款",
+    "amount": 100000,
+    "late_days": 5,
+    "clause": "迟延交货一次按合同总额 2% 计收违约金。"
+  },
+  "sourceFile": "contract-01.pdf",
+  "method": "joint",
+  "condition": "normal",
+  "model": "qwen-plus",
+  "createdAt": "2026-09-26T03:49:00.712Z",
+  "status": "completed",
+  "policy": {
+    "version": 1,
+    "allowed": true
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "operation": "read",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      },
+      "reason": {
+        "zh": "原始身份和业务资料在本地读取。",
+        "en": "Read original identity and business records locally."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:00.712Z",
+      "parentStepId": null,
+      "input": {
+        "identity": "合成采购方1 / 合成供应方1",
+        "contact": "模拟联系人1；电话 13900000001",
+        "account": "LOCAL-CONTRACT-0001",
+        "internal_note": "仅限内部：下一季度谈判底价与利润目标-1",
+        "unrelated_record": "其他项目记录：办公用品采购预算-1",
+        "payment_terms": "交货验收后 15 天付款",
+        "amount": 100000,
+        "late_days": 5,
+        "clause": "迟延交货一次按合同总额 2% 计收违约金。"
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fieldCount": 9,
+        "source": {
+          "file": "contract-01.pdf",
+          "sha256": "3f96db566447122379695b497944bebb91ad761a254c118c8aa3714921f3d75d"
+        }
+      },
+      "checks": [],
+      "source": {
+        "file": "contract-01.pdf",
+        "sha256": "3f96db566447122379695b497944bebb91ad761a254c118c8aa3714921f3d75d"
+      },
+      "finishedAt": "2026-09-26T03:49:00.712Z"
+    },
+    {
+      "id": "step-2",
+      "operation": "analyze",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      },
+      "reason": {
+        "zh": "当前条款或记录超出本地规则范围，使用获准云端分析。",
+        "en": "This input is outside the local rule coverage; use the authorized cloud capability."
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:00.712Z",
+      "parentStepId": null,
+      "input": {
+        "clause": "迟延交货一次按合同总额 2% 计收违约金。",
+        "amount": 100000,
+        "late_days": 5
+      },
+      "retained": [
+        "identity",
+        "contact",
+        "account",
+        "internal_note",
+        "unrelated_record",
+        "payment_terms"
+      ],
+      "receipts": [
+        "f5fa2211-5782-4b2c-898a-8c9627183dc3"
+      ],
+      "output": {
+        "issueCodes": [
+          "PENALTY_APPLIES"
+        ],
+        "amount": 2000,
+        "summary": "依约定公式和实际迟延 5 天核算，示例违约金额为 2000 元。",
+        "recommendation": "复核交货日期与条款适用条件；本结果为按输入条款计算，不判断法律效力。",
+        "evidenceIds": [
+          "clause",
+          "amount",
+          "late_days"
+        ],
+        "citations": []
+      },
+      "checks": [
+        {
+          "checkedAt": "2026-09-26T03:49:00.712Z",
+          "policyVersion": 1,
+          "allowedFields": [
+            "clause",
+            "amount",
+            "late_days"
+          ],
+          "overheadMs": 0.0402000000000271
+        }
+      ],
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ],
+      "required": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "recipient": "cloud-model",
+      "plannedPolicyVersion": 1,
+      "providerResponse": {
+        "id": "deterministic-boundary-fixture",
+        "message": {
+          "content": "{\"issueCodes\":[\"PENALTY_APPLIES\"],\"amount\":2000,\"summary\":\"依约定公式和实际迟延 5 天核算，示例违约金额为 2000 元。\",\"recommendation\":\"复核交货日期与条款适用条件；本结果为按输入条款计算，不判断法律效力。\",\"evidenceIds\":[\"clause\",\"amount\",\"late_days\"],\"citations\":[]}"
+        }
+      },
+      "finishedAt": "2026-09-26T03:49:00.778Z"
+    },
+    {
+      "id": "step-3",
+      "operation": "assemble",
+      "title": {
+        "zh": "在本地关联合同方并生成结果",
+        "en": "Assemble the result locally"
+      },
+      "reason": {
+        "zh": "在本地恢复身份关联，生成带来源的业务文件。",
+        "en": "Reconnect identity locally and produce a report with sources."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T03:49:00.778Z",
+      "parentStepId": "step-2",
+      "input": {
+        "identity": "合成采购方1 / 合成供应方1",
+        "assessment": {
+          "issueCodes": [
+            "PENALTY_APPLIES"
+          ],
+          "amount": 2000,
+          "summary": "依约定公式和实际迟延 5 天核算，示例违约金额为 2000 元。",
+          "recommendation": "复核交货日期与条款适用条件；本结果为按输入条款计算，不判断法律效力。",
+          "evidenceIds": [
+            "clause",
+            "amount",
+            "late_days"
+          ],
+          "citations": []
+        }
+      },
+      "retained": [],
+      "receipts": [],
+      "output": {
+        "fileName": "result.md",
+        "summary": "依约定公式和实际迟延 5 天核算，示例违约金额为 2000 元。"
+      },
+      "checks": [],
+      "finishedAt": "2026-09-26T03:49:00.779Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "task.started",
+      "at": "2026-09-26T03:49:00.712Z",
+      "caseId": "contract-01"
+    },
+    {
+      "index": 2,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-1",
+      "title": {
+        "zh": "读取本地资料",
+        "en": "Read local data"
+      }
+    },
+    {
+      "index": 3,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-1"
+    },
+    {
+      "index": 4,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-2",
+      "title": {
+        "zh": "判断当前任务的执行位置",
+        "en": "Choose where to execute"
+      }
+    },
+    {
+      "index": 5,
+      "type": "location.decided",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-2",
+      "location": "cloud",
+      "candidates": [
+        {
+          "implementation": "local-rules-v1",
+          "available": false
+        },
+        {
+          "implementation": "qwen-plus",
+          "available": true
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "type": "view.prepared",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-2",
+      "keys": [
+        "clause",
+        "amount",
+        "late_days"
+      ]
+    },
+    {
+      "index": 7,
+      "type": "exit.checked",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-2",
+      "checkedAt": "2026-09-26T03:49:00.712Z",
+      "policyVersion": 1,
+      "allowedFields": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "overheadMs": 0.0402000000000271
+    },
+    {
+      "index": 8,
+      "type": "request.sent",
+      "at": "2026-09-26T03:49:00.712Z",
+      "stepId": "step-2",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 9,
+      "type": "receiver.received",
+      "at": "2026-09-26T03:49:00.778Z",
+      "stepId": "step-2",
+      "receiptId": "f5fa2211-5782-4b2c-898a-8c9627183dc3",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 10,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:00.778Z",
+      "stepId": "step-2"
+    },
+    {
+      "index": 11,
+      "type": "step.started",
+      "at": "2026-09-26T03:49:00.778Z",
+      "stepId": "step-3",
+      "title": {
+        "zh": "在本地关联合同方并生成结果",
+        "en": "Assemble the result locally"
+      }
+    },
+    {
+      "index": 12,
+      "type": "step.completed",
+      "at": "2026-09-26T03:49:00.779Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 13,
+      "type": "report.created",
+      "at": "2026-09-26T03:49:00.779Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 14,
+      "type": "run.completed",
+      "at": "2026-09-26T03:49:00.779Z",
+      "status": "completed"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "f5fa2211-5782-4b2c-898a-8c9627183dc3",
+      "runId": "95c3d330-1cc8-42db-9f2e-dc663809a3ac",
+      "stepId": "step-2",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-26T03:49:00.737Z",
+      "bytes": 2330,
+      "sha256": "3a29e3b0b4564b8a674e18369b4ca9272e6d37506c1de581f869f5aaa2af1522",
+      "rawBody": "{\"model\":\"qwen-plus\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"lookup_reference\",\"description\":\"查询任务指定的合成参考资料及确切版本。只在尚未获得对应资料时调用。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"required\":[\"code\",\"version\"],\"additionalProperties\":false}}}],\"tool_choice\":\"auto\",\"messages\":[{\"role\":\"system\",\"content\":\"你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"迟延交货一次按合同总额 2% 计收违约金。\\\",\\\"amount\\\":100000,\\\"late_days\\\":5}}\"}]}",
+      "processId": 28016,
+      "responseSha256": "a5fb4b3737fb7356fd9fc101ff8bcb04e638e4484aebf66f6dc6a8283d7c2fda",
+      "usage": null,
+      "providerId": "deterministic-boundary-fixture",
+      "status": 200,
+      "finishedAt": "2026-09-26T03:49:00.769Z"
+    }
+  ],
+  "result": {
+    "issueCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "amount": 2000,
+    "summary": "依约定公式和实际迟延 5 天核算，示例违约金额为 2000 元。",
+    "recommendation": "复核交货日期与条款适用条件；本结果为按输入条款计算，不判断法律效力。",
+    "evidenceIds": [
+      "clause",
+      "amount",
+      "late_days"
+    ],
+    "citations": []
+  },
+  "report": "# 合同风险提示（合成案例）\n\n对象：合成采购方1 / 合成供应方1\n运行：95c3d330-1cc8-42db-9f2e-dc663809a3ac\n\n## 分析结果\n依约定公式和实际迟延 5 天核算，示例违约金额为 2000 元。\n\n问题分类：PENALTY_APPLIES\n按输入公式核算金额：2000 元\n\n## 建议\n复核交货日期与条款适用条件；本结果为按输入条款计算，不判断法律效力。\n\n## 依据\n- clause\n- amount\n- late_days\n\n## 执行记录\n本地步骤：2；模型调用：1；资料查询：0\n数据来源：合成案例 contract-01；本机独立接收进程记录请求，不是云厂商独立回执。\n\n合同分析为输入条款的系统演示，不作法律效力判断。学习分析仅针对合成记录。\n",
+  "error": null,
+  "metrics": {
+    "controlMs": [
+      0.0019000000000346517,
+      0.09770000000003165
+    ],
+    "modelCalls": 1,
+    "toolCalls": 0,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalBytes": 2330,
+    "elapsedMs": 66.63890000000004
+  },
+  "finishedAt": "2026-09-26T03:49:00.779Z",
+  "testEnvironment": "deterministic HTTP model fixture; real separate receiver process"
+}
