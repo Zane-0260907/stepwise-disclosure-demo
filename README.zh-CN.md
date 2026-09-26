@@ -1,15 +1,17 @@
-# 逐步共享判定：研究演示原型
+<h1 align="center">逐步共享判定</h1>
+<p align="center">在智能体运行中，逐步决定执行位置与当前接收方可获得的事实。</p>
+<p align="center">
+  <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="自动检查" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
+</p>
+<p align="center"><a href="README.md">English</a> · <strong>简体中文</strong> · <a href="#三步运行">快速运行</a> · <a href="#复核冻结实验">复核实验</a> · <a href="#证据边界">证据边界</a></p>
 
-**在 Agent 运行中，逐步决定“在哪里执行”和“哪些事实可以发给当前接收方”。**
+<p align="center"><img src="evidence/research/ui/02-running.png" alt="合同任务运行时，中栏显示逐步执行，右栏显示当前步骤的发送内容与本地保留内容" width="950"></p>
+<p align="center"><em>真实离线执行。点击步骤可检查当前输入、发送前核验、接收记录和输出。</em></p>
 
-[![自动检查](https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg)](https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml)
-[![Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
-
-[English](README.md) · [快速运行](#三步运行) · [复核实验](#复核冻结实验) · [证据边界](#证据边界)
-
-<img src="evidence/research/ui/02-running.png" alt="合同任务运行时，中央显示逐步执行，右侧显示当前步骤的候选发送内容和本地保留内容。" width="950">
-
-*真实的离线执行过程。点击中央步骤可检查当前输入、发送前核验、接收记录和输出；英文模式会翻译展示结论，源文件和实际请求正文保留原文以便审计。*
+| 本机运行 | 核对真实模型记录 | 复算冻结实验 |
+| :-- | :-- | :-- |
+| 合成 PDF → 步骤判定 → 核验后的 HTTP 请求 | 两条 DeepSeek 记录，无须密钥 | 60 案例 × 5 方法 × 3 次重复，保存输入与评分 |
 
 ## 研究问题
 

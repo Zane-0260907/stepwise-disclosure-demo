@@ -1,16 +1,17 @@
-# Stepwise Disclosure Demo
+<p align="center"><img src="assets/social-preview.png" alt="Stepwise Disclosure research prototype, with its English interface and frozen experiment scope" width="900"></p>
 
-**A runnable research prototype for deciding where an agent step runs and which facts cross the boundary.**
+<h1 align="center">Stepwise Disclosure</h1>
+<p align="center">A runnable research prototype for deciding where an agent step runs and what each recipient receives.</p>
+<p align="center">
+  <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="Checks" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
+  <a href="package.json"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-315c52?logo=node.js&logoColor=white"></a>
+</p>
+<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a> · <a href="#try-it-without-a-key">Run the demo</a> · <a href="#reproduce-the-frozen-experiment">Reproduce results</a> · <a href="#what-the-evidence-supports">Evidence limits</a></p>
 
-[![Checks](https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg)](https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
-[![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=node.js&logoColor=white)](package.json)
-
-**English** · [简体中文](README.zh-CN.md) · [Evidence and limitations](#what-the-evidence-supports) · [Reproduce the experiment](#reproduce-the-frozen-experiment)
-
-<img src="evidence/research/ui/02-running.png" alt="Research demo during a contract task: the center pane advances through execution, while the right pane shows the selected step and facts proposed for transfer." width="950">
-
-*A live offline run. Select a step to inspect the proposed transfer, retained facts, recipient record, and result. The interface can be switched to English; original source documents and actual request payloads retain their source language for audit.*
+| Run locally | Inspect a recorded model run | Recompute the study |
+| :-- | :-- | :-- |
+| Synthetic PDF → step decision → checked HTTP request | Two preserved DeepSeek traces, no key required | 60 cases × 5 methods × 3 repeats; saved inputs and scores |
 
 ## Research question
 
@@ -35,11 +36,10 @@ Open **http://127.0.0.1:4793/**. The server binds to localhost by default.
 
 The offline executor really parses the supplied synthetic PDF, checks each transfer and writes a fresh run record. It uses finite rules rather than a language model. The **two DeepSeek entries** in the sidebar replay preserved real calls for the same synthetic contract, with no key or new provider request. The UI labels fresh execution and recorded replay separately; the animation time is **not** experimental execution time.
 
+<p align="center"><img src="evidence/research/ui/08-deepseek-english-report.png" alt="English research interface showing a recorded DeepSeek run, step timeline, and inspectable result" width="950"></p>
+<p align="center"><em>English interface, recorded DeepSeek run. Select a step to inspect the actual recipient view and receiver record.</em></p>
+
 To make a new live DeepSeek call, supply your own `DEEPSEEK_API_KEY` in your local environment and restart. The key is never required for the offline walkthrough or saved replay. Do not commit credentials or expose a key-bearing instance to the public internet; this demo has no multi-user authentication. The live adapter uses `deepseek-flash`, non-thinking mode.
-
-<img src="evidence/research/ui/07-deepseek-recorded-result.png" alt="Preserved DeepSeek run displaying the result and the exact recipient view for a discovered step." width="950">
-
-*Saved DeepSeek run: the right pane separates facts sent to the recipient from facts retained locally.*
 
 ## Reproduce the frozen experiment
 
@@ -57,7 +57,7 @@ The primary endpoint is **strict structured-task success**, checked against with
 
 Values come from [`summary.json`](evidence/research/results/summary.json); intervals, paired differences, failures and per-case results are retained alongside it. The differences are observations under the fixed synthetic protocol, not claims of broad deployment performance.
 
-<img src="evidence/research/results/experiment-overview.svg" alt="Five-method comparison generated from the frozen run records." width="850">
+<p align="center"><img src="evidence/research/results/experiment-overview.en.svg" alt="English-language five-method comparison generated from the frozen run records" width="850"></p>
 
 Recheck inputs, executable controls and saved DeepSeek records:
 
