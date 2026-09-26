@@ -1,0 +1,141 @@
+{
+  "protocol": "prospective-v5-20260927",
+  "jobs": 600,
+  "verifiedProviderCalls": 1579,
+  "verifiedPrograms": 2059,
+  "reports": 55,
+  "summary": [
+    {
+      "method": "full_once",
+      "runs": 120,
+      "passed": 93,
+      "success": 0.775,
+      "transmittedCells": 17.75,
+      "uniqueCells": 17.75,
+      "extraGoldCells": 15.683333333333334,
+      "modelCalls": 120,
+      "promptTokens": 161162,
+      "completionTokens": 9136,
+      "latencyP50": 735.865650000007,
+      "latencyP95": 1000.1543549999994,
+      "agreementRuns": 0,
+      "agreementPassed": 0,
+      "reviewedRuns": 0,
+      "reviewedPassed": 0,
+      "zeroCellRuns": 0
+    },
+    {
+      "method": "schema_vote",
+      "runs": 120,
+      "passed": 82,
+      "success": 0.6833333333333333,
+      "transmittedCells": 0,
+      "uniqueCells": 0,
+      "extraGoldCells": 0,
+      "modelCalls": 360,
+      "promptTokens": 443310,
+      "completionTokens": 26956,
+      "latencyP50": 2226.2072000000044,
+      "latencyP95": 2735.568099999999,
+      "agreementRuns": 115,
+      "agreementPassed": 82,
+      "reviewedRuns": 0,
+      "reviewedPassed": 0,
+      "zeroCellRuns": 120
+    },
+    {
+      "method": "blind_review",
+      "runs": 120,
+      "passed": 82,
+      "success": 0.6833333333333333,
+      "transmittedCells": 0,
+      "uniqueCells": 0,
+      "extraGoldCells": 0,
+      "modelCalls": 366,
+      "promptTokens": 452934,
+      "completionTokens": 27674,
+      "latencyP50": 2245.766749999995,
+      "latencyP95": 2913.72201,
+      "agreementRuns": 114,
+      "agreementPassed": 80,
+      "reviewedRuns": 6,
+      "reviewedPassed": 2,
+      "zeroCellRuns": 120
+    },
+    {
+      "method": "union_review",
+      "runs": 120,
+      "passed": 82,
+      "success": 0.6833333333333333,
+      "transmittedCells": 0.23333333333333334,
+      "uniqueCells": 0.23333333333333334,
+      "extraGoldCells": 0.13333333333333333,
+      "modelCalls": 367,
+      "promptTokens": 454867,
+      "completionTokens": 27680,
+      "latencyP50": 2269.235449999993,
+      "latencyP95": 2984.9267249999943,
+      "agreementRuns": 113,
+      "agreementPassed": 81,
+      "reviewedRuns": 7,
+      "reviewedPassed": 1,
+      "zeroCellRuns": 113
+    },
+    {
+      "method": "conflict_review",
+      "runs": 120,
+      "passed": 83,
+      "success": 0.6916666666666667,
+      "transmittedCells": 0.05,
+      "uniqueCells": 0.05,
+      "extraGoldCells": 0.03333333333333333,
+      "modelCalls": 366,
+      "promptTokens": 453307,
+      "completionTokens": 27457,
+      "latencyP50": 2236.004700000005,
+      "latencyP95": 2995.425314999999,
+      "agreementRuns": 114,
+      "agreementPassed": 82,
+      "reviewedRuns": 6,
+      "reviewedPassed": 1,
+      "zeroCellRuns": 114
+    }
+  ],
+  "paired": {
+    "conflict_review_vs_full_once": {
+      "difference": -0.08333333333333333,
+      "descriptiveReportCluster95": [
+        -0.16129032258064516,
+        -0.01639344262295082
+      ]
+    },
+    "conflict_review_vs_schema_vote": {
+      "difference": 0.008333333333333333,
+      "descriptiveReportCluster95": [
+        0,
+        0.025
+      ]
+    },
+    "conflict_review_vs_blind_review": {
+      "difference": 0.008333333333333333,
+      "descriptiveReportCluster95": [
+        0,
+        0.025423728813559324
+      ]
+    },
+    "conflict_review_vs_union_review": {
+      "difference": 0.008333333333333333,
+      "descriptiveReportCluster95": [
+        0,
+        0.025
+      ]
+    }
+  },
+  "limits": [
+    "One provider/model; a restricted public table subset, not a full benchmark.",
+    "Previous model-training exposure unknown.",
+    "A minimum syntactic conflict cover is not a semantically minimal sufficient view or an optimal privacy policy.",
+    "Question/schema and candidate programs remain visible; no semantic privacy guarantee.",
+    "No completed human explanation-quality evaluation."
+  ]
+}

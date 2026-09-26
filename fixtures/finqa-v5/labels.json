@@ -1,0 +1,872 @@
+{
+  "finqa-5cb83410e520": {
+    "sourceId": "C/2015/page_96.pdf-3",
+    "expected": -32.1,
+    "answer": "-32.1",
+    "program": "subtract(336.5, 368.6)",
+    "goldCells": [
+      "r2c1",
+      "r2c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "C/2015/page_96.pdf"
+  },
+  "finqa-2ffed8f10e21": {
+    "sourceId": "HOLX/2006/page_100.pdf-1",
+    "expected": 0.22045,
+    "answer": "22%",
+    "program": "divide(6900, 31300)",
+    "goldCells": [
+      "r6c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "HOLX/2006/page_100.pdf"
+  },
+  "finqa-cac97c1ef147": {
+    "sourceId": "ADBE/1999/page_64.pdf-3",
+    "expected": -8095,
+    "answer": "-8095",
+    "program": "subtract(772, 8867)",
+    "goldCells": [
+      "r1c5",
+      "r1c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ADBE/1999/page_64.pdf"
+  },
+  "finqa-4a8c8ca38cc4": {
+    "sourceId": "SNA/2013/page_83.pdf-1",
+    "expected": -11.9,
+    "answer": "-11.9",
+    "program": "subtract(7.7, 19.6)",
+    "goldCells": [
+      "r1c1",
+      "r1c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "SNA/2013/page_83.pdf"
+  },
+  "finqa-780912356cd4": {
+    "sourceId": "AON/2010/page_86.pdf-2",
+    "expected": 0.18045,
+    "answer": "18.0%",
+    "program": "divide(890, 4932)",
+    "goldCells": [
+      "r5c1",
+      "r13c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AON/2010/page_86.pdf"
+  },
+  "finqa-1b93b43725b9": {
+    "sourceId": "JPM/2015/page_137.pdf-4",
+    "expected": 0.02385,
+    "answer": "2.4%",
+    "program": "divide(1423, 59677)",
+    "goldCells": [
+      "r2c1",
+      "r6c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "JPM/2015/page_137.pdf"
+  },
+  "finqa-6f3c7bce611e": {
+    "sourceId": "AON/2007/page_175.pdf-2",
+    "expected": 18,
+    "answer": "18",
+    "program": "add(155, -141), add(#0, 4)",
+    "goldCells": [
+      "r5c1",
+      "r6c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AON/2007/page_175.pdf"
+  },
+  "finqa-4688feeb5a87": {
+    "sourceId": "GIS/2015/page_62.pdf-1",
+    "expected": -4.74026,
+    "answer": "-4.74",
+    "program": "divide(-36.5, 7.7)",
+    "goldCells": [
+      "r1c1",
+      "r2c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "GIS/2015/page_62.pdf"
+  },
+  "finqa-ce89d10fb2c1": {
+    "sourceId": "CME/2010/page_91.pdf-2",
+    "expected": 0.08077,
+    "answer": "8%",
+    "program": "divide(11.8, 146.1)",
+    "goldCells": [
+      "r4c1",
+      "r10c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "CME/2010/page_91.pdf"
+  },
+  "finqa-e060f0d18163": {
+    "sourceId": "C/2008/page_65.pdf-3",
+    "expected": 0.15421,
+    "answer": "15%",
+    "program": "subtract(666.9, 577.8), divide(#0, 577.8)",
+    "goldCells": [
+      "r5c2",
+      "r5c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "C/2008/page_65.pdf"
+  },
+  "finqa-077ff3abfb15": {
+    "sourceId": "MRO/2003/page_45.pdf-3",
+    "expected": 0.03743,
+    "answer": "3.7%",
+    "program": "subtract(776, 748), divide(#0, 748)",
+    "goldCells": [
+      "r1c1",
+      "r1c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MRO/2003/page_45.pdf"
+  },
+  "finqa-4a3193d58318": {
+    "sourceId": "AAL/2016/page_8.pdf-2",
+    "expected": 0.24335,
+    "answer": "24.3%",
+    "program": "divide(24700, 101500)",
+    "goldCells": [
+      "r2c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AAL/2016/page_8.pdf"
+  },
+  "finqa-09e28cc77751": {
+    "sourceId": "AES/2010/page_227.pdf-2",
+    "expected": 0.10841,
+    "answer": "11%",
+    "program": "divide(500, 4612)",
+    "goldCells": [
+      "r5c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AES/2010/page_227.pdf"
+  },
+  "finqa-f1fe13e6650f": {
+    "sourceId": "V/2008/page_180.pdf-1",
+    "expected": 0.22006,
+    "answer": "22%",
+    "program": "divide(1088, 4944)",
+    "goldCells": [
+      "r1c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "V/2008/page_180.pdf"
+  },
+  "finqa-3f212048019b": {
+    "sourceId": "L/2009/page_84.pdf-2",
+    "expected": -0.37001,
+    "answer": "-37.0%",
+    "program": "subtract(80.74, 128.16), divide(#0, 128.16)",
+    "goldCells": [
+      "r2c5",
+      "r2c4"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "L/2009/page_84.pdf"
+  },
+  "finqa-094360ad0c14": {
+    "sourceId": "TFX/2015/page_89.pdf-2",
+    "expected": 0.03664,
+    "answer": "3.7%",
+    "program": "divide(231, 6304)",
+    "goldCells": [
+      "r2c2",
+      "r2c5"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "TFX/2015/page_89.pdf"
+  },
+  "finqa-60e48d03d031": {
+    "sourceId": "MRK/2013/page_3.pdf-2",
+    "expected": -0.01623,
+    "answer": "-1.6%",
+    "program": "subtract(47267, 48047), divide(#0, 48047)",
+    "goldCells": [
+      "r1c2",
+      "r1c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MRK/2013/page_3.pdf"
+  },
+  "finqa-ea3f099abd3b": {
+    "sourceId": "CME/2010/page_123.pdf-1",
+    "expected": 0.00491,
+    "answer": "0.491%",
+    "program": "divide(5978, 1217121)",
+    "goldCells": [
+      "r2c1",
+      "r3c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "CME/2010/page_123.pdf"
+  },
+  "finqa-d0734c114bed": {
+    "sourceId": "UNP/2011/page_33.pdf-4",
+    "expected": 1224,
+    "answer": "1224",
+    "program": "subtract(17282, 16058)",
+    "goldCells": [
+      "r2c2",
+      "r2c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "UNP/2011/page_33.pdf"
+  },
+  "finqa-a8f0a21d023b": {
+    "sourceId": "GIS/2018/page_110.pdf-3",
+    "expected": 0.20687,
+    "answer": "20.7%",
+    "program": "divide(115.7, 559.3)",
+    "goldCells": [
+      "r2c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "GIS/2018/page_110.pdf"
+  },
+  "finqa-245037017617": {
+    "sourceId": "ETR/2017/page_143.pdf-1",
+    "expected": 4781374,
+    "answer": "4781374",
+    "program": "add(760000, 857679), add(#0, 898500), add(#1, 960764), add(#2, 1304431)",
+    "goldCells": [
+      "r1c1",
+      "r2c1",
+      "r3c1",
+      "r4c1",
+      "r5c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ETR/2017/page_143.pdf"
+  },
+  "finqa-b72e4a0bc0f6": {
+    "sourceId": "V/2010/page_28.pdf-1",
+    "expected": 44.90354,
+    "answer": "44.9",
+    "program": "divide(2793, 62.2)",
+    "goldCells": [
+      "r1c1",
+      "r1c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "V/2010/page_28.pdf"
+  },
+  "finqa-7c71e3a86355": {
+    "sourceId": "ADI/2010/page_80.pdf-1",
+    "expected": 0.06358,
+    "answer": "6.4%",
+    "program": "subtract(1840, 1730), divide(#0, 1730)",
+    "goldCells": [
+      "r1c1",
+      "r1c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ADI/2010/page_80.pdf"
+  },
+  "finqa-488dcbd6fd24": {
+    "sourceId": "ZBH/2009/page_58.pdf-1",
+    "expected": 0.41467,
+    "answer": "41%",
+    "program": "divide(1127.6, 2719.3)",
+    "goldCells": [
+      "r1c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ZBH/2009/page_58.pdf"
+  },
+  "finqa-4bb44fb3c2ec": {
+    "sourceId": "HOLX/2006/page_71.pdf-1",
+    "expected": 65464368.8,
+    "answer": "65464368.80",
+    "program": "multiply(4218065, 15.52)",
+    "goldCells": [
+      "r3c1",
+      "r3c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "HOLX/2006/page_71.pdf"
+  },
+  "finqa-b10526602e7c": {
+    "sourceId": "JKHY/2019/page_18.pdf-1",
+    "expected": -125.06,
+    "answer": "17.3%",
+    "program": "subtract(177.26, 151.16), subtract(#0, 151.16)",
+    "goldCells": [
+      "r3c4",
+      "r3c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "JKHY/2019/page_18.pdf"
+  },
+  "finqa-a66e162c6b7c": {
+    "sourceId": "MAR/2018/page_43.pdf-2",
+    "expected": 0.01741,
+    "answer": "2%",
+    "program": "divide(230, 13208)",
+    "goldCells": [
+      "r3c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MAR/2018/page_43.pdf"
+  },
+  "finqa-f30c3b33ba6a": {
+    "sourceId": "JPM/2014/page_70.pdf-1",
+    "expected": 0.44841,
+    "answer": "45%",
+    "program": "divide(43319, 96606)",
+    "goldCells": [
+      "r10c2",
+      "r11c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "JPM/2014/page_70.pdf"
+  },
+  "finqa-4c1009b98100": {
+    "sourceId": "PPG/2018/page_85.pdf-4",
+    "expected": 0.5189,
+    "answer": "52%",
+    "program": "divide(151, 291)",
+    "goldCells": [
+      "r1c1",
+      "r4c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "PPG/2018/page_85.pdf"
+  },
+  "finqa-318b13bd009a": {
+    "sourceId": "AON/2007/page_171.pdf-1",
+    "expected": 284,
+    "answer": "284",
+    "program": "subtract(-726, -1010)",
+    "goldCells": [
+      "r5c1",
+      "r5c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AON/2007/page_171.pdf"
+  },
+  "finqa-f8ff4d750239": {
+    "sourceId": "ECL/2016/page_52.pdf-3",
+    "expected": 0.0918,
+    "answer": "9.2%",
+    "program": "divide(861, 9379)",
+    "goldCells": [
+      "r8c2",
+      "r8c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ECL/2016/page_52.pdf"
+  },
+  "finqa-bb0162ac9da2": {
+    "sourceId": "DRE/2002/page_15.pdf-1",
+    "expected": -44.57174,
+    "answer": "-44.6%",
+    "program": "subtract(5080, 9165), divide(#0, 9165), multiply(#1, const_100)",
+    "goldCells": [
+      "r2c1",
+      "r2c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "DRE/2002/page_15.pdf"
+  },
+  "finqa-47593c3344df": {
+    "sourceId": "UAA/2016/page_42.pdf-4",
+    "expected": 0.25431,
+    "answer": "25%",
+    "program": "subtract(1279337, 1019953), divide(#0, 1019953)",
+    "goldCells": [
+      "r3c1",
+      "r3c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "UAA/2016/page_42.pdf"
+  },
+  "finqa-61ae9c4091df": {
+    "sourceId": "AES/2001/page_33.pdf-2",
+    "expected": 12.3,
+    "answer": "12.30",
+    "program": "subtract(52.25, 39.95)",
+    "goldCells": [
+      "r2c1",
+      "r2c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AES/2001/page_33.pdf"
+  },
+  "finqa-818fb3cc52c5": {
+    "sourceId": "C/2018/page_175.pdf-2",
+    "expected": 0.53825,
+    "answer": "54%",
+    "program": "divide(4229, 7857)",
+    "goldCells": [
+      "r1c3",
+      "r6c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "C/2018/page_175.pdf"
+  },
+  "finqa-d928f0c55d47": {
+    "sourceId": "FIS/2016/page_9.pdf-3",
+    "expected": 0.45991,
+    "answer": "46%",
+    "program": "divide(4250, 9241)",
+    "goldCells": [
+      "r2c1",
+      "r4c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "FIS/2016/page_9.pdf"
+  },
+  "finqa-de33be21d2f6": {
+    "sourceId": "SYY/2005/page_70.pdf-2",
+    "expected": 0.71903,
+    "answer": "72%",
+    "program": "subtract(46957000, 27316000), divide(#0, 27316000)",
+    "goldCells": [
+      "r5c1",
+      "r1c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "SYY/2005/page_70.pdf"
+  },
+  "finqa-773dfa34c95e": {
+    "sourceId": "MKTX/2012/page_42.pdf-1",
+    "expected": 0.21277,
+    "answer": "21.3%",
+    "program": "subtract(37.79, 31.16), divide(#0, 31.16)",
+    "goldCells": [
+      "r1c1",
+      "r9c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MKTX/2012/page_42.pdf"
+  },
+  "finqa-c60bed903bce": {
+    "sourceId": "EMR/2017/page_78.pdf-2",
+    "expected": 251599.67,
+    "answer": "251599.67",
+    "program": "multiply(50.33, 4999)",
+    "goldCells": [
+      "r5c2",
+      "r5c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "EMR/2017/page_78.pdf"
+  },
+  "finqa-c4b5cf699de9": {
+    "sourceId": "IP/2006/page_35.pdf-3",
+    "expected": 0.59677,
+    "answer": "59.7%",
+    "program": "divide(592, 992)",
+    "goldCells": [
+      "r1c2",
+      "r8c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "IP/2006/page_35.pdf"
+  },
+  "finqa-813e6509e34d": {
+    "sourceId": "CB/2010/page_103.pdf-2",
+    "expected": 0.00338,
+    "answer": "0.3%",
+    "program": "subtract(2075, 2068), divide(#0, 2068)",
+    "goldCells": [
+      "r2c1",
+      "r2c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "CB/2010/page_103.pdf"
+  },
+  "finqa-5663eef1befe": {
+    "sourceId": "MRO/2013/page_39.pdf-3",
+    "expected": 0.03091,
+    "answer": "3.1%",
+    "program": "subtract(98.05, 95.11), divide(#0, 95.11)",
+    "goldCells": [
+      "r1c1",
+      "r1c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MRO/2013/page_39.pdf"
+  },
+  "finqa-7ee8154ec406": {
+    "sourceId": "CDW/2017/page_38.pdf-2",
+    "expected": 0.17917,
+    "answer": "18%",
+    "program": "divide(2327.2, 12988.7)",
+    "goldCells": [
+      "r3c2",
+      "r2c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "CDW/2017/page_38.pdf"
+  },
+  "finqa-d309a29e4f6d": {
+    "sourceId": "SNA/2012/page_110.pdf-3",
+    "expected": 658.13,
+    "answer": "34551",
+    "program": "subtract(707, 48.87)",
+    "goldCells": [
+      "r1c1",
+      "r1c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "SNA/2012/page_110.pdf"
+  },
+  "finqa-f926a0c347c4": {
+    "sourceId": "UNP/2018/page_74.pdf-3",
+    "expected": 0.17706,
+    "answer": "18%",
+    "program": "divide(159, 898)",
+    "goldCells": [
+      "r3c2",
+      "r7c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "UNP/2018/page_74.pdf"
+  },
+  "finqa-a93763bc0795": {
+    "sourceId": "STT/2011/page_69.pdf-3",
+    "expected": 0.55263,
+    "answer": "55.3%",
+    "program": "divide(105, 190)",
+    "goldCells": [
+      "r1c1",
+      "r3c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "STT/2011/page_69.pdf"
+  },
+  "finqa-7d31d74ead8f": {
+    "sourceId": "BLL/2012/page_31.pdf-3",
+    "expected": 2.13755,
+    "answer": "213.8%",
+    "program": "divide(207.62, 97.13)",
+    "goldCells": [
+      "r1c6",
+      "r3c6"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "BLL/2012/page_31.pdf"
+  },
+  "finqa-6b3ebd18e279": {
+    "sourceId": "UPS/2012/page_32.pdf-4",
+    "expected": 0.07756,
+    "answer": "7.8%",
+    "program": "subtract(86.42, 80.20), divide(#0, 80.20)",
+    "goldCells": [
+      "r1c3",
+      "r1c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "UPS/2012/page_32.pdf"
+  },
+  "finqa-b5d77b96451c": {
+    "sourceId": "GS/2017/page_86.pdf-3",
+    "expected": 70843,
+    "answer": "70843",
+    "program": "subtract(1341016, 1270173)",
+    "goldCells": [
+      "r7c1",
+      "r7c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "GS/2017/page_86.pdf"
+  },
+  "finqa-49e24d713866": {
+    "sourceId": "MRO/2003/page_84.pdf-3",
+    "expected": 0.39024,
+    "answer": "39.0%",
+    "program": "subtract(-57, -41), divide(#0, -41)",
+    "goldCells": [
+      "r2c1",
+      "r2c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MRO/2003/page_84.pdf"
+  },
+  "finqa-1ddd8403d15c": {
+    "sourceId": "MAS/2012/page_26.pdf-2",
+    "expected": 0.25926,
+    "answer": "25.93%",
+    "program": "subtract(79.90, 63.45), divide(#0, 63.45)",
+    "goldCells": [
+      "r2c2",
+      "r2c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MAS/2012/page_26.pdf"
+  },
+  "finqa-d4800c218dd1": {
+    "sourceId": "JPM/2010/page_120.pdf-1",
+    "expected": 0.05677,
+    "answer": "6%",
+    "program": "subtract(687125, 650212), divide(#0, 650212)",
+    "goldCells": [
+      "r11c1",
+      "r11c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "JPM/2010/page_120.pdf"
+  },
+  "finqa-5a82b019ab08": {
+    "sourceId": "ETR/2015/page_17.pdf-2",
+    "expected": 0.01639,
+    "answer": "1.6%",
+    "program": "subtract(5829, 5735), divide(#0, 5735)",
+    "goldCells": [
+      "r8c1",
+      "r1c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ETR/2015/page_17.pdf"
+  },
+  "finqa-1dd359facbdf": {
+    "sourceId": "IPG/2017/page_92.pdf-4",
+    "expected": 0.45082,
+    "answer": "45.1%",
+    "program": "divide(121.0, 268.4)",
+    "goldCells": [
+      "r1c7",
+      "r3c7"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "IPG/2017/page_92.pdf"
+  },
+  "finqa-d76944870e90": {
+    "sourceId": "RL/2008/page_23.pdf-1",
+    "expected": 0.13924,
+    "answer": "14%",
+    "program": "divide(22, 158)",
+    "goldCells": [
+      "r2c1",
+      "r4c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "RL/2008/page_23.pdf"
+  },
+  "finqa-f14077426905": {
+    "sourceId": "GS/2015/page_171.pdf-2",
+    "expected": -0.05497,
+    "answer": "-5%",
+    "program": "subtract(120905, 127938), divide(#0, 127938)",
+    "goldCells": [
+      "r2c1",
+      "r2c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "GS/2015/page_171.pdf"
+  },
+  "finqa-fe7c79f5a837": {
+    "sourceId": "JPM/2015/page_82.pdf-1",
+    "expected": 0.45876,
+    "answer": "46%",
+    "program": "divide(43634, 95112)",
+    "goldCells": [
+      "r10c2",
+      "r11c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "JPM/2015/page_82.pdf"
+  },
+  "finqa-f260b7d116d2": {
+    "sourceId": "MO/2014/page_62.pdf-3",
+    "expected": 0.08493,
+    "answer": "8.5%",
+    "program": "subtract(4535, 4180), divide(#0, 4180)",
+    "goldCells": [
+      "r2c2",
+      "r2c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MO/2014/page_62.pdf"
+  },
+  "finqa-203ac93e9eea": {
+    "sourceId": "CB/2008/page_229.pdf-3",
+    "expected": 0.0977,
+    "answer": "9.8%",
+    "program": "divide(684, 7001)",
+    "goldCells": [
+      "r3c1",
+      "r2c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "CB/2008/page_229.pdf"
+  },
+  "finqa-1bd8d2b34612": {
+    "sourceId": "UNP/2015/page_56.pdf-4",
+    "expected": 0.19974,
+    "answer": "20%",
+    "program": "divide(4074, 20397)",
+    "goldCells": [
+      "r6c1",
+      "r7c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "UNP/2015/page_56.pdf"
+  },
+  "finqa-b972a5ad0246": {
+    "sourceId": "AWK/2013/page_132.pdf-2",
+    "expected": 0.10198,
+    "answer": "10.2%",
+    "program": "divide(7367, 72238)",
+    "goldCells": [
+      "r1c1",
+      "r2c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AWK/2013/page_132.pdf"
+  },
+  "finqa-f3ff7366ea2d": {
+    "sourceId": "MRO/2009/page_56.pdf-1",
+    "expected": -0.14252,
+    "answer": "-14.3%",
+    "program": "subtract(62.09, 72.41), divide(#0, 72.41)",
+    "goldCells": [
+      "r1c1",
+      "r1c3"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MRO/2009/page_56.pdf"
+  },
+  "finqa-83cf7b4e8487": {
+    "sourceId": "OKE/2008/page_86.pdf-1",
+    "expected": 233629,
+    "answer": "233629",
+    "program": "subtract(258800, 25171)",
+    "goldCells": [
+      "r5c1",
+      "r1c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "OKE/2008/page_86.pdf"
+  },
+  "finqa-0950db29929b": {
+    "sourceId": "BLK/2012/page_37.pdf-3",
+    "expected": 0.87874,
+    "answer": "87.9%",
+    "program": "divide(121640, 138425)",
+    "goldCells": [
+      "r2c1",
+      "r2c4"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "BLK/2012/page_37.pdf"
+  },
+  "finqa-e7ac68cd43b8": {
+    "sourceId": "ETR/2013/page_118.pdf-2",
+    "expected": 1766.791,
+    "answer": "1766.8",
+    "program": "add(385373, 1110566), add(#0, 270852), divide(#1, const_1000)",
+    "goldCells": [
+      "r1c1",
+      "r2c1",
+      "r3c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ETR/2013/page_118.pdf"
+  },
+  "finqa-870c48d83470": {
+    "sourceId": "HIG/2008/page_318.pdf-3",
+    "expected": -2138,
+    "answer": "-2138",
+    "program": "subtract(13777, 15915)",
+    "goldCells": [
+      "r4c1",
+      "r4c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "HIG/2008/page_318.pdf"
+  },
+  "finqa-a716046936d4": {
+    "sourceId": "AMT/2007/page_29.pdf-1",
+    "expected": 91300,
+    "answer": "91300",
+    "program": "add(19600, 13900), add(#0, 57800)",
+    "goldCells": [
+      "r1c2",
+      "r2c2",
+      "r3c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "AMT/2007/page_29.pdf"
+  },
+  "finqa-3ee223ad3c39": {
+    "sourceId": "MSI/2008/page_69.pdf-3",
+    "expected": 0.14167,
+    "answer": "14.2%",
+    "program": "divide(2690, 18988)",
+    "goldCells": [
+      "r3c3",
+      "r2c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "MSI/2008/page_69.pdf"
+  },
+  "finqa-f09190f397c1": {
+    "sourceId": "GS/2014/page_165.pdf-1",
+    "expected": 0.49078,
+    "answer": "49%",
+    "program": "divide(7874, 16044)",
+    "goldCells": [
+      "r2c2",
+      "r8c2"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "GS/2014/page_165.pdf"
+  },
+  "finqa-800c1900f403": {
+    "sourceId": "ETR/2016/page_374.pdf-2",
+    "expected": 0.01307,
+    "answer": "1.3%",
+    "program": "subtract(705.4, 696.3), divide(#0, 696.3)",
+    "goldCells": [
+      "r7c1",
+      "r1c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "ETR/2016/page_374.pdf"
+  },
+  "finqa-0cf68248784a": {
+    "sourceId": "FBHS/2017/page_22.pdf-1",
+    "expected": 4.90575,
+    "answer": "4.9",
+    "program": "divide(2467.1, 502.9)",
+    "goldCells": [
+      "r1c1",
+      "r3c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "FBHS/2017/page_22.pdf"
+  },
+  "finqa-ac5f527290e8": {
+    "sourceId": "UNP/2006/page_15.pdf-2",
+    "expected": 0.52946,
+    "answer": "53%",
+    "program": "divide(27318, 51596)",
+    "goldCells": [
+      "r1c1",
+      "r4c1"
+    ],
+    "tolerance": 0.00005,
+    "sourceFile": "UNP/2006/page_15.pdf"
+  }
+}

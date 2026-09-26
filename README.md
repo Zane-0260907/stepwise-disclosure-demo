@@ -37,7 +37,7 @@
 An agent can discover a new step only after reading local material or receiving a tool result. That step may need a different executor and a different set of facts. This prototype makes both decisions at each registered step: use a local rule when it can complete the operation; otherwise construct a view for the actual external recipient, check the final request before transmission, and record what the recipient received.
 
 <p align="center">
-  <img src="evidence/progressive-showcase/ui/progressive.en.png" alt="English interface showing a preserved DeepSeek run, its step timeline, and inspectable result" width="920">
+  <img src="evidence/corrected-showcase/ui/corrected.en.png" alt="English interface showing a preserved DeepSeek run, its step timeline, and inspectable result" width="920">
 </p>
 <p align="center"><em>Recorded DeepSeek run in the English interface. The right pane can also show the selected step's recipient view and receiver record.</em></p>
 
@@ -123,124 +123,76 @@ Click a step in the middle pane to inspect its selected recipient, facts sent, f
 
 ## Reproduce the experiment
 
-The current release adds **496 tasks and 592 real DeepSeek requests**, with all failures retained. Inputs, code, labels and prompts were frozen before the calls.
+**Current v6 evidence: 600 tasks · 1,210 real DeepSeek requests · 60 public pages from 57 company-year reports.** The protocol was frozen before test calls. Every failure remains in the denominator.
 
-| Same-capability control | Correct | Extra fields/task | Model calls |
+| Method | Correct / planned | Business values sent per task | Calls |
 |:--|--:|--:|--:|
-| No fact acquisition | 50/64 | 0 | 64 |
-| All permitted business fields | 58/64 | 0.5625 | 64 |
-| Prefetch numerical task fields | 58/64 | 0.0625 | 64 |
-| Progressive fact acquisition | 57/64 | 0.03125 | 80 |
+| All values, one plan | 96/120 | 14.833 | 120 |
+| Schema plan, local calculation | 98/120 | 0 | 120 |
+| Requested cells | 94/120 | 2.417 | 236 |
+| Three proposals + value-free review | 95/120 | 0 | 366 |
+| Three proposals + conflict view | 96/120 | 0.075 | 368 |
 
-These controls share the local executor and rebuild reference-service inputs separately. Both new prefetch controls exclude all five private-field types. The 32 cases were previously published: this is a stronger-control re-evaluation, not a new holdout. The result supports a disclosure/call-cost tradeoff, not superior task accuracy.
+Single-pass local calculation sends no business cell values. It still exposes the question, schema, years and units. Its accuracy difference against full values is **+1.67 points, descriptive interval −5.83 to +9.02**; this does not establish superiority or non-inferiority. Conflict review adds calls without an established utility gain, so it remains experimental.
 
-| Restricted FinQA table subset | Correct | Raw numeric cells/task | Model calls |
-|:--|--:|--:|--:|
-| All values | 62/80 | 15.425 | 80 |
-| Requested cells | 53/80 | 2.425 | 160 |
-| Schema plan + local calculation | 51/80 | 0 | 80 |
+<p align="center"><img src="evidence/validation-v6/tradeoffs.en.svg" alt="Current measured correctness, business-value transmission, runtime, paired uncertainty and correlated errors" width="1000"></p>
 
-Forty selected public test pages span 38 company-year reports. The schema-only route reduces numeric-cell transmission but loses **13.75 percentage points** against full values (paired report-cluster descriptive interval: **−24.43 to −3.95** points). It is an experimental route, not a universal default or privacy without utility loss. Question text and table labels remain visible.
+### Verify without a model key
 
-<p align="center"><img src="evidence/validation-v4/tradeoffs.en.svg" alt="Verified outcomes, disclosure and measured runtime, including the accuracy loss on public tables" width="1000"></p>
-
-### Verify the published evidence without a key
-
-Python 3.10+ is required only for standard-library ZIP extraction. Use `python3` where appropriate.
+Run from the repository root. Python is needed only for standard-library archive extraction; use `python3` where appropriate.
 
 ```sh
 npm test
-python -m zipfile -e evidence/validation-v4/finqa/reproduction-records.zip .
-python -m zipfile -e evidence/validation-v4/controls/reproduction-records.zip .
-npm run verify:v4
-node scripts/verify-financial-showcase.mjs
+python -m zipfile -e evidence/validation-v6/reproduction-records.zip .
+npm run verify:v6
+node scripts/verify-corrected-showcase.mjs
 ```
 
-Expected totals: **240 tasks / 320 provider requests** for FinQA, and **256 / 272** for the synthetic controls. Verification re-executes numerical programs, recomputes outcomes, checks frozen hashes and matches each model request to a distinct provider record. Extraction writes ignored `data/research/validation/` files; it makes no model calls.
+Expected totals: **600 tasks / 1,210 provider requests / 1,310 verified programs**. The script reconstructs table roles from the original cells, checks frozen hashes, re-executes programs, recomputes scores and matches every request/response to a distinct provider record. It makes no model calls. Three additional development showcase runs (five calls) are verified separately.
 
-### Run new experiments separately
+### Run a new experiment
 
-With your own key in the environment:
+After securely setting your own `DEEPSEEK_API_KEY` as described above:
 
 ```sh
-npm run experiment:finqa -- --run-id=my-finqa-01
-npm run experiment:controls -- --run-id=my-controls-01
-node scripts/verify-v4.mjs --finqa --run-id=my-finqa-01
-node scripts/verify-v4.mjs --controls --run-id=my-controls-01
+npm run experiment:v6 -- --run-id=my-v6-01
+node scripts/verify-v6.mjs --run-id=my-v6-01
 ```
 
-A named run resumes missing jobs only. A new ID creates a new experiment; omitting the ID creates a timestamped folder. Results and new summaries stay under `data/research/validation/<run-id>/`, leaving published evidence unchanged. Completed failures are not silently retried.
+A named run resumes missing jobs only. New results stay under ignored `data/research/validation/<run-id>/`; completed failures are not retried and published evidence is not overwritten. New provider outputs may differ from the preserved records.
 
-### Redraw figures
+### Redraw the figure
 
 ```sh
 pip install -r requirements-plots.txt
-python scripts/plot-v4.py --lang en
-python scripts/plot-v4.py --lang zh
+python scripts/plot-v6.py --lang en
+python scripts/plot-v6.py --lang zh
 ```
 
-The **[complete reproduction guide](docs/reproduction-v4.md)** explains data selection, method definitions, credentials, output files, scoring, uncertainty and troubleshooting. [Current protocols and results](evidence/validation-v4/) include all raw archives and failures.
-
-The same **Public table** scenario is available in the UI. Compare all values, selected cells and local calculation; select the local step to inspect its expression and dependency record.
-
-<p align="center"><img src="evidence/financial-showcase/ui/financial.en.png" alt="English replay showing a real schema-only request and the numerical values retained locally" width="920"></p>
+The [step-by-step reproduction guide](docs/reproduction-v6.md) covers installation, the walkthrough, credentials, sampling, all methods, uncertainty, failures and troubleshooting. [Frozen protocol, results and archives](evidence/validation-v6/) are public. The [bounded conflict-view mechanism](docs/conflict-view.md) explains what its minimum-cover guarantee does and does not mean.
 
 <details>
-<summary><strong>Preserved v3 results and earlier history</strong></summary>
+<summary><strong>Earlier experiments and the table-adapter correction</strong></summary>
 
-The previous v3 study froze **32 synthetic cases × 7 methods × 2 repeats = 448 tasks**, using `deepseek-flash`. Its 560 real provider calls have matching receiver and provider-egress records. These numbers are retained separately and are not pooled with v4.
+- **v4:** 256 synthetic-control tasks and 240 earlier table tasks. [Records](evidence/validation-v4/) · [Reproduction](docs/reproduction-v4.md).
+- **v5:** 600 table tasks / 1,579 real calls. Candidate agreement did not resolve the observed utility loss. [Records](evidence/validation-v5/).
+- **Correction:** v4/v5 sometimes hid year headers as business values, removing column meanings. Their numeric comparisons must be interpreted with this limitation. V6 uses the same repaired structure for all methods and excludes prior company-year reports. The repair is not claimed as an algorithmic invention. [Full correction](docs/table-adapter-correction.md).
+- **v1–v3:** original [900-task archive](evidence/research/), [432-task study](evidence/validation-v2/), and [448-task study](evidence/validation-v3/) remain unchanged.
 
-| Method | Structured success | Extra facts/task | Model calls |
-| :-- | --: | --: | --: |
-| Full context | 53/64 · 82.8% | 8.625 | 80 |
-| PII masking | 54/64 · 84.4% | 4.125 | 80 |
-| Entry view | 54/64 · 84.4% | 0.281 | 96 |
-| Per-step view, fixed executor | 53/64 · 82.8% | 0.031 | 96 |
-| No fact acquisition | 51/64 · 79.7% | 0 | 64 |
-| Same local rules + full context | 57/64 · 89.1% | 7.188 | 64 |
-| Full mechanism | **58/64 · 90.6%** | **0.031** | 80 |
-
-<p align="center"><img src="evidence/validation-v3/experiment-overview.en.svg" alt="Measured completion, fact-acquisition ablation and extra-field transmission in the 448-task DeepSeek study" width="1000"></p>
-
-Fact acquisition adds **10.94 percentage points** over its disabled control (paired, descriptive case-bootstrap 95% interval: **1.56 to 23.44**), at the cost of 16 additional model calls. Against the control with the same local rules and full context, the success difference is **1.56 points**, with an interval of **−10.94 to 14.06**. This does **not** establish superior or equivalent task quality. Two unnecessary field transmissions remain in the full mechanism; authorized does not mean necessary.
-
-Re-score all 448 saved tasks **without a key or new model calls**:
+Historical results are not pooled into one success rate. A difference between batches is not a causal estimate of the adapter repair.
 
 ```sh
-npm test
-node scripts/verify-progressive-showcase.mjs
-python -m zipfile -e evidence/validation-v3/reproduction-records.zip .
-npm run verify:v3
+python -m zipfile -e evidence/validation-v5/reproduction-records.zip .
+npm run verify:v5
 ```
-
-The archive extracts to ignored `data/research/validation/`. The [v3 protocol](evidence/validation-v3/protocol.json) freezes code, fixtures, labels and comparison definitions before the calls. [Results, failures and case aggregates](evidence/validation-v3/) are public. To redraw: `pip install -r requirements-plots.txt`, then `python scripts/plot-validation.py --lang en`.
-
-<details>
-<summary><strong>Development history and earlier evidence</strong></summary>
-
-- **v1:** 60 cases, five methods, three repeats = 900 Qwen-Plus tasks. Original code and inputs remain frozen. [Results](evidence/research/results/) and [raw archive](evidence/research/reproduction-records.zip) remain available.
-- **v2:** 36 new same-domain cases, six methods, two repeats = 432 DeepSeek tasks. This exposed omitted necessary inputs and was subsequently used for development. It is **not** a holdout for v3. [Protocol and results](evidence/validation-v2/).
-- **v3:** The 448-task study above evaluates the revised mechanism on newly authored same-domain cases after a new freeze. Do not pool the three versions into one success rate.
-
-```sh
-python -m zipfile -e evidence/research/reproduction-records.zip .
-node scripts/verify-recorded-scores.mjs frozen-v1-20260925
-python -m zipfile -e evidence/validation-v2/reproduction-records.zip .
-npm run verify:v2
-npm run test:binding
-```
-
-The deterministic request-binding study blocks 52/52 altered requests versus 12/52 under the earlier checks; both allow all eight legitimate cases. This validates a bounded local control path, not semantic privacy against arbitrary attacks. [Saved results](evidence/request-binding/summary.json).
 
 </details>
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
-</details>
-
 ## Evidence and limitations
 
-The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v4 evidence. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
+The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v6 numerical evidence and separately retained synthetic controls. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
 
 The [progressive showcase](evidence/progressive-showcase/) is one additional real run, excluded from batch totals. It preserves the model's request for a needed late-day count **and an unnecessary contract amount**, followed by the CNY 1,150 result. The [earlier reference-lookup pair](evidence/research/deepseek-live-20260926/) is also retained separately. Neither is a substitute for batch evaluation.
 
@@ -259,8 +211,8 @@ The [progressive showcase](evidence/progressive-showcase/) is one additional rea
 | [`src/research/`](src/research/) | Planner, views, policy checks, receiver, model adapter and evaluator |
 | [`web/`](web/) | Bilingual research interface, separate from the commercial product |
 | [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld labels |
-| [`evidence/validation-v4/`](evidence/validation-v4/) | Current frozen protocols, complete records, failures and figures |
-| [`fixtures/finqa-v4/`](fixtures/finqa-v4/) | Public subset, separate labels, pinned provenance and original license |
+| [`evidence/validation-v6/`](evidence/validation-v6/) | Current frozen protocols, complete records, failures and figures |
+| [`fixtures/finqa-v6/`](fixtures/finqa-v6/) | Public subset, separate labels, pinned provenance and original license |
 | [`paper/zh-CN/`](paper/zh-CN/) | Latest Chinese manuscript and native Word formula source |
 | [`evidence/research/`](evidence/research/) | Unchanged original study and earlier live-call records |
 | [`evidence/progressive-showcase/`](evidence/progressive-showcase/) | Current preserved trace and bilingual browser screenshots |
@@ -276,6 +228,6 @@ Bug reports and reproducibility questions are welcome through [GitHub Issues](ht
 
 ## License and citation
 
-Software is released under [Apache-2.0](LICENSE). The FinQA subset retains its [MIT notice](fixtures/finqa-v4/LICENSE.FinQA). The included mark and product name identify this research demo; the software license does not grant trademark rights. See [ASSETS.md](ASSETS.md) for provenance and [CITATION.cff](CITATION.cff) for the software citation. A paper citation can be added when the manuscript has a stable publication record.
+Software is released under [Apache-2.0](LICENSE). The FinQA subset retains its [MIT notice](fixtures/finqa-v6/LICENSE.FinQA). The included mark and product name identify this research demo; the software license does not grant trademark rights. See [ASSETS.md](ASSETS.md) for provenance and [CITATION.cff](CITATION.cff) for the software citation. A paper citation can be added when the manuscript has a stable publication record.
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>

@@ -1,4 +1,6 @@
-# Reproduce the current evidence
+# Reproduce the historical v4 evidence
+
+For current results use [v6](reproduction-v6.md). The v4 table comparison is subject to the [table-role correction](table-adapter-correction.md); the frozen files below remain unchanged.
 
 The release separates **watching a recorded run**, **re-scoring preserved experiments**, and **making new provider calls**. A replay never claims to be a new experiment.
 

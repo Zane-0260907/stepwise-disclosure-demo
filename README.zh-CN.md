@@ -36,7 +36,7 @@
 
 智能体读取本地资料或收到工具结果后，可能在运行中发现新的步骤。新步骤需要的执行能力、接收方和输入可能与前一步不同。本原型在每个登记步骤重新判断：本地规则能够完成的操作留在本地；否则为实际接收方构造字段视图，在最终请求发出前复核，并保存接收方实际获得的内容。
 
-<p align="center"><img src="evidence/progressive-showcase/ui/progressive.zh-CN.png" alt="中文界面中保存的 DeepSeek 运行记录、步骤时间线和接收方视图" width="920"></p>
+<p align="center"><img src="evidence/corrected-showcase/ui/corrected.zh-CN.png" alt="中文界面中保存的 DeepSeek 运行记录、步骤时间线和接收方视图" width="920"></p>
 <p align="center"><em>中文界面中的 DeepSeek 真实记录重放。右栏可逐步检查实际发送内容与接收记录。</em></p>
 
 这是使用合成合同、学情记录及公开 FinQA 表格子集的独立研究原型，不是商业客户端。离线执行器采用有限规则；保存的 DeepSeek 记录来自真实模型调用，在页面中作为重放展示。新增数值路径由模型根据表结构提出有限表达式，再由本地解释器读取依赖的数值并计算。
@@ -121,129 +121,79 @@ unset DEEPSEEK_API_KEY
 
 ## 复核实验
 
-本轮增加 **496 次任务、592 次真实 DeepSeek 调用**，全部失败保留；代码、输入、标签和提示在调用前冻结。
+**最新 v6：600 次任务 · 1,210 次真实 DeepSeek 调用 · 60 个公开页面、57 份公司年度报告。** 测试前冻结协议，错误答案与异常全部保留。
 
-| 同能力强对照 | 通过 | 多余字段／任务 | 模型调用 |
+| 方法 | 正确／计划任务 | 业务数值外发／任务 | 模型调用 |
 |:--|--:|--:|--:|
-| 关闭事实补充 | 50/64 | 0 | 64 |
-| 全部获准业务字段 | 58/64 | 0.5625 | 64 |
-| 预取登记业务数值 | 58/64 | 0.0625 | 64 |
-| 按需补充 | 57/64 | 0.03125 | 80 |
+| 全部数值，单次规划 | 96/120 | 14.833 | 120 |
+| 表结构规划，本地计算 | 98/120 | 0 | 120 |
+| 按需单元格 | 94/120 | 2.417 | 236 |
+| 三方案＋无数值复核 | 95/120 | 0 | 366 |
+| 三方案＋分歧补充 | 96/120 | 0.075 | 368 |
 
-四种方法使用相同本地能力，并为资料服务单独构造输入；新增预取对照均排除五类私有字段。32 个案例已在此前版本公开，因此本轮是强对照复验，不是新留出集。结果表明减少共享需要付出额外调用代价，不能宣称完成率全面领先。
+单次本地计算不发送业务数值，但问题、表结构、年份与单位仍可见。相对全量数值的准确率差为 **+1.67 个百分点，描述性区间 −5.83 至 +9.02**，不足以证明更优或不劣。分歧补充增加调用，尚无可靠效用优势，因此保留为实验选项。
 
-| FinQA 受限表格子集 | 通过 | 外发原始数值单元格／任务 | 模型调用 |
-|:--|--:|--:|--:|
-| 全部数值 | 62/80 | 15.425 | 80 |
-| 按需获取单元格 | 53/80 | 2.425 | 160 |
-| 结构规划与本地计算 | 51/80 | 0 | 80 |
+<p align="center"><img src="evidence/validation-v6/tradeoffs.zh-CN.svg" alt="真实记录计算的正确性、业务数值外发、耗时、配对区间及共同错误" width="1000"></p>
 
-公开测试集按固定规则选出 40 个页面，覆盖 38 份公司年度报告。本地表达式路径比全量数值下降 **13.75 个百分点**，按报告聚类的描述性区间为 **[−24.43, −3.95]**。该路径保留为可检查的实验能力，不作为所有任务的默认策略；问题、行列标签和单位仍会发送，零单元格外发不等于零信息泄露。
+### 无密钥复算
 
-<p align="center"><img src="evidence/validation-v4/tradeoffs.zh-CN.svg" alt="强对照与公开表格的真实通过率、共享量和执行耗时，保留准确率下降" width="1000"></p>
-
-### 无密钥复算最新实验
-
-在仓库根目录执行；部分系统应将 `python` 改为 `python3`。
+在仓库根目录执行；Python 仅用标准库解压，不请求模型。
 
 ```sh
 npm test
-python -m zipfile -e evidence/validation-v4/finqa/reproduction-records.zip .
-python -m zipfile -e evidence/validation-v4/controls/reproduction-records.zip .
-npm run verify:v4
-node scripts/verify-financial-showcase.mjs
+python -m zipfile -e evidence/validation-v6/reproduction-records.zip .
+npm run verify:v6
+node scripts/verify-corrected-showcase.mjs
 ```
 
-预期输出：FinQA **240 次任务 / 320 次供应商请求**；合成强对照 **256 / 272**。脚本会重新执行数值程序、重新评分、校验冻结摘要，并将每次模型请求对应到独立供应商记录。解包目录为 Git 忽略的 `data/research/validation/`，不会请求模型。
+预期为 **600 个任务、1,210 条供应商请求、1,310 次程序复核**。验证器从原始表格重建字段角色，核验冻结摘要，重新执行算式与评分，并逐条匹配请求和响应。另有三次开发示例、五次真实调用，单独核验，不计入实验样本。
 
-### 用自己的密钥产生新结果
+### 自备密钥重新实验
 
-先按上方教程将密钥放入环境，再执行：
+按上方教程安全设置本地 `DEEPSEEK_API_KEY` 后执行：
 
 ```sh
-npm run experiment:finqa -- --run-id=my-finqa-01
-npm run experiment:controls -- --run-id=my-controls-01
-node scripts/verify-v4.mjs --finqa --run-id=my-finqa-01
-node scripts/verify-v4.mjs --controls --run-id=my-controls-01
+npm run experiment:v6 -- --run-id=my-v6-01
+node scripts/verify-v6.mjs --run-id=my-v6-01
 ```
 
-指定同一 ID 时只续跑尚未执行的任务；更换 ID 才是新实验。不指定 ID 会自动创建带时间戳的新目录。新运行和统计写在 `data/research/validation/<run-id>/`，不会覆盖公开结果。已完成的失败不会被自动重试后择优保留。
+同名任务只恢复尚未执行的作业；失败不自动重跑。新记录与复算输出保存在忽略目录 `data/research/validation/<run-id>/`，不覆盖发表记录。重新调用模型不保证得到逐字相同的输出。
 
-### 根据记录重新绘图
+### 从真实数据重绘
 
 ```sh
 pip install -r requirements-plots.txt
-python scripts/plot-v4.py --lang zh
-python scripts/plot-v4.py --lang en
+python scripts/plot-v6.py --lang zh
+python scripts/plot-v6.py --lang en
 ```
 
-输出 PNG、可编辑文字的 SVG 和 PDF。图中文字需要微软雅黑或 Noto Sans CJK。方法定义、数据筛选、评分容差、统计单位、失败定位和故障处理见[完整复现指南](docs/reproduction-v4.md)。
-
-页面中的**公开表格**场景可以直接比较三种执行方式；选中本地计算步骤可检查模型提出的表达式和实际依赖。三个展示记录是额外调用，不计入上述批量实验。
-
-<p align="center"><img src="evidence/financial-showcase/ui/financial.zh-CN.png" alt="公开表格真实回放中发送的结构和留在本地的数值" width="920"></p>
-
-最新正文：[中文 PDF](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf) · [可编辑 Word](paper/zh-CN/按步执行与信息共享_中文最新稿.docx) · [公式与伪代码](paper/zh-CN/公式与算法源码.md)。这是中文工作稿，不代表已经录用或已完成正式英文 ACM 投稿准备。
+[完整中文复现教程](docs/reproduction-v6.zh-CN.md)说明安装、演示步骤、密钥、筛选规则、方法定义、统计区间与故障处理。[最新协议和全部结果](evidence/validation-v6/)包含失败样本；[机制说明](docs/conflict-view.md)给出句法最小覆盖的定义与边界。
 
 <details>
-<summary><strong>此前 v3 结果及版本沿革（单独保留）</strong></summary>
+<summary><strong>旧实验与表格转换更正</strong></summary>
 
-当前实验为 **32 个合成案例 × 7 种方法 × 每例 2 次，共 448 次任务运行**，模型为 `deepseek-flash`。其中 560 次实际供应商调用均有匹配的接收记录与出站记录；所有计划任务和失败均保留。输入由作者在原有两个领域中编写，不是外部基准。
-
-| 方法 | 结构化任务通过率 | 多余字段/任务 | 模型调用数 |
-| :-- | --: | --: | --: |
-| 完整上下文 | 53/64 · 82.8% | 8.625 | 80 |
-| 普通脱敏 | 54/64 · 84.4% | 4.125 | 80 |
-| 入口视图 | 54/64 · 84.4% | 0.281 | 96 |
-| 逐步视图、固定执行域 | 53/64 · 82.8% | 0.031 | 96 |
-| 关闭事实补充 | 51/64 · 79.7% | 0 | 64 |
-| 同本地规则＋完整上下文 | 57/64 · 89.1% | 7.188 | 64 |
-| 完整机制 | **58/64 · 90.6%** | **0.031** | 80 |
-
-<p align="center"><img src="evidence/validation-v3/experiment-overview.svg" alt="448次DeepSeek任务的完成情况、事实补充消融和实际多余传输" width="1000"></p>
-
-与关闭事实补充相比，完整机制提高 **10.94 个百分点**，案例配对描述性 95% bootstrap 区间为 **1.56 至 23.44**，同时增加 16 次模型调用。与使用相同本地规则的完整上下文对照相比，仅高 **1.56 个百分点**，区间为 **−10.94 至 14.06**，不能据此声称任务质量更优或等效。完整机制仍多发送了两次不必要字段；“获准发送”不等于“完成任务必需”。
-
-无需密钥和新增模型调用，即可重新评分全部 448 次任务：
+- v4 保留 256 次合成强对照及 240 次旧表格任务：[结果](evidence/validation-v4/)／[教程](docs/reproduction-v4.md)。
+- v5 保留 600 次表格任务、1,579 次真实调用：[记录](evidence/validation-v5/)。多方案一致性未解决原有损失。
+- 旧转换器曾将部分年份表头作为业务数值隐藏，破坏列含义；不能把旧差值解释成数值隐藏必然造成的效用损失。v6 修复结构，对所有方法统一应用，并排除先前报告。[更正说明](docs/table-adapter-correction.md)。这项修复不被包装成算法创新。
+- [v1](evidence/research/)、[v2](evidence/validation-v2/)、[v3](evidence/validation-v3/)的历史记录、协议和原始结果均保留，不合并为新的独立样本。
 
 ```sh
-npm test
-node scripts/verify-progressive-showcase.mjs
-python -m zipfile -e evidence/validation-v3/reproduction-records.zip .
-npm run verify:v3
+python -m zipfile -e evidence/validation-v5/reproduction-records.zip .
+npm run verify:v5
 ```
-
-解压内容进入被 Git 忽略的 `data/research/validation/`。[v3 冻结协议](evidence/validation-v3/protocol.json)在调用前记录源码、输入、标签和对照定义；[完整结果、失败与逐案例汇总](evidence/validation-v3/)均已保存。重绘图表：安装 `requirements-plots.txt` 后运行 `python scripts/plot-validation.py`。
-
-<details>
-<summary><strong>开发过程与此前证据</strong></summary>
-
-- **v1：**60 个案例、五种方法、三次重复，900 次 Qwen-Plus 任务。原代码、输入和[统计结果](evidence/research/results/)保持冻结。
-- **v2：**36 个同领域新案例、六种方法、两次重复，432 次 DeepSeek 任务。它暴露了必要输入被遗漏的问题，随后用于开发，**不能再作为 v3 的保留评测集**。[协议与结果](evidence/validation-v2/)。
-- **v3：**上述 448 次任务在重新冻结后，使用另行编写的同领域案例评价新机制。三个版本不能合并为一个通过率。
-
-```sh
-python -m zipfile -e evidence/research/reproduction-records.zip .
-node scripts/verify-recorded-scores.mjs frozen-v1-20260925
-python -m zipfile -e evidence/validation-v2/reproduction-records.zip .
-npm run verify:v2
-npm run test:binding
-```
-
-另有确定性请求绑定检查：新检查阻断 52/52 次请求变更，旧检查为 12/52；两者均允许八次合法请求。这验证受控的本地发送路径，不证明对任意攻击的语义隐私。[记录](evidence/request-binding/summary.json)。
 
 </details>
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
-</details>
-
 ## 证据与边界
+
+[最新中文 Word](paper/zh-CN/按步执行与信息共享_中文最新稿.docx)使用最新 v6 数值实验与单独保留的合成对照；[PDF 阅读版](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf)和[公式及算法源码](paper/zh-CN/公式与算法源码.md)同步提供。这是中文编辑稿，尚非正式英文 ACM 提交稿。
 
 [渐进共享演示](evidence/progressive-showcase/)另保存一次真实调用，不计入批次。该记录保留模型索取逾期天数时同时索取多余合同金额的事实，随后得到 1,150 元结果。[此前的资料查询对照](evidence/research/deepseek-live-20260926/)也单独保留。单条轨迹不能替代批量评价。
 
 - 主指标依据作者定义的结构化标签，不代表专家认可自由文本建议。已准备 24 份隐去方法名称的作者内部评阅材料；**人工评分尚未开展**。
-- 七种方法均为本仓库机制对照，未运行外部系统基线。[研究定位](docs/research-position.md)明确说明与 MINIM、ToolMinimize、PlanTwin、SplitAgent 的重合及区别。
+- 各方法均为本仓库机制对照，未运行外部系统基线。[研究定位](docs/research-position.md)明确说明与 MINIM、ToolMinimize、PlanTwin、SplitAgent 的重合及区别。
 - 本地控制器绑定使用的源字段、接收方、授权版本和最终应用请求；独立本机进程与适配器记录实际字节，但不是云厂商独立认证。
 - 字段计数不检测语义推断泄漏，白名单字段仍可能多余。任意网络旁路和本地控制器被攻破不在本文保证范围。
 - 撤权只能阻断未来发送，不能收回此前披露。页面逐步展示的间隔不计入模型耗时。
@@ -257,9 +207,9 @@ npm run test:binding
 | [`src/research/`](src/research/) | 规划、视图、策略复核、接收进程、模型适配与评价 |
 | [`web/`](web/) | 与商业产品分离的双语研究界面 |
 | [`fixtures/research/`](fixtures/research/) | 合成 PDF、任务目录、引用资料与独立评价标签 |
-| [`fixtures/finqa-v4/`](fixtures/finqa-v4/) | 公开表格受限子集、原始数值标签、选择规则与数据许可 |
-| [`evidence/validation-v4/`](evidence/validation-v4/) | 当前 496 次任务的冻结协议、原始记录、复算统计及中英文图表 |
-| [`evidence/financial-showcase/`](evidence/financial-showcase/) | 同一公开表格三种方法的真实记录与双语截图 |
+| [`fixtures/finqa-v6/`](fixtures/finqa-v6/) | 公开表格受限子集、原始数值标签、选择规则与数据许可 |
+| [`evidence/validation-v6/`](evidence/validation-v6/) | 当前 600 次任务的冻结协议、原始记录、复算统计及中英文图表 |
+| [`evidence/corrected-showcase/`](evidence/corrected-showcase/) | 同一公开表格三种方法的真实记录与双语截图 |
 | [`evidence/research/`](evidence/research/) | 冻结协议、运行记录、统计、边界测试、真实调用与截图 |
 | [`scripts/`](scripts/) | 输入核验、独立复算、汇总与绘图 |
 | [`paper/zh-CN/`](paper/zh-CN/) | 最新中文 Word、四页 PDF、原生公式与构建源文件 |

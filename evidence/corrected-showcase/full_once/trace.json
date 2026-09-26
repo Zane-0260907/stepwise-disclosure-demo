@@ -1,0 +1,898 @@
+{
+  "protocol": "research-v6-corrected-view",
+  "id": "dd0d961c-50a6-44a0-9d6a-1c0ce4ac04c0",
+  "source": "live",
+  "caseId": "finqa-47593c3344df",
+  "family": "finance",
+  "title": {
+    "zh": "公开财务表格 · 核对结构与本地计算",
+    "en": "Public table · structure and local calculation"
+  },
+  "task": {
+    "zh": "依据原始财务表格回答营运资金变化问题，保留年份与列位置，核对本地计算和实际外发内容。",
+    "en": "what was the percentage change in working capital from 2015 to 2016?"
+  },
+  "input": {
+    "r2c1": 250470,
+    "r2c2": 129852,
+    "r2c3": 593175,
+    "r2c4": 347489,
+    "r2c5": 341841,
+    "r3c1": 1279337,
+    "r3c2": 1019953,
+    "r3c3": 1127772,
+    "r3c4": 702181,
+    "r3c5": 651370,
+    "r4c1": 917491,
+    "r4c2": 783031,
+    "r4c3": 536714,
+    "r4c4": 469006,
+    "r4c5": 319286,
+    "r5c1": 3644331,
+    "r5c2": 2865970,
+    "r5c3": 2092428,
+    "r5c4": 1576369,
+    "r5c5": 1155052,
+    "r6c1": 817388,
+    "r6c2": 666070,
+    "r6c3": 281546,
+    "r6c4": 151551,
+    "r6c5": 59858,
+    "r7c1": 2030900,
+    "r7c2": 1668222,
+    "r7c3": 1350300,
+    "r7c4": 1053354,
+    "r7c5": 816922
+  },
+  "sourceFile": "finqa-47593c3344df.pdf",
+  "method": "full_once",
+  "condition": "normal",
+  "model": "deepseek-flash",
+  "createdAt": "2026-09-26T20:04:45.848Z",
+  "status": "completed",
+  "policy": {
+    "version": 1,
+    "allowed": true,
+    "allowDerived": true
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "operation": "normalize_schema",
+      "title": {
+        "zh": "核对表结构与数值角色",
+        "en": "Verify table structure and numeric roles"
+      },
+      "reason": {
+        "zh": "保留原始列位置、年份和单位；业务数值仍在本地。",
+        "en": "Preserve source column positions, years and units; business values remain local."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T20:04:45.848Z",
+      "input": {},
+      "retained": [
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r2c4",
+        "r2c5",
+        "r3c1",
+        "r3c2",
+        "r3c3",
+        "r3c4",
+        "r3c5",
+        "r4c1",
+        "r4c2",
+        "r4c3",
+        "r4c4",
+        "r4c5",
+        "r5c1",
+        "r5c2",
+        "r5c3",
+        "r5c4",
+        "r5c5",
+        "r6c1",
+        "r6c2",
+        "r6c3",
+        "r6c4",
+        "r6c5",
+        "r7c1",
+        "r7c2",
+        "r7c3",
+        "r7c4",
+        "r7c5"
+      ],
+      "checks": [],
+      "receipts": [],
+      "output": {
+        "headerRows": [
+          {
+            "sourceRow": 0,
+            "cells": [
+              "",
+              "At December 31,"
+            ]
+          },
+          {
+            "sourceRow": 1,
+            "cells": [
+              "(In thousands)",
+              "2016",
+              "2015",
+              "2014",
+              "2013",
+              "2012"
+            ]
+          }
+        ],
+        "promotedNumericHeaders": [
+          "r1c1",
+          "r1c2",
+          "r1c3",
+          "r1c4",
+          "r1c5"
+        ],
+        "businessCells": 30
+      },
+      "finishedAt": "2026-09-26T20:04:45.848Z"
+    },
+    {
+      "id": "step-2",
+      "operation": "read",
+      "title": {
+        "zh": "读取本地财务表格",
+        "en": "Read the local financial table"
+      },
+      "reason": {
+        "zh": "公开 FinQA 数据；标签不进入执行输入。",
+        "en": "Public FinQA data; evaluation labels are excluded from execution."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T20:04:45.848Z",
+      "parentStepId": null,
+      "input": {
+        "r2c1": 250470,
+        "r2c2": 129852,
+        "r2c3": 593175,
+        "r2c4": 347489,
+        "r2c5": 341841,
+        "r3c1": 1279337,
+        "r3c2": 1019953,
+        "r3c3": 1127772,
+        "r3c4": 702181,
+        "r3c5": 651370,
+        "r4c1": 917491,
+        "r4c2": 783031,
+        "r4c3": 536714,
+        "r4c4": 469006,
+        "r4c5": 319286,
+        "r5c1": 3644331,
+        "r5c2": 2865970,
+        "r5c3": 2092428,
+        "r5c4": 1576369,
+        "r5c5": 1155052,
+        "r6c1": 817388,
+        "r6c2": 666070,
+        "r6c3": 281546,
+        "r6c4": 151551,
+        "r6c5": 59858,
+        "r7c1": 2030900,
+        "r7c2": 1668222,
+        "r7c3": 1350300,
+        "r7c4": 1053354,
+        "r7c5": 816922
+      },
+      "retained": [],
+      "checks": [],
+      "receipts": [],
+      "output": {
+        "source": "finqa-47593c3344df.pdf",
+        "question": "what was the percentage change in working capital from 2015 to 2016?",
+        "cells": 30
+      },
+      "finishedAt": "2026-09-26T20:04:45.848Z"
+    },
+    {
+      "id": "step-3",
+      "operation": "analyze",
+      "title": {
+        "zh": "规划当前计算步骤",
+        "en": "Plan the current calculation"
+      },
+      "reason": {
+        "zh": "按本对照的方法构造可见输入。",
+        "en": "Construct the visible input according to this control. "
+      },
+      "location": "cloud",
+      "status": "completed",
+      "startedAt": "2026-09-26T20:04:45.848Z",
+      "parentStepId": "step-2",
+      "input": {
+        "r2c1": 250470,
+        "r2c2": 129852,
+        "r2c3": 593175,
+        "r2c4": 347489,
+        "r2c5": 341841,
+        "r3c1": 1279337,
+        "r3c2": 1019953,
+        "r3c3": 1127772,
+        "r3c4": 702181,
+        "r3c5": 651370,
+        "r4c1": 917491,
+        "r4c2": 783031,
+        "r4c3": 536714,
+        "r4c4": 469006,
+        "r4c5": 319286,
+        "r5c1": 3644331,
+        "r5c2": 2865970,
+        "r5c3": 2092428,
+        "r5c4": 1576369,
+        "r5c5": 1155052,
+        "r6c1": 817388,
+        "r6c2": 666070,
+        "r6c3": 281546,
+        "r6c4": 151551,
+        "r6c5": 59858,
+        "r7c1": 2030900,
+        "r7c2": 1668222,
+        "r7c3": 1350300,
+        "r7c4": 1053354,
+        "r7c5": 816922
+      },
+      "retained": [],
+      "checks": [
+        {
+          "kind": "serialized-request",
+          "ticketId": "d7363398-7f30-4c95-b5d0-584cc6f83590",
+          "sha256": "6e7efec112349f7547fdd4044a0aed35c466327d7cdb1b2bd159bf0ad098cd87",
+          "policyVersion": 1,
+          "overheadMs": 0.17640000000005784
+        }
+      ],
+      "receipts": [
+        "31e02e54-9416-4bb0-8784-dfd29de63475"
+      ],
+      "output": {
+        "requestedTool": {
+          "index": 0,
+          "id": "call_00_v9bRUQNDPaMFFXfICYyi3756",
+          "type": "function",
+          "function": {
+            "name": "submit_calculation",
+            "arguments": "{\"program\": [{\"op\": \"subtract\", \"args\": [{\"field\": \"r3c1\"}, {\"field\": \"r3c2\"}]}, {\"op\": \"divide\", \"args\": [{\"step\": 0}, {\"field\": \"r3c2\"}]}]}"
+          }
+        }
+      },
+      "recipient": "cloud-model",
+      "required": [
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r2c4",
+        "r2c5",
+        "r3c1",
+        "r3c2",
+        "r3c3",
+        "r3c4",
+        "r3c5",
+        "r4c1",
+        "r4c2",
+        "r4c3",
+        "r4c4",
+        "r4c5",
+        "r5c1",
+        "r5c2",
+        "r5c3",
+        "r5c4",
+        "r5c5",
+        "r6c1",
+        "r6c2",
+        "r6c3",
+        "r6c4",
+        "r6c5",
+        "r7c1",
+        "r7c2",
+        "r7c3",
+        "r7c4",
+        "r7c5"
+      ],
+      "plannedPolicyVersion": 1,
+      "requestPlan": {
+        "id": "d7363398-7f30-4c95-b5d0-584cc6f83590",
+        "recipient": "cloud-model",
+        "policyVersion": 1,
+        "sha256": "6e7efec112349f7547fdd4044a0aed35c466327d7cdb1b2bd159bf0ad098cd87",
+        "fields": [
+          "r2c1",
+          "r2c2",
+          "r2c3",
+          "r2c4",
+          "r2c5",
+          "r3c1",
+          "r3c2",
+          "r3c3",
+          "r3c4",
+          "r3c5",
+          "r4c1",
+          "r4c2",
+          "r4c3",
+          "r4c4",
+          "r4c5",
+          "r5c1",
+          "r5c2",
+          "r5c3",
+          "r5c4",
+          "r5c5",
+          "r6c1",
+          "r6c2",
+          "r6c3",
+          "r6c4",
+          "r6c5",
+          "r7c1",
+          "r7c2",
+          "r7c3",
+          "r7c4",
+          "r7c5"
+        ],
+        "dependencies": [
+          {
+            "field": "r2c1",
+            "sha256": "89f2417d347efb189c3a4460409da6dec473f826a03c6205f357dbf68150ade8"
+          },
+          {
+            "field": "r2c2",
+            "sha256": "4f7b8450aee9972b4f9c8553fd20a81c58da64d238d3a0d04064bd9db1c7b4f9"
+          },
+          {
+            "field": "r2c3",
+            "sha256": "9cfed6b9726ddd9d47c50454debe5ff83917a1ff3e9ff1b646ccc6371faa3457"
+          },
+          {
+            "field": "r2c4",
+            "sha256": "868edd536bbb18f11151744a5c2e70025e154c12671edc699a1e38c7650fc5d1"
+          },
+          {
+            "field": "r2c5",
+            "sha256": "3b47e3f4a20a6b0c82443b4f6a1d658d3835055ff1056ad3935e6386ae57f62e"
+          },
+          {
+            "field": "r3c1",
+            "sha256": "58c6abd3ae03ff11b10a319442ae72792b9d77c1afc560a38e729d7a5c171e26"
+          },
+          {
+            "field": "r3c2",
+            "sha256": "59f9818d32265b7a4b68e8e7ff7175b7b846700264d4795c96f8491018b8fa4a"
+          },
+          {
+            "field": "r3c3",
+            "sha256": "db6911ff13c1e28b1e98e0d8730b444e35ca2e561c1daa150a875cbdecacf454"
+          },
+          {
+            "field": "r3c4",
+            "sha256": "6a3663d3002f14ad6a180afb731f4fa843d517422878d194ed4a5cea5dd91db2"
+          },
+          {
+            "field": "r3c5",
+            "sha256": "3a7605751d9a95271a766f63febc5834a4bfcc6fd65034c013b4c36415d38d98"
+          },
+          {
+            "field": "r4c1",
+            "sha256": "bae720e58dca02992cf349c2e28db8a01fe9fa9b9e03d46d7213177ddf27374a"
+          },
+          {
+            "field": "r4c2",
+            "sha256": "ac58c70cd485570ab67bbc64ed5595a24f2a6d772cfa3e696f58742bc68bfdbf"
+          },
+          {
+            "field": "r4c3",
+            "sha256": "7939b78e9228c04c3732fcf5f4e4206141c7c444748940ad8bff147c0beb7821"
+          },
+          {
+            "field": "r4c4",
+            "sha256": "5574c1cdb6280a201aecca6aaefd5b3d3283975f9c53880d8ba7479a896f03c4"
+          },
+          {
+            "field": "r4c5",
+            "sha256": "f3fc2ab3a8c40fdb6ed0a947cab850fa0c0ddac39d3297b08950d28c75717c2b"
+          },
+          {
+            "field": "r5c1",
+            "sha256": "e9f13ba18ee09fd5d17edd1e3f6f9557631349bb1815e0aa79a276263ee36931"
+          },
+          {
+            "field": "r5c2",
+            "sha256": "4a3a4f16935ee5b3549c9b1931625ebdf0241d5240bade9900d37ac81287e7e5"
+          },
+          {
+            "field": "r5c3",
+            "sha256": "6a6bb02b7def75a0b613ca23892ef292a65fdf4e58a9df30d28b5842994fadb8"
+          },
+          {
+            "field": "r5c4",
+            "sha256": "30fdddc337aa54dbd9860c386f12545e5f7971faad1035d47c384378c7a4200a"
+          },
+          {
+            "field": "r5c5",
+            "sha256": "5beac473da50805452c0eb693b49beae88f56a3c008a6235751bde4a828aeffe"
+          },
+          {
+            "field": "r6c1",
+            "sha256": "d2ca6c3d7197df6a2cc7d5e5f4735fc72834a725f796cea2c0603a8bfdcc8e29"
+          },
+          {
+            "field": "r6c2",
+            "sha256": "ad477cc0901ee8793602b03ea266c6a44eafe1522d576ff6b83e4a87d66f2bde"
+          },
+          {
+            "field": "r6c3",
+            "sha256": "b1abdd4a5294626f11f084d37916ceba1b4bbdc4996b7482af242c4b6e380ed1"
+          },
+          {
+            "field": "r6c4",
+            "sha256": "8aad5c927ad60fb37175098c017653b3940c0c6f97b413a2870ad06a71f234e3"
+          },
+          {
+            "field": "r6c5",
+            "sha256": "c078d3d2290a8a0d0c39c6494682078ddb99f4b9f255f2bbc3be43eea7e914d5"
+          },
+          {
+            "field": "r7c1",
+            "sha256": "2d2730cb968caa5416b0a0d4598db912632565c977ac151242580b1d44a67b3c"
+          },
+          {
+            "field": "r7c2",
+            "sha256": "88ffec8b9a703be9b600d1ea3628174dac53cd104563e6c72605f8cbf0158efa"
+          },
+          {
+            "field": "r7c3",
+            "sha256": "b5b3e1204cb67ab6cfab052250baae6ebcda229cceac1fd6a57f9a0299658e19"
+          },
+          {
+            "field": "r7c4",
+            "sha256": "c286c2b8546273fa2f273d8b5c9a374bac2f4563e1ce3ba6e66952be2222bc70"
+          },
+          {
+            "field": "r7c5",
+            "sha256": "2a3c50056fb2045a5006862f32f429ead9a9878621cc67758d0cff7982ab108f"
+          }
+        ],
+        "receiptId": "31e02e54-9416-4bb0-8784-dfd29de63475",
+        "receiptVerified": true
+      },
+      "providerResponse": {
+        "id": "1e5f219b-3211-458d-9129-95825d1d460e",
+        "model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 2495,
+          "completion_tokens": 92,
+          "total_tokens": 2587,
+          "prompt_tokens_details": {
+            "cached_tokens": 2304
+          },
+          "prompt_cache_hit_tokens": 2304,
+          "prompt_cache_miss_tokens": 191
+        },
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "index": 0,
+              "id": "call_00_v9bRUQNDPaMFFXfICYyi3756",
+              "type": "function",
+              "function": {
+                "name": "submit_calculation",
+                "arguments": "{\"program\": [{\"op\": \"subtract\", \"args\": [{\"field\": \"r3c1\"}, {\"field\": \"r3c2\"}]}, {\"op\": \"divide\", \"args\": [{\"step\": 0}, {\"field\": \"r3c2\"}]}]}"
+              }
+            }
+          ]
+        }
+      },
+      "finishedAt": "2026-09-26T20:04:46.439Z"
+    },
+    {
+      "id": "step-4",
+      "operation": "evaluate_local",
+      "title": {
+        "zh": "在本地执行计算",
+        "en": "Execute the calculation locally"
+      },
+      "reason": {
+        "zh": "校验有限算子、字段权限与依赖；不运行模型生成的程序代码。",
+        "en": "Validate finite operators, authorized fields and dependencies; no generated code is executed."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T20:04:46.439Z",
+      "parentStepId": "step-3",
+      "input": {
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          }
+        ]
+      },
+      "retained": [
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r2c4",
+        "r2c5",
+        "r3c1",
+        "r3c2",
+        "r3c3",
+        "r3c4",
+        "r3c5",
+        "r4c1",
+        "r4c2",
+        "r4c3",
+        "r4c4",
+        "r4c5",
+        "r5c1",
+        "r5c2",
+        "r5c3",
+        "r5c4",
+        "r5c5",
+        "r6c1",
+        "r6c2",
+        "r6c3",
+        "r6c4",
+        "r6c5",
+        "r7c1",
+        "r7c2",
+        "r7c3",
+        "r7c4",
+        "r7c5"
+      ],
+      "checks": [],
+      "receipts": [],
+      "output": {
+        "value": 0.25430975741039047,
+        "programSha256": "7ca8935a74a43e40c454440b15825b5ddbac2250719fa928a991bf479007670b",
+        "dependencies": [
+          {
+            "field": "r3c1",
+            "sha256": "58c6abd3ae03ff11b10a319442ae72792b9d77c1afc560a38e729d7a5c171e26"
+          },
+          {
+            "field": "r3c2",
+            "sha256": "59f9818d32265b7a4b68e8e7ff7175b7b846700264d4795c96f8491018b8fa4a"
+          }
+        ]
+      },
+      "introducedAtRuntime": true,
+      "trigger": {
+        "modelStepId": "step-3",
+        "toolCallId": "call_00_v9bRUQNDPaMFFXfICYyi3756"
+      },
+      "dependencies": [
+        {
+          "field": "r3c1",
+          "sha256": "58c6abd3ae03ff11b10a319442ae72792b9d77c1afc560a38e729d7a5c171e26"
+        },
+        {
+          "field": "r3c2",
+          "sha256": "59f9818d32265b7a4b68e8e7ff7175b7b846700264d4795c96f8491018b8fa4a"
+        }
+      ],
+      "finishedAt": "2026-09-26T20:04:46.440Z"
+    },
+    {
+      "id": "step-5",
+      "operation": "assemble",
+      "title": {
+        "zh": "在本地生成可核对结果",
+        "en": "Assemble the inspectable result locally"
+      },
+      "reason": {
+        "zh": "结果与计算依赖可下载；耗时不含展示延迟。",
+        "en": "Download the result and dependencies; runtime excludes presentation delay."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-26T20:04:46.440Z",
+      "parentStepId": "step-4",
+      "input": {},
+      "retained": [],
+      "checks": [],
+      "receipts": [],
+      "output": {
+        "value": 0.25430975741039047,
+        "fileName": "result.md"
+      },
+      "finishedAt": "2026-09-26T20:04:46.440Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "step.started",
+      "at": "2026-09-26T20:04:45.848Z",
+      "stepId": "step-1"
+    },
+    {
+      "index": 2,
+      "type": "step.completed",
+      "at": "2026-09-26T20:04:45.848Z",
+      "stepId": "step-1"
+    },
+    {
+      "index": 3,
+      "type": "task.started",
+      "at": "2026-09-26T20:04:45.848Z",
+      "caseId": "finqa-47593c3344df"
+    },
+    {
+      "index": 4,
+      "type": "step.started",
+      "at": "2026-09-26T20:04:45.848Z",
+      "stepId": "step-2",
+      "title": {
+        "zh": "读取本地财务表格",
+        "en": "Read the local financial table"
+      }
+    },
+    {
+      "index": 5,
+      "type": "step.completed",
+      "at": "2026-09-26T20:04:45.848Z",
+      "stepId": "step-2"
+    },
+    {
+      "index": 6,
+      "type": "step.started",
+      "at": "2026-09-26T20:04:45.848Z",
+      "stepId": "step-3",
+      "title": {
+        "zh": "规划当前计算步骤",
+        "en": "Plan the current calculation"
+      }
+    },
+    {
+      "index": 7,
+      "type": "view.prepared",
+      "at": "2026-09-26T20:04:45.849Z",
+      "stepId": "step-3",
+      "keys": [
+        "r2c1",
+        "r2c2",
+        "r2c3",
+        "r2c4",
+        "r2c5",
+        "r3c1",
+        "r3c2",
+        "r3c3",
+        "r3c4",
+        "r3c5",
+        "r4c1",
+        "r4c2",
+        "r4c3",
+        "r4c4",
+        "r4c5",
+        "r5c1",
+        "r5c2",
+        "r5c3",
+        "r5c4",
+        "r5c5",
+        "r6c1",
+        "r6c2",
+        "r6c3",
+        "r6c4",
+        "r6c5",
+        "r7c1",
+        "r7c2",
+        "r7c3",
+        "r7c4",
+        "r7c5"
+      ]
+    },
+    {
+      "index": 8,
+      "type": "request.bound",
+      "at": "2026-09-26T20:04:45.849Z",
+      "stepId": "step-3",
+      "ticketId": "d7363398-7f30-4c95-b5d0-584cc6f83590",
+      "sha256": "6e7efec112349f7547fdd4044a0aed35c466327d7cdb1b2bd159bf0ad098cd87"
+    },
+    {
+      "index": 9,
+      "type": "receiver.received",
+      "at": "2026-09-26T20:04:46.439Z",
+      "stepId": "step-3",
+      "receiptId": "31e02e54-9416-4bb0-8784-dfd29de63475",
+      "recipient": "cloud-model"
+    },
+    {
+      "index": 10,
+      "type": "step.completed",
+      "at": "2026-09-26T20:04:46.439Z",
+      "stepId": "step-3"
+    },
+    {
+      "index": 11,
+      "type": "step.started",
+      "at": "2026-09-26T20:04:46.439Z",
+      "stepId": "step-4",
+      "title": {
+        "zh": "在本地执行计算",
+        "en": "Execute the calculation locally"
+      }
+    },
+    {
+      "index": 12,
+      "type": "step.discovered",
+      "at": "2026-09-26T20:04:46.439Z",
+      "stepId": "step-4",
+      "parentStepId": "step-3",
+      "toolCall": {
+        "index": 0,
+        "id": "call_00_v9bRUQNDPaMFFXfICYyi3756",
+        "type": "function",
+        "function": {
+          "name": "submit_calculation",
+          "arguments": "{\"program\": [{\"op\": \"subtract\", \"args\": [{\"field\": \"r3c1\"}, {\"field\": \"r3c2\"}]}, {\"op\": \"divide\", \"args\": [{\"step\": 0}, {\"field\": \"r3c2\"}]}]}"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "type": "step.completed",
+      "at": "2026-09-26T20:04:46.440Z",
+      "stepId": "step-4"
+    },
+    {
+      "index": 14,
+      "type": "step.started",
+      "at": "2026-09-26T20:04:46.440Z",
+      "stepId": "step-5",
+      "title": {
+        "zh": "在本地生成可核对结果",
+        "en": "Assemble the inspectable result locally"
+      }
+    },
+    {
+      "index": 15,
+      "type": "step.completed",
+      "at": "2026-09-26T20:04:46.440Z",
+      "stepId": "step-5"
+    },
+    {
+      "index": 16,
+      "type": "run.completed",
+      "at": "2026-09-26T20:04:46.440Z",
+      "status": "completed"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "31e02e54-9416-4bb0-8784-dfd29de63475",
+      "runId": "dd0d961c-50a6-44a0-9d6a-1c0ce4ac04c0",
+      "stepId": "step-3",
+      "recipient": "cloud-model",
+      "receivedAt": "2026-09-26T20:04:45.852Z",
+      "bytes": 8318,
+      "sha256": "6e7efec112349f7547fdd4044a0aed35c466327d7cdb1b2bd159bf0ad098cd87",
+      "rawBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":900,\"messages\":[{\"role\":\"system\",\"content\":\"You plan a numerical operation over a local financial table. Return exactly one registered tool call, no prose. Produce the complete calculation; do not use external knowledge or invent cell values. The local interpreter is the only calculator. Never request information unrelated to this question.\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"what was the percentage change in working capital from 2015 to 2016?\\\",\\\"schema\\\":[{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"Cash and cash equivalents\\\",\\\"column\\\":\\\"2016\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r2c2\\\",\\\"row\\\":\\\"Cash and cash equivalents\\\",\\\"column\\\":\\\"2015\\\",\\\"columnIndex\\\":2,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r2c3\\\",\\\"row\\\":\\\"Cash and cash equivalents\\\",\\\"column\\\":\\\"2014\\\",\\\"columnIndex\\\":3,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r2c4\\\",\\\"row\\\":\\\"Cash and cash equivalents\\\",\\\"column\\\":\\\"2013\\\",\\\"columnIndex\\\":4,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r2c5\\\",\\\"row\\\":\\\"Cash and cash equivalents\\\",\\\"column\\\":\\\"2012\\\",\\\"columnIndex\\\":5,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c1\\\",\\\"row\\\":\\\"Working capital (1)\\\",\\\"column\\\":\\\"2016\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c2\\\",\\\"row\\\":\\\"Working capital (1)\\\",\\\"column\\\":\\\"2015\\\",\\\"columnIndex\\\":2,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c3\\\",\\\"row\\\":\\\"Working capital (1)\\\",\\\"column\\\":\\\"2014\\\",\\\"columnIndex\\\":3,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c4\\\",\\\"row\\\":\\\"Working capital (1)\\\",\\\"column\\\":\\\"2013\\\",\\\"columnIndex\\\":4,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c5\\\",\\\"row\\\":\\\"Working capital (1)\\\",\\\"column\\\":\\\"2012\\\",\\\"columnIndex\\\":5,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c1\\\",\\\"row\\\":\\\"Inventories\\\",\\\"column\\\":\\\"2016\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c2\\\",\\\"row\\\":\\\"Inventories\\\",\\\"column\\\":\\\"2015\\\",\\\"columnIndex\\\":2,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c3\\\",\\\"row\\\":\\\"Inventories\\\",\\\"column\\\":\\\"2014\\\",\\\"columnIndex\\\":3,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c4\\\",\\\"row\\\":\\\"Inventories\\\",\\\"column\\\":\\\"2013\\\",\\\"columnIndex\\\":4,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c5\\\",\\\"row\\\":\\\"Inventories\\\",\\\"column\\\":\\\"2012\\\",\\\"columnIndex\\\":5,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c1\\\",\\\"row\\\":\\\"Total assets\\\",\\\"column\\\":\\\"2016\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c2\\\",\\\"row\\\":\\\"Total assets\\\",\\\"column\\\":\\\"2015\\\",\\\"columnIndex\\\":2,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c3\\\",\\\"row\\\":\\\"Total assets\\\",\\\"column\\\":\\\"2014\\\",\\\"columnIndex\\\":3,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c4\\\",\\\"row\\\":\\\"Total assets\\\",\\\"column\\\":\\\"2013\\\",\\\"columnIndex\\\":4,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c5\\\",\\\"row\\\":\\\"Total assets\\\",\\\"column\\\":\\\"2012\\\",\\\"columnIndex\\\":5,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c1\\\",\\\"row\\\":\\\"Total debt, including current maturities\\\",\\\"column\\\":\\\"2016\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c2\\\",\\\"row\\\":\\\"Total debt, including current maturities\\\",\\\"column\\\":\\\"2015\\\",\\\"columnIndex\\\":2,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c3\\\",\\\"row\\\":\\\"Total debt, including current maturities\\\",\\\"column\\\":\\\"2014\\\",\\\"columnIndex\\\":3,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c4\\\",\\\"row\\\":\\\"Total debt, including current maturities\\\",\\\"column\\\":\\\"2013\\\",\\\"columnIndex\\\":4,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c5\\\",\\\"row\\\":\\\"Total debt, including current maturities\\\",\\\"column\\\":\\\"2012\\\",\\\"columnIndex\\\":5,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c1\\\",\\\"row\\\":\\\"Total stockholders’ equity\\\",\\\"column\\\":\\\"2016\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c2\\\",\\\"row\\\":\\\"Total stockholders’ equity\\\",\\\"column\\\":\\\"2015\\\",\\\"columnIndex\\\":2,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c3\\\",\\\"row\\\":\\\"Total stockholders’ equity\\\",\\\"column\\\":\\\"2014\\\",\\\"columnIndex\\\":3,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c4\\\",\\\"row\\\":\\\"Total stockholders’ equity\\\",\\\"column\\\":\\\"2013\\\",\\\"columnIndex\\\":4,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c5\\\",\\\"row\\\":\\\"Total stockholders’ equity\\\",\\\"column\\\":\\\"2012\\\",\\\"columnIndex\\\":5,\\\"unitHint\\\":\\\"(In thousands)\\\",\\\"valueUnit\\\":\\\"source units\\\"}],\\\"facts\\\":{\\\"r2c1\\\":250470,\\\"r2c2\\\":129852,\\\"r2c3\\\":593175,\\\"r2c4\\\":347489,\\\"r2c5\\\":341841,\\\"r3c1\\\":1279337,\\\"r3c2\\\":1019953,\\\"r3c3\\\":1127772,\\\"r3c4\\\":702181,\\\"r3c5\\\":651370,\\\"r4c1\\\":917491,\\\"r4c2\\\":783031,\\\"r4c3\\\":536714,\\\"r4c4\\\":469006,\\\"r4c5\\\":319286,\\\"r5c1\\\":3644331,\\\"r5c2\\\":2865970,\\\"r5c3\\\":2092428,\\\"r5c4\\\":1576369,\\\"r5c5\\\":1155052,\\\"r6c1\\\":817388,\\\"r6c2\\\":666070,\\\"r6c3\\\":281546,\\\"r6c4\\\":151551,\\\"r6c5\\\":59858,\\\"r7c1\\\":2030900,\\\"r7c2\\\":1668222,\\\"r7c3\\\":1350300,\\\"r7c4\\\":1053354,\\\"r7c5\\\":816922},\\\"instruction\\\":\\\"Use the table schema to identify operands. Unprovided cell values are available to the local interpreter. Do not treat a hidden value as missing source data. Currency symbols and commas have been removed; a cell displayed as 12% is stored as 12. Preserve source units. Output convention: ratios and percent changes are fractions; DO NOT multiply the final ratio by 100. A change from old to new is (new-old)/old, keeping a negative sign for a decrease. Constants must be stated in the question or be conventional arithmetic constants such as 0, 1 or 100.\\\",\\\"tableStructure\\\":[{\\\"sourceRow\\\":0,\\\"role\\\":\\\"header\\\",\\\"cells\\\":[\\\"\\\",\\\"At December 31,\\\"]},{\\\"sourceRow\\\":1,\\\"role\\\":\\\"header\\\",\\\"cells\\\":[\\\"(In thousands)\\\",\\\"2016\\\",\\\"2015\\\",\\\"2014\\\",\\\"2013\\\",\\\"2012\\\"]},{\\\"sourceRow\\\":2,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Cash and cash equivalents\\\",\\\"{r2c1}\\\",\\\"{r2c2}\\\",\\\"{r2c3}\\\",\\\"{r2c4}\\\",\\\"{r2c5}\\\"]},{\\\"sourceRow\\\":3,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Working capital (1)\\\",\\\"{r3c1}\\\",\\\"{r3c2}\\\",\\\"{r3c3}\\\",\\\"{r3c4}\\\",\\\"{r3c5}\\\"]},{\\\"sourceRow\\\":4,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Inventories\\\",\\\"{r4c1}\\\",\\\"{r4c2}\\\",\\\"{r4c3}\\\",\\\"{r4c4}\\\",\\\"{r4c5}\\\"]},{\\\"sourceRow\\\":5,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Total assets\\\",\\\"{r5c1}\\\",\\\"{r5c2}\\\",\\\"{r5c3}\\\",\\\"{r5c4}\\\",\\\"{r5c5}\\\"]},{\\\"sourceRow\\\":6,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Total debt, including current maturities\\\",\\\"{r6c1}\\\",\\\"{r6c2}\\\",\\\"{r6c3}\\\",\\\"{r6c4}\\\",\\\"{r6c5}\\\"]},{\\\"sourceRow\\\":7,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Total stockholders’ equity\\\",\\\"{r7c1}\\\",\\\"{r7c2}\\\",\\\"{r7c3}\\\",\\\"{r7c4}\\\",\\\"{r7c5}\\\"]}]}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the complete calculation as a finite program. It executes locally. Use field IDs for source values, never guessed or remembered values. Each step has two arguments; step references are zero-based and backward only. The last step is the numerical answer. Return proportions as fractions (e.g. 0.25, not 25) unless the question explicitly asks for a percentage-point difference.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}}}",
+      "processId": 27212,
+      "responseSha256": "d9212ebf8a8002e611c1686ce518a69fc3fa1f827936d6b5c6b973a3f30bb4ab",
+      "usage": {
+        "prompt_tokens": 2495,
+        "completion_tokens": 92,
+        "total_tokens": 2587,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304
+        },
+        "prompt_cache_hit_tokens": 2304,
+        "prompt_cache_miss_tokens": 191
+      },
+      "providerId": "1e5f219b-3211-458d-9129-95825d1d460e",
+      "status": 200,
+      "finishedAt": "2026-09-26T20:04:46.437Z"
+    }
+  ],
+  "result": {
+    "issueCodes": [
+      "NUMERICAL_RESULT"
+    ],
+    "amount": 0.25430975741039047,
+    "summary": "0.25430975741039047",
+    "recommendation": "",
+    "evidenceIds": [
+      "r3c1",
+      "r3c2"
+    ],
+    "citations": [
+      "finqa-47593c3344df.pdf"
+    ]
+  },
+  "report": "# FinQA · UAA/2016/page_42.pdf-4\n\nwhat was the percentage change in working capital from 2015 to 2016?\n\nResult: 0.25430975741039047\n\nSource: finqa-47593c3344df.pdf\n\nProgram:\n\n```json\n[\n  {\n    \"op\": \"subtract\",\n    \"args\": [\n      {\n        \"field\": \"r3c1\"\n      },\n      {\n        \"field\": \"r3c2\"\n      }\n    ]\n  },\n  {\n    \"op\": \"divide\",\n    \"args\": [\n      {\n        \"step\": 0\n      },\n      {\n        \"field\": \"r3c2\"\n      }\n    ]\n  }\n]\n```\n\nDependencies: r3c1, r3c2\n\nPublic table-only benchmark subset. Numeric correctness is checked separately against withheld FinQA labels. No semantic privacy guarantee.\n",
+  "error": null,
+  "metrics": {
+    "controlMs": [
+      0.17640000000005784
+    ],
+    "modelCalls": 1,
+    "toolCalls": 0,
+    "promptTokens": 2495,
+    "completionTokens": 92,
+    "totalBytes": 8318,
+    "schemaMs": 0.28369999999995343,
+    "elapsedMs": 592.4279999999999
+  },
+  "executionMode": "deepseek",
+  "startedAt": "2026-09-26T20:04:45.848Z",
+  "document": {
+    "file": "finqa-47593c3344df.pdf",
+    "sourceArtifact": "fixtures/finqa-v6/development.json",
+    "sha256": "f7c4c46848e002a5d25ebc84cabbef06f894927e87b35bff2d42ede7c2fbbb54",
+    "bytes": 112436,
+    "pages": 1
+  },
+  "evaluationMethod": "full_once",
+  "programCertificates": [
+    {
+      "value": 0.25430975741039047,
+      "program": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r3c1"
+            },
+            {
+              "field": "r3c2"
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c2"
+            }
+          ]
+        }
+      ],
+      "programSha256": "7ca8935a74a43e40c454440b15825b5ddbac2250719fa928a991bf479007670b",
+      "dependencies": [
+        {
+          "field": "r3c1",
+          "sha256": "58c6abd3ae03ff11b10a319442ae72792b9d77c1afc560a38e729d7a5c171e26"
+        },
+        {
+          "field": "r3c2",
+          "sha256": "59f9818d32265b7a4b68e8e7ff7175b7b846700264d4795c96f8491018b8fa4a"
+        }
+      ],
+      "intermediates": [
+        259384,
+        0.25430975741039047
+      ]
+    }
+  ],
+  "finishedAt": "2026-09-26T20:04:46.440Z"
+}

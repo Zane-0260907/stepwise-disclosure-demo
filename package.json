@@ -22,7 +22,12 @@
     "experiment:finqa": "node scripts/run-new-experiment.mjs",
     "experiment:controls": "node scripts/run-new-experiment.mjs --controls",
     "test:financial-ui": "node test/financial-ui.mjs",
-    "plot:v4": "python scripts/plot-v4.py"
+    "plot:v4": "python scripts/plot-v4.py",
+    "verify:v5": "node scripts/verify-v5.mjs",
+    "verify:v6": "node scripts/verify-v6.mjs",
+    "experiment:v6": "node scripts/run-v6.mjs",
+    "plot:v6": "python scripts/plot-v6.py",
+    "test:corrected-ui": "node test/corrected-ui.mjs"
   },
   "dependencies": {
     "pdfjs-dist": "^6.3.289"

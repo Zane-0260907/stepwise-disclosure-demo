@@ -1,0 +1,38 @@
+{
+  "scope": "Three additional runs of the documented year-header development case, excluded from all batch counts. No success-based choice.",
+  "runs": [
+    {
+      "id": "8f0c808d-6e8d-46aa-9e92-6c7ac58a8dd9",
+      "caseId": "finqa-47593c3344df",
+      "method": "local_once",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T20:04:44.694Z",
+      "label": {
+        "zh": "结构核对 · 本地计算",
+        "en": "Structure check · local calculation"
+      }
+    },
+    {
+      "id": "dd0d961c-50a6-44a0-9d6a-1c0ce4ac04c0",
+      "caseId": "finqa-47593c3344df",
+      "method": "full_once",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T20:04:45.848Z",
+      "label": {
+        "zh": "结构核对 · 全数值对照",
+        "en": "Structure check · all values"
+      }
+    },
+    {
+      "id": "1ec510a7-2e12-4d98-a399-ded0eddea351",
+      "caseId": "finqa-47593c3344df",
+      "method": "conflict_review",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T20:04:46.459Z",
+      "label": {
+        "zh": "结构核对 · 分歧补充",
+        "en": "Structure check · conflict view"
+      }
+    }
+  ]
+}

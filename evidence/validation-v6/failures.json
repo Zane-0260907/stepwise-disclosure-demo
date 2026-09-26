@@ -1,0 +1,8015 @@
+[
+  {
+    "runId": "b9138dd8-0e4e-41ec-8445-cdef0ef01e43",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "conflict_review",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 20511,
+    "elapsedMs": 1726.9268999999995,
+    "promptTokens": 5821,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      }
+    ]
+  },
+  {
+    "runId": "3e01887c-4c12-4b44-9e54-4949b55b8688",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "blind_review",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 20511,
+    "elapsedMs": 2120.1945000000005,
+    "promptTokens": 5821,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      }
+    ]
+  },
+  {
+    "runId": "d67b53e9-e4a3-4dd8-9f2d-86c423ffecb9",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "local_once",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 6662,
+    "elapsedMs": 491.2255000000014,
+    "promptTokens": 1910,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "ee26754b-5d1f-4bc7-aca5-e5251d9a1311",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "full_once",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 20,
+    "uniqueTransmittedCells": 20,
+    "extraGoldCells": 18,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 6929,
+    "elapsedMs": 696.6540999999997,
+    "promptTokens": 2057,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "0a8cbc94-ae34-4148-a31c-c4d9f719b544",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "requested_cells",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 2,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 12943,
+    "elapsedMs": 1038.667300000001,
+    "promptTokens": 3794,
+    "completionTokens": 108,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "01bf9b26-5279-4852-ab8d-f9bbe2f9dc4e",
+    "caseId": "finqa-6b8208b36192",
+    "method": "conflict_review",
+    "sourceId": "BLL/2006/page_67.pdf-2",
+    "sourceFile": "BLL/2006/page_67.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.9114129080488412,
+    "expected": 0.29841,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 4,
+    "modelCalls": 3,
+    "bytes": 21660,
+    "elapsedMs": 2341.4766999999983,
+    "promptTokens": 5929,
+    "completionTokens": 354,
+    "error": null,
+    "jobId": "finqa-6b8208b36192/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      }
+    ]
+  },
+  {
+    "runId": "96176a6b-88ef-4cb8-bf59-da8b8d484246",
+    "caseId": "finqa-6b8208b36192",
+    "method": "blind_review",
+    "sourceId": "BLL/2006/page_67.pdf-2",
+    "sourceFile": "BLL/2006/page_67.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.9114129080488412,
+    "expected": 0.29841,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 4,
+    "modelCalls": 3,
+    "bytes": 21660,
+    "elapsedMs": 2478.9456999999984,
+    "promptTokens": 5929,
+    "completionTokens": 354,
+    "error": null,
+    "jobId": "finqa-6b8208b36192/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      }
+    ]
+  },
+  {
+    "runId": "22762088-4769-4946-ae7c-0a0652ce746a",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "requested_cells",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 3,
+    "uniqueTransmittedCells": 3,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 2,
+    "bytes": 7669,
+    "elapsedMs": 1399.8017,
+    "promptTokens": 2264,
+    "completionTokens": 141,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "589e3bc0-eed3-4981-bedf-203e0097dafe",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "full_once",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 2,
+    "computedCells": 3,
+    "modelCalls": 1,
+    "bytes": 4154,
+    "elapsedMs": 908.4156000000003,
+    "promptTokens": 1231,
+    "completionTokens": 91,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "9e58d792-6c3a-41ba-aab2-a16fee302935",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "blind_review",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 3,
+    "bytes": 12723,
+    "elapsedMs": 2168.7811999999994,
+    "promptTokens": 3640,
+    "completionTokens": 273,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      }
+    ]
+  },
+  {
+    "runId": "f296f4e1-b0bf-4fef-95f5-b9cea6c1bba0",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "local_once",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 1,
+    "bytes": 4066,
+    "elapsedMs": 718.6600999999973,
+    "promptTokens": 1183,
+    "completionTokens": 91,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "d140b973-8172-4286-9674-bce16cd9ac40",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "conflict_review",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 3,
+    "bytes": 12723,
+    "elapsedMs": 2673.7774000000027,
+    "promptTokens": 3640,
+    "completionTokens": 273,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      }
+    ]
+  },
+  {
+    "runId": "12a790f4-7be3-49f9-99cd-f89c9034aa49",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "full_once",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 10,
+    "uniqueTransmittedCells": 10,
+    "extraGoldCells": 8,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4679,
+    "elapsedMs": 759.660899999999,
+    "promptTokens": 1413,
+    "completionTokens": 65,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 10,
+    "programs": []
+  },
+  {
+    "runId": "862b0e50-74ca-49b9-8582-da25d670d473",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "local_once",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4546,
+    "elapsedMs": 965.0088000000032,
+    "promptTokens": 1336,
+    "completionTokens": 65,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 10,
+    "programs": []
+  },
+  {
+    "runId": "b4857be2-7b86-4cde-a852-4dd5b4ef5517",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "conflict_review",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 14163,
+    "elapsedMs": 2350.955900000001,
+    "promptTokens": 4099,
+    "completionTokens": 195,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      }
+    ]
+  },
+  {
+    "runId": "b4b64beb-0f9e-4d32-8f19-20a7f5d16d41",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "requested_cells",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 4,
+    "uniqueTransmittedCells": 4,
+    "extraGoldCells": 2,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 8669,
+    "elapsedMs": 1574.9148999999998,
+    "promptTokens": 2602,
+    "completionTokens": 121,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 10,
+    "programs": []
+  },
+  {
+    "runId": "3509e8f5-378a-4708-be58-960909b3881b",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "blind_review",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 14163,
+    "elapsedMs": 2508.524699999998,
+    "promptTokens": 4099,
+    "completionTokens": 195,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      }
+    ]
+  },
+  {
+    "runId": "e4a414d3-f92f-4b76-9638-9678a4239652",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "full_once",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.19294666278053058,
+    "expected": 0.09302,
+    "transmittedCells": 16,
+    "uniqueTransmittedCells": 16,
+    "extraGoldCells": 14,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5797,
+    "elapsedMs": 791.8876000000018,
+    "promptTokens": 1766,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "edadd191-05e3-4233-a2a1-83187e7d9fff",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "local_once",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.08510011778563017,
+    "expected": 0.09302,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5549,
+    "elapsedMs": 1080.2721999999994,
+    "promptTokens": 1623,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "de782530-3d5a-4ef1-8155-b0fa92f08c98",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "blind_review",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.08510011778563017,
+    "expected": 0.09302,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 17172,
+    "elapsedMs": 2411.8886999999995,
+    "promptTokens": 4960,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      }
+    ]
+  },
+  {
+    "runId": "da536fa7-50ea-4848-8f6a-45dc0b6731a8",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "requested_cells",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.08510011778563017,
+    "expected": 0.09302,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 10692,
+    "elapsedMs": 1128.4088999999985,
+    "promptTokens": 3198,
+    "completionTokens": 136,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "5cf3aae5-c660-47f1-ae34-3b5d5120075f",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "conflict_review",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.19294666278053058,
+    "expected": 0.09302,
+    "transmittedCells": 1,
+    "uniqueTransmittedCells": 1,
+    "extraGoldCells": 1,
+    "computedCells": 2,
+    "modelCalls": 4,
+    "bytes": 23604,
+    "elapsedMs": 3768.0936999999976,
+    "promptTokens": 6811,
+    "completionTokens": 368,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/conflict_review/0",
+    "repetition": 0,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 1,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 2,
+      "fields": [
+        "r1c1"
+      ],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r1c1"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r6c1",
+              "r6c2"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 1
+      },
+      "method": "conflict_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c2"
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.19294666278053058
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c2"
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.19294666278053058
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c2"
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.19294666278053058
+      }
+    ]
+  },
+  {
+    "runId": "84955d84-c33b-4ac1-8e68-fc0cdc48a0fb",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "full_once",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 7,
+    "uniqueTransmittedCells": 7,
+    "extraGoldCells": 5,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4186,
+    "elapsedMs": 681.0896000000066,
+    "promptTokens": 1283,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "6530b199-e39f-4322-9d76-f5daa925f95c",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "local_once",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4095,
+    "elapsedMs": 660.4178999999931,
+    "promptTokens": 1233,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "0fccb5db-2947-4073-b52a-1a28eb771e0b",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "requested_cells",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 7718,
+    "elapsedMs": 1409.9016000000047,
+    "promptTokens": 2362,
+    "completionTokens": 108,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "ad4d17b4-3ef8-4b19-84e5-a5cb42508e8c",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "blind_review",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 12810,
+    "elapsedMs": 1602.8330999999962,
+    "promptTokens": 3790,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      }
+    ]
+  },
+  {
+    "runId": "dbe6f486-3dfa-4e86-9b35-d440f3623527",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "conflict_review",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 12810,
+    "elapsedMs": 2165.144500000002,
+    "promptTokens": 3790,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      }
+    ]
+  },
+  {
+    "runId": "89a871b9-fda4-4325-ac6b-c9186e9b9f53",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "requested_cells",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 1,
+    "bytes": 11654,
+    "elapsedMs": 779.3680000000022,
+    "promptTokens": 3508,
+    "completionTokens": 44,
+    "error": "UNAUTHORIZED_CELL_REQUEST",
+    "jobId": "finqa-064151ed2d8e/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "programs": []
+  },
+  {
+    "runId": "bb94546c-3e14-4518-9884-d7e2ac845577",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "local_once",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 1,
+    "bytes": 11838,
+    "elapsedMs": 501.0194000000047,
+    "promptTokens": 3357,
+    "completionTokens": 64,
+    "error": "LOCAL_PROGRAM_FIELD",
+    "jobId": "finqa-064151ed2d8e/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "programs": []
+  },
+  {
+    "runId": "10475eaf-aff9-4ec0-911c-c3633e4e4ecf",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "blind_review",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "failed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 3,
+    "bytes": 36039,
+    "elapsedMs": 2040.8673999999955,
+    "promptTokens": 10162,
+    "completionTokens": 192,
+    "error": "NO_VALID_CANDIDATE",
+    "jobId": "finqa-064151ed2d8e/blind_review/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "decision": null,
+    "programs": [
+      {
+        "role": 0,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 1,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 2,
+        "error": "LOCAL_PROGRAM_FIELD"
+      }
+    ]
+  },
+  {
+    "runId": "63ca8309-9224-4395-9520-d0f8ac84ed28",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "conflict_review",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "failed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 3,
+    "bytes": 36039,
+    "elapsedMs": 2518.7309000000023,
+    "promptTokens": 10162,
+    "completionTokens": 192,
+    "error": "NO_VALID_CANDIDATE",
+    "jobId": "finqa-064151ed2d8e/conflict_review/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "decision": null,
+    "programs": [
+      {
+        "role": 0,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 1,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 2,
+        "error": "LOCAL_PROGRAM_FIELD"
+      }
+    ]
+  },
+  {
+    "runId": "e23e42d9-057d-4efb-b4ff-bb91ebf84fa2",
+    "caseId": "finqa-2b3abd65fef6",
+    "method": "full_once",
+    "sourceId": "APD/2018/page_30.pdf-2",
+    "sourceFile": "APD/2018/page_30.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54,
+    "expected": 0.14555,
+    "transmittedCells": 5,
+    "uniqueTransmittedCells": 5,
+    "extraGoldCells": 3,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 3491,
+    "elapsedMs": 510.5590000000011,
+    "promptTokens": 1101,
+    "completionTokens": 65,
+    "error": null,
+    "jobId": "finqa-2b3abd65fef6/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 5,
+    "programs": []
+  },
+  {
+    "runId": "156444ee-cfa8-4f1d-a4fb-477e984bd252",
+    "caseId": "finqa-e073d710551a",
+    "method": "local_once",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.4444444444444446,
+    "expected": 1.69231,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 6337,
+    "elapsedMs": 674.6564999999973,
+    "promptTokens": 1888,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-e073d710551a/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 18,
+    "programs": []
+  },
+  {
+    "runId": "112f9a69-cc9e-43ee-a733-cb677024d492",
+    "caseId": "finqa-e073d710551a",
+    "method": "requested_cells",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 1.69231,
+    "transmittedCells": 12,
+    "uniqueTransmittedCells": 12,
+    "extraGoldCells": 11,
+    "computedCells": 0,
+    "modelCalls": 2,
+    "bytes": 12424,
+    "elapsedMs": 1314.8961000000054,
+    "promptTokens": 3818,
+    "completionTokens": 168,
+    "error": "LOCAL_PROGRAM_FIELD",
+    "jobId": "finqa-e073d710551a/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 18,
+    "programs": []
+  },
+  {
+    "runId": "fb4f006b-4bb1-4be3-a95c-93caff016bfb",
+    "caseId": "finqa-e073d710551a",
+    "method": "blind_review",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.4444444444444446,
+    "expected": 1.69231,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 19536,
+    "elapsedMs": 2172.561600000001,
+    "promptTokens": 5755,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-e073d710551a/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      }
+    ]
+  },
+  {
+    "runId": "8d952cc7-845e-4327-883a-5159ba2e8c29",
+    "caseId": "finqa-e073d710551a",
+    "method": "conflict_review",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.4444444444444446,
+    "expected": 1.69231,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 19536,
+    "elapsedMs": 2247.449999999997,
+    "promptTokens": 5755,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-e073d710551a/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      }
+    ]
+  },
+  {
+    "runId": "1888166f-11a8-4df4-b4b2-cd57af70a28c",
+    "caseId": "finqa-ca188c838d36",
+    "method": "full_once",
+    "sourceId": "DISH/2011/page_122.pdf-2",
+    "sourceFile": "DISH/2011/page_122.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.19902476196999794,
+    "expected": 0.12271,
+    "transmittedCells": 7,
+    "uniqueTransmittedCells": 7,
+    "extraGoldCells": 5,
+    "computedCells": 3,
+    "modelCalls": 1,
+    "bytes": 4207,
+    "elapsedMs": 562.8861999999936,
+    "promptTokens": 1216,
+    "completionTokens": 91,
+    "error": null,
+    "jobId": "finqa-ca188c838d36/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "2089738c-d6f8-4920-9be2-2e8a801a3082",
+    "caseId": "finqa-03c3f090394d",
+    "method": "requested_cells",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 6921,
+    "elapsedMs": 1129.7812000000267,
+    "promptTokens": 2038,
+    "completionTokens": 136,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "ca3240f1-9ab8-4d4c-9b76-970ef71a81f1",
+    "caseId": "finqa-03c3f090394d",
+    "method": "full_once",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 4,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 3777,
+    "elapsedMs": 735.5512000000017,
+    "promptTokens": 1124,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "259dac87-b947-44ba-8730-859cfee6396d",
+    "caseId": "finqa-03c3f090394d",
+    "method": "local_once",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 3700,
+    "elapsedMs": 727.7519000000029,
+    "promptTokens": 1073,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "d516b2c7-d504-4144-8a5b-5b29677bb64d",
+    "caseId": "finqa-03c3f090394d",
+    "method": "blind_review",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 11625,
+    "elapsedMs": 1964.4075000000012,
+    "promptTokens": 3310,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      }
+    ]
+  },
+  {
+    "runId": "c6f18bae-eff8-44ff-9ed3-68fe14de4383",
+    "caseId": "finqa-03c3f090394d",
+    "method": "conflict_review",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 11625,
+    "elapsedMs": 2262.1041000000114,
+    "promptTokens": 3310,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      }
+    ]
+  },
+  {
+    "runId": "47a613d9-94ac-463c-99cc-bfb1cdf3cbf0",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "requested_cells",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -626,
+    "expected": -292,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 4,
+    "computedCells": 6,
+    "modelCalls": 2,
+    "bytes": 6729,
+    "elapsedMs": 1617.2018999999855,
+    "promptTokens": 2156,
+    "completionTokens": 239,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "ec9cd0f2-d0c9-45b0-b1ce-077e70c984ae",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "full_once",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -626,
+    "expected": -292,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 4,
+    "computedCells": 6,
+    "modelCalls": 1,
+    "bytes": 3658,
+    "elapsedMs": 952.1460999999981,
+    "promptTokens": 1163,
+    "completionTokens": 171,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "19069e28-3b1e-45fb-a558-360d28fc869c",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "blind_review",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 16497,
+    "elapsedMs": 2222.150400000013,
+    "promptTokens": 4747,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      }
+    ]
+  },
+  {
+    "runId": "52a6e9dd-fd5a-4df2-9a67-402889cf7ed0",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "conflict_review",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 8,
+    "expected": -292,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 1,
+    "computedCells": 2,
+    "modelCalls": 4,
+    "bytes": 15640,
+    "elapsedMs": 3215.9824999999983,
+    "promptTokens": 4773,
+    "completionTokens": 309,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/conflict_review/0",
+    "repetition": 0,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 2,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 3,
+      "fields": [
+        "r2c1",
+        "r2c2"
+      ],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r2c1",
+          "r2c2"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r2c1",
+              "r2c2",
+              "r3c1",
+              "r3c2"
+            ],
+            "kind": "dependency"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "fields": [
+              "r2c1",
+              "r3c1"
+            ],
+            "kind": "dependency"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "fields": [
+              "r2c2",
+              "r3c2"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 2
+      },
+      "method": "conflict_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c2"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          }
+        ],
+        "value": 8
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": -292
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "value": -284
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c2"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          }
+        ],
+        "value": 8
+      }
+    ]
+  },
+  {
+    "runId": "e5f2a7ef-f657-4ce1-9522-7e0fa8ad5690",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "blind_review",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 8,
+    "expected": -292,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 4,
+    "bytes": 15615,
+    "elapsedMs": 4264.256399999998,
+    "promptTokens": 4760,
+    "completionTokens": 309,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/blind_review/0",
+    "repetition": 0,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 3,
+      "fields": [],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r2c1",
+          "r2c2"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r2c1",
+              "r2c2",
+              "r3c1",
+              "r3c2"
+            ],
+            "kind": "dependency"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "fields": [
+              "r2c1",
+              "r3c1"
+            ],
+            "kind": "dependency"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "fields": [
+              "r2c2",
+              "r3c2"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 2
+      },
+      "method": "blind_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c2"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          }
+        ],
+        "value": 8
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": -292
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "value": -284
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c2"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          }
+        ],
+        "value": 8
+      }
+    ]
+  },
+  {
+    "runId": "36bf59ae-86d3-4ff1-ab80-fefc5daab8a4",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "full_once",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 15,
+    "uniqueTransmittedCells": 15,
+    "extraGoldCells": 13,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5529,
+    "elapsedMs": 724.4688000000024,
+    "promptTokens": 1686,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 15,
+    "programs": []
+  },
+  {
+    "runId": "c0464e89-1a7e-44c9-8633-5e09e9a78ab2",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "local_once",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5324,
+    "elapsedMs": 696.9562000000005,
+    "promptTokens": 1552,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 15,
+    "programs": []
+  },
+  {
+    "runId": "9968270f-804c-4952-9ca4-dc5cfc1f7103",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "conflict_review",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 16497,
+    "elapsedMs": 2673.4107999999833,
+    "promptTokens": 4747,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/conflict_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      }
+    ]
+  },
+  {
+    "runId": "1c52af6b-d849-4bd2-8c7d-c242bd95dae8",
+    "caseId": "finqa-a5e77742c3b6",
+    "method": "local_once",
+    "sourceId": "D/2002/page_87.pdf-2",
+    "sourceFile": "D/2002/page_87.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.18565400843881857,
+    "expected": 0.07683,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5256,
+    "elapsedMs": 488.2853999999934,
+    "promptTokens": 1563,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-a5e77742c3b6/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "be24b37d-b38b-43d0-bf62-9929a45f0d82",
+    "caseId": "finqa-a5e77742c3b6",
+    "method": "full_once",
+    "sourceId": "D/2002/page_87.pdf-2",
+    "sourceFile": "D/2002/page_87.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.18565400843881857,
+    "expected": 0.07683,
+    "transmittedCells": 16,
+    "uniqueTransmittedCells": 16,
+    "extraGoldCells": 14,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5461,
+    "elapsedMs": 748.0547999999981,
+    "promptTokens": 1677,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-a5e77742c3b6/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "53d4dc9f-016a-43ce-871a-54cdf8e90740",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "requested_cells",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 10234,
+    "elapsedMs": 1550.825800000006,
+    "promptTokens": 3050,
+    "completionTokens": 136,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 15,
+    "programs": []
+  },
+  {
+    "runId": "19caaf8c-3f0e-4f10-969c-a9c9b9a84e96",
+    "caseId": "finqa-a5e77742c3b6",
+    "method": "requested_cells",
+    "sourceId": "D/2002/page_87.pdf-2",
+    "sourceFile": "D/2002/page_87.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.07683,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 1,
+    "bytes": 4820,
+    "elapsedMs": 901.3962000000029,
+    "promptTokens": 1498,
+    "completionTokens": 116,
+    "error": "UNAUTHORIZED_CELL_REQUEST",
+    "jobId": "finqa-a5e77742c3b6/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "73e86bc3-45b8-4b57-a471-ce9bb82ece7d",
+    "caseId": "finqa-3f1ad92b0636",
+    "method": "requested_cells",
+    "sourceId": "MRO/2004/page_46.pdf-3",
+    "sourceFile": "MRO/2004/page_46.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 1279878.82,
+    "expected": 1723732.78,
+    "transmittedCells": 8,
+    "uniqueTransmittedCells": 8,
+    "extraGoldCells": 6,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 7849,
+    "elapsedMs": 1163.21669999999,
+    "promptTokens": 2708,
+    "completionTokens": 145,
+    "error": null,
+    "jobId": "finqa-3f1ad92b0636/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "f0408b08-39d0-41b8-889d-581c302be329",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "local_once",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 1,
+    "modelCalls": 1,
+    "bytes": 5168,
+    "elapsedMs": 547.8588000000018,
+    "promptTokens": 1358,
+    "completionTokens": 60,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/local_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "e9d795f3-a135-4ce0-8f70-7faefb902876",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "requested_cells",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.590898,
+    "expected": 57.20703,
+    "transmittedCells": 1,
+    "uniqueTransmittedCells": 1,
+    "extraGoldCells": 0,
+    "computedCells": 1,
+    "modelCalls": 2,
+    "bytes": 9860,
+    "elapsedMs": 1559.9058000000077,
+    "promptTokens": 2611,
+    "completionTokens": 100,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/requested_cells/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "aa13866a-6848-4895-92d8-4385595e9444",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "blind_review",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 1,
+    "modelCalls": 3,
+    "bytes": 16029,
+    "elapsedMs": 2250.082300000009,
+    "promptTokens": 4165,
+    "completionTokens": 180,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/blind_review/0",
+    "repetition": 0,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      }
+    ]
+  },
+  {
+    "runId": "aa070b42-00d3-405a-9e38-6c63ab98ca9b",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "full_once",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 3533410,
+    "expected": 57.20703,
+    "transmittedCells": 8,
+    "uniqueTransmittedCells": 8,
+    "extraGoldCells": 6,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5293,
+    "elapsedMs": 944.2415000000037,
+    "promptTokens": 1426,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/full_once/0",
+    "repetition": 0,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "380b7771-e300-4afb-8753-7baaae29d1b5",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "conflict_review",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 1,
+    "uniqueTransmittedCells": 1,
+    "extraGoldCells": 1,
+    "computedCells": 1,
+    "modelCalls": 4,
+    "bytes": 21862,
+    "elapsedMs": 2683.7658999999985,
+    "promptTokens": 5679,
+    "completionTokens": 244,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/conflict_review/0",
+    "repetition": 0,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 1,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 2,
+      "fields": [
+        "r1c3"
+      ],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r1c3"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r1c3"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 1
+      },
+      "method": "conflict_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c3"
+              }
+            ]
+          }
+        ],
+        "value": 3533410
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      }
+    ]
+  },
+  {
+    "runId": "1e06ff03-4a87-4dba-94c2-3c954259c382",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "full_once",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 20,
+    "uniqueTransmittedCells": 20,
+    "extraGoldCells": 18,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 6929,
+    "elapsedMs": 473.3648000000103,
+    "promptTokens": 2057,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "76fcd0fc-e304-4b6c-a412-d13cad7d7d72",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "local_once",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 6662,
+    "elapsedMs": 609.1419999999925,
+    "promptTokens": 1910,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "36c1f23d-35af-4b0a-b859-351706924719",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "conflict_review",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 20511,
+    "elapsedMs": 2342.690699999992,
+    "promptTokens": 5821,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      }
+    ]
+  },
+  {
+    "runId": "3cbc1e5b-e07a-47c1-8cca-819aff211917",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "requested_cells",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 2,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 12943,
+    "elapsedMs": 1230.8924000000115,
+    "promptTokens": 3794,
+    "completionTokens": 108,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "b59ae6e2-ca6f-4a8a-a09a-43261c8a0cbb",
+    "caseId": "finqa-6b8208b36192",
+    "method": "local_once",
+    "sourceId": "BLL/2006/page_67.pdf-2",
+    "sourceFile": "BLL/2006/page_67.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.9114129080488412,
+    "expected": 0.29841,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 4,
+    "modelCalls": 1,
+    "bytes": 7045,
+    "elapsedMs": 790.341900000014,
+    "promptTokens": 1946,
+    "completionTokens": 118,
+    "error": null,
+    "jobId": "finqa-6b8208b36192/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 20,
+    "programs": []
+  },
+  {
+    "runId": "b565f792-266c-4459-b5d3-5752f94e3291",
+    "caseId": "finqa-2c9778930fe3",
+    "method": "blind_review",
+    "sourceId": "CMCSA/2008/page_36.pdf-3",
+    "sourceFile": "CMCSA/2008/page_36.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.54688972667295,
+    "expected": 0.56754,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 20511,
+    "elapsedMs": 1881.2853000000032,
+    "promptTokens": 5821,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-2c9778930fe3/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c3"
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.54688972667295
+      }
+    ]
+  },
+  {
+    "runId": "57b241bf-2a3f-4823-bcfd-a18fcc7382e7",
+    "caseId": "finqa-6b8208b36192",
+    "method": "blind_review",
+    "sourceId": "BLL/2006/page_67.pdf-2",
+    "sourceFile": "BLL/2006/page_67.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.9114129080488412,
+    "expected": 0.29841,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 4,
+    "modelCalls": 3,
+    "bytes": 21660,
+    "elapsedMs": 2190.836200000005,
+    "promptTokens": 5929,
+    "completionTokens": 354,
+    "error": null,
+    "jobId": "finqa-6b8208b36192/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      }
+    ]
+  },
+  {
+    "runId": "f1bfae5c-b5c8-4032-8931-606ee075d43e",
+    "caseId": "finqa-6b8208b36192",
+    "method": "conflict_review",
+    "sourceId": "BLL/2006/page_67.pdf-2",
+    "sourceFile": "BLL/2006/page_67.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.9114129080488412,
+    "expected": 0.29841,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 4,
+    "modelCalls": 3,
+    "bytes": 21660,
+    "elapsedMs": 2280.82680000001,
+    "promptTokens": 5929,
+    "completionTokens": 354,
+    "error": null,
+    "jobId": "finqa-6b8208b36192/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c3"
+              },
+              {
+                "field": "r3c3"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r4c3"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c3"
+              }
+            ]
+          }
+        ],
+        "value": 0.9114129080488412
+      }
+    ]
+  },
+  {
+    "runId": "b7948817-d5f8-4b3e-87e5-623f7d00a28e",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "full_once",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 2,
+    "computedCells": 3,
+    "modelCalls": 1,
+    "bytes": 4154,
+    "elapsedMs": 685.7929999999906,
+    "promptTokens": 1231,
+    "completionTokens": 91,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "0140b729-83a8-4c98-ad91-ce54fb488eb2",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "local_once",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 1,
+    "bytes": 4066,
+    "elapsedMs": 728.4867999999988,
+    "promptTokens": 1183,
+    "completionTokens": 91,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "f124fd33-6cf6-4726-acb7-84120beec426",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "conflict_review",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 3,
+    "bytes": 12723,
+    "elapsedMs": 1897.464300000007,
+    "promptTokens": 3640,
+    "completionTokens": 273,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      }
+    ]
+  },
+  {
+    "runId": "99cf289f-d3ce-4568-aa24-b7fdeb08eb68",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "requested_cells",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 3,
+    "uniqueTransmittedCells": 3,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 2,
+    "bytes": 7669,
+    "elapsedMs": 1314.5202999999892,
+    "promptTokens": 2264,
+    "completionTokens": 141,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "c7f358dd-0c9d-41ce-a17a-fe7a8d4bd3c7",
+    "caseId": "finqa-96b9a0eda522",
+    "method": "blind_review",
+    "sourceId": "HOLX/2007/page_126.pdf-1",
+    "sourceFile": "HOLX/2007/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 32100,
+    "expected": 79900,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 3,
+    "bytes": 12723,
+    "elapsedMs": 2846.5289999999804,
+    "promptTokens": 3640,
+    "completionTokens": 273,
+    "error": null,
+    "jobId": "finqa-96b9a0eda522/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": 32100
+      }
+    ]
+  },
+  {
+    "runId": "3cf0edf9-a8c1-4d44-badf-572f1b5858f5",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "full_once",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 10,
+    "uniqueTransmittedCells": 10,
+    "extraGoldCells": 8,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4679,
+    "elapsedMs": 681.649900000004,
+    "promptTokens": 1413,
+    "completionTokens": 65,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 10,
+    "programs": []
+  },
+  {
+    "runId": "8a547085-8b2c-43d4-b50e-3d84aa2d3245",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "local_once",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4546,
+    "elapsedMs": 783.9075999999914,
+    "promptTokens": 1336,
+    "completionTokens": 65,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 10,
+    "programs": []
+  },
+  {
+    "runId": "ae0e75fd-9f26-475f-ae91-781d21a1f798",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "requested_cells",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 4,
+    "uniqueTransmittedCells": 4,
+    "extraGoldCells": 2,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 8669,
+    "elapsedMs": 1890.8174000000145,
+    "promptTokens": 2602,
+    "completionTokens": 121,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 10,
+    "programs": []
+  },
+  {
+    "runId": "a817dfb5-fcd1-468e-b983-3ee37271f95c",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "blind_review",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 14163,
+    "elapsedMs": 1768.8639000000112,
+    "promptTokens": 4099,
+    "completionTokens": 195,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      }
+    ]
+  },
+  {
+    "runId": "eb8a704a-d720-457b-98c8-0979d1b9ba24",
+    "caseId": "finqa-2638ebbe6587",
+    "method": "conflict_review",
+    "sourceId": "MAR/2004/page_45.pdf-1",
+    "sourceFile": "MAR/2004/page_45.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -68,
+    "expected": 68,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 14163,
+    "elapsedMs": 2620.933799999999,
+    "promptTokens": 4099,
+    "completionTokens": 195,
+    "error": null,
+    "jobId": "finqa-2638ebbe6587/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          }
+        ],
+        "value": -68
+      }
+    ]
+  },
+  {
+    "runId": "28a66c39-e688-44cc-ae3a-6ad973adb254",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "local_once",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.19294666278053058,
+    "expected": 0.09302,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5549,
+    "elapsedMs": 751.8656999999948,
+    "promptTokens": 1623,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "21e2f76c-59fc-47db-bc1e-fb8faa490a17",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "full_once",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.19294666278053058,
+    "expected": 0.09302,
+    "transmittedCells": 16,
+    "uniqueTransmittedCells": 16,
+    "extraGoldCells": 14,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5797,
+    "elapsedMs": 799.7975000000442,
+    "promptTokens": 1766,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "9ac280ae-3180-4d13-9659-905d2191e3ce",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "conflict_review",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.08510011778563017,
+    "expected": 0.09302,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 17172,
+    "elapsedMs": 2579.1003999999957,
+    "promptTokens": 4960,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      }
+    ]
+  },
+  {
+    "runId": "e93a54e3-7cfd-4c3f-bdac-05ee66147550",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "requested_cells",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.19294666278053058,
+    "expected": 0.09302,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 2,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 10692,
+    "elapsedMs": 1424.8934999999765,
+    "promptTokens": 3198,
+    "completionTokens": 136,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "3de4a416-dbac-4cfa-a652-ecba5d952680",
+    "caseId": "finqa-41b9b9da44d8",
+    "method": "blind_review",
+    "sourceId": "AMT/2016/page_49.pdf-1",
+    "sourceFile": "AMT/2016/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -0.08510011778563017,
+    "expected": 0.09302,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 4,
+    "bytes": 23589,
+    "elapsedMs": 2899.2973000000056,
+    "promptTokens": 6803,
+    "completionTokens": 368,
+    "error": null,
+    "jobId": "finqa-41b9b9da44d8/blind_review/1",
+    "repetition": 1,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 2,
+      "fields": [],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r1c1"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r1c1",
+              "r1c2",
+              "r6c1",
+              "r6c2"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 1
+      },
+      "method": "blind_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c2"
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.19294666278053058
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r6c2"
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r6c1"
+              }
+            ]
+          }
+        ],
+        "value": -0.08510011778563017
+      }
+    ]
+  },
+  {
+    "runId": "48ca1e28-7fcc-4c38-a71c-d31c200d7d70",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "local_once",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4095,
+    "elapsedMs": 799.1169999999693,
+    "promptTokens": 1233,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "5022eb38-a7fd-4b10-ae56-a340e5fc31ee",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "requested_cells",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 7718,
+    "elapsedMs": 1378.614900000015,
+    "promptTokens": 2362,
+    "completionTokens": 108,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "600f9126-26e5-438d-beef-3f454b127833",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "full_once",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 7,
+    "uniqueTransmittedCells": 7,
+    "extraGoldCells": 5,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4186,
+    "elapsedMs": 407.8015000000014,
+    "promptTokens": 1283,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "7469eeac-ee54-4645-9769-b44668cd8737",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "conflict_review",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 12810,
+    "elapsedMs": 1600.8961000000127,
+    "promptTokens": 3790,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      }
+    ]
+  },
+  {
+    "runId": "70877520-402d-44bb-91e8-bd8844be2aa1",
+    "caseId": "finqa-b3a459d1c8a4",
+    "method": "blind_review",
+    "sourceId": "ABMD/2012/page_79.pdf-2",
+    "sourceFile": "ABMD/2012/page_79.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.3492176386913229,
+    "expected": 2845.5,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 12810,
+    "elapsedMs": 1856.907199999987,
+    "promptTokens": 3790,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-b3a459d1c8a4/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.3492176386913229
+      }
+    ]
+  },
+  {
+    "runId": "9a6f1bc2-e018-4c97-9471-f3dc07323e77",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "requested_cells",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 1,
+    "bytes": 11654,
+    "elapsedMs": 449.1767000000109,
+    "promptTokens": 3508,
+    "completionTokens": 44,
+    "error": "UNAUTHORIZED_CELL_REQUEST",
+    "jobId": "finqa-064151ed2d8e/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "programs": []
+  },
+  {
+    "runId": "cb03da9d-97dc-4830-ae94-1b79b1fea8aa",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "local_once",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 1,
+    "bytes": 11838,
+    "elapsedMs": 720.8856000000087,
+    "promptTokens": 3357,
+    "completionTokens": 64,
+    "error": "LOCAL_PROGRAM_FIELD",
+    "jobId": "finqa-064151ed2d8e/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "programs": []
+  },
+  {
+    "runId": "1104ed79-44ae-4088-83f7-3c22a043689d",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "blind_review",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "failed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 3,
+    "bytes": 36039,
+    "elapsedMs": 1852.5014000000374,
+    "promptTokens": 10162,
+    "completionTokens": 192,
+    "error": "NO_VALID_CANDIDATE",
+    "jobId": "finqa-064151ed2d8e/blind_review/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "decision": null,
+    "programs": [
+      {
+        "role": 0,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 1,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 2,
+        "error": "LOCAL_PROGRAM_FIELD"
+      }
+    ]
+  },
+  {
+    "runId": "5378721a-271c-4e62-93bd-4f6d2bfcfad8",
+    "caseId": "finqa-064151ed2d8e",
+    "method": "conflict_review",
+    "sourceId": "UNP/2009/page_42.pdf-3",
+    "sourceFile": "UNP/2009/page_42.pdf",
+    "status": "failed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.21981,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 3,
+    "bytes": 36039,
+    "elapsedMs": 2988.2181000000273,
+    "promptTokens": 10162,
+    "completionTokens": 192,
+    "error": "NO_VALID_CANDIDATE",
+    "jobId": "finqa-064151ed2d8e/conflict_review/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 52,
+    "decision": null,
+    "programs": [
+      {
+        "role": 0,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 1,
+        "error": "LOCAL_PROGRAM_FIELD"
+      },
+      {
+        "role": 2,
+        "error": "LOCAL_PROGRAM_FIELD"
+      }
+    ]
+  },
+  {
+    "runId": "deeb5379-2f37-49a1-9326-6c0612a564ec",
+    "caseId": "finqa-e073d710551a",
+    "method": "local_once",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.4444444444444446,
+    "expected": 1.69231,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 6337,
+    "elapsedMs": 961.4605000000156,
+    "promptTokens": 1888,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-e073d710551a/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 18,
+    "programs": []
+  },
+  {
+    "runId": "421ebe38-02c1-4f68-bdd7-a2c6d4381960",
+    "caseId": "finqa-e073d710551a",
+    "method": "requested_cells",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 1.69231,
+    "transmittedCells": 12,
+    "uniqueTransmittedCells": 12,
+    "extraGoldCells": 11,
+    "computedCells": 0,
+    "modelCalls": 2,
+    "bytes": 12424,
+    "elapsedMs": 1834.665500000032,
+    "promptTokens": 3818,
+    "completionTokens": 168,
+    "error": "LOCAL_PROGRAM_FIELD",
+    "jobId": "finqa-e073d710551a/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 18,
+    "programs": []
+  },
+  {
+    "runId": "5f6fc927-9b9d-409b-889c-3a03e500c286",
+    "caseId": "finqa-e073d710551a",
+    "method": "blind_review",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.4444444444444446,
+    "expected": 1.69231,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 19536,
+    "elapsedMs": 1745.0671999999904,
+    "promptTokens": 5755,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-e073d710551a/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      }
+    ]
+  },
+  {
+    "runId": "3008a6f9-2b7c-46fa-92c8-9df8aafe9d78",
+    "caseId": "finqa-e073d710551a",
+    "method": "conflict_review",
+    "sourceId": "ETFC/2011/page_144.pdf-1",
+    "sourceFile": "ETFC/2011/page_144.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2.4444444444444446,
+    "expected": 1.69231,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 19536,
+    "elapsedMs": 2095.9444999999832,
+    "promptTokens": 5755,
+    "completionTokens": 192,
+    "error": null,
+    "jobId": "finqa-e073d710551a/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "divide",
+            "args": [
+              {
+                "field": "r8c1"
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 2.4444444444444446
+      }
+    ]
+  },
+  {
+    "runId": "e950f8c7-6745-41a9-abbc-4a9c64bac345",
+    "caseId": "finqa-ca188c838d36",
+    "method": "full_once",
+    "sourceId": "DISH/2011/page_122.pdf-2",
+    "sourceFile": "DISH/2011/page_122.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.19902476196999794,
+    "expected": 0.12271,
+    "transmittedCells": 7,
+    "uniqueTransmittedCells": 7,
+    "extraGoldCells": 5,
+    "computedCells": 3,
+    "modelCalls": 1,
+    "bytes": 4207,
+    "elapsedMs": 714.2263000000094,
+    "promptTokens": 1216,
+    "completionTokens": 91,
+    "error": null,
+    "jobId": "finqa-ca188c838d36/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 7,
+    "programs": []
+  },
+  {
+    "runId": "bb8199a5-487a-4cea-a977-8a65834d0b88",
+    "caseId": "finqa-ca188c838d36",
+    "method": "blind_review",
+    "sourceId": "DISH/2011/page_122.pdf-2",
+    "sourceFile": "DISH/2011/page_122.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.19902476196999794,
+    "expected": 0.12271,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 3,
+    "bytes": 12822,
+    "elapsedMs": 2481.8546999999962,
+    "promptTokens": 3571,
+    "completionTokens": 273,
+    "error": null,
+    "jobId": "finqa-ca188c838d36/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r4c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.19902476196999794
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r4c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.19902476196999794
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r4c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.19902476196999794
+      }
+    ]
+  },
+  {
+    "runId": "a9ac4f4c-e751-40b2-81ef-7a262a8f0500",
+    "caseId": "finqa-ca188c838d36",
+    "method": "conflict_review",
+    "sourceId": "DISH/2011/page_122.pdf-2",
+    "sourceFile": "DISH/2011/page_122.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.19902476196999794,
+    "expected": 0.12271,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 3,
+    "modelCalls": 3,
+    "bytes": 12822,
+    "elapsedMs": 2177.7067000000097,
+    "promptTokens": 3571,
+    "completionTokens": 273,
+    "error": null,
+    "jobId": "finqa-ca188c838d36/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r4c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.19902476196999794
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r4c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.19902476196999794
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r4c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "value": 0.19902476196999794
+      }
+    ]
+  },
+  {
+    "runId": "6084a15f-c0e0-4290-bee2-b0449cb021df",
+    "caseId": "finqa-03c3f090394d",
+    "method": "full_once",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 4,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 3777,
+    "elapsedMs": 494.92969999997877,
+    "promptTokens": 1124,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "7e50d7f1-161f-4a6e-8cc1-8943e845ec56",
+    "caseId": "finqa-03c3f090394d",
+    "method": "local_once",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 3700,
+    "elapsedMs": 845.7789999999804,
+    "promptTokens": 1073,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "929290fa-2c72-4b53-89e9-fa3a84442c7f",
+    "caseId": "finqa-03c3f090394d",
+    "method": "blind_review",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 11625,
+    "elapsedMs": 2782.5825999999943,
+    "promptTokens": 3310,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      }
+    ]
+  },
+  {
+    "runId": "30e0aac5-fb93-4cda-8f6b-2c3bcd66c568",
+    "caseId": "finqa-03c3f090394d",
+    "method": "conflict_review",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 11625,
+    "elapsedMs": 2063.9635000000126,
+    "promptTokens": 3310,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r1c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.0277777777777778
+      }
+    ]
+  },
+  {
+    "runId": "17fd7ed0-387f-4bbc-a920-a64ae446c2b5",
+    "caseId": "finqa-03c3f090394d",
+    "method": "requested_cells",
+    "sourceId": "SNA/2007/page_49.pdf-4",
+    "sourceFile": "SNA/2007/page_49.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.0277777777777778,
+    "expected": 2.02778,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 6921,
+    "elapsedMs": 1404.1355999999796,
+    "promptTokens": 2038,
+    "completionTokens": 136,
+    "error": null,
+    "jobId": "finqa-03c3f090394d/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "ffd9e568-1e2c-4a63-921f-c96ecfa2a235",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "full_once",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -342,
+    "expected": -292,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 4,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 3658,
+    "elapsedMs": 570.64929999999,
+    "promptTokens": 1163,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "a86fded7-d6ff-46e8-84af-554c4f4b46fa",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "requested_cells",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -342,
+    "expected": -292,
+    "transmittedCells": 6,
+    "uniqueTransmittedCells": 6,
+    "extraGoldCells": 4,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 6729,
+    "elapsedMs": 1147.1809000000067,
+    "promptTokens": 2156,
+    "completionTokens": 132,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 6,
+    "programs": []
+  },
+  {
+    "runId": "b7680c4e-5e6e-4afb-aeda-11d95270ca5e",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "full_once",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 15,
+    "uniqueTransmittedCells": 15,
+    "extraGoldCells": 13,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5529,
+    "elapsedMs": 715.0487999999896,
+    "promptTokens": 1686,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 15,
+    "programs": []
+  },
+  {
+    "runId": "4765ef0a-ad8e-4400-929f-c3619f6d24ed",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "local_once",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5324,
+    "elapsedMs": 621.8395999999775,
+    "promptTokens": 1552,
+    "completionTokens": 92,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 15,
+    "programs": []
+  },
+  {
+    "runId": "28e271fc-8e3b-4cb4-91ea-5aa084c6fcf9",
+    "caseId": "finqa-b5c9fe48c155",
+    "method": "blind_review",
+    "sourceId": "JPM/2005/page_80.pdf-2",
+    "sourceFile": "JPM/2005/page_80.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": -284,
+    "expected": -292,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 4,
+    "modelCalls": 4,
+    "bytes": 15615,
+    "elapsedMs": 3358.4262000000163,
+    "promptTokens": 4760,
+    "completionTokens": 362,
+    "error": null,
+    "jobId": "finqa-b5c9fe48c155/blind_review/1",
+    "repetition": 1,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 2,
+      "fields": [],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r2c2"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r2c2",
+              "r3c2"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 1
+      },
+      "method": "blind_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": -292
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          }
+        ],
+        "value": -292
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "value": -284
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r2c1"
+              },
+              {
+                "field": "r2c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r3c1"
+              },
+              {
+                "field": "r3c2"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "value": -284
+      }
+    ]
+  },
+  {
+    "runId": "34f7b578-6dc3-49b4-8e5e-e2af35205ef6",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "conflict_review",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 16497,
+    "elapsedMs": 2361.901899999997,
+    "promptTokens": 4747,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/conflict_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "conflict_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      }
+    ]
+  },
+  {
+    "runId": "de865be9-c306-4a8f-80bc-e97250724bf8",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "requested_cells",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 2,
+    "uniqueTransmittedCells": 2,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 10234,
+    "elapsedMs": 1414.9271000000008,
+    "promptTokens": 3050,
+    "completionTokens": 136,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 15,
+    "programs": []
+  },
+  {
+    "runId": "098cd8b1-7efd-41fa-8aff-b8d3e65ea42e",
+    "caseId": "finqa-a5e77742c3b6",
+    "method": "full_once",
+    "sourceId": "D/2002/page_87.pdf-2",
+    "sourceFile": "D/2002/page_87.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.18565400843881857,
+    "expected": 0.07683,
+    "transmittedCells": 16,
+    "uniqueTransmittedCells": 16,
+    "extraGoldCells": 14,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 5461,
+    "elapsedMs": 912.8420999999798,
+    "promptTokens": 1677,
+    "completionTokens": 64,
+    "error": null,
+    "jobId": "finqa-a5e77742c3b6/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "5910f998-f51b-4931-986d-59600b62cac6",
+    "caseId": "finqa-a5e77742c3b6",
+    "method": "requested_cells",
+    "sourceId": "D/2002/page_87.pdf-2",
+    "sourceFile": "D/2002/page_87.pdf",
+    "status": "blocked",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": null,
+    "expected": 0.07683,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 0,
+    "modelCalls": 1,
+    "bytes": 4820,
+    "elapsedMs": 801.9468000000052,
+    "promptTokens": 1498,
+    "completionTokens": 128,
+    "error": "UNAUTHORIZED_CELL_REQUEST",
+    "jobId": "finqa-a5e77742c3b6/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 16,
+    "programs": []
+  },
+  {
+    "runId": "d066449e-f4f2-44f3-a425-e05a21da50e0",
+    "caseId": "finqa-1f6f92c826dc",
+    "method": "blind_review",
+    "sourceId": "V/2014/page_126.pdf-2",
+    "sourceFile": "V/2014/page_126.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 0.13015629003330767,
+    "expected": 5.08,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 2,
+    "modelCalls": 3,
+    "bytes": 16497,
+    "elapsedMs": 2292.6498999999894,
+    "promptTokens": 4747,
+    "completionTokens": 276,
+    "error": null,
+    "jobId": "finqa-1f6f92c826dc/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "field": "r5c1"
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r5c2"
+              }
+            ]
+          }
+        ],
+        "value": 0.13015629003330767
+      }
+    ]
+  },
+  {
+    "runId": "f23d2410-f2f2-4f26-89c8-1a2e1526da25",
+    "caseId": "finqa-3f1ad92b0636",
+    "method": "full_once",
+    "sourceId": "MRO/2004/page_46.pdf-3",
+    "sourceFile": "MRO/2004/page_46.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 1279878.82,
+    "expected": 1723732.78,
+    "transmittedCells": 8,
+    "uniqueTransmittedCells": 8,
+    "extraGoldCells": 6,
+    "computedCells": 2,
+    "modelCalls": 1,
+    "bytes": 4229,
+    "elapsedMs": 735.9035999999905,
+    "promptTokens": 1444,
+    "completionTokens": 65,
+    "error": null,
+    "jobId": "finqa-3f1ad92b0636/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "24301f41-a83c-44ac-9f6a-4b46b773f313",
+    "caseId": "finqa-3f1ad92b0636",
+    "method": "requested_cells",
+    "sourceId": "MRO/2004/page_46.pdf-3",
+    "sourceFile": "MRO/2004/page_46.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 1279878.82,
+    "expected": 1723732.78,
+    "transmittedCells": 8,
+    "uniqueTransmittedCells": 8,
+    "extraGoldCells": 6,
+    "computedCells": 2,
+    "modelCalls": 2,
+    "bytes": 7849,
+    "elapsedMs": 1590.007500000007,
+    "promptTokens": 2708,
+    "completionTokens": 145,
+    "error": null,
+    "jobId": "finqa-3f1ad92b0636/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "6ca45db7-6334-4b0f-83a5-cbe57e8ac742",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "requested_cells",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 1,
+    "uniqueTransmittedCells": 1,
+    "extraGoldCells": 0,
+    "computedCells": 1,
+    "modelCalls": 2,
+    "bytes": 9860,
+    "elapsedMs": 1314.6853999999876,
+    "promptTokens": 2611,
+    "completionTokens": 98,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/requested_cells/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "fc215147-b769-43bf-aceb-d349052fd12f",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "full_once",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 8,
+    "uniqueTransmittedCells": 8,
+    "extraGoldCells": 6,
+    "computedCells": 1,
+    "modelCalls": 1,
+    "bytes": 5293,
+    "elapsedMs": 629.0661000000255,
+    "promptTokens": 1426,
+    "completionTokens": 60,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/full_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "9353087d-9e66-4f76-8001-791b646dfbaf",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "local_once",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 1,
+    "modelCalls": 1,
+    "bytes": 5168,
+    "elapsedMs": 669.9063000000024,
+    "promptTokens": 1358,
+    "completionTokens": 60,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/local_once/1",
+    "repetition": 1,
+    "agreement": null,
+    "reviewed": false,
+    "selectedViewSize": 8,
+    "programs": []
+  },
+  {
+    "runId": "00e484e4-0bc1-40b0-8419-bac35a2da90d",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "blind_review",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 0,
+    "uniqueTransmittedCells": 0,
+    "extraGoldCells": 0,
+    "computedCells": 1,
+    "modelCalls": 3,
+    "bytes": 16029,
+    "elapsedMs": 1930.3923999999824,
+    "promptTokens": 4165,
+    "completionTokens": 180,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/blind_review/1",
+    "repetition": 1,
+    "agreement": true,
+    "reviewed": false,
+    "selectedViewSize": 0,
+    "decision": {
+      "agreed": true,
+      "validCandidates": 3,
+      "distinctPrograms": 1,
+      "fields": [],
+      "review": false,
+      "coverage": {
+        "fields": [],
+        "obligations": [],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 0
+      },
+      "method": "blind_review",
+      "reason": "structural-agreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      }
+    ]
+  },
+  {
+    "runId": "cf20ca9e-77e0-4dde-b65a-6b2ee1a1a0d7",
+    "caseId": "finqa-705f3e6b6888",
+    "method": "conflict_review",
+    "sourceId": "HOLX/2007/page_93.pdf-1",
+    "sourceFile": "HOLX/2007/page_93.pdf",
+    "status": "completed",
+    "structuredSuccess": false,
+    "numericCorrect": false,
+    "receiptIntegrity": true,
+    "answer": 2590898,
+    "expected": 57.20703,
+    "transmittedCells": 1,
+    "uniqueTransmittedCells": 1,
+    "extraGoldCells": 1,
+    "computedCells": 1,
+    "modelCalls": 4,
+    "bytes": 21862,
+    "elapsedMs": 2257.3815999999933,
+    "promptTokens": 5679,
+    "completionTokens": 244,
+    "error": null,
+    "jobId": "finqa-705f3e6b6888/conflict_review/1",
+    "repetition": 1,
+    "agreement": false,
+    "reviewed": true,
+    "selectedViewSize": 1,
+    "decision": {
+      "agreed": false,
+      "validCandidates": 3,
+      "distinctPrograms": 2,
+      "fields": [
+        "r1c3"
+      ],
+      "review": true,
+      "coverage": {
+        "fields": [
+          "r1c3"
+        ],
+        "obligations": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "fields": [
+              "r1c3"
+            ],
+            "kind": "dependency"
+          }
+        ],
+        "covered": true,
+        "budget": 3,
+        "minimumCardinality": 1
+      },
+      "method": "conflict_review",
+      "reason": "review-disagreement"
+    },
+    "programs": [
+      {
+        "role": 0,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r1c3"
+              }
+            ]
+          }
+        ],
+        "value": 3533410
+      },
+      {
+        "role": 1,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": 2,
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      },
+      {
+        "role": "review",
+        "error": null,
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "constant": 0
+              }
+            ]
+          }
+        ],
+        "value": 2590898
+      }
+    ]
+  }
+]

@@ -14,7 +14,7 @@ try{
  assert.ok(bootstrap.featuredRuns.length>=3);assert.equal(await page.locator('.featured-run').count(),bootstrap.featuredRuns.length);
  if(!bootstrap.deepseekAvailable){await page.locator('#execution-mode').selectOption('deepseek');assert.equal(await page.locator('#live-button').isDisabled(),true);await page.locator('#execution-mode').selectOption('offline');}
  await page.screenshot({path:fileURLToPath(new URL('01-before.png',out))});
- await page.locator('.featured-run').first().click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('实际运行'),null,{timeout:90000});assert.match(await page.locator('#source-badge').innerText(),/重放/);
+ await page.locator('.featured-run').filter({hasText:'逐步执行与共享判定'}).click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('实际运行'),null,{timeout:90000});assert.match(await page.locator('#source-badge').innerText(),/重放/);
  const replayPaced=Number((await page.locator('#agent-result').innerText()).match(/页面逐步展示 (\d+) 毫秒/)?.[1]);assert.ok(replayPaced>=15000,`Recorded playback too short: ${replayPaced} ms`);
  const featuredReplay=await(await page.request.get('/api/research/runs/'+bootstrap.sampleRunId)).json();assert.equal(featuredReplay.model,'deepseek-flash');assert.equal(featuredReplay.receipts.length,3);
  await page.screenshot({path:fileURLToPath(new URL('07-deepseek-recorded-result.png',out))});

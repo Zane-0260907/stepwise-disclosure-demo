@@ -1,0 +1,169 @@
+{
+  "protocol": "prospective-v6-20260927",
+  "jobs": 600,
+  "verifiedProviderCalls": 1210,
+  "verifiedPrograms": 1310,
+  "reports": 57,
+  "summary": [
+    {
+      "method": "full_once",
+      "runs": 120,
+      "passed": 96,
+      "success": 0.8,
+      "transmittedCells": 14.833333333333334,
+      "uniqueCells": 14.833333333333334,
+      "extraGoldCells": 12.75,
+      "modelCalls": 120,
+      "promptTokens": 202034,
+      "completionTokens": 9496,
+      "latencyP50": 735.7273999999961,
+      "latencyP95": 992.2505549999812,
+      "agreementRuns": 0,
+      "agreementPassed": 0,
+      "reviewedRuns": 0,
+      "reviewedPassed": 0,
+      "zeroCellRuns": 0
+    },
+    {
+      "method": "local_once",
+      "runs": 120,
+      "passed": 98,
+      "success": 0.8166666666666667,
+      "transmittedCells": 0,
+      "uniqueCells": 0,
+      "extraGoldCells": 0,
+      "modelCalls": 120,
+      "promptTokens": 187692,
+      "completionTokens": 9516,
+      "latencyP50": 719.772850000003,
+      "latencyP95": 1027.2497149999908,
+      "agreementRuns": 0,
+      "agreementPassed": 0,
+      "reviewedRuns": 0,
+      "reviewedPassed": 0,
+      "zeroCellRuns": 120
+    },
+    {
+      "method": "requested_cells",
+      "runs": 120,
+      "passed": 94,
+      "success": 0.7833333333333333,
+      "transmittedCells": 2.4166666666666665,
+      "uniqueCells": 2.4166666666666665,
+      "extraGoldCells": 0.5,
+      "modelCalls": 236,
+      "promptTokens": 359180,
+      "completionTokens": 14995,
+      "latencyP50": 1373.7200999999877,
+      "latencyP95": 1716.3837149999702,
+      "agreementRuns": 0,
+      "agreementPassed": 0,
+      "reviewedRuns": 0,
+      "reviewedPassed": 0,
+      "zeroCellRuns": 4
+    },
+    {
+      "method": "blind_review",
+      "runs": 120,
+      "passed": 95,
+      "success": 0.7916666666666666,
+      "transmittedCells": 0,
+      "uniqueCells": 0,
+      "extraGoldCells": 0,
+      "modelCalls": 366,
+      "promptTokens": 583984,
+      "completionTokens": 29628,
+      "latencyP50": 2246.95640000001,
+      "latencyP95": 3045.1863750000075,
+      "agreementRuns": 112,
+      "agreementPassed": 92,
+      "reviewedRuns": 6,
+      "reviewedPassed": 3,
+      "zeroCellRuns": 120
+    },
+    {
+      "method": "conflict_review",
+      "runs": 120,
+      "passed": 96,
+      "success": 0.8,
+      "transmittedCells": 0.075,
+      "uniqueCells": 0.075,
+      "extraGoldCells": 0.058333333333333334,
+      "modelCalls": 368,
+      "promptTokens": 587471,
+      "completionTokens": 29650,
+      "latencyP50": 2246.52059999998,
+      "latencyP95": 2957.679970000005,
+      "agreementRuns": 110,
+      "agreementPassed": 92,
+      "reviewedRuns": 8,
+      "reviewedPassed": 4,
+      "zeroCellRuns": 112
+    }
+  ],
+  "paired": {
+    "local_once_vs_full_once": {
+      "difference": 0.016666666666666666,
+      "descriptiveReportCluster95": [
+        -0.058333333333333334,
+        0.09016393442622951
+      ]
+    },
+    "local_once_vs_requested_cells": {
+      "difference": 0.03333333333333333,
+      "descriptiveReportCluster95": [
+        -0.008931419457735193,
+        0.08870967741935484
+      ]
+    },
+    "local_once_vs_blind_review": {
+      "difference": 0.025,
+      "descriptiveReportCluster95": [
+        -0.008624470659407137,
+        0.075
+      ]
+    },
+    "local_once_vs_conflict_review": {
+      "difference": 0.016666666666666666,
+      "descriptiveReportCluster95": [
+        -0.016666666666666666,
+        0.05084745762711865
+      ]
+    },
+    "conflict_review_vs_full_once": {
+      "difference": 0,
+      "descriptiveReportCluster95": [
+        -0.075,
+        0.07017886513157895
+      ]
+    },
+    "conflict_review_vs_local_once": {
+      "difference": -0.016666666666666666,
+      "descriptiveReportCluster95": [
+        -0.05084745762711865,
+        0.01639344262295082
+      ]
+    },
+    "conflict_review_vs_requested_cells": {
+      "difference": 0.016666666666666666,
+      "descriptiveReportCluster95": [
+        -0.0423728813559322,
+        0.08196721311475409
+      ]
+    },
+    "conflict_review_vs_blind_review": {
+      "difference": 0.008333333333333333,
+      "descriptiveReportCluster95": [
+        0,
+        0.02586206896551724
+      ]
+    }
+  },
+  "limits": [
+    "Single provider/model and a restricted public subset; training exposure unknown.",
+    "Zero business cells does not mean zero information: questions, table labels, years, units and proposed programs are visible.",
+    "A minimum syntactic cover is neither a semantically sufficient view nor a privacy-optimal policy.",
+    "No completed human explanation-quality evaluation.",
+    "Deterministic adapter handles documented table patterns, not arbitrary PDF table extraction."
+  ]
+}

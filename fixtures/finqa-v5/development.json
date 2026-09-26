@@ -1,0 +1,1031 @@
+[
+  {
+    "id": "finqa-b972a5ad0246",
+    "sourceId": "AWK/2013/page_132.pdf-2",
+    "sourceFile": "AWK/2013/page_132.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+      "en": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?"
+    },
+    "question": "what is the one-percentage-point increase of effect on total of service and interest cost components as a percentage of the effect on other postretirement benefit obligation?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Effect on total of service and interest cost components",
+        "column": "One-Percentage-PointIncrease",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Effect on total of service and interest cost components",
+        "column": "One-Percentage-PointDecrease",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Effect on other postretirement benefit obligation",
+        "column": "One-Percentage-PointIncrease",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Effect on other postretirement benefit obligation",
+        "column": "One-Percentage-PointDecrease",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 7367,
+      "r1c2": -5974,
+      "r2c1": 72238,
+      "r2c2": -60261
+    },
+    "source": "FinQA/AWK/2013/page_132.pdf-2",
+    "split": "development"
+  },
+  {
+    "id": "finqa-f3ff7366ea2d",
+    "sourceId": "MRO/2009/page_56.pdf-1",
+    "sourceFile": "MRO/2009/page_56.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+      "en": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?"
+    },
+    "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "WTI crude oil (Dollars per barrel)",
+        "column": "2009",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r1c2",
+        "row": "WTI crude oil (Dollars per barrel)",
+        "column": "2008",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r1c3",
+        "row": "WTI crude oil (Dollars per barrel)",
+        "column": "2007",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r2c1",
+        "row": "Dated Brent crude oil (Dollars per barrel)",
+        "column": "2009",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r2c2",
+        "row": "Dated Brent crude oil (Dollars per barrel)",
+        "column": "2008",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r2c3",
+        "row": "Dated Brent crude oil (Dollars per barrel)",
+        "column": "2007",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r3c1",
+        "row": "Henry Hub natural gas (Dollars per mcf)(a)",
+        "column": "2009",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r3c2",
+        "row": "Henry Hub natural gas (Dollars per mcf)(a)",
+        "column": "2008",
+        "unitHint": "Benchmark"
+      },
+      {
+        "id": "r3c3",
+        "row": "Henry Hub natural gas (Dollars per mcf)(a)",
+        "column": "2007",
+        "unitHint": "Benchmark"
+      }
+    ],
+    "facts": {
+      "r1c1": 62.09,
+      "r1c2": 99.75,
+      "r1c3": 72.41,
+      "r2c1": 61.67,
+      "r2c2": 97.26,
+      "r2c3": 72.39,
+      "r3c1": 3.99,
+      "r3c2": 9.04,
+      "r3c3": 6.86
+    },
+    "source": "FinQA/MRO/2009/page_56.pdf-1",
+    "split": "development"
+  },
+  {
+    "id": "finqa-83cf7b4e8487",
+    "sourceId": "OKE/2008/page_86.pdf-1",
+    "sourceFile": "OKE/2008/page_86.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the total net change in net fair value of derivatives outstanding at between 2007 and 2008 in thousands?",
+      "en": "what was the total net change in net fair value of derivatives outstanding at between 2007 and 2008 in thousands?"
+    },
+    "question": "what was the total net change in net fair value of derivatives outstanding at between 2007 and 2008 in thousands?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Net fair value of derivatives outstanding at December 31, 2007",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Derivatives reclassified or otherwise settled during the period",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Fair value of new derivatives entered into during the period",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Other changes in fair value",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Net fair value of derivatives outstanding at December 31, 2008 (a)",
+        "column": "(Thousands of dollars)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 25171,
+      "r2c1": -55874,
+      "r3c1": 236772,
+      "r4c1": 52731,
+      "r5c1": 258800
+    },
+    "source": "FinQA/OKE/2008/page_86.pdf-1",
+    "split": "development"
+  },
+  {
+    "id": "finqa-0950db29929b",
+    "sourceId": "BLK/2012/page_37.pdf-3",
+    "sourceFile": "BLK/2012/page_37.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what portion of the fixed income is related to americas?",
+      "en": "what portion of the fixed income is related to americas?"
+    },
+    "question": "what portion of the fixed income is related to americas?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Equity",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r1c2",
+        "row": "Equity",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r1c3",
+        "row": "Equity",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r1c4",
+        "row": "Equity",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c1",
+        "row": "Fixed income",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c2",
+        "row": "Fixed income",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c3",
+        "row": "Fixed income",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r2c4",
+        "row": "Fixed income",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c1",
+        "row": "Multi-asset class",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c2",
+        "row": "Multi-asset class",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c3",
+        "row": "Multi-asset class",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r3c4",
+        "row": "Multi-asset class",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c1",
+        "row": "Alternatives",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c2",
+        "row": "Alternatives",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c3",
+        "row": "Alternatives",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r4c4",
+        "row": "Alternatives",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c1",
+        "row": "Long-term retail/HNW",
+        "column": "Americas",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c2",
+        "row": "Long-term retail/HNW",
+        "column": "EMEA",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c3",
+        "row": "Long-term retail/HNW",
+        "column": "Asia-Pacific",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      },
+      {
+        "id": "r5c4",
+        "row": "Long-term retail/HNW",
+        "column": "Total",
+        "unitHint": "<i>(Dollar amounts in millions)</i>"
+      }
+    ],
+    "facts": {
+      "r1c1": 94805,
+      "r1c2": 53140,
+      "r1c3": 16803,
+      "r1c4": 164748,
+      "r2c1": 121640,
+      "r2c2": 11444,
+      "r2c3": 5341,
+      "r2c4": 138425,
+      "r3c1": 76714,
+      "r3c2": 9538,
+      "r3c3": 4374,
+      "r3c4": 90626,
+      "r4c1": 4865,
+      "r4c2": 3577,
+      "r4c3": 1243,
+      "r4c4": 9685,
+      "r5c1": 298024,
+      "r5c2": 77699,
+      "r5c3": 27761,
+      "r5c4": 403484
+    },
+    "source": "FinQA/BLK/2012/page_37.pdf-3",
+    "split": "development"
+  },
+  {
+    "id": "finqa-e7ac68cd43b8",
+    "sourceId": "ETR/2013/page_118.pdf-2",
+    "sourceFile": "ETR/2013/page_118.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2013 , in millions?",
+      "en": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2013 , in millions?"
+    },
+    "question": "what amount of long-term debt is due in the next 36 months for entergy corporation as of december 31 , 2013 , in millions?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2014",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "2015",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "2016",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "2017",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "2018",
+        "column": "Amount (In Thousands)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 385373,
+      "r2c1": 1110566,
+      "r3c1": 270852,
+      "r4c1": 766801,
+      "r5c1": 1324616
+    },
+    "source": "FinQA/ETR/2013/page_118.pdf-2",
+    "split": "development"
+  },
+  {
+    "id": "finqa-870c48d83470",
+    "sourceId": "HIG/2008/page_318.pdf-3",
+    "sourceFile": "HIG/2008/page_318.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the net change in total statutory capital from 2007 to 2008?",
+      "en": "what is the net change in total statutory capital from 2007 to 2008?"
+    },
+    "question": "what is the net change in total statutory capital from 2007 to 2008?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Life Operations",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Life Operations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Japan Life Operations",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Japan Life Operations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Property & Casualty Operations",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Property & Casualty Operations",
+        "column": "2007",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "2008",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "2007",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 6047,
+      "r1c2": 5786,
+      "r2c1": 1718,
+      "r2c2": 1620,
+      "r3c1": 6012,
+      "r3c2": 8509,
+      "r4c1": 13777,
+      "r4c2": 15915
+    },
+    "source": "FinQA/HIG/2008/page_318.pdf-3",
+    "split": "development"
+  },
+  {
+    "id": "finqa-a716046936d4",
+    "sourceId": "AMT/2007/page_29.pdf-1",
+    "sourceFile": "AMT/2007/page_29.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the square footage of properties in massachusetts?\\\\n\\\\n",
+      "en": "what is the square footage of properties in massachusetts?\\\\n\\\\n"
+    },
+    "question": "what is the square footage of properties in massachusetts?\\\\n\\\\n",
+    "schema": [
+      {
+        "id": "r1c2",
+        "row": "Boston, MA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r2c2",
+        "row": "Southborough, MA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r3c2",
+        "row": "Woburn, MA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r4c2",
+        "row": "Atlanta, GA",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r5c2",
+        "row": "Cary, North Carolina",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r6c2",
+        "row": "Mexico City, Mexico",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      },
+      {
+        "id": "r7c2",
+        "row": "Sao Paulo, Brazil",
+        "column": "Size (square feet)",
+        "unitHint": "Location"
+      }
+    ],
+    "facts": {
+      "r1c2": 19600,
+      "r2c2": 13900,
+      "r3c2": 57800,
+      "r4c2": 21400,
+      "r5c2": 17500,
+      "r6c2": 11000,
+      "r7c2": 5200
+    },
+    "source": "FinQA/AMT/2007/page_29.pdf-1",
+    "split": "development"
+  },
+  {
+    "id": "finqa-3ee223ad3c39",
+    "sourceId": "MSI/2008/page_69.pdf-3",
+    "sourceFile": "MSI/2008/page_69.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in 2006 what was the percent of the operating earnings to the segment net sales",
+      "en": "in 2006 what was the percent of the operating earnings to the segment net sales"
+    },
+    "question": "in 2006 what was the percent of the operating earnings to the segment net sales",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "(Dollars in millions)",
+        "column": "<i>Years Ended December 31</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "(Dollars in millions)",
+        "column": "<i>Percent Change</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c3",
+        "row": "(Dollars in millions)",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Segment net sales",
+        "column": "<i>Years Ended December 31</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Segment net sales",
+        "column": "<i>Percent Change</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c3",
+        "row": "Segment net sales",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c4",
+        "row": "Segment net sales",
+        "column": "column 4",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c5",
+        "row": "Segment net sales",
+        "column": "column 5",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Operating earnings (loss)",
+        "column": "<i>Years Ended December 31</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Operating earnings (loss)",
+        "column": "<i>Percent Change</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c3",
+        "row": "Operating earnings (loss)",
+        "column": "column 3",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c4",
+        "row": "Operating earnings (loss)",
+        "column": "column 4",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2008,
+      "r1c2": 2007,
+      "r1c3": 2006,
+      "r2c1": 12099,
+      "r2c2": 18988,
+      "r2c3": 28383,
+      "r2c4": -36,
+      "r2c5": -33,
+      "r3c1": -2199,
+      "r3c2": -1201,
+      "r3c3": 2690,
+      "r3c4": 83
+    },
+    "source": "FinQA/MSI/2008/page_69.pdf-3",
+    "split": "development"
+  },
+  {
+    "id": "finqa-f09190f397c1",
+    "sourceId": "GS/2014/page_165.pdf-1",
+    "sourceFile": "GS/2014/page_165.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what percentage of total other liabilities and accrued expenses in 2013 are due to compensation and benefits?",
+      "en": "what percentage of total other liabilities and accrued expenses in 2013 are due to compensation and benefits?"
+    },
+    "question": "what percentage of total other liabilities and accrued expenses in 2013 are due to compensation and benefits?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "$ in millions",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "$ in millions",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Compensation and benefits",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Compensation and benefits",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Noncontrolling interests1",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Noncontrolling interests1",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Income tax-related liabilities",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Income tax-related liabilities",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Employee interests in consolidated funds",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c2",
+        "row": "Employee interests in consolidated funds",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Subordinated liabilities issued by consolidated VIEs",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c2",
+        "row": "Subordinated liabilities issued by consolidated VIEs",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "Accrued expenses and other",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c2",
+        "row": "Accrued expenses and other",
+        "column": "column 2",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c1",
+        "row": "Total",
+        "column": "As of December",
+        "unitHint": ""
+      },
+      {
+        "id": "r8c2",
+        "row": "Total",
+        "column": "column 2",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 2014,
+      "r1c2": 2013,
+      "r2c1": 8368,
+      "r2c2": 7874,
+      "r3c1": 404,
+      "r3c2": 326,
+      "r4c1": 1533,
+      "r4c2": 1974,
+      "r5c1": 176,
+      "r5c2": 210,
+      "r6c1": 843,
+      "r6c2": 477,
+      "r7c1": 4751,
+      "r7c2": 5183,
+      "r8c1": 16075,
+      "r8c2": 16044
+    },
+    "source": "FinQA/GS/2014/page_165.pdf-1",
+    "split": "development"
+  },
+  {
+    "id": "finqa-800c1900f403",
+    "sourceId": "ETR/2016/page_374.pdf-2",
+    "sourceFile": "ETR/2016/page_374.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the growth rate in net revenue in 20016 for entergy mississippi , inc.?",
+      "en": "what is the growth rate in net revenue in 20016 for entergy mississippi , inc.?"
+    },
+    "question": "what is the growth rate in net revenue in 20016 for entergy mississippi , inc.?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2015 net revenue",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Retail electric price",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Volume/weather",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Net wholesale revenue",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r5c1",
+        "row": "Reserve equalization",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r6c1",
+        "row": "Other",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      },
+      {
+        "id": "r7c1",
+        "row": "2016 net revenue",
+        "column": "Amount (In Millions)",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 696.3,
+      "r2c1": 12.9,
+      "r3c1": 4.7,
+      "r4c1": -2.4,
+      "r5c1": -2.8,
+      "r6c1": -3.3,
+      "r7c1": 705.4
+    },
+    "source": "FinQA/ETR/2016/page_374.pdf-2",
+    "split": "development"
+  },
+  {
+    "id": "finqa-0cf68248784a",
+    "sourceId": "FBHS/2017/page_22.pdf-1",
+    "sourceFile": "FBHS/2017/page_22.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in 2017 what was the ratio of the cabinets sales to the doors",
+      "en": "in 2017 what was the ratio of the cabinets sales to the doors"
+    },
+    "question": "in 2017 what was the ratio of the cabinets sales to the doors",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Cabinets",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r1c2",
+        "row": "Cabinets",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r2c1",
+        "row": "Plumbing",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r2c2",
+        "row": "Plumbing",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r3c1",
+        "row": "Doors",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r3c2",
+        "row": "Doors",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r4c1",
+        "row": "Security",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r4c2",
+        "row": "Security",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r5c1",
+        "row": "Total",
+        "column": "2017Net Sales(in millions)",
+        "unitHint": "Segment"
+      },
+      {
+        "id": "r5c2",
+        "row": "Total",
+        "column": "Percentage of Total 2017 Net Sales",
+        "unitHint": "Segment"
+      }
+    ],
+    "facts": {
+      "r1c1": 2467.1,
+      "r1c2": 47,
+      "r2c1": 1720.8,
+      "r2c2": 33,
+      "r3c1": 502.9,
+      "r3c2": 9,
+      "r4c1": 592.5,
+      "r4c2": 11,
+      "r5c1": 5283.3,
+      "r5c2": 100
+    },
+    "source": "FinQA/FBHS/2017/page_22.pdf-1",
+    "split": "development"
+  },
+  {
+    "id": "finqa-ac5f527290e8",
+    "sourceId": "UNP/2006/page_15.pdf-2",
+    "sourceFile": "UNP/2006/page_15.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "as of december 31 , 2006 what was the percent of the total route miles covered by the main line",
+      "en": "as of december 31 , 2006 what was the percent of the total route miles covered by the main line"
+    },
+    "question": "as of december 31 , 2006 what was the percent of the total route miles covered by the main line",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Main line",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r1c2",
+        "row": "Main line",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c1",
+        "row": "Branch line",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r2c2",
+        "row": "Branch line",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c1",
+        "row": "Yards, sidings and other lines",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r3c2",
+        "row": "Yards, sidings and other lines",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "<i>2006</i>",
+        "unitHint": ""
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "<i>2005</i>",
+        "unitHint": ""
+      }
+    ],
+    "facts": {
+      "r1c1": 27318,
+      "r1c2": 27301,
+      "r2c1": 5021,
+      "r2c2": 5125,
+      "r3c1": 19257,
+      "r3c2": 20241,
+      "r4c1": 51596,
+      "r4c2": 52667
+    },
+    "source": "FinQA/UNP/2006/page_15.pdf-2",
+    "split": "development"
+  }
+]

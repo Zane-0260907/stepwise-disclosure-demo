@@ -58,7 +58,7 @@ function englishReport(run){
 }
 function syncMethods(){
  const finance=caseItem()?.family==='finance';
- const list=finance?['local_program','requested_cells','eager_allowed']:['joint','allowed_eager','numeric_prefetch','full'];
+ const list=S.caseId==='finqa-47593c3344df'?['local_once','requested_cells','full_once','blind_review','conflict_review']:finance?['local_program','requested_cells','eager_allowed']:['joint','allowed_eager','numeric_prefetch','full'];
  const select=$('#method-select');if([...select.options].map(o=>o.value).join()!==list.join()){const previous=select.value;select.replaceChildren(...list.map(id=>{const o=el('option','',methodName(id));o.value=id;return o;}));select.value=list.includes(previous)?previous:list[0];}
  $('.input-adjust').hidden=finance;
 }
@@ -132,14 +132,34 @@ function renderSteps(){
 }
 function factsCard(title,facts,local=false){
  const card=el('section',`view-card${local?' local':''}`);const h=el('h3');h.append(icon(local?'lock':'cloud'),el('span','',title));card.append(h);
- const list=el('ul');for(const[k,v]of Object.entries(facts||{})){
+ const entries=Object.entries(facts||{}),needed=new Set(S.run?.programCertificates?.at(-1)?.dependencies.map(d=>d.field)||[]);
+ if(local&&S.run?.family==='finance')entries.sort(([a],[b])=>Number(needed.has(b))-Number(needed.has(a)));
+ const compact=local&&entries.length>8&&entries.every(([key])=>/^r\d+c\d+$/.test(key));
+ const list=el('ul');for(const[k,v]of(compact?entries.slice(0,4):entries)){
  if(k==='schema'&&Array.isArray(v)){
   const item=el('li'),details=el('details','schema-details');details.append(el('summary','',S.lang==='zh'?`表结构：${v.length} 个单元格（查看标签）`:`Schema: ${v.length} cells (inspect labels)`));
   for(const cell of v)details.append(el('p','',`${cell.id} · ${cell.row} · ${cell.column}`));item.append(details);list.append(item);
+ }else if(k==='tableStructure'&&Array.isArray(v)){
+  const item=el('li'),details=el('details','schema-details');
+  const heads=v.filter(row=>row.role==='header');details.append(el('summary','',S.lang==='zh'?`原始表头与位置：${heads.length} 行`:`Source headers and positions: ${heads.length} rows`));
+  for(const row of heads)details.append(el('p','',row.cells.join(' | ')));item.append(details);list.append(item);
  }else list.append(el('li','',`${factName(k)}：${value(v)}`));
-}if(!list.children.length)list.append(el('li','',t('none')));card.append(list);return card;
+}if(!list.children.length)list.append(el('li','',t('none')));card.append(list);
+ if(compact){const details=el('details','schema-details');details.append(el('summary','',S.lang==='zh'?`共 ${entries.length} 个数值，展开其余 ${entries.length-4} 个`:`${entries.length} values; inspect ${entries.length-4} more`));for(const[k,v]of entries.slice(4))details.append(el('p','',`${k}: ${value(v)}`));card.append(details);}
+ return card;
 }
-function outputText(output){if(!output)return '';if(typeof output==='string')return output;if(S.lang==='en'){
+function outputText(output){if(!output)return '';
+ if(output.requestedTool&&S.run?.family==='finance'){
+  const call=output.requestedTool.function;
+  if(call?.name==='submit_calculation'){
+   try{const program=JSON.parse(call.arguments).program,terms=[];for(const node of program){const args=node.args.map(a=>a.field??a.constant??terms[a.step]);const op={add:'+',subtract:'−',multiply:'×',divide:'÷'}[node.op];terms.push(op?`(${args[0]} ${op} ${args[1]})`:`${node.op}(${args.join(', ')})`);}return(S.lang==='zh'?'模型提出的本地算式：':'Proposed local expression: ')+terms.at(-1);}catch{}
+  }
+  return S.lang==='zh'?'模型申请所需数值单元格，等待本地授权核验。':'The model requested numeric cells, subject to local authorization.';
+ }
+ if(output.headerRows)return S.lang==='zh'?`已核对 ${output.headerRows.length} 行表头和 ${output.businessCells} 个业务数值单元格。年份与单位保留在表结构中；数值仍在本地。`:`Verified ${output.headerRows.length} header rows and ${output.businessCells} business cells. Years and units remain in the schema; values remain local.`;
+ if(output.validCandidates!==undefined)return S.lang==='zh'?`${output.validCandidates} 个有效方案，${output.distinctPrograms} 种计算结构。${output.agreed?'结构一致，在本地计算。':'存在分歧，继续复核。'}本次补充字段：${output.fields.join(', ')||'无'}。方案一致不代表答案正确。`:`${output.validCandidates} valid proposals; ${output.distinctPrograms} distinct expressions. ${output.agreed?'Structural agreement; calculate locally.':'Disagreement; continue to review.'} Additional fields: ${output.fields.join(', ')||'none'}. Agreement does not establish correctness.`;
+ if(output.proposedTool)return S.lang==='zh'?'模型提出了一个受限算式；本地核验字段依赖和计算结构。':'The model proposed a finite expression; dependencies and structure are checked locally.';
+if(typeof output==='string')return output;if(S.lang==='en'){
  if(output.issueCodes||output.fileName)return resultSummary(S.run);
  if(output.requestedTool&&S.run?.family==='finance')return output.requestedTool.function?.name==='submit_calculation'?'The model proposed a finite calculation to execute locally.':'The model requested selected numeric cells.';
  if(output.requestedTool)return output.requestedTool.function?.name==='request_task_facts'?'The model requested missing business facts from the local controller.':'The model requested the specified version of the reference.';
@@ -155,7 +175,7 @@ function processPane(){
  const receipts=(S.run.receipts||[]).filter(r=>r.stepId===step.id);
  if(receipts.length){const summary=el('div','receipt-line');summary.append(el('strong','',`${t('receipt')} · ${receipts.reduce((sum,r)=>sum+r.bytes,0)} bytes`),el('small','',` · ${time(receipts.at(-1).receivedAt)}`));root.append(summary);}
  let visibleInput=step.input;
- if(S.run.family==='finance'&&step.location==='cloud'&&receipts.length){const body=JSON.parse(JSON.parse(receipts.at(-1).rawBody).messages[1].content);visibleInput={question:body.task,schema:body.schema,...body.facts};}
+ if(S.run.family==='finance'&&step.location==='cloud'&&receipts.length){const body=JSON.parse(JSON.parse(receipts.at(-1).rawBody).messages[1].content);visibleInput={question:body.task,schema:body.schema,...(body.tableStructure?{tableStructure:body.tableStructure}:{}),...body.facts};}
  if(Object.keys(visibleInput||{}).length){
    const columns=el('div',step.location==='local'?'local-input':'view-columns');
    const inputTitle=step.location==='local'?t('input'):S.run.executionMode==='offline'&&step.location==='cloud'?(receipts.length?(S.lang==='zh'?'发给本机执行器':'Sent to local driver'):(S.lang==='zh'?'拟交给本机执行器':'Prepared for local driver')):receipts.length?t('sent'):t('prepared');
@@ -236,7 +256,7 @@ async function start(replay=false){
  const created=await api(replay?'/replay':'/runs',replay?{runId:S.lastLive}:{caseId:S.caseId,condition:scenario.condition,method:$('#method-select').value,mode:S.mode,overrides,deferStart:true});S.starting=false;connect(created.id,!replay);
  }catch(error){S.starting=false;S.error=error.message;render();}
 }
-function renderFeatured(){const root=$('#featured-runs');root.replaceChildren();for(const run of S.bootstrap?.featuredRuns||[]){const button=el('button','history-run featured-run',(S.lang==='zh'?'DeepSeek 重放 · ':'DeepSeek replay · ')+(run.label?l(run.label):methodName(run.method)));button.type='button';button.onclick=()=>{if(run.caseId?.startsWith('finqa-')){S.scenario='financial';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='financial';$('#execution-mode').value='deepseek';}else if(run.caseId?.startsWith('progressive-')){S.scenario='facts';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='facts';$('#execution-mode').value='deepseek';}S.lastLive=run.id;start(true);};root.append(button);}}
+function renderFeatured(){const root=$('#featured-runs');root.replaceChildren();for(const run of S.bootstrap?.featuredRuns||[]){const button=el('button','history-run featured-run',(S.lang==='zh'?'DeepSeek 重放 · ':'DeepSeek replay · ')+(run.label?l(run.label):methodName(run.method)));button.type='button';button.onclick=()=>{if(run.caseId?.startsWith('finqa-')){S.scenario=run.bundle==='corrected'?'corrected':'financial';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value=S.scenario;$('#execution-mode').value='deepseek';}else if(run.caseId?.startsWith('progressive-')){S.scenario='facts';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='facts';$('#execution-mode').value='deepseek';}S.lastLive=run.id;start(true);};root.append(button);}}
 function renderHistory(){const root=$('#run-history');root.replaceChildren();for(const run of S.history.slice(0,6)){const b=el('button','history-run',`${l(run.title)} · ${methodName(run.method)}`);b.title=`${time(run.createdAt)} · ${t(run.status)}`;b.onclick=async()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.run=await api(`/runs/${run.id}`);S.caseId=S.run.caseId;S.follow=true;S.tab='process';S.showCompare=false;render();};root.append(b);}}
 async function loadHistory(){try{S.history=await api('/history');renderHistory();}catch{}}
 async function showComparison(){S.showCompare=true;S.pairs=[];const candidates=S.history.filter(r=>r.caseId===S.run.caseId&&(r.condition||'normal')===(S.run.condition||'normal')&&r.id!==S.run.id&&r.method!==S.run.method);for(const candidate of candidates){const other=await api(`/runs/${candidate.id}`);if(other.executionMode===S.run.executionMode&&JSON.stringify(other.overrides||{})===JSON.stringify(S.run.overrides||{})){S.pairs=[S.run,other];break;}}render();}

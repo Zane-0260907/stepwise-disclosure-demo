@@ -1,0 +1,2102 @@
+[
+  {
+    "caseId": "finqa-2321e08a043b",
+    "report": "ZBH/2008",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 24
+  },
+  {
+    "caseId": "finqa-2321e08a043b",
+    "report": "ZBH/2008",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2321e08a043b",
+    "report": "ZBH/2008",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-2321e08a043b",
+    "report": "ZBH/2008",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2321e08a043b",
+    "report": "ZBH/2008",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-802ca66b0edc",
+    "report": "JPM/2018",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 27
+  },
+  {
+    "caseId": "finqa-802ca66b0edc",
+    "report": "JPM/2018",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-802ca66b0edc",
+    "report": "JPM/2018",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-802ca66b0edc",
+    "report": "JPM/2018",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-802ca66b0edc",
+    "report": "JPM/2018",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-0bac4c90f529",
+    "report": "CDNS/2015",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 18
+  },
+  {
+    "caseId": "finqa-0bac4c90f529",
+    "report": "CDNS/2015",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-0bac4c90f529",
+    "report": "CDNS/2015",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 4
+  },
+  {
+    "caseId": "finqa-0bac4c90f529",
+    "report": "CDNS/2015",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-0bac4c90f529",
+    "report": "CDNS/2015",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 1
+  },
+  {
+    "caseId": "finqa-2c9778930fe3",
+    "report": "CMCSA/2008",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 20
+  },
+  {
+    "caseId": "finqa-2c9778930fe3",
+    "report": "CMCSA/2008",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2c9778930fe3",
+    "report": "CMCSA/2008",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-2c9778930fe3",
+    "report": "CMCSA/2008",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2c9778930fe3",
+    "report": "CMCSA/2008",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6b8208b36192",
+    "report": "BLL/2006",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 20
+  },
+  {
+    "caseId": "finqa-6b8208b36192",
+    "report": "BLL/2006",
+    "method": "local_once",
+    "success": 0.5,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6b8208b36192",
+    "report": "BLL/2006",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-6b8208b36192",
+    "report": "BLL/2006",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6b8208b36192",
+    "report": "BLL/2006",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-7522da2656b0",
+    "report": "ZBH/2015",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 9
+  },
+  {
+    "caseId": "finqa-7522da2656b0",
+    "report": "ZBH/2015",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-7522da2656b0",
+    "report": "ZBH/2015",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-7522da2656b0",
+    "report": "ZBH/2015",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-7522da2656b0",
+    "report": "ZBH/2015",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6abe7641bb1d",
+    "report": "LMT/2016",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-6abe7641bb1d",
+    "report": "LMT/2016",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6abe7641bb1d",
+    "report": "LMT/2016",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-6abe7641bb1d",
+    "report": "LMT/2016",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6abe7641bb1d",
+    "report": "LMT/2016",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-96b9a0eda522",
+    "report": "HOLX/2007",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 6
+  },
+  {
+    "caseId": "finqa-96b9a0eda522",
+    "report": "HOLX/2007",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-96b9a0eda522",
+    "report": "HOLX/2007",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 3
+  },
+  {
+    "caseId": "finqa-96b9a0eda522",
+    "report": "HOLX/2007",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-96b9a0eda522",
+    "report": "HOLX/2007",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-4aebcdfb2fe9",
+    "report": "CME/2017",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-4aebcdfb2fe9",
+    "report": "CME/2017",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-4aebcdfb2fe9",
+    "report": "CME/2017",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-4aebcdfb2fe9",
+    "report": "CME/2017",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-4aebcdfb2fe9",
+    "report": "CME/2017",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2638ebbe6587",
+    "report": "MAR/2004",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 10
+  },
+  {
+    "caseId": "finqa-2638ebbe6587",
+    "report": "MAR/2004",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2638ebbe6587",
+    "report": "MAR/2004",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 4
+  },
+  {
+    "caseId": "finqa-2638ebbe6587",
+    "report": "MAR/2004",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2638ebbe6587",
+    "report": "MAR/2004",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-485b512524e7",
+    "report": "RSG/2013",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-485b512524e7",
+    "report": "RSG/2013",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-485b512524e7",
+    "report": "RSG/2013",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-485b512524e7",
+    "report": "RSG/2013",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-485b512524e7",
+    "report": "RSG/2013",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-bbaa0a59cea5",
+    "report": "DISH/2010",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-bbaa0a59cea5",
+    "report": "DISH/2010",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-bbaa0a59cea5",
+    "report": "DISH/2010",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-bbaa0a59cea5",
+    "report": "DISH/2010",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-bbaa0a59cea5",
+    "report": "DISH/2010",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e3e308dacbe8",
+    "report": "CME/2017",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 23
+  },
+  {
+    "caseId": "finqa-e3e308dacbe8",
+    "report": "CME/2017",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e3e308dacbe8",
+    "report": "CME/2017",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 3
+  },
+  {
+    "caseId": "finqa-e3e308dacbe8",
+    "report": "CME/2017",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e3e308dacbe8",
+    "report": "CME/2017",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-41b9b9da44d8",
+    "report": "AMT/2016",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 16
+  },
+  {
+    "caseId": "finqa-41b9b9da44d8",
+    "report": "AMT/2016",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-41b9b9da44d8",
+    "report": "AMT/2016",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-41b9b9da44d8",
+    "report": "AMT/2016",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-41b9b9da44d8",
+    "report": "AMT/2016",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0.5
+  },
+  {
+    "caseId": "finqa-f84ef551b9e7",
+    "report": "AAL/2014",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 28
+  },
+  {
+    "caseId": "finqa-f84ef551b9e7",
+    "report": "AAL/2014",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-f84ef551b9e7",
+    "report": "AAL/2014",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-f84ef551b9e7",
+    "report": "AAL/2014",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-f84ef551b9e7",
+    "report": "AAL/2014",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b63b884b5b11",
+    "report": "CMCSA/2015",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-b63b884b5b11",
+    "report": "CMCSA/2015",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b63b884b5b11",
+    "report": "CMCSA/2015",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-b63b884b5b11",
+    "report": "CMCSA/2015",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b63b884b5b11",
+    "report": "CMCSA/2015",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6943b1238845",
+    "report": "RSG/2018",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 9
+  },
+  {
+    "caseId": "finqa-6943b1238845",
+    "report": "RSG/2018",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6943b1238845",
+    "report": "RSG/2018",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-6943b1238845",
+    "report": "RSG/2018",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6943b1238845",
+    "report": "RSG/2018",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-89f2f09bb032",
+    "report": "JPM/2012",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 40
+  },
+  {
+    "caseId": "finqa-89f2f09bb032",
+    "report": "JPM/2012",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-89f2f09bb032",
+    "report": "JPM/2012",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-89f2f09bb032",
+    "report": "JPM/2012",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-89f2f09bb032",
+    "report": "JPM/2012",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2fe543e6a099",
+    "report": "UPS/2010",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 52
+  },
+  {
+    "caseId": "finqa-2fe543e6a099",
+    "report": "UPS/2010",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2fe543e6a099",
+    "report": "UPS/2010",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-2fe543e6a099",
+    "report": "UPS/2010",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2fe543e6a099",
+    "report": "UPS/2010",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6269a2b4a3e7",
+    "report": "MRO/2008",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 9
+  },
+  {
+    "caseId": "finqa-6269a2b4a3e7",
+    "report": "MRO/2008",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6269a2b4a3e7",
+    "report": "MRO/2008",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-6269a2b4a3e7",
+    "report": "MRO/2008",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-6269a2b4a3e7",
+    "report": "MRO/2008",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b3a459d1c8a4",
+    "report": "ABMD/2012",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 7
+  },
+  {
+    "caseId": "finqa-b3a459d1c8a4",
+    "report": "ABMD/2012",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b3a459d1c8a4",
+    "report": "ABMD/2012",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-b3a459d1c8a4",
+    "report": "ABMD/2012",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b3a459d1c8a4",
+    "report": "ABMD/2012",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a2dca2c2c9c4",
+    "report": "STT/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-a2dca2c2c9c4",
+    "report": "STT/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a2dca2c2c9c4",
+    "report": "STT/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-a2dca2c2c9c4",
+    "report": "STT/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a2dca2c2c9c4",
+    "report": "STT/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-064151ed2d8e",
+    "report": "UNP/2009",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 52
+  },
+  {
+    "caseId": "finqa-064151ed2d8e",
+    "report": "UNP/2009",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-064151ed2d8e",
+    "report": "UNP/2009",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-064151ed2d8e",
+    "report": "UNP/2009",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-064151ed2d8e",
+    "report": "UNP/2009",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-29285f6ddb94",
+    "report": "PNC/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 18
+  },
+  {
+    "caseId": "finqa-29285f6ddb94",
+    "report": "PNC/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-29285f6ddb94",
+    "report": "PNC/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-29285f6ddb94",
+    "report": "PNC/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-29285f6ddb94",
+    "report": "PNC/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2b3abd65fef6",
+    "report": "APD/2018",
+    "method": "full_once",
+    "success": 0.5,
+    "transmittedCells": 5
+  },
+  {
+    "caseId": "finqa-2b3abd65fef6",
+    "report": "APD/2018",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2b3abd65fef6",
+    "report": "APD/2018",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-2b3abd65fef6",
+    "report": "APD/2018",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2b3abd65fef6",
+    "report": "APD/2018",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b5c8c8dc35f6",
+    "report": "FIS/2012",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-b5c8c8dc35f6",
+    "report": "FIS/2012",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b5c8c8dc35f6",
+    "report": "FIS/2012",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-b5c8c8dc35f6",
+    "report": "FIS/2012",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b5c8c8dc35f6",
+    "report": "FIS/2012",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e1e48b4c9031",
+    "report": "ETFC/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 9
+  },
+  {
+    "caseId": "finqa-e1e48b4c9031",
+    "report": "ETFC/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e1e48b4c9031",
+    "report": "ETFC/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-e1e48b4c9031",
+    "report": "ETFC/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e1e48b4c9031",
+    "report": "ETFC/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-90638b0f26fe",
+    "report": "AAL/2013",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-90638b0f26fe",
+    "report": "AAL/2013",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-90638b0f26fe",
+    "report": "AAL/2013",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-90638b0f26fe",
+    "report": "AAL/2013",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-90638b0f26fe",
+    "report": "AAL/2013",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-9ce562c9fd21",
+    "report": "MS/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 7
+  },
+  {
+    "caseId": "finqa-9ce562c9fd21",
+    "report": "MS/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-9ce562c9fd21",
+    "report": "MS/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-9ce562c9fd21",
+    "report": "MS/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-9ce562c9fd21",
+    "report": "MS/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-694b9c666d1b",
+    "report": "ETR/2011",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 9
+  },
+  {
+    "caseId": "finqa-694b9c666d1b",
+    "report": "ETR/2011",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-694b9c666d1b",
+    "report": "ETR/2011",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-694b9c666d1b",
+    "report": "ETR/2011",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-694b9c666d1b",
+    "report": "ETR/2011",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e073d710551a",
+    "report": "ETFC/2011",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 18
+  },
+  {
+    "caseId": "finqa-e073d710551a",
+    "report": "ETFC/2011",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e073d710551a",
+    "report": "ETFC/2011",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-e073d710551a",
+    "report": "ETFC/2011",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-e073d710551a",
+    "report": "ETFC/2011",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b57c03f06174",
+    "report": "LMT/2015",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-b57c03f06174",
+    "report": "LMT/2015",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b57c03f06174",
+    "report": "LMT/2015",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-b57c03f06174",
+    "report": "LMT/2015",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b57c03f06174",
+    "report": "LMT/2015",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-57a777587293",
+    "report": "GIS/2019",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 4
+  },
+  {
+    "caseId": "finqa-57a777587293",
+    "report": "GIS/2019",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-57a777587293",
+    "report": "GIS/2019",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-57a777587293",
+    "report": "GIS/2019",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-57a777587293",
+    "report": "GIS/2019",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-f992160df421",
+    "report": "AES/2002",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 14
+  },
+  {
+    "caseId": "finqa-f992160df421",
+    "report": "AES/2002",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-f992160df421",
+    "report": "AES/2002",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-f992160df421",
+    "report": "AES/2002",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-f992160df421",
+    "report": "AES/2002",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-ca188c838d36",
+    "report": "DISH/2011",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 7
+  },
+  {
+    "caseId": "finqa-ca188c838d36",
+    "report": "DISH/2011",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-ca188c838d36",
+    "report": "DISH/2011",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-ca188c838d36",
+    "report": "DISH/2011",
+    "method": "blind_review",
+    "success": 0.5,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-ca188c838d36",
+    "report": "DISH/2011",
+    "method": "conflict_review",
+    "success": 0.5,
+    "transmittedCells": 0.5
+  },
+  {
+    "caseId": "finqa-2b7d902c5110",
+    "report": "HII/2015",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 28
+  },
+  {
+    "caseId": "finqa-2b7d902c5110",
+    "report": "HII/2015",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2b7d902c5110",
+    "report": "HII/2015",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-2b7d902c5110",
+    "report": "HII/2015",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2b7d902c5110",
+    "report": "HII/2015",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-7e711bc6c358",
+    "report": "BLL/2010",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 18
+  },
+  {
+    "caseId": "finqa-7e711bc6c358",
+    "report": "BLL/2010",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-7e711bc6c358",
+    "report": "BLL/2010",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-7e711bc6c358",
+    "report": "BLL/2010",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-7e711bc6c358",
+    "report": "BLL/2010",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-cdfba1ee3dd9",
+    "report": "JKHY/2017",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 18
+  },
+  {
+    "caseId": "finqa-cdfba1ee3dd9",
+    "report": "JKHY/2017",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-cdfba1ee3dd9",
+    "report": "JKHY/2017",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-cdfba1ee3dd9",
+    "report": "JKHY/2017",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-cdfba1ee3dd9",
+    "report": "JKHY/2017",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-35435991030d",
+    "report": "MSI/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 13
+  },
+  {
+    "caseId": "finqa-35435991030d",
+    "report": "MSI/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-35435991030d",
+    "report": "MSI/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 3
+  },
+  {
+    "caseId": "finqa-35435991030d",
+    "report": "MSI/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-35435991030d",
+    "report": "MSI/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-263a3b4ab352",
+    "report": "SNA/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 18
+  },
+  {
+    "caseId": "finqa-263a3b4ab352",
+    "report": "SNA/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-263a3b4ab352",
+    "report": "SNA/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-263a3b4ab352",
+    "report": "SNA/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-263a3b4ab352",
+    "report": "SNA/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-cd8e51d93493",
+    "report": "TMUS/2017",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-cd8e51d93493",
+    "report": "TMUS/2017",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-cd8e51d93493",
+    "report": "TMUS/2017",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-cd8e51d93493",
+    "report": "TMUS/2017",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-cd8e51d93493",
+    "report": "TMUS/2017",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-d09535391cd0",
+    "report": "AWK/2017",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-d09535391cd0",
+    "report": "AWK/2017",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-d09535391cd0",
+    "report": "AWK/2017",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-d09535391cd0",
+    "report": "AWK/2017",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-d09535391cd0",
+    "report": "AWK/2017",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-03c3f090394d",
+    "report": "SNA/2007",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 6
+  },
+  {
+    "caseId": "finqa-03c3f090394d",
+    "report": "SNA/2007",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-03c3f090394d",
+    "report": "SNA/2007",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-03c3f090394d",
+    "report": "SNA/2007",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-03c3f090394d",
+    "report": "SNA/2007",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2a079a282ecf",
+    "report": "MMM/2007",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 21
+  },
+  {
+    "caseId": "finqa-2a079a282ecf",
+    "report": "MMM/2007",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2a079a282ecf",
+    "report": "MMM/2007",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-2a079a282ecf",
+    "report": "MMM/2007",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-2a079a282ecf",
+    "report": "MMM/2007",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-3a404a3f65d4",
+    "report": "HIG/2004",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 7
+  },
+  {
+    "caseId": "finqa-3a404a3f65d4",
+    "report": "HIG/2004",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-3a404a3f65d4",
+    "report": "HIG/2004",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-3a404a3f65d4",
+    "report": "HIG/2004",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-3a404a3f65d4",
+    "report": "HIG/2004",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-bfd58ff72f6e",
+    "report": "K/2006",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 10
+  },
+  {
+    "caseId": "finqa-bfd58ff72f6e",
+    "report": "K/2006",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-bfd58ff72f6e",
+    "report": "K/2006",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 3
+  },
+  {
+    "caseId": "finqa-bfd58ff72f6e",
+    "report": "K/2006",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-bfd58ff72f6e",
+    "report": "K/2006",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-adfe78a89198",
+    "report": "AMT/2008",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-adfe78a89198",
+    "report": "AMT/2008",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-adfe78a89198",
+    "report": "AMT/2008",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-adfe78a89198",
+    "report": "AMT/2008",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-adfe78a89198",
+    "report": "AMT/2008",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b5c9fe48c155",
+    "report": "JPM/2005",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 6
+  },
+  {
+    "caseId": "finqa-b5c9fe48c155",
+    "report": "JPM/2005",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b5c9fe48c155",
+    "report": "JPM/2005",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 6
+  },
+  {
+    "caseId": "finqa-b5c9fe48c155",
+    "report": "JPM/2005",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-b5c9fe48c155",
+    "report": "JPM/2005",
+    "method": "conflict_review",
+    "success": 0.5,
+    "transmittedCells": 1
+  },
+  {
+    "caseId": "finqa-1f6f92c826dc",
+    "report": "V/2014",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-1f6f92c826dc",
+    "report": "V/2014",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-1f6f92c826dc",
+    "report": "V/2014",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-1f6f92c826dc",
+    "report": "V/2014",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-1f6f92c826dc",
+    "report": "V/2014",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a5e77742c3b6",
+    "report": "D/2002",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 16
+  },
+  {
+    "caseId": "finqa-a5e77742c3b6",
+    "report": "D/2002",
+    "method": "local_once",
+    "success": 0.5,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a5e77742c3b6",
+    "report": "D/2002",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a5e77742c3b6",
+    "report": "D/2002",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-a5e77742c3b6",
+    "report": "D/2002",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0.5
+  },
+  {
+    "caseId": "finqa-42b58410a127",
+    "report": "PNC/2012",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-42b58410a127",
+    "report": "PNC/2012",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-42b58410a127",
+    "report": "PNC/2012",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 4
+  },
+  {
+    "caseId": "finqa-42b58410a127",
+    "report": "PNC/2012",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-42b58410a127",
+    "report": "PNC/2012",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-91a57be8973b",
+    "report": "FIS/2017",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-91a57be8973b",
+    "report": "FIS/2017",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-91a57be8973b",
+    "report": "FIS/2017",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-91a57be8973b",
+    "report": "FIS/2017",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-91a57be8973b",
+    "report": "FIS/2017",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-c99f530820cd",
+    "report": "MSI/2014",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-c99f530820cd",
+    "report": "MSI/2014",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-c99f530820cd",
+    "report": "MSI/2014",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-c99f530820cd",
+    "report": "MSI/2014",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-c99f530820cd",
+    "report": "MSI/2014",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-3f1ad92b0636",
+    "report": "MRO/2004",
+    "method": "full_once",
+    "success": 0.5,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-3f1ad92b0636",
+    "report": "MRO/2004",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-3f1ad92b0636",
+    "report": "MRO/2004",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-3f1ad92b0636",
+    "report": "MRO/2004",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-3f1ad92b0636",
+    "report": "MRO/2004",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-ef0171042a09",
+    "report": "PNC/2015",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 12
+  },
+  {
+    "caseId": "finqa-ef0171042a09",
+    "report": "PNC/2015",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-ef0171042a09",
+    "report": "PNC/2015",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-ef0171042a09",
+    "report": "PNC/2015",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-ef0171042a09",
+    "report": "PNC/2015",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-259741021832",
+    "report": "LMT/2012",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 9
+  },
+  {
+    "caseId": "finqa-259741021832",
+    "report": "LMT/2012",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-259741021832",
+    "report": "LMT/2012",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-259741021832",
+    "report": "LMT/2012",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-259741021832",
+    "report": "LMT/2012",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-705f3e6b6888",
+    "report": "HOLX/2007",
+    "method": "full_once",
+    "success": 0,
+    "transmittedCells": 8
+  },
+  {
+    "caseId": "finqa-705f3e6b6888",
+    "report": "HOLX/2007",
+    "method": "local_once",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-705f3e6b6888",
+    "report": "HOLX/2007",
+    "method": "requested_cells",
+    "success": 0,
+    "transmittedCells": 1
+  },
+  {
+    "caseId": "finqa-705f3e6b6888",
+    "report": "HOLX/2007",
+    "method": "blind_review",
+    "success": 0,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-705f3e6b6888",
+    "report": "HOLX/2007",
+    "method": "conflict_review",
+    "success": 0,
+    "transmittedCells": 1
+  },
+  {
+    "caseId": "finqa-8d06f8b84b4d",
+    "report": "ILMN/2003",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 15
+  },
+  {
+    "caseId": "finqa-8d06f8b84b4d",
+    "report": "ILMN/2003",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-8d06f8b84b4d",
+    "report": "ILMN/2003",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-8d06f8b84b4d",
+    "report": "ILMN/2003",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-8d06f8b84b4d",
+    "report": "ILMN/2003",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-adf7de71ab99",
+    "report": "UPS/2016",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 10
+  },
+  {
+    "caseId": "finqa-adf7de71ab99",
+    "report": "UPS/2016",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-adf7de71ab99",
+    "report": "UPS/2016",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-adf7de71ab99",
+    "report": "UPS/2016",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-adf7de71ab99",
+    "report": "UPS/2016",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-1e2daeea91cf",
+    "report": "RSG/2010",
+    "method": "full_once",
+    "success": 1,
+    "transmittedCells": 16
+  },
+  {
+    "caseId": "finqa-1e2daeea91cf",
+    "report": "RSG/2010",
+    "method": "local_once",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-1e2daeea91cf",
+    "report": "RSG/2010",
+    "method": "requested_cells",
+    "success": 1,
+    "transmittedCells": 2
+  },
+  {
+    "caseId": "finqa-1e2daeea91cf",
+    "report": "RSG/2010",
+    "method": "blind_review",
+    "success": 1,
+    "transmittedCells": 0
+  },
+  {
+    "caseId": "finqa-1e2daeea91cf",
+    "report": "RSG/2010",
+    "method": "conflict_review",
+    "success": 1,
+    "transmittedCells": 0
+  }
+]

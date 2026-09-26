@@ -46,3 +46,11 @@ jobs:
           Expand-Archive -LiteralPath evidence/validation-v4/controls/reproduction-records.zip -DestinationPath . -Force
           node scripts/verify-v4.mjs
           node scripts/verify-financial-showcase.mjs
+      - name: Verify preserved v5 and corrected v6 evidence
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath evidence/validation-v5/reproduction-records.zip -DestinationPath . -Force
+          Expand-Archive -LiteralPath evidence/validation-v6/reproduction-records.zip -DestinationPath . -Force
+          node scripts/verify-v5.mjs
+          node scripts/verify-v6.mjs
+          node scripts/verify-corrected-showcase.mjs
