@@ -1,105 +1,165 @@
-<p align="center"><img src="assets/social-preview.png" alt="Stepwise Disclosure research prototype, with its English interface and frozen experiment scope" width="900"></p>
+<a id="readme-top"></a>
 
-<h1 align="center">Stepwise Disclosure</h1>
-<p align="center">A runnable research prototype for deciding where an agent step runs and what each recipient receives.</p>
+<div align="center">
+  <img src="web/assets/hy-mark-dark.svg" alt="Hydrogen Cloud research demo mark" width="86" height="86">
+  <h1>Stepwise Disclosure Demo</h1>
+  <p>Decide where an agent step runs and what its current recipient receives.</p>
+  <p>
+    <a href="#getting-started"><strong>Get started »</strong></a><br>
+    <a href="#usage">View walkthrough</a> ·
+    <a href="#reproduce-the-experiment">Reproduce results</a> ·
+    <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/issues">Report an issue</a> ·
+    <a href="README.zh-CN.md">简体中文</a>
+  </p>
+  <p>
+    <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="Checks" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
+    <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
+    <a href="package.json"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white"></a>
+  </p>
+</div>
+
+<details>
+  <summary><strong>Table of contents</strong></summary>
+
+  - [About the project](#about-the-project)
+    - [Built with](#built-with)
+  - [Getting started](#getting-started)
+  - [Usage](#usage)
+  - [Reproduce the experiment](#reproduce-the-experiment)
+  - [Evidence and limitations](#evidence-and-limitations)
+  - [Repository map](#repository-map)
+  - [Contributing](#contributing)
+  - [License and citation](#license-and-citation)
+</details>
+
+## About the project
+
+An agent can discover a new step only after reading local material or receiving a tool result. That step may need a different executor and a different set of facts. This prototype makes both decisions at each registered step: use a local rule when it can complete the operation; otherwise construct a view for the actual external recipient, check the final request before transmission, and record what the recipient received.
+
 <p align="center">
-  <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="Checks" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
-  <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
-  <a href="package.json"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-315c52?logo=node.js&logoColor=white"></a>
+  <img src="evidence/research/ui/08-deepseek-english-report.png" alt="English interface showing a preserved DeepSeek run, its step timeline, and inspectable result" width="920">
 </p>
-<p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a> · <a href="#try-it-without-a-key">Run the demo</a> · <a href="#reproduce-the-frozen-experiment">Reproduce results</a> · <a href="#what-the-evidence-supports">Evidence limits</a></p>
+<p align="center"><em>Recorded DeepSeek run in the English interface. The right pane can also show the selected step's recipient view and receiver record.</em></p>
 
-| Run locally | Inspect a recorded model run | Recompute the study |
-| :-- | :-- | :-- |
-| Synthetic PDF → step decision → checked HTTP request | Two preserved DeepSeek traces, no key required | 60 cases × 5 methods × 3 repeats; saved inputs and scores |
+This is an independent research demo with synthetic contracts and study records, not the commercial client. Its offline executor uses finite rules; the saved DeepSeek runs are real provider calls presented as replay. The interface labels those modes separately.
 
-## Research question
+### Built with
 
-An agent may discover a new step only after reading local material or receiving a tool result. At that point, an earlier decision about *where to execute* and *what to disclose* may no longer fit. This prototype makes the two decisions together for each step: choose a registered local or external executor, build a recipient-specific view, check authorization immediately before transmission, and re-evaluate when a later step appears.
+<p>
+  <a href="https://nodejs.org/"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white"></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-ES_modules-F7DF1E?logo=javascript&logoColor=111111"></a>
+  <a href="https://mozilla.github.io/pdf.js/"><img alt="PDF.js" src="https://img.shields.io/badge/PDF.js-6.3-FFB13B?logo=mozilla&logoColor=111111"></a>
+  <a href="https://playwright.dev/"><img alt="Playwright" src="https://img.shields.io/badge/Playwright-UI_tests-2EAD33?logo=playwright&logoColor=white"></a>
+  <a href="https://matplotlib.org/"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-evidence_plots-11557C"></a>
+</p>
 
-This is an **independent, bounded research demo** using synthetic contracts and study records. It is not the commercial client, a general-purpose data-loss prevention system, or an unrestricted agent framework.
+Node.js runs the step planner, receiver and web interface; PDF.js reads the synthetic PDFs. Playwright verifies the interface, while Python/Matplotlib draws figures from saved experiment records. The optional live-model adapter calls DeepSeek; the frozen batch used Qwen-Plus.
 
-## Try it without a key
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
-Install [Node.js 24](https://nodejs.org/) and run:
+## Getting started
 
-~~~sh
+**Prerequisite:** [Node.js 24](https://nodejs.org/). The offline walkthrough and recorded replay need no model key.
+
+```sh
+git clone https://github.com/Zane-0260907/stepwise-disclosure-demo.git
+cd stepwise-disclosure-demo
 npm ci
 npm start
-~~~
+```
 
-Open **http://127.0.0.1:4793/**. The server binds to localhost by default.
+Open **http://127.0.0.1:4793/**. The server binds to localhost by default. Windows is the verified runtime; Docker and Linux are provided as starting points but have not been acceptance-tested.
 
-1. Leave **Local rule executor** selected. Run the *standard clause* case to see a step completed locally without an analysis request.
-2. Run the *reference clause* case. The executor reads a synthetic PDF, discovers a reference lookup, sends a checked view to an independent local HTTP receiver, then resumes with the returned versioned reference.
-3. Run the *revoke before send* case. Revoke at the pause point; the pre-send check blocks transmission. Allow it on another run to compare the receiver record.
+For a new live DeepSeek call, set `DEEPSEEK_API_KEY` in your local environment and restart. The adapter uses `deepseek-flash` in non-thinking mode. Do not commit the key or expose a key-bearing instance publicly; this demo has no multi-user authentication.
 
-The offline executor really parses the supplied synthetic PDF, checks each transfer and writes a fresh run record. It uses finite rules rather than a language model. The **two DeepSeek entries** in the sidebar replay preserved real calls for the same synthetic contract, with no key or new provider request. The UI labels fresh execution and recorded replay separately; the animation time is **not** experimental execution time.
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
-<p align="center"><img src="evidence/research/ui/08-deepseek-english-report.png" alt="English research interface showing a recorded DeepSeek run, step timeline, and inspectable result" width="950"></p>
-<p align="center"><em>English interface, recorded DeepSeek run. Select a step to inspect the actual recipient view and receiver record.</em></p>
+## Usage
 
-To make a new live DeepSeek call, supply your own `DEEPSEEK_API_KEY` in your local environment and restart. The key is never required for the offline walkthrough or saved replay. Do not commit credentials or expose a key-bearing instance to the public internet; this demo has no multi-user authentication. The live adapter uses `deepseek-flash`, non-thinking mode.
+Select **Local rule executor** for a fresh run, then compare these synthetic cases:
 
-## Reproduce the frozen experiment
+| Case | What to inspect |
+| :-- | :-- |
+| Standard clause | The PDF is parsed and a supported step completes locally, without a model analysis request. |
+| Reference clause | A new lookup appears during execution. Its checked view reaches a separate local HTTP receiver; the returned versioned reference is used by the next step. |
+| Revoke before send | Revoking at the pause point blocks the pending request. Allowing the same step on another run produces a receiver record to compare. |
 
-The primary batch is **60 synthetic cases × 5 methods × 3 repetitions = 900 task runs**, frozen as `frozen-v1-20260925` with model `qwen-plus`. One task may contain multiple model calls. The five methods are full context, ordinary PII masking, entry-only projection, per-step projection with fixed executor, and joint stepwise decision. The first four are baselines implemented in **this** codebase, not reimplementations of external systems.
+Click a step in the middle pane to inspect its selected recipient, facts sent, facts retained locally, request digest and result. The offline executor parses the PDF and writes a fresh run record each time, but its finite rules do not demonstrate language-model understanding. The two **DeepSeek replay** entries reproduce preserved real calls without a key or a new provider request. Slower UI playback is not experiment runtime.
 
-The primary endpoint is **strict structured-task success**, checked against withheld ground truth. It is not a human judgment of prose quality. Repetitions are aggregated within each case before paired comparisons.
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+
+## Reproduce the experiment
+
+The frozen batch `frozen-v1-20260925` contains **60 synthetic cases × 5 methods × 3 repetitions = 900 task runs** under a Qwen-Plus model configuration. One task may contain multiple model calls. All five methods are implemented in this repository; the four baselines are mechanism controls, not reimplementations of external systems.
+
+The primary endpoint is **strict structured-task success** against withheld labels, not expert judgment of prose quality. Repetitions are aggregated within each case before paired comparisons.
 
 | Method | Structured success | Mean unnecessary facts sent per task |
 | :-- | --: | --: |
 | Full context | 76.7% | 9.6 |
 | PII masking | 75.0% | 4.6 |
 | Entry projection | 82.2% | 0.33 |
-| Per-step projection | 82.8% | 0 |
+| Per-step projection, fixed executor | 82.8% | 0 |
 | Joint stepwise decision | **91.1%** | **0** |
 
-Values come from [`summary.json`](evidence/research/results/summary.json); intervals, paired differences, failures and per-case results are retained alongside it. The differences are observations under the fixed synthetic protocol, not claims of broad deployment performance.
+<p align="center"><img src="evidence/research/results/experiment-overview.en.svg" alt="English five-method comparison from the frozen run records" width="900"></p>
+<p align="center"><em>Generated from saved runs. Intervals and paired comparisons use cases, rather than treating 900 repetitions as independent cases.</em></p>
 
-<p align="center"><img src="evidence/research/results/experiment-overview.en.svg" alt="English-language five-method comparison generated from the frozen run records" width="850"></p>
+Check the executable path, synthetic inputs and saved live-call records:
 
-Recheck inputs, executable controls and saved DeepSeek records:
-
-~~~sh
+```sh
 npm run check:inputs
 npm test
 npm run test:boundaries
 node scripts/verify-deepseek-records.mjs
-~~~
+```
 
-Recompute the **900 saved runs** without a model key or another model call:
+Re-score the **900 saved runs** without a key or another model call:
 
-~~~sh
+```sh
 python -m zipfile -e evidence/research/reproduction-records.zip .
 node scripts/verify-recorded-scores.mjs frozen-v1-20260925
 node scripts/summarize-research.mjs frozen-v1-20260925
-~~~
+```
 
-The extraction creates ignored `data/research/experiments/` files. To regenerate plots, install Python 3.11+, then `python -m pip install -r requirements-plots.txt` and `npm run plot`. CJK fonts such as Noto Sans CJK may be needed on Linux for Chinese labels. Windows is the verified runtime; Docker and Linux are provided as starting points but were not acceptance-tested.
+The archive extracts to ignored `data/research/experiments/`. To regenerate the English chart, install Python 3.11+ and `requirements-plots.txt`, then run `python scripts/plot-research.py --lang en`. The [frozen protocol](evidence/research/frozen-protocol.json) records source and input hashes; changing the core, fixtures, evaluator or lockfile requires a new experiment version.
 
-The frozen protocol and source hashes are in [`frozen-protocol.json`](evidence/research/frozen-protocol.json). Editing the core, fixtures, evaluator or lockfile invalidates the frozen protocol rather than silently producing “the same” experiment.
+Full values, intervals, failures and per-case results are in [`evidence/research/results/`](evidence/research/results/).
 
-## Two preserved DeepSeek runs
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
-For one synthetic contract, the [saved live-call bundle](evidence/research/deepseek-live-20260926/) contains a joint run and a full-context comparison. **Each** made two DeepSeek model calls and one synthetic-reference lookup. The joint run sent **5,089 bytes** across its recorded requests; the full-context run sent **6,273 bytes**. These are a **single-case illustration**, not 900 DeepSeek trials, a significance result, or a cross-model quality comparison. The raw provider request bodies, digests, receiver records, event frames, generated results and English presentation translations are kept separately. No API key is part of the bundle.
+## Evidence and limitations
 
-## What the evidence supports
+The [preserved DeepSeek bundle](evidence/research/deepseek-live-20260926/) contains a joint run and a full-context comparison on **one** synthetic contract. Each made two model calls and one synthetic-reference lookup. Their recorded outbound request totals were **5,089** and **6,273 bytes**. This illustrates a trace; it is not part of the 900-run Qwen-Plus batch or a cross-model quality comparison. Raw requests, digests, receiver records, event frames, results and English presentation translations are retained separately; no key is included.
 
-- The offline walkthrough demonstrates the step and transfer control path, not language-model understanding.
-- The batch tests structured outcomes on controlled synthetic cases. The development and evaluation sets share task families; unseen-template generalization and real-enterprise deployment are untested.
-- The receiver observes real HTTP requests in a separate local process. Its records and the provider-egress adapter trace support application-level audit, not an independent certification by the cloud provider or protection against arbitrary bypass traffic.
-- A changed authorization can block a **future** send. It cannot retrieve facts already transmitted.
-- End-to-end wall time, kernel time and UI playback time have different scopes. Read [the original measurement notes](README.zh-CN.md#证据边界) before quoting latency numbers.
+- The batch tests structured outcomes on controlled synthetic cases. Development and evaluation share task families; unseen-template generalization and real-enterprise deployment remain untested.
+- The independent local receiver records actual HTTP requests, and the provider adapter records its egress. These are application-level audit records, not cloud-provider certification or protection against arbitrary bypass traffic.
+- A changed authorization can block a **future** send; it cannot retrieve facts already transmitted.
+- Recorded extra-fact counts cover registered structured fields. They do not detect semantic inference or leakage outside the registered adapters.
+- Kernel time, end-to-end time and UI playback time are different measurements. The paced display is never reported as execution speed.
+
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
 ## Repository map
 
-| Path | Purpose |
+| Path | Contents |
 | :-- | :-- |
-| [`src/research/`](src/research/) | Step planner, view construction, policy check, receiver, model adapter and evaluator |
-| [`web/`](web/) | Minimal bilingual research interface, separate from the commercial product |
-| [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld evaluation labels |
-| [`evidence/research/`](evidence/research/) | Frozen protocol, raw-run archive, scores, boundary tests, real-call records and screenshots |
+| [`src/research/`](src/research/) | Planner, views, policy checks, receiver, model adapter and evaluator |
+| [`web/`](web/) | Bilingual research interface, separate from the commercial product |
+| [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld labels |
+| [`evidence/research/`](evidence/research/) | Frozen protocol, run archive, scores, boundary tests, live-call records and screenshots |
 | [`scripts/`](scripts/) | Input checks, independent score verification, summaries and plots |
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for changes and [ASSETS.md](ASSETS.md) for asset provenance. The source is released under [Apache-2.0](LICENSE). The logo and product name are included for identification of this research demo; the software license does not grant trademark rights. The author-provided software citation is in [CITATION.cff](CITATION.cff). A paper citation can be added when the manuscript has a stable publication record.
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+
+## Contributing
+
+Bug reports and reproducibility questions are welcome through [GitHub Issues](https://github.com/Zane-0260907/stepwise-disclosure-demo/issues). Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing the implementation. Frozen runs must remain reproducible; changes to their inputs or evaluator belong in a new protocol version.
+
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+
+## License and citation
+
+Software is released under [Apache-2.0](LICENSE). The included mark and product name identify this research demo; the software license does not grant trademark rights. See [ASSETS.md](ASSETS.md) for provenance and [CITATION.cff](CITATION.cff) for the software citation. A paper citation can be added when the manuscript has a stable publication record.
+
+<p align="right"><a href="#readme-top">Back to top ↑</a></p>

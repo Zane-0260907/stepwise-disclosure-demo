@@ -1,54 +1,98 @@
-<h1 align="center">逐步共享判定</h1>
-<p align="center">在智能体运行中，逐步决定执行位置与当前接收方可获得的事实。</p>
-<p align="center">
-  <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="自动检查" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
-  <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
+<a id="readme-top"></a>
+
+<div align="center">
+  <img src="web/assets/hy-mark-dark.svg" alt="氢云研究演示标识" width="86" height="86">
+  <h1>逐步共享判定</h1>
+  <p>在智能体运行中，决定每一步在哪里执行，以及当前接收方可以获得哪些事实。</p>
+  <p>
+    <a href="#快速开始"><strong>快速开始 »</strong></a><br>
+    <a href="#演示流程">查看演示</a> ·
+    <a href="#复核实验">复核结果</a> ·
+    <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/issues">报告问题</a> ·
+    <a href="README.md">English</a>
+  </p>
+  <p>
+    <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="自动检查" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
+    <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
+    <a href="package.json"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white"></a>
+  </p>
+</div>
+
+<details>
+  <summary><strong>目录</strong></summary>
+
+  - [项目概述](#项目概述)
+    - [技术栈](#技术栈)
+  - [快速开始](#快速开始)
+  - [演示流程](#演示流程)
+  - [复核实验](#复核实验)
+  - [证据与边界](#证据与边界)
+  - [仓库结构](#仓库结构)
+  - [参与改进](#参与改进)
+  - [许可与引用](#许可与引用)
+</details>
+
+## 项目概述
+
+智能体读取本地资料或收到工具结果后，可能在运行中发现新的步骤。新步骤需要的执行能力、接收方和输入可能与前一步不同。本原型在每个登记步骤重新判断：本地规则能够完成的操作留在本地；否则为实际接收方构造字段视图，在最终请求发出前复核，并保存接收方实际获得的内容。
+
+<p align="center"><img src="evidence/research/ui/07-deepseek-recorded-result.png" alt="中文界面中保存的 DeepSeek 运行记录、步骤时间线和接收方视图" width="920"></p>
+<p align="center"><em>中文界面中的 DeepSeek 真实记录重放。右栏可逐步检查实际发送内容与接收记录。</em></p>
+
+这是使用合成合同与学情记录的独立研究原型，不是商业客户端。离线执行器采用有限规则；保存的 DeepSeek 记录来自真实模型调用，但在页面中作为重放展示。界面明确区分两种模式。
+
+### 技术栈
+
+<p>
+  <a href="https://nodejs.org/"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white"></a>
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-ES_modules-F7DF1E?logo=javascript&logoColor=111111"></a>
+  <a href="https://mozilla.github.io/pdf.js/"><img alt="PDF.js" src="https://img.shields.io/badge/PDF.js-6.3-FFB13B?logo=mozilla&logoColor=111111"></a>
+  <a href="https://playwright.dev/"><img alt="Playwright" src="https://img.shields.io/badge/Playwright-UI_tests-2EAD33?logo=playwright&logoColor=white"></a>
+  <a href="https://matplotlib.org/"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-evidence_plots-11557C"></a>
 </p>
-<p align="center"><a href="README.md">English</a> · <strong>简体中文</strong> · <a href="#三步运行">快速运行</a> · <a href="#复核冻结实验">复核实验</a> · <a href="#证据边界">证据边界</a></p>
 
-<p align="center"><img src="evidence/research/ui/02-running.png" alt="合同任务运行时，中栏显示逐步执行，右栏显示当前步骤的发送内容与本地保留内容" width="950"></p>
-<p align="center"><em>真实离线执行。点击步骤可检查当前输入、发送前核验、接收记录和输出。</em></p>
+Node.js 承担步骤规划、接收进程和页面服务；PDF.js 解析合成 PDF。Playwright 检查界面，Python/Matplotlib 从保存的实验记录绘图。可选的现场模型适配器调用 DeepSeek；冻结批次使用 Qwen-Plus。
 
-| 本机运行 | 核对真实模型记录 | 复算冻结实验 |
-| :-- | :-- | :-- |
-| 合成 PDF → 步骤判定 → 核验后的 HTTP 请求 | 两条 DeepSeek 记录，无须密钥 | 60 案例 × 5 方法 × 3 次重复，保存输入与评分 |
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
-## 研究问题
+## 快速开始
 
-Agent 读取本地资料或收到工具结果后，可能临时发现下一步任务。新步骤所需的执行能力、接收方和输入，与入口阶段的判断不同。本原型在**每一步**联合确定执行位置与给定接收方的共享视图，在真正发送前再次核验授权，并在后续新增步骤时重新判定。
+**环境要求：**[Node.js 24](https://nodejs.org/)。离线演示和真实记录重放都不需要模型密钥。
 
-这是使用**合成合同与学习记录**的独立研究原型。它不是商业客户端，也不声称能防护任意程序、任意工具或任意外流渠道。
-
-## 三步运行
-
-安装 [Node.js 24](https://nodejs.org/) 后，在仓库根目录执行：
-
-~~~sh
+```sh
+git clone https://github.com/Zane-0260907/stepwise-disclosure-demo.git
+cd stepwise-disclosure-demo
 npm ci
 npm start
-~~~
+```
 
-访问 **http://127.0.0.1:4793/**。服务默认仅监听本机。
+打开 **http://127.0.0.1:4793/**。服务默认只监听本机。目前完成验收的是 Windows；Docker 与 Linux 入口可供尝试，尚未完成接受性验证。
 
-1. 保持“本机规则执行器”，运行**标准条款**：解析合成 PDF，确认本地能力足够，无须发送分析请求。
-2. 运行**引用条款**：读取 PDF 后发现资料查询步骤，构造面向接收方的视图，经核验发送到本机独立 HTTP 接收进程，取得版本化合成参考资料后继续分析。
-3. 运行**发送前撤权**：在视图形成后撤销授权，观察请求被发送前复核阻断；再允许执行，对照接收进程记录。
+若要重新发起 DeepSeek 现场调用，请在本地设置 `DEEPSEEK_API_KEY` 后重启。适配器使用 `deepseek-flash` 非思考模式。不要把密钥提交到仓库，也不要把带密钥的实例直接暴露到公网；本演示没有多用户鉴权。
 
-离线案例每次都会重新读取、计算、核验并保存记录，但执行器是**有限规则**，不能作为大模型理解能力的证据。左侧两条 DeepSeek 记录来自同一合成合同的真实模型调用，点击后**无密钥重放**原始事件，不会再次请求模型。页面明确区分新执行与记录重放；放慢的页面展示时间不计入实验耗时。
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
-如需新的现场 DeepSeek 调用，请在本地设置环境变量 `DEEPSEEK_API_KEY` 后重启。离线案例与记录重放不需要密钥。切勿把密钥写入代码、日志或仓库；本演示没有多用户鉴权，带密钥运行时不要直接暴露到公网。现场适配器使用 `deepseek-flash` 的非思考模式。
+## 演示流程
 
-<img src="evidence/research/ui/07-deepseek-recorded-result.png" alt="保存的 DeepSeek 运行记录：中央显示结论，右侧区分实际发送与留在本地的字段。" width="950">
+先选择**本机规则执行器**，再比较以下合成案例：
 
-*同一合同的 DeepSeek 运行记录：右侧展示当前步骤的实际发送与本地保留内容。*
+| 案例 | 应检查的内容 |
+| :-- | :-- |
+| 标准条款 | 解析 PDF，本地规则完成步骤，不发送模型分析请求。 |
+| 引用条款 | 运行中新增资料查询；经核验的视图到达独立本机 HTTP 接收进程，下一步使用返回的指定版本资料。 |
+| 发送前撤权 | 在暂停点撤销授权，待发请求被阻断；允许后的另一轮运行产生可对照的接收记录。 |
 
-## 复核冻结实验
+点击中栏步骤，可检查接收方、实际发送事实、本地保留事实、请求摘要与结果。离线执行器每次重新解析 PDF、执行规则并保存新记录，但不能证明语言模型理解能力。左栏两条 **DeepSeek 重放**无需密钥，不会重新请求供应商。页面放慢的展示节奏不计入实验耗时。
 
-正式批次是 **60 个合成案例 × 5 种方法 × 每例 3 次重复，共 900 次任务运行**。冻结编号 `frozen-v1-20260925`，模型标识为 `qwen-plus`；一次任务可能有多次模型调用。五种方法分别是完整上下文、普通个人信息遮盖、入口裁剪、逐步裁剪但固定执行域，以及联合逐步判定。前四种对照是**本项目自己的实现**，并非外部系统的复现。
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
-主指标是根据不供执行器读取的标签进行**严格结构化任务核验**，不是对自由文本质量的人工评分。计算配对差异时，先在案例内部汇总三次重复。
+## 复核实验
 
-| 方法 | 结构化任务通过率 | 每任务平均不必要发送事实数 |
+冻结批次 `frozen-v1-20260925` 包含 **60 个合成案例 × 5 种方法 × 每例 3 次重复，共 900 次任务运行**；云端模型配置为 Qwen-Plus，一次任务可能包含多次模型调用。五种方法均在本仓库实现；其中四种是本项目的机制对照，并非对外部系统的复现。
+
+主指标是按独立标签核验的**严格结构化任务通过率**，不等于专业人员对自由文本的评审。先在案例内汇总三次重复，再计算配对差异。
+
+| 方法 | 结构化任务通过率 | 每任务平均多余发送事实数 |
 | :-- | --: | --: |
 | 完整上下文 | 76.7% | 9.6 |
 | 普通个人信息遮盖 | 75.0% | 4.6 |
@@ -56,46 +100,64 @@ npm start
 | 逐步裁剪、固定执行域 | 82.8% | 0 |
 | 联合逐步判定 | **91.1%** | **0** |
 
-数据来自 [`summary.json`](evidence/research/results/summary.json)；区间、案例配对差异、失败记录和逐例结果都在同一目录。结论仅适用于冻结的合成任务协议。
+<p align="center"><img src="evidence/research/results/experiment-overview.svg" alt="由冻结运行记录生成的中文五方法实验图" width="900"></p>
+<p align="center"><em>图中数值来自保存的运行记录；区间与配对比较以案例为单位，不将 900 次重复视作独立案例。</em></p>
 
-<img src="evidence/research/results/experiment-overview.svg" alt="从冻结运行记录生成的五方法实验统计图。" width="850">
+检查控制路径、合成输入及保存的真实调用记录：
 
-检查输入、控制路径及保存的 DeepSeek 记录：
-
-~~~sh
+```sh
 npm run check:inputs
 npm test
 npm run test:boundaries
 node scripts/verify-deepseek-records.mjs
-~~~
+```
 
-**无需模型密钥**，从保存的 900 份任务记录重新评分和汇总：
+**无须模型密钥**，从 900 份保存的任务记录重新评分：
 
-~~~sh
+```sh
 python -m zipfile -e evidence/research/reproduction-records.zip .
 node scripts/verify-recorded-scores.mjs frozen-v1-20260925
 node scripts/summarize-research.mjs frozen-v1-20260925
-~~~
+```
 
-解压内容进入被 Git 忽略的 `data/research/experiments/`。需要重绘统计图时，安装 Python 3.11+，运行 `python -m pip install -r requirements-plots.txt` 和 `npm run plot`。Linux 绘制中文标签可能需要 Noto Sans CJK 等字体。现有验收环境为 Windows；Docker 和 Linux 尚未完成接受性验证。
+解压内容进入被 Git 忽略的 `data/research/experiments/`。重绘中文图表需安装 Python 3.11+ 和 `requirements-plots.txt`，再运行 `npm run plot`；Linux 上的中文标签可能需要 CJK 字体。[冻结协议](evidence/research/frozen-protocol.json)保存源码与输入摘要；修改核心、输入、评价器或锁文件后，应建立新的实验版本。
 
-[`frozen-protocol.json`](evidence/research/frozen-protocol.json)保存核心代码、输入、评价器和依赖锁文件的摘要。修改这些内容会使原协议失效，应建立新的实验版本，不能把新运行混入已冻结结果。
+详细数值、区间、失败记录和逐案例结果在 [`evidence/research/results/`](evidence/research/results/)。
 
-## 两条 DeepSeek 现场记录
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
-[保存的现场运行包](evidence/research/deepseek-live-20260926/)对同一份合成合同记录了联合方法与完整上下文方法。**每条**有两次 DeepSeek 模型调用、一次合成参考库查询。两条运行各自累计发送 **5,089 字节**和 **6,273 字节**。这只是**单案例说明**，不是 900 次 DeepSeek 实验，也不能证明统计显著性或跨模型的结果质量。原始供应商请求、摘要、接收进程记录、事件帧、生成结果与英文展示译文分开保存；仓库不含 API 密钥。
+## 证据与边界
 
-## 证据边界
+[DeepSeek 真实记录包](evidence/research/deepseek-live-20260926/)保存了同一份合成合同的联合方法与完整上下文对照。**每条**各有两次模型调用和一次合成资料查询，累计外发请求分别为 **5,089 字节**与 **6,273 字节**。这是单案例轨迹，不属于 900 次 Qwen-Plus 冻结批次，也不是跨模型质量比较。原始请求、摘要、接收记录、事件帧、结果与英文展示译文分别留存，仓库不包含密钥。
 
-- 本机规则执行器能验证逐步控制流程，不能证明语言模型理解质量。
-- 900 次实验只覆盖受控合成案例上的结构化结果。开发集与评价集共享任务家族，不能推导真实企业部署或陌生模板泛化。
-- 接收端是独立本机进程，记录真实 HTTP 请求。模型适配器另存供应商出口请求，但这些记录不是云厂商独立认证，也不能覆盖旁路出网和侧信道。
-- 新授权状态可以阻断**尚未发送**的数据，不能收回已发送内容。
-- 执行内核、包含 PDF 解析的 UI 运行、以及逐帧展示的耗时口径不同；页面展示时间不能冒充系统执行时间。
-- 合成 PDF 有明确字段；原型不声称能自动理解任意复杂真实合同。
+- 批次只检验受控合成任务的结构化结果。开发与评价共享操作家族，不能据此推断陌生模板泛化或真实企业部署效果。
+- 独立本机接收进程记录真实 HTTP 请求，模型适配器另存出站请求。这些是应用层审计记录，不是云服务商认证，也不能覆盖任意旁路流量。
+- 授权变化可以阻断**尚未发送**的内容，不能收回已经发出的事实。
+- 多余事实计数只覆盖登记的结构化字段，不能识别语义推断或登记出口之外的泄漏。
+- 内核耗时、端到端耗时和界面播放时间口径不同；放慢播放的时长不作为执行速度。
 
-## 仓库与许可
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
-`src/research/` 是执行、视图、策略、接收进程、模型适配和评价代码；`web/` 是从商业产品独立拆出的最小双语研究页面；`fixtures/research/` 存放合成输入与独立评价标签；`evidence/research/` 存放原始记录、冻结协议、统计与截图；`scripts/` 提供复核与绘图命令。本机运行生成的 `data/research/` 默认不进入 Git。
+## 仓库结构
 
-代码采用 [Apache-2.0](LICENSE) 许可。标识与产品名称用于识别本研究演示，软件许可不授予商标权；素材来源见 [ASSETS.md](ASSETS.md)。作者确认的软件署名和单位信息见 [CITATION.cff](CITATION.cff)；论文引用待形成稳定出版记录后再加入。
+| 目录 | 内容 |
+| :-- | :-- |
+| [`src/research/`](src/research/) | 规划、视图、策略复核、接收进程、模型适配与评价 |
+| [`web/`](web/) | 与商业产品分离的双语研究界面 |
+| [`fixtures/research/`](fixtures/research/) | 合成 PDF、任务目录、引用资料与独立评价标签 |
+| [`evidence/research/`](evidence/research/) | 冻结协议、运行记录、统计、边界测试、真实调用与截图 |
+| [`scripts/`](scripts/) | 输入核验、独立复算、汇总与绘图 |
+
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
+
+## 参与改进
+
+欢迎通过 [GitHub Issues](https://github.com/Zane-0260907/stepwise-disclosure-demo/issues) 提交故障与复现问题。修改实现前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。冻结结果必须保持可复算；改变实验输入或评价器应另建协议版本。
+
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
+
+## 许可与引用
+
+软件以 [Apache-2.0](LICENSE) 开源。仓库中的标识与产品名称用于识别本研究演示，软件许可不授予商标权。素材来源见 [ASSETS.md](ASSETS.md)，软件引用信息见 [CITATION.cff](CITATION.cff)。论文形成稳定出版记录后再补论文引用。
+
+<p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
