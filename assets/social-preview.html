@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stepwise Disclosure Demo — social preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1280px; height: 640px; margin: 0; overflow: hidden; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #1d2d34;
+      background: #f5f8f8;
+    }
+    main {
+      width: 1280px; height: 640px;
+      display: grid; grid-template-columns: 516px 764px;
+      background: linear-gradient(110deg, #f3f8f6 0%, #f7faf9 44%, #ffffff 100%);
+    }
+    section { padding: 47px 30px 37px 55px; display: flex; flex-direction: column; }
+    .brand { display: flex; align-items: center; gap: 14px; height: 51px; }
+    .brand img { width: 42px; height: 42px; }
+    .brand span { font-size: 15px; font-weight: 700; letter-spacing: 0.17em; color: #435f60; }
+    .rule { width: 60px; height: 4px; margin: 53px 0 26px; background: #72a9a0; border-radius: 8px; }
+    h1 { font-size: 57px; line-height: 1.02; letter-spacing: -0.045em; margin: 0; font-weight: 730; }
+    .subtitle { font-size: 23px; line-height: 1.34; margin: 28px 0 0; max-width: 412px; color: #3e5860; }
+    .meta { margin-top: auto; border-top: 1px solid #cbd8d5; padding-top: 21px; color: #466b67; }
+    .meta strong { display: block; font-size: 19px; letter-spacing: -0.01em; }
+    .meta span { display: block; font-size: 15px; margin-top: 8px; }
+    .visuals { padding: 20px 28px 20px 0; display: grid; grid-template-rows: 330px 256px; gap: 14px; }
+    figure { margin: 0; background: #fff; border: 1px solid #d7e3e1; border-radius: 14px; overflow: hidden; box-shadow: 0 5px 18px rgba(28,53,54,.09); }
+    figure img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .ui img { object-position: center top; }
+    .chart img { object-position: center center; }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="brand"><img src="../web/assets/hy-mark-dark.svg" alt=""><span>RESEARCH DEMO</span></div>
+      <div class="rule"></div>
+      <h1>Stepwise<br>Disclosure</h1>
+      <p class="subtitle">Where to execute.<br>What to disclose to each recipient.</p>
+      <div class="meta"><strong>60 cases × 5 methods × 3 runs</strong><span>900 frozen task runs · 2 preserved DeepSeek traces</span></div>
+    </section>
+    <div class="visuals">
+      <figure class="ui"><img src="../evidence/research/ui/07-deepseek-recorded-result.png" alt="Actual saved-run interface screenshot"></figure>
+      <figure class="chart"><img src="../evidence/research/results/experiment-overview.png" alt="Chart generated from frozen experiment records"></figure>
+    </div>
+  </main>
+</body>
+</html>
