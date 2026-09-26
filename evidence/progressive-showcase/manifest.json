@@ -1,0 +1,17 @@
+{
+  "protocol": "research-v3-progressive-facts",
+  "scope": "One additional real DeepSeek run for demonstration; not part of the 448 frozen tasks.",
+  "runs": [
+    {
+      "id": "83fd687d-6783-4e0f-ab9a-4064fb359d12",
+      "caseId": "progressive-09",
+      "method": "joint",
+      "model": "deepseek-flash",
+      "createdAt": "2026-09-26T14:38:21.117Z",
+      "label": {
+        "zh": "补充必要事实",
+        "en": "Request missing facts"
+      }
+    }
+  ]
+}

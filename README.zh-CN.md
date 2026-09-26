@@ -36,7 +36,7 @@
 
 智能体读取本地资料或收到工具结果后，可能在运行中发现新的步骤。新步骤需要的执行能力、接收方和输入可能与前一步不同。本原型在每个登记步骤重新判断：本地规则能够完成的操作留在本地；否则为实际接收方构造字段视图，在最终请求发出前复核，并保存接收方实际获得的内容。
 
-<p align="center"><img src="evidence/research/ui/07-deepseek-recorded-result.png" alt="中文界面中保存的 DeepSeek 运行记录、步骤时间线和接收方视图" width="920"></p>
+<p align="center"><img src="evidence/progressive-showcase/ui/progressive.zh-CN.png" alt="中文界面中保存的 DeepSeek 运行记录、步骤时间线和接收方视图" width="920"></p>
 <p align="center"><em>中文界面中的 DeepSeek 真实记录重放。右栏可逐步检查实际发送内容与接收记录。</em></p>
 
 这是使用合成合同与学情记录的独立研究原型，不是商业客户端。离线执行器采用有限规则；保存的 DeepSeek 记录来自真实模型调用，但在页面中作为重放展示。界面明确区分两种模式。
@@ -51,7 +51,7 @@
   <a href="https://matplotlib.org/"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-evidence_plots-11557C"></a>
 </p>
 
-Node.js 承担步骤规划、接收进程和页面服务；PDF.js 解析合成 PDF。Playwright 检查界面，Python/Matplotlib 从保存的实验记录绘图。可选的现场模型适配器调用 DeepSeek；冻结批次使用 Qwen-Plus。
+Node.js 承担步骤规划、接收进程和页面服务；PDF.js 解析合成 PDF。Playwright 检查界面，Python/Matplotlib 从保存的实验记录绘图。当前现场适配器与新一轮实验使用 DeepSeek；原始 Qwen-Plus 批次按原版本保留。
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
@@ -82,59 +82,69 @@ npm start
 | 引用条款 | 运行中新增资料查询；经核验的视图到达独立本机 HTTP 接收进程，下一步使用返回的指定版本资料。 |
 | 发送前撤权 | 在暂停点撤销授权，待发请求被阻断；允许后的另一轮运行产生可对照的接收记录。 |
 
-点击中栏步骤，可检查接收方、实际发送事实、本地保留事实、请求摘要与结果。离线执行器每次重新解析 PDF、执行规则并保存新记录，但不能证明语言模型理解能力。左栏两条 **DeepSeek 重放**无需密钥，不会重新请求供应商。页面放慢的展示节奏不计入实验耗时。
+点击中栏步骤，可检查接收方、实际发送事实、本地保留事实、请求摘要与结果。离线执行器每次重新解析 PDF、执行规则并保存新记录，但不能证明语言模型理解能力。左栏 **DeepSeek 重放**无需密钥，不会重新请求供应商。建议先选择“补充必要事实”：查看初始输入不足、模型提出申请、本地核准、再次分析的完整过程。详见[演示指引](docs/demo-walkthrough.zh-CN.md)。页面放慢的展示节奏不计入实验耗时。
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
 ## 复核实验
 
-冻结批次 `frozen-v1-20260925` 包含 **60 个合成案例 × 5 种方法 × 每例 3 次重复，共 900 次任务运行**；云端模型配置为 Qwen-Plus，一次任务可能包含多次模型调用。五种方法均在本仓库实现；其中四种是本项目的机制对照，并非对外部系统的复现。
+当前实验为 **32 个合成案例 × 7 种方法 × 每例 2 次，共 448 次任务运行**，模型为 `deepseek-flash`。其中 560 次实际供应商调用均有匹配的接收记录与出站记录；所有计划任务和失败均保留。输入由作者在原有两个领域中编写，不是外部基准。
 
-主指标是按独立标签核验的**严格结构化任务通过率**，不等于专业人员对自由文本的评审。先在案例内汇总三次重复，再计算配对差异。
+| 方法 | 结构化任务通过率 | 多余字段/任务 | 模型调用数 |
+| :-- | --: | --: | --: |
+| 完整上下文 | 53/64 · 82.8% | 8.625 | 80 |
+| 普通脱敏 | 54/64 · 84.4% | 4.125 | 80 |
+| 入口视图 | 54/64 · 84.4% | 0.281 | 96 |
+| 逐步视图、固定执行域 | 53/64 · 82.8% | 0.031 | 96 |
+| 关闭事实补充 | 51/64 · 79.7% | 0 | 64 |
+| 同本地规则＋完整上下文 | 57/64 · 89.1% | 7.188 | 64 |
+| 完整机制 | **58/64 · 90.6%** | **0.031** | 80 |
 
-| 方法 | 结构化任务通过率 | 每任务平均多余发送事实数 |
-| :-- | --: | --: |
-| 完整上下文 | 76.7% | 9.6 |
-| 普通个人信息遮盖 | 75.0% | 4.6 |
-| 入口裁剪 | 82.2% | 0.33 |
-| 逐步裁剪、固定执行域 | 82.8% | 0 |
-| 联合逐步判定 | **91.1%** | **0** |
+<p align="center"><img src="evidence/validation-v3/experiment-overview.svg" alt="448次DeepSeek任务的完成情况、事实补充消融和实际多余传输" width="1000"></p>
 
-<p align="center"><img src="evidence/research/results/experiment-overview.svg" alt="由冻结运行记录生成的中文五方法实验图" width="900"></p>
-<p align="center"><em>图中数值来自保存的运行记录；区间与配对比较以案例为单位，不将 900 次重复视作独立案例。</em></p>
+与关闭事实补充相比，完整机制提高 **10.94 个百分点**，案例配对描述性 95% bootstrap 区间为 **1.56 至 23.44**，同时增加 16 次模型调用。与使用相同本地规则的完整上下文对照相比，仅高 **1.56 个百分点**，区间为 **−10.94 至 14.06**，不能据此声称任务质量更优或等效。完整机制仍多发送了两次不必要字段；“获准发送”不等于“完成任务必需”。
 
-检查控制路径、合成输入及保存的真实调用记录：
+无需密钥和新增模型调用，即可重新评分全部 448 次任务：
 
 ```sh
-npm run check:inputs
 npm test
-npm run test:boundaries
-node scripts/verify-deepseek-records.mjs
+node scripts/verify-progressive-showcase.mjs
+python -m zipfile -e evidence/validation-v3/reproduction-records.zip .
+npm run verify:v3
 ```
 
-**无须模型密钥**，从 900 份保存的任务记录重新评分：
+解压内容进入被 Git 忽略的 `data/research/validation/`。[v3 冻结协议](evidence/validation-v3/protocol.json)在调用前记录源码、输入、标签和对照定义；[完整结果、失败与逐案例汇总](evidence/validation-v3/)均已保存。重绘图表：安装 `requirements-plots.txt` 后运行 `python scripts/plot-validation.py`。
+
+<details>
+<summary><strong>开发过程与此前证据</strong></summary>
+
+- **v1：**60 个案例、五种方法、三次重复，900 次 Qwen-Plus 任务。原代码、输入和[统计结果](evidence/research/results/)保持冻结。
+- **v2：**36 个同领域新案例、六种方法、两次重复，432 次 DeepSeek 任务。它暴露了必要输入被遗漏的问题，随后用于开发，**不能再作为 v3 的保留评测集**。[协议与结果](evidence/validation-v2/)。
+- **v3：**上述 448 次任务在重新冻结后，使用另行编写的同领域案例评价新机制。三个版本不能合并为一个通过率。
 
 ```sh
 python -m zipfile -e evidence/research/reproduction-records.zip .
 node scripts/verify-recorded-scores.mjs frozen-v1-20260925
-node scripts/summarize-research.mjs frozen-v1-20260925
+python -m zipfile -e evidence/validation-v2/reproduction-records.zip .
+npm run verify:v2
+npm run test:binding
 ```
 
-解压内容进入被 Git 忽略的 `data/research/experiments/`。重绘中文图表需安装 Python 3.11+ 和 `requirements-plots.txt`，再运行 `npm run plot`；Linux 上的中文标签可能需要 CJK 字体。[冻结协议](evidence/research/frozen-protocol.json)保存源码与输入摘要；修改核心、输入、评价器或锁文件后，应建立新的实验版本。
+另有确定性请求绑定检查：新检查阻断 52/52 次请求变更，旧检查为 12/52；两者均允许八次合法请求。这验证受控的本地发送路径，不证明对任意攻击的语义隐私。[记录](evidence/request-binding/summary.json)。
 
-详细数值、区间、失败记录和逐案例结果在 [`evidence/research/results/`](evidence/research/results/)。
+</details>
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 
 ## 证据与边界
 
-[DeepSeek 真实记录包](evidence/research/deepseek-live-20260926/)保存了同一份合成合同的联合方法与完整上下文对照。**每条**各有两次模型调用和一次合成资料查询，累计外发请求分别为 **5,089 字节**与 **6,273 字节**。这是单案例轨迹，不属于 900 次 Qwen-Plus 冻结批次，也不是跨模型质量比较。原始请求、摘要、接收记录、事件帧、结果与英文展示译文分别留存，仓库不包含密钥。
+[渐进共享演示](evidence/progressive-showcase/)另保存一次真实调用，不计入批次。该记录保留模型索取逾期天数时同时索取多余合同金额的事实，随后得到 1,150 元结果。[此前的资料查询对照](evidence/research/deepseek-live-20260926/)也单独保留。单条轨迹不能替代批量评价。
 
-- 批次只检验受控合成任务的结构化结果。开发与评价共享操作家族，不能据此推断陌生模板泛化或真实企业部署效果。
-- 独立本机接收进程记录真实 HTTP 请求，模型适配器另存出站请求。这些是应用层审计记录，不是云服务商认证，也不能覆盖任意旁路流量。
-- 授权变化可以阻断**尚未发送**的内容，不能收回已经发出的事实。
-- 多余事实计数只覆盖登记的结构化字段，不能识别语义推断或登记出口之外的泄漏。
-- 内核耗时、端到端耗时和界面播放时间口径不同；放慢播放的时长不作为执行速度。
+- 主指标依据作者定义的结构化标签，不代表专家认可自由文本建议。已准备 24 份隐去方法名称的作者内部评阅材料；**人工评分尚未开展**。
+- 七种方法均为本仓库机制对照，未运行外部系统基线。[研究定位](docs/research-position.md)明确说明与 MINIM、ToolMinimize、PlanTwin、SplitAgent 的重合及区别。
+- 本地控制器绑定使用的源字段、接收方、授权版本和最终应用请求；独立本机进程与适配器记录实际字节，但不是云厂商独立认证。
+- 字段计数不检测语义推断泄漏，白名单字段仍可能多余。任意网络旁路和本地控制器被攻破不在本文保证范围。
+- 撤权只能阻断未来发送，不能收回此前披露。页面逐步展示的间隔不计入模型耗时。
 
 <p align="right"><a href="#readme-top">返回顶部 ↑</a></p>
 

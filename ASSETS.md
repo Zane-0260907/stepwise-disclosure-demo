@@ -9,4 +9,9 @@ This repository contains the independent research interface, its `H`/“氢” v
 - `evidence/research/deepseek-live-20260926/` holds preserved provider-call evidence for one synthetic case. Its English translations are presentation text; the original request/response remains separately auditable.
 - Third-party packages are installed through `package-lock.json` and are not vendored into Git. PDF.js (`pdfjs-dist`) is distributed under Apache-2.0; its license is included in the installed package.
 
+- `fixtures/validation-v2/` and `fixtures/validation-v3/` are newly authored synthetic inputs and separate evaluation labels. v2 was subsequently used for v3 development; neither is an external benchmark.
+- `evidence/validation-v2/` and `evidence/validation-v3/` contain complete saved DeepSeek batches, frozen protocols, re-scored outcomes and failures. The v3 Chinese/English figures use those measured values.
+- `evidence/progressive-showcase/` is one additional real call, excluded from the batches. Its bilingual UI screenshots are browser captures. Translations are presentation-only; original outputs and the unnecessary requested field are retained.
+- `fixtures/showcase/documents/` contains synthetic PDFs rendered from the corresponding v3 fixtures. No real contracts or personal records are included.
+
 If you reuse the demo branding outside this research context, seek permission from the mark owner. Software author and institutional metadata is recorded in `CITATION.cff`.

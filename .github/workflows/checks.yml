@@ -10,7 +10,10 @@ permissions:
 
 jobs:
   verify:
-    runs-on: windows-latest
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,8 +25,16 @@ jobs:
       - run: npm test
       - run: npm run test:boundaries
       - run: node scripts/verify-deepseek-records.mjs
+      - run: node scripts/verify-progressive-showcase.mjs
       - name: Verify frozen saved-run scores
         shell: pwsh
         run: |
           Expand-Archive -LiteralPath evidence/research/reproduction-records.zip -DestinationPath . -Force
           node scripts/verify-recorded-scores.mjs frozen-v1-20260925
+      - name: Verify prospective DeepSeek records
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath evidence/validation-v2/reproduction-records.zip -DestinationPath . -Force
+          Expand-Archive -LiteralPath evidence/validation-v3/reproduction-records.zip -DestinationPath . -Force
+          node scripts/summarize-validation.mjs v2
+          node scripts/summarize-validation.mjs v3

@@ -11,7 +11,12 @@
     "check:inputs": "node scripts/check-research-inputs.mjs",
     "experiment:pilot": "node scripts/run-research.mjs --pilot",
     "experiment:batch": "node scripts/run-research.mjs --batch",
-    "plot": "python scripts/plot-research.py"
+    "plot": "python scripts/plot-research.py",
+    "test:binding": "node scripts/validate-request-binding.mjs",
+    "verify:v2": "node scripts/summarize-validation.mjs v2",
+    "verify:v3": "node scripts/summarize-validation.mjs v3",
+    "plot:v3": "python scripts/plot-validation.py",
+    "experiment:v3": "node scripts/run-progressive.mjs"
   },
   "dependencies": {
     "pdfjs-dist": "^6.3.289"

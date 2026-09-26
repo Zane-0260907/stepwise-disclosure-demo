@@ -1,0 +1,717 @@
+{
+  "protocolId": "prospective-v2-20260926",
+  "sourceCompletedAt": "2026-09-26T14:14:57.440Z",
+  "model": "deepseek-flash",
+  "jobs": 432,
+  "verifiedProviderCalls": 552,
+  "primary": "strict structured-task outcome, not free-text quality",
+  "summary": [
+    {
+      "method": "full",
+      "group": "all",
+      "cases": 36,
+      "runs": 72,
+      "passed": 68,
+      "success": 0.9444444444444444,
+      "successCI": [
+        0.875,
+        1
+      ],
+      "extraFacts": 9.666666666666666,
+      "missingFacts": 0,
+      "forbiddenFacts": 600,
+      "modelCalls": 96,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 72642,
+      "completionTokens": 8265,
+      "latencyP50": 1132.0687500000004,
+      "latencyP95": 2028.1922900000054
+    },
+    {
+      "method": "pii",
+      "group": "all",
+      "cases": 36,
+      "runs": 72,
+      "passed": 66,
+      "success": 0.9166666666666666,
+      "successCI": [
+        0.8333333333333334,
+        0.9861111111111112
+      ],
+      "extraFacts": 4.666666666666667,
+      "missingFacts": 0,
+      "forbiddenFacts": 240,
+      "modelCalls": 96,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 69762,
+      "completionTokens": 8145,
+      "latencyP50": 1173.8364500000007,
+      "latencyP95": 2085.1796850000014
+    },
+    {
+      "method": "entry",
+      "group": "all",
+      "cases": 36,
+      "runs": 72,
+      "passed": 60,
+      "success": 0.8333333333333334,
+      "successCI": [
+        0.7083333333333334,
+        0.9444444444444444
+      ],
+      "extraFacts": 0.3333333333333333,
+      "missingFacts": 0.3333333333333333,
+      "forbiddenFacts": 0,
+      "modelCalls": 96,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 66732,
+      "completionTokens": 8106,
+      "latencyP50": 1101.1530500000008,
+      "latencyP95": 2226.0191100000056
+    },
+    {
+      "method": "per_step",
+      "group": "all",
+      "cases": 36,
+      "runs": 72,
+      "passed": 59,
+      "success": 0.8194444444444444,
+      "successCI": [
+        0.6944444444444444,
+        0.9305555555555556
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0.3333333333333333,
+      "forbiddenFacts": 0,
+      "modelCalls": 96,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 66732,
+      "completionTokens": 8148,
+      "latencyP50": 1078.1249500000013,
+      "latencyP95": 2300.5819350000033
+    },
+    {
+      "method": "joint",
+      "group": "all",
+      "cases": 36,
+      "runs": 72,
+      "passed": 62,
+      "success": 0.8611111111111112,
+      "successCI": [
+        0.75,
+        0.9722222222222222
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0.3333333333333333,
+      "forbiddenFacts": 0,
+      "modelCalls": 84,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 57684,
+      "completionTokens": 7118,
+      "latencyP50": 1109.4453500000009,
+      "latencyP95": 2135.636135000002
+    },
+    {
+      "method": "placement_full",
+      "group": "all",
+      "cases": 36,
+      "runs": 72,
+      "passed": 70,
+      "success": 0.9722222222222222,
+      "successCI": [
+        0.9166666666666666,
+        1
+      ],
+      "extraFacts": 8.666666666666666,
+      "missingFacts": 0,
+      "forbiddenFacts": 540,
+      "modelCalls": 84,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 62850,
+      "completionTokens": 7286,
+      "latencyP50": 1115.1391500000054,
+      "latencyP95": 2285.271700000003
+    }
+  ],
+  "byGroup": [
+    {
+      "method": "full",
+      "group": "supported-parameters",
+      "cases": 6,
+      "runs": 12,
+      "passed": 10,
+      "success": 0.8333333333333334,
+      "successCI": [
+        0.6666666666666666,
+        1
+      ],
+      "extraFacts": 6,
+      "missingFacts": 0,
+      "forbiddenFacts": 60,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9792,
+      "completionTokens": 1085,
+      "latencyP50": 941.1970000000001,
+      "latencyP95": 1272.7262700000063
+    },
+    {
+      "method": "pii",
+      "group": "supported-parameters",
+      "cases": 6,
+      "runs": 12,
+      "passed": 9,
+      "success": 0.75,
+      "successCI": [
+        0.4166666666666667,
+        1
+      ],
+      "extraFacts": 3,
+      "missingFacts": 0,
+      "forbiddenFacts": 24,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9432,
+      "completionTokens": 1046,
+      "latencyP50": 856.0075499999998,
+      "latencyP95": 1203.9756450000023
+    },
+    {
+      "method": "entry",
+      "group": "supported-parameters",
+      "cases": 6,
+      "runs": 12,
+      "passed": 10,
+      "success": 0.8333333333333334,
+      "successCI": [
+        0.6666666666666666,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9048,
+      "completionTokens": 1005,
+      "latencyP50": 895.1078000000063,
+      "latencyP95": 1154.081554999999
+    },
+    {
+      "method": "per_step",
+      "group": "supported-parameters",
+      "cases": 6,
+      "runs": 12,
+      "passed": 10,
+      "success": 0.8333333333333334,
+      "successCI": [
+        0.6666666666666666,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9048,
+      "completionTokens": 1009,
+      "latencyP50": 1024.7599,
+      "latencyP95": 1194.8093049999998
+    },
+    {
+      "method": "joint",
+      "group": "supported-parameters",
+      "cases": 6,
+      "runs": 12,
+      "passed": 12,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 0,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "latencyP50": 0.10164999999733482,
+      "latencyP95": 0.16175000000523593
+    },
+    {
+      "method": "placement_full",
+      "group": "supported-parameters",
+      "cases": 6,
+      "runs": 12,
+      "passed": 12,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 0,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "latencyP50": 0.09350000000267755,
+      "latencyP95": 0.13910500000000067
+    },
+    {
+      "method": "full",
+      "group": "unseen-rule-wording",
+      "cases": 6,
+      "runs": 12,
+      "passed": 10,
+      "success": 0.8333333333333334,
+      "successCI": [
+        0.5,
+        1
+      ],
+      "extraFacts": 6,
+      "missingFacts": 0,
+      "forbiddenFacts": 60,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9852,
+      "completionTokens": 1129,
+      "latencyP50": 1102.7491500000033,
+      "latencyP95": 1712.3178849999967
+    },
+    {
+      "method": "pii",
+      "group": "unseen-rule-wording",
+      "cases": 6,
+      "runs": 12,
+      "passed": 9,
+      "success": 0.75,
+      "successCI": [
+        0.4166666666666667,
+        1
+      ],
+      "extraFacts": 3,
+      "missingFacts": 0,
+      "forbiddenFacts": 24,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9492,
+      "completionTokens": 1053,
+      "latencyP50": 1020.5607000000018,
+      "latencyP95": 1268.1164349999976
+    },
+    {
+      "method": "entry",
+      "group": "unseen-rule-wording",
+      "cases": 6,
+      "runs": 12,
+      "passed": 2,
+      "success": 0.16666666666666666,
+      "successCI": [
+        0,
+        0.5
+      ],
+      "extraFacts": 0,
+      "missingFacts": 2,
+      "forbiddenFacts": 0,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 8958,
+      "completionTokens": 1003,
+      "latencyP50": 974.915700000005,
+      "latencyP95": 1449.7029249999973
+    },
+    {
+      "method": "per_step",
+      "group": "unseen-rule-wording",
+      "cases": 6,
+      "runs": 12,
+      "passed": 2,
+      "success": 0.16666666666666666,
+      "successCI": [
+        0,
+        0.5
+      ],
+      "extraFacts": 0,
+      "missingFacts": 2,
+      "forbiddenFacts": 0,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 8958,
+      "completionTokens": 1034,
+      "latencyP50": 945.1039499999997,
+      "latencyP95": 1129.0008749999959
+    },
+    {
+      "method": "joint",
+      "group": "unseen-rule-wording",
+      "cases": 6,
+      "runs": 12,
+      "passed": 2,
+      "success": 0.16666666666666666,
+      "successCI": [
+        0,
+        0.5
+      ],
+      "extraFacts": 0,
+      "missingFacts": 2,
+      "forbiddenFacts": 0,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 8958,
+      "completionTokens": 1024,
+      "latencyP50": 946.4406000000008,
+      "latencyP95": 1090.6384449999975
+    },
+    {
+      "method": "placement_full",
+      "group": "unseen-rule-wording",
+      "cases": 6,
+      "runs": 12,
+      "passed": 10,
+      "success": 0.8333333333333334,
+      "successCI": [
+        0.5,
+        1
+      ],
+      "extraFacts": 6,
+      "missingFacts": 0,
+      "forbiddenFacts": 60,
+      "modelCalls": 12,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9852,
+      "completionTokens": 1169,
+      "latencyP50": 1081.4083000000055,
+      "latencyP95": 1358.6919449999991
+    },
+    {
+      "method": "full",
+      "group": "unseen-semantic-wording",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 5.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 120,
+      "modelCalls": 24,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 19130,
+      "completionTokens": 2072,
+      "latencyP50": 936.1036500000009,
+      "latencyP95": 1326.2977199999978
+    },
+    {
+      "method": "pii",
+      "group": "unseen-semantic-wording",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 2.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 48,
+      "modelCalls": 24,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 18410,
+      "completionTokens": 2049,
+      "latencyP50": 1015.9331500000044,
+      "latencyP95": 1298.677335000004
+    },
+    {
+      "method": "entry",
+      "group": "unseen-semantic-wording",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 24,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 17702,
+      "completionTokens": 2070,
+      "latencyP50": 1051.3192000000017,
+      "latencyP95": 1209.2760350000033
+    },
+    {
+      "method": "per_step",
+      "group": "unseen-semantic-wording",
+      "cases": 12,
+      "runs": 24,
+      "passed": 23,
+      "success": 0.9583333333333334,
+      "successCI": [
+        0.875,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 24,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 17702,
+      "completionTokens": 2047,
+      "latencyP50": 989.4369999999999,
+      "latencyP95": 1178.8443099999974
+    },
+    {
+      "method": "joint",
+      "group": "unseen-semantic-wording",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 24,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 17702,
+      "completionTokens": 2037,
+      "latencyP50": 1109.4453500000009,
+      "latencyP95": 1381.158525000009
+    },
+    {
+      "method": "placement_full",
+      "group": "unseen-semantic-wording",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 5.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 120,
+      "modelCalls": 24,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 19130,
+      "completionTokens": 2079,
+      "latencyP50": 987.1320000000032,
+      "latencyP95": 1279.0332250000026
+    },
+    {
+      "method": "full",
+      "group": "new-reference-wrapper",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 17.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 360,
+      "modelCalls": 48,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 33868,
+      "completionTokens": 3979,
+      "latencyP50": 1738.0489500000003,
+      "latencyP95": 2142.0029599999957
+    },
+    {
+      "method": "pii",
+      "group": "new-reference-wrapper",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 8.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 144,
+      "modelCalls": 48,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 32428,
+      "completionTokens": 3997,
+      "latencyP50": 1763.9654999999984,
+      "latencyP95": 2334.5981099999985
+    },
+    {
+      "method": "entry",
+      "group": "new-reference-wrapper",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 1,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 48,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 31024,
+      "completionTokens": 4028,
+      "latencyP50": 1820.7060999999958,
+      "latencyP95": 2498.6741949999964
+    },
+    {
+      "method": "per_step",
+      "group": "new-reference-wrapper",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 48,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 31024,
+      "completionTokens": 4058,
+      "latencyP50": 1848.1635999999962,
+      "latencyP95": 2540.256055000002
+    },
+    {
+      "method": "joint",
+      "group": "new-reference-wrapper",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 48,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 31024,
+      "completionTokens": 4057,
+      "latencyP50": 1839.2523500000025,
+      "latencyP95": 2167.3107550000022
+    },
+    {
+      "method": "placement_full",
+      "group": "new-reference-wrapper",
+      "cases": 12,
+      "runs": 24,
+      "passed": 24,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 17.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 360,
+      "modelCalls": 48,
+      "toolCalls": 24,
+      "factRequests": 0,
+      "promptTokens": 33868,
+      "completionTokens": 4038,
+      "latencyP50": 1888.8891999999978,
+      "latencyP95": 2422.0841350000014
+    }
+  ],
+  "paired": {
+    "joint_vs_full": {
+      "difference": -0.08333333333333333,
+      "descriptiveCaseBootstrap95": [
+        -0.19444444444444445,
+        0.013888888888888888
+      ]
+    },
+    "joint_vs_pii": {
+      "difference": -0.05555555555555555,
+      "descriptiveCaseBootstrap95": [
+        -0.19444444444444445,
+        0.06944444444444445
+      ]
+    },
+    "joint_vs_entry": {
+      "difference": 0.027777777777777776,
+      "descriptiveCaseBootstrap95": [
+        0,
+        0.06944444444444445
+      ]
+    },
+    "joint_vs_per_step": {
+      "difference": 0.041666666666666664,
+      "descriptiveCaseBootstrap95": [
+        0,
+        0.09722222222222222
+      ]
+    },
+    "joint_vs_placement_full": {
+      "difference": -0.1111111111111111,
+      "descriptiveCaseBootstrap95": [
+        -0.2222222222222222,
+        -0.027777777777777776
+      ]
+    }
+  },
+  "limits": [
+    "Author-created synthetic inputs in two domains, not an independently collected benchmark.",
+    "Case-level bootstrap is descriptive; templates are designed and not population samples.",
+    "No cross-paper superiority claim; these are in-repository mechanism controls.",
+    "Human quality review pending.",
+    "v2 was used to develop v3; only v3 prospective runs evaluate the new mechanism.",
+    "No semantic privacy or completeness guarantee for model-requested business fields."
+  ]
+}

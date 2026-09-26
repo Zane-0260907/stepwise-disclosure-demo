@@ -1,0 +1,874 @@
+[
+  {
+    "id": "progressive-01",
+    "family": "contract",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 1",
+      "en": "Progressive validation 1"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-01",
+      "contact": "合成联系人-progressive-01",
+      "account": "SYNTHETIC-progressive-01",
+      "internal_note": "本地预算-progressive-01",
+      "unrelated_record": "其他业务-progressive-01",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 142000,
+      "late_days": 6,
+      "clause": "迟延交货一次按合同总额 1.5% 计收违约金。"
+    },
+    "source": "progressive-01.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-02",
+    "family": "contract",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 2",
+      "en": "Progressive validation 2"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-02",
+      "contact": "合成联系人-progressive-02",
+      "account": "SYNTHETIC-progressive-02",
+      "internal_note": "本地预算-progressive-02",
+      "unrelated_record": "其他业务-progressive-02",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 88500,
+      "late_days": 7,
+      "clause": "迟延交货享有 4 天宽限期，超出部分每天计收 260 元违约金。"
+    },
+    "source": "progressive-02.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-03",
+    "family": "contract",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 3",
+      "en": "Progressive validation 3"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-03",
+      "contact": "合成联系人-progressive-03",
+      "account": "SYNTHETIC-progressive-03",
+      "internal_note": "本地预算-progressive-03",
+      "unrelated_record": "其他业务-progressive-03",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 54000,
+      "late_days": 6,
+      "clause": "迟延交货每天按合同总额 0.2% 计收违约金，累计不超过合同总额 0.7%。"
+    },
+    "source": "progressive-03.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-04",
+    "family": "contract",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 4",
+      "en": "Progressive validation 4"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-04",
+      "contact": "合成联系人-progressive-04",
+      "account": "SYNTHETIC-progressive-04",
+      "internal_note": "本地预算-progressive-04",
+      "unrelated_record": "其他业务-progressive-04",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 71500,
+      "late_days": 8,
+      "clause": "迟延交货超过 5 天时一次计收 1350 元违约金。"
+    },
+    "source": "progressive-04.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-05",
+    "family": "study",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 5",
+      "en": "Progressive validation 5"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-05",
+      "contact": "合成联系人-progressive-05",
+      "account": "SYNTHETIC-progressive-05",
+      "internal_note": "本地预算-progressive-05",
+      "unrelated_record": "其他业务-progressive-05",
+      "scores": [
+        57,
+        59,
+        61
+      ],
+      "homework": 82,
+      "absences": 1,
+      "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。"
+    },
+    "source": "progressive-05.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-06",
+    "family": "study",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 6",
+      "en": "Progressive validation 6"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-06",
+      "contact": "合成联系人-progressive-06",
+      "account": "SYNTHETIC-progressive-06",
+      "internal_note": "本地预算-progressive-06",
+      "unrelated_record": "其他业务-progressive-06",
+      "scores": [
+        71,
+        75,
+        78
+      ],
+      "homework": 69,
+      "absences": 0,
+      "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。"
+    },
+    "source": "progressive-06.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-07",
+    "family": "study",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 7",
+      "en": "Progressive validation 7"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-07",
+      "contact": "合成联系人-progressive-07",
+      "account": "SYNTHETIC-progressive-07",
+      "internal_note": "本地预算-progressive-07",
+      "unrelated_record": "其他业务-progressive-07",
+      "scores": [
+        79,
+        80,
+        82
+      ],
+      "homework": 90,
+      "absences": 4,
+      "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。"
+    },
+    "source": "progressive-07.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-08",
+    "family": "study",
+    "stratum": "supported-parameters",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 8",
+      "en": "Progressive validation 8"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-08",
+      "contact": "合成联系人-progressive-08",
+      "account": "SYNTHETIC-progressive-08",
+      "internal_note": "本地预算-progressive-08",
+      "unrelated_record": "其他业务-progressive-08",
+      "scores": [
+        60,
+        64,
+        68
+      ],
+      "homework": 71,
+      "absences": 2,
+      "observations": "执行明确的学习支持筛查规则：平均分低于60，或作业完成率低于70%，或缺勤超过2次时，标记需要支持；否则标记正常。"
+    },
+    "source": "progressive-08.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-09",
+    "family": "contract",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 9",
+      "en": "Progressive validation 9"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-09",
+      "contact": "合成联系人-progressive-09",
+      "account": "SYNTHETIC-progressive-09",
+      "internal_note": "本地预算-progressive-09",
+      "unrelated_record": "其他业务-progressive-09",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 61000,
+      "late_days": 5,
+      "clause": "若发生交付延误，日额为230元。请以台账中的延误日数计算应付金额。"
+    },
+    "source": "progressive-09.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-10",
+    "family": "contract",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 10",
+      "en": "Progressive validation 10"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-10",
+      "contact": "合成联系人-progressive-10",
+      "account": "SYNTHETIC-progressive-10",
+      "internal_note": "本地预算-progressive-10",
+      "unrelated_record": "其他业务-progressive-10",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 83000,
+      "late_days": 6,
+      "clause": "货物实际晚到超过两日后，从第三日起每日支付410元。具体晚到几日在本地台账中。"
+    },
+    "source": "progressive-10.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-11",
+    "family": "contract",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 11",
+      "en": "Progressive validation 11"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-11",
+      "contact": "合成联系人-progressive-11",
+      "account": "SYNTHETIC-progressive-11",
+      "internal_note": "本地预算-progressive-11",
+      "unrelated_record": "其他业务-progressive-11",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 125000,
+      "late_days": 3,
+      "clause": "超过约定送货时间即一次性支付价款的百分之一点二。价款与迟延天数均以本地记录为准。"
+    },
+    "source": "progressive-11.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-12",
+    "family": "contract",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 12",
+      "en": "Progressive validation 12"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-12",
+      "contact": "合成联系人-progressive-12",
+      "account": "SYNTHETIC-progressive-12",
+      "internal_note": "本地预算-progressive-12",
+      "unrelated_record": "其他业务-progressive-12",
+      "payment_terms": "交货验收后 15 天付款",
+      "amount": 92000,
+      "late_days": 7,
+      "clause": "计费标准为每延误一天按价款的千分之一，但累计最多按价款的千分之四。请按台账核算。"
+    },
+    "source": "progressive-12.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-13",
+    "family": "study",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 13",
+      "en": "Progressive validation 13"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-13",
+      "contact": "合成联系人-progressive-13",
+      "account": "SYNTHETIC-progressive-13",
+      "internal_note": "本地预算-progressive-13",
+      "unrelated_record": "其他业务-progressive-13",
+      "scores": [
+        64,
+        68,
+        72
+      ],
+      "homework": 84,
+      "absences": 1,
+      "observations": "只在以下三项同时满足时输出ON_TRACK：平均成绩不低于60、作业完成率至少70%、缺勤次数至多2。否则输出SUPPORT_NEEDED。"
+    },
+    "source": "progressive-13.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-14",
+    "family": "study",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 14",
+      "en": "Progressive validation 14"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-14",
+      "contact": "合成联系人-progressive-14",
+      "account": "SYNTHETIC-progressive-14",
+      "internal_note": "本地预算-progressive-14",
+      "unrelated_record": "其他业务-progressive-14",
+      "scores": [
+        52,
+        57,
+        59
+      ],
+      "homework": 84,
+      "absences": 1,
+      "observations": "依学校的筛查办法，成绩均分不及60分、作业完成率不到70%或缺课超过两次，任意一项都应标记SUPPORT_NEEDED；其余为ON_TRACK。"
+    },
+    "source": "progressive-14.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-15",
+    "family": "study",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 15",
+      "en": "Progressive validation 15"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-15",
+      "contact": "合成联系人-progressive-15",
+      "account": "SYNTHETIC-progressive-15",
+      "internal_note": "本地预算-progressive-15",
+      "unrelated_record": "其他业务-progressive-15",
+      "scores": [
+        77,
+        82,
+        84
+      ],
+      "homework": 62,
+      "absences": 1,
+      "observations": "筛查只按数值判定：先对全部成绩取算术平均，再查看作业百分比和缺勤次数。均分<60或完成率<70或缺勤>2时须支持，否则正常。"
+    },
+    "source": "progressive-15.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-16",
+    "family": "study",
+    "stratum": "new-computable-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 16",
+      "en": "Progressive validation 16"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-16",
+      "contact": "合成联系人-progressive-16",
+      "account": "SYNTHETIC-progressive-16",
+      "internal_note": "本地预算-progressive-16",
+      "unrelated_record": "其他业务-progressive-16",
+      "scores": [
+        77,
+        82,
+        84
+      ],
+      "homework": 84,
+      "absences": 4,
+      "observations": "标记条件为三选一：成绩平均值低于60；homework低于70；absences大于2。触发时用SUPPORT_NEEDED，否则用ON_TRACK。"
+    },
+    "source": "progressive-16.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-17",
+    "family": "contract",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 17",
+      "en": "Progressive validation 17"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-17",
+      "contact": "合成联系人-progressive-17",
+      "account": "SYNTHETIC-progressive-17",
+      "internal_note": "本地预算-progressive-17",
+      "unrelated_record": "其他业务-progressive-17",
+      "payment_terms": "验收通过后 30 天付款",
+      "clause": "货物交付迟延后的赔付，以双方将来商定的比例计算；目前合同中的比例栏尚未填写。"
+    },
+    "source": "progressive-17.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-18",
+    "family": "contract",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 18",
+      "en": "Progressive validation 18"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-18",
+      "contact": "合成联系人-progressive-18",
+      "account": "SYNTHETIC-progressive-18",
+      "internal_note": "本地预算-progressive-18",
+      "unrelated_record": "其他业务-progressive-18",
+      "payment_terms": "交货验收后 15 天付款",
+      "clause": "条款指定按5%赔付，计算所依据的金额却没有出现，也没有指向其他金额条款。"
+    },
+    "source": "progressive-18.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-19",
+    "family": "contract",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 19",
+      "en": "Progressive validation 19"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-19",
+      "contact": "合成联系人-progressive-19",
+      "account": "SYNTHETIC-progressive-19",
+      "internal_note": "本地预算-progressive-19",
+      "unrelated_record": "其他业务-progressive-19",
+      "payment_terms": "验收通过后 30 天付款",
+      "clause": "验收合格才可结款，不过谁负责确认以及按什么标准确认均留待以后协商。"
+    },
+    "source": "progressive-19.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-20",
+    "family": "contract",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 20",
+      "en": "Progressive validation 20"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-20",
+      "contact": "合成联系人-progressive-20",
+      "account": "SYNTHETIC-progressive-20",
+      "internal_note": "本地预算-progressive-20",
+      "unrelated_record": "其他业务-progressive-20",
+      "payment_terms": "交货验收后 15 天付款",
+      "clause": "合同一处将付款期写为验收后三十日，另一处写为六十日，未给出冲突解决顺序。"
+    },
+    "source": "progressive-20.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-21",
+    "family": "study",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 21",
+      "en": "Progressive validation 21"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-21",
+      "contact": "合成联系人-progressive-21",
+      "account": "SYNTHETIC-progressive-21",
+      "internal_note": "本地预算-progressive-21",
+      "unrelated_record": "其他业务-progressive-21",
+      "observations": "能正确解释基础知识，课堂提问也表现良好，但是独立练习长期未按计划完成。"
+    },
+    "source": "progressive-21.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-22",
+    "family": "study",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 22",
+      "en": "Progressive validation 22"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-22",
+      "contact": "合成联系人-progressive-22",
+      "account": "SYNTHETIC-progressive-22",
+      "internal_note": "本地预算-progressive-22",
+      "unrelated_record": "其他业务-progressive-22",
+      "observations": "此前基础扎实，近期因连续不到课错过新章节；目前困难集中在这些未参加的课程。"
+    },
+    "source": "progressive-22.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-23",
+    "family": "study",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 23",
+      "en": "Progressive validation 23"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-23",
+      "contact": "合成联系人-progressive-23",
+      "account": "SYNTHETIC-progressive-23",
+      "internal_note": "本地预算-progressive-23",
+      "unrelated_record": "其他业务-progressive-23",
+      "observations": "多个课程的交付集中碰撞，估计工作总量高于可用时间，积压越来越多。"
+    },
+    "source": "progressive-23.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-24",
+    "family": "study",
+    "stratum": "new-semantic-wording",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 24",
+      "en": "Progressive validation 24"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-24",
+      "contact": "合成联系人-progressive-24",
+      "account": "SYNTHETIC-progressive-24",
+      "internal_note": "本地预算-progressive-24",
+      "unrelated_record": "其他业务-progressive-24",
+      "observations": "作业提交完整，投入时间充足，但把数学命题的充分性与必要性反复混为一谈。"
+    },
+    "source": "progressive-24.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-25",
+    "family": "contract",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 25",
+      "en": "Progressive validation 25"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-25",
+      "contact": "合成联系人-progressive-25",
+      "account": "SYNTHETIC-progressive-25",
+      "internal_note": "本地预算-progressive-25",
+      "unrelated_record": "其他业务-progressive-25",
+      "payment_terms": "交货验收后 15 天付款",
+      "reference_code": "C07",
+      "reference_version": "2026.1",
+      "clause": "风险审阅针对资料编号C07的条文，请先取得2026.1版本原文。本地不附正文，不能用其他版本替代。"
+    },
+    "source": "progressive-25.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-26",
+    "family": "contract",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 26",
+      "en": "Progressive validation 26"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-26",
+      "contact": "合成联系人-progressive-26",
+      "account": "SYNTHETIC-progressive-26",
+      "internal_note": "本地预算-progressive-26",
+      "unrelated_record": "其他业务-progressive-26",
+      "payment_terms": "验收通过后 30 天付款",
+      "reference_code": "C08",
+      "reference_version": "2026.2",
+      "clause": "风险审阅针对资料编号C08的条文，请先取得2026.2版本原文。本地不附正文，不能用其他版本替代。"
+    },
+    "source": "progressive-26.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-27",
+    "family": "contract",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 27",
+      "en": "Progressive validation 27"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-27",
+      "contact": "合成联系人-progressive-27",
+      "account": "SYNTHETIC-progressive-27",
+      "internal_note": "本地预算-progressive-27",
+      "unrelated_record": "其他业务-progressive-27",
+      "payment_terms": "交货验收后 15 天付款",
+      "reference_code": "C09",
+      "reference_version": "2026.1",
+      "clause": "风险审阅针对资料编号C09的条文，请先取得2026.1版本原文。本地不附正文，不能用其他版本替代。"
+    },
+    "source": "progressive-27.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-28",
+    "family": "contract",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 28",
+      "en": "Progressive validation 28"
+    },
+    "task": {
+      "zh": "检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。",
+      "en": "Review the contract, calculate a penalty only when defined, check cited references, and report issues requiring review."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-28",
+      "contact": "合成联系人-progressive-28",
+      "account": "SYNTHETIC-progressive-28",
+      "internal_note": "本地预算-progressive-28",
+      "unrelated_record": "其他业务-progressive-28",
+      "payment_terms": "验收通过后 30 天付款",
+      "reference_code": "C10",
+      "reference_version": "2026.2",
+      "clause": "风险审阅针对资料编号C10的条文，请先取得2026.2版本原文。本地不附正文，不能用其他版本替代。"
+    },
+    "source": "progressive-28.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-29",
+    "family": "study",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 29",
+      "en": "Progressive validation 29"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-29",
+      "contact": "合成联系人-progressive-29",
+      "account": "SYNTHETIC-progressive-29",
+      "internal_note": "本地预算-progressive-29",
+      "unrelated_record": "其他业务-progressive-29",
+      "observations": "本次学习支持复核使用资源S07，要求版本2026.1；应查询资源中列出的记录后确定主要困难。",
+      "reference_code": "S07",
+      "reference_version": "2026.1"
+    },
+    "source": "progressive-29.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-30",
+    "family": "study",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 30",
+      "en": "Progressive validation 30"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-30",
+      "contact": "合成联系人-progressive-30",
+      "account": "SYNTHETIC-progressive-30",
+      "internal_note": "本地预算-progressive-30",
+      "unrelated_record": "其他业务-progressive-30",
+      "observations": "本次学习支持复核使用资源S08，要求版本2026.2；应查询资源中列出的记录后确定主要困难。",
+      "reference_code": "S08",
+      "reference_version": "2026.2"
+    },
+    "source": "progressive-30.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-31",
+    "family": "study",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 31",
+      "en": "Progressive validation 31"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-31",
+      "contact": "合成联系人-progressive-31",
+      "account": "SYNTHETIC-progressive-31",
+      "internal_note": "本地预算-progressive-31",
+      "unrelated_record": "其他业务-progressive-31",
+      "observations": "本次学习支持复核使用资源S09，要求版本2026.1；应查询资源中列出的记录后确定主要困难。",
+      "reference_code": "S09",
+      "reference_version": "2026.1"
+    },
+    "source": "progressive-31.json",
+    "localCapabilities": true
+  },
+  {
+    "id": "progressive-32",
+    "family": "study",
+    "stratum": "new-reference-wrapper",
+    "split": "prospective-v3",
+    "title": {
+      "zh": "逐步补充验证 32",
+      "en": "Progressive validation 32"
+    },
+    "task": {
+      "zh": "根据学习记录识别需要支持的方面并给出建议；如果指定了学习资源，先查询指定版本，再在本地生成针对该学生的建议。",
+      "en": "Identify learning support needs, consult any specified resource version, and produce a local student report."
+    },
+    "facts": {
+      "identity": "合成验证对象-progressive-32",
+      "contact": "合成联系人-progressive-32",
+      "account": "SYNTHETIC-progressive-32",
+      "internal_note": "本地预算-progressive-32",
+      "unrelated_record": "其他业务-progressive-32",
+      "observations": "本次学习支持复核使用资源S10，要求版本2026.2；应查询资源中列出的记录后确定主要困难。",
+      "reference_code": "S10",
+      "reference_version": "2026.2"
+    },
+    "source": "progressive-32.json",
+    "localCapabilities": true
+  }
+]

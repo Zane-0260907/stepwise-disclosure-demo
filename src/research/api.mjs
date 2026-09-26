@@ -1,15 +1,22 @@
 import { mkdir, readFile, writeFile, readdir } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { createTransport } from './transport.mjs';
-import { getCase, loadCases, METHODS, METHOD_NAMES, publicCase, LABELS } from './catalog.mjs';
-import { createRun, executeRun, acceptReceipt } from './engine.mjs';
-import { readCaseDocument } from './documents.mjs';
+import { getCase as getFrozenCase, loadCases as loadFrozenCases, METHODS, METHOD_NAMES, publicCase, LABELS } from './catalog.mjs';
+import { createRun, acceptReceipt } from './engine.mjs';
+import { executeAdaptiveRun as executeRun } from './adaptive-execution.mjs';
+import { readCaseDocument as readFrozenDocument } from './documents.mjs';
+import { showcaseCases,readShowcaseDocument } from './showcase.mjs';
 import { OFFLINE_MODEL } from './offline-driver.mjs';
 import { addEvent } from './engine.mjs';
 
 const root=new URL('../../data/research/runs/',import.meta.url);
 const bundled=new URL('../../evidence/research/sample-run.json',import.meta.url);
 const featuredRoot=new URL('../../evidence/research/deepseek-live-20260926/',import.meta.url);
+const progressiveRoot=new URL('../../evidence/progressive-showcase/',import.meta.url);
+const featuredDirectory=entry=>entry.bundle==='progressive'?new URL(`${entry.method}/`,progressiveRoot):new URL(`${entry.method}/`,featuredRoot);
+const getCase=async id=>(await showcaseCases()).find(c=>c.id===id)||getFrozenCase(id);
+const loadCases=async()=>[...await loadFrozenCases(),...await showcaseCases()];
+const readCaseDocument=id=>id.startsWith('progressive-')?readShowcaseDocument(id):readFrozenDocument(id);
 const runs=new Map(),clients=new Map(),frames=new Map(),pending=new Map(),decisions=new Map();
 const json=(res,status,data)=>{res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify(data));};
 let transportPromise;
@@ -33,7 +40,9 @@ async function save(run){
   if(frames.has(run.id))await writeFile(new URL('frames.json',dir),JSON.stringify(frames.get(run.id)));
 }
 async function featured(){
- try{return JSON.parse(await readFile(new URL('manifest.json',featuredRoot),'utf8'));}
+ try{const original=JSON.parse(await readFile(new URL('manifest.json',featuredRoot),'utf8'));
+  try{const added=JSON.parse(await readFile(new URL('manifest.json',progressiveRoot),'utf8'));original.runs.push(...added.runs.map(r=>({...r,bundle:'progressive'})));}catch(e){if(e.code!=='ENOENT')throw e;}
+  return original;}
  catch(error){if(error.code==='ENOENT')return {runs:[]};throw error;}
 }
 async function findRun(id){
@@ -41,7 +50,7 @@ async function findRun(id){
   if(runs.has(id))return runs.get(id);
   try{return JSON.parse(await readFile(new URL(`${id}/trace.json`,root),'utf8'));}catch{
     const item=(await featured()).runs.find(entry=>entry.id===id);
-    if(item)return JSON.parse(await readFile(new URL(`${item.method}/trace.json`,featuredRoot),'utf8'));
+    if(item)return JSON.parse(await readFile(new URL('trace.json',featuredDirectory(item)),'utf8'));
     try{const sample=JSON.parse(await readFile(bundled,'utf8'));return sample.id===id?sample:null;}catch{return null;}
   }
 }
@@ -96,8 +105,9 @@ export async function researchApi(req,res,pathname){
     if(req.method==='GET'&&route==='/bootstrap'){
       const featuredRuns=(await featured()).runs;
       let presentationTranslations={};try{presentationTranslations=JSON.parse(await readFile(new URL('translations.json',featuredRoot),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
+      try{const extra=JSON.parse(await readFile(new URL('translations.json',progressiveRoot),'utf8'));presentationTranslations.runs={...presentationTranslations.runs,...extra.runs};presentationTranslations.values={...presentationTranslations.values,...extra.values};}catch(e){if(e.code!=='ENOENT')throw e;}
       let sampleRunId=featuredRuns.find(entry=>entry.method==='joint')?.id||null;try{sampleRunId ||=JSON.parse(await readFile(bundled,'utf8')).id;}catch{}
-      return json(res,200,{protocol:'research-v1',offlineAvailable:true,deepseekAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',liveAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',sampleRunId,featuredRuns:featuredRuns.map(({id,method,model,createdAt})=>({id,method,model,createdAt})),presentationTranslations,methods:METHOD_NAMES,labels:LABELS,cases:(await loadCases()).filter(c=>c.split==='evaluation').map(publicCase),defaultCase:'contract-21',scenarios:[{id:'local',caseId:'contract-01',condition:'normal',title:{zh:'标准条款 · 本地完成',en:'Standard clause · local'}},{id:'dynamic',caseId:'contract-21',condition:'normal',title:{zh:'引用条款 · 动态查询',en:'Cited clause · dynamic lookup'}},{id:'revoked',caseId:'contract-21',condition:'guided_revoke',title:{zh:'发送前人工撤权',en:'Revoke before sending'}}]});
+      return json(res,200,{protocol:'research-v1',offlineAvailable:true,deepseekAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',liveAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',sampleRunId,featuredRuns:featuredRuns.map(({id,method,model,createdAt,label,caseId})=>({id,method,model,createdAt,label,caseId})),presentationTranslations,methods:METHOD_NAMES,labels:LABELS,cases:(await loadCases()).filter(c=>c.split==='evaluation'||c.requiresLive).map(publicCase),defaultCase:'contract-21',scenarios:[{id:'facts',caseId:'progressive-09',condition:'normal',requiresLive:true,title:{zh:'补充必要事实 · DeepSeek',en:'Request missing facts · DeepSeek'}},{id:'local',caseId:'contract-01',condition:'normal',title:{zh:'标准条款 · 本地完成',en:'Standard clause · local'}},{id:'dynamic',caseId:'contract-21',condition:'normal',title:{zh:'引用条款 · 动态查询',en:'Cited clause · dynamic lookup'}},{id:'revoked',caseId:'contract-21',condition:'guided_revoke',title:{zh:'发送前人工撤权',en:'Revoke before sending'}}]});
     }
     if(req.method==='GET'&&route==='/history'){
       const visible=new Map([...runs.values()].filter(r=>r.source==='live'&&r.uiVisible&&!r.caseId.startsWith('dev-')).map(r=>[r.id,r]));
@@ -113,6 +123,7 @@ export async function researchApi(req,res,pathname){
       if(mode==='deepseek'&&process.env.DEMO_DEEPSEEK_AVAILABLE!=='true')return json(res,409,{error:'DeepSeek API key is not configured'});
       const overrides=overridesOf(options.overrides);
       const item=await getCase(options.caseId||'contract-21');
+      if(item.requiresLive&&mode!=='deepseek')return json(res,409,{error:'This scenario requires a live model. Use its saved DeepSeek replay without a key.'});
       const run=createRun(item,{...options,model:mode==='offline'?OFFLINE_MODEL:'deepseek-flash'});run.status='queued';run.executionMode=mode;run.uiVisible=options.captureFrames!==false;runs.set(run.id,run);
       if(options.captureFrames!==false)frames.set(run.id,[]);
       pending.set(run.id,{...options,overrides});
@@ -124,7 +135,7 @@ export async function researchApi(req,res,pathname){
       if(!original)return json(res,404,{error:'先完成一次现场运行，才能重放该次记录。'});
       let recorded;
       try{recorded=JSON.parse(await readFile(new URL(`${original.id}/frames.json`,root),'utf8'));}catch{
-        try{const item=(await featured()).runs.find(entry=>entry.id===original.id);if(item)recorded=JSON.parse(await readFile(new URL(`${item.method}/frames.json`,featuredRoot),'utf8'));else{const sample=JSON.parse(await readFile(bundled,'utf8'));if(sample.id!==original.id)throw new Error('Not a bundled run');recorded=JSON.parse(await readFile(new URL('../../evidence/research/sample-frames.json',import.meta.url),'utf8'));}}catch{return json(res,404,{error:'该运行没有界面回放记录。'});}
+        try{const item=(await featured()).runs.find(entry=>entry.id===original.id);if(item)recorded=JSON.parse(await readFile(new URL('frames.json',featuredDirectory(item)),'utf8'));else{const sample=JSON.parse(await readFile(bundled,'utf8'));if(sample.id!==original.id)throw new Error('Not a bundled run');recorded=JSON.parse(await readFile(new URL('../../evidence/research/sample-frames.json',import.meta.url),'utf8'));}}catch{return json(res,404,{error:'该运行没有界面回放记录。'});}
       }
       const id=randomUUID();const initial={...structuredClone(recorded[0]?.snapshot||original),id,source:'recorded',recordedRunId:original.id,status:'running'};runs.set(id,initial);
       (async()=>{
@@ -137,7 +148,7 @@ export async function researchApi(req,res,pathname){
     }
     const documentMatch=/^\/documents\/([a-z0-9-]+)\.pdf$/.exec(route);
     if(req.method==='GET'&&documentMatch){
-      const item=await getCase(documentMatch[1]);const data=await readFile(new URL(`../../fixtures/research/documents/${item.source}`,import.meta.url));
+      const item=await getCase(documentMatch[1]);const data=await readFile(new URL(`../../fixtures/${item.requiresLive?'showcase':'research'}/documents/${item.source}`,import.meta.url));
       res.writeHead(200,{'content-type':'application/pdf','content-length':data.length,'cache-control':'no-store'});res.end(data);return true;
     }
     const match=/^\/runs\/([a-f0-9-]{36})(?:\/(stream|report|evidence|source|revoke|start|decision))?$/.exec(route);

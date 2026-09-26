@@ -16,7 +16,7 @@ function icon(name){const n=document.createElementNS('http://www.w3.org/2000/svg
 const caseItem=()=>S.bootstrap?.cases.find(c=>c.id===(S.run?.caseId||S.caseId));
 const methodName=m=>l(S.bootstrap?.methods[m]||m);
 const factName=k=>S.bootstrap?.labels[k]?.[S.lang==='zh'?0:1]||k;
-const value=v=>typeof v==='object'?JSON.stringify(v):String(v??'');
+const value=v=>S.lang==='en'&&typeof v==='string'&&S.bootstrap?.presentationTranslations?.values?.[v]?S.bootstrap.presentationTranslations.values[v]:typeof v==='object'?JSON.stringify(v):String(v??'');
 const time=d=>d?new Date(d).toLocaleTimeString(S.lang==='zh'?'zh-CN':'en-GB',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'}):'';
 const active=run=>['queued','running'].includes(run?.status)||(run?.status==='completed'&&!run.finishedAt);
 const locationName=step=>S.run?.executionMode==='offline'&&step.location==='cloud'?(S.lang==='zh'?'本机规则执行器':'Local rule driver'):t(step.location);
@@ -52,7 +52,7 @@ function englishFinding(run){
 const resultSummary=run=>S.lang==='zh'?run?.result?.summary||'':englishFinding(run).summary;
 const resultRecommendation=run=>S.lang==='zh'?run?.result?.recommendation||'':englishFinding(run).recommendation;
 function englishReport(run){
- const result=run.result||{};const identity=String(run.input?.identity||'synthetic parties').replace(/合成采购方(\d+)/g,'Synthetic buyer $1').replace(/合成供应方(\d+)/g,'Synthetic supplier $1');
+ const result=run.result||{};const identity=value(run.input?.identity||'synthetic parties').replace(/合成采购方(\d+)/g,'Synthetic buyer $1').replace(/合成供应方(\d+)/g,'Synthetic supplier $1');
  return ['# Contract risk review (synthetic case)','',`Parties: ${identity}`,`Run: ${run.id}`,'','## Finding',englishFinding(run).summary,'',`Issue code: ${(result.issueCodes||[]).join(', ')}`,result.amount===null||result.amount===undefined?'':`Calculated amount: CNY ${result.amount.toLocaleString('en-US')}`,'','## Recommendation',englishFinding(run).recommendation,'','## Evidence',...(result.evidenceIds||[]).map(key=>'- '+key),...(result.citations||[]).map(citation=>'- '+citation),'','## Execution record',`Local steps: ${(run.steps||[]).filter(step=>step.location==='local').length}; ${run.executionMode==='offline'?'local driver':'model'} calls: ${run.metrics?.modelCalls||0}; reference lookups: ${run.metrics?.toolCalls||0}.`,'This English presentation is derived from the saved structured result. The original model response and request bodies remain in the trace.',''].filter(line=>line!==undefined).join('\n');
 }
 function applyText(){
@@ -78,7 +78,7 @@ function applyText(){
  $('#featured-label').textContent=S.lang==='zh'?'真实模型记录':'Recorded model runs';
  const status=S.starting||S.run?.status==='completed'&&!S.run?.finishedAt?'running':S.run?.status||'ready';const statusText=status==='queued'?(S.lang==='zh'?'等待启动':'Queued'):t(status);$('#header-state').textContent=statusText;$('#run-state').textContent=statusText;$('#run-state').classList.toggle('is-failed',['failed','blocked'].includes(status));
  const badge=$('#source-badge');badge.hidden=!S.run;badge.textContent=S.run?`${t(S.run.source==='recorded'?'replay':'live')}${S.run.metrics?.modelCalls?` · ${S.run.model||'—'}`:''}`:'';
- const unavailable=S.mode==='deepseek'&&!S.bootstrap?.deepseekAvailable;
+ const unavailable=(S.mode==='deepseek'&&!S.bootstrap?.deepseekAvailable)||(S.scenario==='facts'&&S.mode!=='deepseek');
  $('#live-button').disabled=active(S.run)||S.starting||unavailable;$('#live-button').title=unavailable?(S.lang==='zh'?'需在启动前配置 DEEPSEEK_API_KEY':'Set DEEPSEEK_API_KEY before starting'):'';
  $('#scenario-select').disabled=active(S.run);$('#method-select').disabled=active(S.run);$('#execution-mode').disabled=active(S.run);
  $('#replay-button').disabled=!S.lastLive||active(S.run);$('#replay-button').title=t('replay');$('#replay-button').setAttribute('aria-label',t('replay'));
@@ -127,7 +127,8 @@ function factsCard(title,facts,local=false){
 }
 function outputText(output){if(!output)return '';if(typeof output==='string')return output;if(S.lang==='en'){
  if(output.issueCodes||output.fileName)return resultSummary(S.run);
- if(output.requestedTool)return 'The model requested the specified version of the reference.';
+ if(output.requestedTool)return output.requestedTool.function?.name==='request_task_facts'?'The model requested missing business facts from the local controller.':'The model requested the specified version of the reference.';
+ if(output.approvedFields)return 'Locally authorized fields: '+output.approvedFields.join(', ');
  if(output.text&&S.run?.caseId==='contract-21')return S.bootstrap?.presentationTranslations?.referenceC01||'The versioned reference was retrieved.';
  }if(output.summary)return l(output.summary);if(output.text)return output.text;return JSON.stringify(output,null,2);}
 function processPane(){
@@ -155,7 +156,8 @@ function processPane(){
  if(step.location==='local')root.append(el('small','technical-note',t('noOutgoing')));
  if(step.error)root.append(el('div','agent-error',readableError(step.error)));
  if(step.output){const out=el('section','cloud-result');const text=S.run.executionMode==='offline'&&step.output.requestedTool?(S.lang==='zh'?'本机规则执行器请求查询指定版本资料。':'The local rule driver requested the versioned reference.'):outputText(step.output);out.append(el('h3','',t('output')),el('p','',text));root.append(out);}
- const audit=el('details','request-details');audit.dataset.detailId='checks';audit.append(el('summary','',t('checks')),el('pre','',JSON.stringify({source:step.source,required:step.required,candidates:step.candidates,policyVersion:step.plannedPolicyVersion,checks:step.checks,trigger:step.trigger},null,2)));root.append(audit);
+ if(step.requestPlan){root.append(el('small','technical-note',S.lang==='zh'?(step.requestPlan.receiptVerified?'发送内容与核准请求一致；接收摘要已核对。':'请求已绑定当前字段与授权版本，等待发送核验。'):(step.requestPlan.receiptVerified?'Sent content matches the approved request; receiver digest verified.':'Request bound to the selected fields and policy version; awaiting send check.')));}
+ const audit=el('details','request-details');audit.dataset.detailId='checks';audit.append(el('summary','',t('checks')),el('pre','',JSON.stringify({source:step.source,required:step.required,candidates:step.candidates,policyVersion:step.plannedPolicyVersion,checks:step.checks,requestPlan:step.requestPlan,trigger:step.trigger},null,2)));root.append(audit);
  const download=el('a','evidence-link',t('evidence'));download.href=`/api/research/runs/${S.run.id}/evidence`;download.download='run-evidence.json';root.append(download);
  return root;
 }
@@ -217,7 +219,7 @@ async function start(replay=false){
  const created=await api(replay?'/replay':'/runs',replay?{runId:S.lastLive}:{caseId:S.caseId,condition:scenario.condition,method:$('#method-select').value,mode:S.mode,overrides,deferStart:true});S.starting=false;connect(created.id,!replay);
  }catch(error){S.starting=false;S.error=error.message;render();}
 }
-function renderFeatured(){const root=$('#featured-runs');root.replaceChildren();for(const run of S.bootstrap?.featuredRuns||[]){const button=el('button','history-run featured-run',(S.lang==='zh'?'DeepSeek 重放 · ':'DeepSeek replay · ')+methodName(run.method));button.type='button';button.onclick=()=>{S.lastLive=run.id;start(true);};root.append(button);}}
+function renderFeatured(){const root=$('#featured-runs');root.replaceChildren();for(const run of S.bootstrap?.featuredRuns||[]){const button=el('button','history-run featured-run',(S.lang==='zh'?'DeepSeek 重放 · ':'DeepSeek replay · ')+(run.label?l(run.label):methodName(run.method)));button.type='button';button.onclick=()=>{if(run.caseId?.startsWith('progressive-')){S.scenario='facts';S.caseId=run.caseId;S.mode='deepseek';$('#scenario-select').value='facts';$('#execution-mode').value='deepseek';}S.lastLive=run.id;start(true);};root.append(button);}}
 function renderHistory(){const root=$('#run-history');root.replaceChildren();for(const run of S.history.slice(0,6)){const b=el('button','history-run',`${l(run.title)} · ${methodName(run.method)}`);b.title=`${time(run.createdAt)} · ${t(run.status)}`;b.onclick=async()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.run=await api(`/runs/${run.id}`);S.caseId=S.run.caseId;S.follow=true;S.tab='process';S.showCompare=false;render();};root.append(b);}}
 async function loadHistory(){try{S.history=await api('/history');renderHistory();}catch{}}
 async function showComparison(){S.showCompare=true;S.pairs=[];const candidates=S.history.filter(r=>r.caseId===S.run.caseId&&(r.condition||'normal')===(S.run.condition||'normal')&&r.id!==S.run.id&&r.method!==S.run.method);for(const candidate of candidates){const other=await api(`/runs/${candidate.id}`);if(other.executionMode===S.run.executionMode&&JSON.stringify(other.overrides||{})===JSON.stringify(S.run.overrides||{})){S.pairs=[S.run,other];break;}}render();}
@@ -232,7 +234,7 @@ async function init(){
  $('#task-nav').onclick=()=>{S.tab='process';render();};
  try{
    S.bootstrap=await api('/bootstrap');if(S.lastLive){try{const previous=await api(`/runs/${S.lastLive}`);if(previous.status!=='completed')S.lastLive=null;}catch{S.lastLive=null;}}S.lastLive ||= S.bootstrap.sampleRunId;$('#scenario-select').replaceChildren();for(const scenario of S.bootstrap.scenarios){const o=el('option','',l(scenario.title));o.value=scenario.id;$('#scenario-select').append(o);}$('#scenario-select').value=S.scenario;
-   $('#scenario-select').onchange=()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.scenario=$('#scenario-select').value;S.caseId=S.bootstrap.scenarios.find(x=>x.id===S.scenario).caseId;S.run=null;S.error='';S.tab='process';S.showCompare=false;render();};
+   $('#scenario-select').onchange=()=>{S.connectionToken=(S.connectionToken||0)+1;S.source?.close();S.presentation=null;S.scenario=$('#scenario-select').value;S.caseId=S.bootstrap.scenarios.find(x=>x.id===S.scenario).caseId;if(S.scenario==='facts'){S.mode='deepseek';$('#execution-mode').value='deepseek';}S.run=null;S.error='';S.tab='process';S.showCompare=false;render();};
    $('#method-select').replaceChildren();for(const method of ['joint','full','pii','entry','per_step']){const o=el('option','',methodName(method));o.value=method;$('#method-select').append(o);}
    render();renderFeatured();loadHistory();
  }catch(error){S.error=error.message;render();}

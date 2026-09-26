@@ -1,0 +1,51 @@
+{
+  "id": "prospective-v2-20260926",
+  "frozenAt": "2026-09-26T14:12:17.528Z",
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "maxTokens": 650,
+  "cases": 36,
+  "repetitions": 2,
+  "methods": [
+    "full",
+    "pii",
+    "entry",
+    "per_step",
+    "joint",
+    "placement_full"
+  ],
+  "jobs": 432,
+  "concurrency": 4,
+  "primary": "strict structured outcome",
+  "secondary": [
+    "missing necessary facts per task",
+    "extra facts per task",
+    "model calls",
+    "tokens",
+    "latency"
+  ],
+  "analysis": "Average repeats within case; report all four predefined strata. Paired case bootstrap is descriptive for this author-designed synthetic set, not a population estimate. No model or label tuning after freeze.",
+  "comparisons": [
+    "joint vs per_step: effect of local execution",
+    "joint vs placement_full: same local rule, different external views",
+    "joint vs full: combined effect"
+  ],
+  "missingAndErrors": "All planned runs remain in denominator; no silent retries. Resume only unexecuted job IDs.",
+  "provenance": "Author-created prospective robustness set in the same two domains. Six cases vary supported parameters, six rephrase computable rules, twelve rephrase semantic cases, twelve wrap existing reference content. Not independently collected data, unseen domains, or a blind human benchmark.",
+  "humanReview": "Pending. No quality claim until real ratings exist.",
+  "hashes": {
+    "src/research/engine.mjs": "88e7e55a865c7dd445c7123dc393bb49364c52020b7577090b83dddf69a192d4",
+    "src/research/policy.mjs": "e76fccbbefeccb17ecdf7984a8804d989d1a8667fb1db3d0f5a7bb3d44493f9e",
+    "src/research/catalog.mjs": "b33fc7b351015048c239049491561a25eaaca578d137fa666215f96729aeefb6",
+    "src/research/checked-execution.mjs": "c41e990d6a62bf2c2ad4bf9dcb2388a3f35cb2e5808d246c82560d2db8f737d5",
+    "src/research/validation-score.mjs": "12af7ea4cdec2957c160348699650796b508ba80bd2016490a3f35ab6e576dde",
+    "src/research/transport.mjs": "e12978c2a5985ab4cb13bb58a8de8607ccd7b96c61205eb5255a2d0a15427fe7",
+    "src/research/receiver-worker.mjs": "e94606c2ae995a5c76eb0771cfeaa8a9b8e669647ab9b798a71bdedad3993bd9",
+    "src/research/deepseek-live.mjs": "126666eb39f53433a2c3404e19901998cab6d9053e4541ab8edebce4fb800b63",
+    "fixtures/validation-v2/cases.json": "9dc3f8c519c4ec469abdefeda90b58b77d8da99f18ffe9ce16015f38db907e68",
+    "fixtures/validation-v2/labels.json": "cd371cedc93089053e807048fcef4ad3ecded9c8568d7f88447167a0392f4edd",
+    "fixtures/research/references.json": "738da37cc96943e9a64ed00b1b225664d1cb6a0445fd8eda931e4ea0f53bd006",
+    "scripts/run-validation.mjs": "8595b8d70a5db53eb037dc8795920fc103484f2abae387a875759a60bf0f989c",
+    "package-lock.json": "5e6f7831ac498807e76c2458d8f36d1a2bdfe0dd0178d4e62570b215665972bd"
+  }
+}

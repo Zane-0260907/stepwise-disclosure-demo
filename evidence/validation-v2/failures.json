@@ -1,0 +1,1732 @@
+[
+  {
+    "jobId": "validation-05/pii/0",
+    "runId": "061454fe-6b2e-4635-824d-06d5952514a4",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均分85.3不低于60，作业完成率68%低于70%但缺勤1次未超2次；按规则作业完成率低于70%应标记需要支持。",
+      "recommendation": "针对作业完成率偏低提供学习支持，如作业辅导与时间管理跟进。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-05/entry/0",
+    "runId": "2174fa31-8b02-4fa5-a4a7-90d25f9cb9e1",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-06/full/0",
+    "runId": "7c2677be-7ae2-4bbf-8197-f5bb0d676043",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-05/per_step/0",
+    "runId": "65a63dfc-f55c-407e-a182-c9d862ffeec1",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-06/entry/0",
+    "runId": "7486eed4-b19c-478b-bb05-ac3dbad94fa1",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-06/per_step/0",
+    "runId": "164562d8-fab1-4225-8781-d6078a7dddc1",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-07/entry/0",
+    "runId": "d05d8c66-411a-49a8-ae67-74571a855e9e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 525,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每晚到一天支付175元，但未提供late_days具体数值，无法核算确定金额。",
+      "recommendation": "补充late_days实际迟延天数后再计算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-07/per_step/0",
+    "runId": "e9d3c35e-8ae3-4ae3-b2e4-f9203c4a5520",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 525,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每晚到一天支付175元，但未提供late_days具体数值，无法核算确定金额。",
+      "recommendation": "补充late_days实际迟延天数后再计算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-07/joint/0",
+    "runId": "bc536917-bf24-496e-b490-d215e3363e77",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 525,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每晚到一天支付175元，但未提供late_days具体数值，无法核算确定金额。",
+      "recommendation": "补充late_days实际迟延天数后再计算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-08/per_step/0",
+    "runId": "52badd8b-52a4-496b-9b10-66ec33706d7a",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 700,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按晚交天数乘以175元计算违约金，但未明确晚交的起算基准（如约定交付日或验收日），缺少计算基数，无法确定具体金额。",
+      "recommendation": "补充明确晚交天数的起算基准与截止口径，再据以核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-08/entry/0",
+    "runId": "9c29bb16-9fa2-4359-babb-0ab3a3e576c3",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 700,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按晚交天数乘以175元计算违约金，但未明确晚交天数的起算基准（如约定交付日或验收日），缺少计算基数，无法确定具体金额。",
+      "recommendation": "补充明确晚交天数的起算基准与截止口径，再据以核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-08/joint/0",
+    "runId": "ba52a94e-5d1f-472c-b2d9-926a62c7cbb0",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 700,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按晚交天数乘以175元计算违约金，但未明确晚交天数的起算基准（如约定交付日或验收日），缺少计算基数，无法确定具体金额。",
+      "recommendation": "补充明确晚交天数的起算基准与截止口径，再据以核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-09/entry/0",
+    "runId": "b36effa5-eb42-454d-aedd-322db6fbb386",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 875,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款仅给出每日175元的固定日额，但未明确计算基数或起算依据，无法确定违约金额。",
+      "recommendation": "补充明确计算基数与起算条件后再核算金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-09/per_step/0",
+    "runId": "34a808fc-144a-4f90-a602-4b6eda2e2a4f",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 875,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款仅给出每日175元的固定日额，但未明确计算基数或起算依据，无法确定违约金额。",
+      "recommendation": "补充明确计算基数与起算条件后再核算金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-09/joint/0",
+    "runId": "548c8f4b-7317-4f81-ab96-fa274567eeb4",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 875,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款仅给出固定日额175元/日，但未明确计算基数或起算依据，无法确定违约金额。",
+      "recommendation": "补充明确计算基数与起算条件后再核算金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-10/per_step/0",
+    "runId": "5566b3d2-ba7f-4de6-a1e4-02edd93daa51",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录筛查规则：scores均值、homework、absences三项中任一不达标即需支持；当前记录触发支持条件。",
+      "recommendation": "针对未达标项安排针对性辅导与练习，并跟踪后续成绩、作业与出勤变化。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-10/joint/0",
+    "runId": "4b3d40bc-c54e-4913-a794-4e8f8fb17a60",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录筛查规则要求依次核对三项：scores均值是否不足60、homework是否不足70、absences是否大于2，任一成立即判定需要支持。",
+      "recommendation": "建议针对未达标项安排针对性辅导与跟踪，并定期复核三项指标。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/joint/0",
+    "runId": "8193f93f-51af-4157-9eb3-1756b0d5cc10",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "支持条件为逻辑或：平均成绩<60、作业完成率<70%、缺勤>2，三项均不成立，故判定为正常无需支持。",
+      "recommendation": "保持当前学习状态，继续按计划完成作业与出勤。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-10/entry/0",
+    "runId": "fd028d2f-c65c-4e2a-9665-b034289d8ad8",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录筛查规则：scores均值、homework、absences三项中任一不达标即需支持；当前记录触发支持条件。",
+      "recommendation": "针对未达标项安排针对性辅导并跟踪改进。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/full/0",
+    "runId": "8e30c14f-1bf6-4b59-b019-bf6b96b51825",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均成绩70分（66/70/74），作业完成65%低于70%但支持条件为逻辑或，缺勤1次未超2次；作业一项成立即触发支持条件，故需支持。",
+      "recommendation": "针对作业完成率偏低安排作业辅导与跟进，其余指标保持常规关注。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/placement_full/0",
+    "runId": "02c5d206-2d6a-48bc-8f2b-34c6108de415",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均成绩70分（66/70/74），作业完成65%低于70%，但支持条件为逻辑或：平均成绩<60不成立、作业<70成立、缺勤1次未超过2，故触发支持条件。",
+      "recommendation": "针对作业完成率偏低提供作业辅导与时间管理支持，其余指标保持跟踪。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/entry/0",
+    "runId": "b8de27bc-6ff6-4c25-83bf-1d63065c148e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "未提供具体学习记录数值，无法判定支持条件成立。",
+      "recommendation": "补充平均成绩、作业完成百分比与缺勤次数以复核。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/pii/0",
+    "runId": "4eac8d42-5106-43cf-8375-3bb36a57242d",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-11/per_step/0",
+    "runId": "3ddd3d29-2774-48f1-b360-86c626c89c3c",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学习记录未提供具体成绩、作业完成率或出勤数据，无法触发支持条件。",
+      "recommendation": "补充平均成绩、作业完成百分比与缺勤次数以便评估。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-12/pii/0",
+    "runId": "d6223813-5e6c-4e72-9759-eecb45e4f272",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-05/pii/1",
+    "runId": "c05124b2-7920-40cf-aeb0-11ce77da61b1",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均分85.3，作业完成率68%低于70%阈值，但按规则需综合判断；缺勤1次未超2次。",
+      "recommendation": "作业完成率偏低，建议关注作业提交情况并提供针对性练习支持。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-05/full/1",
+    "runId": "fa1a5f56-8526-4ecd-be6c-2823a85a86f5",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均分85.3不低于60，作业完成率68%低于70%但按规则需综合判断；缺勤1次未超2次，整体未触发支持条件。",
+      "recommendation": "保持当前学习状态，关注作业完成率。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-06/pii/1",
+    "runId": "571caf79-d1bd-4e06-8f88-c531d36d7409",
+    "error": "UNAUTHORIZED_TOOL_ARGUMENTS: 工具参数超出当前任务允许的资料范围。",
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": null
+  },
+  {
+    "jobId": "validation-07/entry/1",
+    "runId": "68908221-0c9c-4683-af21-dd737000aa38",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 525,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每晚到一天支付175元，但未提供late_days具体数值，无法核算确定金额。",
+      "recommendation": "补充迟延天数late_days后按175元/天计算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-07/per_step/1",
+    "runId": "fbf4b789-e056-46e5-845d-2c7b83ae209a",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 525,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每晚到一天支付175元，但未提供late_days具体数值，无法核算确定金额。",
+      "recommendation": "补充late_days实际迟延天数后再计算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-07/joint/1",
+    "runId": "631a3697-6361-48ee-bfd7-431f0d84aeb9",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 525,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每晚到一天支付175元，但未提供late_days具体数值，无法核算确定金额。",
+      "recommendation": "补充late_days实际迟延天数后再计算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-08/per_step/1",
+    "runId": "e627f9f9-3b8b-476f-ad78-cd1c09fc8525",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 700,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按晚交天数乘以175元计算违约金，但未明确晚交的起算基准（如约定交付日或验收日），无法确定天数，故金额无法核算。",
+      "recommendation": "补充明确晚交天数的起算基准与截止口径，再据以核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-08/entry/1",
+    "runId": "671c31e3-03cd-4219-a6b1-f98afe709b32",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 700,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按晚交天数乘以175元计算违约金，但未明确晚交天数的起算基准（如约定交付日或验收日），缺少计算基数，无法确定具体金额。",
+      "recommendation": "补充明确晚交天数的起算基准与截止口径，再据以核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-08/joint/1",
+    "runId": "c6b3320a-7e3f-4e48-a5eb-fddd194d31bf",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 700,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按晚交天数乘以175元计算违约金，但未明确晚交天数的起算基准（如约定交付日或验收日），缺少计算基数，无法确定具体金额。",
+      "recommendation": "补充明确晚交天数的起算基准与截止口径，再据以核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-09/joint/1",
+    "runId": "d079d8b9-6103-431b-9112-b97cc1f0369f",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 875,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每日175元固定日额，但未提供late_days延误天数，无法核算确定金额。",
+      "recommendation": "补充late_days延误天数后再按每日175元累计计算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-09/per_step/1",
+    "runId": "64477479-a40f-4c4d-ab33-f66beb80cbe9",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 875,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款仅给出固定日额175元/日，但未明确计算基数或起算依据，无法确定违约金额。",
+      "recommendation": "补充明确计算基数与起算条件后再核算金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-09/entry/1",
+    "runId": "cf722f76-c4ca-452f-8373-1509149b1464",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 875,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定每日175元固定日额，但未给出计算基数或明确延误天数来源，无法确定违约金额。",
+      "recommendation": "补充计算基数与延误天数的确认依据后再核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-10/joint/1",
+    "runId": "4fb89d1a-983d-439e-91f3-2614d7f9553b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录筛查规则要求依次核对三项：scores均值是否不足60、homework是否不足70、absences是否大于2，任一成立即判定需要支持。",
+      "recommendation": "建议针对未达标项安排针对性辅导与跟踪，并定期复核三项指标。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-10/entry/1",
+    "runId": "f96838f7-211e-4d27-b917-58e9ac7d339a",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录筛查规则要求依次核对三项：scores均值是否不足60、homework是否不足70、absences是否大于2，任一成立即判定需要支持。",
+      "recommendation": "请补充scores、homework、absences的具体数值，以便按规则逐项核对并给出针对性学习支持建议。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-10/per_step/1",
+    "runId": "0d6bd9c2-9df9-4f8b-95fe-e3c4cc229f1e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "学习记录筛查规则要求依次核对三项：scores均值是否不足60、homework是否不足70、absences是否大于2，任一成立即判定需要支持。",
+      "recommendation": "建议针对未达标项安排针对性辅导与跟踪，并定期复核三项指标。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/placement_full/1",
+    "runId": "4f11408a-446f-4661-aede-a813f4f7383b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均成绩70分、作业完成65%但缺勤1次；按逻辑或规则，平均分未低于60、缺勤未超过2，仅作业完成率低于70，规则整体不成立，判定为正常跟进。",
+      "recommendation": "保持常规学习跟进，关注作业完成情况即可。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/full/1",
+    "runId": "49219c55-048b-4b8e-aa53-72244b9fed6a",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均成绩70分、作业完成65%但缺勤1次；按逻辑或规则，平均分未低于60、缺勤未超过2，仅作业完成率低于70，规则整体不成立，判定为正常跟进。",
+      "recommendation": "保持常规学习跟进，关注作业完成情况即可。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/pii/1",
+    "runId": "7c73dc6a-4ef0-4d67-aac3-565c8a5b4c59",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "平均成绩70分（≥60），作业完成65%但缺勤1次（≤2），逻辑或条件均不成立，判定为正常。",
+      "recommendation": "保持当前学习状态，继续按计划完成作业与出勤。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/entry/1",
+    "runId": "9f33da34-02f4-45c3-a50f-1ad751c6dfcd",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学习记录未提供具体成绩、作业完成率或出勤数据，无法触发支持条件。",
+      "recommendation": "补充平均成绩、作业完成百分比与缺勤次数以便评估。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/joint/1",
+    "runId": "f9f2342e-15d9-4718-8a05-80f01c104c39",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学习记录未提供具体成绩、作业完成率或出勤数据，无法触发支持条件。",
+      "recommendation": "补充平均成绩、作业完成百分比与缺勤次数以便评估。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-11/per_step/1",
+    "runId": "4bccd6ed-ab0d-495b-aaa1-e347c563576e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-rule-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "学习记录未提供具体成绩、作业完成率或出勤数据，无法触发支持条件。",
+      "recommendation": "补充成绩、作业完成百分比与缺勤次数等数据后再评估。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "validation-16/per_step/1",
+    "runId": "a5fd6e19-86cf-40b6-9f50-705d95193ea0",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "unseen-semantic-wording",
+      "labelProvenance": "Author-created before model calls; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "付款以验收合格为触发条件，但验收标准与验收主体均未约定，触发条件不明确，无法确定付款义务是否到期，故违约金额无法核算。",
+      "recommendation": "补充约定验收的具体标准、验收主体及验收期限，明确付款触发条件后再核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  }
+]

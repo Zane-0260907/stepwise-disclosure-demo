@@ -1,0 +1,17 @@
+{
+  "provenance": "Faithful English presentation translation, including the model's unsupported comparison of contract amount with penalty. Raw replies and requests remain unchanged.",
+  "runs": {
+    "83fd687d-6783-4e0f-ab9a-4064fb359d12": {
+      "summary": "The delayed-delivery clause specifies CNY 230 per day, and the ledger records a 5-day delay. The penalty is 230 × 5 = CNY 1,150. The recorded amount=61000 does not match this clause calculation and requires review.",
+      "recommendation": "Calculate CNY 1,150 using CNY 230 per day and the 5-day delay, and verify the source and meaning of the CNY 61,000 amount in the ledger."
+    }
+  },
+  "values": {
+    "若发生交付延误，日额为230元。请以台账中的延误日数计算应付金额。": "Delayed delivery incurs a daily charge of CNY 230. Use the locally recorded number of days to calculate the amount.",
+    "合成验证对象-progressive-09": "Synthetic subject progressive-09",
+    "合成联系人-progressive-09": "Synthetic contact progressive-09",
+    "本地预算-progressive-09": "Local budget note progressive-09",
+    "其他业务-progressive-09": "Unrelated business record progressive-09",
+    "交货验收后 15 天付款": "Payment within 15 days after delivery acceptance"
+  }
+}

@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { mkdir,writeFile } from 'node:fs/promises';
-const out=new URL('../evidence/research/ui/',import.meta.url);await mkdir(out,{recursive:true});
+const out=new URL('../data/research/ui-current/',import.meta.url);await mkdir(out,{recursive:true});
 const base=process.env.DEMO_BASE||'http://127.0.0.1:4793';
 const executablePath=process.env.EDGE_PATH||(process.platform==='win32'?'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe':undefined);
 const browser=await chromium.launch({executablePath,headless:true});
@@ -11,7 +11,7 @@ try{
  let pdfRequests=0;page.on('request',request=>{if(request.url().includes('/api/research/documents/'))pdfRequests++;});
  await page.goto(base,{waitUntil:'networkidle'});await page.waitForSelector('#scenario-select option', { state: 'attached' });
  const bootstrap=await(await page.request.get('/api/research/bootstrap')).json();assert.equal(bootstrap.offlineAvailable,true);
- assert.equal(bootstrap.featuredRuns.length,2);assert.equal(await page.locator('.featured-run').count(),2);
+ assert.ok(bootstrap.featuredRuns.length>=3);assert.equal(await page.locator('.featured-run').count(),bootstrap.featuredRuns.length);
  if(!bootstrap.deepseekAvailable){await page.locator('#execution-mode').selectOption('deepseek');assert.equal(await page.locator('#live-button').isDisabled(),true);await page.locator('#execution-mode').selectOption('offline');}
  await page.screenshot({path:fileURLToPath(new URL('01-before.png',out))});
  await page.locator('.featured-run').first().click();await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('实际运行'),null,{timeout:90000});assert.match(await page.locator('#source-badge').innerText(),/重放/);

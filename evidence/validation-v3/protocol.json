@@ -1,0 +1,55 @@
+{
+  "id": "prospective-v3-20260926",
+  "frozenAt": "2026-09-26T14:25:26.672Z",
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "maxTokens": 650,
+  "cases": 32,
+  "repetitions": 2,
+  "methods": [
+    "full",
+    "pii",
+    "entry",
+    "per_step",
+    "joint",
+    "no_acquisition",
+    "placement_full"
+  ],
+  "jobs": 448,
+  "concurrency": 4,
+  "primary": "strict structured-task success; all planned jobs in denominator",
+  "comparisons": [
+    "joint vs no_acquisition: progressive field requests",
+    "joint vs per_step: local execution",
+    "joint vs placement_full: disclosure with matched local execution"
+  ],
+  "secondary": [
+    "extra facts transmitted",
+    "necessary facts missing from final analysis request",
+    "model calls",
+    "tokens",
+    "elapsed time"
+  ],
+  "unit": "Average repetitions within case; paired bootstrap 2000 draws, descriptive for this synthetic set; four strata also reported separately. No multiplicity-adjusted confirmatory significance claim.",
+  "development": "The v2 36-case set exposed missing inputs and was used for development. It is not a holdout for this mechanism. Three v2 cases are a live smoke pilot.",
+  "provenance": "Author-created new inputs in the same two domains. Eight cases per stratum: supported parameter changes, new calculable formulations, new semantic formulations, new wrappers of existing reference corpus. No real-document or new-domain generalization claim.",
+  "ablation": "All methods share model, instructions, schemas and output evaluator. no_acquisition removes only the fact-request tool while retaining joint local routing; placement_full uses the same local rule and full context on external steps.",
+  "failures": "No silent retries, relabeling or post-result source changes. Resume unexecuted job IDs only.",
+  "humanReview": "Pending actual author assessments; authors are not independent external experts.",
+  "hashes": {
+    "src/research/engine.mjs": "88e7e55a865c7dd445c7123dc393bb49364c52020b7577090b83dddf69a192d4",
+    "src/research/policy.mjs": "e76fccbbefeccb17ecdf7984a8804d989d1a8667fb1db3d0f5a7bb3d44493f9e",
+    "src/research/catalog.mjs": "b33fc7b351015048c239049491561a25eaaca578d137fa666215f96729aeefb6",
+    "src/research/checked-execution.mjs": "c41e990d6a62bf2c2ad4bf9dcb2388a3f35cb2e5808d246c82560d2db8f737d5",
+    "src/research/adaptive-execution.mjs": "ff71f8ad0aa962518fb0c6f93be919385f53b7b7cb9de21c128c9c4293f46b86",
+    "src/research/validation-score.mjs": "12af7ea4cdec2957c160348699650796b508ba80bd2016490a3f35ab6e576dde",
+    "src/research/transport.mjs": "e12978c2a5985ab4cb13bb58a8de8607ccd7b96c61205eb5255a2d0a15427fe7",
+    "src/research/receiver-worker.mjs": "e94606c2ae995a5c76eb0771cfeaa8a9b8e669647ab9b798a71bdedad3993bd9",
+    "src/research/deepseek-live.mjs": "126666eb39f53433a2c3404e19901998cab6d9053e4541ab8edebce4fb800b63",
+    "fixtures/validation-v3/cases.json": "bff108e837bcd3a0a6312f98d4047741f89310fb35fe6378717e351c3c208bb8",
+    "fixtures/validation-v3/labels.json": "a29fd2e30bf5759ebb7ed0c2ac9a76f59c4c61b1318c3e1c68e469c359a23957",
+    "fixtures/research/references.json": "738da37cc96943e9a64ed00b1b225664d1cb6a0445fd8eda931e4ea0f53bd006",
+    "scripts/run-progressive.mjs": "0a346115a7d79973f4c7e7a6a94dd0330a2322837db34e82cd1825f4d52113fd",
+    "package-lock.json": "5e6f7831ac498807e76c2458d8f36d1a2bdfe0dd0178d4e62570b215665972bd"
+  }
+}

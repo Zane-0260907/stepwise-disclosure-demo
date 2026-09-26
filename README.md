@@ -37,7 +37,7 @@
 An agent can discover a new step only after reading local material or receiving a tool result. That step may need a different executor and a different set of facts. This prototype makes both decisions at each registered step: use a local rule when it can complete the operation; otherwise construct a view for the actual external recipient, check the final request before transmission, and record what the recipient received.
 
 <p align="center">
-  <img src="evidence/research/ui/08-deepseek-english-report.png" alt="English interface showing a preserved DeepSeek run, its step timeline, and inspectable result" width="920">
+  <img src="evidence/progressive-showcase/ui/progressive.en.png" alt="English interface showing a preserved DeepSeek run, its step timeline, and inspectable result" width="920">
 </p>
 <p align="center"><em>Recorded DeepSeek run in the English interface. The right pane can also show the selected step's recipient view and receiver record.</em></p>
 
@@ -53,7 +53,7 @@ This is an independent research demo with synthetic contracts and study records,
   <a href="https://matplotlib.org/"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-evidence_plots-11557C"></a>
 </p>
 
-Node.js runs the step planner, receiver and web interface; PDF.js reads the synthetic PDFs. Playwright verifies the interface, while Python/Matplotlib draws figures from saved experiment records. The optional live-model adapter calls DeepSeek; the frozen batch used Qwen-Plus.
+Node.js runs the step planner, receiver and web interface; PDF.js reads the synthetic PDFs. Playwright verifies the interface, while Python/Matplotlib draws figures from saved experiment records. The current live-model adapter and prospective studies use DeepSeek. The original Qwen-Plus batch remains archived unchanged.
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
@@ -84,59 +84,69 @@ Select **Local rule executor** for a fresh run, then compare these synthetic cas
 | Reference clause | A new lookup appears during execution. Its checked view reaches a separate local HTTP receiver; the returned versioned reference is used by the next step. |
 | Revoke before send | Revoking at the pause point blocks the pending request. Allowing the same step on another run produces a receiver record to compare. |
 
-Click a step in the middle pane to inspect its selected recipient, facts sent, facts retained locally, request digest and result. The offline executor parses the PDF and writes a fresh run record each time, but its finite rules do not demonstrate language-model understanding. The two **DeepSeek replay** entries reproduce preserved real calls without a key or a new provider request. Slower UI playback is not experiment runtime.
+Click a step in the middle pane to inspect its selected recipient, facts sent, facts retained locally, request digest and result. The offline executor parses the PDF and writes a fresh run record each time, but its finite rules do not demonstrate language-model understanding. The **DeepSeek replay** entries reproduce preserved real calls without a key or a new provider request. Start with **Request missing facts** to see an initially insufficient view, a model-originated fact request, local authorization, and a second analysis. See the [step-by-step walkthrough](docs/demo-walkthrough.md). Slower UI playback is not experiment runtime.
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
 ## Reproduce the experiment
 
-The frozen batch `frozen-v1-20260925` contains **60 synthetic cases × 5 methods × 3 repetitions = 900 task runs** under a Qwen-Plus model configuration. One task may contain multiple model calls. All five methods are implemented in this repository; the four baselines are mechanism controls, not reimplementations of external systems.
+The current study freezes **32 synthetic cases × 7 methods × 2 repeats = 448 tasks**, using `deepseek-flash`. Its 560 real provider calls have matching receiver and provider-egress records. All planned tasks, including failures, are retained. These are author-created inputs in two existing task domains, not an external benchmark.
 
-The primary endpoint is **strict structured-task success** against withheld labels, not expert judgment of prose quality. Repetitions are aggregated within each case before paired comparisons.
+| Method | Structured success | Extra facts/task | Model calls |
+| :-- | --: | --: | --: |
+| Full context | 53/64 · 82.8% | 8.625 | 80 |
+| PII masking | 54/64 · 84.4% | 4.125 | 80 |
+| Entry view | 54/64 · 84.4% | 0.281 | 96 |
+| Per-step view, fixed executor | 53/64 · 82.8% | 0.031 | 96 |
+| No fact acquisition | 51/64 · 79.7% | 0 | 64 |
+| Same local rules + full context | 57/64 · 89.1% | 7.188 | 64 |
+| Full mechanism | **58/64 · 90.6%** | **0.031** | 80 |
 
-| Method | Structured success | Mean unnecessary facts sent per task |
-| :-- | --: | --: |
-| Full context | 76.7% | 9.6 |
-| PII masking | 75.0% | 4.6 |
-| Entry projection | 82.2% | 0.33 |
-| Per-step projection, fixed executor | 82.8% | 0 |
-| Joint stepwise decision | **91.1%** | **0** |
+<p align="center"><img src="evidence/validation-v3/experiment-overview.en.svg" alt="Measured completion, fact-acquisition ablation and extra-field transmission in the 448-task DeepSeek study" width="1000"></p>
 
-<p align="center"><img src="evidence/research/results/experiment-overview.en.svg" alt="English five-method comparison from the frozen run records" width="900"></p>
-<p align="center"><em>Generated from saved runs. Intervals and paired comparisons use cases, rather than treating 900 repetitions as independent cases.</em></p>
+Fact acquisition adds **10.94 percentage points** over its disabled control (paired, descriptive case-bootstrap 95% interval: **1.56 to 23.44**), at the cost of 16 additional model calls. Against the control with the same local rules and full context, the success difference is **1.56 points**, with an interval of **−10.94 to 14.06**. This does **not** establish superior or equivalent task quality. Two unnecessary field transmissions remain in the full mechanism; authorized does not mean necessary.
 
-Check the executable path, synthetic inputs and saved live-call records:
+Re-score all 448 saved tasks **without a key or new model calls**:
 
 ```sh
-npm run check:inputs
 npm test
-npm run test:boundaries
-node scripts/verify-deepseek-records.mjs
+node scripts/verify-progressive-showcase.mjs
+python -m zipfile -e evidence/validation-v3/reproduction-records.zip .
+npm run verify:v3
 ```
 
-Re-score the **900 saved runs** without a key or another model call:
+The archive extracts to ignored `data/research/validation/`. The [v3 protocol](evidence/validation-v3/protocol.json) freezes code, fixtures, labels and comparison definitions before the calls. [Results, failures and case aggregates](evidence/validation-v3/) are public. To redraw: `pip install -r requirements-plots.txt`, then `python scripts/plot-validation.py --lang en`.
+
+<details>
+<summary><strong>Development history and earlier evidence</strong></summary>
+
+- **v1:** 60 cases, five methods, three repeats = 900 Qwen-Plus tasks. Original code and inputs remain frozen. [Results](evidence/research/results/) and [raw archive](evidence/research/reproduction-records.zip) remain available.
+- **v2:** 36 new same-domain cases, six methods, two repeats = 432 DeepSeek tasks. This exposed omitted necessary inputs and was subsequently used for development. It is **not** a holdout for v3. [Protocol and results](evidence/validation-v2/).
+- **v3:** The 448-task study above evaluates the revised mechanism on newly authored same-domain cases after a new freeze. Do not pool the three versions into one success rate.
 
 ```sh
 python -m zipfile -e evidence/research/reproduction-records.zip .
 node scripts/verify-recorded-scores.mjs frozen-v1-20260925
-node scripts/summarize-research.mjs frozen-v1-20260925
+python -m zipfile -e evidence/validation-v2/reproduction-records.zip .
+npm run verify:v2
+npm run test:binding
 ```
 
-The archive extracts to ignored `data/research/experiments/`. To regenerate the English chart, install Python 3.11+ and `requirements-plots.txt`, then run `python scripts/plot-research.py --lang en`. The [frozen protocol](evidence/research/frozen-protocol.json) records source and input hashes; changing the core, fixtures, evaluator or lockfile requires a new experiment version.
+The deterministic request-binding study blocks 52/52 altered requests versus 12/52 under the earlier checks; both allow all eight legitimate cases. This validates a bounded local control path, not semantic privacy against arbitrary attacks. [Saved results](evidence/request-binding/summary.json).
 
-Full values, intervals, failures and per-case results are in [`evidence/research/results/`](evidence/research/results/).
+</details>
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
 ## Evidence and limitations
 
-The [preserved DeepSeek bundle](evidence/research/deepseek-live-20260926/) contains a joint run and a full-context comparison on **one** synthetic contract. Each made two model calls and one synthetic-reference lookup. Their recorded outbound request totals were **5,089** and **6,273 bytes**. This illustrates a trace; it is not part of the 900-run Qwen-Plus batch or a cross-model quality comparison. Raw requests, digests, receiver records, event frames, results and English presentation translations are retained separately; no key is included.
+The [progressive showcase](evidence/progressive-showcase/) is one additional real run, excluded from batch totals. It preserves the model's request for a needed late-day count **and an unnecessary contract amount**, followed by the CNY 1,150 result. The [earlier reference-lookup pair](evidence/research/deepseek-live-20260926/) is also retained separately. Neither is a substitute for batch evaluation.
 
-- The batch tests structured outcomes on controlled synthetic cases. Development and evaluation share task families; unseen-template generalization and real-enterprise deployment remain untested.
-- The independent local receiver records actual HTTP requests, and the provider adapter records its egress. These are application-level audit records, not cloud-provider certification or protection against arbitrary bypass traffic.
-- A changed authorization can block a **future** send; it cannot retrieve facts already transmitted.
-- Recorded extra-fact counts cover registered structured fields. They do not detect semantic inference or leakage outside the registered adapters.
-- Kernel time, end-to-end time and UI playback time are different measurements. The paced display is never reported as execution speed.
+- Success is checked against author-defined structured labels, not expert assessment of free-text advice. A 24-output blinded author-review packet is prepared; **human ratings are pending**.
+- All seven methods are implemented here as mechanism controls. No external-system baseline has been run. [Research positioning and closest work](docs/research-position.md) states the overlap with MINIM, ToolMinimize, PlanTwin and SplitAgent.
+- The trusted local controller binds the used source values, recipient, current policy and exact application request. The separate local receiver and adapter record actual bytes; they are not cloud-provider certification.
+- Field counts do not detect inferred sensitive information. Allowlisted facts can still be unnecessary. Arbitrary network bypasses and a compromised local controller are outside the model.
+- Revocation blocks a future dispatch; it cannot retract a previous disclosure. Playback delays are never counted as model execution time.
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
@@ -147,7 +157,9 @@ The [preserved DeepSeek bundle](evidence/research/deepseek-live-20260926/) conta
 | [`src/research/`](src/research/) | Planner, views, policy checks, receiver, model adapter and evaluator |
 | [`web/`](web/) | Bilingual research interface, separate from the commercial product |
 | [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld labels |
-| [`evidence/research/`](evidence/research/) | Frozen protocol, run archive, scores, boundary tests, live-call records and screenshots |
+| [`evidence/validation-v3/`](evidence/validation-v3/) | Current frozen protocol, full run archive, scores, failures and figures |
+| [`evidence/research/`](evidence/research/) | Unchanged original study and earlier live-call records |
+| [`evidence/progressive-showcase/`](evidence/progressive-showcase/) | Current preserved trace and bilingual browser screenshots |
 | [`scripts/`](scripts/) | Input checks, independent score verification, summaries and plots |
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "32e38f7f-7db3-4750-81bf-787f2d25a809",
+    "at": "2026-09-26T14:38:23.241Z",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "receiverBodySha256": "37850c1ae5137348c5037df9e366fa935511044e562affd4010ac31720c222ab",
+    "providerBodySha256": "75b2425d70cd20ee034ff52006b16a352a36ac3be2d02492f2a50417b7db77fb",
+    "providerBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":650,\"messages\":[{\"role\":\"system\",\"content\":\"你通过工具与本地数据管理器协作。未在facts中出现的数值可能仍保留在本地，并非原文没有这些信息。若本轮提供request_task_facts且计算或判断缺少其可请求的字段，必须调用该工具取得数据；不要在最终答案里要求用户补交这些字段，也不要把暂未传输的数据误判为条款缺项。工具交互优先于最终JSON输出要求。\\n你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。 只有取得本次判断所需事实后，才能输出最终JSON。字段缺失不等于数值为零。仅参考当前facts，不假定早先上下文仍存在。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"若发生交付延误，日额为230元。请以台账中的延误日数计算应付金额。\\\",\\\"late_days\\\":5,\\\"amount\\\":61000}}\"}],\"thinking\":{\"type\":\"disabled\"}}",
+    "responseStatus": 200,
+    "responseSha256": "09a3652dbd16b9b395da6c2f380ef8f495c9cc05ee35ea9ea54dec3e372b81e5"
+  },
+  {
+    "id": "d21f4152-f2b0-4af7-975f-2c1edb41a50d",
+    "at": "2026-09-26T14:38:22.439Z",
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "endpoint": "https://api.deepseek.com/chat/completions",
+    "receiverBodySha256": "bdd987460ada1404ddecfb202632536559ba047f2ca53bd4dd8ff29efb6a75c8",
+    "providerBodySha256": "f819af8e3f4fb94fbaf6f862cee9ff7df698f5ae99e45cd5e6352a92a1c2de35",
+    "providerBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"max_tokens\":650,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"request_task_facts\",\"description\":\"仅在当前判断或计算缺少必要数值时，向本地请求尚未提供的业务字段。一次列出当前实际需要的全部字段，并解释其与当前判断的关系。不要猜测数值。\",\"parameters\":{\"type\":\"object\",\"properties\":{\"fields\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"late_days\",\"amount\"]},\"minItems\":1,\"maxItems\":3,\"uniqueItems\":true},\"reason\":{\"type\":\"string\"}},\"required\":[\"fields\",\"reason\"],\"additionalProperties\":false}}}],\"tool_choice\":\"auto\",\"messages\":[{\"role\":\"system\",\"content\":\"你通过工具与本地数据管理器协作。未在facts中出现的数值可能仍保留在本地，并非原文没有这些信息。若本轮提供request_task_facts且计算或判断缺少其可请求的字段，必须调用该工具取得数据；不要在最终答案里要求用户补交这些字段，也不要把暂未传输的数据误判为条款缺项。工具交互优先于最终JSON输出要求。\\n你是合成研究案例的分析执行器。只分析当前任务所需事实，不使用或转发无关身份与业务信息。若事实指定reference_code和reference_version但尚无reference_text，先调用lookup_reference读取确切版本；不能猜测资料内容。资料已提供时不要重复查询。不要把逾期履约直接当成逾期付款。不要判断法律效力。学习任务中的“执行明确的学习支持筛查规则”必须按该规则计算，其他学习记录识别主要问题。仅在条款公式和必需数值明确时计算违约金额，否则amount为null。最终只返回JSON：{\\\"issueCodes\\\":[问题代码],\\\"amount\\\":数字或null,\\\"summary\\\":\\\"简短中文依据\\\",\\\"recommendation\\\":\\\"简短中文建议\\\",\\\"evidenceIds\\\":[实际使用的事实键],\\\"citations\\\":[实际查得的资料citation]}。可用问题代码：NO_ISSUE, PENALTY_APPLIES, UNDEFINED_TRIGGER, MISSING_RATE, MISSING_BASE, MISSING_CAP, MISSING_START, AMBIGUOUS_ACCEPTANCE, CONFLICTING_TERMS, MISSING_DEADLINE, UNDEFINED_OBLIGATION, SUPPORT_NEEDED, ON_TRACK, PRACTICE_GAP, ATTENDANCE_GAP, WORKLOAD_HIGH, CONCEPT_GAP, CONSISTENCY_GAP。正常合同用NO_ISSUE，存在确定违约金额用PENALTY_APPLIES；学习规则判定用SUPPORT_NEEDED或ON_TRACK。自由文本学习记录使用PRACTICE_GAP、ATTENDANCE_GAP、WORKLOAD_HIGH、CONCEPT_GAP或CONSISTENCY_GAP。代码根据输入选择，不凭空补造事实。 只有取得本次判断所需事实后，才能输出最终JSON。字段缺失不等于数值为零。仅参考当前facts，不假定早先上下文仍存在。\"},{\"role\":\"user\",\"content\":\"{\\\"task\\\":\\\"检查合同条款，核算能够确定的违约金额，指出需要复核的问题；遇到引用条款先查阅对应版本，再生成风险提示。\\\",\\\"outputFocus\\\":\\\"issueCodes只选择最主要的一项问题。建议和问题的后果不另算一个分类。\\\",\\\"facts\\\":{\\\"clause\\\":\\\"若发生交付延误，日额为230元。请以台账中的延误日数计算应付金额。\\\"},\\\"availableLocalFields\\\":[\\\"late_days\\\",\\\"amount\\\"],\\\"dataAccess\\\":\\\"这些字段当前保留在本地。如确实需要，请调用request_task_facts获取，不能猜测。\\\"}\"}],\"thinking\":{\"type\":\"disabled\"}}",
+    "responseStatus": 200,
+    "responseSha256": "e14a8f2cd425d832890b68f6955d3615684502727f1b61720776408bcc6a1243"
+  }
+]

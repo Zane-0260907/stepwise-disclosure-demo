@@ -1,0 +1,2667 @@
+[
+  {
+    "jobId": "progressive-01/entry/0",
+    "runId": "a440d42e-953a-4669-981b-e11e3903ce07",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 2130,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定迟延交货按合同总额1.5%计收违约金，但未提供合同总额，无法核算确定金额。",
+      "recommendation": "补充合同总额后再按1.5%计算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-01/per_step/0",
+    "runId": "34e31cdb-f4fc-4544-a56f-b6dd061147c6",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 2130,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定迟延交货按合同总额1.5%计收违约金，但未提供合同总额，无法核算确定金额。",
+      "recommendation": "补充合同总额后再按1.5%计算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-01/full/0",
+    "runId": "4d371fa4-3eb7-4d2a-9edc-a6e715f08594",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 2130,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 12780,
+      "summary": "合同约定迟延交货一次按合同总额1.5%计收违约金，合同总额142000元，计算得142000×1.5%=2130元/次；现有事实未明确迟延次数，按一次计为2130元。",
+      "recommendation": "确认迟延交货的次数及是否已触发验收付款条件，再据实结算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/per_step/0",
+    "runId": "d6a3c915-f904-45ec-9ae7-cc053f56b199",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 54000,
+      "summary": "迟延交货6天，按合同总额0.2%/天计违约金，累计上限0.7%；0.2%×6=1.2%超过上限，故按上限0.7%计，金额54000元。",
+      "recommendation": "按合同总额0.7%的上限计收违约金54000元，并留存迟延交货6天的证据。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/entry/0",
+    "runId": "4c81b648-f7d2-4585-9191-118d49e5eeef",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 54000,
+      "summary": "迟延交货6天，按合同总额0.2%/天计违约金，累计上限0.7%；0.2%×6=1.2%超过上限，故按上限0.7%计，金额54000元。",
+      "recommendation": "按合同总额0.7%的上限计收违约金54000元，并留存迟延交货6天的证据。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/full/0",
+    "runId": "74f47af3-c123-444b-8f60-3adfe1d1a469",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 648,
+      "summary": "合同约定迟延交货每日按合同总额0.2%计收违约金，累计不超过0.7%。合同总额54000元、迟延6天，按日计算为54000×0.2%×6=648元，未超过上限54000×0.7%=378元，故以封顶金额378元为准。",
+      "recommendation": "建议按合同总额0.7%的封顶金额378元主张违约金，并留存迟延交货6天的验收或交付凭证。",
+      "evidenceIds": [
+        "amount",
+        "late_days",
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/pii/0",
+    "runId": "9f6090bc-82e4-4078-9b75-3534ae845c40",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 648,
+      "summary": "合同约定迟延交货每日按合同总额0.2%计收违约金，累计不超过0.7%。合同总额54000元、迟延6天，按日计算为54000×0.2%×6=648元，未超过上限54000×0.7%=378元？",
+      "recommendation": "复核违约金上限：按日计算648元已超过累计上限378元，应以上限378元为准。",
+      "evidenceIds": [
+        "payment_terms",
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-07/pii/0",
+    "runId": "7c21c619-ad82-47da-8491-0de435076129",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "amount": null,
+      "summary": "平均分80.33、作业完成率90%均达标，但缺勤4次超过2次阈值，按明确筛查规则需标记为需要支持。",
+      "recommendation": "针对缺勤情况提供学习支持，了解缺勤原因并安排补课或跟进，帮助其保持学习进度。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-09/no_acquisition/0",
+    "runId": "dfef28ba-8b16-4d3c-b4f2-ece21f0afa31",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1150,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定交付延误日额230元，但未提供台账中的延误日数，无法计算确定金额。",
+      "recommendation": "补充台账中经确认的延误日数后，再按230元/日核算应付金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-09/placement_full/0",
+    "runId": "38635dda-c6eb-4f88-8783-416c6e0939be",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1150,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_RATE"
+      ],
+      "amount": null,
+      "summary": "条款仅约定交付延误日额230元，但未明确该日额对应的计算基数或费率口径，且付款条款为交货验收后15天付款，与交付延误违约金触发条件不同；现有事实无法确定应付违约金额。",
+      "recommendation": "请复核并补充交付延误违约金的计算基数或费率、起算与封顶约定，并区分交付延误与逾期付款责任后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-09/full/0",
+    "runId": "4f66fee9-f7ec-4658-834b-3c6e72e7490e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1150,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_RATE"
+      ],
+      "amount": null,
+      "summary": "条款仅约定交付延误日额230元，但未明确该日额对应的计算基数或费率口径，且付款条款为交货验收后15天付款，与交付延误违约金触发条件不同；现有事实无法确定应付违约金额。",
+      "recommendation": "请复核并补充交付延误违约金的计算基数或费率、起算与封顶约定，并区分交付延误与逾期付款责任后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-10/no_acquisition/0",
+    "runId": "88ac34e3-d39a-4b3b-aab4-0bce03b57b88",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1640,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_START"
+      ],
+      "amount": null,
+      "summary": "条款约定晚到超过两日后自第三日起每日支付410元，但具体晚到天数在本地台账中，未提供，无法确定起算与金额。",
+      "recommendation": "补充本地台账中的实际晚到天数，以确定是否触发及应付金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-10/pii/0",
+    "runId": "72e31fb9-f7ec-4736-b759-b229f249be01",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1640,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_START"
+      ],
+      "amount": null,
+      "summary": "条款约定晚到超过两日后自第三日起每日410元，但实际晚到天数仅存于本地台账，未提供，无法确定起算与违约金额。",
+      "recommendation": "补充本地台账中的实际晚到天数，以确定是否触发及计算金额。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/no_acquisition/0",
+    "runId": "a3c23418-ea13-4615-bfb2-d39bd9debe21",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定超过送货时间即按价款1.2%一次性支付，但价款与迟延天数均以本地记录为准，当前未提供具体价款金额，无法核算确定金额。",
+      "recommendation": "请补充本地记录中的合同价款金额，以便按1.2%核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/per_step/0",
+    "runId": "b3232e1a-6784-4f26-b620-acc61c766b49",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按价款1.2%一次性支付违约金，但价款与迟延天数均以本地记录为准，当前未提供可核验的价款基数，无法确定违约金额。",
+      "recommendation": "请补充经确认的合同价款基数及本地记录依据，再按1.2%核算违约金。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/joint/0",
+    "runId": "7df51c3e-5499-4b9e-94fa-58c4eb60bf71",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按价款1.2%一次性支付违约金，但价款与迟延天数均以本地记录为准，当前未提供可核验的价款基数，无法确定违约金额。",
+      "recommendation": "请补充经确认的合同价款基数及本地记录依据，再按1.2%核算一次性违约金。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/no_acquisition/0",
+    "runId": "47413f38-12a6-460b-a86a-7fc8068824a3",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定了日千分之一、累计上限千分之四的延误违约金，但未提供价款基数及延误天数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数与台账延误天数后，再按日千分之一并封顶千分之四计算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/entry/0",
+    "runId": "d3f17247-2d59-42d0-acd3-e88421f51e40",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按价款1.2%一次性支付违约金，但价款与迟延天数均以本地记录为准，未在条款中明确计算基数，无法确定违约金额。",
+      "recommendation": "复核并明确合同价款基数及本地记录依据，确认后再按1.2%计算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/joint/0",
+    "runId": "f249020c-ba7b-49da-8260-f65cba9c8670",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_CAP"
+      ],
+      "amount": null,
+      "summary": "条款约定每延误一天按价款千分之一计，累计上限为千分之四；但未提供价款基数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数后，按千分之一乘延误天数并与千分之四上限比较取低值。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-13/no_acquisition/0",
+    "runId": "8be815b3-c102-450b-b67c-11de3ca1ee5b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "未提供平均成绩、作业完成率或缺勤次数，无法满足ON_TRACK的三项条件，需学习支持。",
+      "recommendation": "补充成绩、作业完成率和缺勤数据后，针对薄弱环节安排辅导与学习计划。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/entry/0",
+    "runId": "dee905a0-5e7e-42b2-a4a6-f8aa0e013fb1",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_CAP"
+      ],
+      "amount": null,
+      "summary": "条款约定每延误一天按价款千分之一计，累计上限为千分之四；但未提供价款基数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数后，按日千分之一计算并以千分之四封顶核算。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/per_step/0",
+    "runId": "b3c526be-c0f9-45de-86e8-fea36808575b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_CAP"
+      ],
+      "amount": null,
+      "summary": "条款约定每日按价款千分之一计违约金，累计上限为价款千分之四；但未提供价款基数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数后，按每日千分之一且累计不超过千分之四核算违约金。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-13/full/0",
+    "runId": "9b3ff0b0-7911-4e86-87dd-79dfbee926e6",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "平均成绩68分、作业完成率84%、缺勤1次，三项均满足支持筛查规则中的达标条件，但按规则应输出ON_TRACK；然而作业完成率与缺勤数据均达标，平均成绩也高于60，故实际无需额外支持。",
+      "recommendation": "保持当前学习节奏，定期关注成绩波动即可。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-15/full/0",
+    "runId": "92196d88-c9be-4288-9098-e60c53e4459b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "成绩均分81，作业完成率62%低于70%阈值，但按筛查规则需综合判定；缺勤1次未超2次。",
+      "recommendation": "作业完成率偏低，建议关注作业提交情况并提供学习支持。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-15/pii/0",
+    "runId": "d648a62f-0d71-4856-8734-d39fbe1dba8e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "成绩均分81，作业完成率62%低于70%，按筛查规则须支持；但输出聚焦最主要问题，作业完成率不足对应支持需求。",
+      "recommendation": "优先安排作业完成支持与跟进，确认是否存在练习量不足或时间管理问题。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-15/placement_full/0",
+    "runId": "cfaad4ca-7064-4390-a9ae-1a8cfb8d7942",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "成绩均分为81，作业完成率62%低于70%，但按明确筛查规则：均分<60或完成率<70或缺勤>2时须支持；完成率62%<70%应触发支持。",
+      "recommendation": "按筛查规则该生需支持：优先提升作业完成率，安排作业跟进与时间管理辅导，并持续观察成绩与出勤。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/entry/0",
+    "runId": "715e6717-3db5-43bc-a155-b9ff6e1e3a1c",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "交付迟延赔付比例约定为将来商定且比例栏空白，触发条件与计算比例均未确定，无法核算违约金额。",
+      "recommendation": "补充明确迟延赔付的触发条件与具体比例后再行核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/per_step/0",
+    "runId": "456cff71-244c-41f9-b974-bc9f04c51cc3",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "交付迟延赔付比例约定为将来商定且比例栏未填写，触发条件与计算标准均不明确，无法核算确定金额。",
+      "recommendation": "补充明确迟延赔付的触发条件、计算比例及基数后再行核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/placement_full/0",
+    "runId": "012287d3-b826-4042-bfe1-6d87d60c9ec9",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "赔付比例约定为将来商定且比例栏未填写，违约金额无法确定。",
+      "recommendation": "补充明确赔付比例及计算基数后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/no_acquisition/0",
+    "runId": "f913f335-97fd-4807-a844-4792fdd4ee9d",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "交付迟延赔付比例约定为将来商定且比例栏空白，触发条件与计算比例均未确定，无法核算违约金额。",
+      "recommendation": "补充明确迟延赔付的触发条件与具体比例后再行核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/full/0",
+    "runId": "60e778ef-033c-452b-bc14-197ad91b443b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "赔付比例约定为将来商定且比例栏未填写，违约金额无法确定。",
+      "recommendation": "补充明确赔付比例及计算基数后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/pii/0",
+    "runId": "070b8d1e-e7c7-4ef8-9cdf-a42969431926",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "赔付比例约定为将来商定且比例栏未填写，触发条件与计算基础均不明确，无法核算确定金额。",
+      "recommendation": "补充明确迟延赔付的触发条件、计算比例与计算基数后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-19/joint/0",
+    "runId": "98f00e56-4a71-42af-bad4-9afba400fefa",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "条款约定验收合格才可结款，但确认主体与确认标准均留待以后协商，付款触发条件不明确。",
+      "recommendation": "补充明确验收确认主体、确认标准及确认时限，避免付款条件无法确定。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-19/no_acquisition/0",
+    "runId": "fd343087-5b42-401c-a395-8f753bb7d076",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "条款约定验收合格才可结款，但确认主体与确认标准均留待以后协商，付款触发条件未明确。",
+      "recommendation": "补充明确验收确认主体、确认标准及确认时限，避免付款条件无法确定。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-19/per_step/0",
+    "runId": "25a89a67-e498-4cc4-a399-e28ec0ddbf8d",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "条款约定验收合格才可结款，但确认主体与确认标准均留待以后协商，付款触发条件未明确。",
+      "recommendation": "补充明确验收确认主体、确认标准及确认时限，避免付款条件无法确定。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-01/entry/1",
+    "runId": "c4326e32-4f17-43c0-8e7b-86a98f69798a",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 2130,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定迟延交货按合同总额1.5%计收违约金，但未提供合同总额，无法核算确定金额。",
+      "recommendation": "补充合同总额后再按1.5%计算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-01/per_step/1",
+    "runId": "5c58011b-af56-42fb-91f0-986e6e662ea9",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 2130,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定迟延交货按合同总额1.5%计收违约金，但未提供合同总额，无法核算确定金额。",
+      "recommendation": "补充合同总额后再按1.5%计算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/full/1",
+    "runId": "83e94d6d-428d-47d5-87ca-820a51cd620d",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 648,
+      "summary": "合同约定迟延交货每日按合同总额0.2%计收违约金，累计不超过0.7%。合同总额54000元、迟延6天，按日计算为54000×0.2%×6=648元，未超过上限54000×0.7%=378元？",
+      "recommendation": "复核违约金上限：按日计算648元已超过累计上限378元，应取上限378元。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/pii/1",
+    "runId": "2ec442be-0af3-46f4-9a22-a43836bbe344",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 648,
+      "summary": "合同约定迟延交货每日按合同总额0.2%计收违约金，累计不超过0.7%。合同总额54000元、迟延6天，按日计算为54000×0.2%×6=648元，未超过上限54000×0.7%=378元？",
+      "recommendation": "复核违约金上限：按0.7%上限计算为378元，低于按日计算的648元，应以上限378元为准。",
+      "evidenceIds": [
+        "payment_terms",
+        "amount",
+        "late_days",
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/per_step/1",
+    "runId": "b714b315-e059-4989-b449-9ecd27e54061",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 54000,
+      "summary": "迟延交货6天，按合同总额0.2%/天计违约金，累计上限0.7%；0.2%×6=1.2%超过上限，故按上限0.7%计，金额54000元。",
+      "recommendation": "按合同总额0.7%的上限计收违约金54000元，并留存迟延交货6天的证据。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-03/entry/1",
+    "runId": "c92f8d66-fd43-4162-9701-18a9e6d93def",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 378,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "amount": 54000,
+      "summary": "迟延交货6天，按合同总额0.2%/天计违约金，累计上限0.7%；0.2%×6=1.2%超过上限，故按上限0.7%计，金额54000元。",
+      "recommendation": "按合同总额0.7%的上限计收违约金54000元，并留存迟延交货6天的证据。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-07/pii/1",
+    "runId": "603d944e-a77a-4ad5-b522-949d2eca92f1",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ATTENDANCE_GAP"
+      ],
+      "amount": null,
+      "summary": "平均分80.33、作业完成率90%均达标，但缺勤4次超过2次阈值，按明确筛查规则需标记为需要支持。",
+      "recommendation": "针对缺勤情况提供学习支持，了解缺勤原因并安排补课或跟进，帮助其保持学习进度。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-08/full/1",
+    "runId": "875d162b-876e-465f-bf58-7692933ae20f",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": true,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "supported-parameters",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "平均分64，作业完成率71%，缺勤2次；按筛查规则未触发平均分低于60、作业完成率低于70%或缺勤超过2次，但作业完成率接近阈值，需关注支持。",
+      "recommendation": "建议加强作业跟进与针对性练习，保持出勤并定期复查成绩变化。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-09/no_acquisition/1",
+    "runId": "8f98ff9d-3453-407c-b9f0-02058b6636fb",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1150,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定交付延误日额230元，但未提供台账延误日数，无法计算确定金额。",
+      "recommendation": "补充台账中的实际延误日数后，按230元/日核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-09/full/1",
+    "runId": "3ae58b87-c06b-4a5b-8b01-6301d2d4db4c",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1150,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_START"
+      ],
+      "amount": null,
+      "summary": "条款仅约定交付延误日额230元，但未明确延误起算点；现有事实中的late_days=5未说明起算依据，无法据此确定违约金额。",
+      "recommendation": "复核台账中延误日数的起算规则，补充约定延误起算点后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-10/no_acquisition/1",
+    "runId": "ad44f6a0-a93c-4334-b8a5-c63e3da6d72e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1640,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_START"
+      ],
+      "amount": null,
+      "summary": "条款约定晚到超过两日后自第三日起每日支付410元，但具体晚到天数在本地台账中，未提供，无法确定起算日与可核算金额。",
+      "recommendation": "请提供本地台账中的实际晚到天数，以确定起算日并核算违约金额。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-10/placement_full/1",
+    "runId": "53415001-5315-4075-9eb6-15be78e9e6be",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1640,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_START"
+      ],
+      "amount": null,
+      "summary": "条款约定晚到超过两日后自第三日起每日410元，但实际晚到天数仅存于本地台账，未提供确定起算与天数，无法核算违约金额。",
+      "recommendation": "请从本地台账补充实际晚到天数及起算日期，再据条款核算每日410元的违约金额。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-10/pii/1",
+    "runId": "c7461c44-6d86-42d2-9bce-8e1978cffe3c",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1640,
+      "analysisNecessary": [
+        "clause",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_START"
+      ],
+      "amount": null,
+      "summary": "条款约定晚到超过两日后自第三日起每日410元，但实际晚到天数仅存于本地台账，未提供可核实的起算天数，无法确定违约金额。",
+      "recommendation": "请从本地台账补充实际晚到天数，以确认是否超过两日及具体起算日，再行核算。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/no_acquisition/1",
+    "runId": "91ac81bf-0e62-46ef-a593-df39f594d6a1",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定超过送货时间即按价款1.2%一次性支付，但价款与迟延天数均以本地记录为准，当前未提供具体价款数值，无法核算确定金额。",
+      "recommendation": "请补充本地记录中的合同价款金额，以便按1.2%核算违约金。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/joint/1",
+    "runId": "11081a8b-0078-4794-9d87-45656974fe9c",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按价款1.2%一次性支付违约金，但价款与迟延天数均以本地记录为准，当前未提供可核验的价款基数，无法确定违约金额。",
+      "recommendation": "请补充经确认的合同价款金额及计算依据，再据以核算1.2%的违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/no_acquisition/1",
+    "runId": "7b8f8e2f-b408-4cdf-a0d5-5e6c70d1c620",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定了日千分之一、累计上限千分之四的延误违约金，但未提供价款基数及延误天数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数与台账延误天数后，按日千分之一计算并以千分之四封顶。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/entry/1",
+    "runId": "94cf7813-7bc4-4b88-ac75-c45c16e89aa7",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定超过送货时间即按价款1.2%一次性支付，但价款与迟延天数均以本地记录为准，当前未提供可核验的价款基数，无法确定违约金额。",
+      "recommendation": "请补充经确认的合同价款基数及送货时间记录，再据以核算1.2%的违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-11/per_step/1",
+    "runId": "3803662d-1b23-4c3d-b220-6578ccfeb486",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 1500,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_BASE"
+      ],
+      "amount": null,
+      "summary": "条款约定按价款1.2%一次性支付，但价款与迟延天数均以本地记录为准，当前未取得该本地记录，无法确定计算基数。",
+      "recommendation": "请调取本地记录中的合同价款，确认基数后再按1.2%核算违约金。",
+      "evidenceIds": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-13/placement_full/1",
+    "runId": "dac38601-e1b9-4b2c-b8f8-0e17b64a65f8",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "平均成绩68分、作业完成率84%、缺勤1次，三项均满足支持筛查规则中的达标条件，但按规则应输出ON_TRACK；然而作业完成率与缺勤数据均达标，平均成绩也高于60，故实际判定为达标。",
+      "recommendation": "保持当前学习节奏，继续巩固练习并定期复盘成绩变化。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/entry/1",
+    "runId": "49bd4e3f-e07c-4611-85bf-206f0e9ca92e",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_CAP"
+      ],
+      "amount": null,
+      "summary": "条款约定每日按价款千分之一计违约金，累计上限为价款千分之四；但未提供价款基数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数后，按每日千分之一且累计不超过千分之四核算违约金。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/per_step/1",
+    "runId": "e4df5034-5e23-4e48-842c-b79ed8361bc1",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_CAP"
+      ],
+      "amount": null,
+      "summary": "条款约定每延误一天按价款千分之一计，累计上限为千分之四；但未提供价款基数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数后，按千分之一乘延误天数计算，并以千分之四封顶。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-12/joint/1",
+    "runId": "09c0caa3-6c9d-464b-a172-e7cbcdc48467",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "PENALTY_APPLIES"
+      ],
+      "acceptableCodeSets": [
+        [
+          "PENALTY_APPLIES"
+        ]
+      ],
+      "expectedAmount": 368,
+      "analysisNecessary": [
+        "clause",
+        "amount",
+        "late_days"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "MISSING_CAP"
+      ],
+      "amount": null,
+      "summary": "条款约定每日按价款千分之一计违约金，累计上限为价款千分之四；但未提供价款基数，无法核算确定金额。",
+      "recommendation": "补充合同价款基数后，按每日千分之一且累计不超过千分之四核算违约金。",
+      "evidenceIds": [
+        "clause",
+        "late_days",
+        "amount"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-13/no_acquisition/1",
+    "runId": "0c342666-97e4-4464-88ca-51e14fdb7b6c",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "ON_TRACK"
+      ],
+      "acceptableCodeSets": [
+        [
+          "ON_TRACK"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "amount": null,
+      "summary": "未提供平均成绩、作业完成率或缺勤次数，无法确认三项达标条件同时满足，因此不能判定为ON_TRACK。",
+      "recommendation": "请补充该学生的平均成绩、作业完成率和缺勤次数，以便按规则判断是否需要学习支持。",
+      "evidenceIds": [
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-15/pii/1",
+    "runId": "b992a530-af19-43e2-9710-f8fbe857f656",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "成绩均分为81，作业完成率62%低于70%，按筛查规则须支持；但作业完成率是唯一触发项，缺勤1次未超限。",
+      "recommendation": "优先安排作业完成支持，如分解作业任务、设定阶段检查点并跟踪提交情况。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-15/placement_full/1",
+    "runId": "d72b947f-ec1a-4e0c-8e26-1865ef69fb62",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "成绩均分为81，作业完成率62%低于70%，但按明确筛查规则：均分<60或完成率<70或缺勤>2时须支持；完成率62%<70%应触发支持。",
+      "recommendation": "建议针对作业完成率偏低安排学习支持，如作业辅导与进度跟踪。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-15/full/1",
+    "runId": "9cd3d5b5-e869-4935-8d4b-ccf4082e84a7",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "SUPPORT_NEEDED"
+      ],
+      "acceptableCodeSets": [
+        [
+          "SUPPORT_NEEDED"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "observations",
+        "scores",
+        "homework",
+        "absences"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-computable-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "ON_TRACK"
+      ],
+      "amount": null,
+      "summary": "成绩均分为81，作业完成率62%低于70%，但按明确筛查规则：均分<60或完成率<70或缺勤>2时须支持；完成率62%<70%应触发支持。",
+      "recommendation": "建议针对作业完成率偏低安排学习支持，如作业辅导与进度跟踪。",
+      "evidenceIds": [
+        "scores",
+        "homework",
+        "absences",
+        "observations"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/joint/1",
+    "runId": "49251464-9992-4b58-bbaa-dfe3e8ead79a",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "交付迟延赔付比例约定为将来商定且比例栏空白，触发条件与计算比例均未确定，无法核算违约金额。",
+      "recommendation": "补充明确迟延赔付的触发条件与具体比例后再行核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/no_acquisition/1",
+    "runId": "23025b10-b31c-4207-a267-dca0835bdddc",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "交付迟延赔付比例约定为将来商定且比例栏空白，触发条件与计算比例均未确定，无法核算违约金额。",
+      "recommendation": "补充明确迟延赔付的触发条件与具体比例后再行核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/placement_full/1",
+    "runId": "6144648c-b727-43f6-93e7-18960e5cd777",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "赔付比例约定为将来商定且比例栏未填写，计算基数与比例均不明确，无法核算确定金额。",
+      "recommendation": "补充明确赔付比例及计算基数后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/full/1",
+    "runId": "d8e8deb8-5b46-48af-96b9-d9c25284f92b",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "赔付比例约定为将来商定且比例栏未填写，计算基数与比例均不明确，无法核算确定金额。",
+      "recommendation": "补充明确赔付比例及计算基数后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/entry/1",
+    "runId": "92954d19-84a4-4afd-8460-fd9df7b0bdad",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "交付迟延赔付比例约定为将来商定且比例栏空白，触发条件与计算比例均未确定，无法核算违约金额。",
+      "recommendation": "补充明确迟延赔付的触发条件与具体比例后再行核算。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-17/pii/1",
+    "runId": "35787b6b-e94a-4688-a4b0-419d1a51aae4",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "MISSING_RATE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "MISSING_RATE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "赔付比例约定为将来商定且比例栏未填写，触发条件与计算标准均不明确，无法核算确定金额。",
+      "recommendation": "补充明确迟延赔付的触发条件与具体比例后再行核算。",
+      "evidenceIds": [
+        "clause",
+        "payment_terms"
+      ],
+      "citations": []
+    }
+  },
+  {
+    "jobId": "progressive-19/per_step/1",
+    "runId": "14153a21-28fc-4101-bf14-e23c480cb91f",
+    "error": null,
+    "expected": {
+      "expectedCodes": [
+        "AMBIGUOUS_ACCEPTANCE"
+      ],
+      "acceptableCodeSets": [
+        [
+          "AMBIGUOUS_ACCEPTANCE"
+        ]
+      ],
+      "expectedAmount": null,
+      "analysisNecessary": [
+        "clause"
+      ],
+      "requiredReference": null,
+      "expectedLocal": false,
+      "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+      "group": "new-semantic-wording",
+      "labelProvenance": "Author-defined and frozen before v3 model runs; independent human validation pending"
+    },
+    "actual": {
+      "issueCodes": [
+        "UNDEFINED_TRIGGER"
+      ],
+      "amount": null,
+      "summary": "条款约定验收合格才可结款，但确认主体与确认标准均留待以后协商，付款触发条件未明确。",
+      "recommendation": "补充明确验收确认主体、确认标准及确认时限，避免付款条件无法确定。",
+      "evidenceIds": [
+        "clause"
+      ],
+      "citations": []
+    }
+  }
+]

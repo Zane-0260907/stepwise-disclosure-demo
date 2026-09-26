@@ -1,0 +1,737 @@
+{
+  "validation-01": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 175,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "supported-parameters",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-02": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 700,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "supported-parameters",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-03": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 1575,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "supported-parameters",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-04": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "supported-parameters",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-05": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "supported-parameters",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-06": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": true,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "supported-parameters",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-07": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 525,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-rule-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-08": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 700,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-rule-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-09": {
+    "expectedCodes": [
+      "PENALTY_APPLIES"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PENALTY_APPLIES"
+      ]
+    ],
+    "expectedAmount": 875,
+    "analysisNecessary": [
+      "clause",
+      "late_days"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-rule-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-10": {
+    "expectedCodes": [
+      "ON_TRACK"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ON_TRACK"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-rule-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-11": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-rule-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-12": {
+    "expectedCodes": [
+      "SUPPORT_NEEDED"
+    ],
+    "acceptableCodeSets": [
+      [
+        "SUPPORT_NEEDED"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "scores",
+      "homework",
+      "absences"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-rule-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-13": {
+    "expectedCodes": [
+      "MISSING_RATE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_RATE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-14": {
+    "expectedCodes": [
+      "MISSING_BASE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_BASE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-15": {
+    "expectedCodes": [
+      "MISSING_START"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_START"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-16": {
+    "expectedCodes": [
+      "AMBIGUOUS_ACCEPTANCE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "AMBIGUOUS_ACCEPTANCE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-17": {
+    "expectedCodes": [
+      "CONFLICTING_TERMS"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONFLICTING_TERMS"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-18": {
+    "expectedCodes": [
+      "MISSING_DEADLINE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_DEADLINE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-19": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-20": {
+    "expectedCodes": [
+      "ATTENDANCE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ATTENDANCE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-21": {
+    "expectedCodes": [
+      "WORKLOAD_HIGH"
+    ],
+    "acceptableCodeSets": [
+      [
+        "WORKLOAD_HIGH"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-22": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-23": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-24": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations"
+    ],
+    "requiredReference": null,
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "unseen-semantic-wording",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-25": {
+    "expectedCodes": [
+      "UNDEFINED_TRIGGER"
+    ],
+    "acceptableCodeSets": [
+      [
+        "UNDEFINED_TRIGGER"
+      ],
+      [
+        "UNDEFINED_OBLIGATION"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C01/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-26": {
+    "expectedCodes": [
+      "MISSING_RATE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_RATE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C02/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-27": {
+    "expectedCodes": [
+      "MISSING_BASE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_BASE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C03/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-28": {
+    "expectedCodes": [
+      "MISSING_CAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_CAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C04/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-29": {
+    "expectedCodes": [
+      "MISSING_START"
+    ],
+    "acceptableCodeSets": [
+      [
+        "MISSING_START"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C05/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-30": {
+    "expectedCodes": [
+      "AMBIGUOUS_ACCEPTANCE"
+    ],
+    "acceptableCodeSets": [
+      [
+        "AMBIGUOUS_ACCEPTANCE"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "clause",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "C06/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-31": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S01/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-32": {
+    "expectedCodes": [
+      "ATTENDANCE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "ATTENDANCE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S02/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-33": {
+    "expectedCodes": [
+      "WORKLOAD_HIGH"
+    ],
+    "acceptableCodeSets": [
+      [
+        "WORKLOAD_HIGH"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S03/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-34": {
+    "expectedCodes": [
+      "CONCEPT_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONCEPT_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S04/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-35": {
+    "expectedCodes": [
+      "CONSISTENCY_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "CONSISTENCY_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S05/2026.1",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  },
+  "validation-36": {
+    "expectedCodes": [
+      "PRACTICE_GAP"
+    ],
+    "acceptableCodeSets": [
+      [
+        "PRACTICE_GAP"
+      ]
+    ],
+    "expectedAmount": null,
+    "analysisNecessary": [
+      "observations",
+      "reference_code",
+      "reference_version"
+    ],
+    "requiredReference": "S06/2026.2",
+    "expectedLocal": false,
+    "labelsBy": "预先人工可核对的规则与语义标签；自由文本人工质量复核尚未完成",
+    "group": "new-reference-wrapper",
+    "labelProvenance": "Author-created before model calls; independent human validation pending"
+  }
+}

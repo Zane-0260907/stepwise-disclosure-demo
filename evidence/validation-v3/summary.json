@@ -1,0 +1,834 @@
+{
+  "protocolId": "prospective-v3-20260926",
+  "sourceCompletedAt": "2026-09-26T14:27:41.867Z",
+  "model": "deepseek-flash",
+  "jobs": 448,
+  "verifiedProviderCalls": 560,
+  "primary": "strict structured-task outcome, not free-text quality",
+  "summary": [
+    {
+      "method": "full",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 53,
+      "success": 0.828125,
+      "successCI": [
+        0.703125,
+        0.9375
+      ],
+      "extraFacts": 8.625,
+      "missingFacts": 0,
+      "forbiddenFacts": 480,
+      "modelCalls": 80,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 57272,
+      "completionTokens": 7653,
+      "latencyP50": 1064.2783499999969,
+      "latencyP95": 1787.7936899999982
+    },
+    {
+      "method": "pii",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 54,
+      "success": 0.84375,
+      "successCI": [
+        0.71875,
+        0.96875
+      ],
+      "extraFacts": 4.125,
+      "missingFacts": 0,
+      "forbiddenFacts": 192,
+      "modelCalls": 80,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 54792,
+      "completionTokens": 7379,
+      "latencyP50": 1120.906649999999,
+      "latencyP95": 1898.4584599999996
+    },
+    {
+      "method": "entry",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 54,
+      "success": 0.84375,
+      "successCI": [
+        0.71875,
+        0.96875
+      ],
+      "extraFacts": 0.28125,
+      "missingFacts": 0.5625,
+      "forbiddenFacts": 0,
+      "modelCalls": 96,
+      "toolCalls": 16,
+      "factRequests": 16,
+      "promptTokens": 70338,
+      "completionTokens": 9141,
+      "latencyP50": 1423.2120000000032,
+      "latencyP95": 2249.98344000001
+    },
+    {
+      "method": "per_step",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 53,
+      "success": 0.828125,
+      "successCI": [
+        0.702734375,
+        0.953125
+      ],
+      "extraFacts": 0.03125,
+      "missingFacts": 0.5625,
+      "forbiddenFacts": 0,
+      "modelCalls": 96,
+      "toolCalls": 16,
+      "factRequests": 16,
+      "promptTokens": 70338,
+      "completionTokens": 9063,
+      "latencyP50": 1357.2661499999922,
+      "latencyP95": 2348.8129649999964
+    },
+    {
+      "method": "joint",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 58,
+      "success": 0.90625,
+      "successCI": [
+        0.8125,
+        0.984375
+      ],
+      "extraFacts": 0.03125,
+      "missingFacts": 0.5625,
+      "forbiddenFacts": 0,
+      "modelCalls": 80,
+      "toolCalls": 16,
+      "factRequests": 16,
+      "promptTokens": 59382,
+      "completionTokens": 7592,
+      "latencyP50": 1319.6079999999965,
+      "latencyP95": 2249.039374999998
+    },
+    {
+      "method": "no_acquisition",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 51,
+      "success": 0.796875,
+      "successCI": [
+        0.65625,
+        0.921875
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0.5625,
+      "forbiddenFacts": 0,
+      "modelCalls": 64,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 42822,
+      "completionTokens": 5655,
+      "latencyP50": 958.4144000000006,
+      "latencyP95": 1962.4567950000026
+    },
+    {
+      "method": "placement_full",
+      "group": "all",
+      "cases": 32,
+      "runs": 64,
+      "passed": 57,
+      "success": 0.890625,
+      "successCI": [
+        0.78125,
+        0.96875
+      ],
+      "extraFacts": 7.1875,
+      "missingFacts": 0,
+      "forbiddenFacts": 400,
+      "modelCalls": 64,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 46862,
+      "completionTokens": 5972,
+      "latencyP50": 1003.2976000000017,
+      "latencyP95": 1999.7981349999993
+    }
+  ],
+  "byGroup": [
+    {
+      "method": "full",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.5,
+        0.9375
+      ],
+      "extraFacts": 5.75,
+      "missingFacts": 0,
+      "forbiddenFacts": 80,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10410,
+      "completionTokens": 1704,
+      "latencyP50": 979.7272000000085,
+      "latencyP95": 1160.223775
+    },
+    {
+      "method": "pii",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.5,
+        1
+      ],
+      "extraFacts": 2.75,
+      "missingFacts": 0,
+      "forbiddenFacts": 32,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9914,
+      "completionTokens": 1633,
+      "latencyP50": 1078.8185500000036,
+      "latencyP95": 1302.039675
+    },
+    {
+      "method": "entry",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.375,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10956,
+      "completionTokens": 1533,
+      "latencyP50": 980.3521500000061,
+      "latencyP95": 1301.2481250000044
+    },
+    {
+      "method": "per_step",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.375,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10956,
+      "completionTokens": 1514,
+      "latencyP50": 960.392399999997,
+      "latencyP95": 1169.229550000001
+    },
+    {
+      "method": "joint",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 0,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "latencyP50": 0.06190000000060536,
+      "latencyP95": 0.18657500000020377
+    },
+    {
+      "method": "no_acquisition",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 0,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "latencyP50": 0.06589999999982865,
+      "latencyP95": 0.10250000000132786
+    },
+    {
+      "method": "placement_full",
+      "group": "supported-parameters",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 0,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "latencyP50": 0.06524999999464853,
+      "latencyP95": 0.10845000000003324
+    },
+    {
+      "method": "full",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 11,
+      "success": 0.6875,
+      "successCI": [
+        0.375,
+        0.9375
+      ],
+      "extraFacts": 5.75,
+      "missingFacts": 0,
+      "forbiddenFacts": 80,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10482,
+      "completionTokens": 1754,
+      "latencyP50": 1056.7608999999975,
+      "latencyP95": 1460.5027249999912
+    },
+    {
+      "method": "pii",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.375,
+        1
+      ],
+      "extraFacts": 2.75,
+      "missingFacts": 0,
+      "forbiddenFacts": 32,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9986,
+      "completionTokens": 1549,
+      "latencyP50": 964.7328500000012,
+      "latencyP95": 1255.4708999999996
+    },
+    {
+      "method": "entry",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.5,
+        1
+      ],
+      "extraFacts": 0.125,
+      "missingFacts": 2.25,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 0,
+      "factRequests": 16,
+      "promptTokens": 25850,
+      "completionTokens": 3479,
+      "latencyP50": 2115.7893499999973,
+      "latencyP95": 2338.1605500000005
+    },
+    {
+      "method": "per_step",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.5,
+        1
+      ],
+      "extraFacts": 0.125,
+      "missingFacts": 2.25,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 0,
+      "factRequests": 16,
+      "promptTokens": 25850,
+      "completionTokens": 3483,
+      "latencyP50": 2082.915900000002,
+      "latencyP95": 2426.9013250000007
+    },
+    {
+      "method": "joint",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 12,
+      "success": 0.75,
+      "successCI": [
+        0.375,
+        1
+      ],
+      "extraFacts": 0.125,
+      "missingFacts": 2.25,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 0,
+      "factRequests": 16,
+      "promptTokens": 25850,
+      "completionTokens": 3476,
+      "latencyP50": 2013.3731000000007,
+      "latencyP95": 2351.806825000001
+    },
+    {
+      "method": "no_acquisition",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 6,
+      "success": 0.375,
+      "successCI": [
+        0.125,
+        0.75
+      ],
+      "extraFacts": 0,
+      "missingFacts": 2.25,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9290,
+      "completionTokens": 1536,
+      "latencyP50": 958.4144000000006,
+      "latencyP95": 1317.7080749999905
+    },
+    {
+      "method": "placement_full",
+      "group": "new-computable-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 11,
+      "success": 0.6875,
+      "successCI": [
+        0.4375,
+        0.9375
+      ],
+      "extraFacts": 5.75,
+      "missingFacts": 0,
+      "forbiddenFacts": 80,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10482,
+      "completionTokens": 1698,
+      "latencyP50": 1110.2995500000015,
+      "latencyP95": 1466.5348750000007
+    },
+    {
+      "method": "full",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 14,
+      "success": 0.875,
+      "successCI": [
+        0.625,
+        1
+      ],
+      "extraFacts": 5.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 80,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10068,
+      "completionTokens": 1423,
+      "latencyP50": 943.2223500000036,
+      "latencyP95": 1406.9262750000016
+    },
+    {
+      "method": "pii",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 14,
+      "success": 0.875,
+      "successCI": [
+        0.625,
+        1
+      ],
+      "extraFacts": 2.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 32,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9572,
+      "completionTokens": 1424,
+      "latencyP50": 1031.8418499999952,
+      "latencyP95": 1273.094724999999
+    },
+    {
+      "method": "entry",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 14,
+      "success": 0.875,
+      "successCI": [
+        0.625,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9116,
+      "completionTokens": 1390,
+      "latencyP50": 984.2040499999966,
+      "latencyP95": 1320.0849750000034
+    },
+    {
+      "method": "per_step",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 13,
+      "success": 0.8125,
+      "successCI": [
+        0.5625,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9116,
+      "completionTokens": 1341,
+      "latencyP50": 990.5710500000023,
+      "latencyP95": 1252.3596499999949
+    },
+    {
+      "method": "joint",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 14,
+      "success": 0.875,
+      "successCI": [
+        0.6875,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9116,
+      "completionTokens": 1381,
+      "latencyP50": 971.7040500000039,
+      "latencyP95": 1256.7955000000002
+    },
+    {
+      "method": "no_acquisition",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 13,
+      "success": 0.8125,
+      "successCI": [
+        0.5625,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 9116,
+      "completionTokens": 1371,
+      "latencyP50": 962.0309500000003,
+      "latencyP95": 1254.9023000000007
+    },
+    {
+      "method": "placement_full",
+      "group": "new-semantic-wording",
+      "cases": 8,
+      "runs": 16,
+      "passed": 14,
+      "success": 0.875,
+      "successCI": [
+        0.625,
+        1
+      ],
+      "extraFacts": 5.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 80,
+      "modelCalls": 16,
+      "toolCalls": 0,
+      "factRequests": 0,
+      "promptTokens": 10068,
+      "completionTokens": 1418,
+      "latencyP50": 917.8676500000001,
+      "latencyP95": 1124.0279749999972
+    },
+    {
+      "method": "full",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 17.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 240,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 26312,
+      "completionTokens": 2772,
+      "latencyP50": 1587.5077000000092,
+      "latencyP95": 1893.8510749999987
+    },
+    {
+      "method": "pii",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 8.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 96,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 25320,
+      "completionTokens": 2773,
+      "latencyP50": 1798.7042000000001,
+      "latencyP95": 2089.932649999995
+    },
+    {
+      "method": "entry",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 1,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 24416,
+      "completionTokens": 2739,
+      "latencyP50": 1836.3932000000095,
+      "latencyP95": 2130.624175000001
+    },
+    {
+      "method": "per_step",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 24416,
+      "completionTokens": 2725,
+      "latencyP50": 1772.09965,
+      "latencyP95": 2186.874824999999
+    },
+    {
+      "method": "joint",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 24416,
+      "completionTokens": 2735,
+      "latencyP50": 1654.4163499999995,
+      "latencyP95": 2118.916300000001
+    },
+    {
+      "method": "no_acquisition",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 0,
+      "missingFacts": 0,
+      "forbiddenFacts": 0,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 24416,
+      "completionTokens": 2748,
+      "latencyP50": 1765.9350499999928,
+      "latencyP95": 2031.3494250000113
+    },
+    {
+      "method": "placement_full",
+      "group": "new-reference-wrapper",
+      "cases": 8,
+      "runs": 16,
+      "passed": 16,
+      "success": 1,
+      "successCI": [
+        1,
+        1
+      ],
+      "extraFacts": 17.5,
+      "missingFacts": 0,
+      "forbiddenFacts": 240,
+      "modelCalls": 32,
+      "toolCalls": 16,
+      "factRequests": 0,
+      "promptTokens": 26312,
+      "completionTokens": 2856,
+      "latencyP50": 1908.0886500000051,
+      "latencyP95": 2084.2086000000018
+    }
+  ],
+  "paired": {
+    "joint_vs_full": {
+      "difference": 0.078125,
+      "descriptiveCaseBootstrap95": [
+        -0.0625,
+        0.21914062499999787
+      ]
+    },
+    "joint_vs_pii": {
+      "difference": 0.0625,
+      "descriptiveCaseBootstrap95": [
+        -0.078125,
+        0.21875
+      ]
+    },
+    "joint_vs_entry": {
+      "difference": 0.0625,
+      "descriptiveCaseBootstrap95": [
+        -0.015625,
+        0.15664062499999787
+      ]
+    },
+    "joint_vs_per_step": {
+      "difference": 0.078125,
+      "descriptiveCaseBootstrap95": [
+        0,
+        0.171875
+      ]
+    },
+    "joint_vs_no_acquisition": {
+      "difference": 0.109375,
+      "descriptiveCaseBootstrap95": [
+        0.015625,
+        0.234375
+      ]
+    },
+    "joint_vs_placement_full": {
+      "difference": 0.015625,
+      "descriptiveCaseBootstrap95": [
+        -0.109375,
+        0.140625
+      ]
+    }
+  },
+  "limits": [
+    "Author-created synthetic inputs in two domains, not an independently collected benchmark.",
+    "Case-level bootstrap is descriptive; templates are designed and not population samples.",
+    "No cross-paper superiority claim; these are in-repository mechanism controls.",
+    "Human quality review pending.",
+    "v2 was used to develop v3; only v3 prospective runs evaluate the new mechanism.",
+    "No semantic privacy or completeness guarantee for model-requested business fields."
+  ]
+}

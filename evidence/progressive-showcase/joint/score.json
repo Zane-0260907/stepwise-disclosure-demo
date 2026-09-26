@@ -1,0 +1,31 @@
+{
+  "runId": "83fd687d-6783-4e0f-ab9a-4064fb359d12",
+  "caseId": "progressive-09",
+  "method": "joint",
+  "group": "new-computable-wording",
+  "family": "contract",
+  "status": "completed",
+  "structuredSuccess": true,
+  "classificationCorrect": true,
+  "amountCorrect": true,
+  "referenceCorrect": true,
+  "receiptIntegrity": true,
+  "extraFacts": 1,
+  "missingFacts": 1,
+  "forbiddenFacts": 0,
+  "recipients": {
+    "cloud-model": {
+      "requests": 2,
+      "extra": 1,
+      "missing": 1
+    }
+  },
+  "modelCalls": 2,
+  "toolCalls": 0,
+  "bytes": 5891,
+  "elapsedMs": 2127.0843,
+  "promptTokens": 1536,
+  "completionTokens": 233,
+  "error": null,
+  "humanTextQuality": "pending"
+}
