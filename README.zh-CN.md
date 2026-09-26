@@ -1,6 +1,11 @@
 <a id="readme-top"></a>
 
 <div align="center">
+  <p>
+    <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="自动检查" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
+    <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
+    <a href="package.json"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white"></a>
+  </p>
   <img src="web/assets/hy-mark-dark.svg" alt="氢云研究演示标识" width="86" height="86">
   <h1>逐步共享判定</h1>
   <p>在智能体运行中，决定每一步在哪里执行，以及当前接收方可以获得哪些事实。</p>
@@ -10,11 +15,6 @@
     <a href="#复核实验">复核结果</a> ·
     <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/issues">报告问题</a> ·
     <a href="README.md">English</a>
-  </p>
-  <p>
-    <a href="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml"><img alt="自动检查" src="https://github.com/Zane-0260907/stepwise-disclosure-demo/actions/workflows/checks.yml/badge.svg"></a>
-    <a href="LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-315c52.svg"></a>
-    <a href="package.json"><img alt="Node.js 24" src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white"></a>
   </p>
 </div>
 
