@@ -46,7 +46,11 @@
 
 ## 本地复核
 
+本材料仅发布在独立开发分支；已有该分支的本地副本可跳过前两行。下载后，复核只需 Node.js 24 和 Python 3.10 或以上版本，不需要密钥或 Python 第三方依赖。
+
 ```sh
+git clone --branch codex/adaptive-views-v9 https://github.com/Zane-0260907/stepwise-disclosure-demo.git
+cd stepwise-disclosure-demo
 python -m zipfile -e evidence/development-v9/dev-v9-strong-02-records.zip .
 node scripts/verify-v9-development.mjs dev-v9-strong-02
 python scripts/score-v9-development.py dev-v9-strong-02

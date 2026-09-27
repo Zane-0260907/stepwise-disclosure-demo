@@ -17,6 +17,8 @@ The span score averages best predicted-span token F1 per gold span; it under-pen
 The paired cell counts tie on 18/24 cases, decrease on five and increase on one. Retail is identical; airline increases from 95 to 106 cells; contract decreases from 174 to 151 with the quality limitations above. `paired-audit.json` retains every pair. Each method has one trajectory per task, with no independent repetitions or human review.
 
 ```sh
+git clone --branch codex/adaptive-views-v9 https://github.com/Zane-0260907/stepwise-disclosure-demo.git
+cd stepwise-disclosure-demo
 python -m zipfile -e evidence/development-v9/dev-v9-strong-02-records.zip .
 node scripts/verify-v9-development.mjs dev-v9-strong-02
 python scripts/score-v9-development.py dev-v9-strong-02
@@ -25,7 +27,7 @@ python scripts/analyze-v9-development.py --check
 
 The separate `dev-v9-canary-01-records.zip` preserves the initial three-case diagnostic, including an ambiguous flight-column adapter and a weaker pre-fusion control. Those defects were corrected **before** the newly named main development run. The archive contains the matching old inputs/code. Never pool this development sequence into a held-out score.
 
-The scorer reads each run's own `frozen/labels.json`. Add `--check` to verify without overwriting the saved scores. `evaluation-snapshot.json` identifies the post-run evaluator snapshot; it is not a prospective registration. All the commands above run offline and make no provider requests. Node.js 24 and Python 3.10 or newer suffice for these checks; no Python packages are needed.
+For an existing checkout of this branch, skip the clone and directory-change lines. The scorer reads each run's own `frozen/labels.json`. Add `--check` to verify without overwriting the saved scores. `evaluation-snapshot.json` identifies the original post-run evaluator snapshot; it is not a prospective registration. The current scorer preserves its Python 3.10 accumulation order on newer Python versions, without changing the saved scores. After downloading the repository, the verification commands run offline and make no provider requests. Node.js 24 and Python 3.10 or newer suffice for these checks; no Python packages are needed.
 
 This release implements the initial three-way feasibility gate. The planned fixed-view, requested-field and external minimization comparisons, original multi-turn task environment, independent quality review and held-out batch remain incomplete. They are not credited as completed research.
 
