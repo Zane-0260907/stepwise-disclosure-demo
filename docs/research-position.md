@@ -1,6 +1,21 @@
 # Research position and evidence boundaries
 
-## Current evidence and correction
+## Current v7 position: disclosure-aware continuation repair
+
+The extension connects recipient-specific monotone disclosure history, executable equivalent input alternatives, complete planning-dependency checks and valid pure-result reuse. It searches only the currently known continuation. The exact finite set-union objective is explicit; generic dynamic programming, local gatekeepers and dependency invalidation are not claimed as new. [Implementation assumptions and pruning argument](v7-design.md).
+
+Two particularly close sources were checked on 2026-09-27:
+
+| Source | Established overlap | What we actually compare or extend |
+| :-- | :-- | :-- |
+| [ATR, September 2026](https://arxiv.org/html/2609.08015v1) | Explicit decision premises and selective revalidation for long-running agents | We cannot claim to invent decision dependencies or selective invalidation. Our bounded question includes monotone per-recipient disclosure unions and equivalent input choices during continuation repair. No end-to-end ATR benchmark was run. |
+| [FreshCtx 0.16.0](https://github.com/Hyperwise-LLC/freshctx) | Framework-independent freshness checks at an action boundary | We run the real hash-pinned library with the same complete dependencies, then supply either our restart or frontier-repair policy. Results match the corresponding native-check variants; no superiority over the check library is claimed. |
+
+V7 measures 288 controlled cases × six methods. Repair saves 12.5% of external operations against full restart. Frontier planning reduces distinct disclosures 2.9% against greedy repair while increasing transmitted fields 54.5%. The controlled change events are not model-generated steps and the HTTP operators are not LLM calls. The modest gain and adverse traffic tradeoff are material limits on the contribution. [All records](../evidence/validation-v7/).
+
+The implementation makes a narrower systems-demo contribution, not a verified first-ever algorithm claim. Automated semantic sufficiency, side-effectful tools, unseen future steps, recipient collusion and production-scale deployments remain open. Presentation quality or repository polish cannot establish novelty.
+
+## Separately retained v6 evidence and correction
 
 The current v6 experiment uses 60 previously unused report pages with a repaired source-table representation: 98/120 correct for single-pass local calculation versus 96/120 with all values. The paired interval spans zero. Conflict review obtains 96/120 at 368 calls, compared with 120 calls for the single-pass route. It is implemented and tested but is not the default. [Current records](../evidence/validation-v6/) · [mechanism](conflict-view.md).
 
@@ -23,7 +38,7 @@ The table describes the published focus, rather than interpreting an unmentioned
 | [PlanTwin](https://arxiv.org/html/2603.18377v2) | A sanitized planning abstraction, bounded capabilities and a local gatekeeper with disclosure budgets. | This is substantial architectural overlap. We position this work as a narrower observable prototype with progressive field acquisition, executable local rules and exact application-request validation, not as the first local gatekeeper or private planning architecture. |
 | [SplitAgent](https://arxiv.org/abs/2603.08221) | Enterprise/cloud collaboration with context-aware sanitization. | Dynamic enterprise/cloud sanitization is prior art. The present claim concerns a reproducible operation-level mechanism and evidence, not first-ever dynamic sanitization. |
 
-An external system baseline has not been run. All seven controls are implemented here and share one task harness. Adapting a UI-observation sanitizer to a contract-field task would need a separately justified evaluation; calling our simple projection “MINIM” would be misleading.
+The earlier studies did not run an external system. V7 now integrates the actual FreshCtx component as described above, but still does not claim a full-system comparison against the works in this table. Adapting a UI-observation sanitizer to a contract-field task needs a separately justified evaluation; calling our simple projection “MINIM” would be misleading.
 
 ## Mechanism that the evidence supports
 

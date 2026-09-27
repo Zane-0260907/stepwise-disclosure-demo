@@ -1,0 +1,893 @@
+{
+  "protocol": "v7-dynamic-disclosure-repair",
+  "executions": 1728,
+  "cases": 288,
+  "receiptCount": 3684,
+  "externalChecks": 576,
+  "methods": {
+    "payload_only": {
+      "executions": 288,
+      "success": 108,
+      "correct": 238,
+      "stale": 180,
+      "unauthorized": 48,
+      "calls": 576,
+      "disclosures": 852,
+      "fields": 966,
+      "reused": 24
+    },
+    "full_restart": {
+      "executions": 288,
+      "success": 288,
+      "correct": 264,
+      "stale": 0,
+      "unauthorized": 0,
+      "calls": 672,
+      "disclosures": 870,
+      "fields": 1884,
+      "reused": 0
+    },
+    "selective_greedy": {
+      "executions": 288,
+      "success": 288,
+      "correct": 264,
+      "stale": 0,
+      "unauthorized": 0,
+      "calls": 588,
+      "disclosures": 834,
+      "fields": 1002,
+      "reused": 180
+    },
+    "selective_frontier": {
+      "executions": 288,
+      "success": 288,
+      "correct": 264,
+      "stale": 0,
+      "unauthorized": 0,
+      "calls": 588,
+      "disclosures": 810,
+      "fields": 1548,
+      "reused": 180
+    },
+    "freshctx_restart": {
+      "executions": 288,
+      "success": 288,
+      "correct": 264,
+      "stale": 0,
+      "unauthorized": 0,
+      "calls": 672,
+      "disclosures": 870,
+      "fields": 1884,
+      "reused": 0
+    },
+    "freshctx_frontier": {
+      "executions": 288,
+      "success": 288,
+      "correct": 264,
+      "stale": 0,
+      "unauthorized": 0,
+      "calls": 588,
+      "disclosures": 810,
+      "fields": 1548,
+      "reused": 180
+    }
+  },
+  "strata": {
+    "none": {
+      "payload_only": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 0
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      }
+    },
+    "unused": {
+      "payload_only": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 0
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 66,
+        "fields": 162,
+        "reused": 0
+      }
+    },
+    "base": {
+      "payload_only": {
+        "executions": 24,
+        "success": 6,
+        "correct": 10,
+        "stale": 18,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 84,
+        "fields": 90,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 84,
+        "fields": 210,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 96,
+        "fields": 126,
+        "reused": 0
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 84,
+        "fields": 210,
+        "reused": 0
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 84,
+        "fields": 210,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 84,
+        "fields": 210,
+        "reused": 0
+      }
+    },
+    "limit": {
+      "payload_only": {
+        "executions": 24,
+        "success": 12,
+        "correct": 16,
+        "stale": 12,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 84,
+        "fields": 90,
+        "reused": 12
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 72,
+        "fields": 210,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 60,
+        "disclosures": 84,
+        "fields": 102,
+        "reused": 18
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 60,
+        "disclosures": 72,
+        "fields": 174,
+        "reused": 18
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 72,
+        "fields": 210,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 60,
+        "disclosures": 72,
+        "fields": 174,
+        "reused": 18
+      }
+    },
+    "capability_lost": {
+      "payload_only": {
+        "executions": 24,
+        "success": 0,
+        "correct": 24,
+        "stale": 24,
+        "unauthorized": 24,
+        "calls": 24,
+        "disclosures": 42,
+        "fields": 42,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 90,
+        "fields": 198,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 48,
+        "disclosures": 66,
+        "fields": 78,
+        "reused": 24
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 48,
+        "disclosures": 66,
+        "fields": 78,
+        "reused": 24
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 90,
+        "fields": 198,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 48,
+        "disclosures": 66,
+        "fields": 78,
+        "reused": 24
+      }
+    },
+    "capability_gained": {
+      "payload_only": {
+        "executions": 24,
+        "success": 0,
+        "correct": 24,
+        "stale": 24,
+        "unauthorized": 0,
+        "calls": 48,
+        "disclosures": 84,
+        "fields": 84,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 24,
+        "disclosures": 60,
+        "fields": 60,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 24,
+        "disclosures": 48,
+        "fields": 48,
+        "reused": 24
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 24,
+        "disclosures": 60,
+        "fields": 60,
+        "reused": 24
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 24,
+        "disclosures": 60,
+        "fields": 60,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 24,
+        "disclosures": 60,
+        "fields": 60,
+        "reused": 24
+      }
+    },
+    "recipient_revoked": {
+      "payload_only": {
+        "executions": 24,
+        "success": 0,
+        "correct": 24,
+        "stale": 24,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 114,
+        "fields": 138,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 24
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 90,
+        "fields": 102,
+        "reused": 24
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 114,
+        "fields": 138,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 90,
+        "fields": 102,
+        "reused": 24
+      }
+    },
+    "recipient_changed": {
+      "payload_only": {
+        "executions": 24,
+        "success": 0,
+        "correct": 24,
+        "stale": 24,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 102,
+        "fields": 210,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 78,
+        "fields": 90,
+        "reused": 24
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 90,
+        "fields": 102,
+        "reused": 24
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 102,
+        "fields": 210,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 54,
+        "disclosures": 90,
+        "fields": 102,
+        "reused": 24
+      }
+    },
+    "all_revoked": {
+      "payload_only": {
+        "executions": 24,
+        "success": 0,
+        "correct": 0,
+        "stale": 24,
+        "unauthorized": 24,
+        "calls": 36,
+        "disclosures": 60,
+        "fields": 60,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 0,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 18,
+        "disclosures": 48,
+        "fields": 48,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 0,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 18,
+        "disclosures": 36,
+        "fields": 36,
+        "reused": 24
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 0,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 18,
+        "disclosures": 48,
+        "fields": 48,
+        "reused": 24
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 0,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 18,
+        "disclosures": 48,
+        "fields": 48,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 0,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 18,
+        "disclosures": 48,
+        "fields": 48,
+        "reused": 24
+      }
+    },
+    "aba": {
+      "payload_only": {
+        "executions": 24,
+        "success": 0,
+        "correct": 24,
+        "stale": 24,
+        "unauthorized": 0,
+        "calls": 0,
+        "disclosures": 0,
+        "fields": 0,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 0,
+        "disclosures": 0,
+        "fields": 0,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 0,
+        "disclosures": 0,
+        "fields": 0,
+        "reused": 24
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 0,
+        "disclosures": 0,
+        "fields": 0,
+        "reused": 24
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 0,
+        "disclosures": 0,
+        "fields": 0,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 0,
+        "disclosures": 0,
+        "fields": 0,
+        "reused": 24
+      }
+    },
+    "new_step": {
+      "payload_only": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 90,
+        "fields": 126,
+        "reused": 0
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 78,
+        "fields": 222,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 90,
+        "fields": 126,
+        "reused": 0
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 78,
+        "fields": 222,
+        "reused": 0
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 78,
+        "fields": 222,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 78,
+        "fields": 222,
+        "reused": 0
+      }
+    },
+    "between_steps": {
+      "payload_only": {
+        "executions": 24,
+        "success": 18,
+        "correct": 20,
+        "stale": 6,
+        "unauthorized": 0,
+        "calls": 72,
+        "disclosures": 96,
+        "fields": 114,
+        "reused": 12
+      },
+      "full_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 90,
+        "disclosures": 90,
+        "fields": 264,
+        "reused": 0
+      },
+      "selective_greedy": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 78,
+        "disclosures": 102,
+        "fields": 126,
+        "reused": 18
+      },
+      "selective_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 78,
+        "disclosures": 90,
+        "fields": 228,
+        "reused": 18
+      },
+      "freshctx_restart": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 90,
+        "disclosures": 90,
+        "fields": 264,
+        "reused": 0
+      },
+      "freshctx_frontier": {
+        "executions": 24,
+        "success": 24,
+        "correct": 24,
+        "stale": 0,
+        "unauthorized": 0,
+        "calls": 78,
+        "disclosures": 90,
+        "fields": 228,
+        "reused": 18
+      }
+    }
+  }
+}

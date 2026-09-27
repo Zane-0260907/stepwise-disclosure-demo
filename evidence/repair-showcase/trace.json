@@ -1,0 +1,1477 @@
+{
+  "protocol": "v7-dynamic-repair-showcase",
+  "id": "725a5ba5-4cfa-40d6-8a41-fa18b54a012f",
+  "source": "live",
+  "caseId": "repair-limit",
+  "family": "repair",
+  "title": {
+    "zh": "按步执行：金额上限更新",
+    "en": "Stepwise execution: Amount limit changes"
+  },
+  "task": {
+    "zh": "核算费用、应用上限并生成结果；执行中检查条件变化对后续步骤的影响。",
+    "en": "Calculate the amount, apply the limit, and inspect how an intervening change affects the remaining steps."
+  },
+  "input": {
+    "base": 13113,
+    "factor": 0.01,
+    "units": 2,
+    "limit": 200,
+    "unused": "local-note-1001",
+    "local": false,
+    "allow": true,
+    "allowA": true,
+    "allowB": true,
+    "endpointA": "service-A",
+    "endpointB": "service-B"
+  },
+  "sourceFile": "repair-input.pdf",
+  "method": "selective_frontier",
+  "condition": "normal",
+  "model": "registered-operators",
+  "createdAt": "2026-09-27T04:07:58.780Z",
+  "status": "completed",
+  "policy": {
+    "version": 1,
+    "allowed": true
+  },
+  "steps": [
+    {
+      "id": "1:quote",
+      "operation": "repair",
+      "title": {
+        "zh": "核算当前金额",
+        "en": "Calculate the current amount"
+      },
+      "reason": {
+        "zh": "比较当前已知后续步骤，按新增披露与执行次数选择方案。",
+        "en": "Compare currently known continuations by additional disclosure, then execution work."
+      },
+      "location": "tool",
+      "status": "completed",
+      "startedAt": "2026-09-27T04:07:58.789Z",
+      "input": {
+        "base": 13113,
+        "factor": 0.01,
+        "units": 2
+      },
+      "output": {
+        "summary": {
+          "zh": "结果：262.26。发送时依赖有效。",
+          "en": "Result: 262.26. Dependencies were current at dispatch."
+        }
+      },
+      "retained": [
+        "limit"
+      ],
+      "receipts": [
+        "80824d54-abd3-48d8-8855-658910f84947"
+      ],
+      "checks": [
+        {
+          "versions": {
+            "base": 1,
+            "factor": 1,
+            "units": 1,
+            "allow": 1,
+            "allowA": 1,
+            "allowB": 1,
+            "endpointA": 1,
+            "endpointB": 1,
+            "limit": 1,
+            "local": 1
+          },
+          "current": true,
+          "feasible": true
+        }
+      ],
+      "recipient": "service-A",
+      "repairPlan": {
+        "path": [
+          "quote:raw",
+          "cap:raw",
+          "record:raw"
+        ],
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "limit": 1,
+          "local": 1
+        },
+        "history": 0,
+        "newDisclosure": 4
+      },
+      "finishedAt": "2026-09-27T04:07:58.792Z"
+    },
+    {
+      "id": "2:cap",
+      "operation": "repair",
+      "title": {
+        "zh": "应用金额上限",
+        "en": "Apply the amount limit"
+      },
+      "reason": {
+        "zh": "比较当前已知后续步骤，按新增披露与执行次数选择方案。",
+        "en": "Compare currently known continuations by additional disclosure, then execution work."
+      },
+      "location": "tool",
+      "status": "completed",
+      "startedAt": "2026-09-27T04:07:58.792Z",
+      "input": {
+        "base": 13113,
+        "factor": 0.01,
+        "units": 2,
+        "limit": 200
+      },
+      "output": {
+        "summary": {
+          "zh": "此时仅完成规划，尚未发送；接下来核对条件变化。",
+          "en": "Prepared, not yet sent. The changed conditions are checked next."
+        }
+      },
+      "retained": [],
+      "receipts": [],
+      "checks": [],
+      "recipient": "service-A",
+      "repairPlan": {
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "history": 3,
+        "newDisclosure": 1
+      },
+      "finishedAt": "2026-09-27T04:07:58.792Z",
+      "invalidated": true
+    },
+    {
+      "id": "change-4",
+      "operation": "repair",
+      "title": {
+        "zh": "执行条件发生变化",
+        "en": "Execution conditions changed"
+      },
+      "reason": {
+        "zh": "变化由本轮受控事件触发，不是模型生成的结论。",
+        "en": "A controlled event changes state; this is not a model-generated conclusion."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-27T04:07:58.792Z",
+      "input": {
+        "limit": "200 → 411"
+      },
+      "output": {
+        "summary": {
+          "zh": "重新核对规划所依据的条件。",
+          "en": "Revalidate the conditions used to choose the plan."
+        }
+      },
+      "retained": [
+        "base",
+        "factor",
+        "units"
+      ],
+      "receipts": [],
+      "checks": []
+    },
+    {
+      "id": "repair-5",
+      "operation": "repair",
+      "title": {
+        "zh": "旧请求失效，修复后续步骤",
+        "en": "Invalidate the old request and repair"
+      },
+      "reason": {
+        "zh": "保留仍有效的计算；已经发送过的信息仍计入记录。",
+        "en": "Retain valid calculations; previous disclosures remain in the record."
+      },
+      "location": "local",
+      "status": "completed",
+      "startedAt": "2026-09-27T04:07:58.792Z",
+      "input": {},
+      "output": {
+        "summary": {
+          "zh": "重新计算：无已完成步骤；保留：核算当前金额。",
+          "en": "Recompute: no completed steps; retain: quote."
+        }
+      },
+      "retained": [
+        "base",
+        "factor",
+        "units",
+        "limit"
+      ],
+      "receipts": [],
+      "checks": []
+    },
+    {
+      "id": "3:cap",
+      "operation": "repair",
+      "title": {
+        "zh": "应用金额上限",
+        "en": "Apply the amount limit"
+      },
+      "reason": {
+        "zh": "比较当前已知后续步骤，按新增披露与执行次数选择方案。",
+        "en": "Compare currently known continuations by additional disclosure, then execution work."
+      },
+      "location": "tool",
+      "status": "completed",
+      "startedAt": "2026-09-27T04:07:58.792Z",
+      "input": {
+        "base": 13113,
+        "factor": 0.01,
+        "units": 2,
+        "limit": 411
+      },
+      "output": {
+        "summary": {
+          "zh": "结果：262.26。发送时依赖有效。",
+          "en": "Result: 262.26. Dependencies were current at dispatch."
+        }
+      },
+      "retained": [],
+      "receipts": [
+        "ae8f5559-01b0-4078-a2f0-d69e5cb6feec"
+      ],
+      "checks": [
+        {
+          "versions": {
+            "base": 1,
+            "factor": 1,
+            "units": 1,
+            "limit": 2,
+            "allow": 1,
+            "allowA": 1,
+            "allowB": 1,
+            "endpointA": 1,
+            "endpointB": 1,
+            "local": 1
+          },
+          "current": true,
+          "feasible": true
+        }
+      ],
+      "recipient": "service-A",
+      "repairPlan": {
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "history": 3,
+        "newDisclosure": 1
+      },
+      "finishedAt": "2026-09-27T04:07:58.795Z"
+    },
+    {
+      "id": "4:record",
+      "operation": "repair",
+      "title": {
+        "zh": "生成新增汇总记录",
+        "en": "Build the newly requested summary"
+      },
+      "reason": {
+        "zh": "比较当前已知后续步骤，按新增披露与执行次数选择方案。",
+        "en": "Compare currently known continuations by additional disclosure, then execution work."
+      },
+      "location": "tool",
+      "status": "completed",
+      "startedAt": "2026-09-27T04:07:58.795Z",
+      "input": {
+        "base": 13113,
+        "factor": 0.01,
+        "units": 2,
+        "limit": 411
+      },
+      "output": {
+        "summary": {
+          "zh": "结果：262.26。发送时依赖有效。",
+          "en": "Result: 262.26. Dependencies were current at dispatch."
+        }
+      },
+      "retained": [],
+      "receipts": [
+        "3adc85ab-0d7a-400e-948a-bd6154ee00a1"
+      ],
+      "checks": [
+        {
+          "versions": {
+            "base": 1,
+            "factor": 1,
+            "units": 1,
+            "limit": 2,
+            "allow": 1,
+            "allowA": 1,
+            "allowB": 1,
+            "endpointA": 1,
+            "endpointB": 1,
+            "local": 1
+          },
+          "current": true,
+          "feasible": true
+        }
+      ],
+      "recipient": "service-A",
+      "repairPlan": {
+        "path": [
+          "record:raw"
+        ],
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "history": 4,
+        "newDisclosure": 0
+      },
+      "finishedAt": "2026-09-27T04:07:58.813Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "started",
+      "at": "2026-09-27T04:07:58.789Z",
+      "coreEvent": {
+        "seq": 0,
+        "type": "started",
+        "at": "2026-09-27T04:07:58.789Z",
+        "tasks": [
+          "quote",
+          "cap",
+          "record"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "type": "planned",
+      "at": "2026-09-27T04:07:58.789Z",
+      "coreEvent": {
+        "seq": 1,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.789Z",
+        "operation": "quote",
+        "choice": "quote:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "limit": 1,
+          "local": 1
+        },
+        "path": [
+          "quote:raw",
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": 4,
+        "historySize": 0
+      }
+    },
+    {
+      "index": 3,
+      "type": "executed",
+      "at": "2026-09-27T04:07:58.792Z",
+      "coreEvent": {
+        "seq": 2,
+        "type": "executed",
+        "at": "2026-09-27T04:07:58.792Z",
+        "operation": "quote",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2
+        },
+        "output": 262.26,
+        "historySize": 3,
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "limit": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1
+        },
+        "validAtDispatch": true,
+        "feasibleAtDispatch": true
+      }
+    },
+    {
+      "index": 4,
+      "type": "planned",
+      "at": "2026-09-27T04:07:58.792Z",
+      "coreEvent": {
+        "seq": 3,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.792Z",
+        "operation": "cap",
+        "choice": "cap:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 200
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": 1,
+        "historySize": 3
+      }
+    },
+    {
+      "index": 5,
+      "type": "state.changed",
+      "at": "2026-09-27T04:07:58.792Z",
+      "coreEvent": {
+        "seq": 4,
+        "type": "state.changed",
+        "at": "2026-09-27T04:07:58.792Z",
+        "changes": [
+          {
+            "key": "limit",
+            "before": {
+              "value": 200,
+              "version": 1
+            },
+            "after": {
+              "value": 411,
+              "version": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "type": "repair.required",
+      "at": "2026-09-27T04:07:58.792Z",
+      "coreEvent": {
+        "seq": 5,
+        "type": "repair.required",
+        "at": "2026-09-27T04:07:58.792Z",
+        "invalidated": [],
+        "reused": [
+          "quote"
+        ],
+        "reason": "DECISION_DEPENDENCY_CHANGED",
+        "historySize": 3
+      }
+    },
+    {
+      "index": 7,
+      "type": "planned",
+      "at": "2026-09-27T04:07:58.792Z",
+      "coreEvent": {
+        "seq": 6,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.792Z",
+        "operation": "cap",
+        "choice": "cap:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": 1,
+        "historySize": 3
+      }
+    },
+    {
+      "index": 8,
+      "type": "executed",
+      "at": "2026-09-27T04:07:58.795Z",
+      "coreEvent": {
+        "seq": 7,
+        "type": "executed",
+        "at": "2026-09-27T04:07:58.795Z",
+        "operation": "cap",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "output": 262.26,
+        "historySize": 4,
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2
+        },
+        "validAtDispatch": true,
+        "feasibleAtDispatch": true
+      }
+    },
+    {
+      "index": 9,
+      "type": "planned",
+      "at": "2026-09-27T04:07:58.795Z",
+      "coreEvent": {
+        "seq": 8,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.795Z",
+        "operation": "record",
+        "choice": "record:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "path": [
+          "record:raw"
+        ],
+        "newDisclosure": 0,
+        "historySize": 4
+      }
+    },
+    {
+      "index": 10,
+      "type": "executed",
+      "at": "2026-09-27T04:07:58.813Z",
+      "coreEvent": {
+        "seq": 9,
+        "type": "executed",
+        "at": "2026-09-27T04:07:58.813Z",
+        "operation": "record",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "output": 262.26,
+        "historySize": 4,
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2
+        },
+        "validAtDispatch": true,
+        "feasibleAtDispatch": true
+      }
+    },
+    {
+      "index": 11,
+      "type": "finished",
+      "at": "2026-09-27T04:07:58.813Z",
+      "coreEvent": {
+        "seq": 10,
+        "type": "finished",
+        "at": "2026-09-27T04:07:58.813Z",
+        "status": "completed",
+        "metrics": {
+          "calls": 3,
+          "localExecutions": 0,
+          "repaired": 1,
+          "reused": 1,
+          "newDisclosures": 4,
+          "transmittedFields": 11,
+          "staleDispatches": 0,
+          "unauthorizedDispatches": 0,
+          "planningMs": 0.3941999995149672,
+          "peakLabels": 3,
+          "elapsedMs": 24.46169999986887
+        }
+      }
+    },
+    {
+      "index": 12,
+      "type": "run.finalized",
+      "at": "2026-09-27T04:07:58.813Z"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "80824d54-abd3-48d8-8855-658910f84947",
+      "runId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+      "stepId": "1:quote",
+      "recipient": "service-A",
+      "receivedAt": "2026-09-27T04:07:58.790Z",
+      "rawBody": "{\"runId\":\"ea5b321f-5b60-4249-b533-7df0182bba62\",\"stepId\":\"1:quote\",\"operation\":\"quote\",\"kind\":\"raw\",\"recipient\":\"service-A\",\"view\":{\"base\":13113,\"factor\":0.01,\"units\":2}}",
+      "bytes": 170,
+      "sha256": "aa4e678c0341ebffa947a54608a81b99036279988ed4f3eee7a8a8fed79975c4",
+      "decisionIndex": 0,
+      "tokens": [
+        "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+        "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+        "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]"
+      ],
+      "validAtDispatch": true
+    },
+    {
+      "id": "ae8f5559-01b0-4078-a2f0-d69e5cb6feec",
+      "runId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+      "stepId": "3:cap",
+      "recipient": "service-A",
+      "receivedAt": "2026-09-27T04:07:58.793Z",
+      "rawBody": "{\"runId\":\"ea5b321f-5b60-4249-b533-7df0182bba62\",\"stepId\":\"3:cap\",\"operation\":\"cap\",\"kind\":\"raw\",\"recipient\":\"service-A\",\"view\":{\"base\":13113,\"factor\":0.01,\"units\":2,\"limit\":411}}",
+      "bytes": 178,
+      "sha256": "11d72e411c4cdcef113b40c52a33631c97f288e4ecb4dd669fec656de5c6bf42",
+      "decisionIndex": 2,
+      "tokens": [
+        "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+        "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+        "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]",
+        "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]"
+      ],
+      "validAtDispatch": true
+    },
+    {
+      "id": "3adc85ab-0d7a-400e-948a-bd6154ee00a1",
+      "runId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+      "stepId": "4:record",
+      "recipient": "service-A",
+      "receivedAt": "2026-09-27T04:07:58.812Z",
+      "rawBody": "{\"runId\":\"ea5b321f-5b60-4249-b533-7df0182bba62\",\"stepId\":\"4:record\",\"operation\":\"record\",\"kind\":\"raw\",\"recipient\":\"service-A\",\"view\":{\"base\":13113,\"factor\":0.01,\"units\":2,\"limit\":411}}",
+      "bytes": 184,
+      "sha256": "3c10b9bfe4a192b0728f18f09c778702f975d4c60fb9d22c6d4e0bc784b901d1",
+      "decisionIndex": 3,
+      "tokens": [
+        "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+        "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+        "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]",
+        "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]"
+      ],
+      "validAtDispatch": true
+    }
+  ],
+  "result": {
+    "summary": {
+      "zh": "本轮新增披露 4 项，外部算子执行 3 次，修复 1 次。",
+      "en": "This run added 4 disclosure units, executed 3 remote operations, and repaired 1 times."
+    },
+    "recommendation": {
+      "zh": "右侧可逐步核对请求、变化条件及保留的计算。合成算子用于检查机制，不代表真实模型能力。",
+      "en": "Inspect requests, changed conditions and retained calculations. Synthetic operators test the mechanism, not language-model quality."
+    },
+    "outputs": {
+      "quote": 262.26,
+      "cap": 262.26,
+      "record": 262.26
+    }
+  },
+  "report": "{\n  \"case\": \"repair-limit\",\n  \"status\": \"completed\",\n  \"outputs\": {\n    \"quote\": 262.26,\n    \"cap\": 262.26,\n    \"record\": 262.26\n  },\n  \"metrics\": {\n    \"calls\": 3,\n    \"localExecutions\": 0,\n    \"repaired\": 1,\n    \"reused\": 1,\n    \"newDisclosures\": 4,\n    \"transmittedFields\": 11,\n    \"staleDispatches\": 0,\n    \"unauthorizedDispatches\": 0,\n    \"planningMs\": 0.3941999995149672,\n    \"peakLabels\": 3,\n    \"elapsedMs\": 24.46169999986887\n  },\n  \"protocol\": \"Controlled registered operators; actual loopback HTTP; no model calls\"\n}",
+  "error": null,
+  "metrics": {
+    "controlMs": [],
+    "modelCalls": 0,
+    "toolCalls": 3,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalBytes": 532,
+    "elapsedMs": 24.46169999986887
+  },
+  "executionMode": "controlled",
+  "uiVisible": true,
+  "startedAt": "2026-09-27T04:07:58.788Z",
+  "executionRecordId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+  "repairMetrics": {
+    "calls": 3,
+    "localExecutions": 0,
+    "repaired": 1,
+    "reused": 1,
+    "newDisclosures": 4,
+    "transmittedFields": 11,
+    "staleDispatches": 0,
+    "unauthorizedDispatches": 0,
+    "planningMs": 0.3941999995149672,
+    "peakLabels": 3,
+    "elapsedMs": 24.46169999986887
+  },
+  "repairEvidence": {
+    "id": "ea5b321f-5b60-4249-b533-7df0182bba62",
+    "caseId": "dev-repair-01-limit",
+    "method": "selective_frontier",
+    "mutation": "limit",
+    "initial": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "events": [
+      {
+        "seq": 0,
+        "type": "started",
+        "at": "2026-09-27T04:07:58.789Z",
+        "tasks": [
+          "quote",
+          "cap",
+          "record"
+        ]
+      },
+      {
+        "seq": 1,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.789Z",
+        "operation": "quote",
+        "choice": "quote:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "limit": 1,
+          "local": 1
+        },
+        "path": [
+          "quote:raw",
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": 4,
+        "historySize": 0
+      },
+      {
+        "seq": 2,
+        "type": "executed",
+        "at": "2026-09-27T04:07:58.792Z",
+        "operation": "quote",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2
+        },
+        "output": 262.26,
+        "historySize": 3,
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "limit": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1
+        },
+        "validAtDispatch": true,
+        "feasibleAtDispatch": true
+      },
+      {
+        "seq": 3,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.792Z",
+        "operation": "cap",
+        "choice": "cap:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 200
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": 1,
+        "historySize": 3
+      },
+      {
+        "seq": 4,
+        "type": "state.changed",
+        "at": "2026-09-27T04:07:58.792Z",
+        "changes": [
+          {
+            "key": "limit",
+            "before": {
+              "value": 200,
+              "version": 1
+            },
+            "after": {
+              "value": 411,
+              "version": 2
+            }
+          }
+        ]
+      },
+      {
+        "seq": 5,
+        "type": "repair.required",
+        "at": "2026-09-27T04:07:58.792Z",
+        "invalidated": [],
+        "reused": [
+          "quote"
+        ],
+        "reason": "DECISION_DEPENDENCY_CHANGED",
+        "historySize": 3
+      },
+      {
+        "seq": 6,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.792Z",
+        "operation": "cap",
+        "choice": "cap:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": 1,
+        "historySize": 3
+      },
+      {
+        "seq": 7,
+        "type": "executed",
+        "at": "2026-09-27T04:07:58.795Z",
+        "operation": "cap",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "output": 262.26,
+        "historySize": 4,
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2
+        },
+        "validAtDispatch": true,
+        "feasibleAtDispatch": true
+      },
+      {
+        "seq": 8,
+        "type": "planned",
+        "at": "2026-09-27T04:07:58.795Z",
+        "operation": "record",
+        "choice": "record:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "path": [
+          "record:raw"
+        ],
+        "newDisclosure": 0,
+        "historySize": 4
+      },
+      {
+        "seq": 9,
+        "type": "executed",
+        "at": "2026-09-27T04:07:58.813Z",
+        "operation": "record",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "output": 262.26,
+        "historySize": 4,
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2
+        },
+        "validAtDispatch": true,
+        "feasibleAtDispatch": true
+      },
+      {
+        "seq": 10,
+        "type": "finished",
+        "at": "2026-09-27T04:07:58.813Z",
+        "status": "completed",
+        "metrics": {
+          "calls": 3,
+          "localExecutions": 0,
+          "repaired": 1,
+          "reused": 1,
+          "newDisclosures": 4,
+          "transmittedFields": 11,
+          "staleDispatches": 0,
+          "unauthorizedDispatches": 0,
+          "planningMs": 0.3941999995149672,
+          "peakLabels": 3,
+          "elapsedMs": 24.46169999986887
+        }
+      }
+    ],
+    "receipts": [
+      {
+        "id": "80824d54-abd3-48d8-8855-658910f84947",
+        "runId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+        "stepId": "1:quote",
+        "recipient": "service-A",
+        "receivedAt": "2026-09-27T04:07:58.790Z",
+        "rawBody": "{\"runId\":\"ea5b321f-5b60-4249-b533-7df0182bba62\",\"stepId\":\"1:quote\",\"operation\":\"quote\",\"kind\":\"raw\",\"recipient\":\"service-A\",\"view\":{\"base\":13113,\"factor\":0.01,\"units\":2}}",
+        "bytes": 170,
+        "sha256": "aa4e678c0341ebffa947a54608a81b99036279988ed4f3eee7a8a8fed79975c4",
+        "decisionIndex": 0,
+        "tokens": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]"
+        ],
+        "validAtDispatch": true
+      },
+      {
+        "id": "ae8f5559-01b0-4078-a2f0-d69e5cb6feec",
+        "runId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+        "stepId": "3:cap",
+        "recipient": "service-A",
+        "receivedAt": "2026-09-27T04:07:58.793Z",
+        "rawBody": "{\"runId\":\"ea5b321f-5b60-4249-b533-7df0182bba62\",\"stepId\":\"3:cap\",\"operation\":\"cap\",\"kind\":\"raw\",\"recipient\":\"service-A\",\"view\":{\"base\":13113,\"factor\":0.01,\"units\":2,\"limit\":411}}",
+        "bytes": 178,
+        "sha256": "11d72e411c4cdcef113b40c52a33631c97f288e4ecb4dd669fec656de5c6bf42",
+        "decisionIndex": 2,
+        "tokens": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]",
+          "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]"
+        ],
+        "validAtDispatch": true
+      },
+      {
+        "id": "3adc85ab-0d7a-400e-948a-bd6154ee00a1",
+        "runId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+        "stepId": "4:record",
+        "recipient": "service-A",
+        "receivedAt": "2026-09-27T04:07:58.812Z",
+        "rawBody": "{\"runId\":\"ea5b321f-5b60-4249-b533-7df0182bba62\",\"stepId\":\"4:record\",\"operation\":\"record\",\"kind\":\"raw\",\"recipient\":\"service-A\",\"view\":{\"base\":13113,\"factor\":0.01,\"units\":2,\"limit\":411}}",
+        "bytes": 184,
+        "sha256": "3c10b9bfe4a192b0728f18f09c778702f975d4c60fb9d22c6d4e0bc784b901d1",
+        "decisionIndex": 3,
+        "tokens": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]",
+          "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]"
+        ],
+        "validAtDispatch": true
+      }
+    ],
+    "decisions": [
+      {
+        "operation": "quote",
+        "choice": "quote:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2
+        },
+        "lineage": {
+          "base": {
+            "base": 1
+          },
+          "factor": {
+            "factor": 1
+          },
+          "units": {
+            "units": 1
+          }
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "limit": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1
+        },
+        "path": [
+          "quote:raw",
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"limit\",\"94b57ea550b4150864ba7fa52618c0930ab72c71c8f4f6c2260c210b4a71b351\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]"
+        ],
+        "history": []
+      },
+      {
+        "operation": "cap",
+        "choice": "cap:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 200
+        },
+        "lineage": {
+          "base": {
+            "base": 1
+          },
+          "factor": {
+            "factor": 1
+          },
+          "units": {
+            "units": 1
+          },
+          "limit": {
+            "limit": 1
+          }
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 1,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 1
+        },
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": [
+          "[\"service-A\",\"limit\",\"94b57ea550b4150864ba7fa52618c0930ab72c71c8f4f6c2260c210b4a71b351\"]"
+        ],
+        "history": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]"
+        ]
+      },
+      {
+        "operation": "cap",
+        "choice": "cap:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "lineage": {
+          "base": {
+            "base": 1
+          },
+          "factor": {
+            "factor": 1
+          },
+          "units": {
+            "units": 1
+          },
+          "limit": {
+            "limit": 2
+          }
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2
+        },
+        "path": [
+          "cap:raw",
+          "record:raw"
+        ],
+        "newDisclosure": [
+          "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]"
+        ],
+        "history": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]"
+        ]
+      },
+      {
+        "operation": "record",
+        "choice": "record:raw",
+        "recipient": "service-A",
+        "view": {
+          "base": 13113,
+          "factor": 0.01,
+          "units": 2,
+          "limit": 411
+        },
+        "lineage": {
+          "base": {
+            "base": 1
+          },
+          "factor": {
+            "factor": 1
+          },
+          "units": {
+            "units": 1
+          },
+          "limit": {
+            "limit": 2
+          }
+        },
+        "versions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2,
+          "allow": 1,
+          "allowA": 1,
+          "allowB": 1,
+          "endpointA": 1,
+          "endpointB": 1,
+          "local": 1
+        },
+        "valueVersions": {
+          "base": 1,
+          "factor": 1,
+          "units": 1,
+          "limit": 2
+        },
+        "path": [
+          "record:raw"
+        ],
+        "newDisclosure": [],
+        "history": [
+          "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+          "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+          "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]",
+          "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]"
+        ]
+      }
+    ],
+    "changes": [
+      {
+        "key": "limit",
+        "before": {
+          "value": 200,
+          "version": 1
+        },
+        "after": {
+          "value": 411,
+          "version": 2
+        }
+      }
+    ],
+    "status": "completed",
+    "metrics": {
+      "calls": 3,
+      "localExecutions": 0,
+      "repaired": 1,
+      "reused": 1,
+      "newDisclosures": 4,
+      "transmittedFields": 11,
+      "staleDispatches": 0,
+      "unauthorizedDispatches": 0,
+      "planningMs": 0.3941999995149672,
+      "peakLabels": 3,
+      "elapsedMs": 24.46169999986887
+    },
+    "startedAt": "2026-09-27T04:07:58.789Z",
+    "final": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 411,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "finalVersions": {
+      "base": 1,
+      "factor": 1,
+      "units": 1,
+      "limit": 2,
+      "unused": 1,
+      "local": 1,
+      "allow": 1,
+      "allowA": 1,
+      "allowB": 1,
+      "endpointA": 1,
+      "endpointB": 1
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "outputs": {
+      "quote": 262.26,
+      "cap": 262.26,
+      "record": 262.26
+    },
+    "disclosures": [
+      "[\"service-A\",\"base\",\"be9985c4624d8ca1533bd53cee30adceb243429c51ccbe5b0090dbad684dd604\"]",
+      "[\"service-A\",\"factor\",\"8429445c8e3dfb3933ee36c28787449241cde7ce57a8fec774feab778d0285e5\"]",
+      "[\"service-A\",\"limit\",\"3275a94ac9ec99aed37e2d02df35e482323c2068628d3907a48cbbc8ecd02128\"]",
+      "[\"service-A\",\"units\",\"667ca8485b7680f220047dfb5d5875e08155cbcc0bbb2271c83bb3d738eab76a\"]"
+    ],
+    "finishedAt": "2026-09-27T04:07:58.813Z",
+    "evaluation": {
+      "feasible": true,
+      "expected": {
+        "quote": 262.26,
+        "cap": 262.26,
+        "record": 262.26
+      },
+      "correct": true,
+      "success": true
+    }
+  },
+  "finishedAt": "2026-09-27T04:07:58.813Z"
+}

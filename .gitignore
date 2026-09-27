@@ -7,3 +7,5 @@ release/
 __pycache__/
 .env
 *.log
+
+.venv-v7/

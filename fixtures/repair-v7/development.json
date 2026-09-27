@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "dev-repair-00-none",
+    "seed": 1000,
+    "mutation": "none",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-unused",
+    "seed": 1000,
+    "mutation": "unused",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-base",
+    "seed": 1000,
+    "mutation": "base",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-limit",
+    "seed": 1000,
+    "mutation": "limit",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-capability_lost",
+    "seed": 1000,
+    "mutation": "capability_lost",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-capability_gained",
+    "seed": 1000,
+    "mutation": "capability_gained",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-recipient_revoked",
+    "seed": 1000,
+    "mutation": "recipient_revoked",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-recipient_changed",
+    "seed": 1000,
+    "mutation": "recipient_changed",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-all_revoked",
+    "seed": 1000,
+    "mutation": "all_revoked",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-aba",
+    "seed": 1000,
+    "mutation": "aba",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-new_step",
+    "seed": 1000,
+    "mutation": "new_step",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-00-between_steps",
+    "seed": 1000,
+    "mutation": "between_steps",
+    "values": {
+      "base": 13100,
+      "factor": 0.07,
+      "units": 12,
+      "limit": 100,
+      "unused": "local-note-1000",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-none",
+    "seed": 1001,
+    "mutation": "none",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-unused",
+    "seed": 1001,
+    "mutation": "unused",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-base",
+    "seed": 1001,
+    "mutation": "base",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-limit",
+    "seed": 1001,
+    "mutation": "limit",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-capability_lost",
+    "seed": 1001,
+    "mutation": "capability_lost",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-capability_gained",
+    "seed": 1001,
+    "mutation": "capability_gained",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-recipient_revoked",
+    "seed": 1001,
+    "mutation": "recipient_revoked",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-recipient_changed",
+    "seed": 1001,
+    "mutation": "recipient_changed",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-all_revoked",
+    "seed": 1001,
+    "mutation": "all_revoked",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-aba",
+    "seed": 1001,
+    "mutation": "aba",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-new_step",
+    "seed": 1001,
+    "mutation": "new_step",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-01-between_steps",
+    "seed": 1001,
+    "mutation": "between_steps",
+    "values": {
+      "base": 13113,
+      "factor": 0.01,
+      "units": 2,
+      "limit": 200,
+      "unused": "local-note-1001",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "cap",
+      "record"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-none",
+    "seed": 1002,
+    "mutation": "none",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-unused",
+    "seed": 1002,
+    "mutation": "unused",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-base",
+    "seed": 1002,
+    "mutation": "base",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-limit",
+    "seed": 1002,
+    "mutation": "limit",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-capability_lost",
+    "seed": 1002,
+    "mutation": "capability_lost",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-capability_gained",
+    "seed": 1002,
+    "mutation": "capability_gained",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-recipient_revoked",
+    "seed": 1002,
+    "mutation": "recipient_revoked",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-recipient_changed",
+    "seed": 1002,
+    "mutation": "recipient_changed",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-all_revoked",
+    "seed": 1002,
+    "mutation": "all_revoked",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-aba",
+    "seed": 1002,
+    "mutation": "aba",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-new_step",
+    "seed": 1002,
+    "mutation": "new_step",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-02-between_steps",
+    "seed": 1002,
+    "mutation": "between_steps",
+    "values": {
+      "base": 13126,
+      "factor": 0.02,
+      "units": 3,
+      "limit": 300,
+      "unused": "local-note-1002",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "cap",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-none",
+    "seed": 1003,
+    "mutation": "none",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-unused",
+    "seed": 1003,
+    "mutation": "unused",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-base",
+    "seed": 1003,
+    "mutation": "base",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-limit",
+    "seed": 1003,
+    "mutation": "limit",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-capability_lost",
+    "seed": 1003,
+    "mutation": "capability_lost",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-capability_gained",
+    "seed": 1003,
+    "mutation": "capability_gained",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-recipient_revoked",
+    "seed": 1003,
+    "mutation": "recipient_revoked",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-recipient_changed",
+    "seed": 1003,
+    "mutation": "recipient_changed",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-all_revoked",
+    "seed": 1003,
+    "mutation": "all_revoked",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-aba",
+    "seed": 1003,
+    "mutation": "aba",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": true,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-new_step",
+    "seed": 1003,
+    "mutation": "new_step",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  },
+  {
+    "id": "dev-repair-03-between_steps",
+    "seed": 1003,
+    "mutation": "between_steps",
+    "values": {
+      "base": 13139,
+      "factor": 0.03,
+      "units": 4,
+      "limit": 400,
+      "unused": "local-note-1003",
+      "local": false,
+      "allow": true,
+      "allowA": true,
+      "allowB": true,
+      "endpointA": "service-A",
+      "endpointB": "service-B"
+    },
+    "tasks": [
+      "quote",
+      "record",
+      "flag"
+    ],
+    "source": "Author-created finite-operation workflow; not a language-model benchmark",
+    "split": "development"
+  }
+]

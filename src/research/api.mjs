@@ -1,3 +1,4 @@
+import {repairCases,repairScenarios,REPAIR_NAMES,REPAIR_LABELS,executeRepairShowcase} from './repair-showcase.mjs';
 import { mkdir, readFile, writeFile, readdir } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { createTransport } from './transport.mjs';
@@ -20,8 +21,8 @@ const progressiveRoot=new URL('../../evidence/progressive-showcase/',import.meta
 const financialRoot=new URL('../../evidence/financial-showcase/',import.meta.url);
 const correctedRoot=new URL('../../evidence/corrected-showcase/',import.meta.url);
 const featuredDirectory=entry=>entry.bundle==='corrected'?new URL(`${entry.method}/`,correctedRoot):entry.bundle==='financial'?new URL(`${entry.method}/`,financialRoot):entry.bundle==='progressive'?new URL(`${entry.method}/`,progressiveRoot):new URL(`${entry.method}/`,featuredRoot);
-const getCase=async id=>(await correctedCases()).find(c=>c.id===id)||(await financialCases()).find(c=>c.id===id)||(await showcaseCases()).find(c=>c.id===id)||getFrozenCase(id);
-const loadCases=async()=>[...await loadFrozenCases(),...await showcaseCases(),...await financialCases(),...await correctedCases()];
+const getCase=async id=>repairCases().find(c=>c.id===id)||(await correctedCases()).find(c=>c.id===id)||(await financialCases()).find(c=>c.id===id)||(await showcaseCases()).find(c=>c.id===id)||getFrozenCase(id);
+const loadCases=async()=>[...repairCases(),...await loadFrozenCases(),...await showcaseCases(),...await financialCases(),...await correctedCases()];
 const readCaseDocument=async id=>(await correctedCases()).some(c=>c.id===id)?readCorrectedCase(id):id.startsWith('finqa-')?readFinancialCase(id):id.startsWith('progressive-')?readShowcaseDocument(id):readFrozenDocument(id);
 const runs=new Map(),clients=new Map(),frames=new Map(),pending=new Map(),decisions=new Map();
 const json=(res,status,data)=>{res.writeHead(status,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify(data));};
@@ -82,6 +83,7 @@ function launch(run,options){
  run.status='running';run.startedAt=new Date().toISOString();notify(run,{type:'run.started'});
  const task=async()=>{
   try{
+   const repair=repairCases().find(c=>c.id===run.caseId);if(repair){await executeRepairShowcase(run,repair,{notify});return;}
    const parse={id:`step-${run.steps.length+1}`,operation:'parse_document',title:{zh:'读取并核对合成 PDF',en:'Read and verify synthetic PDF'},reason:{zh:'本地提取文档字段并核对文件摘要。',en:'Extract local fields and verify the file digest.'},location:'local',status:'running',startedAt:new Date().toISOString(),input:{caseId:run.caseId},retained:[],receipts:[],output:null,checks:[]};
    run.steps.push(parse);addEvent(run,'step.started',{stepId:parse.id},notify);
    const item=await readCaseDocument(run.caseId);
@@ -116,7 +118,7 @@ export async function researchApi(req,res,pathname){
       let presentationTranslations={};try{presentationTranslations=JSON.parse(await readFile(new URL('translations.json',featuredRoot),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
       try{const extra=JSON.parse(await readFile(new URL('translations.json',progressiveRoot),'utf8'));presentationTranslations.runs={...presentationTranslations.runs,...extra.runs};presentationTranslations.values={...presentationTranslations.values,...extra.values};}catch(e){if(e.code!=='ENOENT')throw e;}
       let sampleRunId=featuredRuns.find(entry=>entry.method==='joint')?.id||null;try{sampleRunId ||=JSON.parse(await readFile(bundled,'utf8')).id;}catch{}
-      return json(res,200,{protocol:'research-v1',offlineAvailable:true,deepseekAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',liveAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',sampleRunId,featuredRuns:featuredRuns.map(({id,method,model,createdAt,label,caseId,bundle})=>({id,method,model,createdAt,label,caseId,bundle})),presentationTranslations,methods:{...METHOD_NAMES,full_once:{zh:'全部业务数值 · 单次规划',en:'All business values · one plan'},local_once:{zh:'完整表结构 · 本地计算',en:'Complete schema · local calculation'},blind_review:{zh:'多方案复核 · 不补数值',en:'Multi-plan review · no values'},conflict_review:{zh:'按分歧补充 · 实验方法',en:'Conflict-guided view · experimental'},allowed_eager:{zh:'获准业务字段全量',en:'All allowed business fields'},numeric_prefetch:{zh:'预取业务数值',en:'Prefetch numeric facts'},eager_allowed:{zh:'发送全部表格数值',en:'Send all table values'},requested_cells:{zh:'按需获取单元格',en:'Request selected cells'},local_program:{zh:'结构规划 · 本地计算',en:'Schema plan · local calculation'}},labels:LABELS,cases:(await loadCases()).filter(c=>c.split==='evaluation'||c.requiresLive).map(publicCase),defaultCase:'contract-21',scenarios:[{id:'corrected',caseId:(await correctedCases())[0].id,condition:'normal',requiresLive:true,title:{zh:'公开表格 · 结构与数值分离',en:'Public table · structure versus values'}},{id:'financial',caseId:(await financialCases())[0].id,condition:'normal',requiresLive:true,title:{zh:'公开表格 · 本地计算',en:'Public table · local calculation'}},{id:'facts',caseId:'progressive-09',condition:'normal',requiresLive:true,title:{zh:'补充必要事实 · DeepSeek',en:'Request missing facts · DeepSeek'}},{id:'local',caseId:'contract-01',condition:'normal',title:{zh:'标准条款 · 本地完成',en:'Standard clause · local'}},{id:'dynamic',caseId:'contract-21',condition:'normal',title:{zh:'引用条款 · 动态查询',en:'Cited clause · dynamic lookup'}},{id:'revoked',caseId:'contract-21',condition:'guided_revoke',title:{zh:'发送前人工撤权',en:'Revoke before sending'}}]});
+      return json(res,200,{protocol:'research-v1',offlineAvailable:true,deepseekAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',liveAvailable:process.env.DEMO_DEEPSEEK_AVAILABLE==='true',sampleRunId,featuredRuns:featuredRuns.map(({id,method,model,createdAt,label,caseId,bundle})=>({id,method,model,createdAt,label,caseId,bundle})),presentationTranslations,methods:{...METHOD_NAMES,...REPAIR_NAMES,full_once:{zh:'全部业务数值 · 单次规划',en:'All business values · one plan'},local_once:{zh:'完整表结构 · 本地计算',en:'Complete schema · local calculation'},blind_review:{zh:'多方案复核 · 不补数值',en:'Multi-plan review · no values'},conflict_review:{zh:'按分歧补充 · 实验方法',en:'Conflict-guided view · experimental'},allowed_eager:{zh:'获准业务字段全量',en:'All allowed business fields'},numeric_prefetch:{zh:'预取业务数值',en:'Prefetch numeric facts'},eager_allowed:{zh:'发送全部表格数值',en:'Send all table values'},requested_cells:{zh:'按需获取单元格',en:'Request selected cells'},local_program:{zh:'结构规划 · 本地计算',en:'Schema plan · local calculation'}},labels:{...LABELS,...REPAIR_LABELS},cases:(await loadCases()).filter(c=>c.split==='evaluation'||c.requiresLive).map(publicCase),defaultCase:'contract-21',scenarios:[...repairScenarios,{id:'corrected',caseId:(await correctedCases())[0].id,condition:'normal',requiresLive:true,title:{zh:'公开表格 · 结构与数值分离',en:'Public table · structure versus values'}},{id:'financial',caseId:(await financialCases())[0].id,condition:'normal',requiresLive:true,title:{zh:'公开表格 · 本地计算',en:'Public table · local calculation'}},{id:'facts',caseId:'progressive-09',condition:'normal',requiresLive:true,title:{zh:'补充必要事实 · DeepSeek',en:'Request missing facts · DeepSeek'}},{id:'local',caseId:'contract-01',condition:'normal',title:{zh:'标准条款 · 本地完成',en:'Standard clause · local'}},{id:'dynamic',caseId:'contract-21',condition:'normal',title:{zh:'引用条款 · 动态查询',en:'Cited clause · dynamic lookup'}},{id:'revoked',caseId:'contract-21',condition:'guided_revoke',title:{zh:'发送前人工撤权',en:'Revoke before sending'}}]});
     }
     if(req.method==='GET'&&route==='/history'){
       const visible=new Map([...runs.values()].filter(r=>r.source==='live'&&r.uiVisible&&!r.caseId.startsWith('dev-')).map(r=>[r.id,r]));
@@ -127,13 +129,15 @@ export async function researchApi(req,res,pathname){
     }
     if(req.method==='POST'&&route==='/runs'){
       const options=await input(req);
-      if(![...METHODS,...FINANCIAL_METHODS,...ADAPTIVE_METHODS,'allowed_eager','numeric_prefetch'].includes(options.method||'joint')||!['normal','revoke_after_plan','guided_revoke'].includes(options.condition||'normal'))return json(res,400,{error:'Invalid method or condition'});
+      if(![...METHODS,...FINANCIAL_METHODS,...ADAPTIVE_METHODS,...Object.keys(REPAIR_NAMES),'allowed_eager','numeric_prefetch'].includes(options.method||'joint')||!['normal','revoke_after_plan','guided_revoke'].includes(options.condition||'normal'))return json(res,400,{error:'Invalid method or condition'});
       const mode=options.mode||'offline';if(!['offline','deepseek'].includes(mode))return json(res,400,{error:'Invalid execution mode'});
       if(mode==='deepseek'&&process.env.DEMO_DEEPSEEK_AVAILABLE!=='true')return json(res,409,{error:'DeepSeek API key is not configured'});
       const overrides=overridesOf(options.overrides);
       const item=await getCase(options.caseId||'contract-21');
       if(item.requiresLive&&mode!=='deepseek')return json(res,409,{error:'This scenario requires a live model. Use its saved DeepSeek replay without a key.'});
       const selectedMethod=options.method||'joint';
+      if(item.family==='repair'&&(!Object.hasOwn(REPAIR_NAMES,selectedMethod)||mode!=='offline'))return json(res,400,{error:'Use a registered repair method in local controlled mode'});
+      if(item.family!=='repair'&&Object.hasOwn(REPAIR_NAMES,selectedMethod))return json(res,400,{error:'Repair method requires a repair scenario'});
       if(item.family==='finance'&&!(item.correctedTable?ADAPTIVE_METHODS:FINANCIAL_METHODS).includes(selectedMethod))return json(res,400,{error:'Select a financial-table method'});
       if(item.family!=='finance'&&[...FINANCIAL_METHODS,...ADAPTIVE_METHODS].includes(selectedMethod))return json(res,400,{error:'Financial method requires a table task'});
       const run=createRun(item,{...options,method:METHODS.includes(selectedMethod)?selectedMethod:'joint',model:mode==='offline'?OFFLINE_MODEL:'deepseek-flash'});run.method=selectedMethod;run.status='queued';run.executionMode=mode;run.uiVisible=options.captureFrames!==false;runs.set(run.id,run);
@@ -160,7 +164,7 @@ export async function researchApi(req,res,pathname){
     }
     const documentMatch=/^\/documents\/([a-z0-9-]+)\.pdf$/.exec(route);
     if(req.method==='GET'&&documentMatch){
-      const item=await getCase(documentMatch[1]);const data=await readFile(new URL(`../../fixtures/${item.correctedTable?'corrected-showcase':item.family==='finance'?'financial-showcase':item.requiresLive?'showcase':'research'}/documents/${item.source}`,import.meta.url));
+      const item=await getCase(documentMatch[1]);const data=await readFile(new URL(`../../fixtures/${item.family==='repair'?'repair-showcase':item.correctedTable?'corrected-showcase':item.family==='finance'?'financial-showcase':item.requiresLive?'showcase':'research'}/documents/${item.source}`,import.meta.url));
       res.writeHead(200,{'content-type':'application/pdf','content-length':data.length,'cache-control':'no-store'});res.end(data);return true;
     }
     const match=/^\/runs\/([a-f0-9-]{36})(?:\/(stream|report|evidence|source|revoke|start|decision))?$/.exec(route);

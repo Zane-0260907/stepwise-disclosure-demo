@@ -37,9 +37,9 @@
 An agent can discover a new step only after reading local material or receiving a tool result. That step may need a different executor and a different set of facts. This prototype makes both decisions at each registered step: use a local rule when it can complete the operation; otherwise construct a view for the actual external recipient, check the final request before transmission, and record what the recipient received.
 
 <p align="center">
-  <img src="evidence/corrected-showcase/ui/corrected.en.png" alt="English interface showing a preserved DeepSeek run, its step timeline, and inspectable result" width="920">
+  <img src="evidence/repair-showcase/repair.en.png" alt="English interface showing a fresh controlled HTTP run, invalidated request and repaired continuation" width="920">
 </p>
-<p align="center"><em>Recorded DeepSeek run in the English interface. The right pane can also show the selected step's recipient view and receiver record.</em></p>
+<p align="center"><em>Fresh controlled HTTP execution in the English interface. Select a step to inspect the changed dependency, recipient view and receiver record.</em></p>
 
 This is an independent research demo with synthetic contracts, study records and a restricted public FinQA table subset, not the commercial client. Its offline executor uses finite rules; the saved DeepSeek runs are real provider calls presented as replay. The interface labels those modes separately. The new table route lets a model propose a bounded calculation over a schema, then reads the numerical dependencies locally.
 
@@ -56,6 +56,12 @@ This is an independent research demo with synthetic contracts, study records and
 Node.js runs the step planner, receiver and web interface; PDF.js reads the synthetic PDFs. Playwright verifies the interface, while Python/Matplotlib draws figures from saved experiment records. The current live-model adapter and prospective studies use DeepSeek. The original Qwen-Plus batch remains archived unchanged.
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
+
+## Current contribution: repair after execution conditions change
+
+The original goal remains deciding **where each step runs and what its recipient receives**. V7 adds a bounded continuation planner that retains recipient-specific disclosure history, checks both source and planning dependencies, and reuses valid pure results after a change. It compares only registered equivalent input alternatives for currently known steps. Neither generic dynamic programming nor dependency invalidation is claimed as new.
+
+**Start here:** choose the limit-change case, run **Frontier repair**, inspect the invalidated request and retained result, then repeat with **Full restart**. Four new cases run fresh operations through a separate HTTP process without a key. They are controlled experiments, not model calls. [Detailed walkthrough and reproduction](docs/reproduction-v7.md).
 
 ## Getting started
 
@@ -81,7 +87,7 @@ For a new live DeepSeek call, set `DEEPSEEK_API_KEY` in your local environment a
 | DeepSeek live run | Your own | Makes new provider calls and records the resulting steps |
 | Batch verification | None | Recomputes scores from the published archives |
 
-Start with **Request missing facts** in the recorded-run list. The timeline advances automatically. Click any step to inspect its actual recipient and input; **Follow current step** resumes following. **Files** and **Preview** show the source or report. After completion, download the report or raw trace. Slower playback is shown separately from measured execution time.
+Start with the **limit-change repair case** for a new HTTP execution, or **Request missing facts** in the recorded-run list for a saved model trace. The timeline advances automatically. Click any step to inspect its actual recipient and input; **Follow current step** resumes following. **Files** and **Preview** show the source or report. After completion, download the report or raw trace. Slower playback is shown separately from measured execution time.
 
 ### Configure live calls locally
 
@@ -123,7 +129,33 @@ Click a step in the middle pane to inspect its selected recipient, facts sent, f
 
 ## Reproduce the experiment
 
-**Current v6 evidence: 600 tasks · 1,210 real DeepSeek requests · 60 public pages from 57 company-year reports.** The protocol was frozen before test calls. Every failure remains in the denominator.
+### V7: dynamic repair, with an actual external check component
+
+**288 controlled cases · 6 methods · 1,728 executions · 3,684 HTTP receipts.** FreshCtx 0.16.0 supplies 576 real action-boundary checks; our wrapper supplies the recovery policy.
+
+| Method | Contract-compliant / 288 | Distinct disclosures | HTTP executions | Fields transmitted |
+|:--|--:|--:|--:|--:|
+| Payload-only ablation | 108 | 852 | 576 | 966 |
+| Complete restart | 288 | 870 | 672 | 1,884 |
+| Greedy repair | 288 | 834 | 588 | 1,002 |
+| Frontier repair | 288 | 810 | 588 | 1,548 |
+| FreshCtx + restart | 288 | 870 | 672 | 1,884 |
+| FreshCtx + frontier repair | 288 | 810 | 588 | 1,548 |
+
+**288 compliant = 264 completed + 24 correctly blocked.** Repair reduces remote work 12.5% versus restart. Frontier selection reduces distinct disclosures 2.9% versus greedy, but increases transmitted fields 54.5%. These are controlled parameter variants, not independent real-world tasks; disclosure counts are not a semantic privacy guarantee.
+
+<p align="center"><img src="evidence/validation-v7/tradeoffs.en.svg" alt="Measured repair, disclosure and traffic tradeoffs; panel f is a separate model study" width="1000"></p>
+
+```sh
+python -m zipfile -e evidence/validation-v7/reproduction-records.zip .
+npm run verify:v7
+```
+
+No key or FreshCtx installation is needed to verify saved records. To run new experiments, follow the [complete v7 guide](docs/reproduction-v7.md) for a hash-pinned FreshCtx environment, commands, expected totals, per-case records, methods and troubleshooting.
+
+### V6: separately preserved real DeepSeek utility study
+
+**Separate v6 evidence: 600 tasks · 1,210 real DeepSeek requests · 60 public pages from 57 company-year reports.** The protocol was frozen before test calls. Every failure remains in the denominator.
 
 | Method | Correct / planned | Business values sent per task | Calls |
 |:--|--:|--:|--:|
@@ -192,12 +224,12 @@ npm run verify:v5
 
 ## Evidence and limitations
 
-The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v6 numerical evidence and separately retained synthetic controls. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
+The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v7 repair experiment and the separately retained v6 model study. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
 
 The [progressive showcase](evidence/progressive-showcase/) is one additional real run, excluded from batch totals. It preserves the model's request for a needed late-day count **and an unnecessary contract amount**, followed by the CNY 1,150 result. The [earlier reference-lookup pair](evidence/research/deepseek-live-20260926/) is also retained separately. Neither is a substitute for batch evaluation.
 
 - Success is checked against author-defined structured labels, not expert assessment of free-text advice. A 24-output blinded author-review packet is prepared; **human ratings are pending**.
-- The methods are implemented here as mechanism controls. No external-system baseline has been run. [Research positioning and closest work](docs/research-position.md) states the overlap with MINIM, ToolMinimize, PlanTwin and prior minimization work. Local abstraction, active acquisition and calculation pushdown are not claimed as first inventions.
+- V7 runs the actual FreshCtx 0.16.0 check component with matched dependencies and our documented recovery wrappers. No end-to-end comparison against other complete agent systems has been run. [Research positioning and closest work](docs/research-position.md) states the overlap with MINIM, ToolMinimize, PlanTwin and prior minimization work. Local abstraction, active acquisition and calculation pushdown are not claimed as first inventions.
 - The trusted local controller binds the used source values, recipient, current policy and exact application request. The separate local receiver and adapter record actual bytes; they are not cloud-provider certification.
 - Field counts do not detect inferred sensitive information. Allowlisted facts can still be unnecessary. Arbitrary network bypasses and a compromised local controller are outside the model.
 - Revocation blocks a future dispatch; it cannot retract a previous disclosure. Playback delays are never counted as model execution time.
@@ -211,7 +243,8 @@ The [progressive showcase](evidence/progressive-showcase/) is one additional rea
 | [`src/research/`](src/research/) | Planner, views, policy checks, receiver, model adapter and evaluator |
 | [`web/`](web/) | Bilingual research interface, separate from the commercial product |
 | [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld labels |
-| [`evidence/validation-v6/`](evidence/validation-v6/) | Current frozen protocols, complete records, failures and figures |
+| [`evidence/validation-v7/`](evidence/validation-v7/) | Current repair protocol, all records, event strata and bilingual figures |
+| [`evidence/validation-v6/`](evidence/validation-v6/) | Separately preserved real model calls and utility evaluation |
 | [`fixtures/finqa-v6/`](fixtures/finqa-v6/) | Public subset, separate labels, pinned provenance and original license |
 | [`paper/zh-CN/`](paper/zh-CN/) | Latest Chinese manuscript and native Word formula source |
 | [`evidence/research/`](evidence/research/) | Unchanged original study and earlier live-call records |

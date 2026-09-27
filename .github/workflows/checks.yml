@@ -54,3 +54,14 @@ jobs:
           node scripts/verify-v5.mjs
           node scripts/verify-v6.mjs
           node scripts/verify-corrected-showcase.mjs
+
+      - name: Verify all frozen dynamic-repair records
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath evidence/validation-v7/reproduction-records.zip -DestinationPath . -Force
+          npm run verify:v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --require-hashes -r requirements-v7.txt
+      - run: npm run test:external-v7

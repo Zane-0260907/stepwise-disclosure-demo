@@ -2,6 +2,23 @@
 
 This map separates implemented behavior, measured outcomes and open research questions. Numbers describe this release, not an acceptance probability.
 
+## Current v7 claims
+
+| Claim | Evidence | Limit |
+| :-- | :-- | :-- |
+| The continuation objective is solved exactly under the registered contract | Dominance argument in `v7-design.md`; exhaustive-product comparison on 250 seeded small instances | Equivalent outputs and representation-independent suffix feasibility required; exponential worst case; 4,096-label cap |
+| Changes outside transmitted fields can invalidate an execution choice | Capability/authorization/endpoint and transitive-value dependency cases; monotone version tests | Complete tracked registry reads and a trusted controller assumed; no distributed atomicity |
+| Repair avoids some repeat execution | 588 versus 672 remote operations; 84/288 cases each save one, 204 save none | Controlled arithmetic workloads, not production agent latency |
+| Continuation planning lowers the measured disclosure union | 810 versus 834 units against matched greedy repair | Only −2.9%; transmitted fields rise 54.5%; not semantic privacy |
+| Complete methods respect the controlled contract | 264 correct completions plus 24 required blocks per method | 288 compliance is not 288 completed tasks; not general agent quality |
+| A real external checker is integrated fairly | Pinned FreshCtx 0.16.0; 576 preserved action-boundary audits, matched full dependencies | Our wrapper defines recovery; no superiority or full-system benchmark claim |
+| The UI shows actual mechanism events | Bilingual browser tests, four fresh HTTP scenarios and matching saved trace | Controlled events are labeled; older genuine model-originated examples remain separate |
+| The entire controlled batch is reproducible | 1,728 raw records; independent arithmetic/version/receipt verification; Windows/Ubuntu CI | Deterministic parameter combinations, not independent real-world samples |
+
+[Current protocol and records](../evidence/validation-v7/) · [Detailed reproduction](reproduction-v7.md).
+
+## Retained model-path claims and earlier controls
+
 | Claim | Evidence | What is not established |
 |:--|:--|:--|
 | Supported operations can complete locally | Original local-rule tests; UI input-change test; shared routing in all v4 controls | General local language understanding |

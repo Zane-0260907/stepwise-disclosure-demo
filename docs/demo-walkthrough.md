@@ -1,5 +1,7 @@
 # Inspect the progressive-disclosure demonstration
 
+**Current v7 entry:** first follow the [dynamic-repair walkthrough](reproduction-v7.md#2-watch-a-fresh-inspectable-execution) to run a new local HTTP experiment, inspect an invalidated request and compare selective repair with full restart. The following preserved model examples remain separate and demonstrate actual model-originated requests.
+
 Run `npm ci` and `npm start`, open localhost:4793 and select **EN**. No cloud credential is needed for the saved runs. The research interface is independent of the commercial client.
 
 1. Select **DeepSeek replay · Request missing facts**. The middle pane advances automatically through the preserved events. This is explicitly a recording of a real provider call, not a new call or a simulated model.

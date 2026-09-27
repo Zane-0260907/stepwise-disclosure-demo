@@ -1,0 +1,24 @@
+{
+  "runId": "725a5ba5-4cfa-40d6-8a41-fa18b54a012f",
+  "executionRecordId": "ea5b321f-5b60-4249-b533-7df0182bba62",
+  "receipts": 3,
+  "repair": {
+    "calls": 3,
+    "localExecutions": 0,
+    "repaired": 1,
+    "reused": 1,
+    "newDisclosures": 4,
+    "transmittedFields": 11,
+    "staleDispatches": 0,
+    "unauthorizedDispatches": 0,
+    "planningMs": 0.3941999995149672,
+    "peakLabels": 3,
+    "elapsedMs": 24.46169999986887
+  },
+  "errors": [],
+  "overflow": false,
+  "languages": [
+    "zh",
+    "en"
+  ]
+}

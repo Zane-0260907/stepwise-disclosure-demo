@@ -1,0 +1,64 @@
+{
+  "id": "v7-dynamic-disclosure-repair",
+  "frozenAt": "2026-09-27T03:14:02.786Z",
+  "methods": [
+    "payload_only",
+    "full_restart",
+    "selective_greedy",
+    "selective_frontier",
+    "freshctx_restart",
+    "freshctx_frontier"
+  ],
+  "eventTypes": [
+    "none",
+    "unused",
+    "base",
+    "limit",
+    "capability_lost",
+    "capability_gained",
+    "recipient_revoked",
+    "recipient_changed",
+    "all_revoked",
+    "aba",
+    "new_step",
+    "between_steps"
+  ],
+  "cases": 288,
+  "executions": 1728,
+  "design": "4 registered operation orders x 6 numeric parameterizations x 12 event types x 6 methods. Four structural templates, not 1728 independent real-world tasks.",
+  "development": "48 author-created development cells; not included in final totals.",
+  "source": "Synthetic finite-operator system experiment. Real loopback HTTP requests; no new LLM calls.",
+  "methodOrder": "rotated by case index",
+  "primaryMetrics": [
+    "contract-consistent completion or required block",
+    "stale dispatches",
+    "unauthorized dispatches",
+    "distinct recipient/field/version disclosures",
+    "remote operation executions"
+  ],
+  "privacyMetric": "Operational count, not semantic privacy loss. Derived aggregates count. History is monotone; repeats still contribute bandwidth but not a second identical disclosure token.",
+  "guarantees": "Complete registered dependencies and trusted synchronous local dispatch required. No global transactions, arbitrary tool safety, semantic necessity inference, or optimum over unknown future steps.",
+  "externalBaseline": {
+    "name": "FreshCtx",
+    "version": "0.16.0",
+    "wheelSha256": "695e9b37580807f0138ed017003251a619c26e99aa07c3e50cee8cf013150017",
+    "source": "https://github.com/Hyperwise-LLC/freshctx",
+    "configuration": "Full decision dependencies; block policy. Restart or selective repair is implemented by our wrapper. No claim that FreshCtx prescribes a full restart."
+  },
+  "timing": "End-to-end measured elapsed includes bridge overhead for FreshCtx. No cross-language speedup claim. Primary cost is actual HTTP executions.",
+  "hashes": {
+    "src/research/disclosure-frontier.mjs": "42f579ca24e498d476bca51c7572641d27878bbecc7eee0b4c9762fc39543d7b",
+    "src/research/repair-workloads.mjs": "55a1c4a994bea6b883c06e1dd4da2020cd680d2dd3b95b25c6f660914102c5fb",
+    "src/research/repair-execution.mjs": "742c9832145a891fa6e47d7bbcbf2b3b46959bd3ce891006a8c5009984ea5ab3",
+    "src/research/repair-receiver.mjs": "7c67a4c2724ae6377e5514ea017731e282759fc0c8205b506552c72ba97b827a",
+    "src/research/freshctx-bridge.mjs": "4723d9f0350b58556c44dcc7790ec247644ddf217707ec1151b4bf014077d031",
+    "scripts/freshctx-boundary.py": "e5ed3c49369b07057e9aa21bdadb3affaf335f99a3df39e08773cabcdf1a91da",
+    "scripts/run-v7.mjs": "80d476a930ba29b60977dbad563be01448b897b185c2e34a5b32a95d2549a7db",
+    "scripts/verify-v7.mjs": "afc16d57d39945a07947b7cfd9d2e6d4923c9208b4a663def9c5207e213650f4",
+    "requirements-v7.txt": "694e3f0e71d017d83dc3ccf1c7b9e950246eb28bf99994b479d69017be07ae1b",
+    "test/disclosure-frontier.test.mjs": "b8777e8ff428110976c97e428efb924584841f296b02b6fddbbbf75caee172ab",
+    "test/repair-execution.test.mjs": "3d5668d37ccecf09066210b829ceb5bf9c6aa4da1fe2a58bc2912d5360fa73bb",
+    "fixtures/repair-v7/cases.json": "85d66d6ccca116dd37d77f29d041896aefae667a8e77830807c763ce88b61bcd",
+    "fixtures/repair-v7/development.json": "772a42b04c27b2161080f0763376fd0178191c412b8a2063ca8c692f0aa64489"
+  }
+}

@@ -1,0 +1,2 @@
+# External baseline component only. The main Node.js application needs no Python.
+freshctx==0.16.0 --hash=sha256:695e9b37580807f0138ed017003251a619c26e99aa07c3e50cee8cf013150017
