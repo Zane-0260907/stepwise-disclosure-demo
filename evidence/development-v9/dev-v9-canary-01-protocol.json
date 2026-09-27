@@ -1,0 +1,218 @@
+{
+  "kind": "development only; not held-out evaluation",
+  "runId": "dev-v9-canary-01",
+  "caseIds": [
+    "retail-dev-01",
+    "airline-dev-01",
+    "contract-dev-01"
+  ],
+  "methods": [
+    "full",
+    "eager",
+    "deferred"
+  ],
+  "maxModelCalls": 90,
+  "maxTokens": 2000000,
+  "maxCallsPerRun": 10,
+  "caseSha256": "431a0823e1ff259b9ac395bc18a6e4e3a97c6ac577bcb6d7d51149731bbbf500",
+  "sourceHashes": {
+    "src/research/view-runtime-v9.mjs": "70ba75642e1bfe6526888fe7b3b2a803dcc99be1313000ac6408a97b862e4e04",
+    "src/research/view-agent-v9.mjs": "fad87b06ca959e5ec380b21f6c8df51153cb0e761700dea7dc7c60590df0043b",
+    "scripts/prepare-v9-development.py": "dbc099d258de5680756f017ad75ed07023c4ba83181045d23bf394ad39350c2b",
+    "scripts/run-v9-development.mjs": "9a6038d1adda0c17324199801e2c2bdf5a78cb74b7637eac3ca07da72ade5f1a"
+  },
+  "system": "You solve a read-only business task over local records. You have a typed local query service. A local handle is not data and cannot be used as a guessed answer. The listed operations execute locally. Some deployments attach rows immediately; others expose them only when observe is called. Use the same tools as needed. To get a final result, observe only needed columns of the last useful query, not necessarily the original table. Filter before sort/limit; do not guess hidden values. Missing rows are not zero. For text, search is lexical and may miss evidence: refine your search or inspect other chunks. Finish with the finish tool; exact quoted evidence must come from observed text. Never invent records or execute a real-world transaction. At most one tool call per response.",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "open_table",
+        "description": "Open a local table. Returns a local handle and columns. A handle is not its contents.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "table": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "table"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query",
+        "description": "Create a filtered/projected local view. Can sort and take the first rows. Output is another handle. Local operations are exact; no values need to be disclosed to form a query.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "where": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "column": {
+                    "type": "string"
+                  },
+                  "op": {
+                    "type": "string",
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "le",
+                      "gt",
+                      "ge",
+                      "contains"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "column",
+                  "op",
+                  "value"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "column": {
+                  "type": "string"
+                },
+                "direction": {
+                  "type": "string",
+                  "enum": [
+                    "asc",
+                    "desc"
+                  ]
+                }
+              },
+              "required": [
+                "column",
+                "direction"
+              ],
+              "additionalProperties": false
+            },
+            "limit": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "handle"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "aggregate",
+        "description": "Compute count, sum, min or max locally over a view. Returns a new view with a value column. This is a derived disclosure if observed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "count",
+                "sum",
+                "min",
+                "max"
+              ]
+            },
+            "column": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "handle",
+            "op"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_text",
+        "description": "Lexically rank local text chunks by query words; produces a view. This retrieval can miss relevant passages; use further searches or observe more chunks when needed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "column": {
+              "type": "string"
+            },
+            "query": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "handle",
+            "column",
+            "query"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "observe",
+        "description": "Explicitly disclose selected columns of a local view to the current model. Prefer a query/aggregate before observing when it is sufficient. This returns the actual values.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "handle",
+            "columns"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

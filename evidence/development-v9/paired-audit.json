@@ -1,0 +1,343 @@
+{
+  "scope": "Development only; no independent repetitions, human adjudication, unnecessary-disclosure labels or confirmatory confidence interval. Negative values mean more disclosure by the candidate.",
+  "gate": "not passed; no held-out study started",
+  "firstActions": {
+    "deferred": {
+      "execute_plan": 24
+    },
+    "eager": {
+      "execute_plan": 24
+    },
+    "full": {
+      "execute_plan": 24
+    }
+  },
+  "summary": {
+    "retail": {
+      "cases": 8,
+      "baselineSourceCells": 88,
+      "candidateSourceCells": 88,
+      "descriptiveRelativeReduction": 0.0,
+      "fewerCells": 0,
+      "sameCells": 8,
+      "moreCells": 0
+    },
+    "airline": {
+      "cases": 8,
+      "baselineSourceCells": 95,
+      "candidateSourceCells": 106,
+      "descriptiveRelativeReduction": -0.11578947368421044,
+      "fewerCells": 1,
+      "sameCells": 6,
+      "moreCells": 1
+    },
+    "contract": {
+      "cases": 8,
+      "baselineSourceCells": 174,
+      "candidateSourceCells": 151,
+      "descriptiveRelativeReduction": 0.13218390804597702,
+      "fewerCells": 4,
+      "sameCells": 4,
+      "moreCells": 0
+    },
+    "all": {
+      "cases": 24,
+      "baselineSourceCells": 357,
+      "candidateSourceCells": 345,
+      "descriptiveRelativeReduction": 0.03361344537815125,
+      "fewerCells": 5,
+      "sameCells": 18,
+      "moreCells": 1
+    }
+  },
+  "pairs": [
+    {
+      "caseId": "airline-dev-01",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 8,
+      "candidateSourceCells": 8,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-02",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 5,
+      "candidateSourceCells": 4,
+      "cellDifference": -1,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-03",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 12,
+      "candidateSourceCells": 12,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-04",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 15,
+      "candidateSourceCells": 15,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-05",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 15,
+      "candidateSourceCells": 15,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-06",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 12,
+      "candidateSourceCells": 12,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-07",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 8,
+      "candidateSourceCells": 8,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "airline-dev-08",
+      "family": "airline",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 20,
+      "candidateSourceCells": 32,
+      "cellDifference": 12,
+      "callDifference": 0
+    },
+    {
+      "caseId": "contract-dev-01",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 0.875,
+      "candidateScore": 0.875,
+      "baselineSourceCells": 21,
+      "candidateSourceCells": 14,
+      "cellDifference": -7,
+      "callDifference": 0
+    },
+    {
+      "caseId": "contract-dev-02",
+      "family": "contract",
+      "baselineStatus": "failed",
+      "candidateStatus": "completed",
+      "baselineScore": 0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 50,
+      "candidateSourceCells": 48,
+      "cellDifference": -2,
+      "callDifference": -3
+    },
+    {
+      "caseId": "contract-dev-03",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 0.9583333333333334,
+      "candidateScore": 0.9583333333333334,
+      "baselineSourceCells": 12,
+      "candidateSourceCells": 12,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "contract-dev-04",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 0.7047619047619048,
+      "candidateScore": 0.7047619047619048,
+      "baselineSourceCells": 8,
+      "candidateSourceCells": 8,
+      "cellDifference": 0,
+      "callDifference": 1
+    },
+    {
+      "caseId": "contract-dev-05",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 0.0,
+      "candidateScore": 0.0,
+      "baselineSourceCells": 14,
+      "candidateSourceCells": 14,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "contract-dev-06",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 15,
+      "candidateSourceCells": 15,
+      "cellDifference": 0,
+      "callDifference": 4
+    },
+    {
+      "caseId": "contract-dev-07",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 0.0,
+      "candidateScore": 0.0,
+      "baselineSourceCells": 22,
+      "candidateSourceCells": 20,
+      "cellDifference": -2,
+      "callDifference": 0
+    },
+    {
+      "caseId": "contract-dev-08",
+      "family": "contract",
+      "baselineStatus": "completed",
+      "candidateStatus": "failed",
+      "baselineScore": 0.0,
+      "candidateScore": 0,
+      "baselineSourceCells": 32,
+      "candidateSourceCells": 20,
+      "cellDifference": -12,
+      "callDifference": -2
+    },
+    {
+      "caseId": "retail-dev-01",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 40,
+      "candidateSourceCells": 40,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-02",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 4,
+      "candidateSourceCells": 4,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-03",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 4,
+      "candidateSourceCells": 4,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-04",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 20,
+      "candidateSourceCells": 20,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-05",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 8,
+      "candidateSourceCells": 8,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-06",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 4,
+      "candidateSourceCells": 4,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-07",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 4,
+      "candidateSourceCells": 4,
+      "cellDifference": 0,
+      "callDifference": 0
+    },
+    {
+      "caseId": "retail-dev-08",
+      "family": "retail",
+      "baselineStatus": "completed",
+      "candidateStatus": "completed",
+      "baselineScore": 1.0,
+      "candidateScore": 1.0,
+      "baselineSourceCells": 4,
+      "candidateSourceCells": 4,
+      "cellDifference": 0,
+      "callDifference": 0
+    }
+  ]
+}

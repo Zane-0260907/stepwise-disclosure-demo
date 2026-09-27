@@ -2,7 +2,7 @@ name: Checks
 
 on:
   push:
-    branches: [main]
+    branches: [main, codex/adaptive-views-v9]
   pull_request:
 
 permissions:
@@ -72,3 +72,18 @@ jobs:
           Expand-Archive -LiteralPath evidence/validation-v8/reproduction-records.zip -DestinationPath . -Force
           npm run verify:v8
           node scripts/analyze-v8.mjs
+
+      - name: Verify unsuccessful v9 development candidate and frozen scores
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath evidence/development-v9/dev-v9-canary-01-records.zip -DestinationPath . -Force
+          Expand-Archive -LiteralPath evidence/development-v9/dev-v9-strong-02-records.zip -DestinationPath . -Force
+          node scripts/verify-v9-development.mjs dev-v9-canary-01
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/verify-v9-development.mjs dev-v9-strong-02
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/score-v9-development.py dev-v9-canary-01 --check
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/score-v9-development.py dev-v9-strong-02 --check
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/analyze-v9-development.py --check

@@ -1,0 +1,245 @@
+{
+  "scope": "Exploratory development only. Exact match for database tasks; CUAD mean gold-span token F1 is not expert legal correctness or official CUAD scoring. No independent necessity annotations.",
+  "labelsSha256": "c2a9538ba887957bf34f98bbff3e1409f88f9b9b51f4bddf07aef81039fb1b42",
+  "summary": {
+    "deferred": {
+      "runs": 3,
+      "completed": 2,
+      "families": {
+        "retail": {
+          "n": 1,
+          "meanScore": 1.0
+        },
+        "airline": {
+          "n": 1,
+          "meanScore": 0.0
+        },
+        "contract": {
+          "n": 1,
+          "meanScore": 0.875
+        }
+      },
+      "modelCalls": 20,
+      "totalTokens": 42578,
+      "sourceCells": 154,
+      "derivedValues": 0,
+      "materializedCells": 157,
+      "repeatedObservationCells": 729,
+      "providerRequestBytes": 145299
+    },
+    "eager": {
+      "runs": 3,
+      "completed": 3,
+      "families": {
+        "retail": {
+          "n": 1,
+          "meanScore": 1.0
+        },
+        "airline": {
+          "n": 1,
+          "meanScore": 1.0
+        },
+        "contract": {
+          "n": 1,
+          "meanScore": 0.875
+        }
+      },
+      "modelCalls": 12,
+      "totalTokens": 54888,
+      "sourceCells": 1338,
+      "derivedValues": 0,
+      "materializedCells": 1380,
+      "repeatedObservationCells": 4082,
+      "providerRequestBytes": 190218
+    },
+    "full": {
+      "runs": 3,
+      "completed": 3,
+      "families": {
+        "retail": {
+          "n": 1,
+          "meanScore": 1.0
+        },
+        "airline": {
+          "n": 1,
+          "meanScore": 1.0
+        },
+        "contract": {
+          "n": 1,
+          "meanScore": 0.875
+        }
+      },
+      "modelCalls": 12,
+      "totalTokens": 96312,
+      "sourceCells": 1338,
+      "derivedValues": 0,
+      "materializedCells": 2704,
+      "repeatedObservationCells": 9378,
+      "providerRequestBytes": 333717
+    }
+  },
+  "rows": [
+    {
+      "id": "dev-v9-canary-01-airline-dev-01-deferred",
+      "caseId": "airline-dev-01",
+      "family": "airline",
+      "method": "deferred",
+      "status": "failed",
+      "score": 0,
+      "error": "MODEL_CALL_LIMIT",
+      "modelCalls": 10,
+      "totalTokens": 24839,
+      "providerRequestBytes": 84082,
+      "sourceCells": 140,
+      "derivedValues": 0,
+      "materializedCells": 140,
+      "repeatedObservationCells": 700,
+      "elapsedModelMs": 9537.455899999999,
+      "toolErrors": 1
+    },
+    {
+      "id": "dev-v9-canary-01-airline-dev-01-eager",
+      "caseId": "airline-dev-01",
+      "family": "airline",
+      "method": "eager",
+      "status": "completed",
+      "score": 1.0,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 31795,
+      "providerRequestBytes": 106092,
+      "sourceCells": 1260,
+      "derivedValues": 0,
+      "materializedCells": 1282,
+      "repeatedObservationCells": 3816,
+      "elapsedModelMs": 3709.9119,
+      "toolErrors": 0
+    },
+    {
+      "id": "dev-v9-canary-01-airline-dev-01-full",
+      "caseId": "airline-dev-01",
+      "family": "airline",
+      "method": "full",
+      "status": "completed",
+      "score": 1.0,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 65551,
+      "providerRequestBytes": 218761,
+      "sourceCells": 1260,
+      "derivedValues": 0,
+      "materializedCells": 2536,
+      "repeatedObservationCells": 8844,
+      "elapsedModelMs": 4000.1989999999996,
+      "toolErrors": 0
+    },
+    {
+      "id": "dev-v9-canary-01-contract-dev-01-deferred",
+      "caseId": "contract-dev-01",
+      "family": "contract",
+      "method": "deferred",
+      "status": "completed",
+      "score": 0.875,
+      "error": null,
+      "modelCalls": 6,
+      "totalTokens": 11664,
+      "providerRequestBytes": 40818,
+      "sourceCells": 6,
+      "derivedValues": 0,
+      "materializedCells": 9,
+      "repeatedObservationCells": 21,
+      "elapsedModelMs": 5502.4920999999995,
+      "toolErrors": 0
+    },
+    {
+      "id": "dev-v9-canary-01-contract-dev-01-eager",
+      "caseId": "contract-dev-01",
+      "family": "contract",
+      "method": "eager",
+      "status": "completed",
+      "score": 0.875,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 16088,
+      "providerRequestBytes": 60219,
+      "sourceCells": 30,
+      "derivedValues": 0,
+      "materializedCells": 40,
+      "repeatedObservationCells": 106,
+      "elapsedModelMs": 3093.4611000000023,
+      "toolErrors": 0
+    },
+    {
+      "id": "dev-v9-canary-01-contract-dev-01-full",
+      "caseId": "contract-dev-01",
+      "family": "contract",
+      "method": "full",
+      "status": "completed",
+      "score": 0.875,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 22757,
+      "providerRequestBytes": 86817,
+      "sourceCells": 30,
+      "derivedValues": 0,
+      "materializedCells": 62,
+      "repeatedObservationCells": 182,
+      "elapsedModelMs": 4404.2425,
+      "toolErrors": 1
+    },
+    {
+      "id": "dev-v9-canary-01-retail-dev-01-deferred",
+      "caseId": "retail-dev-01",
+      "family": "retail",
+      "method": "deferred",
+      "status": "completed",
+      "score": 1.0,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 6075,
+      "providerRequestBytes": 20399,
+      "sourceCells": 8,
+      "derivedValues": 0,
+      "materializedCells": 8,
+      "repeatedObservationCells": 8,
+      "elapsedModelMs": 3366.6299999999997,
+      "toolErrors": 0
+    },
+    {
+      "id": "dev-v9-canary-01-retail-dev-01-eager",
+      "caseId": "retail-dev-01",
+      "family": "retail",
+      "method": "eager",
+      "status": "completed",
+      "score": 1.0,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 7005,
+      "providerRequestBytes": 23907,
+      "sourceCells": 48,
+      "derivedValues": 0,
+      "materializedCells": 58,
+      "repeatedObservationCells": 160,
+      "elapsedModelMs": 3355.7580999999996,
+      "toolErrors": 0
+    },
+    {
+      "id": "dev-v9-canary-01-retail-dev-01-full",
+      "caseId": "retail-dev-01",
+      "family": "retail",
+      "method": "full",
+      "status": "completed",
+      "score": 1.0,
+      "error": null,
+      "modelCalls": 4,
+      "totalTokens": 8004,
+      "providerRequestBytes": 28139,
+      "sourceCells": 48,
+      "derivedValues": 0,
+      "materializedCells": 106,
+      "repeatedObservationCells": 352,
+      "elapsedModelMs": 3611.9202999999993,
+      "toolErrors": 0
+    }
+  ]
+}

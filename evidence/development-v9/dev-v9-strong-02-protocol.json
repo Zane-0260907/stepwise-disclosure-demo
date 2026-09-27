@@ -1,0 +1,371 @@
+{
+  "kind": "development only; not held-out evaluation",
+  "runId": "dev-v9-strong-02",
+  "caseIds": [
+    "retail-dev-01",
+    "retail-dev-02",
+    "retail-dev-03",
+    "retail-dev-04",
+    "retail-dev-05",
+    "retail-dev-06",
+    "retail-dev-07",
+    "retail-dev-08",
+    "airline-dev-01",
+    "airline-dev-02",
+    "airline-dev-03",
+    "airline-dev-04",
+    "airline-dev-05",
+    "airline-dev-06",
+    "airline-dev-07",
+    "airline-dev-08",
+    "contract-dev-01",
+    "contract-dev-02",
+    "contract-dev-03",
+    "contract-dev-04",
+    "contract-dev-05",
+    "contract-dev-06",
+    "contract-dev-07",
+    "contract-dev-08"
+  ],
+  "methods": [
+    "full",
+    "eager",
+    "deferred"
+  ],
+  "maxModelCalls": 720,
+  "maxTokens": 2000000,
+  "maxCallsPerRun": 10,
+  "caseSha256": "6fb0311642a11f5faa526021f9fde2ec0216a82bf9350ef627ed4f9a83b24254",
+  "sourceHashes": {
+    "src/research/view-runtime-v9.mjs": "c48a74c7da1341dccb57749f5bcfad0a2ae77e666744ad1ca02afc58f2500eb1",
+    "src/research/view-agent-v9.mjs": "e319f5b27b27a95484ef565429635a997043a434e1caee0ece76bb19e4e1e467",
+    "scripts/prepare-v9-development.py": "bb0408ca0c1bedfd21a6ed7fa1ddb6ae16d944947646f5744c9542f2a4c34d0f",
+    "scripts/run-v9-development.mjs": "42b46d9f817763260d6e2b6eff88276cfd523d8061e24b2c18ed62aa535ea7d4"
+  },
+  "system": "You solve a read-only business task over local records. You have a typed local query service. Prefer execute_plan: it can filter, sort, aggregate or search locally and return only final selected columns, using the listed schemas without first opening the table. This strong capability is available to all methods. A local handle is not data and cannot be used as a guessed answer. Some deployments attach rows immediately; others expose them only when observe is called. Use the same tools as needed. To get a final result, observe only needed columns of the last useful query, not necessarily the original table. Filter before sort/limit; do not guess hidden values. Missing rows are not zero. For text, search is lexical and may miss evidence: refine your search or inspect other chunks. Finish with the finish tool; exact quoted evidence must come from observed text. Never invent records or execute a real-world transaction. At most one tool call per response.",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "open_table",
+        "description": "Open a local table. Returns a local handle and columns. A handle is not its contents.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "table": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "table"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query",
+        "description": "Create a filtered/projected local view. Can sort and take the first rows. Output is another handle. Local operations are exact; no values need to be disclosed to form a query.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "where": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "column": {
+                    "type": "string"
+                  },
+                  "op": {
+                    "type": "string",
+                    "enum": [
+                      "eq",
+                      "ne",
+                      "lt",
+                      "le",
+                      "gt",
+                      "ge",
+                      "contains"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "column",
+                  "op",
+                  "value"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "column": {
+                  "type": "string"
+                },
+                "direction": {
+                  "type": "string",
+                  "enum": [
+                    "asc",
+                    "desc"
+                  ]
+                }
+              },
+              "required": [
+                "column",
+                "direction"
+              ],
+              "additionalProperties": false
+            },
+            "limit": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "handle"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "aggregate",
+        "description": "Compute count, sum, min or max locally over a view. Returns a new view with a value column. This is a derived disclosure if observed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "count",
+                "sum",
+                "min",
+                "max"
+              ]
+            },
+            "column": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "handle",
+            "op"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_text",
+        "description": "Lexically rank local text chunks by query words; produces a view. This retrieval can miss relevant passages; use further searches or observe more chunks when needed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "column": {
+              "type": "string"
+            },
+            "query": {
+              "type": "string"
+            },
+            "limit": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "handle",
+            "column",
+            "query"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "observe",
+        "description": "Explicitly disclose selected columns of a local view to the current model. Prefer a query/aggregate before observing when it is sufficient. This returns the actual values.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "handle": {
+              "type": "string"
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "handle",
+            "columns"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "execute_plan",
+        "description": "Strong local-program tool available to EVERY method. Execute a pipeline locally and return only its final selected columns, without disclosing intermediate rows. Prefer this when the request already defines a filter/sort/aggregation or text search. For aggregate, use op=aggregate and aggregation=count/sum/min/max. No open_table call is needed.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "table": {
+              "type": "string"
+            },
+            "steps": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 6,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "op": {
+                    "type": "string",
+                    "enum": [
+                      "query",
+                      "aggregate",
+                      "search_text"
+                    ]
+                  },
+                  "handle": {
+                    "type": "string"
+                  },
+                  "columns": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "where": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "column": {
+                          "type": "string"
+                        },
+                        "op": {
+                          "type": "string",
+                          "enum": [
+                            "eq",
+                            "ne",
+                            "lt",
+                            "le",
+                            "gt",
+                            "ge",
+                            "contains"
+                          ]
+                        },
+                        "value": {
+                          "type": [
+                            "string",
+                            "number",
+                            "boolean"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "column",
+                        "op",
+                        "value"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "sort": {
+                    "type": "object",
+                    "properties": {
+                      "column": {
+                        "type": "string"
+                      },
+                      "direction": {
+                        "type": "string",
+                        "enum": [
+                          "asc",
+                          "desc"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "column",
+                      "direction"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "limit": {
+                    "type": "integer"
+                  },
+                  "aggregation": {
+                    "type": "string",
+                    "enum": [
+                      "count",
+                      "sum",
+                      "min",
+                      "max"
+                    ]
+                  },
+                  "column": {
+                    "type": "string"
+                  },
+                  "query": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "op"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "output_columns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "table",
+            "steps",
+            "output_columns"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

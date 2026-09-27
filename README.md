@@ -59,6 +59,8 @@ Node.js runs the step planner, receiver and web interface; PDF.js reads the synt
 
 ## Current version: real model graphs and bounded continuation
 
+> **Development branch:** the v9 delayed-view candidate did not pass its initial strong-baseline comparison. The stable interface and manuscript below remain v8. [Read the negative result and reproduce all 202 main-study calls offline](evidence/development-v9/README.md). This is not a new successful paper result.
+
 The original goal remains **where each step runs and what its recipient receives**. V8 connects real model tool calls, a calculation graph, source/capability changes, valid-result reuse and actual receiver records. A shared phase budget bounds repeated numeric-field transmissions relative to the same phase's greedy continuation.
 
 **Start here:** choose **Real model plan · Local capability changes**, run **Bound transmissions · reuse valid results**, and compare with **Restart all after the change**. Without a key, a saved real model plan drives new computations and HTTP requests. Use the batch command with your own key for new model calls. [Detailed English walkthrough and reproduction](docs/reproduction-v8.md).

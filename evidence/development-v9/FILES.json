@@ -1,0 +1,42 @@
+{
+  "dev-v9-canary-01-protocol.json": {
+    "sha256": "30c94eb7ab2b7dccfb939022abf84f56e5d345d4f28936f39ad6998e1ae27c46",
+    "bytes": 6778
+  },
+  "dev-v9-canary-01-records.zip": {
+    "sha256": "3508253358de95e24862bd93af744442745b6d1e9ab40e5c35e248d5dd02a99d",
+    "bytes": 335540
+  },
+  "dev-v9-canary-01-scores.json": {
+    "sha256": "5e772e978e736bc6e097d671bade8e07cb0e0c99fb24f92de428d6ef5c8ab139",
+    "bytes": 6421
+  },
+  "dev-v9-strong-02-protocol.json": {
+    "sha256": "569cada0fb567770fcb8e50ad0c6cac6cd5eb8fe4674f36288265a89d0114b5e",
+    "bytes": 11621
+  },
+  "dev-v9-strong-02-records.zip": {
+    "sha256": "c5d89c6897e09aff85808fac64e731df59e5b5f54eee58978a83fc4b442e874e",
+    "bytes": 1777751
+  },
+  "dev-v9-strong-02-scores.json": {
+    "sha256": "25247d499b5a8ae4d88b64c314be2f21443f9e593395e3a80846b7c132fcb982",
+    "bytes": 37798
+  },
+  "LICENSE.tau-bench": {
+    "sha256": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+    "bytes": 1072
+  },
+  "paired-audit.json": {
+    "sha256": "a089d690d037b5338593487898fe18695218836c9d60d0bae9739ca6b2089efb",
+    "bytes": 9249
+  },
+  "README.md": {
+    "sha256": "90f080ab409f1d1a52fe4211b9034f863fc8e8ff986c0f4cfa6c571351af622a",
+    "bytes": 4551
+  },
+  "source-manifest.json": {
+    "sha256": "83b75166e6dfab291280049d786dd5fc6a1531b0564ea4d55e2e42fa0b27cbed",
+    "bytes": 3842
+  }
+}
