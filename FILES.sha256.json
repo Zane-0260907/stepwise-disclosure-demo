@@ -438,7 +438,7 @@
   "scripts/run-v8.mjs": "06835f892670fad73f71bad57b438d181b081502e87d8790a220446a6b8ebd69",
   "scripts/run-v9-development.mjs": "42b46d9f817763260d6e2b6eff88276cfd523d8061e24b2c18ed62aa535ea7d4",
   "scripts/run-validation.mjs": "8595b8d70a5db53eb037dc8795920fc103484f2abae387a875759a60bf0f989c",
-  "scripts/score-v9-development.py": "b524f14f7f3ee3bf4857f415674be295139754526bdf3280f5a27631f55a914e",
+  "scripts/score-v9-development.py": "69300f2bc4b1e86fd165b7d37687b0376f7afe7ca26c8bbd576cce4197f50362",
   "scripts/start-demo.ps1": "00b713c30b97a7e657f3dac0d86abff79924410a4ddbd2f5e6d296c7bc8699bf",
   "scripts/summarize-research.mjs": "547d7dbc9bbf03220016ece238ce20ab84cf625fc6c8b8708bfcc6911e1921ae",
   "scripts/summarize-validation.mjs": "7daf9055b5851110da01ad6a3b6b0b408078fc47dded2acc749e98ae2b835771",
