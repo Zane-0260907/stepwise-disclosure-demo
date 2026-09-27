@@ -2,7 +2,7 @@ name: Checks
 
 on:
   push:
-    branches: [main, codex/adaptive-views-v9, codex/dynamic-tasks-v10, codex/evidence-gap-pilot]
+    branches: [main, codex/adaptive-views-v9, codex/dynamic-tasks-v10, codex/evidence-gap-pilot, codex/disclosure-frontier]
   pull_request:
 
 permissions:
@@ -66,6 +66,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/audit-paper.py
+      - run: node scripts/verify-frontier-study.mjs
+      - run: python scripts/analyze-frontier-study.py --check
       - name: Verify evidence-gap development records and causal audit
         shell: pwsh
         run: |
@@ -98,6 +100,8 @@ jobs:
           Expand-Archive -LiteralPath evidence/validation-v8/reproduction-records.zip -DestinationPath . -Force
           npm run verify:v8
           node scripts/analyze-v8.mjs
+          node scripts/run-live-integration.mjs --check
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Verify unsuccessful v9 development candidate and frozen scores
         shell: pwsh

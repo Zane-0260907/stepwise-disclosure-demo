@@ -1,8 +1,9 @@
 import {readFile} from 'node:fs/promises';
 import {executeModelGraph,createNumericReceiver} from './model-repair-v8.mjs';
+import {executeLiveModelGraph} from './live-model-execution.mjs';
 import {addEvent} from './engine.mjs';
 const text=(zh,en)=>({zh,en}),root=new URL('../../evidence/model-showcase-v8/',import.meta.url);
-export const MODEL_REPAIR_NAMES={budget_0:text('约束重复传输 · 保留有效结果','Bound transmissions · reuse valid results'),repair_greedy:text('逐步选择 · 保留有效结果','Greedy selection · reuse valid results'),repair_frontier:text('后续规划 · 不限制传输','Continuation planning · unbounded traffic'),restart_greedy:text('条件变化后全部重跑','Restart all after the change')};
+export const MODEL_REPAIR_NAMES={live_budget_0:text('压缩规划状态 · 保留有效结果','Compact planning states · reuse valid results'),live_frontier:text('压缩规划状态 · 不限制传输','Compact planning states · unbounded traffic'),budget_0:text('完整规划状态 · 约束传输','Full planning states · bound transmissions'),repair_greedy:text('逐步选择 · 保留有效结果','Greedy selection · reuse valid results'),repair_frontier:text('后续规划 · 不限制传输','Continuation planning · unbounded traffic'),restart_greedy:text('条件变化后全部重跑','Restart all after the change')};
 export async function modelRepairCases(){
  const item=JSON.parse(await readFile(new URL('case.json',root)));
  return [['capability_withdrawn','本地能力变化','Local capability changes'],['source_used','已用源值更新','A used source value changes'],['source_unrelated','未用源值更新','An unused source value changes']].map(([condition,zh,en])=>({id:'model-'+condition.replaceAll('_','-'),family:'repair',variant:'model-v8',split:'evaluation',title:text('真实模型计划 · '+zh,'Real model plan · '+en),task:text('计算所选项目占总额的比例；执行中检查条件变化，保留仍有效的计算。','Calculate the selected items as a share of the total; inspect changes and retain valid computations.'),facts:item.facts,source:'model-table.pdf',modelCondition:condition,item}));
@@ -16,7 +17,8 @@ export async function executeModelShowcase(run,example,{notify=()=>{}}={}){
  const add=(id,title,reason,location,input,output=null)=>{const s={id,title,reason,location,input,output,status:output?'completed':'running',startedAt:new Date().toISOString(),retained:Object.keys(example.facts).filter(k=>!(k in input)),receipts:[],checks:[],operation:'model-repair'};s.retainedValues=Object.fromEntries(s.retained.map(k=>[k,run.input[k]]));run.steps.push(s);return s;};
  add('model-schema',text('读取已保存的模型调用','Read the saved model calls'),text('此处重用公开的真实 DeepSeek 计划；不发起新的付费模型调用。','Reuse a public real DeepSeek plan; no new paid model call is made.'),'local',{question:example.item.question},{summary:text('模型先申请表结构，再提交三步计算。右侧可核对原始模型记录。','The model requested the schema, then submitted three calculation steps. Inspect the original model record on the right.')});
  addEvent(run,'step.completed',{},notify);let pending;
- const evidence=await executeModelGraph(example.item,{...model,id:run.id},example.modelCondition,run.method,await receiverPromise,{onEvent:(event,core)=>{
+ const execute=run.method.startsWith('live_')?executeLiveModelGraph:executeModelGraph;
+ const evidence=await execute(example.item,{...model,id:run.id},example.modelCondition,run.method,await receiverPromise,{onEvent:(event,core)=>{
   if(event.type==='graph.created')add('graph',text('从模型回复创建执行步骤','Create steps from the model reply'),text('步骤来自已保存的工具调用，不是界面预设的执行答案。','Steps come from the saved tool response, not a prewritten UI answer.'),'local',{program:event.program},{summary:text(`登记 ${event.program.length} 个计算步骤。`,`Registered ${event.program.length} calculation steps.`)});
   if(event.type==='request.sent'){
    const input=event.payload.kind==='source'?event.payload.facts:Object.fromEntries(event.payload.args.map((a,i)=>[model.program[event.index].args[i].field||`operand_${i+1}`,a.value]));

@@ -1,0 +1,1232 @@
+{
+  "protocol": "v8-model-graph-showcase",
+  "id": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01",
+  "source": "live",
+  "caseId": "model-capability-withdrawn",
+  "family": "repair",
+  "title": {
+    "zh": "真实模型计划 · 本地能力变化",
+    "en": "Real model plan · Local capability changes"
+  },
+  "task": {
+    "zh": "计算所选项目占总额的比例；执行中检查条件变化，保留仍有效的计算。",
+    "en": "Calculate the selected items as a share of the total; inspect changes and retain valid computations."
+  },
+  "input": {
+    "r1c1": 134,
+    "r2c1": 133,
+    "r3c1": 131,
+    "r4c1": 125,
+    "r5c1": 120,
+    "r6c1": 560,
+    "r7c1": 1203
+  },
+  "sourceFile": "model-table.pdf",
+  "method": "live_budget_0",
+  "condition": "normal",
+  "model": "saved-deepseek-plan",
+  "createdAt": "2026-09-27T17:42:25.195Z",
+  "status": "completed",
+  "policy": {
+    "version": 1,
+    "allowed": true
+  },
+  "steps": [
+    {
+      "id": "model-schema",
+      "title": {
+        "zh": "读取已保存的模型调用",
+        "en": "Read the saved model calls"
+      },
+      "reason": {
+        "zh": "此处重用公开的真实 DeepSeek 计划；不发起新的付费模型调用。",
+        "en": "Reuse a public real DeepSeek plan; no new paid model call is made."
+      },
+      "location": "local",
+      "input": {
+        "question": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?"
+      },
+      "output": {
+        "summary": {
+          "zh": "模型先申请表结构，再提交三步计算。右侧可核对原始模型记录。",
+          "en": "The model requested the schema, then submitted three calculation steps. Inspect the original model record on the right."
+        }
+      },
+      "status": "completed",
+      "startedAt": "2026-09-27T17:42:25.207Z",
+      "retained": [
+        "r1c1",
+        "r2c1",
+        "r3c1",
+        "r4c1",
+        "r5c1",
+        "r6c1",
+        "r7c1"
+      ],
+      "receipts": [],
+      "checks": [],
+      "operation": "model-repair",
+      "retainedValues": {
+        "r1c1": 134,
+        "r2c1": 133,
+        "r3c1": 131,
+        "r4c1": 125,
+        "r5c1": 120,
+        "r6c1": 560,
+        "r7c1": 1203
+      }
+    },
+    {
+      "id": "graph",
+      "title": {
+        "zh": "从模型回复创建执行步骤",
+        "en": "Create steps from the model reply"
+      },
+      "reason": {
+        "zh": "步骤来自已保存的工具调用，不是界面预设的执行答案。",
+        "en": "Steps come from the saved tool response, not a prewritten UI answer."
+      },
+      "location": "local",
+      "input": {
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ]
+      },
+      "output": {
+        "summary": {
+          "zh": "登记 3 个计算步骤。",
+          "en": "Registered 3 calculation steps."
+        }
+      },
+      "status": "completed",
+      "startedAt": "2026-09-27T17:42:25.210Z",
+      "retained": [
+        "r1c1",
+        "r2c1",
+        "r3c1",
+        "r4c1",
+        "r5c1",
+        "r6c1",
+        "r7c1"
+      ],
+      "receipts": [],
+      "checks": [],
+      "operation": "model-repair",
+      "retainedValues": {
+        "r1c1": 134,
+        "r2c1": 133,
+        "r3c1": 131,
+        "r4c1": 125,
+        "r5c1": 120,
+        "r6c1": 560,
+        "r7c1": 1203
+      }
+    },
+    {
+      "id": "node-1",
+      "title": {
+        "zh": "执行步骤 1 · 相加",
+        "en": "Execute step 1 · Add"
+      },
+      "reason": {
+        "zh": "使用已登记的本地算子，本步不发送业务数值。",
+        "en": "Use the registered local operator; no business value leaves for this step."
+      },
+      "location": "local",
+      "input": {},
+      "output": {
+        "summary": {
+          "zh": "计算值：267。",
+          "en": "Computed value: 267."
+        }
+      },
+      "status": "completed",
+      "startedAt": "2026-09-27T17:42:25.212Z",
+      "retained": [
+        "r1c1",
+        "r2c1",
+        "r3c1",
+        "r4c1",
+        "r5c1",
+        "r6c1",
+        "r7c1"
+      ],
+      "receipts": [],
+      "checks": [],
+      "operation": "model-repair",
+      "retainedValues": {
+        "r1c1": 134,
+        "r2c1": 133,
+        "r3c1": 131,
+        "r4c1": 125,
+        "r5c1": 120,
+        "r6c1": 560,
+        "r7c1": 1203
+      },
+      "finishedAt": "2026-09-27T17:42:25.212Z",
+      "modelPlan": {
+        "index": 0,
+        "phase": 0,
+        "pending": [
+          0,
+          1,
+          2
+        ],
+        "choice": "local",
+        "path": [
+          "local",
+          "local",
+          "operands"
+        ],
+        "fields": 2,
+        "budget": 2,
+        "referenceFields": 2,
+        "newDisclosures": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ],
+        "peak": 3,
+        "width": 3,
+        "visited": 15,
+        "history": [],
+        "versions": {
+          "r1c1": 1,
+          "r2c1": 1,
+          "r3c1": 1,
+          "r4c1": 1,
+          "r5c1": 1,
+          "r6c1": 1,
+          "r7c1": 1
+        },
+        "capabilityVersion": 1
+      }
+    },
+    {
+      "id": "change-2",
+      "title": {
+        "zh": "条件改变，重新核对剩余步骤",
+        "en": "Conditions changed; recheck remaining steps"
+      },
+      "reason": {
+        "zh": "本次变化是预先登记的实验干预，不是模型自主产生的故障。",
+        "en": "This is a registered experimental intervention, not a model-generated failure."
+      },
+      "location": "local",
+      "input": {
+        "local_ops_before": [
+          "add",
+          "subtract"
+        ],
+        "local_ops_after": []
+      },
+      "output": {
+        "summary": {
+          "zh": "保留有效结果 1 个；重新计算 0 个。",
+          "en": "Retain 1 valid results; recompute 0."
+        }
+      },
+      "status": "completed",
+      "startedAt": "2026-09-27T17:42:25.213Z",
+      "retained": [
+        "r1c1",
+        "r2c1",
+        "r3c1",
+        "r4c1",
+        "r5c1",
+        "r6c1",
+        "r7c1"
+      ],
+      "receipts": [],
+      "checks": [],
+      "operation": "model-repair",
+      "retainedValues": {
+        "r1c1": 134,
+        "r2c1": 133,
+        "r3c1": 131,
+        "r4c1": 125,
+        "r5c1": 120,
+        "r6c1": 560,
+        "r7c1": 1203
+      }
+    },
+    {
+      "id": "node-3",
+      "title": {
+        "zh": "执行步骤 2 · 相加",
+        "en": "Execute step 2 · Add"
+      },
+      "reason": {
+        "zh": "本地未登记此时所需能力；HTTP 接收端实际接收所选视图并计算。",
+        "en": "The required capability is not currently registered locally; the HTTP receiver executes the selected view."
+      },
+      "location": "tool",
+      "input": {
+        "operand_1": 267,
+        "r3c1": 131
+      },
+      "output": {
+        "summary": {
+          "zh": "计算值：398。",
+          "en": "Computed value: 398."
+        }
+      },
+      "status": "completed",
+      "startedAt": "2026-09-27T17:42:25.213Z",
+      "retained": [
+        "r1c1",
+        "r2c1",
+        "r4c1",
+        "r5c1",
+        "r6c1",
+        "r7c1"
+      ],
+      "receipts": [
+        "b9173f77-1b74-43f3-aef9-b0a3cbfc3060"
+      ],
+      "checks": [],
+      "operation": "model-repair",
+      "retainedValues": {
+        "r1c1": 134,
+        "r2c1": 133,
+        "r4c1": 125,
+        "r5c1": 120,
+        "r6c1": 560,
+        "r7c1": 1203
+      },
+      "recipient": "numeric-service",
+      "modelPlan": {
+        "index": 1,
+        "phase": 1,
+        "pending": [
+          1,
+          2
+        ],
+        "choice": "operands",
+        "path": [
+          "operands",
+          "operands"
+        ],
+        "fields": 4,
+        "budget": 4,
+        "referenceFields": 4,
+        "newDisclosures": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r3c1:1",
+          "numeric-service:field:r7c1:1"
+        ],
+        "peak": 2,
+        "width": 3,
+        "visited": 6,
+        "history": [],
+        "versions": {
+          "r1c1": 1,
+          "r2c1": 1,
+          "r3c1": 1,
+          "r4c1": 1,
+          "r5c1": 1,
+          "r6c1": 1,
+          "r7c1": 1
+        },
+        "capabilityVersion": 2
+      },
+      "finishedAt": "2026-09-27T17:42:25.230Z"
+    },
+    {
+      "id": "node-5",
+      "title": {
+        "zh": "执行步骤 3 · 相除",
+        "en": "Execute step 3 · Divide"
+      },
+      "reason": {
+        "zh": "本地未登记此时所需能力；HTTP 接收端实际接收所选视图并计算。",
+        "en": "The required capability is not currently registered locally; the HTTP receiver executes the selected view."
+      },
+      "location": "tool",
+      "input": {
+        "operand_1": 398,
+        "r7c1": 1203
+      },
+      "output": {
+        "summary": {
+          "zh": "计算值：0.33083956774729845。",
+          "en": "Computed value: 0.33083956774729845."
+        }
+      },
+      "status": "completed",
+      "startedAt": "2026-09-27T17:42:25.230Z",
+      "retained": [
+        "r1c1",
+        "r2c1",
+        "r3c1",
+        "r4c1",
+        "r5c1",
+        "r6c1"
+      ],
+      "receipts": [
+        "40051185-233d-4439-a155-97f314e34579"
+      ],
+      "checks": [],
+      "operation": "model-repair",
+      "retainedValues": {
+        "r1c1": 134,
+        "r2c1": 133,
+        "r3c1": 131,
+        "r4c1": 125,
+        "r5c1": 120,
+        "r6c1": 560
+      },
+      "recipient": "numeric-service",
+      "modelPlan": {
+        "index": 2,
+        "phase": 1,
+        "pending": [
+          2
+        ],
+        "choice": "operands",
+        "path": [
+          "operands"
+        ],
+        "fields": 2,
+        "budget": 2,
+        "referenceFields": 2,
+        "newDisclosures": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ],
+        "peak": 1,
+        "width": 0,
+        "visited": 2,
+        "history": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:field:r3c1:1"
+        ],
+        "versions": {
+          "r1c1": 1,
+          "r2c1": 1,
+          "r3c1": 1,
+          "r4c1": 1,
+          "r5c1": 1,
+          "r6c1": 1,
+          "r7c1": 1
+        },
+        "capabilityVersion": 2
+      },
+      "finishedAt": "2026-09-27T17:42:25.234Z"
+    }
+  ],
+  "events": [
+    {
+      "index": 1,
+      "type": "step.completed",
+      "at": "2026-09-27T17:42:25.207Z"
+    },
+    {
+      "index": 2,
+      "type": "graph.created",
+      "at": "2026-09-27T17:42:25.210Z",
+      "coreEvent": {
+        "seq": 0,
+        "type": "graph.created",
+        "at": "2026-09-27T17:42:25.210Z",
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "programSha256": "b4d4b0a2691492f5181c323c3a06aba82aea712492aafdae933b099c179270b8",
+        "modelRecordId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01",
+        "parentToolCallId": "call_00_lMJQFFZPgn7rEQ9u6zmw3390"
+      }
+    },
+    {
+      "index": 3,
+      "type": "node.completed",
+      "at": "2026-09-27T17:42:25.212Z",
+      "coreEvent": {
+        "seq": 1,
+        "type": "node.completed",
+        "at": "2026-09-27T17:42:25.212Z",
+        "index": 0,
+        "op": "add",
+        "location": "local",
+        "view": "local",
+        "value": 267,
+        "stamp": "d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+        "tokens": []
+      }
+    },
+    {
+      "index": 4,
+      "type": "state.changed",
+      "at": "2026-09-27T17:42:25.213Z",
+      "coreEvent": {
+        "seq": 2,
+        "type": "state.changed",
+        "at": "2026-09-27T17:42:25.213Z",
+        "controlled": true,
+        "field": null,
+        "before": {
+          "facts": {
+            "r1c1": 134,
+            "r2c1": 133,
+            "r3c1": 131,
+            "r4c1": 125,
+            "r5c1": 120,
+            "r6c1": 560,
+            "r7c1": 1203
+          },
+          "localOps": [
+            "add",
+            "subtract"
+          ]
+        },
+        "after": {
+          "facts": {
+            "r1c1": 134,
+            "r2c1": 133,
+            "r3c1": 131,
+            "r4c1": 125,
+            "r5c1": 120,
+            "r6c1": 560,
+            "r7c1": 1203
+          },
+          "localOps": []
+        },
+        "invalidated": [],
+        "retained": [
+          0
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "type": "request.sent",
+      "at": "2026-09-27T17:42:25.213Z",
+      "coreEvent": {
+        "seq": 3,
+        "type": "request.sent",
+        "at": "2026-09-27T17:42:25.213Z",
+        "index": 1,
+        "view": "operands",
+        "payload": {
+          "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+          "node": 1,
+          "kind": "operands",
+          "op": "add",
+          "args": [
+            {
+              "value": 267,
+              "token": "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde"
+            },
+            {
+              "value": 131,
+              "token": "numeric-service:field:r3c1:1"
+            }
+          ]
+        },
+        "bodySha256": "82a2616f441f699baf43b8e3c3f9375547c15df2babc0f80b6ff5d44598b1088",
+        "tokens": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:field:r3c1:1"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "type": "node.completed",
+      "at": "2026-09-27T17:42:25.230Z",
+      "coreEvent": {
+        "seq": 4,
+        "type": "node.completed",
+        "at": "2026-09-27T17:42:25.230Z",
+        "index": 1,
+        "op": "add",
+        "location": "numeric-service",
+        "view": "operands",
+        "value": 398,
+        "stamp": "e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+        "tokens": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:field:r3c1:1"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "type": "request.sent",
+      "at": "2026-09-27T17:42:25.230Z",
+      "coreEvent": {
+        "seq": 5,
+        "type": "request.sent",
+        "at": "2026-09-27T17:42:25.230Z",
+        "index": 2,
+        "view": "operands",
+        "payload": {
+          "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+          "node": 2,
+          "kind": "operands",
+          "op": "divide",
+          "args": [
+            {
+              "value": 398,
+              "token": "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802"
+            },
+            {
+              "value": 1203,
+              "token": "numeric-service:field:r7c1:1"
+            }
+          ]
+        },
+        "bodySha256": "89d8708c97e6bfa24017e5705b692d1ac0e17900a395f0963bbd40cf565c440e",
+        "tokens": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "type": "node.completed",
+      "at": "2026-09-27T17:42:25.234Z",
+      "coreEvent": {
+        "seq": 6,
+        "type": "node.completed",
+        "at": "2026-09-27T17:42:25.234Z",
+        "index": 2,
+        "op": "divide",
+        "location": "numeric-service",
+        "view": "operands",
+        "value": 0.33083956774729845,
+        "stamp": "916f9c74dca5d6cdbb0c5e8122ecd398e6d12a0f73b0a9cc83152ef833f9527f",
+        "tokens": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "type": "run.completed",
+      "at": "2026-09-27T17:42:25.235Z",
+      "coreEvent": {
+        "seq": 7,
+        "type": "run.completed",
+        "at": "2026-09-27T17:42:25.235Z",
+        "status": "completed",
+        "value": 0.33083956774729845
+      }
+    },
+    {
+      "index": 10,
+      "type": "run.finalized",
+      "at": "2026-09-27T17:42:25.235Z"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "b9173f77-1b74-43f3-aef9-b0a3cbfc3060",
+      "at": "2026-09-27T17:42:25.226Z",
+      "body": "{\"runId\":\"28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0\",\"node\":1,\"kind\":\"operands\",\"op\":\"add\",\"args\":[{\"value\":267,\"token\":\"numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde\"},{\"value\":131,\"token\":\"numeric-service:field:r3c1:1\"}]}",
+      "bodySha256": "82a2616f441f699baf43b8e3c3f9375547c15df2babc0f80b6ff5d44598b1088",
+      "bytes": 296,
+      "value": 398,
+      "rawBody": "{\"runId\":\"28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0\",\"node\":1,\"kind\":\"operands\",\"op\":\"add\",\"args\":[{\"value\":267,\"token\":\"numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde\"},{\"value\":131,\"token\":\"numeric-service:field:r3c1:1\"}]}",
+      "sha256": "82a2616f441f699baf43b8e3c3f9375547c15df2babc0f80b6ff5d44598b1088",
+      "receivedAt": "2026-09-27T17:42:25.226Z",
+      "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01",
+      "stepId": "node-3",
+      "recipient": "numeric-service",
+      "parsed": {
+        "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+        "node": 1,
+        "kind": "operands",
+        "op": "add",
+        "args": [
+          {
+            "value": 267,
+            "token": "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde"
+          },
+          {
+            "value": 131,
+            "token": "numeric-service:field:r3c1:1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "40051185-233d-4439-a155-97f314e34579",
+      "at": "2026-09-27T17:42:25.233Z",
+      "body": "{\"runId\":\"28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0\",\"node\":2,\"kind\":\"operands\",\"op\":\"divide\",\"args\":[{\"value\":398,\"token\":\"numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802\"},{\"value\":1203,\"token\":\"numeric-service:field:r7c1:1\"}]}",
+      "bodySha256": "89d8708c97e6bfa24017e5705b692d1ac0e17900a395f0963bbd40cf565c440e",
+      "bytes": 300,
+      "value": 0.33083956774729845,
+      "rawBody": "{\"runId\":\"28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0\",\"node\":2,\"kind\":\"operands\",\"op\":\"divide\",\"args\":[{\"value\":398,\"token\":\"numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802\"},{\"value\":1203,\"token\":\"numeric-service:field:r7c1:1\"}]}",
+      "sha256": "89d8708c97e6bfa24017e5705b692d1ac0e17900a395f0963bbd40cf565c440e",
+      "receivedAt": "2026-09-27T17:42:25.233Z",
+      "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01",
+      "stepId": "node-5",
+      "recipient": "numeric-service",
+      "parsed": {
+        "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+        "node": 2,
+        "kind": "operands",
+        "op": "divide",
+        "args": [
+          {
+            "value": 398,
+            "token": "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802"
+          },
+          {
+            "value": 1203,
+            "token": "numeric-service:field:r7c1:1"
+          }
+        ]
+      }
+    }
+  ],
+  "result": {
+    "summary": {
+      "zh": "计算结果 0.33083957；新增披露 4 项，传输 4 个数值字段。",
+      "en": "Computed result 0.33083957; 4 new disclosure units and 4 numeric fields transmitted."
+    },
+    "recommendation": {
+      "zh": "保存的模型计划已重新执行。源值变化后的答案需按更新后的问题核对；执行完成不等于语义正确。",
+      "en": "The saved model plan has executed again. Check changed-source answers against the updated task; completion does not imply semantic correctness."
+    }
+  },
+  "report": "{\n  \"source\": \"BLK/2015/page_124.pdf-3\",\n  \"question\": \"what portion of the total future minimum commitments under operating leases is due in the next 36 months?\",\n  \"modelRecord\": \"frozen-v8-20260927-finqa-d05ec5d5e0c1-0\",\n  \"mode\": \"Saved real DeepSeek plan; fresh local and HTTP execution\",\n  \"condition\": \"capability_withdrawn\",\n  \"result\": 0.33083956774729845,\n  \"metrics\": {\n    \"executions\": 3,\n    \"remoteCalls\": 2,\n    \"numericFields\": 4,\n    \"bytes\": 596,\n    \"work\": 3,\n    \"reused\": 1,\n    \"invalidated\": 0,\n    \"planningMs\": 1.684900000000198,\n    \"peakLabels\": 3,\n    \"uniqueDisclosures\": 4,\n    \"elapsedMs\": 25.422599999998056\n  }\n}",
+  "metrics": {
+    "controlMs": [],
+    "modelCalls": 0,
+    "toolCalls": 2,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalBytes": 596,
+    "elapsedMs": 25.422599999998056
+  },
+  "executionMode": "controlled",
+  "uiVisible": true,
+  "startedAt": "2026-09-27T17:42:25.203Z",
+  "variant": "model-v8",
+  "savedModelRecord": {
+    "id": "frozen-v8-20260927-finqa-d05ec5d5e0c1-0",
+    "caseId": "finqa-d05ec5d5e0c1",
+    "model": "deepseek-flash",
+    "calls": [
+      {
+        "requestBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"messages\":[{\"role\":\"system\",\"content\":\"Solve a financial-table question by calling registered tools. First request inspect_source. The source reply contains field identifiers, row labels and the original header structure, but no business numeric values. Then call submit_calculation with a data-only program of at most 8 operations. Each operation has op and exactly two args; an arg is {field: \\\"r1c1\\\"}, {constant: 100}, or {step: 0} referring to a previous zero-indexed operation. Allowed ops: add, subtract, multiply, divide, min, max. Every operation must contribute to the final result. Use field IDs from the source reply. Ratios and percentage changes should be fractions (e.g. 0.12 for 12%), unless the question asks for a count or absolute amount. Do not infer or invent missing numeric values. Return the tool call only.\"},{\"role\":\"user\",\"content\":\"{\\\"requestId\\\":\\\"frozen-v8-20260927-finqa-d05ec5d5e0c1-0\\\",\\\"question\\\":\\\"what portion of the total future minimum commitments under operating leases is due in the next 36 months?\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"description\":\"Read the registered table structure and field schema, without numeric business values.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false}}},{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the executable calculation graph. The last node is the answer.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"inspect_source\"}},\"max_tokens\":1800}",
+        "requestSha256": "6bd82010bec92b6fc6ea2da213cd3da5b3839efe0141c555ff021b62839dc005",
+        "responseBody": "{\"id\":\"41f16ead-921c-46f0-86cc-34a1f011b080\",\"object\":\"chat.completion\",\"created\":1790487041,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"index\":0,\"id\":\"call_00_pLq2jg2XsYWd1jdpS04T2885\",\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"arguments\":\"{}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":493,\"completion_tokens\":17,\"total_tokens\":510,\"prompt_tokens_details\":{\"cached_tokens\":256},\"prompt_cache_hit_tokens\":256,\"prompt_cache_miss_tokens\":237},\"system_fingerprint\":\"aeb56401ca74e127821c4f9126dcb669\"}",
+        "responseSha256": "e450c49deacd91c95676c09622e487468158efd1bc19a31e3c935423a4eebcf0",
+        "status": 200,
+        "elapsedMs": 412.64699999999993
+      },
+      {
+        "requestBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"messages\":[{\"role\":\"system\",\"content\":\"Solve a financial-table question by calling registered tools. First request inspect_source. The source reply contains field identifiers, row labels and the original header structure, but no business numeric values. Then call submit_calculation with a data-only program of at most 8 operations. Each operation has op and exactly two args; an arg is {field: \\\"r1c1\\\"}, {constant: 100}, or {step: 0} referring to a previous zero-indexed operation. Allowed ops: add, subtract, multiply, divide, min, max. Every operation must contribute to the final result. Use field IDs from the source reply. Ratios and percentage changes should be fractions (e.g. 0.12 for 12%), unless the question asks for a count or absolute amount. Do not infer or invent missing numeric values. Return the tool call only.\"},{\"role\":\"user\",\"content\":\"{\\\"requestId\\\":\\\"frozen-v8-20260927-finqa-d05ec5d5e0c1-0\\\",\\\"question\\\":\\\"what portion of the total future minimum commitments under operating leases is due in the next 36 months?\\\"}\"},{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"index\":0,\"id\":\"call_00_pLq2jg2XsYWd1jdpS04T2885\",\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"arguments\":\"{}\"}}]},{\"role\":\"tool\",\"tool_call_id\":\"call_00_pLq2jg2XsYWd1jdpS04T2885\",\"content\":\"{\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"2016\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"2017\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c1\\\",\\\"row\\\":\\\"2018\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c1\\\",\\\"row\\\":\\\"2019\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c1\\\",\\\"row\\\":\\\"2020\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c1\\\",\\\"row\\\":\\\"Thereafter\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c1\\\",\\\"row\\\":\\\"Total\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"}],\\\"tableStructure\\\":[{\\\"sourceRow\\\":0,\\\"role\\\":\\\"header\\\",\\\"cells\\\":[\\\"Year\\\",\\\"Amount\\\"]},{\\\"sourceRow\\\":1,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2016\\\",\\\"{r1c1}\\\"]},{\\\"sourceRow\\\":2,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2017\\\",\\\"{r2c1}\\\"]},{\\\"sourceRow\\\":3,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2018\\\",\\\"{r3c1}\\\"]},{\\\"sourceRow\\\":4,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2019\\\",\\\"{r4c1}\\\"]},{\\\"sourceRow\\\":5,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2020\\\",\\\"{r5c1}\\\"]},{\\\"sourceRow\\\":6,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Thereafter\\\",\\\"{r6c1}\\\"]},{\\\"sourceRow\\\":7,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Total\\\",\\\"{r7c1}\\\"]}],\\\"headerRows\\\":[{\\\"sourceRow\\\":0,\\\"cells\\\":[\\\"Year\\\",\\\"Amount\\\"]}]}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"description\":\"Read the registered table structure and field schema, without numeric business values.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false}}},{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the executable calculation graph. The last node is the answer.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}},\"max_tokens\":1800}",
+        "requestSha256": "fbd9575e50a5744d7604bf23459cdfa7c6e430aab43c567feea7f9211a779e20",
+        "responseBody": "{\"id\":\"f3077dcd-38ad-442a-9e98-a507a7fc3552\",\"object\":\"chat.completion\",\"created\":1790487041,\"model\":\"deepseek-flash\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"index\":0,\"id\":\"call_00_lMJQFFZPgn7rEQ9u6zmw3390\",\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"arguments\":\"{\\\"program\\\": [{\\\"op\\\": \\\"add\\\", \\\"args\\\": [{\\\"field\\\": \\\"r1c1\\\"}, {\\\"field\\\": \\\"r2c1\\\"}]}, {\\\"op\\\": \\\"add\\\", \\\"args\\\": [{\\\"step\\\": 0}, {\\\"field\\\": \\\"r3c1\\\"}]}, {\\\"op\\\": \\\"divide\\\", \\\"args\\\": [{\\\"step\\\": 1}, {\\\"field\\\": \\\"r7c1\\\"}]}]}\"}}]},\"logprobs\":null,\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":1124,\"completion_tokens\":118,\"total_tokens\":1242,\"prompt_tokens_details\":{\"cached_tokens\":384},\"prompt_cache_hit_tokens\":384,\"prompt_cache_miss_tokens\":740},\"system_fingerprint\":\"aeb56401ca74e127821c4f9126dcb669\"}",
+        "responseSha256": "bff35e7c8cf2a8a0f99b6dd7cc5b59f4d808d54158dc866e9897206a52afa8cf",
+        "status": 200,
+        "elapsedMs": 837.2182000000003
+      }
+    ],
+    "status": "ready",
+    "startedAt": "2026-09-27T05:30:41.233Z",
+    "program": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r1c1"
+          },
+          {
+            "field": "r2c1"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c1"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "field": "r7c1"
+          }
+        ]
+      }
+    ],
+    "parentToolCallId": "call_00_lMJQFFZPgn7rEQ9u6zmw3390",
+    "programSha256": "b4d4b0a2691492f5181c323c3a06aba82aea712492aafdae933b099c179270b8",
+    "finishedAt": "2026-09-27T05:30:42.483Z",
+    "providerRecords": [
+      {
+        "id": "05f46e42-a341-423c-8fb3-2c88ad4c37ff",
+        "at": "2026-09-27T05:30:41.641Z",
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "endpoint": "https://api.deepseek.com/chat/completions",
+        "receiverBodySha256": "6bd82010bec92b6fc6ea2da213cd3da5b3839efe0141c555ff021b62839dc005",
+        "providerBodySha256": "418857d15ed592439a48f6886a5182bd41fedf8cc909eccc168b84ea15c57c77",
+        "providerBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"messages\":[{\"role\":\"system\",\"content\":\"Solve a financial-table question by calling registered tools. First request inspect_source. The source reply contains field identifiers, row labels and the original header structure, but no business numeric values. Then call submit_calculation with a data-only program of at most 8 operations. Each operation has op and exactly two args; an arg is {field: \\\"r1c1\\\"}, {constant: 100}, or {step: 0} referring to a previous zero-indexed operation. Allowed ops: add, subtract, multiply, divide, min, max. Every operation must contribute to the final result. Use field IDs from the source reply. Ratios and percentage changes should be fractions (e.g. 0.12 for 12%), unless the question asks for a count or absolute amount. Do not infer or invent missing numeric values. Return the tool call only.\"},{\"role\":\"user\",\"content\":\"{\\\"requestId\\\":\\\"frozen-v8-20260927-finqa-d05ec5d5e0c1-0\\\",\\\"question\\\":\\\"what portion of the total future minimum commitments under operating leases is due in the next 36 months?\\\"}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"description\":\"Read the registered table structure and field schema, without numeric business values.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false}}},{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the executable calculation graph. The last node is the answer.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"inspect_source\"}},\"max_tokens\":1800,\"thinking\":{\"type\":\"disabled\"}}",
+        "responseStatus": 200,
+        "responseSha256": "e450c49deacd91c95676c09622e487468158efd1bc19a31e3c935423a4eebcf0"
+      },
+      {
+        "id": "2014000c-0094-49f3-9deb-ef22bea03f52",
+        "at": "2026-09-27T05:30:42.481Z",
+        "provider": "deepseek",
+        "model": "deepseek-flash",
+        "endpoint": "https://api.deepseek.com/chat/completions",
+        "receiverBodySha256": "fbd9575e50a5744d7604bf23459cdfa7c6e430aab43c567feea7f9211a779e20",
+        "providerBodySha256": "23e6fec9b66c80cea6782165406e6d1f30094e7d972971fda8fda1841fba3e61",
+        "providerBody": "{\"model\":\"deepseek-flash\",\"temperature\":0,\"messages\":[{\"role\":\"system\",\"content\":\"Solve a financial-table question by calling registered tools. First request inspect_source. The source reply contains field identifiers, row labels and the original header structure, but no business numeric values. Then call submit_calculation with a data-only program of at most 8 operations. Each operation has op and exactly two args; an arg is {field: \\\"r1c1\\\"}, {constant: 100}, or {step: 0} referring to a previous zero-indexed operation. Allowed ops: add, subtract, multiply, divide, min, max. Every operation must contribute to the final result. Use field IDs from the source reply. Ratios and percentage changes should be fractions (e.g. 0.12 for 12%), unless the question asks for a count or absolute amount. Do not infer or invent missing numeric values. Return the tool call only.\"},{\"role\":\"user\",\"content\":\"{\\\"requestId\\\":\\\"frozen-v8-20260927-finqa-d05ec5d5e0c1-0\\\",\\\"question\\\":\\\"what portion of the total future minimum commitments under operating leases is due in the next 36 months?\\\"}\"},{\"role\":\"assistant\",\"content\":\"\",\"tool_calls\":[{\"index\":0,\"id\":\"call_00_pLq2jg2XsYWd1jdpS04T2885\",\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"arguments\":\"{}\"}}]},{\"role\":\"tool\",\"tool_call_id\":\"call_00_pLq2jg2XsYWd1jdpS04T2885\",\"content\":\"{\\\"schema\\\":[{\\\"id\\\":\\\"r1c1\\\",\\\"row\\\":\\\"2016\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r2c1\\\",\\\"row\\\":\\\"2017\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r3c1\\\",\\\"row\\\":\\\"2018\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r4c1\\\",\\\"row\\\":\\\"2019\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r5c1\\\",\\\"row\\\":\\\"2020\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r6c1\\\",\\\"row\\\":\\\"Thereafter\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"},{\\\"id\\\":\\\"r7c1\\\",\\\"row\\\":\\\"Total\\\",\\\"column\\\":\\\"Amount\\\",\\\"columnIndex\\\":1,\\\"unitHint\\\":\\\"Year\\\",\\\"valueUnit\\\":\\\"source units\\\"}],\\\"tableStructure\\\":[{\\\"sourceRow\\\":0,\\\"role\\\":\\\"header\\\",\\\"cells\\\":[\\\"Year\\\",\\\"Amount\\\"]},{\\\"sourceRow\\\":1,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2016\\\",\\\"{r1c1}\\\"]},{\\\"sourceRow\\\":2,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2017\\\",\\\"{r2c1}\\\"]},{\\\"sourceRow\\\":3,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2018\\\",\\\"{r3c1}\\\"]},{\\\"sourceRow\\\":4,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2019\\\",\\\"{r4c1}\\\"]},{\\\"sourceRow\\\":5,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"2020\\\",\\\"{r5c1}\\\"]},{\\\"sourceRow\\\":6,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Thereafter\\\",\\\"{r6c1}\\\"]},{\\\"sourceRow\\\":7,\\\"role\\\":\\\"data\\\",\\\"cells\\\":[\\\"Total\\\",\\\"{r7c1}\\\"]}],\\\"headerRows\\\":[{\\\"sourceRow\\\":0,\\\"cells\\\":[\\\"Year\\\",\\\"Amount\\\"]}]}\"}],\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"inspect_source\",\"description\":\"Read the registered table structure and field schema, without numeric business values.\",\"parameters\":{\"type\":\"object\",\"properties\":{},\"additionalProperties\":false}}},{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\",\"description\":\"Submit the executable calculation graph. The last node is the answer.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"program\":{\"type\":\"array\",\"minItems\":1,\"maxItems\":8,\"items\":{\"type\":\"object\",\"properties\":{\"op\":{\"type\":\"string\",\"enum\":[\"add\",\"subtract\",\"multiply\",\"divide\",\"min\",\"max\"]},\"args\":{\"type\":\"array\",\"minItems\":2,\"maxItems\":2,\"items\":{\"type\":\"object\",\"properties\":{\"field\":{\"type\":\"string\"},\"constant\":{\"type\":\"number\"},\"step\":{\"type\":\"integer\",\"minimum\":0}},\"additionalProperties\":false}}},\"required\":[\"op\",\"args\"],\"additionalProperties\":false}}},\"required\":[\"program\"],\"additionalProperties\":false}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit_calculation\"}},\"max_tokens\":1800,\"thinking\":{\"type\":\"disabled\"}}",
+        "responseStatus": 200,
+        "responseSha256": "bff35e7c8cf2a8a0f99b6dd7cc5b59f4d808d54158dc866e9897206a52afa8cf"
+      }
+    ]
+  },
+  "repairMetrics": {
+    "newDisclosures": 4,
+    "reused": 1
+  },
+  "repairEvidence": {
+    "id": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+    "caseId": "finqa-d05ec5d5e0c1",
+    "modelRecordId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01",
+    "parentToolCallId": "call_00_lMJQFFZPgn7rEQ9u6zmw3390",
+    "condition": "capability_withdrawn",
+    "method": "live_budget_0",
+    "status": "completed",
+    "events": [
+      {
+        "seq": 0,
+        "type": "graph.created",
+        "at": "2026-09-27T17:42:25.210Z",
+        "program": [
+          {
+            "op": "add",
+            "args": [
+              {
+                "field": "r1c1"
+              },
+              {
+                "field": "r2c1"
+              }
+            ]
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "step": 0
+              },
+              {
+                "field": "r3c1"
+              }
+            ]
+          },
+          {
+            "op": "divide",
+            "args": [
+              {
+                "step": 1
+              },
+              {
+                "field": "r7c1"
+              }
+            ]
+          }
+        ],
+        "programSha256": "b4d4b0a2691492f5181c323c3a06aba82aea712492aafdae933b099c179270b8",
+        "modelRecordId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01",
+        "parentToolCallId": "call_00_lMJQFFZPgn7rEQ9u6zmw3390"
+      },
+      {
+        "seq": 1,
+        "type": "node.completed",
+        "at": "2026-09-27T17:42:25.212Z",
+        "index": 0,
+        "op": "add",
+        "location": "local",
+        "view": "local",
+        "value": 267,
+        "stamp": "d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+        "tokens": []
+      },
+      {
+        "seq": 2,
+        "type": "state.changed",
+        "at": "2026-09-27T17:42:25.213Z",
+        "controlled": true,
+        "field": null,
+        "before": {
+          "facts": {
+            "r1c1": 134,
+            "r2c1": 133,
+            "r3c1": 131,
+            "r4c1": 125,
+            "r5c1": 120,
+            "r6c1": 560,
+            "r7c1": 1203
+          },
+          "localOps": [
+            "add",
+            "subtract"
+          ]
+        },
+        "after": {
+          "facts": {
+            "r1c1": 134,
+            "r2c1": 133,
+            "r3c1": 131,
+            "r4c1": 125,
+            "r5c1": 120,
+            "r6c1": 560,
+            "r7c1": 1203
+          },
+          "localOps": []
+        },
+        "invalidated": [],
+        "retained": [
+          0
+        ]
+      },
+      {
+        "seq": 3,
+        "type": "request.sent",
+        "at": "2026-09-27T17:42:25.213Z",
+        "index": 1,
+        "view": "operands",
+        "payload": {
+          "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+          "node": 1,
+          "kind": "operands",
+          "op": "add",
+          "args": [
+            {
+              "value": 267,
+              "token": "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde"
+            },
+            {
+              "value": 131,
+              "token": "numeric-service:field:r3c1:1"
+            }
+          ]
+        },
+        "bodySha256": "82a2616f441f699baf43b8e3c3f9375547c15df2babc0f80b6ff5d44598b1088",
+        "tokens": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:field:r3c1:1"
+        ]
+      },
+      {
+        "seq": 4,
+        "type": "node.completed",
+        "at": "2026-09-27T17:42:25.230Z",
+        "index": 1,
+        "op": "add",
+        "location": "numeric-service",
+        "view": "operands",
+        "value": 398,
+        "stamp": "e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+        "tokens": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:field:r3c1:1"
+        ]
+      },
+      {
+        "seq": 5,
+        "type": "request.sent",
+        "at": "2026-09-27T17:42:25.230Z",
+        "index": 2,
+        "view": "operands",
+        "payload": {
+          "runId": "28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0",
+          "node": 2,
+          "kind": "operands",
+          "op": "divide",
+          "args": [
+            {
+              "value": 398,
+              "token": "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802"
+            },
+            {
+              "value": 1203,
+              "token": "numeric-service:field:r7c1:1"
+            }
+          ]
+        },
+        "bodySha256": "89d8708c97e6bfa24017e5705b692d1ac0e17900a395f0963bbd40cf565c440e",
+        "tokens": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ]
+      },
+      {
+        "seq": 6,
+        "type": "node.completed",
+        "at": "2026-09-27T17:42:25.234Z",
+        "index": 2,
+        "op": "divide",
+        "location": "numeric-service",
+        "view": "operands",
+        "value": 0.33083956774729845,
+        "stamp": "916f9c74dca5d6cdbb0c5e8122ecd398e6d12a0f73b0a9cc83152ef833f9527f",
+        "tokens": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ]
+      },
+      {
+        "seq": 7,
+        "type": "run.completed",
+        "at": "2026-09-27T17:42:25.235Z",
+        "status": "completed",
+        "value": 0.33083956774729845
+      }
+    ],
+    "receipts": [
+      {
+        "id": "b9173f77-1b74-43f3-aef9-b0a3cbfc3060",
+        "at": "2026-09-27T17:42:25.226Z",
+        "body": "{\"runId\":\"28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0\",\"node\":1,\"kind\":\"operands\",\"op\":\"add\",\"args\":[{\"value\":267,\"token\":\"numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde\"},{\"value\":131,\"token\":\"numeric-service:field:r3c1:1\"}]}",
+        "bodySha256": "82a2616f441f699baf43b8e3c3f9375547c15df2babc0f80b6ff5d44598b1088",
+        "bytes": 296,
+        "value": 398
+      },
+      {
+        "id": "40051185-233d-4439-a155-97f314e34579",
+        "at": "2026-09-27T17:42:25.233Z",
+        "body": "{\"runId\":\"28fdbf08-48c3-4afb-ab81-2b0d749e8e01.capability_withdrawn.live_budget_0\",\"node\":2,\"kind\":\"operands\",\"op\":\"divide\",\"args\":[{\"value\":398,\"token\":\"numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802\"},{\"value\":1203,\"token\":\"numeric-service:field:r7c1:1\"}]}",
+        "bodySha256": "89d8708c97e6bfa24017e5705b692d1ac0e17900a395f0963bbd40cf565c440e",
+        "bytes": 300,
+        "value": 0.33083956774729845
+      }
+    ],
+    "decisions": [
+      {
+        "index": 0,
+        "phase": 0,
+        "pending": [
+          0,
+          1,
+          2
+        ],
+        "choice": "local",
+        "path": [
+          "local",
+          "local",
+          "operands"
+        ],
+        "fields": 2,
+        "budget": 2,
+        "referenceFields": 2,
+        "newDisclosures": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ],
+        "peak": 3,
+        "width": 3,
+        "visited": 15,
+        "history": [],
+        "versions": {
+          "r1c1": 1,
+          "r2c1": 1,
+          "r3c1": 1,
+          "r4c1": 1,
+          "r5c1": 1,
+          "r6c1": 1,
+          "r7c1": 1
+        },
+        "capabilityVersion": 1
+      },
+      {
+        "index": 1,
+        "phase": 1,
+        "pending": [
+          1,
+          2
+        ],
+        "choice": "operands",
+        "path": [
+          "operands",
+          "operands"
+        ],
+        "fields": 4,
+        "budget": 4,
+        "referenceFields": 4,
+        "newDisclosures": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r3c1:1",
+          "numeric-service:field:r7c1:1"
+        ],
+        "peak": 2,
+        "width": 3,
+        "visited": 6,
+        "history": [],
+        "versions": {
+          "r1c1": 1,
+          "r2c1": 1,
+          "r3c1": 1,
+          "r4c1": 1,
+          "r5c1": 1,
+          "r6c1": 1,
+          "r7c1": 1
+        },
+        "capabilityVersion": 2
+      },
+      {
+        "index": 2,
+        "phase": 1,
+        "pending": [
+          2
+        ],
+        "choice": "operands",
+        "path": [
+          "operands"
+        ],
+        "fields": 2,
+        "budget": 2,
+        "referenceFields": 2,
+        "newDisclosures": [
+          "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+          "numeric-service:field:r7c1:1"
+        ],
+        "peak": 1,
+        "width": 0,
+        "visited": 2,
+        "history": [
+          "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+          "numeric-service:field:r3c1:1"
+        ],
+        "versions": {
+          "r1c1": 1,
+          "r2c1": 1,
+          "r3c1": 1,
+          "r4c1": 1,
+          "r5c1": 1,
+          "r6c1": 1,
+          "r7c1": 1
+        },
+        "capabilityVersion": 2
+      }
+    ],
+    "startedAt": "2026-09-27T17:42:25.209Z",
+    "metrics": {
+      "executions": 3,
+      "remoteCalls": 2,
+      "numericFields": 4,
+      "bytes": 596,
+      "work": 3,
+      "reused": 1,
+      "invalidated": 0,
+      "planningMs": 1.684900000000198,
+      "peakLabels": 3,
+      "uniqueDisclosures": 4,
+      "elapsedMs": 25.422599999998056
+    },
+    "value": 0.33083956774729845,
+    "finalFacts": {
+      "r1c1": 134,
+      "r2c1": 133,
+      "r3c1": 131,
+      "r4c1": 125,
+      "r5c1": 120,
+      "r6c1": 560,
+      "r7c1": 1203
+    },
+    "finalVersions": {
+      "r1c1": 1,
+      "r2c1": 1,
+      "r3c1": 1,
+      "r4c1": 1,
+      "r5c1": 1,
+      "r6c1": 1,
+      "r7c1": 1
+    },
+    "disclosures": [
+      "numeric-service:derived:d3c36defea13310df412070cbf71cca4731d1e2c70fb70f25dfbc374af036fde",
+      "numeric-service:derived:e64e95cf4cf3eaf22292a2863d519829b4a19754f0261f0b86d03569aab41802",
+      "numeric-service:field:r3c1:1",
+      "numeric-service:field:r7c1:1"
+    ],
+    "finishedAt": "2026-09-27T17:42:25.235Z"
+  },
+  "finishedAt": "2026-09-27T17:42:25.235Z"
+}

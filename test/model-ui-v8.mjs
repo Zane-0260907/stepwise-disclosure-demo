@@ -6,7 +6,7 @@ const out=new URL('../evidence/model-showcase-v8/',import.meta.url);await mkdir(
 const browser=await chromium.launch({executablePath:process.env.EDGE_PATH||(process.platform==='win32'?'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe':undefined),headless:true});
 try{
  const page=await browser.newPage({baseURL:process.env.DEMO_BASE||'http://127.0.0.1:4793',viewport:{width:1600,height:1000},deviceScaleFactor:1.5}),errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('/',{waitUntil:'networkidle'});await page.selectOption('#scenario-select','model-capability-withdrawn');assert.equal(await page.locator('#method-select').inputValue(),'budget_0');
+ await page.goto('/',{waitUntil:'networkidle'});await page.selectOption('#scenario-select','model-capability-withdrawn');await page.selectOption('#method-select','budget_0');assert.equal(await page.locator('#method-select').inputValue(),'budget_0');
  let id;page.on('response',async r=>{if(r.request().method()==='POST'&&r.url().endsWith('/api/research/runs'))id=(await r.json()).id;});
  await page.click('#live-button');await page.waitForFunction(()=>document.querySelector('#header-state').textContent==='已完成'&&document.querySelector('#agent-result').textContent.includes('页面逐步展示'),null,{timeout:90000});
  const run=await(await page.request.get('/api/research/runs/'+id)).json();assert.equal(run.status,'completed',run.error);assert.equal(run.metrics.modelCalls,0);assert.equal(run.savedModelRecord.calls.length,2);assert.equal(run.repairEvidence.metrics.reused,1);assert.equal(run.receipts.length,2);

@@ -1,0 +1,28 @@
+{
+  "frozenAt": "2026-09-27T17:17:48.021Z",
+  "sourceHashes": {
+    "src/research/component-frontier.mjs": "4a6f65033719471bb20b2603b51c93253cc6783a5abab13e4f94ed7992cfc2e2",
+    "src/research/live-frontier.mjs": "ef5513f44f62bb39947f970338ff33a3d4e6d37c7e51a87cf5e7005181cfc3c7",
+    "scripts/frontier-milp.py": "a621e77f0e3a3f81b2bed26a2c1f8ae44613b981bcd8e4739f7740dabd4ee6e9",
+    "scripts/run-frontier-confirmation.mjs": "1278b12d2e6f13ab9ed297594974d4d491c215760f8cf0e0aa71e2388378a323"
+  },
+  "workloadsSha256": "87c3189e497a84a154f24f24ac5ac5f9018d4af5b627414b230005a7a208924b",
+  "cases": 48,
+  "seedStart": 81000,
+  "modifications": "Work cost uniformly 1..4; each candidate token independently in initial history with p=.10.",
+  "relation": "New cost/history draws of the six development workload families, not a new real-world domain.",
+  "methods": [
+    "greedy",
+    "live-frontier",
+    "component-frontier",
+    "milp"
+  ],
+  "repeats": 3,
+  "maxLabels": 4096,
+  "slacks": [
+    0,
+    0.25,
+    1
+  ],
+  "timeLimitMs": 10000
+}

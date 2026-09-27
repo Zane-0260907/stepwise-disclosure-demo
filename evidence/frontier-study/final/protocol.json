@@ -1,0 +1,29 @@
+{
+  "frozenAt": "2026-09-27T17:19:10.958Z",
+  "sourceHashes": {
+    "src/research/disclosure-frontier.mjs": "7cc63b12fe2b82dfca4ae53e1f9309bdb1410c67626d7aaf7d236dfcc546c0c0",
+    "src/research/lex-frontier.mjs": "01f9984871e532bf67e33db9577335397672b7f0ff41c2ad311afc91b13dda6b",
+    "src/research/live-frontier.mjs": "ef5513f44f62bb39947f970338ff33a3d4e6d37c7e51a87cf5e7005181cfc3c7",
+    "scripts/frontier-milp.py": "a621e77f0e3a3f81b2bed26a2c1f8ae44613b981bcd8e4739f7740dabd4ee6e9",
+    "scripts/run-disclosure-study.mjs": "f8e993b26218345b83d530fb02567b2b01a44c8584fe292c9e819f116bb0f4ad"
+  },
+  "workloadsSha256": "65fdd349fdda9b959d4e7de5e0932e48e5122ab1bd4fdeaac22367e762d12c35",
+  "cases": 48,
+  "seedStart": 91000,
+  "modifications": "Work cost uniformly 1..4; each candidate token independently in initial history with p=.10.",
+  "relation": "New cost/history draws of the six development workload families, not a new real-world domain.",
+  "methods": [
+    "greedy",
+    "live-frontier",
+    "disclosure-frontier",
+    "milp"
+  ],
+  "repeats": 3,
+  "maxLabels": 4096,
+  "slacks": [
+    0,
+    0.25,
+    1
+  ],
+  "timeLimitMs": 10000
+}

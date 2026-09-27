@@ -1,0 +1,9 @@
+{
+  "node": "v24.19.0",
+  "platform": "win32",
+  "arch": "x64",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+  "logicalCpus": 20,
+  "memoryBytes": 34011463680,
+  "protocolSha256": "900a1f84aecee18a907b9b57c5fd632e191374150fdd7d9069f92a57c4228ba1"
+}

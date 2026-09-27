@@ -11,3 +11,6 @@
 # Preserve the exact pre-run bytes hashed by the v4 protocol on every OS.
 src/research/sealed-request-v4.mjs -text whitespace=cr-at-eol,-blank-at-eof
 src/research/controlled-execution-v4.mjs -text whitespace=cr-at-eol,-blank-at-eof
+evidence/frontier-study/** -text
+src/research/bounded-disclosure-frontier.mjs -text
+src/research/lex-frontier.mjs -text

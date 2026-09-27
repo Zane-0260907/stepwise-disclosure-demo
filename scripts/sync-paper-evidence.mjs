@@ -30,6 +30,10 @@ const result={scope:'Counts from separate studies are never pooled. V10 is devel
     methods:rows.map(({method,attempts,stateMatches,agentCalls,protectedToolLeavesShownRaw,bindingGuardRefusals,protocolViolations})=>({method,attempts,stateMatches,agentCalls,protectedToolLeavesShownRaw,bindingGuardRefusals,protocolViolations}))},
   mechanism:paired.totals,
   constructedCheck:{stages:contract.steps.length,httpRequests:contract.receipts.length,cumulativeItems:contract.steps.at(-1).cumulativeItems,modelCalls:0}};
+const planningBytes=await readFile(new URL('evidence/frontier-study/summary.json',base));
+const planning=JSON.parse(planningBytes);
+result.planning={final:planning.final,serialTiming:planning.serialTiming,integration:planning.integration};
+result.sources.push({path:'evidence/frontier-study/summary.json',sha256:createHash('sha256').update(planningBytes).digest('hex'),digest:'exact file bytes'});
 const out=new URL('paper/zh-CN/evidence.json',base);
 if(process.argv.includes('--check'))assert.deepEqual(JSON.parse(await readFile(out,'utf8')),result);
 else{await mkdir(new URL('.',out),{recursive:true});await writeFile(out,JSON.stringify(result,null,2)+'\n');}

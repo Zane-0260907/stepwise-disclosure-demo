@@ -37,7 +37,7 @@
 An agent can discover a new step only after reading local material or receiving a tool result. That step may need a different executor and a different set of facts. This prototype makes both decisions at each registered step: use a local rule when it can complete the operation; otherwise construct a view for the actual external recipient, check the final request before transmission, and record what the recipient received.
 
 <p align="center">
-  <img src="evidence/model-showcase-v8/model.en.png" alt="English interface showing a saved model plan, fresh execution, capability change and receiver view" width="920">
+  <img src="evidence/frontier-showcase/model.en.png" alt="English interface showing a saved model plan, fresh execution, capability change and receiver view" width="920">
 </p>
 <p align="center"><em>A saved real DeepSeek plan drives fresh HTTP execution. Select a step to inspect its view, remaining budget and actual receiver record.</em></p>
 
@@ -57,21 +57,20 @@ Node.js runs the step planner, receiver and web interface; PDF.js reads the synt
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
-## Current version: real model graphs and bounded continuation
+## Current version: inspectable execution and exact planning
 
-**Updated Chinese manuscript:** [editable four-page Word draft](paper/zh-CN/按步执行与信息共享_中文最新稿.docx) · [PDF](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf). The manuscript now includes both the financial study and the native multi-turn development results, including the fixed-trajectory ablation. Its [numerical evidence map](paper/zh-CN/evidence.json) is regenerated from checked source records. The approved browser walkthrough continues to use the financial route; native business tasks remain a separate executable adapter.
+[Four-page Chinese Word draft](paper/zh-CN/按步执行与信息共享_中文最新稿.docx) · [PDF](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf) · [Equations and pseudocode](paper/zh-CN/公式与算法源码.md) · [Complete reproduction guide](docs/reproduction-frontier.md)
 
-**Registered requirement controller:** run `node scripts/run-requirement-demo.mjs` for a real local HTTP example of derived input, capability withdrawal, rechecking and local completion. This is a constructed integration check, not a new benchmark or evidence of algorithmic superiority. [Inputs, decision rule, exact trace and limitations](docs/requirement-controller.md).
+The new planner retires suffix-irrelevant token identities from search state and combines disclosure-disjoint cost components under one transmission budget. Full recipient history persists; new steps and state changes trigger replanning. Alternatives must be registered and output-equivalent. [Assumptions and exactness proof](docs/live-frontier-proof.md).
 
-> **V10 development evidence:** original multi-turn retail/airline tasks execute native state-changing tools, with locally resolved references and a common confirmation layer. All 952 real model calls are available for offline audit. The six training tasks do not establish a new placement algorithm or an added strong-baseline benefit. [Exact results, limitations and reproduction](evidence/development-v10/README.md).
+| Evidence | Result | What it establishes |
+| :-- | :-- | :-- |
+| 48 constructed workloads, three budgets | 144/144 match independent MILP optima | Exactness on the finite-choice study |
+| Key-mechanism ablation | 129/144 complete; 15 hit the state limit | A measurable role for compression and decomposition |
+| Reexecution of real model plans | 480 completions, 522 HTTP receipts | Plans connect to actual dispatch |
+| 0% / 25% / 100% extra field budget | 1.94% / 14.62% / 27.47% fewer distinct items | Benefits depend on budget; traffic can increase |
 
-> **Mechanism gate:** a fixed-trajectory intervention compared 107 actions in 12 recorded trajectories. Removing the additional reference checks changed no business call or final state. The current candidate has not demonstrated an added mechanism benefit. [Evidence and related-work assessment](docs/mechanism-gate.zh-CN.md).
-
-> **Earlier development:** the v9 delayed-view candidate did not pass its initial strong-baseline comparison. [Read the negative result and reproduce all 202 main-study calls offline](evidence/development-v9/README.md). This is not a new successful paper result.
-
-The original goal remains **where each step runs and what its recipient receives**. V8 connects real model tool calls, a calculation graph, source/capability changes, valid-result reuse and actual receiver records. A shared phase budget bounds repeated numeric-field transmissions relative to the same phase's greedy continuation.
-
-**Start here:** choose **Real model plan · Local capability changes**, run **Bound transmissions · reuse valid results**, and compare with **Restart all after the change**. Without a key, a saved real model plan drives new computations and HTTP requests. Use the batch command with your own key for new model calls. [Detailed English walkthrough and reproduction](docs/reproduction-v8.md).
+These are not 144 natural tasks or new model calls. Source model-label agreement remains 28/48; the planner does not correct model answers. [All results, failures and the timing correction](evidence/frontier-study/README.md) are public.
 
 ## Getting started
 
@@ -125,149 +124,45 @@ Select **DeepSeek · bring your key** in the interface. If port 4793 is occupied
 
 ## Usage
 
-Select **Local rule executor** for a fresh run, then compare these synthetic cases:
+1. Choose **Real model plan · Local capability changes**, keep the default compressed planner, and start.
+2. The left pane advances automatically. Inspect placement, input, actual receiver body and budget on the right. A registered intervention withdraws local capability after the first calculation; the valid result is retained.
+3. Inspect an earlier step, then use **Follow current step** to resume following. Files, preview and downloads preserve the source and trace.
+4. Compare **Restart all after the change**. The genuine model plan is saved; this run performs fresh computation and HTTP requests without a key.
 
-| Case | What to inspect |
-| :-- | :-- |
-| Standard clause | The PDF is parsed and a supported step completes locally, without a model analysis request. |
-| Reference clause | A new lookup appears during execution. Its checked view reaches a separate local HTTP receiver; the returned versioned reference is used by the next step. |
-| Revoke before send | Revoking at the pause point blocks the pending request. Allowing the same step on another run produces a receiver record to compare. |
-
-Click a step in the middle pane to inspect its selected recipient, facts sent, facts retained locally, request digest and result. The offline executor parses the PDF and writes a fresh run record each time, but its finite rules do not demonstrate language-model understanding. The **DeepSeek replay** entries reproduce preserved real calls without a key or a new provider request. Start with **Request missing facts** to see an initially insufficient view, a model-originated fact request, local authorization, and a second analysis. See the [step-by-step walkthrough](docs/demo-walkthrough.md). Slower UI playback is not experiment runtime.
-
-<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+Presentation pacing is excluded from execution time. The short model plans have the same optimum under greedy and exact planning; the separate study measures differences on longer workloads. [Detailed walkthrough and troubleshooting](docs/reproduction-frontier.md).
 
 ## Reproduce the experiment
 
-### V8: real model plans and a complete execution chain
-
-**24 public questions · 48 model plans · 96 actual calls · 1,440 paired executions.** Each plan is shared across five conditions and six controllers; these are not 1,440 independent model conversations.
-
-| Measurement | Restart | Greedy repair | Frontier | Budget 0% |
-|:--|--:|--:|--:|--:|
-| Actual HTTP operator calls | 331 | 261 | 261 | 261 |
-| Numeric fields transmitted | 724 | 500 | 500 | 500 |
-| Distinct disclosure units | 429 | 425 | 425 | 425 |
-| Program-consistent / 240 | 240 | 240 | 240 | 240 |
-| Reference-expression agreement / 240 | 137 | 137 | 137 | 137 |
-
-Original-label agreement is **28/48**, not human-adjudicated correctness; two average-question reference programs are suspect and remain unchanged. Reuse reduces calls 21.1%; **frontier and budget variants show no incremental benefit on this batch**. All disagreements and null results are public.
-
-<p align="center"><img src="evidence/validation-v8/tradeoffs.en.svg" alt="Observed model-graph execution costs and no incremental frontier benefit" width="1000"></p>
-
-```sh
-unzip -o evidence/validation-v8/reproduction-records.zip -d .
-npm run verify:v8
-```
-
-The [complete guide](docs/reproduction-v8.md) covers the first walkthrough, offline checks, new paid calls, budgets, failures and metric limits. Earlier studies below remain separate; their observations are not pooled with V8.
-
-### V7: dynamic repair, with an actual external check component
-
-**288 controlled cases · 6 methods · 1,728 executions · 3,684 HTTP receipts.** FreshCtx 0.16.0 supplies 576 real action-boundary checks; our wrapper supplies the recovery policy.
-
-| Method | Contract-compliant / 288 | Distinct disclosures | HTTP executions | Fields transmitted |
-|:--|--:|--:|--:|--:|
-| Payload-only ablation | 108 | 852 | 576 | 966 |
-| Complete restart | 288 | 870 | 672 | 1,884 |
-| Greedy repair | 288 | 834 | 588 | 1,002 |
-| Frontier repair | 288 | 810 | 588 | 1,548 |
-| FreshCtx + restart | 288 | 870 | 672 | 1,884 |
-| FreshCtx + frontier repair | 288 | 810 | 588 | 1,548 |
-
-**288 compliant = 264 completed + 24 correctly blocked.** Repair reduces remote work 12.5% versus restart. Frontier selection reduces distinct disclosures 2.9% versus greedy, but increases transmitted fields 54.5%. These are controlled parameter variants, not independent real-world tasks; disclosure counts are not a semantic privacy guarantee.
-
-<p align="center"><img src="evidence/validation-v7/tradeoffs.en.svg" alt="Measured repair, disclosure and traffic tradeoffs; panel f is a separate model study" width="1000"></p>
-
-```sh
-python -m zipfile -e evidence/validation-v7/reproduction-records.zip .
-npm run verify:v7
-```
-
-No key or FreshCtx installation is needed to verify saved records. To run new experiments, follow the [complete v7 guide](docs/reproduction-v7.md) for a hash-pinned FreshCtx environment, commands, expected totals, per-case records, methods and troubleshooting.
-
-### V6: separately preserved real DeepSeek utility study
-
-**Separate v6 evidence: 600 tasks · 1,210 real DeepSeek requests · 60 public pages from 57 company-year reports.** The protocol was frozen before test calls. Every failure remains in the denominator.
-
-| Method | Correct / planned | Business values sent per task | Calls |
-|:--|--:|--:|--:|
-| All values, one plan | 96/120 | 14.833 | 120 |
-| Schema plan, local calculation | 98/120 | 0 | 120 |
-| Requested cells | 94/120 | 2.417 | 236 |
-| Three proposals + value-free review | 95/120 | 0 | 366 |
-| Three proposals + conflict view | 96/120 | 0.075 | 368 |
-
-Single-pass local calculation sends no business cell values. It still exposes the question, schema, years and units. Its accuracy difference against full values is **+1.67 points, descriptive interval −5.83 to +9.02**; this does not establish superiority or non-inferiority. Conflict review adds calls without an established utility gain, so it remains experimental.
-
-<p align="center"><img src="evidence/validation-v6/tradeoffs.en.svg" alt="Current measured correctness, business-value transmission, runtime, paired uncertainty and correlated errors" width="1000"></p>
-
-### Verify without a model key
-
-Run from the repository root. Python is needed only for standard-library archive extraction; use `python3` where appropriate.
-
 ```sh
 npm test
-python -m zipfile -e evidence/validation-v6/reproduction-records.zip .
-npm run verify:v6
-node scripts/verify-corrected-showcase.mjs
+node scripts/verify-frontier-study.mjs
+python scripts/analyze-frontier-study.py --check
+python -m zipfile -e evidence/validation-v8/reproduction-records.zip .
+node scripts/run-live-integration.mjs --check
 ```
 
-Expected totals: **600 tasks / 1,210 provider requests / 1,310 verified programs**. The script reconstructs table roles from the original cells, checks frozen hashes, re-executes programs, recomputes scores and matches every request/response to a distinct provider record. It makes no model calls. Three additional development showcase runs (five calls) are verified separately.
+Expect 4,380 recorded paths checked, 144 final settings solved again, and 480 actual reexecutions. Python checks use its standard library. No model API is called.
 
-### Run a new experiment
-
-After securely setting your own `DEEPSEEK_API_KEY` as described above:
-
-```sh
-npm run experiment:v6 -- --run-id=my-v6-01
-node scripts/verify-v6.mjs --run-id=my-v6-01
-```
-
-A named run resumes missing jobs only. New results stay under ignored `data/research/validation/<run-id>/`; completed failures are not retried and published evidence is not overwritten. New provider outputs may differ from the preserved records.
-
-### Redraw the figure
-
-```sh
-pip install -r requirements-plots.txt
-python scripts/plot-v6.py --lang en
-python scripts/plot-v6.py --lang zh
-```
-
-The [step-by-step reproduction guide](docs/reproduction-v6.md) covers installation, the walkthrough, credentials, sampling, all methods, uncertainty, failures and troubleshooting. [Frozen protocol, results and archives](evidence/validation-v6/) are public. The [bounded conflict-view mechanism](docs/conflict-view.md) explains what its minimum-cover guarantee does and does not mean.
-
-<details>
-<summary><strong>Earlier experiments and the table-adapter correction</strong></summary>
-
-- **v4:** 256 synthetic-control tasks and 240 earlier table tasks. [Records](evidence/validation-v4/) · [Reproduction](docs/reproduction-v4.md).
-- **v5:** 600 table tasks / 1,579 real calls. Candidate agreement did not resolve the observed utility loss. [Records](evidence/validation-v5/).
-- **Correction:** v4/v5 sometimes hid year headers as business values, removing column meanings. Their numeric comparisons must be interpreted with this limitation. V6 uses the same repaired structure for all methods and excludes prior company-year reports. The repair is not claimed as an algorithmic invention. [Full correction](docs/table-adapter-correction.md).
-- **v1–v3:** original [900-task archive](evidence/research/), [432-task study](evidence/validation-v2/), and [448-task study](evidence/validation-v3/) remain unchanged.
-
-Historical results are not pooled into one success rate. A difference between batches is not a causal estimate of the adapter repair.
-
-```sh
-python -m zipfile -e evidence/validation-v5/reproduction-records.zip .
-npm run verify:v5
-```
-
-</details>
-
-<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+To run the independent optimizer or time your own machine, follow the [complete guide](docs/reproduction-frontier.md#3-run-the-independent-optimizer-again), install `requirements-frontier.txt`, and run `node scripts/run-disclosure-study.mjs --out=data/research/frontier-local`. New records go to a separate local directory; published evidence remains intact.
 
 ## Evidence and limitations
 
-The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v8 prospective model-graph study, with v7/v6 retained separately. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
+- Disclosure-item counts are not a semantic privacy guarantee. At 25% extra field budget, distinct items fall 14.62% while transmitted fields rise 18.90%.
+- Exactness covers registered equivalent alternatives and the currently known suffix. Runtime history is retained; unknown future steps are not predicted.
+- Original model errors, unsuccessful candidates and null results remain available. Separate studies are not pooled into one success rate.
+- This is an independent research UI; the commercial client is excluded. The Chinese manuscript is an editorial draft. Author ORCIDs, deferred video and human ratings remain outstanding.
 
-The [progressive showcase](evidence/progressive-showcase/) is one additional real run, excluded from batch totals. It preserves the model's request for a needed late-day count **and an unnecessary contract amount**, followed by the CNY 1,150 result. The [earlier reference-lookup pair](evidence/research/deepseek-live-20260926/) is also retained separately. Neither is a substitute for batch evaluation.
+<details>
+<summary><strong>Historical experiments and development records</strong></summary>
 
-- Success is checked against author-defined structured labels, not expert assessment of free-text advice. A 24-output blinded author-review packet is prepared; **human ratings are pending**.
-- V7 runs the actual FreshCtx 0.16.0 check component with matched dependencies and our documented recovery wrappers. No end-to-end comparison against other complete agent systems has been run. [Research positioning and closest work](docs/research-position.md) states the overlap with MINIM, ToolMinimize, PlanTwin and prior minimization work. Local abstraction, active acquisition and calculation pushdown are not claimed as first inventions.
-- The trusted local controller binds the used source values, recipient, current policy and exact application request. The separate local receiver and adapter record actual bytes; they are not cloud-provider certification.
-- Field counts do not detect inferred sensitive information. Allowlisted facts can still be unnecessary. Arbitrary network bypasses and a compromised local controller are outside the model.
-- Revocation blocks a future dispatch; it cannot retract a previous disclosure. Playback delays are never counted as model execution time.
+- [V8 real model plans](docs/reproduction-v8.md): 24 questions, 48 plans, 96 model calls; no additional planning benefit on those short tasks.
+- [V7 dynamic repair](docs/reproduction-v7.md) · [V6 model study](docs/reproduction-v6.md).
+- [Unsuccessful V9 candidate](evidence/development-v9/README.md) · [V10 native business development](evidence/development-v10/README.md) · [Mechanism attribution check](docs/mechanism-gate.zh-CN.md).
+- [Earlier adapter correction](docs/table-adapter-correction.md) · [All stages of the current study](evidence/frontier-study/README.md).
 
-<p align="right"><a href="#readme-top">Back to top ↑</a></p>
+Different batches are not independent samples of one study; development results are not held-out confirmation.
+
+</details>
 
 ## Repository map
 

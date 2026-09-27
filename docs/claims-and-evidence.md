@@ -1,6 +1,18 @@
 # Claims and their evidence
 
-## Current v8 evidence
+## Current exact-planning evidence
+
+| Claim | Evidence | Limit |
+| :-- | :-- | :-- |
+| Retiring suffix-irrelevant identities preserves the registered objective | [Invariant and dominance proof](live-frontier-proof.md); 250 exhaustive small cases; 144 final settings match independent MILP | Equivalent outputs, known suffix and representation-independent feasibility; established DP/frontier techniques |
+| Complete compression resolves failures of the basic retirement ablation | 144/144 versus 129/144 completions on identical final inputs; 287 versus 3,867 maximum retained states among successful settings | Synthetic families used during development; unseen high-overlap problems can still hit the state limit |
+| Lower distinct disclosure can cost more traffic | At 25% budget slack: 923 versus 1,081 items, 1,906 versus 1,603 fields | Not semantic privacy and not a universal communication saving |
+| Current planner is connected to actual dispatch | 480 actual reexecutions and 522 receiver bodies; bilingual UI traces | Saved model plans, loopback operators, no new provider calls; no added plan benefit on these short programs |
+| Measurements and manuscript are reproducible | Frozen source bytes, complete records, serial timing correction, claim-to-source digests and cross-platform checks | Timing hardware matters; original model-label agreement is still 28/48; human review pending |
+
+[All stages and limitations](../evidence/frontier-study/README.md) · [Step-by-step reproduction](reproduction-frontier.md). These evidence layers are separate and are not pooled as natural task samples.
+
+## Preserved v8 evidence
 
 V8 links 96 actual DeepSeek calls to 48 model graphs, with 1,440 paired executions over 24 public questions. Reuse reduces HTTP calls 331 to 261 (21.1%). All five repair methods produce 425 distinct units and 500 field transmissions: no added frontier or budget efficiency benefit is established. Original-label agreement is 28/48; two reference programs need human adjudication. A per-phase transmission bound and 240 exhaustive-oracle tests support the bounded selector, not a new general optimization theorem. [Full design, assumptions and failures](reproduction-v8.md).
 

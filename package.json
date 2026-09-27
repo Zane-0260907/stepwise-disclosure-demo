@@ -36,7 +36,11 @@
     "experiment:v8": "node scripts/run-v8-release.mjs",
     "verify:v8": "node scripts/verify-v8-release.mjs",
     "plot:v8": "python scripts/plot-v8.py",
-    "test:model-ui": "node test/model-ui-v8.mjs"
+    "test:model-ui": "node test/model-ui-v8.mjs",
+    "verify:frontier": "node scripts/verify-frontier-study.mjs",
+    "test:frontier-ui": "node test/frontier-ui.mjs",
+    "experiment:frontier": "node scripts/run-disclosure-study.mjs",
+    "test:live-integration": "node scripts/run-live-integration.mjs --check"
   },
   "dependencies": {
     "pdfjs-dist": "^6.3.289"

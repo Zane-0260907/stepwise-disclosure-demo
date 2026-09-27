@@ -1,0 +1,28 @@
+{
+  "id": "frontier-study-20260928",
+  "createdAt": "2026-09-27T17:08:17.154Z",
+  "workloadsSha256": "66dbbb405df52c1179501f64f3a34c60600175505f89e9487c42e17b51b31bce",
+  "sourceHashes": {
+    "src/research/live-frontier.mjs": "ef5513f44f62bb39947f970338ff33a3d4e6d37c7e51a87cf5e7005181cfc3c7",
+    "src/research/budget-frontier-v8.mjs": "e1212f65e3775a6f20dd4be3cf8a5cb28d765756d445988efe9f42f29862414c",
+    "scripts/build-frontier-workloads.mjs": "e248542dda7640a995b6aac7fa5946085a5a19a07d0bbdd00016fd90798c6930",
+    "scripts/run-frontier-study.mjs": "bb6629885a02108c702acd39172a3ef337349325f7c34a4b78f80761c77ec1a1",
+    "scripts/frontier-worker.mjs": "b6cb34fddbaa4740ffc98948671170a17ba396c1db7ee14942c11331a27a1c7f",
+    "scripts/frontier-milp.py": "a621e77f0e3a3f81b2bed26a2c1f8ae44613b981bcd8e4739f7740dabd4ee6e9"
+  },
+  "synthetic": 48,
+  "savedPlans": 48,
+  "newModelCalls": 0,
+  "methods": [
+    "greedy",
+    "full-frontier",
+    "live-frontier",
+    "milp"
+  ],
+  "maxLabels": 4096,
+  "timeLimitMs": 10000,
+  "repeats": 3,
+  "order": "rotated by case and repeat",
+  "budget": "At most twice the shared greedy numeric-field traffic; one common explicit budget per case",
+  "note": "Synthetic workloads are separate from saved real model plans; repeats are timing repetitions, not independent samples."
+}

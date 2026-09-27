@@ -17,19 +17,22 @@ with ZipFile(PAPER/'按步执行与信息共享_中文最新稿.docx') as z:
 text=''.join(xml.itertext())
 assert len(xml.findall('.//m:oMath',ns))==6, 'Six editable native equations are required'
 assert len(xml.findall('.//wp:inline',ns))==3, 'Retain the three approved figures'
-assert len(xml.findall('.//w:tbl',ns))==1, 'Business result table is missing'
+assert len(xml.findall('.//w:tbl',ns))==2, 'Planner and budget tables are required'
 assert any(x.get('{%s}num'%ns['w'])=='2' for x in xml.findall('.//w:cols',ns)), 'Two-column sections missing'
 assert settings.find('w:view',ns).get('{%s}val'%ns['w'])=='print', 'Default to print layout'
 for dims in xml.findall('.//w:pgSz',ns):
     assert (dims.get('{%s}w'%ns['w']),dims.get('{%s}h'%ns['w']))==('12240','15840'), 'US letter size required'
-for phrase in ['算法 1','Input:','21: return C, H','原生业务开发任务','六个任务被反复使用','原始参数','尚未接入本文批量模型实验']:
+for phrase in ['算法 1','Input:','20: return RestoreOriginalStepOrder','144/144','129/144','28/48','后续可行性','完整 H','不是一般多项式保证','未知未来','没有新增模型调用']:
     assert phrase in text, 'Missing statement: '+phrase
-for r in facts['business']['methods']:
-    assert f'{r["stateMatches"]}/{r["attempts"]}' in text
-assert str(facts['business']['allModelCalls']) in text
-assert str(facts['mechanism']['actionsCompared']) in text
+study=facts['planning']
+for key in ['runs','httpRequests']:
+    assert str(study['integration'][key]) in text
+for r in study['final']['budgets']:
+    assert f'{r["disclosures"]} / {r["greedyDisclosures"]}' in text
+    assert f'{r["fields"]} / {r["greedyFields"]}' in text
+assert str(study['final']['methods']['disclosure-frontier']['maxPeak']) in text
 assert '生成式工具使用说明' not in text
-assert '[6]' not in text and '[7]' not in text, 'Stale bibliography numbers'
+assert '[6]' in text and '[7]' not in text, 'Bibliography mismatch'
 assert not re.search(r'\\(?:frac|begin|end|sum|cup)\b',text), 'Unrendered LaTeX in the main text'
 assert not xml.findall('.//w:del',ns) and not xml.findall('.//w:ins',ns), 'Unresolved tracked revisions'
-print(json.dumps({'equations':6,'figures':3,'tables':1,'layout':'Letter/two-column/print','evidence':'current','visualReview':'separate'},ensure_ascii=True))
+print(json.dumps({'equations':6,'figures':3,'tables':2,'layout':'Letter/two-column/print','evidence':'current','visualReview':'separate'},ensure_ascii=True))

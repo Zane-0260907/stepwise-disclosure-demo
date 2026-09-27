@@ -1,0 +1,206 @@
+{
+  "final": {
+    "cases": 48,
+    "settings": 144,
+    "timingRepeats": 3,
+    "rows": 1728,
+    "methods": {
+      "greedy": {
+        "settings": 144,
+        "completed": 144,
+        "optimalMatches": 48,
+        "fewerDisclosureSettingsThanGreedy": 0,
+        "sumDisclosure": 3243,
+        "sumFields": 4809,
+        "medianMs": 0.005350000000362343,
+        "p95Ms": 0.007700000001932494,
+        "maxMs": 0.008900000000721775,
+        "maxPeak": 1,
+        "limits": 0
+      },
+      "live-frontier": {
+        "settings": 144,
+        "completed": 129,
+        "optimalMatches": 129,
+        "fewerDisclosureSettingsThanGreedy": 77,
+        "sumDisclosure": 2248,
+        "sumFields": 4726,
+        "medianMs": 1.0619000000006054,
+        "p95Ms": 189.715200000006,
+        "maxMs": 652.9018000000033,
+        "maxPeak": 3867,
+        "limits": 15
+      },
+      "disclosure-frontier": {
+        "settings": 144,
+        "completed": 144,
+        "optimalMatches": 144,
+        "fewerDisclosureSettingsThanGreedy": 87,
+        "sumDisclosure": 2767,
+        "sumFields": 5850,
+        "medianMs": 0.8487499999996544,
+        "p95Ms": 6.967800000000352,
+        "maxMs": 477.7957999999999,
+        "maxPeak": 287,
+        "limits": 0
+      },
+      "milp": {
+        "settings": 144,
+        "completed": 144,
+        "optimalMatches": 144,
+        "fewerDisclosureSettingsThanGreedy": 87,
+        "sumDisclosure": 2767,
+        "sumFields": 5850,
+        "medianMs": 3.720900000189431,
+        "p95Ms": 183.80350001098122,
+        "maxMs": 2711.807499988936,
+        "maxPeak": 0,
+        "limits": 0
+      }
+    },
+    "budgets": [
+      {
+        "slack": 0,
+        "settings": 48,
+        "disclosures": 1060,
+        "greedyDisclosures": 1081,
+        "fields": 1602,
+        "greedyFields": 1603,
+        "disclosureReductionPct": 1.942645698427382,
+        "fieldChangePct": -0.06238303181534623
+      },
+      {
+        "slack": 0.25,
+        "settings": 48,
+        "disclosures": 923,
+        "greedyDisclosures": 1081,
+        "fields": 1906,
+        "greedyFields": 1603,
+        "disclosureReductionPct": 14.616096207215541,
+        "fieldChangePct": 18.902058640049905
+      },
+      {
+        "slack": 1,
+        "settings": 48,
+        "disclosures": 784,
+        "greedyDisclosures": 1081,
+        "fields": 2342,
+        "greedyFields": 1603,
+        "disclosureReductionPct": 27.474560592044405,
+        "fieldChangePct": 46.10106051154086
+      }
+    ],
+    "sources": {
+      "workloads": "65fdd349fdda9b959d4e7de5e0932e48e5122ab1bd4fdeaac22367e762d12c35",
+      "protocol": "ed1c6bb05d07345495bfd03810c041d121b54fef2299ec4b54dc6e1941879e9f",
+      "records": "ba1d3a7560554d8da9294d0f7790be2bea01dc92025ebfb3b0f978f262c1ec0f"
+    }
+  },
+  "scope": "Synthetic registered-choice planning. Timing repeats and budget settings do not add independent real tasks; not a semantic privacy or task-quality score.",
+  "serialTiming": {
+    "description": "Serial measurements after development jobs finished. One warm-up and five measured repetitions, rotated method order. JS timing includes planning; Python timing includes model construction and solver but excludes IPC/import. Greedy is actually recomputed. No dedicated CPU isolation.",
+    "repeats": 5,
+    "methods": {
+      "greedy": {
+        "completedSettings": 144,
+        "medianMs": 0.04960000000346554,
+        "p95Ms": 0.28589999999530846,
+        "maxMedianMs": 0.41150000000197906
+      },
+      "live-frontier": {
+        "completedSettings": 129,
+        "medianMs": 0.796500000000151,
+        "p95Ms": 164.97269999999844,
+        "maxMedianMs": 480.95130000000063
+      },
+      "disclosure-frontier": {
+        "completedSettings": 144,
+        "medianMs": 0.529350000002978,
+        "p95Ms": 4.950200000001132,
+        "maxMedianMs": 379.994200000001
+      },
+      "milp": {
+        "completedSettings": 144,
+        "medianMs": 2.7502000011736527,
+        "p95Ms": 133.51369999872986,
+        "maxMedianMs": 2109.4452000106685
+      }
+    },
+    "sha256": "5c115f11c9166120cdce2e7e9fea357d53ff5552da813f0c88302c2ca66715b7"
+  },
+  "development": {
+    "cases": 96,
+    "settings": 96,
+    "timingRepeats": 3,
+    "rows": 1152,
+    "methods": {
+      "greedy": {
+        "settings": 96,
+        "completed": 96,
+        "optimalMatches": 64,
+        "fewerDisclosureSettingsThanGreedy": 0,
+        "sumDisclosure": 1414,
+        "sumFields": 1560,
+        "medianMs": 0.418500000028871,
+        "p95Ms": 0.9002999999938766,
+        "maxMs": 1.8945000000530854,
+        "maxPeak": 1,
+        "limits": 0
+      },
+      "full-frontier": {
+        "settings": 96,
+        "completed": 60,
+        "optimalMatches": 60,
+        "fewerDisclosureSettingsThanGreedy": 8,
+        "sumDisclosure": 154,
+        "sumFields": 246,
+        "medianMs": 0.44135000003734604,
+        "p95Ms": 170.39520000002813,
+        "maxMs": 209.2235000000219,
+        "maxPeak": 1575,
+        "limits": 36
+      },
+      "live-frontier": {
+        "settings": 96,
+        "completed": 91,
+        "optimalMatches": 91,
+        "fewerDisclosureSettingsThanGreedy": 31,
+        "sumDisclosure": 805,
+        "sumFields": 2052,
+        "medianMs": 0.7443000000203028,
+        "p95Ms": 10.00879999998142,
+        "maxMs": 395.81280000001425,
+        "maxPeak": 3640,
+        "limits": 5
+      },
+      "milp": {
+        "settings": 96,
+        "completed": 96,
+        "optimalMatches": 96,
+        "fewerDisclosureSettingsThanGreedy": 32,
+        "sumDisclosure": 1014,
+        "sumFields": 2372,
+        "medianMs": 1.978100000997074,
+        "p95Ms": 4.516600005445071,
+        "maxMs": 9.678800008259714,
+        "maxPeak": 0,
+        "limits": 0
+      }
+    },
+    "budgets": [],
+    "sources": {
+      "workloads": "66dbbb405df52c1179501f64f3a34c60600175505f89e9487c42e17b51b31bce",
+      "protocol": "900a1f84aecee18a907b9b57c5fd632e191374150fdd7d9069f92a57c4228ba1",
+      "records": "36d2114fa4176306307685c8409f19d769958d15de16ca4328fa289ffecef8aa"
+    }
+  },
+  "integration": {
+    "runs": 480,
+    "completed": 480,
+    "modelPlans": 48,
+    "sourceTasks": 24,
+    "httpRequests": 522,
+    "newModelCalls": 0,
+    "sha256": "2db68391234bc45ddff4e1e937753689b799f255dc952cdaa34553f70f769c46"
+  }
+}
