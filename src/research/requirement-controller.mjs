@@ -44,6 +44,7 @@ export function requirementController({contracts, snapshot, authorize, transport
       const material = clone(option.evaluate(clone(state.values)));
       if (!contract.validate(material, option.kind)) throw Error('REGISTERED_REPRESENTATION_INVALID');
       if (option.kind !== 'local' && option.kind !== 'remote') throw Error('INVALID_EXECUTION_KIND');
+      if (option.kind === 'local' && !contract.validateResult(material)) throw Error('LOCAL_RESULT_CONTRACT_FAILED');
       const dependencyVersions = Object.fromEntries(dependencies.map(k => [k, state.versions[k]]));
       const payload = option.kind === 'remote' ? {contract: contract.id, representation: option.id, input: material} : null;
       const body = payload === null ? null : JSON.stringify(payload);

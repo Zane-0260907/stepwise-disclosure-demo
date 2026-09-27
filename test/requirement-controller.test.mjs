@@ -64,3 +64,12 @@ test('forged tickets cannot choose the recipient or replace payload', async () =
   const {ctl,calls}=fixture(); const ticket=ctl.inspect('limit-check','a');
   await assert.rejects(ctl.execute({...ticket,recipient:'b'}),/INVALID_OR_CONSUMED/); assert.equal(calls.length,0);
 });
+test('local completion must satisfy the output contract, not merely an input representation', () => {
+  const ctl=requirementController({snapshot:()=>({values:{},versions:{}}),authorize:()=>true,
+    transport:async()=>{throw Error('MUST_NOT_SEND');},contracts:[{id:'invalid-local-result',required:()=>['answer'],
+      validate:()=>true,validateResult:x=>typeof x?.answer==='boolean',options:[{
+        id:'bad-local',kind:'local',covers:['answer'],dependencies:()=>[],available:()=>true,evaluate:()=>({description:'still incomplete'}),
+      }]}]});
+  assert.throws(()=>ctl.inspect('invalid-local-result','service'),/LOCAL_RESULT_CONTRACT_FAILED/);
+  assert.equal(ctl.history.length,0);
+});

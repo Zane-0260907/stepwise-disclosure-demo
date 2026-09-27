@@ -48,4 +48,4 @@ Trusted functions, version maintenance and permissions are supplied by the appli
 
 上面的三阶段案例真实执行两次回环 HTTP 请求，记录接收正文和结果，不调用模型。它验证请求与决策如何衔接，**不作为新的真实任务实验，也不证明技术新颖性**。数值批次、原生业务开发任务、这条构造记录在论文中分别注明范围。该模块尚未接入现有页面或模型批量任务。
 
-源码为 `src/research/requirement-controller.mjs`，八项测试覆盖能力变化、越权补充、不同接收方、来源版本、失配回执、超时和票据替换。现有商业产品不依赖此模块，也没有被修改。
+源码为 `src/research/requirement-controller.mjs`，九项测试覆盖能力变化、越权补充、不同接收方、来源版本、失配回执、超时、票据替换和本地结果有效性。现有商业产品不依赖此模块，也没有被修改。
