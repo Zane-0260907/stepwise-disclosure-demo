@@ -63,6 +63,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify external candidate inputs and evaluator separation
+        shell: pwsh
+        run: |
+          python test/privacy-inputs.test.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/prepare-privacy-inputs.py --fetch
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/prepare-privacy-inputs.py --check
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - run: python -m pip install --require-hashes -r requirements-v7.txt
       - run: npm run test:external-v7
 

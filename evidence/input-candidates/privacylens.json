@@ -1,0 +1,46 @@
+{
+  "developmentRecords": 40,
+  "evaluationExcludedFromRuntimeInput": [
+    "seed",
+    "vignette",
+    "expectedFinalActionType",
+    "sensitiveInfoItems",
+    "normGroup",
+    "sourceName"
+  ],
+  "exactNormGroups": 493,
+  "limits": [
+    "Recorded prefixes and final-action privacy evaluation do not replace original multi-turn state-changing tasks.",
+    "Local inputs contain original private context; they are not sanitized or authorized for direct cloud transmission.",
+    "No runtime tool schemas/backend or official leakage/helpfulness judge has been executed by this preparation script.",
+    "Exact norm grouping cannot eliminate all semantic similarity; a final study protocol and independent review remain pending.",
+    "The reserved pool is not evidence of generalization; no candidate mechanism has been run or selected using these scores."
+  ],
+  "modelCalls": 0,
+  "outputsSha256": {
+    "evaluation-only.json": "725168e0254cd53a3641d27459e6c3cc22c659298ab6a685f5d4431abf4e625f",
+    "local-inputs.json": "b14ea7b08c430d3982039475aad6ef5cc92437ace20399aeb06d323f4f643050",
+    "splits.json": "b7b5002169cb42941bf02aa9784bbdbdd4ea085f0996c8e7cc680dc213c22a62"
+  },
+  "records": 493,
+  "reservedRecords": 453,
+  "runtimeInputKeys": [
+    "id",
+    "user_name",
+    "user_email",
+    "user_instruction",
+    "toolkits",
+    "executable_trajectory"
+  ],
+  "source": {
+    "license": "Upstream repository MIT; original notice retained in local source directory",
+    "repository": "https://github.com/SALT-NLP/PrivacyLens",
+    "revision": "9c2ee07b080dc54ed4924af11d9751e81753c94d",
+    "sourceFilesSha256": {
+      "LICENSE": "8079ebdd44998d089304fc2a2b4302afc1e112e89c2d91f51713fd89fa87fc15",
+      "README.md": "9e9090e58cf7e42eb3fe635352308a7c7e3917c74f971e895f60c1f227b16c75",
+      "main_data.json": "2a8b3bfa470ffa9e50b12866857b17d62b422a2fea926b1249220a0244991941"
+    }
+  },
+  "status": "candidate-input-preparation-only; no model evaluation or new results"
+}
