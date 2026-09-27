@@ -1,0 +1,18 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+const root=new URL('../',import.meta.url),load=async p=>JSON.parse(await readFile(new URL(p,root))),evidence=new URL('evidence/validation-v8/',root);
+const s=await load('evidence/validation-v8/summary.json'),cs=await load('fixtures/model-repair-v8/cases.json'),labels=await load('fixtures/model-repair-v8/labels.json');
+const failures=[];for(const m of s.models.filter(x=>!x.originalCorrect)){
+ const c=cs.find(x=>x.id===m.caseId),trace=await load('data/research/validation/frozen-v8-20260927/'+m.id+'.model.json');
+ failures.push({record:m.id,source:c.sourceId,question:c.question,originalTable:c.originalTable,originalLabel:labels[c.id],proposedProgram:trace.program,reviewStatus:'Pending independent human review; original scoring unchanged.'});
+}
+await writeFile(new URL('disagreements-for-review.json',evidence),JSON.stringify(failures,null,2)+'\n');
+const rows=(await readFile(new URL('scores.jsonl',evidence),'utf8')).trim().split('\n').map(JSON.parse);
+let seed=271928;const rnd=()=>((seed=(1664525*seed+1013904223)>>>0)/4294967296);
+const perCase=cs.map(c=>Object.fromEntries(['restart_greedy','budget_0'].map(m=>[m,rows.filter(r=>r.caseId===c.id&&r.method===m).reduce((s,r)=>s+r.remoteCalls,0)])));
+const estimates=[];for(let k=0;k<10000;k++){let a=0,b=0;for(let j=0;j<24;j++){const x=perCase[Math.floor(rnd()*24)];a+=x.restart_greedy;b+=x.budget_0;}estimates.push(a?100*(a-b)/a:0);}estimates.sort((a,b)=>a-b);
+const normalizedBytes={};for(const method of Object.keys(s.methods)){
+ let total=0;for(const row of rows.filter(r=>r.method===method)){const id=`frozen-v8-20260927-${row.caseId}-${row.repeat}.${row.condition}.${method}`,run=await load('data/research/validation/frozen-v8-20260927/'+id+'.json');for(const r of run.receipts){const payload=JSON.parse(r.body);delete payload.runId;total+=Buffer.byteLength(JSON.stringify(payload));}}
+ normalizedBytes[method]=total;
+}
+const analysis={primaryVerifier:'verify-v8-release.mjs; frozen verifier retained with documented receipt-matching amendment',modelLabelAgreement:'28/48 agrees with original numeric labels, not independently human-confirmed semantic accuracy',suspectedAnnotationConflicts:[{caseId:'finqa-192479754710',source:'COST/2013/page_?',reason:'Question asks three-year average; original gold program adds constant 3 to the three-value sum, then divides by 2.'},{caseId:'finqa-fc4c03c1a0dc',reason:'Question asks three-year average; original gold program adds constant 3 to the three-value sum, then divides by 2.'}].map(({source,...x})=>({...x,source:cs.find(c=>c.id===x.caseId).sourceId,status:'Unadjudicated; no score correction or exclusion'})),remoteCallsReductionPct:100*(331-261)/331,clusterBootstrap:{unit:'source question, all conditions and both repeats sampled together',resamples:10000,seed:271928,percentile95:[estimates[250],estimates[9749]],exploratory:true},normalizedPayloadBytes:normalizedBytes,rawBytesCaveat:'Raw payload sizes include different-length method tags in runId. Compare numeric-field counts or the separately reported payload bytes with runId removed; do not attribute tag length to optimization.',frontierVsGreedy:'All 240 paired runs have identical disclosure and numeric-field totals; no incremental planning gain is established in this prospective set.',budgetSensitivity:'Slack 0, 10%, 25% has identical measured choices on this set. The budget is a phase constraint, not an observed new efficiency win.',receiver:'Actual loopback HTTP listener in the controller Node process; not a remote production service or independent-process attestation.'};
+await writeFile(new URL('analysis.json',evidence),JSON.stringify(analysis,null,2)+'\n');console.log(JSON.stringify(analysis,null,2));

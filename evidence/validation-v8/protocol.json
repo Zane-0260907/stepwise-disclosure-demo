@@ -1,0 +1,50 @@
+{
+  "id": "v8-model-graph-disclosure-budget",
+  "frozenAt": "2026-09-27T05:30:37.068Z",
+  "cases": 24,
+  "reports": 24,
+  "repeats": 2,
+  "modelCallsPlanned": 96,
+  "methods": [
+    "restart_greedy",
+    "repair_greedy",
+    "repair_frontier",
+    "budget_0",
+    "budget_10",
+    "budget_25"
+  ],
+  "conditions": [
+    "all_local",
+    "mixed_stable",
+    "source_used",
+    "source_unrelated",
+    "capability_withdrawn"
+  ],
+  "armsPlanned": 1440,
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "provider": "https://api.deepseek.com/chat/completions",
+  "promptLocation": "src/research/model-repair-v8.mjs: MODEL_SYSTEM, MODEL_TOOLS",
+  "pairedDesign": "Each observed model graph and its two actual provider calls are shared across all 30 controller arms; do not count a shared prefix as 30 distinct LLM conversations. Method order rotates by source-case and repeat.",
+  "events": "After max(1,floor(model_nodes/2)) nodes: update first source of model node 0 by x*1.01+0.5; unrelated condition updates first sorted unused field, otherwise recorded unavailable; withdrawal removes registered local add/subtract capability. All interventions controlled and model-label-blind.",
+  "capabilities": "all_local: all six operations local; other conditions: local add/subtract, remote all six. Deployment profiles, not inherent arithmetic limitations.",
+  "budget": "At each post-change phase, at most floor((1+slack)*greedy numeric-field transmissions for that known suffix). Remaining budget carried across replanning. Default slack 0, sensitivity .10/.25. No byte, across-change, or unknown-future bound.",
+  "evaluation": "Independent expression evaluator; source-version and receipt verification. Original FinQA correctness separately scored. Changed-source targets evaluate original gold expression on intervened numeric cells. Relative/absolute tolerance 5e-5. Every model failure retained.",
+  "development": "Four earlier development questions, 8 actual pilot calls and 120 pilot arms; excluded from the prospective batch.",
+  "analysis": "Report all conditions and arms, paired outcomes, model program correctness, executions, numeric disclosures, repeated numeric fields, actual payload bytes, search cost and actual provider calls. No optional stopping. No independent-sample significance from 1440 dependent arms.",
+  "limitation": "Registered pure finite operators and equivalent views; trusted synchronous local check/serialization. Public financial data; no production, adversarial privacy, global-transaction or arbitrary-agent guarantee.",
+  "hashes": {
+    "src/research/model-repair-v8.mjs": "4db687f6e9cf1745ba73d31b5b5732092c1ddd041aa9057e2e197380d64bea93",
+    "src/research/budget-frontier-v8.mjs": "e1212f65e3775a6f20dd4be3cf8a5cb28d765756d445988efe9f42f29862414c",
+    "src/research/local-program.mjs": "4547297d25d91a66d5908c94306e514e0c607879d739fcd8b073939a16b2b637",
+    "src/research/deepseek-live.mjs": "126666eb39f53433a2c3404e19901998cab6d9053e4541ab8edebce4fb800b63",
+    "scripts/run-v8.mjs": "06835f892670fad73f71bad57b438d181b081502e87d8790a220446a6b8ebd69",
+    "scripts/verify-v8.mjs": "3f9423dc2cd537b19c333609c5211bdd2a25bfc0aa050de3e5e7c636eb540a7e",
+    "scripts/prepare-v8.mjs": "ea173476a7f594a39c46c732f4dbedc469a6241b55bd0d5b0c96144117a23d99",
+    "test/model-repair-v8.test.mjs": "bb316f2e2fea7942e9be469e6a8d41e4c346b3904f2ccb9e796fd97f35ae4fcf",
+    "fixtures/model-repair-v8/cases.json": "a1affe74a3b8f99f3a6f0333968db0f7c8122f70cb78e49fbc2ac3cc15d1b4ff",
+    "fixtures/model-repair-v8/development.json": "fd00adccd8d600d44d01e8259a3d5168f40592c80b7d95b53f56029bc0a47d50",
+    "fixtures/model-repair-v8/labels.json": "ea65efa204ca7794813cf8b38a0e1a16f96113845b15397177327685ed7babda",
+    "fixtures/model-repair-v8/provenance.json": "2166e96df412ead6178c7f413f6f7c1394239c7c1838e3b54cdca12d7d2ba063"
+  }
+}

@@ -1,0 +1,2892 @@
+[
+  {
+    "record": "frozen-v8-20260927-finqa-9e7a37884cc3-0",
+    "source": "DVN/2015/page_79.pdf-3",
+    "question": "what was the percent of the change in the volatility factor",
+    "originalTable": [
+      [
+        "",
+        "2015",
+        "2014",
+        "2013"
+      ],
+      [
+        "Grant-date fair value",
+        "$81.99 – $85.05",
+        "$70.18 – $81.05",
+        "$61.27 – $63.48"
+      ],
+      [
+        "Risk-free interest rate",
+        "1.06%",
+        "0.54%",
+        "0.26% – 0.36%"
+      ],
+      [
+        "Volatility factor",
+        "26.2%",
+        "28.8%",
+        "30.3%"
+      ],
+      [
+        "Contractual term (years)",
+        "2.89",
+        "2.89",
+        "3.0"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "DVN/2015/page_79.pdf-3",
+      "expected": -0.0495,
+      "answer": "-5%",
+      "program": "subtract(28.8, 30.3), divide(#0, 30.3)",
+      "goldCells": [
+        "r3c2",
+        "r3c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "DVN/2015/page_79.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r3c2"
+            },
+            {
+              "field": "r3c3"
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c3"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r3c1"
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-9e7a37884cc3-1",
+    "source": "DVN/2015/page_79.pdf-3",
+    "question": "what was the percent of the change in the volatility factor",
+    "originalTable": [
+      [
+        "",
+        "2015",
+        "2014",
+        "2013"
+      ],
+      [
+        "Grant-date fair value",
+        "$81.99 – $85.05",
+        "$70.18 – $81.05",
+        "$61.27 – $63.48"
+      ],
+      [
+        "Risk-free interest rate",
+        "1.06%",
+        "0.54%",
+        "0.26% – 0.36%"
+      ],
+      [
+        "Volatility factor",
+        "26.2%",
+        "28.8%",
+        "30.3%"
+      ],
+      [
+        "Contractual term (years)",
+        "2.89",
+        "2.89",
+        "3.0"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "DVN/2015/page_79.pdf-3",
+      "expected": -0.0495,
+      "answer": "-5%",
+      "program": "subtract(28.8, 30.3), divide(#0, 30.3)",
+      "goldCells": [
+        "r3c2",
+        "r3c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "DVN/2015/page_79.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r3c2"
+            },
+            {
+              "field": "r3c3"
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c3"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r3c1"
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-8327741ddc15-0",
+    "source": "DISCA/2011/page_49.pdf-3",
+    "question": "the k series stock outperformed the s&p 500 by what percent over 5 years?",
+    "originalTable": [
+      [
+        "",
+        "December 31, 2008",
+        "December 31, 2009",
+        "December 31, 2010",
+        "December 31, 2011"
+      ],
+      [
+        "DISCA",
+        "$102.53",
+        "$222.09",
+        "$301.96",
+        "$296.67"
+      ],
+      [
+        "DISCB",
+        "$78.53",
+        "$162.82",
+        "$225.95",
+        "$217.56"
+      ],
+      [
+        "DISCK",
+        "$83.69",
+        "$165.75",
+        "$229.31",
+        "$235.63"
+      ],
+      [
+        "S&P 500",
+        "$74.86",
+        "$92.42",
+        "$104.24",
+        "$104.23"
+      ],
+      [
+        "Peer Group",
+        "$68.79",
+        "$100.70",
+        "$121.35",
+        "$138.19"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "DISCA/2011/page_49.pdf-3",
+      "expected": 1.26067,
+      "answer": "126%",
+      "program": "subtract(235.63, 104.23), divide(#0, 104.23)",
+      "goldCells": [
+        "r3c4",
+        "r4c4"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "DISCA/2011/page_49.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r3c4"
+            },
+            {
+              "field": "r4c4"
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r4c4"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r3c4"
+          },
+          {
+            "field": "r3c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r4c4"
+          },
+          {
+            "field": "r4c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 2
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "step": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-8327741ddc15-1",
+    "source": "DISCA/2011/page_49.pdf-3",
+    "question": "the k series stock outperformed the s&p 500 by what percent over 5 years?",
+    "originalTable": [
+      [
+        "",
+        "December 31, 2008",
+        "December 31, 2009",
+        "December 31, 2010",
+        "December 31, 2011"
+      ],
+      [
+        "DISCA",
+        "$102.53",
+        "$222.09",
+        "$301.96",
+        "$296.67"
+      ],
+      [
+        "DISCB",
+        "$78.53",
+        "$162.82",
+        "$225.95",
+        "$217.56"
+      ],
+      [
+        "DISCK",
+        "$83.69",
+        "$165.75",
+        "$229.31",
+        "$235.63"
+      ],
+      [
+        "S&P 500",
+        "$74.86",
+        "$92.42",
+        "$104.24",
+        "$104.23"
+      ],
+      [
+        "Peer Group",
+        "$68.79",
+        "$100.70",
+        "$121.35",
+        "$138.19"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "DISCA/2011/page_49.pdf-3",
+      "expected": 1.26067,
+      "answer": "126%",
+      "program": "subtract(235.63, 104.23), divide(#0, 104.23)",
+      "goldCells": [
+        "r3c4",
+        "r4c4"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "DISCA/2011/page_49.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r3c4"
+            },
+            {
+              "field": "r4c4"
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r4c4"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r3c4"
+          },
+          {
+            "field": "r3c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r4c4"
+          },
+          {
+            "field": "r4c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 2
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "step": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-57be6028a04c-1",
+    "source": "DRE/2012/page_40.pdf-1",
+    "question": "what was the percentage reduction second generation tenant improvements",
+    "originalTable": [
+      [
+        "",
+        "2012",
+        "2011",
+        "2010"
+      ],
+      [
+        "Second generation tenant improvements",
+        "$26,643",
+        "$50,079",
+        "$36,676"
+      ],
+      [
+        "Second generation leasing costs",
+        "31,059",
+        "38,130",
+        "39,090"
+      ],
+      [
+        "Building improvements",
+        "6,182",
+        "11,055",
+        "12,957"
+      ],
+      [
+        "Total",
+        "$63,884",
+        "$99,264",
+        "$88,723"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "DRE/2012/page_40.pdf-1",
+      "expected": -0.46798,
+      "answer": "-46.8%",
+      "program": "subtract(26643, 50079), divide(#0, 50079)",
+      "goldCells": [
+        "r1c1",
+        "r1c2"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "DRE/2012/page_40.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r1c1"
+            },
+            {
+              "field": "r1c2"
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r1c2"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r1c2"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r1c2"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-96b35b35f7fd-1",
+    "source": "UPS/2006/page_32.pdf-2",
+    "question": "what was the difference in percentage total cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five years ended 12/31/06?",
+    "originalTable": [
+      [
+        "",
+        "12/31/01",
+        "12/31/02",
+        "12/31/03",
+        "12/31/04",
+        "12/31/05",
+        "12/31/06"
+      ],
+      [
+        "United Parcel Service, Inc.",
+        "$100.00",
+        "$117.19",
+        "$140.49",
+        "$163.54",
+        "$146.35",
+        "$148.92"
+      ],
+      [
+        "S&P 500 Index",
+        "$100.00",
+        "$77.90",
+        "$100.24",
+        "$111.15",
+        "$116.61",
+        "$135.02"
+      ],
+      [
+        "Dow Jones Transportation Average",
+        "$100.00",
+        "$88.52",
+        "$116.70",
+        "$149.06",
+        "$166.42",
+        "$182.76"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "UPS/2006/page_32.pdf-2",
+      "expected": 0.139,
+      "answer": "13.9%",
+      "program": "subtract(148.92, const_100), divide(#0, const_100), subtract(135.02, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "goldCells": [
+        "r1c6",
+        "r2c6"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "UPS/2006/page_32.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r1c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r2c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "step": 3
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r1c6"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r2c6"
+          },
+          {
+            "field": "r2c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-4db068ec81d1-0",
+    "source": "CDNS/2012/page_30.pdf-2",
+    "question": "what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . compared to the nasdaq composite for the five years ended 12/29/2012?",
+    "originalTable": [
+      [
+        "",
+        "12/29/2007",
+        "1/3/2009",
+        "1/2/2010",
+        "1/1/2011",
+        "12/31/2011",
+        "12/29/2012"
+      ],
+      [
+        "Cadence Design Systems, Inc.",
+        "100.00",
+        "22.55",
+        "35.17",
+        "48.50",
+        "61.07",
+        "78.92"
+      ],
+      [
+        "NASDAQ Composite",
+        "100.00",
+        "59.03",
+        "82.25",
+        "97.32",
+        "98.63",
+        "110.78"
+      ],
+      [
+        "S&P 400 Information Technology",
+        "100.00",
+        "54.60",
+        "82.76",
+        "108.11",
+        "95.48",
+        "109.88"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "CDNS/2012/page_30.pdf-2",
+      "expected": -31.86,
+      "answer": "-31.86",
+      "program": "subtract(78.92, const_100), divide(#0, const_100), subtract(110.78, const_100), divide(#2, const_100), subtract(#0, #2)",
+      "goldCells": [
+        "r1c6",
+        "r2c6"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "CDNS/2012/page_30.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r1c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r2c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r1c6"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r2c6"
+          },
+          {
+            "field": "r2c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 2
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "step": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-4db068ec81d1-1",
+    "source": "CDNS/2012/page_30.pdf-2",
+    "question": "what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . compared to the nasdaq composite for the five years ended 12/29/2012?",
+    "originalTable": [
+      [
+        "",
+        "12/29/2007",
+        "1/3/2009",
+        "1/2/2010",
+        "1/1/2011",
+        "12/31/2011",
+        "12/29/2012"
+      ],
+      [
+        "Cadence Design Systems, Inc.",
+        "100.00",
+        "22.55",
+        "35.17",
+        "48.50",
+        "61.07",
+        "78.92"
+      ],
+      [
+        "NASDAQ Composite",
+        "100.00",
+        "59.03",
+        "82.25",
+        "97.32",
+        "98.63",
+        "110.78"
+      ],
+      [
+        "S&P 400 Information Technology",
+        "100.00",
+        "54.60",
+        "82.76",
+        "108.11",
+        "95.48",
+        "109.88"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "CDNS/2012/page_30.pdf-2",
+      "expected": -31.86,
+      "answer": "-31.86",
+      "program": "subtract(78.92, const_100), divide(#0, const_100), subtract(110.78, const_100), divide(#2, const_100), subtract(#0, #2)",
+      "goldCells": [
+        "r1c6",
+        "r2c6"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "CDNS/2012/page_30.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r1c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r2c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r1c6"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r2c6"
+          },
+          {
+            "field": "r2c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 2
+          },
+          {
+            "constant": 1
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "step": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-067832a40477-0",
+    "source": "PM/2018/page_24.pdf-2",
+    "question": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?",
+    "originalTable": [
+      [
+        "Date",
+        "PMI",
+        "PMI Peer Group<sup>(1)</sup>",
+        "S&P 500 Index"
+      ],
+      [
+        "December 31, 2013",
+        "$100.00",
+        "$100.00",
+        "$100.00"
+      ],
+      [
+        "December 31, 2014",
+        "$97.90",
+        "$107.80",
+        "$113.70"
+      ],
+      [
+        "December 31, 2015",
+        "$111.00",
+        "$116.80",
+        "$115.30"
+      ],
+      [
+        "December 31, 2016",
+        "$120.50",
+        "$118.40",
+        "$129.00"
+      ],
+      [
+        "December 31, 2017",
+        "$144.50",
+        "$140.50",
+        "$157.20"
+      ],
+      [
+        "December 31, 2018",
+        "$96.50",
+        "$127.70",
+        "$150.30"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "PM/2018/page_24.pdf-2",
+      "expected": 0.538,
+      "answer": "53.8%",
+      "program": "subtract(96.50, const_100), divide(#0, const_100), subtract(150.30, const_100), divide(#2, const_100), subtract(#3, #1)",
+      "goldCells": [
+        "r6c1",
+        "r6c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "PM/2018/page_24.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c1"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c3"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 3
+            },
+            {
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r6c1"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r6c3"
+          },
+          {
+            "field": "r1c3"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-067832a40477-1",
+    "source": "PM/2018/page_24.pdf-2",
+    "question": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?",
+    "originalTable": [
+      [
+        "Date",
+        "PMI",
+        "PMI Peer Group<sup>(1)</sup>",
+        "S&P 500 Index"
+      ],
+      [
+        "December 31, 2013",
+        "$100.00",
+        "$100.00",
+        "$100.00"
+      ],
+      [
+        "December 31, 2014",
+        "$97.90",
+        "$107.80",
+        "$113.70"
+      ],
+      [
+        "December 31, 2015",
+        "$111.00",
+        "$116.80",
+        "$115.30"
+      ],
+      [
+        "December 31, 2016",
+        "$120.50",
+        "$118.40",
+        "$129.00"
+      ],
+      [
+        "December 31, 2017",
+        "$144.50",
+        "$140.50",
+        "$157.20"
+      ],
+      [
+        "December 31, 2018",
+        "$96.50",
+        "$127.70",
+        "$150.30"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "PM/2018/page_24.pdf-2",
+      "expected": 0.538,
+      "answer": "53.8%",
+      "program": "subtract(96.50, const_100), divide(#0, const_100), subtract(150.30, const_100), divide(#2, const_100), subtract(#3, #1)",
+      "goldCells": [
+        "r6c1",
+        "r6c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "PM/2018/page_24.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c1"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c3"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 3
+            },
+            {
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r6c1"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "field": "r6c3"
+          },
+          {
+            "field": "r1c3"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-19645d772932-0",
+    "source": "C/2017/page_328.pdf-3",
+    "question": "what was the difference in percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock and s&p financials?",
+    "originalTable": [
+      [
+        "DATE",
+        "CITI",
+        "S&P 500",
+        "S&P FINANCIALS"
+      ],
+      [
+        "31-Dec-2012",
+        "100.0",
+        "100.0",
+        "100.0"
+      ],
+      [
+        "31-Dec-2013",
+        "131.8",
+        "132.4",
+        "135.6"
+      ],
+      [
+        "31-Dec-2014",
+        "137.0",
+        "150.5",
+        "156.2"
+      ],
+      [
+        "31-Dec-2015",
+        "131.4",
+        "152.6",
+        "153.9"
+      ],
+      [
+        "31-Dec-2016",
+        "152.3",
+        "170.8",
+        "188.9"
+      ],
+      [
+        "31-Dec-2017",
+        "193.5",
+        "208.1",
+        "230.9"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "C/2017/page_328.pdf-3",
+      "expected": -0.374,
+      "answer": "",
+      "program": "subtract(193.5, const_100), divide(#0, const_100), subtract(230.9, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "goldCells": [
+        "r6c1",
+        "r6c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "C/2017/page_328.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c1"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c3"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "step": 3
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r6c1"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r6c3"
+          },
+          {
+            "field": "r1c3"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-19645d772932-1",
+    "source": "C/2017/page_328.pdf-3",
+    "question": "what was the difference in percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock and s&p financials?",
+    "originalTable": [
+      [
+        "DATE",
+        "CITI",
+        "S&P 500",
+        "S&P FINANCIALS"
+      ],
+      [
+        "31-Dec-2012",
+        "100.0",
+        "100.0",
+        "100.0"
+      ],
+      [
+        "31-Dec-2013",
+        "131.8",
+        "132.4",
+        "135.6"
+      ],
+      [
+        "31-Dec-2014",
+        "137.0",
+        "150.5",
+        "156.2"
+      ],
+      [
+        "31-Dec-2015",
+        "131.4",
+        "152.6",
+        "153.9"
+      ],
+      [
+        "31-Dec-2016",
+        "152.3",
+        "170.8",
+        "188.9"
+      ],
+      [
+        "31-Dec-2017",
+        "193.5",
+        "208.1",
+        "230.9"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "C/2017/page_328.pdf-3",
+      "expected": -0.374,
+      "answer": "",
+      "program": "subtract(193.5, const_100), divide(#0, const_100), subtract(230.9, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "goldCells": [
+        "r6c1",
+        "r6c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "C/2017/page_328.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c1"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r6c3"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "step": 3
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r6c1"
+          },
+          {
+            "field": "r1c1"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r6c3"
+          },
+          {
+            "field": "r1c3"
+          }
+        ]
+      },
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-192479754710-0",
+    "source": "LMT/2013/page_74.pdf-1",
+    "question": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013",
+    "originalTable": [
+      [
+        "",
+        "2013",
+        "2012",
+        "2011"
+      ],
+      [
+        "Weighted average common shares outstanding for basic computations",
+        "320.9",
+        "323.7",
+        "335.9"
+      ],
+      [
+        "Weighted average dilutive effect of equity awards",
+        "5.6",
+        "4.7",
+        "4.0"
+      ],
+      [
+        "Weighted average common shares outstanding for diluted computations",
+        "326.5",
+        "328.4",
+        "339.9"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "LMT/2013/page_74.pdf-1",
+      "expected": 498.9,
+      "answer": "331.6",
+      "program": "add(326.5, 328.4), add(#0, 339.9), add(#1, const_3), divide(#2, const_2)",
+      "goldCells": [
+        "r3c1",
+        "r3c2",
+        "r3c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "LMT/2013/page_74.pdf",
+      "gold": [
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r3c1"
+            },
+            {
+              "field": "r3c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c3"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "constant": 3
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 2
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r3c1"
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c3"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "constant": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-192479754710-1",
+    "source": "LMT/2013/page_74.pdf-1",
+    "question": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013",
+    "originalTable": [
+      [
+        "",
+        "2013",
+        "2012",
+        "2011"
+      ],
+      [
+        "Weighted average common shares outstanding for basic computations",
+        "320.9",
+        "323.7",
+        "335.9"
+      ],
+      [
+        "Weighted average dilutive effect of equity awards",
+        "5.6",
+        "4.7",
+        "4.0"
+      ],
+      [
+        "Weighted average common shares outstanding for diluted computations",
+        "326.5",
+        "328.4",
+        "339.9"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "LMT/2013/page_74.pdf-1",
+      "expected": 498.9,
+      "answer": "331.6",
+      "program": "add(326.5, 328.4), add(#0, 339.9), add(#1, const_3), divide(#2, const_2)",
+      "goldCells": [
+        "r3c1",
+        "r3c2",
+        "r3c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "LMT/2013/page_74.pdf",
+      "gold": [
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r3c1"
+            },
+            {
+              "field": "r3c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c3"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "constant": 3
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 2
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r3c1"
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c3"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "constant": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-cc8be47207e9-0",
+    "source": "AES/2003/page_52.pdf-1",
+    "question": "for the three months ended march 2003 what were the total sales proceeds for subsidiaries assets in millions?",
+    "originalTable": [
+      [
+        "Project Name",
+        "Date Completed",
+        "Sales Proceeds (in millions)",
+        "Location"
+      ],
+      [
+        "CILCORP/Medina Valley",
+        "January 2003",
+        "$495",
+        "United States"
+      ],
+      [
+        "AES Ecogen/AES Mt. Stuart",
+        "January 2003",
+        "$59",
+        "Australia"
+      ],
+      [
+        "Mountainview",
+        "March 2003",
+        "$30",
+        "United States"
+      ],
+      [
+        "Kelvin",
+        "March 2003",
+        "$29",
+        "South Africa"
+      ],
+      [
+        "Songas",
+        "April 2003",
+        "$94",
+        "Tanzania"
+      ],
+      [
+        "AES Barry Limited",
+        "July 2003",
+        "£40/$62",
+        "United Kingdom"
+      ],
+      [
+        "AES Haripur Private Ltd/AES Meghnaghat Ltd",
+        "December 2003",
+        "$145",
+        "Bangladesh"
+      ],
+      [
+        "AES MtKvari/AES Khrami/AES Telasi",
+        "August 2003",
+        "$23",
+        "Republic of Georgia"
+      ],
+      [
+        "Medway Power Limited/AES Medway Operations Limited",
+        "November 2003",
+        "£47/$78",
+        "United Kingdom"
+      ],
+      [
+        "AES Oasis Limited",
+        "December 2003",
+        "$150",
+        "Pakistan/Oman"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "AES/2003/page_52.pdf-1",
+      "expected": 613,
+      "answer": "",
+      "program": "add(495, 59), add(#0, 30), add(#1, 29)",
+      "goldCells": [
+        "r1c2",
+        "r2c2",
+        "r3c2",
+        "r4c2"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "AES/2003/page_52.pdf",
+      "gold": [
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r1c2"
+            },
+            {
+              "field": "r2c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "field": "r4c2"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r1c2"
+          },
+          {
+            "field": "r2c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "field": "r4c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 2
+          },
+          {
+            "field": "r5c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 3
+          },
+          {
+            "field": "r7c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 4
+          },
+          {
+            "field": "r8c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 5
+          },
+          {
+            "field": "r10c2"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-cc8be47207e9-1",
+    "source": "AES/2003/page_52.pdf-1",
+    "question": "for the three months ended march 2003 what were the total sales proceeds for subsidiaries assets in millions?",
+    "originalTable": [
+      [
+        "Project Name",
+        "Date Completed",
+        "Sales Proceeds (in millions)",
+        "Location"
+      ],
+      [
+        "CILCORP/Medina Valley",
+        "January 2003",
+        "$495",
+        "United States"
+      ],
+      [
+        "AES Ecogen/AES Mt. Stuart",
+        "January 2003",
+        "$59",
+        "Australia"
+      ],
+      [
+        "Mountainview",
+        "March 2003",
+        "$30",
+        "United States"
+      ],
+      [
+        "Kelvin",
+        "March 2003",
+        "$29",
+        "South Africa"
+      ],
+      [
+        "Songas",
+        "April 2003",
+        "$94",
+        "Tanzania"
+      ],
+      [
+        "AES Barry Limited",
+        "July 2003",
+        "£40/$62",
+        "United Kingdom"
+      ],
+      [
+        "AES Haripur Private Ltd/AES Meghnaghat Ltd",
+        "December 2003",
+        "$145",
+        "Bangladesh"
+      ],
+      [
+        "AES MtKvari/AES Khrami/AES Telasi",
+        "August 2003",
+        "$23",
+        "Republic of Georgia"
+      ],
+      [
+        "Medway Power Limited/AES Medway Operations Limited",
+        "November 2003",
+        "£47/$78",
+        "United Kingdom"
+      ],
+      [
+        "AES Oasis Limited",
+        "December 2003",
+        "$150",
+        "Pakistan/Oman"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "AES/2003/page_52.pdf-1",
+      "expected": 613,
+      "answer": "",
+      "program": "add(495, 59), add(#0, 30), add(#1, 29)",
+      "goldCells": [
+        "r1c2",
+        "r2c2",
+        "r3c2",
+        "r4c2"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "AES/2003/page_52.pdf",
+      "gold": [
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r1c2"
+            },
+            {
+              "field": "r2c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "field": "r3c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "field": "r4c2"
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r1c2"
+          },
+          {
+            "field": "r2c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r3c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "field": "r4c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 2
+          },
+          {
+            "field": "r5c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 3
+          },
+          {
+            "field": "r7c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 4
+          },
+          {
+            "field": "r8c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 5
+          },
+          {
+            "field": "r10c2"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-fc4c03c1a0dc-0",
+    "source": "IP/2005/page_19.pdf-3",
+    "question": "what was the average industry segment operating profits from 2003 to 2005",
+    "originalTable": [
+      [
+        "<i>In millions</i>",
+        "2005",
+        "2004",
+        "2003"
+      ],
+      [
+        "Industry segment operating profits",
+        "$1,923",
+        "$2,040",
+        "$1,734"
+      ],
+      [
+        "Corporate items",
+        "(597)",
+        "(469)",
+        "(466)"
+      ],
+      [
+        "Corporate special items*",
+        "(147)",
+        "(142)",
+        "(281)"
+      ],
+      [
+        "Interest expense, net",
+        "(593)",
+        "(710)",
+        "(705)"
+      ],
+      [
+        "Minority interest",
+        "(12)",
+        "(21)",
+        "(80)"
+      ],
+      [
+        "Income tax benefit (provision)",
+        "285",
+        "(242)",
+        "56"
+      ],
+      [
+        "Discontinued operations",
+        "241",
+        "(491)",
+        "57"
+      ],
+      [
+        "Accounting changes",
+        "–",
+        "–",
+        "(13)"
+      ],
+      [
+        "Net earnings (loss)",
+        "$1,100",
+        "$(35)",
+        "$302"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "IP/2005/page_19.pdf-3",
+      "expected": 2850,
+      "answer": "1899",
+      "program": "add(1923, 2040), add(1734, #0), add(#1, const_3), divide(#2, const_2)",
+      "goldCells": [
+        "r1c1",
+        "r1c2",
+        "r1c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "IP/2005/page_19.pdf",
+      "gold": [
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r1c1"
+            },
+            {
+              "field": "r1c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r1c3"
+            },
+            {
+              "step": 0
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "constant": 3
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 2
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r1c1"
+          },
+          {
+            "field": "r1c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r1c3"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "constant": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-fc4c03c1a0dc-1",
+    "source": "IP/2005/page_19.pdf-3",
+    "question": "what was the average industry segment operating profits from 2003 to 2005",
+    "originalTable": [
+      [
+        "<i>In millions</i>",
+        "2005",
+        "2004",
+        "2003"
+      ],
+      [
+        "Industry segment operating profits",
+        "$1,923",
+        "$2,040",
+        "$1,734"
+      ],
+      [
+        "Corporate items",
+        "(597)",
+        "(469)",
+        "(466)"
+      ],
+      [
+        "Corporate special items*",
+        "(147)",
+        "(142)",
+        "(281)"
+      ],
+      [
+        "Interest expense, net",
+        "(593)",
+        "(710)",
+        "(705)"
+      ],
+      [
+        "Minority interest",
+        "(12)",
+        "(21)",
+        "(80)"
+      ],
+      [
+        "Income tax benefit (provision)",
+        "285",
+        "(242)",
+        "56"
+      ],
+      [
+        "Discontinued operations",
+        "241",
+        "(491)",
+        "57"
+      ],
+      [
+        "Accounting changes",
+        "–",
+        "–",
+        "(13)"
+      ],
+      [
+        "Net earnings (loss)",
+        "$1,100",
+        "$(35)",
+        "$302"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "IP/2005/page_19.pdf-3",
+      "expected": 2850,
+      "answer": "1899",
+      "program": "add(1923, 2040), add(1734, #0), add(#1, const_3), divide(#2, const_2)",
+      "goldCells": [
+        "r1c1",
+        "r1c2",
+        "r1c3"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "IP/2005/page_19.pdf",
+      "gold": [
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r1c1"
+            },
+            {
+              "field": "r1c2"
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "field": "r1c3"
+            },
+            {
+              "step": 0
+            }
+          ]
+        },
+        {
+          "op": "add",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "constant": 3
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 2
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "add",
+        "args": [
+          {
+            "field": "r1c1"
+          },
+          {
+            "field": "r1c2"
+          }
+        ]
+      },
+      {
+        "op": "add",
+        "args": [
+          {
+            "step": 0
+          },
+          {
+            "field": "r1c3"
+          }
+        ]
+      },
+      {
+        "op": "divide",
+        "args": [
+          {
+            "step": 1
+          },
+          {
+            "constant": 3
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-229da609924a-0",
+    "source": "CDNS/2006/page_30.pdf-4",
+    "question": "what was the difference in percentage cumulative 5-year total return to shareholders of cadence design systems , inc . 2019s common stock and the s&p 500 for the period ended december 30 , 2006?",
+    "originalTable": [
+      [
+        "",
+        "December 29, 2001",
+        "December 28, 2002",
+        "January 3, 2004",
+        "January 1, 2005",
+        "December 31, 2005",
+        "December 30, 2006"
+      ],
+      [
+        "Cadence Design Systems, Inc.",
+        "100.00",
+        "54.38",
+        "81.52",
+        "61.65",
+        "75.54",
+        "79.96"
+      ],
+      [
+        "S & P 500",
+        "100.00",
+        "77.90",
+        "100.24",
+        "111.15",
+        "116.61",
+        "135.03"
+      ],
+      [
+        "NASDAQ Composite",
+        "100.00",
+        "71.97",
+        "107.18",
+        "117.07",
+        "120.50",
+        "137.02"
+      ],
+      [
+        "S & P Information Technology",
+        "100.00",
+        "62.59",
+        "92.14",
+        "94.50",
+        "95.44",
+        "103.47"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "CDNS/2006/page_30.pdf-4",
+      "expected": -0.5507,
+      "answer": "55.07%",
+      "program": "subtract(79.96, const_100), divide(#0, const_100), subtract(135.03, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "goldCells": [
+        "r1c6",
+        "r2c6"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "CDNS/2006/page_30.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r1c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r2c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "step": 3
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r1c6"
+          },
+          {
+            "field": "r2c6"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  },
+  {
+    "record": "frozen-v8-20260927-finqa-229da609924a-1",
+    "source": "CDNS/2006/page_30.pdf-4",
+    "question": "what was the difference in percentage cumulative 5-year total return to shareholders of cadence design systems , inc . 2019s common stock and the s&p 500 for the period ended december 30 , 2006?",
+    "originalTable": [
+      [
+        "",
+        "December 29, 2001",
+        "December 28, 2002",
+        "January 3, 2004",
+        "January 1, 2005",
+        "December 31, 2005",
+        "December 30, 2006"
+      ],
+      [
+        "Cadence Design Systems, Inc.",
+        "100.00",
+        "54.38",
+        "81.52",
+        "61.65",
+        "75.54",
+        "79.96"
+      ],
+      [
+        "S & P 500",
+        "100.00",
+        "77.90",
+        "100.24",
+        "111.15",
+        "116.61",
+        "135.03"
+      ],
+      [
+        "NASDAQ Composite",
+        "100.00",
+        "71.97",
+        "107.18",
+        "117.07",
+        "120.50",
+        "137.02"
+      ],
+      [
+        "S & P Information Technology",
+        "100.00",
+        "62.59",
+        "92.14",
+        "94.50",
+        "95.44",
+        "103.47"
+      ]
+    ],
+    "originalLabel": {
+      "sourceId": "CDNS/2006/page_30.pdf-4",
+      "expected": -0.5507,
+      "answer": "55.07%",
+      "program": "subtract(79.96, const_100), divide(#0, const_100), subtract(135.03, const_100), divide(#2, const_100), subtract(#1, #3)",
+      "goldCells": [
+        "r1c6",
+        "r2c6"
+      ],
+      "tolerance": 0.00005,
+      "sourceFile": "CDNS/2006/page_30.pdf",
+      "gold": [
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r1c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 0
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "field": "r2c6"
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "divide",
+          "args": [
+            {
+              "step": 2
+            },
+            {
+              "constant": 100
+            }
+          ]
+        },
+        {
+          "op": "subtract",
+          "args": [
+            {
+              "step": 1
+            },
+            {
+              "step": 3
+            }
+          ]
+        }
+      ]
+    },
+    "proposedProgram": [
+      {
+        "op": "subtract",
+        "args": [
+          {
+            "field": "r1c6"
+          },
+          {
+            "field": "r2c6"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": "Pending independent human review; original scoring unchanged."
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-27",
+  "environment": "Windows, Node.js 24; staged-tree clean export",
+  "install": "npm ci: 5 packages installed; 0 reported vulnerabilities",
+  "unitTests": {"passed": 41, "failed": 0, "budgetExhaustiveInstances": 240},
+  "offlineVerification": ["v1", "v2", "v3", "v4 financial", "v4 controls", "v5", "v6", "v7", "v8"],
+  "v8Verified": {"modelGraphs": 48, "providerCalls": 96, "controllerArms": 1440},
+  "externalComponent": {"library": "freshctx", "version": "0.16.0", "matchedDevelopmentComparisons": 24, "python": "Previously pinned local v7 environment; not the nonexistent .venv-v7 path used in the first attempted check"},
+  "browser": {"modelGraphUi": "pass in working directory and clean export", "existingRepairUi": "pass", "languages": ["zh", "en"], "viewports": [[1366,768],[1600,1000],[1920,1080]], "pageErrors": 0, "horizontalOverflow": false, "pdfPreview": "pass"},
+  "paper": {"pages": 4, "nativeEditableEquations": 6, "englishPseudocode": true, "render": "Native Word PDF export and skill rasterizer; all four pages inspected"},
+  "credentialScan": {"trackedFilesScanned": 501, "archiveTextMembersScanned": 11230, "matchingModelKeyPatterns": 0, "scope": "Staged release and text members of zip/docx archives; not a claim of formal security certification"},
+  "limitations": ["Human adjudication pending", "No observed frontier gain over greedy on the new prospective set", "Formal English ACM submission and author ORCID remain outside this delivery"]
+}

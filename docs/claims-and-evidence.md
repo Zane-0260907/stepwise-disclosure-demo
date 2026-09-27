@@ -1,8 +1,15 @@
 # Claims and their evidence
 
+## Current v8 evidence
+
+V8 links 96 actual DeepSeek calls to 48 model graphs, with 1,440 paired executions over 24 public questions. Reuse reduces HTTP calls 331 to 261 (21.1%). All five repair methods produce 425 distinct units and 500 field transmissions: no added frontier or budget efficiency benefit is established. Original-label agreement is 28/48; two reference programs need human adjudication. A per-phase transmission bound and 240 exhaustive-oracle tests support the bounded selector, not a new general optimization theorem. [Full design, assumptions and failures](reproduction-v8.md).
+
+The real-model prefix is shared across controller arms. State changes are controlled and the numeric receiver is a real loopback listener in the same Node process. No complete external agent-system comparison, production deployment or independent human quality claim is made.
+
+
 This map separates implemented behavior, measured outcomes and open research questions. Numbers describe this release, not an acceptance probability.
 
-## Current v7 claims
+## Preserved v7 claims
 
 | Claim | Evidence | Limit |
 | :-- | :-- | :-- |

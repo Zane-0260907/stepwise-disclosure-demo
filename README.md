@@ -37,9 +37,9 @@
 An agent can discover a new step only after reading local material or receiving a tool result. That step may need a different executor and a different set of facts. This prototype makes both decisions at each registered step: use a local rule when it can complete the operation; otherwise construct a view for the actual external recipient, check the final request before transmission, and record what the recipient received.
 
 <p align="center">
-  <img src="evidence/repair-showcase/repair.en.png" alt="English interface showing a fresh controlled HTTP run, invalidated request and repaired continuation" width="920">
+  <img src="evidence/model-showcase-v8/model.en.png" alt="English interface showing a saved model plan, fresh execution, capability change and receiver view" width="920">
 </p>
-<p align="center"><em>Fresh controlled HTTP execution in the English interface. Select a step to inspect the changed dependency, recipient view and receiver record.</em></p>
+<p align="center"><em>A saved real DeepSeek plan drives fresh HTTP execution. Select a step to inspect its view, remaining budget and actual receiver record.</em></p>
 
 This is an independent research demo with synthetic contracts, study records and a restricted public FinQA table subset, not the commercial client. Its offline executor uses finite rules; the saved DeepSeek runs are real provider calls presented as replay. The interface labels those modes separately. The new table route lets a model propose a bounded calculation over a schema, then reads the numerical dependencies locally.
 
@@ -57,11 +57,11 @@ Node.js runs the step planner, receiver and web interface; PDF.js reads the synt
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
-## Current contribution: repair after execution conditions change
+## Current version: real model graphs and bounded continuation
 
-The original goal remains deciding **where each step runs and what its recipient receives**. V7 adds a bounded continuation planner that retains recipient-specific disclosure history, checks both source and planning dependencies, and reuses valid pure results after a change. It compares only registered equivalent input alternatives for currently known steps. Neither generic dynamic programming nor dependency invalidation is claimed as new.
+The original goal remains **where each step runs and what its recipient receives**. V8 connects real model tool calls, a calculation graph, source/capability changes, valid-result reuse and actual receiver records. A shared phase budget bounds repeated numeric-field transmissions relative to the same phase's greedy continuation.
 
-**Start here:** choose the limit-change case, run **Frontier repair**, inspect the invalidated request and retained result, then repeat with **Full restart**. Four new cases run fresh operations through a separate HTTP process without a key. They are controlled experiments, not model calls. [Detailed walkthrough and reproduction](docs/reproduction-v7.md).
+**Start here:** choose **Real model plan · Local capability changes**, run **Bound transmissions · reuse valid results**, and compare with **Restart all after the change**. Without a key, a saved real model plan drives new computations and HTTP requests. Use the batch command with your own key for new model calls. [Detailed English walkthrough and reproduction](docs/reproduction-v8.md).
 
 ## Getting started
 
@@ -87,7 +87,7 @@ For a new live DeepSeek call, set `DEEPSEEK_API_KEY` in your local environment a
 | DeepSeek live run | Your own | Makes new provider calls and records the resulting steps |
 | Batch verification | None | Recomputes scores from the published archives |
 
-Start with the **limit-change repair case** for a new HTTP execution, or **Request missing facts** in the recorded-run list for a saved model trace. The timeline advances automatically. Click any step to inspect its actual recipient and input; **Follow current step** resumes following. **Files** and **Preview** show the source or report. After completion, download the report or raw trace. Slower playback is shown separately from measured execution time.
+Start with **Real model plan · Local capability changes** for a new HTTP execution, or **Request missing facts** in the recorded-run list for a saved model trace. The timeline advances automatically. Click any step to inspect its actual recipient and input; **Follow current step** resumes following. **Files** and **Preview** show the source or report. After completion, download the report or raw trace. Slower playback is shown separately from measured execution time.
 
 ### Configure live calls locally
 
@@ -128,6 +128,29 @@ Click a step in the middle pane to inspect its selected recipient, facts sent, f
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>
 
 ## Reproduce the experiment
+
+### V8: real model plans and a complete execution chain
+
+**24 public questions · 48 model plans · 96 actual calls · 1,440 paired executions.** Each plan is shared across five conditions and six controllers; these are not 1,440 independent model conversations.
+
+| Measurement | Restart | Greedy repair | Frontier | Budget 0% |
+|:--|--:|--:|--:|--:|
+| Actual HTTP operator calls | 331 | 261 | 261 | 261 |
+| Numeric fields transmitted | 724 | 500 | 500 | 500 |
+| Distinct disclosure units | 429 | 425 | 425 | 425 |
+| Program-consistent / 240 | 240 | 240 | 240 | 240 |
+| Reference-expression agreement / 240 | 137 | 137 | 137 | 137 |
+
+Original-label agreement is **28/48**, not human-adjudicated correctness; two average-question reference programs are suspect and remain unchanged. Reuse reduces calls 21.1%; **frontier and budget variants show no incremental benefit on this batch**. All disagreements and null results are public.
+
+<p align="center"><img src="evidence/validation-v8/tradeoffs.en.svg" alt="Observed model-graph execution costs and no incremental frontier benefit" width="1000"></p>
+
+```sh
+unzip -o evidence/validation-v8/reproduction-records.zip -d .
+npm run verify:v8
+```
+
+The [complete guide](docs/reproduction-v8.md) covers the first walkthrough, offline checks, new paid calls, budgets, failures and metric limits. Earlier studies below remain separate; their observations are not pooled with V8.
 
 ### V7: dynamic repair, with an actual external check component
 
@@ -224,7 +247,7 @@ npm run verify:v5
 
 ## Evidence and limitations
 
-The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v7 repair experiment and the separately retained v6 model study. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
+The [latest Chinese manuscript](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf), [editable Word file](paper/zh-CN/按步执行与信息共享_中文最新稿.docx), and [equation/pseudocode source](paper/zh-CN/公式与算法源码.md) use the v8 prospective model-graph study, with v7/v6 retained separately. This is an editorial draft, not an accepted publication or a finished English ACM submission. See the [claim-to-evidence map](docs/claims-and-evidence.md).
 
 The [progressive showcase](evidence/progressive-showcase/) is one additional real run, excluded from batch totals. It preserves the model's request for a needed late-day count **and an unnecessary contract amount**, followed by the CNY 1,150 result. The [earlier reference-lookup pair](evidence/research/deepseek-live-20260926/) is also retained separately. Neither is a substitute for batch evaluation.
 
@@ -243,12 +266,12 @@ The [progressive showcase](evidence/progressive-showcase/) is one additional rea
 | [`src/research/`](src/research/) | Planner, views, policy checks, receiver, model adapter and evaluator |
 | [`web/`](web/) | Bilingual research interface, separate from the commercial product |
 | [`fixtures/research/`](fixtures/research/) | Synthetic PDFs, task catalog, references and withheld labels |
-| [`evidence/validation-v7/`](evidence/validation-v7/) | Current repair protocol, all records, event strata and bilingual figures |
+| [`evidence/validation-v7/`](evidence/validation-v7/) | Preserved controlled-repair protocol, all records, event strata and bilingual figures |
 | [`evidence/validation-v6/`](evidence/validation-v6/) | Separately preserved real model calls and utility evaluation |
 | [`fixtures/finqa-v6/`](fixtures/finqa-v6/) | Public subset, separate labels, pinned provenance and original license |
 | [`paper/zh-CN/`](paper/zh-CN/) | Latest Chinese manuscript and native Word formula source |
 | [`evidence/research/`](evidence/research/) | Unchanged original study and earlier live-call records |
-| [`evidence/progressive-showcase/`](evidence/progressive-showcase/) | Current preserved trace and bilingual browser screenshots |
+| [`evidence/progressive-showcase/`](evidence/progressive-showcase/) | Earlier preserved trace and bilingual browser screenshots |
 | [`scripts/`](scripts/) | Input checks, independent score verification, summaries and plots |
 
 <p align="right"><a href="#readme-top">Back to top ↑</a></p>

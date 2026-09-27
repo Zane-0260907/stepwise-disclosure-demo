@@ -77,7 +77,7 @@ def full_figure(doc, path, caption, width=6.78):
     cp = doc.add_paragraph()
     cp.paragraph_format.space_after = Pt(3)
     cp.paragraph_format.keep_with_next = False
-    run(cp, caption, 7.4)
+    run(cp, caption, 8)
 
 
 def col_section(doc, start=WD_SECTION_START.CONTINUOUS, count=2):

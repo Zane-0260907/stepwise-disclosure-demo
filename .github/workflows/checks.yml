@@ -65,3 +65,10 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install --require-hashes -r requirements-v7.txt
       - run: npm run test:external-v7
+
+      - name: Verify prospective model graphs and budgeted execution
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath evidence/validation-v8/reproduction-records.zip -DestinationPath . -Force
+          npm run verify:v8
+          node scripts/analyze-v8.mjs

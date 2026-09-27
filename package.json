@@ -32,7 +32,11 @@
     "verify:v7": "node scripts/verify-v7-release.mjs",
     "plot:v7": "python scripts/plot-v7.py",
     "test:repair-ui": "node test/repair-ui.mjs",
-    "test:external-v7": "node test/external-v7.mjs"
+    "test:external-v7": "node test/external-v7.mjs",
+    "experiment:v8": "node scripts/run-v8-release.mjs",
+    "verify:v8": "node scripts/verify-v8-release.mjs",
+    "plot:v8": "python scripts/plot-v8.py",
+    "test:model-ui": "node test/model-ui-v8.mjs"
   },
   "dependencies": {
     "pdfjs-dist": "^6.3.289"

@@ -1,0 +1,210 @@
+{
+  "id": "finqa-d05ec5d5e0c1",
+  "sourceId": "BLK/2015/page_124.pdf-3",
+  "sourceFile": "BLK/2015/page_124.pdf",
+  "family": "finance",
+  "title": {
+    "zh": "公开财务表格数值问答",
+    "en": "Public financial-table question"
+  },
+  "task": {
+    "zh": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?",
+    "en": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?"
+  },
+  "question": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?",
+  "schema": [
+    {
+      "id": "r1c1",
+      "row": "2016",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    },
+    {
+      "id": "r2c1",
+      "row": "2017",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    },
+    {
+      "id": "r3c1",
+      "row": "2018",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    },
+    {
+      "id": "r4c1",
+      "row": "2019",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    },
+    {
+      "id": "r5c1",
+      "row": "2020",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    },
+    {
+      "id": "r6c1",
+      "row": "Thereafter",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    },
+    {
+      "id": "r7c1",
+      "row": "Total",
+      "column": "Amount",
+      "columnIndex": 1,
+      "unitHint": "Year",
+      "valueUnit": "source units"
+    }
+  ],
+  "facts": {
+    "r1c1": 134,
+    "r2c1": 133,
+    "r3c1": 131,
+    "r4c1": 125,
+    "r5c1": 120,
+    "r6c1": 560,
+    "r7c1": 1203
+  },
+  "source": "FinQA/BLK/2015/page_124.pdf-3",
+  "originalTable": [
+    [
+      "Year",
+      "Amount"
+    ],
+    [
+      "2016",
+      "$134"
+    ],
+    [
+      "2017",
+      "133"
+    ],
+    [
+      "2018",
+      "131"
+    ],
+    [
+      "2019",
+      "125"
+    ],
+    [
+      "2020",
+      "120"
+    ],
+    [
+      "Thereafter",
+      "560"
+    ],
+    [
+      "Total",
+      "$1,203"
+    ]
+  ],
+  "legacyFacts": {
+    "r1c1": 134,
+    "r2c1": 133,
+    "r3c1": 131,
+    "r4c1": 125,
+    "r5c1": 120,
+    "r6c1": 560,
+    "r7c1": 1203
+  },
+  "tableStructure": [
+    {
+      "sourceRow": 0,
+      "role": "header",
+      "cells": [
+        "Year",
+        "Amount"
+      ]
+    },
+    {
+      "sourceRow": 1,
+      "role": "data",
+      "cells": [
+        "2016",
+        "{r1c1}"
+      ]
+    },
+    {
+      "sourceRow": 2,
+      "role": "data",
+      "cells": [
+        "2017",
+        "{r2c1}"
+      ]
+    },
+    {
+      "sourceRow": 3,
+      "role": "data",
+      "cells": [
+        "2018",
+        "{r3c1}"
+      ]
+    },
+    {
+      "sourceRow": 4,
+      "role": "data",
+      "cells": [
+        "2019",
+        "{r4c1}"
+      ]
+    },
+    {
+      "sourceRow": 5,
+      "role": "data",
+      "cells": [
+        "2020",
+        "{r5c1}"
+      ]
+    },
+    {
+      "sourceRow": 6,
+      "role": "data",
+      "cells": [
+        "Thereafter",
+        "{r6c1}"
+      ]
+    },
+    {
+      "sourceRow": 7,
+      "role": "data",
+      "cells": [
+        "Total",
+        "{r7c1}"
+      ]
+    }
+  ],
+  "headerRows": [
+    {
+      "sourceRow": 0,
+      "cells": [
+        "Year",
+        "Amount"
+      ]
+    }
+  ],
+  "classification": {
+    "headerRows": [
+      0
+    ],
+    "promotedNumericHeaders": []
+  },
+  "datasetSplit": "test",
+  "sourceOperationCount": 3,
+  "split": "test"
+}

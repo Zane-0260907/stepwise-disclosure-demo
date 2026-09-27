@@ -1,0 +1,41 @@
+{
+  "primaryVerifier": "verify-v8-release.mjs; frozen verifier retained with documented receipt-matching amendment",
+  "modelLabelAgreement": "28/48 agrees with original numeric labels, not independently human-confirmed semantic accuracy",
+  "suspectedAnnotationConflicts": [
+    {
+      "caseId": "finqa-192479754710",
+      "reason": "Question asks three-year average; original gold program adds constant 3 to the three-value sum, then divides by 2.",
+      "source": "LMT/2013/page_74.pdf-1",
+      "status": "Unadjudicated; no score correction or exclusion"
+    },
+    {
+      "caseId": "finqa-fc4c03c1a0dc",
+      "reason": "Question asks three-year average; original gold program adds constant 3 to the three-value sum, then divides by 2.",
+      "source": "IP/2005/page_19.pdf-3",
+      "status": "Unadjudicated; no score correction or exclusion"
+    }
+  ],
+  "remoteCallsReductionPct": 21.148036253776436,
+  "clusterBootstrap": {
+    "unit": "source question, all conditions and both repeats sampled together",
+    "resamples": 10000,
+    "seed": 271928,
+    "percentile95": [
+      19.10828025477707,
+      23.841059602649008
+    ],
+    "exploratory": true
+  },
+  "normalizedPayloadBytes": {
+    "restart_greedy": 65274,
+    "repair_greedy": 52659,
+    "repair_frontier": 52659,
+    "budget_0": 52659,
+    "budget_10": 52659,
+    "budget_25": 52659
+  },
+  "rawBytesCaveat": "Raw payload sizes include different-length method tags in runId. Compare numeric-field counts or the separately reported payload bytes with runId removed; do not attribute tag length to optimization.",
+  "frontierVsGreedy": "All 240 paired runs have identical disclosure and numeric-field totals; no incremental planning gain is established in this prospective set.",
+  "budgetSensitivity": "Slack 0, 10%, 25% has identical measured choices on this set. The budget is a phase constraint, not an observed new efficiency win.",
+  "receiver": "Actual loopback HTTP listener in the controller Node process; not a remote production service or independent-process attestation."
+}

@@ -1,0 +1,1805 @@
+[
+  {
+    "id": "finqa-d4800c218dd1",
+    "sourceId": "JPM/2010/page_120.pdf-1",
+    "sourceFile": "JPM/2010/page_120.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percentage change in total wholesale credit exposure from 2009 to 2010?",
+      "en": "what was the percentage change in total wholesale credit exposure from 2009 to 2010?"
+    },
+    "question": "what was the percentage change in total wholesale credit exposure from 2009 to 2010?",
+    "schema": [
+      {
+        "id": "r2c1",
+        "row": "Loans retained",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Loans retained",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Loans retained",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "Loans retained",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Loans held-for-sale",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Loans held-for-sale",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Loans held-for-sale",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "Loans held-for-sale",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Loans at fair value",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Loans at fair value",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Loans at fair value",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c4",
+        "row": "Loans at fair value",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Loans– reported",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Loans– reported",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Loans– reported",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c4",
+        "row": "Loans– reported",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Derivative receivables",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Derivative receivables",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "Derivative receivables",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c4",
+        "row": "Derivative receivables",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Receivables from customers(a)",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "Receivables from customers(a)",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c1",
+        "row": "Interests in purchased receivables(b)",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "Interests in purchased receivables(b)",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c1",
+        "row": "Total wholesale credit-related assets",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c2",
+        "row": "Total wholesale credit-related assets",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c3",
+        "row": "Total wholesale credit-related assets",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c4",
+        "row": "Total wholesale credit-related assets",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c1",
+        "row": "Lending-related commitments(c)",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c2",
+        "row": "Lending-related commitments(c)",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c3",
+        "row": "Lending-related commitments(c)",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c4",
+        "row": "Lending-related commitments(c)",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c1",
+        "row": "Total wholesale credit exposure",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c2",
+        "row": "Total wholesale credit exposure",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c3",
+        "row": "Total wholesale credit exposure",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c4",
+        "row": "Total wholesale credit exposure",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c1",
+        "row": "Net credit derivative hedges notional(d)",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c2",
+        "row": "Net credit derivative hedges notional(d)",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c3",
+        "row": "Net credit derivative hedges notional(d)",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c4",
+        "row": "Net credit derivative hedges notional(d)",
+        "column": "2009",
+        "columnIndex": 4,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c1",
+        "row": "Liquid securities and other cash collateral held against derivatives(e)",
+        "column": "2010",
+        "columnIndex": 1,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c2",
+        "row": "Liquid securities and other cash collateral held against derivatives(e)",
+        "column": "2009",
+        "columnIndex": 2,
+        "unitHint": "December 31, | (in millions)",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r2c1": 222510,
+      "r2c2": 200077,
+      "r2c3": 5510,
+      "r2c4": 6559,
+      "r3c1": 3147,
+      "r3c2": 2734,
+      "r3c3": 341,
+      "r3c4": 234,
+      "r4c1": 1976,
+      "r4c2": 1364,
+      "r4c3": 155,
+      "r4c4": 111,
+      "r5c1": 227633,
+      "r5c2": 204175,
+      "r5c3": 6006,
+      "r5c4": 6904,
+      "r6c1": 80481,
+      "r6c2": 80210,
+      "r6c3": 34,
+      "r6c4": 529,
+      "r7c1": 32541,
+      "r7c2": 15745,
+      "r8c1": 391,
+      "r8c2": 2927,
+      "r9c1": 341046,
+      "r9c2": 303057,
+      "r9c3": 6040,
+      "r9c4": 7433,
+      "r10c1": 346079,
+      "r10c2": 347155,
+      "r10c3": 1005,
+      "r10c4": 1577,
+      "r11c1": 687125,
+      "r11c2": 650212,
+      "r11c3": 7045,
+      "r11c4": 9010,
+      "r12c1": -23108,
+      "r12c2": -48376,
+      "r12c3": -55,
+      "r12c4": -139,
+      "r13c1": -16486,
+      "r13c2": -15519
+    },
+    "source": "FinQA/JPM/2010/page_120.pdf-1",
+    "originalTable": [
+      [
+        "December 31,",
+        "Credit exposure",
+        "Nonperforming (f)"
+      ],
+      [
+        "(in millions)",
+        "2010",
+        "2009",
+        "2010",
+        "2009"
+      ],
+      [
+        "Loans retained",
+        "$222,510",
+        "$200,077",
+        "$5,510",
+        "$6,559"
+      ],
+      [
+        "Loans held-for-sale",
+        "3,147",
+        "2,734",
+        "341",
+        "234"
+      ],
+      [
+        "Loans at fair value",
+        "1,976",
+        "1,364",
+        "155",
+        "111"
+      ],
+      [
+        "Loans– reported",
+        "227,633",
+        "204,175",
+        "6,006",
+        "6,904"
+      ],
+      [
+        "Derivative receivables",
+        "80,481",
+        "80,210",
+        "34",
+        "529"
+      ],
+      [
+        "Receivables from customers<sup>(a)</sup>",
+        "32,541",
+        "15,745",
+        "—",
+        "—"
+      ],
+      [
+        "Interests in purchased receivables<sup>(b)</sup>",
+        "391",
+        "2,927",
+        "—",
+        "—"
+      ],
+      [
+        "Total wholesale credit-related assets",
+        "341,046",
+        "303,057",
+        "6,040",
+        "7,433"
+      ],
+      [
+        "Lending-related commitments<sup>(c)</sup>",
+        "346,079",
+        "347,155",
+        "1,005",
+        "1,577"
+      ],
+      [
+        "Total wholesale credit exposure",
+        "$687,125",
+        "$650,212",
+        "$7,045",
+        "$9,010"
+      ],
+      [
+        "Net credit derivative hedges notional<sup>(d)</sup>",
+        "$(23,108)",
+        "$(48,376)",
+        "$(55)",
+        "$(139)"
+      ],
+      [
+        "Liquid securities and other cash collateral held against derivatives<sup>(e)</sup>",
+        "(16,486)",
+        "(15,519)",
+        "NA",
+        "NA"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 2010,
+      "r1c2": 2009,
+      "r1c3": 2010,
+      "r1c4": 2009,
+      "r2c1": 222510,
+      "r2c2": 200077,
+      "r2c3": 5510,
+      "r2c4": 6559,
+      "r3c1": 3147,
+      "r3c2": 2734,
+      "r3c3": 341,
+      "r3c4": 234,
+      "r4c1": 1976,
+      "r4c2": 1364,
+      "r4c3": 155,
+      "r4c4": 111,
+      "r5c1": 227633,
+      "r5c2": 204175,
+      "r5c3": 6006,
+      "r5c4": 6904,
+      "r6c1": 80481,
+      "r6c2": 80210,
+      "r6c3": 34,
+      "r6c4": 529,
+      "r7c1": 32541,
+      "r7c2": 15745,
+      "r8c1": 391,
+      "r8c2": 2927,
+      "r9c1": 341046,
+      "r9c2": 303057,
+      "r9c3": 6040,
+      "r9c4": 7433,
+      "r10c1": 346079,
+      "r10c2": 347155,
+      "r10c3": 1005,
+      "r10c4": 1577,
+      "r11c1": 687125,
+      "r11c2": 650212,
+      "r11c3": 7045,
+      "r11c4": 9010,
+      "r12c1": -23108,
+      "r12c2": -48376,
+      "r12c3": -55,
+      "r12c4": -139,
+      "r13c1": -16486,
+      "r13c2": -15519
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "December 31,",
+          "Credit exposure",
+          "Nonperforming (f)"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "header",
+        "cells": [
+          "(in millions)",
+          "2010",
+          "2009",
+          "2010",
+          "2009"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Loans retained",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Loans held-for-sale",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Loans at fair value",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}",
+          "{r4c4}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Loans– reported",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}",
+          "{r5c4}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Derivative receivables",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}",
+          "{r6c4}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Receivables from customers(a)",
+          "{r7c1}",
+          "{r7c2}",
+          "{unparsed:r7c3}",
+          "{unparsed:r7c4}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "Interests in purchased receivables(b)",
+          "{r8c1}",
+          "{r8c2}",
+          "{unparsed:r8c3}",
+          "{unparsed:r8c4}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Total wholesale credit-related assets",
+          "{r9c1}",
+          "{r9c2}",
+          "{r9c3}",
+          "{r9c4}"
+        ]
+      },
+      {
+        "sourceRow": 10,
+        "role": "data",
+        "cells": [
+          "Lending-related commitments(c)",
+          "{r10c1}",
+          "{r10c2}",
+          "{r10c3}",
+          "{r10c4}"
+        ]
+      },
+      {
+        "sourceRow": 11,
+        "role": "data",
+        "cells": [
+          "Total wholesale credit exposure",
+          "{r11c1}",
+          "{r11c2}",
+          "{r11c3}",
+          "{r11c4}"
+        ]
+      },
+      {
+        "sourceRow": 12,
+        "role": "data",
+        "cells": [
+          "Net credit derivative hedges notional(d)",
+          "{r12c1}",
+          "{r12c2}",
+          "{r12c3}",
+          "{r12c4}"
+        ]
+      },
+      {
+        "sourceRow": 13,
+        "role": "data",
+        "cells": [
+          "Liquid securities and other cash collateral held against derivatives(e)",
+          "{r13c1}",
+          "{r13c2}",
+          "{unparsed:r13c3}",
+          "{unparsed:r13c4}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "December 31,",
+          "Credit exposure",
+          "Nonperforming (f)"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "cells": [
+          "(in millions)",
+          "2010",
+          "2009",
+          "2010",
+          "2009"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0,
+        1
+      ],
+      "promotedNumericHeaders": [
+        "r1c1",
+        "r1c2",
+        "r1c3",
+        "r1c4"
+      ]
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "development"
+  },
+  {
+    "id": "finqa-4a8c8ca38cc4",
+    "sourceId": "SNA/2013/page_83.pdf-1",
+    "sourceFile": "SNA/2013/page_83.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the difference between income taxes paid and income tax expense for 2013 , ( in millions ) ?",
+      "en": "what is the difference between income taxes paid and income tax expense for 2013 , ( in millions ) ?"
+    },
+    "question": "what is the difference between income taxes paid and income tax expense for 2013 , ( in millions ) ?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Income taxes",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Income taxes",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Accrued restructuring",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Accrued restructuring",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Accrued warranty",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Accrued warranty",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Deferred subscription revenue",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Deferred subscription revenue",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Accrued property, payroll and other taxes",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Accrued property, payroll and other taxes",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Accrued selling and promotion expense",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Accrued selling and promotion expense",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Other",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "Other",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c1",
+        "row": "Total other accrued liabilities",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "Total other accrued liabilities",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(Amounts in millions)",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 7.7,
+      "r1c2": 19.6,
+      "r2c1": 4,
+      "r2c2": 7.2,
+      "r3c1": 17,
+      "r3c2": 18.9,
+      "r4c1": 26.6,
+      "r4c2": 24.8,
+      "r5c1": 31.3,
+      "r5c2": 32.9,
+      "r6c1": 24.5,
+      "r6c2": 26.6,
+      "r7c1": 132.6,
+      "r7c2": 117.9,
+      "r8c1": 243.7,
+      "r8c2": 247.9
+    },
+    "source": "FinQA/SNA/2013/page_83.pdf-1",
+    "originalTable": [
+      [
+        "<i>(Amounts in millions)</i>",
+        "2013",
+        "2012"
+      ],
+      [
+        "Income taxes",
+        "$7.7",
+        "$19.6"
+      ],
+      [
+        "Accrued restructuring",
+        "4.0",
+        "7.2"
+      ],
+      [
+        "Accrued warranty",
+        "17.0",
+        "18.9"
+      ],
+      [
+        "Deferred subscription revenue",
+        "26.6",
+        "24.8"
+      ],
+      [
+        "Accrued property, payroll and other taxes",
+        "31.3",
+        "32.9"
+      ],
+      [
+        "Accrued selling and promotion expense",
+        "24.5",
+        "26.6"
+      ],
+      [
+        "Other",
+        "132.6",
+        "117.9"
+      ],
+      [
+        "Total other accrued liabilities",
+        "$243.7",
+        "$247.9"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 7.7,
+      "r1c2": 19.6,
+      "r2c1": 4,
+      "r2c2": 7.2,
+      "r3c1": 17,
+      "r3c2": 18.9,
+      "r4c1": 26.6,
+      "r4c2": 24.8,
+      "r5c1": 31.3,
+      "r5c2": 32.9,
+      "r6c1": 24.5,
+      "r6c2": 26.6,
+      "r7c1": 132.6,
+      "r7c2": 117.9,
+      "r8c1": 243.7,
+      "r8c2": 247.9
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "(Amounts in millions)",
+          "2013",
+          "2012"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Income taxes",
+          "{r1c1}",
+          "{r1c2}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Accrued restructuring",
+          "{r2c1}",
+          "{r2c2}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Accrued warranty",
+          "{r3c1}",
+          "{r3c2}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Deferred subscription revenue",
+          "{r4c1}",
+          "{r4c2}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Accrued property, payroll and other taxes",
+          "{r5c1}",
+          "{r5c2}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Accrued selling and promotion expense",
+          "{r6c1}",
+          "{r6c2}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Other",
+          "{r7c1}",
+          "{r7c2}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "Total other accrued liabilities",
+          "{r8c1}",
+          "{r8c2}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "(Amounts in millions)",
+          "2013",
+          "2012"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 1,
+    "split": "development"
+  },
+  {
+    "id": "finqa-f14077426905",
+    "sourceId": "GS/2015/page_171.pdf-2",
+    "sourceFile": "GS/2015/page_171.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percentage change in securities purchased under agreements to resell between 2014 and 2015?",
+      "en": "what was the percentage change in securities purchased under agreements to resell between 2014 and 2015?"
+    },
+    "question": "what was the percentage change in securities purchased under agreements to resell between 2014 and 2015?",
+    "schema": [
+      {
+        "id": "r2c1",
+        "row": "Securities purchased under agreements to resell1",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Securities purchased under agreements to resell1",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Securities borrowed2",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Securities borrowed2",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Securities sold under agreements to repurchase1",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Securities sold under agreements to repurchase1",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Securities loaned2",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Securities loaned2",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "$ in millions",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r2c1": 120905,
+      "r2c2": 127938,
+      "r3c1": 172099,
+      "r3c2": 160722,
+      "r4c1": 86069,
+      "r4c2": 88215,
+      "r5c1": 3614,
+      "r5c2": 5570
+    },
+    "source": "FinQA/GS/2015/page_171.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "As of December"
+      ],
+      [
+        "<i>$ in millions</i>",
+        "2015",
+        "2014"
+      ],
+      [
+        "Securities purchased under agreements to resell<sup>1</sup>",
+        "$120,905",
+        "$127,938"
+      ],
+      [
+        "Securities borrowed<sup>2</sup>",
+        "172,099",
+        "160,722"
+      ],
+      [
+        "Securities sold under agreements to repurchase<sup>1</sup>",
+        "86,069",
+        "88,215"
+      ],
+      [
+        "Securities loaned<sup>2</sup>",
+        "3,614",
+        "5,570"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 2015,
+      "r1c2": 2014,
+      "r2c1": 120905,
+      "r2c2": 127938,
+      "r3c1": 172099,
+      "r3c2": 160722,
+      "r4c1": 86069,
+      "r4c2": 88215,
+      "r5c1": 3614,
+      "r5c2": 5570
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "As of December"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "header",
+        "cells": [
+          "$ in millions",
+          "2015",
+          "2014"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Securities purchased under agreements to resell1",
+          "{r2c1}",
+          "{r2c2}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Securities borrowed2",
+          "{r3c1}",
+          "{r3c2}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Securities sold under agreements to repurchase1",
+          "{r4c1}",
+          "{r4c2}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Securities loaned2",
+          "{r5c1}",
+          "{r5c2}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "As of December"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "cells": [
+          "$ in millions",
+          "2015",
+          "2014"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0,
+        1
+      ],
+      "promotedNumericHeaders": [
+        "r1c1",
+        "r1c2"
+      ]
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "development"
+  },
+  {
+    "id": "finqa-47593c3344df",
+    "sourceId": "UAA/2016/page_42.pdf-4",
+    "sourceFile": "UAA/2016/page_42.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percentage change in working capital from 2015 to 2016?",
+      "en": "what was the percentage change in working capital from 2015 to 2016?"
+    },
+    "question": "what was the percentage change in working capital from 2015 to 2016?",
+    "schema": [
+      {
+        "id": "r2c1",
+        "row": "Cash and cash equivalents",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Cash and cash equivalents",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Cash and cash equivalents",
+        "column": "2014",
+        "columnIndex": 3,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "Cash and cash equivalents",
+        "column": "2013",
+        "columnIndex": 4,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "Cash and cash equivalents",
+        "column": "2012",
+        "columnIndex": 5,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Working capital (1)",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Working capital (1)",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Working capital (1)",
+        "column": "2014",
+        "columnIndex": 3,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "Working capital (1)",
+        "column": "2013",
+        "columnIndex": 4,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "Working capital (1)",
+        "column": "2012",
+        "columnIndex": 5,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Inventories",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Inventories",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Inventories",
+        "column": "2014",
+        "columnIndex": 3,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c4",
+        "row": "Inventories",
+        "column": "2013",
+        "columnIndex": 4,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c5",
+        "row": "Inventories",
+        "column": "2012",
+        "columnIndex": 5,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Total assets",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Total assets",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Total assets",
+        "column": "2014",
+        "columnIndex": 3,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c4",
+        "row": "Total assets",
+        "column": "2013",
+        "columnIndex": 4,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c5",
+        "row": "Total assets",
+        "column": "2012",
+        "columnIndex": 5,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Total debt, including current maturities",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Total debt, including current maturities",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "Total debt, including current maturities",
+        "column": "2014",
+        "columnIndex": 3,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c4",
+        "row": "Total debt, including current maturities",
+        "column": "2013",
+        "columnIndex": 4,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c5",
+        "row": "Total debt, including current maturities",
+        "column": "2012",
+        "columnIndex": 5,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Total stockholders’ equity",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "Total stockholders’ equity",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c3",
+        "row": "Total stockholders’ equity",
+        "column": "2014",
+        "columnIndex": 3,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c4",
+        "row": "Total stockholders’ equity",
+        "column": "2013",
+        "columnIndex": 4,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c5",
+        "row": "Total stockholders’ equity",
+        "column": "2012",
+        "columnIndex": 5,
+        "unitHint": "(In thousands)",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r2c1": 250470,
+      "r2c2": 129852,
+      "r2c3": 593175,
+      "r2c4": 347489,
+      "r2c5": 341841,
+      "r3c1": 1279337,
+      "r3c2": 1019953,
+      "r3c3": 1127772,
+      "r3c4": 702181,
+      "r3c5": 651370,
+      "r4c1": 917491,
+      "r4c2": 783031,
+      "r4c3": 536714,
+      "r4c4": 469006,
+      "r4c5": 319286,
+      "r5c1": 3644331,
+      "r5c2": 2865970,
+      "r5c3": 2092428,
+      "r5c4": 1576369,
+      "r5c5": 1155052,
+      "r6c1": 817388,
+      "r6c2": 666070,
+      "r6c3": 281546,
+      "r6c4": 151551,
+      "r6c5": 59858,
+      "r7c1": 2030900,
+      "r7c2": 1668222,
+      "r7c3": 1350300,
+      "r7c4": 1053354,
+      "r7c5": 816922
+    },
+    "source": "FinQA/UAA/2016/page_42.pdf-4",
+    "originalTable": [
+      [
+        "",
+        "At December 31,"
+      ],
+      [
+        "(In thousands)",
+        "2016",
+        "2015",
+        "2014",
+        "2013",
+        "2012"
+      ],
+      [
+        "Cash and cash equivalents",
+        "$250,470",
+        "$129,852",
+        "$593,175",
+        "$347,489",
+        "$341,841"
+      ],
+      [
+        "Working capital (1)",
+        "1,279,337",
+        "1,019,953",
+        "1,127,772",
+        "702,181",
+        "651,370"
+      ],
+      [
+        "Inventories",
+        "917,491",
+        "783,031",
+        "536,714",
+        "469,006",
+        "319,286"
+      ],
+      [
+        "Total assets",
+        "3,644,331",
+        "2,865,970",
+        "2,092,428",
+        "1,576,369",
+        "1,155,052"
+      ],
+      [
+        "Total debt, including current maturities",
+        "817,388",
+        "666,070",
+        "281,546",
+        "151,551",
+        "59,858"
+      ],
+      [
+        "Total stockholders’ equity",
+        "$2,030,900",
+        "$1,668,222",
+        "$1,350,300",
+        "$1,053,354",
+        "$816,922"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 2016,
+      "r1c2": 2015,
+      "r1c3": 2014,
+      "r1c4": 2013,
+      "r1c5": 2012,
+      "r2c1": 250470,
+      "r2c2": 129852,
+      "r2c3": 593175,
+      "r2c4": 347489,
+      "r2c5": 341841,
+      "r3c1": 1279337,
+      "r3c2": 1019953,
+      "r3c3": 1127772,
+      "r3c4": 702181,
+      "r3c5": 651370,
+      "r4c1": 917491,
+      "r4c2": 783031,
+      "r4c3": 536714,
+      "r4c4": 469006,
+      "r4c5": 319286,
+      "r5c1": 3644331,
+      "r5c2": 2865970,
+      "r5c3": 2092428,
+      "r5c4": 1576369,
+      "r5c5": 1155052,
+      "r6c1": 817388,
+      "r6c2": 666070,
+      "r6c3": 281546,
+      "r6c4": 151551,
+      "r6c5": 59858,
+      "r7c1": 2030900,
+      "r7c2": 1668222,
+      "r7c3": 1350300,
+      "r7c4": 1053354,
+      "r7c5": 816922
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "At December 31,"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "header",
+        "cells": [
+          "(In thousands)",
+          "2016",
+          "2015",
+          "2014",
+          "2013",
+          "2012"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Cash and cash equivalents",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Working capital (1)",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Inventories",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}",
+          "{r4c4}",
+          "{r4c5}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Total assets",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}",
+          "{r5c4}",
+          "{r5c5}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Total debt, including current maturities",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}",
+          "{r6c4}",
+          "{r6c5}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Total stockholders’ equity",
+          "{r7c1}",
+          "{r7c2}",
+          "{r7c3}",
+          "{r7c4}",
+          "{r7c5}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "At December 31,"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "cells": [
+          "(In thousands)",
+          "2016",
+          "2015",
+          "2014",
+          "2013",
+          "2012"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0,
+        1
+      ],
+      "promotedNumericHeaders": [
+        "r1c1",
+        "r1c2",
+        "r1c3",
+        "r1c4",
+        "r1c5"
+      ]
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "development"
+  }
+]

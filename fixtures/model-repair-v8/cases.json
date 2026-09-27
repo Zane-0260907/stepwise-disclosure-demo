@@ -1,0 +1,7971 @@
+[
+  {
+    "id": "finqa-073a1c472cf0",
+    "sourceId": "HUM/2014/page_44.pdf-1",
+    "sourceFile": "HUM/2014/page_44.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percent of the change in the stock price performance for hum from 2010 to 2011",
+      "en": "what was the percent of the change in the stock price performance for hum from 2010 to 2011"
+    },
+    "question": "what was the percent of the change in the stock price performance for hum from 2010 to 2011",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "HUM",
+        "column": "12/31/2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "HUM",
+        "column": "12/31/2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "HUM",
+        "column": "12/31/2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "HUM",
+        "column": "12/31/2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "HUM",
+        "column": "12/31/2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c6",
+        "row": "HUM",
+        "column": "12/31/2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "S&P 500",
+        "column": "12/31/2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "S&P 500",
+        "column": "12/31/2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "S&P 500",
+        "column": "12/31/2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "S&P 500",
+        "column": "12/31/2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "S&P 500",
+        "column": "12/31/2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c6",
+        "row": "S&P 500",
+        "column": "12/31/2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Peer Group",
+        "column": "12/31/2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Peer Group",
+        "column": "12/31/2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Peer Group",
+        "column": "12/31/2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "Peer Group",
+        "column": "12/31/2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "Peer Group",
+        "column": "12/31/2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c6",
+        "row": "Peer Group",
+        "column": "12/31/2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 125,
+      "r1c3": 201,
+      "r1c4": 160,
+      "r1c5": 244,
+      "r1c6": 342,
+      "r2c1": 100,
+      "r2c2": 115,
+      "r2c3": 117,
+      "r2c4": 136,
+      "r2c5": 180,
+      "r2c6": 205,
+      "r3c1": 100,
+      "r3c2": 112,
+      "r3c3": 123,
+      "r3c4": 144,
+      "r3c5": 198,
+      "r3c6": 252
+    },
+    "source": "FinQA/HUM/2014/page_44.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "12/31/2009",
+        "12/31/2010",
+        "12/31/2011",
+        "12/31/2012",
+        "12/31/2013",
+        "12/31/2014"
+      ],
+      [
+        "HUM",
+        "$100",
+        "$125",
+        "$201",
+        "$160",
+        "$244",
+        "$342"
+      ],
+      [
+        "S&P 500",
+        "$100",
+        "$115",
+        "$117",
+        "$136",
+        "$180",
+        "$205"
+      ],
+      [
+        "Peer Group",
+        "$100",
+        "$112",
+        "$123",
+        "$144",
+        "$198",
+        "$252"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 125,
+      "r1c3": 201,
+      "r1c4": 160,
+      "r1c5": 244,
+      "r1c6": 342,
+      "r2c1": 100,
+      "r2c2": 115,
+      "r2c3": 117,
+      "r2c4": 136,
+      "r2c5": 180,
+      "r2c6": 205,
+      "r3c1": 100,
+      "r3c2": 112,
+      "r3c3": 123,
+      "r3c4": 144,
+      "r3c5": 198,
+      "r3c6": 252
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "12/31/2009",
+          "12/31/2010",
+          "12/31/2011",
+          "12/31/2012",
+          "12/31/2013",
+          "12/31/2014"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "HUM",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}",
+          "{r1c6}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "S&P 500",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}",
+          "{r2c6}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Peer Group",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}",
+          "{r3c6}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "12/31/2009",
+          "12/31/2010",
+          "12/31/2011",
+          "12/31/2012",
+          "12/31/2013",
+          "12/31/2014"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-d05ec5d5e0c1",
+    "sourceId": "BLK/2015/page_124.pdf-3",
+    "sourceFile": "BLK/2015/page_124.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?",
+      "en": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?"
+    },
+    "question": "what portion of the total future minimum commitments under operating leases is due in the next 36 months?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2016",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "2017",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "2018",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "2019",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "2020",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Thereafter",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Total",
+        "column": "Amount",
+        "columnIndex": 1,
+        "unitHint": "Year",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 134,
+      "r2c1": 133,
+      "r3c1": 131,
+      "r4c1": 125,
+      "r5c1": 120,
+      "r6c1": 560,
+      "r7c1": 1203
+    },
+    "source": "FinQA/BLK/2015/page_124.pdf-3",
+    "originalTable": [
+      [
+        "Year",
+        "Amount"
+      ],
+      [
+        "2016",
+        "$134"
+      ],
+      [
+        "2017",
+        "133"
+      ],
+      [
+        "2018",
+        "131"
+      ],
+      [
+        "2019",
+        "125"
+      ],
+      [
+        "2020",
+        "120"
+      ],
+      [
+        "Thereafter",
+        "560"
+      ],
+      [
+        "Total",
+        "$1,203"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 134,
+      "r2c1": 133,
+      "r3c1": 131,
+      "r4c1": 125,
+      "r5c1": 120,
+      "r6c1": 560,
+      "r7c1": 1203
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "Year",
+          "Amount"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "2016",
+          "{r1c1}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "2017",
+          "{r2c1}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "2018",
+          "{r3c1}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "2019",
+          "{r4c1}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "2020",
+          "{r5c1}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Thereafter",
+          "{r6c1}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Total",
+          "{r7c1}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "Year",
+          "Amount"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 3,
+    "split": "test"
+  },
+  {
+    "id": "finqa-9e7a37884cc3",
+    "sourceId": "DVN/2015/page_79.pdf-3",
+    "sourceFile": "DVN/2015/page_79.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percent of the change in the volatility factor",
+      "en": "what was the percent of the change in the volatility factor"
+    },
+    "question": "what was the percent of the change in the volatility factor",
+    "schema": [
+      {
+        "id": "r2c1",
+        "row": "Risk-free interest rate",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r2c2",
+        "row": "Risk-free interest rate",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r3c1",
+        "row": "Volatility factor",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r3c2",
+        "row": "Volatility factor",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r3c3",
+        "row": "Volatility factor",
+        "column": "2013",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r4c1",
+        "row": "Contractual term (years)",
+        "column": "2015",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Contractual term (years)",
+        "column": "2014",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Contractual term (years)",
+        "column": "2013",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r2c1": 1.06,
+      "r2c2": 0.54,
+      "r3c1": 26.2,
+      "r3c2": 28.8,
+      "r3c3": 30.3,
+      "r4c1": 2.89,
+      "r4c2": 2.89,
+      "r4c3": 3
+    },
+    "source": "FinQA/DVN/2015/page_79.pdf-3",
+    "originalTable": [
+      [
+        "",
+        "2015",
+        "2014",
+        "2013"
+      ],
+      [
+        "Grant-date fair value",
+        "$81.99 – $85.05",
+        "$70.18 – $81.05",
+        "$61.27 – $63.48"
+      ],
+      [
+        "Risk-free interest rate",
+        "1.06%",
+        "0.54%",
+        "0.26% – 0.36%"
+      ],
+      [
+        "Volatility factor",
+        "26.2%",
+        "28.8%",
+        "30.3%"
+      ],
+      [
+        "Contractual term (years)",
+        "2.89",
+        "2.89",
+        "3.0"
+      ]
+    ],
+    "legacyFacts": {
+      "r2c1": 1.06,
+      "r2c2": 0.54,
+      "r3c1": 26.2,
+      "r3c2": 28.8,
+      "r3c3": 30.3,
+      "r4c1": 2.89,
+      "r4c2": 2.89,
+      "r4c3": 3
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2015",
+          "2014",
+          "2013"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Grant-date fair value",
+          "{unparsed:r1c1}",
+          "{unparsed:r1c2}",
+          "{unparsed:r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Risk-free interest rate",
+          "{r2c1}",
+          "{r2c2}",
+          "{unparsed:r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Volatility factor",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Contractual term (years)",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2015",
+          "2014",
+          "2013"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-57a740f42cc5",
+    "sourceId": "ECL/2017/page_69.pdf-2",
+    "sourceFile": "ECL/2017/page_69.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the percentage change in the total carrying amount of goodwill from 2016 to 2017?",
+      "en": "what is the percentage change in the total carrying amount of goodwill from 2016 to 2017?"
+    },
+    "question": "what is the percentage change in the total carrying amount of goodwill from 2016 to 2017?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "December 31, 2015",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "December 31, 2015",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "December 31, 2015",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "December 31, 2015",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "December 31, 2015",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Segment change (a)",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Segment change (a)",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "December 31, 2015 revised",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "December 31, 2015 revised",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "December 31, 2015 revised",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "December 31, 2015 revised",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "December 31, 2015 revised",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Current year business combinations (b)",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Current year business combinations (b)",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c5",
+        "row": "Current year business combinations (b)",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Prior year business combinations (c)",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Prior year business combinations (c)",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c5",
+        "row": "Prior year business combinations (c)",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Reclassifications (d)",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Reclassifications (d)",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "Reclassifications (d)",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Effect of foreign currency translation",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "Effect of foreign currency translation",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c3",
+        "row": "Effect of foreign currency translation",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c4",
+        "row": "Effect of foreign currency translation",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c5",
+        "row": "Effect of foreign currency translation",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c1",
+        "row": "December 31, 2016",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "December 31, 2016",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c3",
+        "row": "December 31, 2016",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c4",
+        "row": "December 31, 2016",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c5",
+        "row": "December 31, 2016",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c1",
+        "row": "Current year business combinations (b)",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c2",
+        "row": "Current year business combinations (b)",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c3",
+        "row": "Current year business combinations (b)",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c4",
+        "row": "Current year business combinations (b)",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c5",
+        "row": "Current year business combinations (b)",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c1",
+        "row": "Prior year business combinations (c)",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c3",
+        "row": "Prior year business combinations (c)",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c5",
+        "row": "Prior year business combinations (c)",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c4",
+        "row": "Dispositions",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c5",
+        "row": "Dispositions",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c1",
+        "row": "Effect of foreign currency translation",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c2",
+        "row": "Effect of foreign currency translation",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c3",
+        "row": "Effect of foreign currency translation",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c4",
+        "row": "Effect of foreign currency translation",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c5",
+        "row": "Effect of foreign currency translation",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c1",
+        "row": "December 31, 2017",
+        "column": "Global Industrial",
+        "columnIndex": 1,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c2",
+        "row": "December 31, 2017",
+        "column": "Global Institutional",
+        "columnIndex": 2,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c3",
+        "row": "December 31, 2017",
+        "column": "Global Energy",
+        "columnIndex": 3,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c4",
+        "row": "December 31, 2017",
+        "column": "Other",
+        "columnIndex": 4,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r13c5",
+        "row": "December 31, 2017",
+        "column": "Total",
+        "columnIndex": 5,
+        "unitHint": "(millions)",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 2560.8,
+      "r1c2": 662.7,
+      "r1c3": 3151.5,
+      "r1c4": 115.8,
+      "r1c5": 6490.8,
+      "r2c1": 62.7,
+      "r2c2": -62.7,
+      "r3c1": 2623.5,
+      "r3c2": 600,
+      "r3c3": 3151.5,
+      "r3c4": 115.8,
+      "r3c5": 6490.8,
+      "r4c2": 3.1,
+      "r4c3": 0.6,
+      "r4c5": 3.7,
+      "r5c1": 3.5,
+      "r5c3": 0.1,
+      "r5c5": 3.6,
+      "r6c1": 3.5,
+      "r6c2": -0.6,
+      "r6c3": -2.9,
+      "r7c1": -45.5,
+      "r7c2": -11.8,
+      "r7c3": -55.7,
+      "r7c4": -2.1,
+      "r7c5": -115.1,
+      "r8c1": 2585,
+      "r8c2": 590.7,
+      "r8c3": 3093.6,
+      "r8c4": 113.7,
+      "r8c5": 6383,
+      "r9c1": 123.4,
+      "r9c2": 403.7,
+      "r9c3": 8.1,
+      "r9c4": 63.9,
+      "r9c5": 599.1,
+      "r10c1": -0.2,
+      "r10c3": 0.3,
+      "r10c5": 0.1,
+      "r11c4": -42.6,
+      "r11c5": -42.6,
+      "r12c1": 88.8,
+      "r12c2": 32.6,
+      "r12c3": 101.7,
+      "r12c4": 4.4,
+      "r12c5": 227.5,
+      "r13c1": 2797,
+      "r13c2": 1027,
+      "r13c3": 3203.7,
+      "r13c4": 139.4,
+      "r13c5": 7167.1
+    },
+    "source": "FinQA/ECL/2017/page_69.pdf-2",
+    "originalTable": [
+      [
+        "(millions)",
+        "Global Industrial",
+        "Global Institutional",
+        "Global Energy",
+        "Other",
+        "Total"
+      ],
+      [
+        "December 31, 2015",
+        "$2,560.8",
+        "$662.7",
+        "$3,151.5",
+        "$115.8",
+        "$6,490.8"
+      ],
+      [
+        "Segment change (a)",
+        "62.7",
+        "(62.7)",
+        "-",
+        "-",
+        "-"
+      ],
+      [
+        "December 31, 2015 revised",
+        "$2,623.5",
+        "$600.0",
+        "$3,151.5",
+        "$115.8",
+        "$6,490.8"
+      ],
+      [
+        "Current year business combinations (b)",
+        "-",
+        "3.1",
+        "0.6",
+        "-",
+        "3.7"
+      ],
+      [
+        "Prior year business combinations (c)",
+        "3.5",
+        "-",
+        "0.1",
+        "-",
+        "3.6"
+      ],
+      [
+        "Reclassifications (d)",
+        "3.5",
+        "(0.6)",
+        "(2.9)",
+        "-",
+        "-"
+      ],
+      [
+        "Effect of foreign currency translation",
+        "(45.5)",
+        "(11.8)",
+        "(55.7)",
+        "(2.1)",
+        "(115.1)"
+      ],
+      [
+        "December 31, 2016",
+        "$2,585.0",
+        "$590.7",
+        "$3,093.6",
+        "$113.7",
+        "$6,383.0"
+      ],
+      [
+        "Current year business combinations (b)",
+        "123.4",
+        "403.7",
+        "8.1",
+        "63.9",
+        "599.1"
+      ],
+      [
+        "Prior year business combinations (c)",
+        "(0.2)",
+        "-",
+        "0.3",
+        "-",
+        "0.1"
+      ],
+      [
+        "Dispositions",
+        "-",
+        "-",
+        "-",
+        "(42.6)",
+        "(42.6)"
+      ],
+      [
+        "Effect of foreign currency translation",
+        "88.8",
+        "32.6",
+        "101.7",
+        "4.4",
+        "227.5"
+      ],
+      [
+        "December 31, 2017",
+        "$2,797.0",
+        "$1,027.0",
+        "$3,203.7",
+        "$139.4",
+        "$7,167.1"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 2560.8,
+      "r1c2": 662.7,
+      "r1c3": 3151.5,
+      "r1c4": 115.8,
+      "r1c5": 6490.8,
+      "r2c1": 62.7,
+      "r2c2": -62.7,
+      "r3c1": 2623.5,
+      "r3c2": 600,
+      "r3c3": 3151.5,
+      "r3c4": 115.8,
+      "r3c5": 6490.8,
+      "r4c2": 3.1,
+      "r4c3": 0.6,
+      "r4c5": 3.7,
+      "r5c1": 3.5,
+      "r5c3": 0.1,
+      "r5c5": 3.6,
+      "r6c1": 3.5,
+      "r6c2": -0.6,
+      "r6c3": -2.9,
+      "r7c1": -45.5,
+      "r7c2": -11.8,
+      "r7c3": -55.7,
+      "r7c4": -2.1,
+      "r7c5": -115.1,
+      "r8c1": 2585,
+      "r8c2": 590.7,
+      "r8c3": 3093.6,
+      "r8c4": 113.7,
+      "r8c5": 6383,
+      "r9c1": 123.4,
+      "r9c2": 403.7,
+      "r9c3": 8.1,
+      "r9c4": 63.9,
+      "r9c5": 599.1,
+      "r10c1": -0.2,
+      "r10c3": 0.3,
+      "r10c5": 0.1,
+      "r11c4": -42.6,
+      "r11c5": -42.6,
+      "r12c1": 88.8,
+      "r12c2": 32.6,
+      "r12c3": 101.7,
+      "r12c4": 4.4,
+      "r12c5": 227.5,
+      "r13c1": 2797,
+      "r13c2": 1027,
+      "r13c3": 3203.7,
+      "r13c4": 139.4,
+      "r13c5": 7167.1
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "(millions)",
+          "Global Industrial",
+          "Global Institutional",
+          "Global Energy",
+          "Other",
+          "Total"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "December 31, 2015",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Segment change (a)",
+          "{r2c1}",
+          "{r2c2}",
+          "{unparsed:r2c3}",
+          "{unparsed:r2c4}",
+          "{unparsed:r2c5}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "December 31, 2015 revised",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Current year business combinations (b)",
+          "{unparsed:r4c1}",
+          "{r4c2}",
+          "{r4c3}",
+          "{unparsed:r4c4}",
+          "{r4c5}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Prior year business combinations (c)",
+          "{r5c1}",
+          "{unparsed:r5c2}",
+          "{r5c3}",
+          "{unparsed:r5c4}",
+          "{r5c5}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Reclassifications (d)",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}",
+          "{unparsed:r6c4}",
+          "{unparsed:r6c5}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Effect of foreign currency translation",
+          "{r7c1}",
+          "{r7c2}",
+          "{r7c3}",
+          "{r7c4}",
+          "{r7c5}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "December 31, 2016",
+          "{r8c1}",
+          "{r8c2}",
+          "{r8c3}",
+          "{r8c4}",
+          "{r8c5}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Current year business combinations (b)",
+          "{r9c1}",
+          "{r9c2}",
+          "{r9c3}",
+          "{r9c4}",
+          "{r9c5}"
+        ]
+      },
+      {
+        "sourceRow": 10,
+        "role": "data",
+        "cells": [
+          "Prior year business combinations (c)",
+          "{r10c1}",
+          "{unparsed:r10c2}",
+          "{r10c3}",
+          "{unparsed:r10c4}",
+          "{r10c5}"
+        ]
+      },
+      {
+        "sourceRow": 11,
+        "role": "data",
+        "cells": [
+          "Dispositions",
+          "{unparsed:r11c1}",
+          "{unparsed:r11c2}",
+          "{unparsed:r11c3}",
+          "{r11c4}",
+          "{r11c5}"
+        ]
+      },
+      {
+        "sourceRow": 12,
+        "role": "data",
+        "cells": [
+          "Effect of foreign currency translation",
+          "{r12c1}",
+          "{r12c2}",
+          "{r12c3}",
+          "{r12c4}",
+          "{r12c5}"
+        ]
+      },
+      {
+        "sourceRow": 13,
+        "role": "data",
+        "cells": [
+          "December 31, 2017",
+          "{r13c1}",
+          "{r13c2}",
+          "{r13c3}",
+          "{r13c4}",
+          "{r13c5}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "(millions)",
+          "Global Industrial",
+          "Global Institutional",
+          "Global Energy",
+          "Other",
+          "Total"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-8da6d0d29379",
+    "sourceId": "K/2013/page_23.pdf-1",
+    "sourceFile": "K/2013/page_23.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "if 2014 underlying operating profit increases at the same pace as 2013 , what would it be , in millions?",
+      "en": "if 2014 underlying operating profit increases at the same pace as 2013 , what would it be , in millions?"
+    },
+    "question": "if 2014 underlying operating profit increases at the same pace as 2013 , what would it be , in millions?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Reported gross profit (a)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Reported gross profit (a)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Reported gross profit (a)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Mark-to-market (COGS) (b)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Mark-to-market (COGS) (b)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Mark-to-market (COGS) (b)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Project K (COGS) (c)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Underlying gross profit (d)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Underlying gross profit (d)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Underlying gross profit (d)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Reported SGA",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Reported SGA",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Reported SGA",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Mark-to-market (SGA) (b)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Mark-to-market (SGA) (b)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "Mark-to-market (SGA) (b)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Project K (SGA) (c)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c1",
+        "row": "Underlying SGA (d)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "Underlying SGA (d)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c3",
+        "row": "Underlying SGA (d)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c1",
+        "row": "Reported operating profit",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c2",
+        "row": "Reported operating profit",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c3",
+        "row": "Reported operating profit",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c1",
+        "row": "Mark-to-market (b)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c2",
+        "row": "Mark-to-market (b)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c3",
+        "row": "Mark-to-market (b)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r11c1",
+        "row": "Project K (c)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c1",
+        "row": "Underlying operating profit (d)",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c2",
+        "row": "Underlying operating profit (d)",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r12c3",
+        "row": "Underlying operating profit (d)",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "(dollars in millions)",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 6103,
+      "r1c2": 5434,
+      "r1c3": 5152,
+      "r2c1": 510,
+      "r2c2": -259,
+      "r2c3": -377,
+      "r3c1": -174,
+      "r4c1": 5767,
+      "r4c2": 5693,
+      "r4c3": 5529,
+      "r5c1": 3266,
+      "r5c2": 3872,
+      "r5c3": 3725,
+      "r6c1": 437,
+      "r6c2": -193,
+      "r6c3": -305,
+      "r7c1": -34,
+      "r8c1": 3669,
+      "r8c2": 3679,
+      "r8c3": 3420,
+      "r9c1": 2837,
+      "r9c2": 1562,
+      "r9c3": 1427,
+      "r10c1": 947,
+      "r10c2": -452,
+      "r10c3": -682,
+      "r11c1": -208,
+      "r12c1": 2098,
+      "r12c2": 2014,
+      "r12c3": 2109
+    },
+    "source": "FinQA/K/2013/page_23.pdf-1",
+    "originalTable": [
+      [
+        "(dollars in millions)",
+        "2013",
+        "2012",
+        "2011"
+      ],
+      [
+        "Reported gross profit (a)",
+        "$6,103",
+        "$5,434",
+        "$5,152"
+      ],
+      [
+        "Mark-to-market (COGS) (b)",
+        "510",
+        "(259)",
+        "(377)"
+      ],
+      [
+        "Project K (COGS) (c)",
+        "(174)",
+        "—",
+        "—"
+      ],
+      [
+        "Underlying gross profit (d)",
+        "$5,767",
+        "$5,693",
+        "$5,529"
+      ],
+      [
+        "Reported SGA",
+        "$3,266",
+        "$3,872",
+        "$3,725"
+      ],
+      [
+        "Mark-to-market (SGA) (b)",
+        "437",
+        "(193)",
+        "(305)"
+      ],
+      [
+        "Project K (SGA) (c)",
+        "(34)",
+        "—",
+        "—"
+      ],
+      [
+        "Underlying SGA (d)",
+        "$3,669",
+        "$3,679",
+        "$3,420"
+      ],
+      [
+        "Reported operating profit",
+        "$2,837",
+        "$1,562",
+        "$1,427"
+      ],
+      [
+        "Mark-to-market (b)",
+        "947",
+        "(452)",
+        "(682)"
+      ],
+      [
+        "Project K (c)",
+        "(208)",
+        "—",
+        "—"
+      ],
+      [
+        "Underlying operating profit (d)",
+        "$2,098",
+        "$2,014",
+        "$2,109"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 6103,
+      "r1c2": 5434,
+      "r1c3": 5152,
+      "r2c1": 510,
+      "r2c2": -259,
+      "r2c3": -377,
+      "r3c1": -174,
+      "r4c1": 5767,
+      "r4c2": 5693,
+      "r4c3": 5529,
+      "r5c1": 3266,
+      "r5c2": 3872,
+      "r5c3": 3725,
+      "r6c1": 437,
+      "r6c2": -193,
+      "r6c3": -305,
+      "r7c1": -34,
+      "r8c1": 3669,
+      "r8c2": 3679,
+      "r8c3": 3420,
+      "r9c1": 2837,
+      "r9c2": 1562,
+      "r9c3": 1427,
+      "r10c1": 947,
+      "r10c2": -452,
+      "r10c3": -682,
+      "r11c1": -208,
+      "r12c1": 2098,
+      "r12c2": 2014,
+      "r12c3": 2109
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "(dollars in millions)",
+          "2013",
+          "2012",
+          "2011"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Reported gross profit (a)",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Mark-to-market (COGS) (b)",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Project K (COGS) (c)",
+          "{r3c1}",
+          "{unparsed:r3c2}",
+          "{unparsed:r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Underlying gross profit (d)",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Reported SGA",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Mark-to-market (SGA) (b)",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Project K (SGA) (c)",
+          "{r7c1}",
+          "{unparsed:r7c2}",
+          "{unparsed:r7c3}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "Underlying SGA (d)",
+          "{r8c1}",
+          "{r8c2}",
+          "{r8c3}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Reported operating profit",
+          "{r9c1}",
+          "{r9c2}",
+          "{r9c3}"
+        ]
+      },
+      {
+        "sourceRow": 10,
+        "role": "data",
+        "cells": [
+          "Mark-to-market (b)",
+          "{r10c1}",
+          "{r10c2}",
+          "{r10c3}"
+        ]
+      },
+      {
+        "sourceRow": 11,
+        "role": "data",
+        "cells": [
+          "Project K (c)",
+          "{r11c1}",
+          "{unparsed:r11c2}",
+          "{unparsed:r11c3}"
+        ]
+      },
+      {
+        "sourceRow": 12,
+        "role": "data",
+        "cells": [
+          "Underlying operating profit (d)",
+          "{r12c1}",
+          "{r12c2}",
+          "{r12c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "(dollars in millions)",
+          "2013",
+          "2012",
+          "2011"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-fcd445b9b354",
+    "sourceId": "RSG/2012/page_93.pdf-2",
+    "sourceFile": "RSG/2012/page_93.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percentage change in the additions charged to expense from 2011 to 2012 as part of the allowance for doubtful accounts",
+      "en": "what was the percentage change in the additions charged to expense from 2011 to 2012 as part of the allowance for doubtful accounts"
+    },
+    "question": "what was the percentage change in the additions charged to expense from 2011 to 2012 as part of the allowance for doubtful accounts",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Balance at beginning of year",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Balance at beginning of year",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Balance at beginning of year",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Additions charged to expense",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Additions charged to expense",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Additions charged to expense",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Accounts written-off",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Accounts written-off",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Accounts written-off",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Balance at end of year",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Balance at end of year",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Balance at end of year",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 48.1,
+      "r1c2": 50.9,
+      "r1c3": 55.2,
+      "r2c1": 29.7,
+      "r2c2": 21,
+      "r2c3": 23.6,
+      "r3c1": -32.5,
+      "r3c2": -23.8,
+      "r3c3": -27.9,
+      "r4c1": 45.3,
+      "r4c2": 48.1,
+      "r4c3": 50.9
+    },
+    "source": "FinQA/RSG/2012/page_93.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "2012",
+        "2011",
+        "2010"
+      ],
+      [
+        "Balance at beginning of year",
+        "$48.1",
+        "$50.9",
+        "$55.2"
+      ],
+      [
+        "Additions charged to expense",
+        "29.7",
+        "21.0",
+        "23.6"
+      ],
+      [
+        "Accounts written-off",
+        "(32.5)",
+        "(23.8)",
+        "(27.9)"
+      ],
+      [
+        "Balance at end of year",
+        "$45.3",
+        "$48.1",
+        "$50.9"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 48.1,
+      "r1c2": 50.9,
+      "r1c3": 55.2,
+      "r2c1": 29.7,
+      "r2c2": 21,
+      "r2c3": 23.6,
+      "r3c1": -32.5,
+      "r3c2": -23.8,
+      "r3c3": -27.9,
+      "r4c1": 45.3,
+      "r4c2": 48.1,
+      "r4c3": 50.9
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2012",
+          "2011",
+          "2010"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Balance at beginning of year",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Additions charged to expense",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Accounts written-off",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Balance at end of year",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2012",
+          "2011",
+          "2010"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-f3cbd9a65149",
+    "sourceId": "HUM/2009/page_105.pdf-2",
+    "sourceFile": "HUM/2009/page_105.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percent of the change of the expected volatility from 2008 to 2009",
+      "en": "what was the percent of the change of the expected volatility from 2008 to 2009"
+    },
+    "question": "what was the percent of the change of the expected volatility from 2008 to 2009",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Weighted-average fair value at grant date",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Weighted-average fair value at grant date",
+        "column": "2008",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Weighted-average fair value at grant date",
+        "column": "2007",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Expected option life (years)",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Expected option life (years)",
+        "column": "2008",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Expected option life (years)",
+        "column": "2007",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Expected volatility",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r3c2",
+        "row": "Expected volatility",
+        "column": "2008",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r3c3",
+        "row": "Expected volatility",
+        "column": "2007",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r4c1",
+        "row": "Risk-free interest rate at grant date",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r4c2",
+        "row": "Risk-free interest rate at grant date",
+        "column": "2008",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      },
+      {
+        "id": "r4c3",
+        "row": "Risk-free interest rate at grant date",
+        "column": "2007",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "percent (stored as displayed numeric value)"
+      }
+    ],
+    "facts": {
+      "r1c1": 14.24,
+      "r1c2": 17.95,
+      "r1c3": 21.07,
+      "r2c1": 4.6,
+      "r2c2": 5.1,
+      "r2c3": 4.8,
+      "r3c1": 39.2,
+      "r3c2": 28.2,
+      "r3c3": 28.9,
+      "r4c1": 1.9,
+      "r4c2": 2.9,
+      "r4c3": 4.5
+    },
+    "source": "FinQA/HUM/2009/page_105.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "2009",
+        "2008",
+        "2007"
+      ],
+      [
+        "Weighted-average fair value at grant date",
+        "$14.24",
+        "$17.95",
+        "$21.07"
+      ],
+      [
+        "Expected option life (years)",
+        "4.6",
+        "5.1",
+        "4.8"
+      ],
+      [
+        "Expected volatility",
+        "39.2%",
+        "28.2%",
+        "28.9%"
+      ],
+      [
+        "Risk-free interest rate at grant date",
+        "1.9%",
+        "2.9%",
+        "4.5%"
+      ],
+      [
+        "Dividend yield",
+        "None",
+        "None",
+        "None"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 14.24,
+      "r1c2": 17.95,
+      "r1c3": 21.07,
+      "r2c1": 4.6,
+      "r2c2": 5.1,
+      "r2c3": 4.8,
+      "r3c1": 39.2,
+      "r3c2": 28.2,
+      "r3c3": 28.9,
+      "r4c1": 1.9,
+      "r4c2": 2.9,
+      "r4c3": 4.5
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2009",
+          "2008",
+          "2007"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Weighted-average fair value at grant date",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Expected option life (years)",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Expected volatility",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Risk-free interest rate at grant date",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Dividend yield",
+          "{unparsed:r5c1}",
+          "{unparsed:r5c2}",
+          "{unparsed:r5c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2009",
+          "2008",
+          "2007"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-5adfd4dc29e6",
+    "sourceId": "RSG/2016/page_139.pdf-1",
+    "sourceFile": "RSG/2016/page_139.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percent of the change in the weighted average cost per share from 2015 to 2016",
+      "en": "what was the percent of the change in the weighted average cost per share from 2015 to 2016"
+    },
+    "question": "what was the percent of the change in the weighted average cost per share from 2015 to 2016",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Number of shares repurchased",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Number of shares repurchased",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Amount paid",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Amount paid",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Weighted average cost per share",
+        "column": "2016",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Weighted average cost per share",
+        "column": "2015",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 8.4,
+      "r1c2": 9.8,
+      "r2c1": 403.8,
+      "r2c2": 404.7,
+      "r3c1": 48.56,
+      "r3c2": 41.39
+    },
+    "source": "FinQA/RSG/2016/page_139.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "2016",
+        "2015"
+      ],
+      [
+        "Number of shares repurchased",
+        "8.4",
+        "9.8"
+      ],
+      [
+        "Amount paid",
+        "$403.8",
+        "$404.7"
+      ],
+      [
+        "Weighted average cost per share",
+        "$48.56",
+        "$41.39"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 8.4,
+      "r1c2": 9.8,
+      "r2c1": 403.8,
+      "r2c2": 404.7,
+      "r3c1": 48.56,
+      "r3c2": 41.39
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2016",
+          "2015"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Number of shares repurchased",
+          "{r1c1}",
+          "{r1c2}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Amount paid",
+          "{r2c1}",
+          "{r2c2}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Weighted average cost per share",
+          "{r3c1}",
+          "{r3c2}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2016",
+          "2015"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-47487e651a67",
+    "sourceId": "GPN/2010/page_89.pdf-1",
+    "sourceFile": "GPN/2010/page_89.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "in 2009 what was the percentage change in the non-vested at may 31 2009",
+      "en": "in 2009 what was the percentage change in the non-vested at may 31 2009"
+    },
+    "question": "in 2009 what was the percentage change in the non-vested at may 31 2009",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Non-vested at May 31, 2008",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Non-vested at May 31, 2008",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Granted",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Granted",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Vested",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Vested",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Forfeited",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Forfeited",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Non-vested at May 31, 2009",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Non-vested at May 31, 2009",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Granted",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Granted",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Vested",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "Vested",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c1",
+        "row": "Forfeited",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "Forfeited",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c1",
+        "row": "Non-vested at May 31, 2010",
+        "column": "Shares",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c2",
+        "row": "Non-vested at May 31, 2010",
+        "column": "Weighted Average Grant-Date Fair Value",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 518,
+      "r1c2": 39,
+      "r2c1": 430,
+      "r2c2": 43,
+      "r3c1": -159,
+      "r3c2": 39,
+      "r4c1": -27,
+      "r4c2": 41,
+      "r5c1": 762,
+      "r5c2": 42,
+      "r6c1": 420,
+      "r6c2": 42,
+      "r7c1": -302,
+      "r7c2": 41,
+      "r8c1": -167,
+      "r8c2": 43,
+      "r9c1": 713,
+      "r9c2": 42
+    },
+    "source": "FinQA/GPN/2010/page_89.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "Shares",
+        "Weighted Average  Grant-Date  Fair Value"
+      ],
+      [
+        "Non-vested at May 31, 2008",
+        "518",
+        "$39"
+      ],
+      [
+        "Granted",
+        "430",
+        "43"
+      ],
+      [
+        "Vested",
+        "(159)",
+        "39"
+      ],
+      [
+        "Forfeited",
+        "(27)",
+        "41"
+      ],
+      [
+        "Non-vested at May 31, 2009",
+        "762",
+        "42"
+      ],
+      [
+        "Granted",
+        "420",
+        "42"
+      ],
+      [
+        "Vested",
+        "(302)",
+        "41"
+      ],
+      [
+        "Forfeited",
+        "(167)",
+        "43"
+      ],
+      [
+        "Non-vested at May 31, 2010",
+        "713",
+        "42"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 518,
+      "r1c2": 39,
+      "r2c1": 430,
+      "r2c2": 43,
+      "r3c1": -159,
+      "r3c2": 39,
+      "r4c1": -27,
+      "r4c2": 41,
+      "r5c1": 762,
+      "r5c2": 42,
+      "r6c1": 420,
+      "r6c2": 42,
+      "r7c1": -302,
+      "r7c2": 41,
+      "r8c1": -167,
+      "r8c2": 43,
+      "r9c1": 713,
+      "r9c2": 42
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "Shares",
+          "Weighted Average Grant-Date Fair Value"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Non-vested at May 31, 2008",
+          "{r1c1}",
+          "{r1c2}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Granted",
+          "{r2c1}",
+          "{r2c2}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Vested",
+          "{r3c1}",
+          "{r3c2}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Forfeited",
+          "{r4c1}",
+          "{r4c2}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Non-vested at May 31, 2009",
+          "{r5c1}",
+          "{r5c2}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Granted",
+          "{r6c1}",
+          "{r6c2}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Vested",
+          "{r7c1}",
+          "{r7c2}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "Forfeited",
+          "{r8c1}",
+          "{r8c2}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Non-vested at May 31, 2010",
+          "{r9c1}",
+          "{r9c2}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "Shares",
+          "Weighted Average Grant-Date Fair Value"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-8327741ddc15",
+    "sourceId": "DISCA/2011/page_49.pdf-3",
+    "sourceFile": "DISCA/2011/page_49.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "the k series stock outperformed the s&p 500 by what percent over 5 years?",
+      "en": "the k series stock outperformed the s&p 500 by what percent over 5 years?"
+    },
+    "question": "the k series stock outperformed the s&p 500 by what percent over 5 years?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "DISCA",
+        "column": "December 31, 2008",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "DISCA",
+        "column": "December 31, 2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "DISCA",
+        "column": "December 31, 2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "DISCA",
+        "column": "December 31, 2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "DISCB",
+        "column": "December 31, 2008",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "DISCB",
+        "column": "December 31, 2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "DISCB",
+        "column": "December 31, 2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "DISCB",
+        "column": "December 31, 2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "DISCK",
+        "column": "December 31, 2008",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "DISCK",
+        "column": "December 31, 2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "DISCK",
+        "column": "December 31, 2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "DISCK",
+        "column": "December 31, 2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "S&P 500",
+        "column": "December 31, 2008",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "S&P 500",
+        "column": "December 31, 2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "S&P 500",
+        "column": "December 31, 2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c4",
+        "row": "S&P 500",
+        "column": "December 31, 2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Peer Group",
+        "column": "December 31, 2008",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Peer Group",
+        "column": "December 31, 2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Peer Group",
+        "column": "December 31, 2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c4",
+        "row": "Peer Group",
+        "column": "December 31, 2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 102.53,
+      "r1c2": 222.09,
+      "r1c3": 301.96,
+      "r1c4": 296.67,
+      "r2c1": 78.53,
+      "r2c2": 162.82,
+      "r2c3": 225.95,
+      "r2c4": 217.56,
+      "r3c1": 83.69,
+      "r3c2": 165.75,
+      "r3c3": 229.31,
+      "r3c4": 235.63,
+      "r4c1": 74.86,
+      "r4c2": 92.42,
+      "r4c3": 104.24,
+      "r4c4": 104.23,
+      "r5c1": 68.79,
+      "r5c2": 100.7,
+      "r5c3": 121.35,
+      "r5c4": 138.19
+    },
+    "source": "FinQA/DISCA/2011/page_49.pdf-3",
+    "originalTable": [
+      [
+        "",
+        "December 31, 2008",
+        "December 31, 2009",
+        "December 31, 2010",
+        "December 31, 2011"
+      ],
+      [
+        "DISCA",
+        "$102.53",
+        "$222.09",
+        "$301.96",
+        "$296.67"
+      ],
+      [
+        "DISCB",
+        "$78.53",
+        "$162.82",
+        "$225.95",
+        "$217.56"
+      ],
+      [
+        "DISCK",
+        "$83.69",
+        "$165.75",
+        "$229.31",
+        "$235.63"
+      ],
+      [
+        "S&P 500",
+        "$74.86",
+        "$92.42",
+        "$104.24",
+        "$104.23"
+      ],
+      [
+        "Peer Group",
+        "$68.79",
+        "$100.70",
+        "$121.35",
+        "$138.19"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 102.53,
+      "r1c2": 222.09,
+      "r1c3": 301.96,
+      "r1c4": 296.67,
+      "r2c1": 78.53,
+      "r2c2": 162.82,
+      "r2c3": 225.95,
+      "r2c4": 217.56,
+      "r3c1": 83.69,
+      "r3c2": 165.75,
+      "r3c3": 229.31,
+      "r3c4": 235.63,
+      "r4c1": 74.86,
+      "r4c2": 92.42,
+      "r4c3": 104.24,
+      "r4c4": 104.23,
+      "r5c1": 68.79,
+      "r5c2": 100.7,
+      "r5c3": 121.35,
+      "r5c4": 138.19
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "December 31, 2008",
+          "December 31, 2009",
+          "December 31, 2010",
+          "December 31, 2011"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "DISCA",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "DISCB",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "DISCK",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "S&P 500",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}",
+          "{r4c4}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Peer Group",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}",
+          "{r5c4}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "December 31, 2008",
+          "December 31, 2009",
+          "December 31, 2010",
+          "December 31, 2011"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-57be6028a04c",
+    "sourceId": "DRE/2012/page_40.pdf-1",
+    "sourceFile": "DRE/2012/page_40.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the percentage reduction second generation tenant improvements",
+      "en": "what was the percentage reduction second generation tenant improvements"
+    },
+    "question": "what was the percentage reduction second generation tenant improvements",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Second generation tenant improvements",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Second generation tenant improvements",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Second generation tenant improvements",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Second generation leasing costs",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Second generation leasing costs",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Second generation leasing costs",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Building improvements",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Building improvements",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Building improvements",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Total",
+        "column": "2012",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Total",
+        "column": "2011",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Total",
+        "column": "2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 26643,
+      "r1c2": 50079,
+      "r1c3": 36676,
+      "r2c1": 31059,
+      "r2c2": 38130,
+      "r2c3": 39090,
+      "r3c1": 6182,
+      "r3c2": 11055,
+      "r3c3": 12957,
+      "r4c1": 63884,
+      "r4c2": 99264,
+      "r4c3": 88723
+    },
+    "source": "FinQA/DRE/2012/page_40.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "2012",
+        "2011",
+        "2010"
+      ],
+      [
+        "Second generation tenant improvements",
+        "$26,643",
+        "$50,079",
+        "$36,676"
+      ],
+      [
+        "Second generation leasing costs",
+        "31,059",
+        "38,130",
+        "39,090"
+      ],
+      [
+        "Building improvements",
+        "6,182",
+        "11,055",
+        "12,957"
+      ],
+      [
+        "Total",
+        "$63,884",
+        "$99,264",
+        "$88,723"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 26643,
+      "r1c2": 50079,
+      "r1c3": 36676,
+      "r2c1": 31059,
+      "r2c2": 38130,
+      "r2c3": 39090,
+      "r3c1": 6182,
+      "r3c2": 11055,
+      "r3c3": 12957,
+      "r4c1": 63884,
+      "r4c2": 99264,
+      "r4c3": 88723
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2012",
+          "2011",
+          "2010"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Second generation tenant improvements",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Second generation leasing costs",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Building improvements",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Total",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2012",
+          "2011",
+          "2010"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-07b97c03eb86",
+    "sourceId": "STT/2014/page_54.pdf-2",
+    "sourceFile": "STT/2014/page_54.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what is the roi of an investment in state street corporation from 20011 to 2012?",
+      "en": "what is the roi of an investment in state street corporation from 20011 to 2012?"
+    },
+    "question": "what is the roi of an investment in state street corporation from 20011 to 2012?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "State Street Corporation",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "State Street Corporation",
+        "column": "2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "State Street Corporation",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "State Street Corporation",
+        "column": "2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "State Street Corporation",
+        "column": "2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c6",
+        "row": "State Street Corporation",
+        "column": "2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "S&P 500 Index",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "S&P 500 Index",
+        "column": "2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "S&P 500 Index",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "S&P 500 Index",
+        "column": "2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "S&P 500 Index",
+        "column": "2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c6",
+        "row": "S&P 500 Index",
+        "column": "2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "S&P Financial Index",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "S&P Financial Index",
+        "column": "2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "S&P Financial Index",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "S&P Financial Index",
+        "column": "2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "S&P Financial Index",
+        "column": "2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c6",
+        "row": "S&P Financial Index",
+        "column": "2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "KBW Bank Index",
+        "column": "2009",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "KBW Bank Index",
+        "column": "2010",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "KBW Bank Index",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c4",
+        "row": "KBW Bank Index",
+        "column": "2012",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c5",
+        "row": "KBW Bank Index",
+        "column": "2013",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c6",
+        "row": "KBW Bank Index",
+        "column": "2014",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 107,
+      "r1c3": 114,
+      "r1c4": 101,
+      "r1c5": 120,
+      "r1c6": 190,
+      "r2c1": 100,
+      "r2c2": 115,
+      "r2c3": 132,
+      "r2c4": 135,
+      "r2c5": 157,
+      "r2c6": 208,
+      "r3c1": 100,
+      "r3c2": 112,
+      "r3c3": 126,
+      "r3c4": 104,
+      "r3c5": 135,
+      "r3c6": 183,
+      "r4c1": 100,
+      "r4c2": 123,
+      "r4c3": 152,
+      "r4c4": 117,
+      "r4c5": 153,
+      "r4c6": 211
+    },
+    "source": "FinQA/STT/2014/page_54.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014"
+      ],
+      [
+        "State Street Corporation",
+        "$100",
+        "$107",
+        "$114",
+        "$101",
+        "$120",
+        "$190"
+      ],
+      [
+        "S&P 500 Index",
+        "100",
+        "115",
+        "132",
+        "135",
+        "157",
+        "208"
+      ],
+      [
+        "S&P Financial Index",
+        "100",
+        "112",
+        "126",
+        "104",
+        "135",
+        "183"
+      ],
+      [
+        "KBW Bank Index",
+        "100",
+        "123",
+        "152",
+        "117",
+        "153",
+        "211"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 107,
+      "r1c3": 114,
+      "r1c4": 101,
+      "r1c5": 120,
+      "r1c6": 190,
+      "r2c1": 100,
+      "r2c2": 115,
+      "r2c3": 132,
+      "r2c4": 135,
+      "r2c5": 157,
+      "r2c6": 208,
+      "r3c1": 100,
+      "r3c2": 112,
+      "r3c3": 126,
+      "r3c4": 104,
+      "r3c5": 135,
+      "r3c6": 183,
+      "r4c1": 100,
+      "r4c2": 123,
+      "r4c3": 152,
+      "r4c4": 117,
+      "r4c5": 153,
+      "r4c6": 211
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "State Street Corporation",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}",
+          "{r1c6}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "S&P 500 Index",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}",
+          "{r2c6}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "S&P Financial Index",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}",
+          "{r3c6}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "KBW Bank Index",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}",
+          "{r4c4}",
+          "{r4c5}",
+          "{r4c6}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "test",
+    "sourceOperationCount": 2,
+    "split": "test"
+  },
+  {
+    "id": "finqa-96b35b35f7fd",
+    "sourceId": "UPS/2006/page_32.pdf-2",
+    "sourceFile": "UPS/2006/page_32.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in percentage total cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five years ended 12/31/06?",
+      "en": "what was the difference in percentage total cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five years ended 12/31/06?"
+    },
+    "question": "what was the difference in percentage total cumulative return on investment for united parcel service inc . compared to the s&p 500 index for the five years ended 12/31/06?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "United Parcel Service, Inc.",
+        "column": "12/31/01",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "United Parcel Service, Inc.",
+        "column": "12/31/02",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "United Parcel Service, Inc.",
+        "column": "12/31/03",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "United Parcel Service, Inc.",
+        "column": "12/31/04",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "United Parcel Service, Inc.",
+        "column": "12/31/05",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c6",
+        "row": "United Parcel Service, Inc.",
+        "column": "12/31/06",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "S&P 500 Index",
+        "column": "12/31/01",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "S&P 500 Index",
+        "column": "12/31/02",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "S&P 500 Index",
+        "column": "12/31/03",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "S&P 500 Index",
+        "column": "12/31/04",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "S&P 500 Index",
+        "column": "12/31/05",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c6",
+        "row": "S&P 500 Index",
+        "column": "12/31/06",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Dow Jones Transportation Average",
+        "column": "12/31/01",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Dow Jones Transportation Average",
+        "column": "12/31/02",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Dow Jones Transportation Average",
+        "column": "12/31/03",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "Dow Jones Transportation Average",
+        "column": "12/31/04",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "Dow Jones Transportation Average",
+        "column": "12/31/05",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c6",
+        "row": "Dow Jones Transportation Average",
+        "column": "12/31/06",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 117.19,
+      "r1c3": 140.49,
+      "r1c4": 163.54,
+      "r1c5": 146.35,
+      "r1c6": 148.92,
+      "r2c1": 100,
+      "r2c2": 77.9,
+      "r2c3": 100.24,
+      "r2c4": 111.15,
+      "r2c5": 116.61,
+      "r2c6": 135.02,
+      "r3c1": 100,
+      "r3c2": 88.52,
+      "r3c3": 116.7,
+      "r3c4": 149.06,
+      "r3c5": 166.42,
+      "r3c6": 182.76
+    },
+    "source": "FinQA/UPS/2006/page_32.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "12/31/01",
+        "12/31/02",
+        "12/31/03",
+        "12/31/04",
+        "12/31/05",
+        "12/31/06"
+      ],
+      [
+        "United Parcel Service, Inc.",
+        "$100.00",
+        "$117.19",
+        "$140.49",
+        "$163.54",
+        "$146.35",
+        "$148.92"
+      ],
+      [
+        "S&P 500 Index",
+        "$100.00",
+        "$77.90",
+        "$100.24",
+        "$111.15",
+        "$116.61",
+        "$135.02"
+      ],
+      [
+        "Dow Jones Transportation Average",
+        "$100.00",
+        "$88.52",
+        "$116.70",
+        "$149.06",
+        "$166.42",
+        "$182.76"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 117.19,
+      "r1c3": 140.49,
+      "r1c4": 163.54,
+      "r1c5": 146.35,
+      "r1c6": 148.92,
+      "r2c1": 100,
+      "r2c2": 77.9,
+      "r2c3": 100.24,
+      "r2c4": 111.15,
+      "r2c5": 116.61,
+      "r2c6": 135.02,
+      "r3c1": 100,
+      "r3c2": 88.52,
+      "r3c3": 116.7,
+      "r3c4": 149.06,
+      "r3c5": 166.42,
+      "r3c6": 182.76
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "12/31/01",
+          "12/31/02",
+          "12/31/03",
+          "12/31/04",
+          "12/31/05",
+          "12/31/06"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "United Parcel Service, Inc.",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}",
+          "{r1c6}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "S&P 500 Index",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}",
+          "{r2c6}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Dow Jones Transportation Average",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}",
+          "{r3c6}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "12/31/01",
+          "12/31/02",
+          "12/31/03",
+          "12/31/04",
+          "12/31/05",
+          "12/31/06"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 5,
+    "split": "test"
+  },
+  {
+    "id": "finqa-4db068ec81d1",
+    "sourceId": "CDNS/2012/page_30.pdf-2",
+    "sourceFile": "CDNS/2012/page_30.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . compared to the nasdaq composite for the five years ended 12/29/2012?",
+      "en": "what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . compared to the nasdaq composite for the five years ended 12/29/2012?"
+    },
+    "question": "what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . compared to the nasdaq composite for the five years ended 12/29/2012?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "12/29/2007",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "1/3/2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "1/2/2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "1/1/2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "12/31/2011",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c6",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "12/29/2012",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "NASDAQ Composite",
+        "column": "12/29/2007",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "NASDAQ Composite",
+        "column": "1/3/2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "NASDAQ Composite",
+        "column": "1/2/2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "NASDAQ Composite",
+        "column": "1/1/2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "NASDAQ Composite",
+        "column": "12/31/2011",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c6",
+        "row": "NASDAQ Composite",
+        "column": "12/29/2012",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "S&P 400 Information Technology",
+        "column": "12/29/2007",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "S&P 400 Information Technology",
+        "column": "1/3/2009",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "S&P 400 Information Technology",
+        "column": "1/2/2010",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "S&P 400 Information Technology",
+        "column": "1/1/2011",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "S&P 400 Information Technology",
+        "column": "12/31/2011",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c6",
+        "row": "S&P 400 Information Technology",
+        "column": "12/29/2012",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 22.55,
+      "r1c3": 35.17,
+      "r1c4": 48.5,
+      "r1c5": 61.07,
+      "r1c6": 78.92,
+      "r2c1": 100,
+      "r2c2": 59.03,
+      "r2c3": 82.25,
+      "r2c4": 97.32,
+      "r2c5": 98.63,
+      "r2c6": 110.78,
+      "r3c1": 100,
+      "r3c2": 54.6,
+      "r3c3": 82.76,
+      "r3c4": 108.11,
+      "r3c5": 95.48,
+      "r3c6": 109.88
+    },
+    "source": "FinQA/CDNS/2012/page_30.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "12/29/2007",
+        "1/3/2009",
+        "1/2/2010",
+        "1/1/2011",
+        "12/31/2011",
+        "12/29/2012"
+      ],
+      [
+        "Cadence Design Systems, Inc.",
+        "100.00",
+        "22.55",
+        "35.17",
+        "48.50",
+        "61.07",
+        "78.92"
+      ],
+      [
+        "NASDAQ Composite",
+        "100.00",
+        "59.03",
+        "82.25",
+        "97.32",
+        "98.63",
+        "110.78"
+      ],
+      [
+        "S&P 400 Information Technology",
+        "100.00",
+        "54.60",
+        "82.76",
+        "108.11",
+        "95.48",
+        "109.88"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 22.55,
+      "r1c3": 35.17,
+      "r1c4": 48.5,
+      "r1c5": 61.07,
+      "r1c6": 78.92,
+      "r2c1": 100,
+      "r2c2": 59.03,
+      "r2c3": 82.25,
+      "r2c4": 97.32,
+      "r2c5": 98.63,
+      "r2c6": 110.78,
+      "r3c1": 100,
+      "r3c2": 54.6,
+      "r3c3": 82.76,
+      "r3c4": 108.11,
+      "r3c5": 95.48,
+      "r3c6": 109.88
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "12/29/2007",
+          "1/3/2009",
+          "1/2/2010",
+          "1/1/2011",
+          "12/31/2011",
+          "12/29/2012"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Cadence Design Systems, Inc.",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}",
+          "{r1c6}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "NASDAQ Composite",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}",
+          "{r2c6}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "S&P 400 Information Technology",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}",
+          "{r3c6}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "12/29/2007",
+          "1/3/2009",
+          "1/2/2010",
+          "1/1/2011",
+          "12/31/2011",
+          "12/29/2012"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 3,
+    "split": "test"
+  },
+  {
+    "id": "finqa-067832a40477",
+    "sourceId": "PM/2018/page_24.pdf-2",
+    "sourceFile": "PM/2018/page_24.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?",
+      "en": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?"
+    },
+    "question": "what was the difference in percentage return for pmi common stock compared to the s&p 500 index for the five years ended 2018?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "December 31, 2013",
+        "column": "PMI",
+        "columnIndex": 1,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "December 31, 2013",
+        "column": "PMI Peer Group(1)",
+        "columnIndex": 2,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "December 31, 2013",
+        "column": "S&P 500 Index",
+        "columnIndex": 3,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "December 31, 2014",
+        "column": "PMI",
+        "columnIndex": 1,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "December 31, 2014",
+        "column": "PMI Peer Group(1)",
+        "columnIndex": 2,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "December 31, 2014",
+        "column": "S&P 500 Index",
+        "columnIndex": 3,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "December 31, 2015",
+        "column": "PMI",
+        "columnIndex": 1,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "December 31, 2015",
+        "column": "PMI Peer Group(1)",
+        "columnIndex": 2,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "December 31, 2015",
+        "column": "S&P 500 Index",
+        "columnIndex": 3,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "December 31, 2016",
+        "column": "PMI",
+        "columnIndex": 1,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "December 31, 2016",
+        "column": "PMI Peer Group(1)",
+        "columnIndex": 2,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "December 31, 2016",
+        "column": "S&P 500 Index",
+        "columnIndex": 3,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "December 31, 2017",
+        "column": "PMI",
+        "columnIndex": 1,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "December 31, 2017",
+        "column": "PMI Peer Group(1)",
+        "columnIndex": 2,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "December 31, 2017",
+        "column": "S&P 500 Index",
+        "columnIndex": 3,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "December 31, 2018",
+        "column": "PMI",
+        "columnIndex": 1,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "December 31, 2018",
+        "column": "PMI Peer Group(1)",
+        "columnIndex": 2,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "December 31, 2018",
+        "column": "S&P 500 Index",
+        "columnIndex": 3,
+        "unitHint": "Date",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 100,
+      "r1c3": 100,
+      "r2c1": 97.9,
+      "r2c2": 107.8,
+      "r2c3": 113.7,
+      "r3c1": 111,
+      "r3c2": 116.8,
+      "r3c3": 115.3,
+      "r4c1": 120.5,
+      "r4c2": 118.4,
+      "r4c3": 129,
+      "r5c1": 144.5,
+      "r5c2": 140.5,
+      "r5c3": 157.2,
+      "r6c1": 96.5,
+      "r6c2": 127.7,
+      "r6c3": 150.3
+    },
+    "source": "FinQA/PM/2018/page_24.pdf-2",
+    "originalTable": [
+      [
+        "Date",
+        "PMI",
+        "PMI Peer Group<sup>(1)</sup>",
+        "S&P 500 Index"
+      ],
+      [
+        "December 31, 2013",
+        "$100.00",
+        "$100.00",
+        "$100.00"
+      ],
+      [
+        "December 31, 2014",
+        "$97.90",
+        "$107.80",
+        "$113.70"
+      ],
+      [
+        "December 31, 2015",
+        "$111.00",
+        "$116.80",
+        "$115.30"
+      ],
+      [
+        "December 31, 2016",
+        "$120.50",
+        "$118.40",
+        "$129.00"
+      ],
+      [
+        "December 31, 2017",
+        "$144.50",
+        "$140.50",
+        "$157.20"
+      ],
+      [
+        "December 31, 2018",
+        "$96.50",
+        "$127.70",
+        "$150.30"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 100,
+      "r1c3": 100,
+      "r2c1": 97.9,
+      "r2c2": 107.8,
+      "r2c3": 113.7,
+      "r3c1": 111,
+      "r3c2": 116.8,
+      "r3c3": 115.3,
+      "r4c1": 120.5,
+      "r4c2": 118.4,
+      "r4c3": 129,
+      "r5c1": 144.5,
+      "r5c2": 140.5,
+      "r5c3": 157.2,
+      "r6c1": 96.5,
+      "r6c2": 127.7,
+      "r6c3": 150.3
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "Date",
+          "PMI",
+          "PMI Peer Group(1)",
+          "S&P 500 Index"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "December 31, 2013",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "December 31, 2014",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "December 31, 2015",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "December 31, 2016",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "December 31, 2017",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "December 31, 2018",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "Date",
+          "PMI",
+          "PMI Peer Group(1)",
+          "S&P 500 Index"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 5,
+    "split": "test"
+  },
+  {
+    "id": "finqa-19645d772932",
+    "sourceId": "C/2017/page_328.pdf-3",
+    "sourceFile": "C/2017/page_328.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock and s&p financials?",
+      "en": "what was the difference in percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock and s&p financials?"
+    },
+    "question": "what was the difference in percentage cumulative total return for the five year period ended 31-dec-2017 of citi common stock and s&p financials?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "31-Dec-2012",
+        "column": "CITI",
+        "columnIndex": 1,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "31-Dec-2012",
+        "column": "S&P 500",
+        "columnIndex": 2,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "31-Dec-2012",
+        "column": "S&P FINANCIALS",
+        "columnIndex": 3,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "31-Dec-2013",
+        "column": "CITI",
+        "columnIndex": 1,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "31-Dec-2013",
+        "column": "S&P 500",
+        "columnIndex": 2,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "31-Dec-2013",
+        "column": "S&P FINANCIALS",
+        "columnIndex": 3,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "31-Dec-2014",
+        "column": "CITI",
+        "columnIndex": 1,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "31-Dec-2014",
+        "column": "S&P 500",
+        "columnIndex": 2,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "31-Dec-2014",
+        "column": "S&P FINANCIALS",
+        "columnIndex": 3,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "31-Dec-2015",
+        "column": "CITI",
+        "columnIndex": 1,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "31-Dec-2015",
+        "column": "S&P 500",
+        "columnIndex": 2,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "31-Dec-2015",
+        "column": "S&P FINANCIALS",
+        "columnIndex": 3,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "31-Dec-2016",
+        "column": "CITI",
+        "columnIndex": 1,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "31-Dec-2016",
+        "column": "S&P 500",
+        "columnIndex": 2,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "31-Dec-2016",
+        "column": "S&P FINANCIALS",
+        "columnIndex": 3,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "31-Dec-2017",
+        "column": "CITI",
+        "columnIndex": 1,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "31-Dec-2017",
+        "column": "S&P 500",
+        "columnIndex": 2,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "31-Dec-2017",
+        "column": "S&P FINANCIALS",
+        "columnIndex": 3,
+        "unitHint": "DATE",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 100,
+      "r1c3": 100,
+      "r2c1": 131.8,
+      "r2c2": 132.4,
+      "r2c3": 135.6,
+      "r3c1": 137,
+      "r3c2": 150.5,
+      "r3c3": 156.2,
+      "r4c1": 131.4,
+      "r4c2": 152.6,
+      "r4c3": 153.9,
+      "r5c1": 152.3,
+      "r5c2": 170.8,
+      "r5c3": 188.9,
+      "r6c1": 193.5,
+      "r6c2": 208.1,
+      "r6c3": 230.9
+    },
+    "source": "FinQA/C/2017/page_328.pdf-3",
+    "originalTable": [
+      [
+        "DATE",
+        "CITI",
+        "S&P 500",
+        "S&P FINANCIALS"
+      ],
+      [
+        "31-Dec-2012",
+        "100.0",
+        "100.0",
+        "100.0"
+      ],
+      [
+        "31-Dec-2013",
+        "131.8",
+        "132.4",
+        "135.6"
+      ],
+      [
+        "31-Dec-2014",
+        "137.0",
+        "150.5",
+        "156.2"
+      ],
+      [
+        "31-Dec-2015",
+        "131.4",
+        "152.6",
+        "153.9"
+      ],
+      [
+        "31-Dec-2016",
+        "152.3",
+        "170.8",
+        "188.9"
+      ],
+      [
+        "31-Dec-2017",
+        "193.5",
+        "208.1",
+        "230.9"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 100,
+      "r1c3": 100,
+      "r2c1": 131.8,
+      "r2c2": 132.4,
+      "r2c3": 135.6,
+      "r3c1": 137,
+      "r3c2": 150.5,
+      "r3c3": 156.2,
+      "r4c1": 131.4,
+      "r4c2": 152.6,
+      "r4c3": 153.9,
+      "r5c1": 152.3,
+      "r5c2": 170.8,
+      "r5c3": 188.9,
+      "r6c1": 193.5,
+      "r6c2": 208.1,
+      "r6c3": 230.9
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "DATE",
+          "CITI",
+          "S&P 500",
+          "S&P FINANCIALS"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "31-Dec-2012",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "31-Dec-2013",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "31-Dec-2014",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "31-Dec-2015",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "31-Dec-2016",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "31-Dec-2017",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "DATE",
+          "CITI",
+          "S&P 500",
+          "S&P FINANCIALS"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 5,
+    "split": "test"
+  },
+  {
+    "id": "finqa-192479754710",
+    "sourceId": "LMT/2013/page_74.pdf-1",
+    "sourceFile": "LMT/2013/page_74.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013",
+      "en": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013"
+    },
+    "question": "what was the average number of weighted average common shares outstanding for diluted computations from 2011 to 2013",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2013",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2012",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2011",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 320.9,
+      "r1c2": 323.7,
+      "r1c3": 335.9,
+      "r2c1": 5.6,
+      "r2c2": 4.7,
+      "r2c3": 4,
+      "r3c1": 326.5,
+      "r3c2": 328.4,
+      "r3c3": 339.9
+    },
+    "source": "FinQA/LMT/2013/page_74.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "2013",
+        "2012",
+        "2011"
+      ],
+      [
+        "Weighted average common shares outstanding for basic computations",
+        "320.9",
+        "323.7",
+        "335.9"
+      ],
+      [
+        "Weighted average dilutive effect of equity awards",
+        "5.6",
+        "4.7",
+        "4.0"
+      ],
+      [
+        "Weighted average common shares outstanding for diluted computations",
+        "326.5",
+        "328.4",
+        "339.9"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 320.9,
+      "r1c2": 323.7,
+      "r1c3": 335.9,
+      "r2c1": 5.6,
+      "r2c2": 4.7,
+      "r2c3": 4,
+      "r3c1": 326.5,
+      "r3c2": 328.4,
+      "r3c3": 339.9
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2013",
+          "2012",
+          "2011"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Weighted average common shares outstanding for basic computations",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Weighted average dilutive effect of equity awards",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Weighted average common shares outstanding for diluted computations",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2013",
+          "2012",
+          "2011"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 4,
+    "split": "test"
+  },
+  {
+    "id": "finqa-c06ed98d09aa",
+    "sourceId": "BDX/2018/page_82.pdf-1",
+    "sourceFile": "BDX/2018/page_82.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the average pension service cost from 2016 to 2018 in millions",
+      "en": "what was the average pension service cost from 2016 to 2018 in millions"
+    },
+    "question": "what was the average pension service cost from 2016 to 2018 in millions",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "(Millions of dollars)",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "(Millions of dollars)",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "(Millions of dollars)",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Service cost",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Service cost",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Service cost",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Interest cost",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Interest cost",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Interest cost",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Expected return on plan assets",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Expected return on plan assets",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Expected return on plan assets",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Amortization of prior service credit",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Amortization of prior service credit",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Amortization of prior service credit",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Amortization of loss",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Amortization of loss",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "Amortization of loss",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Settlements",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c3",
+        "row": "Settlements",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c1",
+        "row": "Net pension cost",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "Net pension cost",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c3",
+        "row": "Net pension cost",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c1",
+        "row": "Net pension cost included in the preceding table that is attributable to international plans",
+        "column": "source column 1",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c2",
+        "row": "Net pension cost included in the preceding table that is attributable to international plans",
+        "column": "source column 2",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c3",
+        "row": "Net pension cost included in the preceding table that is attributable to international plans",
+        "column": "source column 3",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 2018,
+      "r1c2": 2017,
+      "r1c3": 2016,
+      "r2c1": 136,
+      "r2c2": 110,
+      "r2c3": 81,
+      "r3c1": 90,
+      "r3c2": 61,
+      "r3c3": 72,
+      "r4c1": -154,
+      "r4c2": -112,
+      "r4c3": -109,
+      "r5c1": -13,
+      "r5c2": -14,
+      "r5c3": -15,
+      "r6c1": 78,
+      "r6c2": 92,
+      "r6c3": 77,
+      "r7c1": 2,
+      "r7c3": 7,
+      "r8c1": 137,
+      "r8c2": 138,
+      "r8c3": 113,
+      "r9c1": 34,
+      "r9c2": 43,
+      "r9c3": 35
+    },
+    "source": "FinQA/BDX/2018/page_82.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "Pension Plans"
+      ],
+      [
+        "(Millions of dollars)",
+        "2018",
+        "2017",
+        "2016"
+      ],
+      [
+        "Service cost",
+        "$136",
+        "$110",
+        "$81"
+      ],
+      [
+        "Interest cost",
+        "90",
+        "61",
+        "72"
+      ],
+      [
+        "Expected return on plan assets",
+        "(154)",
+        "(112)",
+        "(109)"
+      ],
+      [
+        "Amortization of prior service credit",
+        "(13)",
+        "(14)",
+        "(15)"
+      ],
+      [
+        "Amortization of loss",
+        "78",
+        "92",
+        "77"
+      ],
+      [
+        "Settlements",
+        "2",
+        "—",
+        "7"
+      ],
+      [
+        "Net pension cost",
+        "$137",
+        "$138",
+        "$113"
+      ],
+      [
+        "Net pension cost included in the preceding table that is attributable to international plans",
+        "$34",
+        "$43",
+        "$35"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 2018,
+      "r1c2": 2017,
+      "r1c3": 2016,
+      "r2c1": 136,
+      "r2c2": 110,
+      "r2c3": 81,
+      "r3c1": 90,
+      "r3c2": 61,
+      "r3c3": 72,
+      "r4c1": -154,
+      "r4c2": -112,
+      "r4c3": -109,
+      "r5c1": -13,
+      "r5c2": -14,
+      "r5c3": -15,
+      "r6c1": 78,
+      "r6c2": 92,
+      "r6c3": 77,
+      "r7c1": 2,
+      "r7c3": 7,
+      "r8c1": 137,
+      "r8c2": 138,
+      "r8c3": 113,
+      "r9c1": 34,
+      "r9c2": 43,
+      "r9c3": 35
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "Pension Plans"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "(Millions of dollars)",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Service cost",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Interest cost",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Expected return on plan assets",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Amortization of prior service credit",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Amortization of loss",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Settlements",
+          "{r7c1}",
+          "{unparsed:r7c2}",
+          "{r7c3}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "Net pension cost",
+          "{r8c1}",
+          "{r8c2}",
+          "{r8c3}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Net pension cost included in the preceding table that is attributable to international plans",
+          "{r9c1}",
+          "{r9c2}",
+          "{r9c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "Pension Plans"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 3,
+    "split": "test"
+  },
+  {
+    "id": "finqa-ff0b49733610",
+    "sourceId": "ETFC/2014/page_26.pdf-4",
+    "sourceFile": "ETFC/2014/page_26.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in total return percentage beteween e*trade financial corporation and the s&p 500 index for the five years ended 12/14?",
+      "en": "what was the difference in total return percentage beteween e*trade financial corporation and the s&p 500 index for the five years ended 12/14?"
+    },
+    "question": "what was the difference in total return percentage beteween e*trade financial corporation and the s&p 500 index for the five years ended 12/14?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "E*TRADE Financial Corporation",
+        "column": "12/09",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "E*TRADE Financial Corporation",
+        "column": "12/10",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "E*TRADE Financial Corporation",
+        "column": "12/11",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "E*TRADE Financial Corporation",
+        "column": "12/12",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "E*TRADE Financial Corporation",
+        "column": "12/13",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c6",
+        "row": "E*TRADE Financial Corporation",
+        "column": "12/14",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "S&P 500 Index",
+        "column": "12/09",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "S&P 500 Index",
+        "column": "12/10",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "S&P 500 Index",
+        "column": "12/11",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "S&P 500 Index",
+        "column": "12/12",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "S&P 500 Index",
+        "column": "12/13",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c6",
+        "row": "S&P 500 Index",
+        "column": "12/14",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Dow Jones US Financials Index",
+        "column": "12/09",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Dow Jones US Financials Index",
+        "column": "12/10",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Dow Jones US Financials Index",
+        "column": "12/11",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "Dow Jones US Financials Index",
+        "column": "12/12",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "Dow Jones US Financials Index",
+        "column": "12/13",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c6",
+        "row": "Dow Jones US Financials Index",
+        "column": "12/14",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 90.91,
+      "r1c3": 45.23,
+      "r1c4": 50.85,
+      "r1c5": 111.59,
+      "r1c6": 137.81,
+      "r2c1": 100,
+      "r2c2": 115.06,
+      "r2c3": 117.49,
+      "r2c4": 136.3,
+      "r2c5": 180.44,
+      "r2c6": 205.14,
+      "r3c1": 100,
+      "r3c2": 112.72,
+      "r3c3": 98.24,
+      "r3c4": 124.62,
+      "r3c5": 167.26,
+      "r3c6": 191.67
+    },
+    "source": "FinQA/ETFC/2014/page_26.pdf-4",
+    "originalTable": [
+      [
+        "",
+        "12/09",
+        "12/10",
+        "12/11",
+        "12/12",
+        "12/13",
+        "12/14"
+      ],
+      [
+        "E*TRADE Financial Corporation",
+        "100.00",
+        "90.91",
+        "45.23",
+        "50.85",
+        "111.59",
+        "137.81"
+      ],
+      [
+        "S&P 500 Index",
+        "100.00",
+        "115.06",
+        "117.49",
+        "136.30",
+        "180.44",
+        "205.14"
+      ],
+      [
+        "Dow Jones US Financials Index",
+        "100.00",
+        "112.72",
+        "98.24",
+        "124.62",
+        "167.26",
+        "191.67"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 90.91,
+      "r1c3": 45.23,
+      "r1c4": 50.85,
+      "r1c5": 111.59,
+      "r1c6": 137.81,
+      "r2c1": 100,
+      "r2c2": 115.06,
+      "r2c3": 117.49,
+      "r2c4": 136.3,
+      "r2c5": 180.44,
+      "r2c6": 205.14,
+      "r3c1": 100,
+      "r3c2": 112.72,
+      "r3c3": 98.24,
+      "r3c4": 124.62,
+      "r3c5": 167.26,
+      "r3c6": 191.67
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "12/09",
+          "12/10",
+          "12/11",
+          "12/12",
+          "12/13",
+          "12/14"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "E*TRADE Financial Corporation",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}",
+          "{r1c6}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "S&P 500 Index",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}",
+          "{r2c6}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Dow Jones US Financials Index",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}",
+          "{r3c6}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "12/09",
+          "12/10",
+          "12/11",
+          "12/12",
+          "12/13",
+          "12/14"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 5,
+    "split": "test"
+  },
+  {
+    "id": "finqa-cc8be47207e9",
+    "sourceId": "AES/2003/page_52.pdf-1",
+    "sourceFile": "AES/2003/page_52.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "for the three months ended march 2003 what were the total sales proceeds for subsidiaries assets in millions?",
+      "en": "for the three months ended march 2003 what were the total sales proceeds for subsidiaries assets in millions?"
+    },
+    "question": "for the three months ended march 2003 what were the total sales proceeds for subsidiaries assets in millions?",
+    "schema": [
+      {
+        "id": "r1c2",
+        "row": "CILCORP/Medina Valley",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "AES Ecogen/AES Mt. Stuart",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Mountainview",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Kelvin",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Songas",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "AES Haripur Private Ltd/AES Meghnaghat Ltd",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c2",
+        "row": "AES MtKvari/AES Khrami/AES Telasi",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r10c2",
+        "row": "AES Oasis Limited",
+        "column": "Sales Proceeds (in millions)",
+        "columnIndex": 2,
+        "unitHint": "Project Name",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c2": 495,
+      "r2c2": 59,
+      "r3c2": 30,
+      "r4c2": 29,
+      "r5c2": 94,
+      "r7c2": 145,
+      "r8c2": 23,
+      "r10c2": 150
+    },
+    "source": "FinQA/AES/2003/page_52.pdf-1",
+    "originalTable": [
+      [
+        "Project Name",
+        "Date Completed",
+        "Sales Proceeds (in millions)",
+        "Location"
+      ],
+      [
+        "CILCORP/Medina Valley",
+        "January 2003",
+        "$495",
+        "United States"
+      ],
+      [
+        "AES Ecogen/AES Mt. Stuart",
+        "January 2003",
+        "$59",
+        "Australia"
+      ],
+      [
+        "Mountainview",
+        "March 2003",
+        "$30",
+        "United States"
+      ],
+      [
+        "Kelvin",
+        "March 2003",
+        "$29",
+        "South Africa"
+      ],
+      [
+        "Songas",
+        "April 2003",
+        "$94",
+        "Tanzania"
+      ],
+      [
+        "AES Barry Limited",
+        "July 2003",
+        "£40/$62",
+        "United Kingdom"
+      ],
+      [
+        "AES Haripur Private Ltd/AES Meghnaghat Ltd",
+        "December 2003",
+        "$145",
+        "Bangladesh"
+      ],
+      [
+        "AES MtKvari/AES Khrami/AES Telasi",
+        "August 2003",
+        "$23",
+        "Republic of Georgia"
+      ],
+      [
+        "Medway Power Limited/AES Medway Operations Limited",
+        "November 2003",
+        "£47/$78",
+        "United Kingdom"
+      ],
+      [
+        "AES Oasis Limited",
+        "December 2003",
+        "$150",
+        "Pakistan/Oman"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c2": 495,
+      "r2c2": 59,
+      "r3c2": 30,
+      "r4c2": 29,
+      "r5c2": 94,
+      "r7c2": 145,
+      "r8c2": 23,
+      "r10c2": 150
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "Project Name",
+          "Date Completed",
+          "Sales Proceeds (in millions)",
+          "Location"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "CILCORP/Medina Valley",
+          "{unparsed:r1c1}",
+          "{r1c2}",
+          "{unparsed:r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "AES Ecogen/AES Mt. Stuart",
+          "{unparsed:r2c1}",
+          "{r2c2}",
+          "{unparsed:r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Mountainview",
+          "{unparsed:r3c1}",
+          "{r3c2}",
+          "{unparsed:r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Kelvin",
+          "{unparsed:r4c1}",
+          "{r4c2}",
+          "{unparsed:r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Songas",
+          "{unparsed:r5c1}",
+          "{r5c2}",
+          "{unparsed:r5c3}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "AES Barry Limited",
+          "{unparsed:r6c1}",
+          "{unparsed:r6c2}",
+          "{unparsed:r6c3}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "AES Haripur Private Ltd/AES Meghnaghat Ltd",
+          "{unparsed:r7c1}",
+          "{r7c2}",
+          "{unparsed:r7c3}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "AES MtKvari/AES Khrami/AES Telasi",
+          "{unparsed:r8c1}",
+          "{r8c2}",
+          "{unparsed:r8c3}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Medway Power Limited/AES Medway Operations Limited",
+          "{unparsed:r9c1}",
+          "{unparsed:r9c2}",
+          "{unparsed:r9c3}"
+        ]
+      },
+      {
+        "sourceRow": 10,
+        "role": "data",
+        "cells": [
+          "AES Oasis Limited",
+          "{unparsed:r10c1}",
+          "{r10c2}",
+          "{unparsed:r10c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "Project Name",
+          "Date Completed",
+          "Sales Proceeds (in millions)",
+          "Location"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 3,
+    "split": "test"
+  },
+  {
+    "id": "finqa-fc4c03c1a0dc",
+    "sourceId": "IP/2005/page_19.pdf-3",
+    "sourceFile": "IP/2005/page_19.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the average industry segment operating profits from 2003 to 2005",
+      "en": "what was the average industry segment operating profits from 2003 to 2005"
+    },
+    "question": "what was the average industry segment operating profits from 2003 to 2005",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Industry segment operating profits",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Industry segment operating profits",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Industry segment operating profits",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Corporate items",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Corporate items",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Corporate items",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Corporate special items*",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Corporate special items*",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Corporate special items*",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "Interest expense, net",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "Interest expense, net",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "Interest expense, net",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "Minority interest",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c2",
+        "row": "Minority interest",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c3",
+        "row": "Minority interest",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c1",
+        "row": "Income tax benefit (provision)",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c2",
+        "row": "Income tax benefit (provision)",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r6c3",
+        "row": "Income tax benefit (provision)",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c1",
+        "row": "Discontinued operations",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c2",
+        "row": "Discontinued operations",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r7c3",
+        "row": "Discontinued operations",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r8c3",
+        "row": "Accounting changes",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c1",
+        "row": "Net earnings (loss)",
+        "column": "2005",
+        "columnIndex": 1,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c2",
+        "row": "Net earnings (loss)",
+        "column": "2004",
+        "columnIndex": 2,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r9c3",
+        "row": "Net earnings (loss)",
+        "column": "2003",
+        "columnIndex": 3,
+        "unitHint": "In millions",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 1923,
+      "r1c2": 2040,
+      "r1c3": 1734,
+      "r2c1": -597,
+      "r2c2": -469,
+      "r2c3": -466,
+      "r3c1": -147,
+      "r3c2": -142,
+      "r3c3": -281,
+      "r4c1": -593,
+      "r4c2": -710,
+      "r4c3": -705,
+      "r5c1": -12,
+      "r5c2": -21,
+      "r5c3": -80,
+      "r6c1": 285,
+      "r6c2": -242,
+      "r6c3": 56,
+      "r7c1": 241,
+      "r7c2": -491,
+      "r7c3": 57,
+      "r8c3": -13,
+      "r9c1": 1100,
+      "r9c2": -35,
+      "r9c3": 302
+    },
+    "source": "FinQA/IP/2005/page_19.pdf-3",
+    "originalTable": [
+      [
+        "<i>In millions</i>",
+        "2005",
+        "2004",
+        "2003"
+      ],
+      [
+        "Industry segment operating profits",
+        "$1,923",
+        "$2,040",
+        "$1,734"
+      ],
+      [
+        "Corporate items",
+        "(597)",
+        "(469)",
+        "(466)"
+      ],
+      [
+        "Corporate special items*",
+        "(147)",
+        "(142)",
+        "(281)"
+      ],
+      [
+        "Interest expense, net",
+        "(593)",
+        "(710)",
+        "(705)"
+      ],
+      [
+        "Minority interest",
+        "(12)",
+        "(21)",
+        "(80)"
+      ],
+      [
+        "Income tax benefit (provision)",
+        "285",
+        "(242)",
+        "56"
+      ],
+      [
+        "Discontinued operations",
+        "241",
+        "(491)",
+        "57"
+      ],
+      [
+        "Accounting changes",
+        "–",
+        "–",
+        "(13)"
+      ],
+      [
+        "Net earnings (loss)",
+        "$1,100",
+        "$(35)",
+        "$302"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 1923,
+      "r1c2": 2040,
+      "r1c3": 1734,
+      "r2c1": -597,
+      "r2c2": -469,
+      "r2c3": -466,
+      "r3c1": -147,
+      "r3c2": -142,
+      "r3c3": -281,
+      "r4c1": -593,
+      "r4c2": -710,
+      "r4c3": -705,
+      "r5c1": -12,
+      "r5c2": -21,
+      "r5c3": -80,
+      "r6c1": 285,
+      "r6c2": -242,
+      "r6c3": 56,
+      "r7c1": 241,
+      "r7c2": -491,
+      "r7c3": 57,
+      "r8c3": -13,
+      "r9c1": 1100,
+      "r9c2": -35,
+      "r9c3": 302
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "In millions",
+          "2005",
+          "2004",
+          "2003"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Industry segment operating profits",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Corporate items",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Corporate special items*",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "Interest expense, net",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "Minority interest",
+          "{r5c1}",
+          "{r5c2}",
+          "{r5c3}"
+        ]
+      },
+      {
+        "sourceRow": 6,
+        "role": "data",
+        "cells": [
+          "Income tax benefit (provision)",
+          "{r6c1}",
+          "{r6c2}",
+          "{r6c3}"
+        ]
+      },
+      {
+        "sourceRow": 7,
+        "role": "data",
+        "cells": [
+          "Discontinued operations",
+          "{r7c1}",
+          "{r7c2}",
+          "{r7c3}"
+        ]
+      },
+      {
+        "sourceRow": 8,
+        "role": "data",
+        "cells": [
+          "Accounting changes",
+          "{unparsed:r8c1}",
+          "{unparsed:r8c2}",
+          "{r8c3}"
+        ]
+      },
+      {
+        "sourceRow": 9,
+        "role": "data",
+        "cells": [
+          "Net earnings (loss)",
+          "{r9c1}",
+          "{r9c2}",
+          "{r9c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "In millions",
+          "2005",
+          "2004",
+          "2003"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 4,
+    "split": "test"
+  },
+  {
+    "id": "finqa-622d981791d0",
+    "sourceId": "LMT/2017/page_80.pdf-1",
+    "sourceFile": "LMT/2017/page_80.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the average weighted average common shares outstanding for diluted computations from 2015 to 2017",
+      "en": "what was the average weighted average common shares outstanding for diluted computations from 2015 to 2017"
+    },
+    "question": "what was the average weighted average common shares outstanding for diluted computations from 2015 to 2017",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2017",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2016",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Weighted average common shares outstanding for basic computations",
+        "column": "2015",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2017",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2016",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "Weighted average dilutive effect of equity awards",
+        "column": "2015",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2017",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2016",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "Weighted average common shares outstanding for diluted computations",
+        "column": "2015",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 287.8,
+      "r1c2": 299.3,
+      "r1c3": 310.3,
+      "r2c1": 2.8,
+      "r2c2": 3.8,
+      "r2c3": 4.4,
+      "r3c1": 290.6,
+      "r3c2": 303.1,
+      "r3c3": 314.7
+    },
+    "source": "FinQA/LMT/2017/page_80.pdf-1",
+    "originalTable": [
+      [
+        "",
+        "2017",
+        "2016",
+        "2015"
+      ],
+      [
+        "Weighted average common shares outstanding for basic computations",
+        "287.8",
+        "299.3",
+        "310.3"
+      ],
+      [
+        "Weighted average dilutive effect of equity awards",
+        "2.8",
+        "3.8",
+        "4.4"
+      ],
+      [
+        "Weighted average common shares outstanding for diluted computations",
+        "290.6",
+        "303.1",
+        "314.7"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 287.8,
+      "r1c2": 299.3,
+      "r1c3": 310.3,
+      "r2c1": 2.8,
+      "r2c2": 3.8,
+      "r2c3": 4.4,
+      "r3c1": 290.6,
+      "r3c2": 303.1,
+      "r3c3": 314.7
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "2017",
+          "2016",
+          "2015"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Weighted average common shares outstanding for basic computations",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "Weighted average dilutive effect of equity awards",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "Weighted average common shares outstanding for diluted computations",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "2017",
+          "2016",
+          "2015"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 3,
+    "split": "test"
+  },
+  {
+    "id": "finqa-229da609924a",
+    "sourceId": "CDNS/2006/page_30.pdf-4",
+    "sourceFile": "CDNS/2006/page_30.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what was the difference in percentage cumulative 5-year total return to shareholders of cadence design systems , inc . 2019s common stock and the s&p 500 for the period ended december 30 , 2006?",
+      "en": "what was the difference in percentage cumulative 5-year total return to shareholders of cadence design systems , inc . 2019s common stock and the s&p 500 for the period ended december 30 , 2006?"
+    },
+    "question": "what was the difference in percentage cumulative 5-year total return to shareholders of cadence design systems , inc . 2019s common stock and the s&p 500 for the period ended december 30 , 2006?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "December 29, 2001",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c2",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "December 28, 2002",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c3",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "January 3, 2004",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c4",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "January 1, 2005",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c5",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "December 31, 2005",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r1c6",
+        "row": "Cadence Design Systems, Inc.",
+        "column": "December 30, 2006",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "S & P 500",
+        "column": "December 29, 2001",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c2",
+        "row": "S & P 500",
+        "column": "December 28, 2002",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c3",
+        "row": "S & P 500",
+        "column": "January 3, 2004",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c4",
+        "row": "S & P 500",
+        "column": "January 1, 2005",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c5",
+        "row": "S & P 500",
+        "column": "December 31, 2005",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c6",
+        "row": "S & P 500",
+        "column": "December 30, 2006",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "NASDAQ Composite",
+        "column": "December 29, 2001",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c2",
+        "row": "NASDAQ Composite",
+        "column": "December 28, 2002",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c3",
+        "row": "NASDAQ Composite",
+        "column": "January 3, 2004",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c4",
+        "row": "NASDAQ Composite",
+        "column": "January 1, 2005",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c5",
+        "row": "NASDAQ Composite",
+        "column": "December 31, 2005",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c6",
+        "row": "NASDAQ Composite",
+        "column": "December 30, 2006",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "S & P Information Technology",
+        "column": "December 29, 2001",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c2",
+        "row": "S & P Information Technology",
+        "column": "December 28, 2002",
+        "columnIndex": 2,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c3",
+        "row": "S & P Information Technology",
+        "column": "January 3, 2004",
+        "columnIndex": 3,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c4",
+        "row": "S & P Information Technology",
+        "column": "January 1, 2005",
+        "columnIndex": 4,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c5",
+        "row": "S & P Information Technology",
+        "column": "December 31, 2005",
+        "columnIndex": 5,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c6",
+        "row": "S & P Information Technology",
+        "column": "December 30, 2006",
+        "columnIndex": 6,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 100,
+      "r1c2": 54.38,
+      "r1c3": 81.52,
+      "r1c4": 61.65,
+      "r1c5": 75.54,
+      "r1c6": 79.96,
+      "r2c1": 100,
+      "r2c2": 77.9,
+      "r2c3": 100.24,
+      "r2c4": 111.15,
+      "r2c5": 116.61,
+      "r2c6": 135.03,
+      "r3c1": 100,
+      "r3c2": 71.97,
+      "r3c3": 107.18,
+      "r3c4": 117.07,
+      "r3c5": 120.5,
+      "r3c6": 137.02,
+      "r4c1": 100,
+      "r4c2": 62.59,
+      "r4c3": 92.14,
+      "r4c4": 94.5,
+      "r4c5": 95.44,
+      "r4c6": 103.47
+    },
+    "source": "FinQA/CDNS/2006/page_30.pdf-4",
+    "originalTable": [
+      [
+        "",
+        "December 29, 2001",
+        "December 28, 2002",
+        "January 3, 2004",
+        "January 1, 2005",
+        "December 31, 2005",
+        "December 30, 2006"
+      ],
+      [
+        "Cadence Design Systems, Inc.",
+        "100.00",
+        "54.38",
+        "81.52",
+        "61.65",
+        "75.54",
+        "79.96"
+      ],
+      [
+        "S & P 500",
+        "100.00",
+        "77.90",
+        "100.24",
+        "111.15",
+        "116.61",
+        "135.03"
+      ],
+      [
+        "NASDAQ Composite",
+        "100.00",
+        "71.97",
+        "107.18",
+        "117.07",
+        "120.50",
+        "137.02"
+      ],
+      [
+        "S & P Information Technology",
+        "100.00",
+        "62.59",
+        "92.14",
+        "94.50",
+        "95.44",
+        "103.47"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 100,
+      "r1c2": 54.38,
+      "r1c3": 81.52,
+      "r1c4": 61.65,
+      "r1c5": 75.54,
+      "r1c6": 79.96,
+      "r2c1": 100,
+      "r2c2": 77.9,
+      "r2c3": 100.24,
+      "r2c4": 111.15,
+      "r2c5": 116.61,
+      "r2c6": 135.03,
+      "r3c1": 100,
+      "r3c2": 71.97,
+      "r3c3": 107.18,
+      "r3c4": 117.07,
+      "r3c5": 120.5,
+      "r3c6": 137.02,
+      "r4c1": 100,
+      "r4c2": 62.59,
+      "r4c3": 92.14,
+      "r4c4": 94.5,
+      "r4c5": 95.44,
+      "r4c6": 103.47
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "December 29, 2001",
+          "December 28, 2002",
+          "January 3, 2004",
+          "January 1, 2005",
+          "December 31, 2005",
+          "December 30, 2006"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "Cadence Design Systems, Inc.",
+          "{r1c1}",
+          "{r1c2}",
+          "{r1c3}",
+          "{r1c4}",
+          "{r1c5}",
+          "{r1c6}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "S & P 500",
+          "{r2c1}",
+          "{r2c2}",
+          "{r2c3}",
+          "{r2c4}",
+          "{r2c5}",
+          "{r2c6}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "NASDAQ Composite",
+          "{r3c1}",
+          "{r3c2}",
+          "{r3c3}",
+          "{r3c4}",
+          "{r3c5}",
+          "{r3c6}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "S & P Information Technology",
+          "{r4c1}",
+          "{r4c2}",
+          "{r4c3}",
+          "{r4c4}",
+          "{r4c5}",
+          "{r4c6}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "December 29, 2001",
+          "December 28, 2002",
+          "January 3, 2004",
+          "January 1, 2005",
+          "December 31, 2005",
+          "December 30, 2006"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 5,
+    "split": "test"
+  },
+  {
+    "id": "finqa-b8be2f580b75",
+    "sourceId": "ETR/2003/page_84.pdf-2",
+    "sourceFile": "ETR/2003/page_84.pdf",
+    "family": "finance",
+    "title": {
+      "zh": "公开财务表格数值问答",
+      "en": "Public financial-table question"
+    },
+    "task": {
+      "zh": "what amount of long-term debt due in the next 36 months as of december 31 , 2003 , in millions?",
+      "en": "what amount of long-term debt due in the next 36 months as of december 31 , 2003 , in millions?"
+    },
+    "question": "what amount of long-term debt due in the next 36 months as of december 31 , 2003 , in millions?",
+    "schema": [
+      {
+        "id": "r1c1",
+        "row": "2004",
+        "column": "(In Thousands)",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r2c1",
+        "row": "2005",
+        "column": "(In Thousands)",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r3c1",
+        "row": "2006",
+        "column": "(In Thousands)",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r4c1",
+        "row": "2007",
+        "column": "(In Thousands)",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      },
+      {
+        "id": "r5c1",
+        "row": "2008",
+        "column": "(In Thousands)",
+        "columnIndex": 1,
+        "unitHint": "",
+        "valueUnit": "source units"
+      }
+    ],
+    "facts": {
+      "r1c1": 503215,
+      "r2c1": 462420,
+      "r3c1": 75896,
+      "r4c1": 624539,
+      "r5c1": 941625
+    },
+    "source": "FinQA/ETR/2003/page_84.pdf-2",
+    "originalTable": [
+      [
+        "",
+        "(In Thousands)"
+      ],
+      [
+        "2004",
+        "$503,215"
+      ],
+      [
+        "2005",
+        "$462,420"
+      ],
+      [
+        "2006",
+        "$75,896"
+      ],
+      [
+        "2007",
+        "$624,539"
+      ],
+      [
+        "2008",
+        "$941,625"
+      ]
+    ],
+    "legacyFacts": {
+      "r1c1": 503215,
+      "r2c1": 462420,
+      "r3c1": 75896,
+      "r4c1": 624539,
+      "r5c1": 941625
+    },
+    "tableStructure": [
+      {
+        "sourceRow": 0,
+        "role": "header",
+        "cells": [
+          "",
+          "(In Thousands)"
+        ]
+      },
+      {
+        "sourceRow": 1,
+        "role": "data",
+        "cells": [
+          "2004",
+          "{r1c1}"
+        ]
+      },
+      {
+        "sourceRow": 2,
+        "role": "data",
+        "cells": [
+          "2005",
+          "{r2c1}"
+        ]
+      },
+      {
+        "sourceRow": 3,
+        "role": "data",
+        "cells": [
+          "2006",
+          "{r3c1}"
+        ]
+      },
+      {
+        "sourceRow": 4,
+        "role": "data",
+        "cells": [
+          "2007",
+          "{r4c1}"
+        ]
+      },
+      {
+        "sourceRow": 5,
+        "role": "data",
+        "cells": [
+          "2008",
+          "{r5c1}"
+        ]
+      }
+    ],
+    "headerRows": [
+      {
+        "sourceRow": 0,
+        "cells": [
+          "",
+          "(In Thousands)"
+        ]
+      }
+    ],
+    "classification": {
+      "headerRows": [
+        0
+      ],
+      "promotedNumericHeaders": []
+    },
+    "datasetSplit": "dev",
+    "sourceOperationCount": 3,
+    "split": "test"
+  }
+]
