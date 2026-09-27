@@ -9,4 +9,6 @@ for run in index['runs']:
     result=subprocess.run([sys.executable,'scripts/audit-native-v10.py',name,'--check'],check=True,capture_output=True)
     score=json.loads(result.stdout);print(json.dumps({'runId':name,'referenceStateMatches':score['stateMatches'],'attempts':score['attempted']}),flush=True)
 subprocess.run([sys.executable,'scripts/analyze-native-v10.py','--check'],check=True)
-print('All native development transport, state and descriptive-summary checks passed.')
+replay_env=dict(os.environ,TAU_PYTHON=sys.executable)
+subprocess.run(['node','scripts/replay-paired-v10.mjs','--check'],check=True,env=replay_env)
+print('All native development transport, state, descriptive-summary and paired-replay checks passed.')

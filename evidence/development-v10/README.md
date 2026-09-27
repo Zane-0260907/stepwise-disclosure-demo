@@ -4,6 +4,8 @@ This is a reproducible **development checkpoint**, not a new successful paper re
 
 The final matched probe obtains reference-database agreement on 5/6 full-context runs, 4/6 reversible-reference runs and 6/6 scoped-reference runs. The additional binding guards activate zero times. Those differences between sampled conversations therefore do **not** establish a causal advantage of the guards. Reversible references already hide the same six predefined tool-return fields. Neither method is automatic semantic minimization or a new placement algorithm.
 
+A subsequent fixed-trajectory intervention replays both reference groups with and without those checks. All 12 trajectories (six unique tasks, 107 actions) remain identical in raw business calls and final database state. This makes no new model calls. It establishes lack of a guard effect on these recorded trajectories, not equivalence on every possible input. See [the mechanism gate](../../docs/mechanism-gate.zh-CN.md) and `paired-replay.json`.
+
 All ten development batches are retained: 54 attempts over **six unique training tasks**, 952 actual provider calls and 4,485,819 tokens. Diagnostics, failures and superseded prompts are included; there is no held-out result. `analysis.json` separates the final matched settings from earlier debugging. Full-database agreement is not the official tau2 reward or an independently reviewed policy score.
 
 ## What is original and what is adapted
@@ -52,9 +54,12 @@ For one batch only:
 node scripts/verify-native-v10.mjs dev-v10-matched-scoped-02
 python scripts/audit-native-v10.py dev-v10-matched-scoped-02 --check
 python scripts/analyze-native-v10.py --check
+node scripts/replay-paired-v10.mjs --check
 ```
 
 Frozen evaluators are explicitly recorded as **post-run audit snapshots**. This development audit was not prospectively registered as a held-out experiment. The strict final-state comparison runs reference actions in a separate fresh database; the execution agent receives no reference actions.
+
+The paired replay uses frozen reference/confirmation modules and verifies the native bridge hash. Random reference names are matched bijectively. It holds the saved planner proposals and customer decisions fixed, checks that the original arm reproduces every saved action, and stops at the first divergent result. It does not ask a model to invent the subsequent counterfactual dialogue. The all-batch Python command includes this check and passes its Python interpreter to Node; the standalone Node command uses `TAU_PYTHON` or the virtual environment created above.
 
 ## New live calls with your own key
 
@@ -87,6 +92,7 @@ In production a local human would see the confirmation details. Here DeepSeek al
 | :-- | :-- |
 | `index.json` | Original source revision, archive digests and full batch inventory |
 | `analysis.json` | Descriptive metrics, per-case scores and measurement limits |
+| `paired-replay.json` | Post-hoc, fixed-trajectory guard ablation with per-action result/state hashes |
 | `dev-v10-*.zip` | Saved conversations, calls, states, provider records, frozen sources and audit snapshot |
 | `upstream-native.zip` | Offline native environment source/data bundle under MIT |
 | `LICENSE.tau2-bench` | Original upstream license |

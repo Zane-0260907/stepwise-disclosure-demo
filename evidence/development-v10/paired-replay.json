@@ -1,0 +1,3013 @@
+{
+  "kind": "post-hoc-fixed-trajectory-mechanism-ablation",
+  "intervention": "Replay each saved tokenized/scoped conversation in two fresh native databases, with and without purpose/freshness guards. Hold recorded planner proposals and local customer decisions fixed; alias opaque references bijectively. Stop at the first divergent outcome.",
+  "limits": "Only the observed prefixes are tested. This does not replay new user/model responses, estimate deployment prevalence, prove equivalence on all inputs, establish semantic privacy or count repeated trajectories as independent tasks.",
+  "inputs": {
+    "dev-v10-matched-tokenized-02": {
+      "protocolSha256": "24fbc0c9a54852d71831b5a3ba009bfb9784000318c28e557415e6f1747ff1b9",
+      "records": {
+        "retail-native-87": "8546fd5dce07e80a9f143aa503be8a5cfbfe6387f1db572ac182effc89d1b535",
+        "retail-native-83": "9650207e34b333d579a7468136f331f15ea5de0e96de2be3940ac85d6b50d8e2",
+        "retail-native-75": "85026c1029c42d0ccac4f7ef46a2cff4e8f41887ea21ae5797ea1bfe85a02ed9",
+        "airline-native-42": "2428e3134e794152e4400068fc3dc33230c7b896efd01cadf6a1fc59b312bbbd",
+        "airline-native-11": "1e0947fb6cf341cc802bf6d3bdd85c937a8bd2111b7a1f33c6a84d4c30b482e1",
+        "airline-native-23": "cc925dbfc2586dfbdc5d2e36f0d0e5a397e931ead6389f8406a1945132642b83"
+      }
+    },
+    "dev-v10-matched-scoped-02": {
+      "protocolSha256": "8bd5383f3ccfcbd43e5bda801e05a7494c4559ad0835e0c227ae8476f2ad449a",
+      "records": {
+        "retail-native-87": "9c39c0ed7e0fb6d11c9bd0580a7f77f7c6439d37ae2166a24aed7e31c9d30510",
+        "retail-native-83": "4bd5d46a285520f9e93fb91817350c7eca3defdd035ed0c0abad37159f0f8beb",
+        "retail-native-75": "cbec191d0e1fe0417437c70b1011e989e976ebb01ffb9b5bb3da59989dd67378",
+        "airline-native-42": "4f85551e6a38aa02b2d65bae519443d631283186bd2cd5bfd624d8c4500c07ea",
+        "airline-native-11": "0f3be4e37876d24ddb3ad5ea8e3464d4776ad0a16c34eaee944cad17ccf03f92",
+        "airline-native-23": "8c37c44380b0e2c79252d9e28d26eddba50555b117e432dcbfead4df191f685f"
+      }
+    }
+  },
+  "totals": {
+    "recordedTrajectories": 12,
+    "uniqueTasks": 6,
+    "actionsCompared": 107,
+    "equivalentTrajectories": 12,
+    "divergentTrajectories": 0,
+    "newModelCalls": 0
+  },
+  "rows": [
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "caseId": "retail-native-87",
+      "originalMethod": "native-tokenized-local-confirmation",
+      "actionsInSavedTrace": 11,
+      "actionsCompared": 11,
+      "samePrefixActions": 11,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b",
+        "scoped": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "find_user_id_by_email",
+          "toolCallId": "call_00_6pAJYjDNTNaXG44ZITWl7154",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "57ba775bda2bb852db2b0ab452377865826f7b48e5dbba393f312e45fc775b96",
+              "resultSha256": "ad3c8ff9bd53752bee4792c8806d439edbcda3f9ea03cf6e7e75a5bcf76fc86e",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "57ba775bda2bb852db2b0ab452377865826f7b48e5dbba393f312e45fc775b96",
+              "resultSha256": "ad3c8ff9bd53752bee4792c8806d439edbcda3f9ea03cf6e7e75a5bcf76fc86e",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_user_details",
+          "toolCallId": "call_00_9DszLmtS7ML5eQX6cCp01145",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "09a56a925432c94cae74ebac3071f29f31d2d34cbab4d98c128af64b85182e5c",
+              "resultSha256": "5bea1bb410b7b11c4213a318db276e7fd3a9031ebdab4c81ab80b4b35aa6e0ff",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "09a56a925432c94cae74ebac3071f29f31d2d34cbab4d98c128af64b85182e5c",
+              "resultSha256": "5bea1bb410b7b11c4213a318db276e7fd3a9031ebdab4c81ab80b4b35aa6e0ff",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_order_details",
+          "toolCallId": "call_00_Wv76T0K2IC8p5FAYVZfk6313",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9d341e5063dd7ed042f9457a5d1153076bb34b105718f0aae916c609906cd703",
+              "resultSha256": "861cf8abb2fa698098219b4f0c97203fcdc3a31eb019dd7e0746f09642b3e017",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9d341e5063dd7ed042f9457a5d1153076bb34b105718f0aae916c609906cd703",
+              "resultSha256": "861cf8abb2fa698098219b4f0c97203fcdc3a31eb019dd7e0746f09642b3e017",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_order_details",
+          "toolCallId": "call_01_PqjVuFJwFtzI2aLiHKyl7974",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "3e7663c9effed4fb68e208fd5eb95cdd2012435c0b7501e96a50059f499eb6c1",
+              "resultSha256": "9f399054c67550dd65981ad6202a9dfbf7ee8e05b072684d1286da43d9ede2df",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "3e7663c9effed4fb68e208fd5eb95cdd2012435c0b7501e96a50059f499eb6c1",
+              "resultSha256": "9f399054c67550dd65981ad6202a9dfbf7ee8e05b072684d1286da43d9ede2df",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_order_details",
+          "toolCallId": "call_02_R1ZSd25gEbVezTEpErmW3437",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ab454429f2d6968e2342eef844a0d6ccd6ed7a6938062ecec3e23c6c08faadfe",
+              "resultSha256": "3b8f282f821f3f42ed2612244edf48ecb4c4addec051f0fc0f15209aa7522048",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ab454429f2d6968e2342eef844a0d6ccd6ed7a6938062ecec3e23c6c08faadfe",
+              "resultSha256": "3b8f282f821f3f42ed2612244edf48ecb4c4addec051f0fc0f15209aa7522048",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_order_details",
+          "toolCallId": "call_03_K10vC1cIT8F7tPTOpI0A2031",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca147d745bae4604b602006c9af2864e6fc4d34da766a49dfc2a20748bb9efab",
+              "resultSha256": "903ccd860d6eb34ca50bdbb979e5ed47edf2276ecacc3667cdaf933abca604a9",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca147d745bae4604b602006c9af2864e6fc4d34da766a49dfc2a20748bb9efab",
+              "resultSha256": "903ccd860d6eb34ca50bdbb979e5ed47edf2276ecacc3667cdaf933abca604a9",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "get_order_details",
+          "toolCallId": "call_04_XUx6AAWyVO5514ZJEND56038",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "704fb0fcc8cd3bd50e76f33066a6fbe1ef5c1e5f6db6f0add360c2cee460ef46",
+              "resultSha256": "7819db6bfadbadfe725b8b5e6ac03b912b38ec8b2f230aa77cc9f0a4b5b9ed5c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "704fb0fcc8cd3bd50e76f33066a6fbe1ef5c1e5f6db6f0add360c2cee460ef46",
+              "resultSha256": "7819db6bfadbadfe725b8b5e6ac03b912b38ec8b2f230aa77cc9f0a4b5b9ed5c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "modify_pending_order_address",
+          "toolCallId": "call_00_dknwidcPfDkyvEeh9nc47502",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "5a21c2739b635a0c34c2c6bd2f7ea16a71203000016be83fc420504df5ef3c6a",
+              "resultSha256": "975411c17f8dedd05e87cb7ab5d1fb2739139601ef414dcba44d400f4ee4f89f",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "5a21c2739b635a0c34c2c6bd2f7ea16a71203000016be83fc420504df5ef3c6a",
+              "resultSha256": "975411c17f8dedd05e87cb7ab5d1fb2739139601ef414dcba44d400f4ee4f89f",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 8,
+          "name": "modify_pending_order_address",
+          "toolCallId": "call_00_yYS33Yp10Dh3gJ9mta504112",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4c78cbc4d8c19e16e2c68d4bb5f4bdd79595d24687a55e5235f1a0f7f1ae787a",
+              "resultSha256": "e5e84c66a168c98550122e2da32f5f112e2339ba8fca3e98bb1f97077d67badf",
+              "dbBefore": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "dbAfter": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4c78cbc4d8c19e16e2c68d4bb5f4bdd79595d24687a55e5235f1a0f7f1ae787a",
+              "resultSha256": "e5e84c66a168c98550122e2da32f5f112e2339ba8fca3e98bb1f97077d67badf",
+              "dbBefore": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "dbAfter": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 9,
+          "name": "modify_pending_order_address",
+          "toolCallId": "call_00_OhaJSd0fp3mWEKGqIF4W1574",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "158ad708ac3bd30596ce58b22590bbc67a53a350cd783204f8e1234c77a3c656",
+              "resultSha256": "2174f2db9e6b63a3d808c9d8392e9b6f9c6ab36bc8eda27e496fca2b08b01fa7",
+              "dbBefore": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "dbAfter": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "158ad708ac3bd30596ce58b22590bbc67a53a350cd783204f8e1234c77a3c656",
+              "resultSha256": "2174f2db9e6b63a3d808c9d8392e9b6f9c6ab36bc8eda27e496fca2b08b01fa7",
+              "dbBefore": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "dbAfter": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 10,
+          "name": "modify_user_address",
+          "toolCallId": "call_00_haS21bftc6qvKAOhdeEt4873",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c423b361df0424064fd79441e4e6c699a2f155800d526b79f9abe83f38931035",
+              "resultSha256": "f9435ac3008dbb502b1456a0a0f0cef5bef52064126814c94bcc60b3c56694a3",
+              "dbBefore": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "dbAfter": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c423b361df0424064fd79441e4e6c699a2f155800d526b79f9abe83f38931035",
+              "resultSha256": "f9435ac3008dbb502b1456a0a0f0cef5bef52064126814c94bcc60b3c56694a3",
+              "dbBefore": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "dbAfter": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "caseId": "retail-native-83",
+      "originalMethod": "native-tokenized-local-confirmation",
+      "actionsInSavedTrace": 7,
+      "actionsCompared": 7,
+      "samePrefixActions": 7,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+        "scoped": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "find_user_id_by_name_zip",
+          "toolCallId": "call_00_obE3ZR8kmFChBxwlMTQA8266",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9688b72849c0948550ec5ffa2ff633e0ca7767be00688e9c15951df4032a9872",
+              "resultSha256": "8124990941ed9c1d1cad6023a40ac77de5038ceaaf03c19cfdb19fb9c39da55a",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9688b72849c0948550ec5ffa2ff633e0ca7767be00688e9c15951df4032a9872",
+              "resultSha256": "8124990941ed9c1d1cad6023a40ac77de5038ceaaf03c19cfdb19fb9c39da55a",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_user_details",
+          "toolCallId": "call_00_1J1ZHlWDMe2eEgM9a0F27023",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2f22b44fbca24414ee9ff9887c004cd82fd927ad20d35b1085b43d851564dc3f",
+              "resultSha256": "5a4af4d100868186194159e4cdc9318644f9cc905e10ffca97e8209e8bbdef34",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2f22b44fbca24414ee9ff9887c004cd82fd927ad20d35b1085b43d851564dc3f",
+              "resultSha256": "5a4af4d100868186194159e4cdc9318644f9cc905e10ffca97e8209e8bbdef34",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_order_details",
+          "toolCallId": "call_00_CAFa5LD1v1rpvrGTnAlQ5954",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "960a19f6fbbf12ecdabeed88b18ee0d045125d4dd85933c2e2f9f1027a6f5b08",
+              "resultSha256": "f7e4b16ec36ceb86b5d3e476163c42c5b4c69acf358bfdeb9c4889368cb66ff2",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "960a19f6fbbf12ecdabeed88b18ee0d045125d4dd85933c2e2f9f1027a6f5b08",
+              "resultSha256": "f7e4b16ec36ceb86b5d3e476163c42c5b4c69acf358bfdeb9c4889368cb66ff2",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_order_details",
+          "toolCallId": "call_01_qvY9yV61D7LsYZPTSxbC3969",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b64d38e0444572d692bd6cf17eb614e2674f8435b06cb224cce1922e05047eb0",
+              "resultSha256": "0108022505d29d6c9ee20200630c52153fc9727f92cfeb594d95729357681984",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b64d38e0444572d692bd6cf17eb614e2674f8435b06cb224cce1922e05047eb0",
+              "resultSha256": "0108022505d29d6c9ee20200630c52153fc9727f92cfeb594d95729357681984",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_order_details",
+          "toolCallId": "call_02_gRHt5COgmZjgLS3yzvRT7173",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "06a08fb53edc547fcb88fc3c56e4d73f2638d11b688ed7299d1263f4ffce4566",
+              "resultSha256": "6a88865d8de2e7f59002f809e8ead3b633363b34cd44b1ad164dcee7881c2535",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "06a08fb53edc547fcb88fc3c56e4d73f2638d11b688ed7299d1263f4ffce4566",
+              "resultSha256": "6a88865d8de2e7f59002f809e8ead3b633363b34cd44b1ad164dcee7881c2535",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_order_details",
+          "toolCallId": "call_03_754QDwlIMZQqSMLpsdiQ6073",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "738ce696a7caffdcd228f7811d968297fda2e2f14ecf7f5e450395960616c64a",
+              "resultSha256": "8c9c02e16d7e09c4121584e363176fde18718fbc32972a72468e40532a4b79a6",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "738ce696a7caffdcd228f7811d968297fda2e2f14ecf7f5e450395960616c64a",
+              "resultSha256": "8c9c02e16d7e09c4121584e363176fde18718fbc32972a72468e40532a4b79a6",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "return_delivered_order_items",
+          "toolCallId": "call_00_CG4IMxltygBe3AbOw0tc7014",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "dc696d91e6256ce370875a9de21b033c62e7a1f6893994b4218cca3ea8769c1c",
+              "resultSha256": "94222401e6467b8c0d3efc13002fa7a5440565478e0d9218f570f2ba01f99722",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "dc696d91e6256ce370875a9de21b033c62e7a1f6893994b4218cca3ea8769c1c",
+              "resultSha256": "94222401e6467b8c0d3efc13002fa7a5440565478e0d9218f570f2ba01f99722",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "caseId": "retail-native-75",
+      "originalMethod": "native-tokenized-local-confirmation",
+      "actionsInSavedTrace": 5,
+      "actionsCompared": 5,
+      "samePrefixActions": 5,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011",
+        "scoped": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "find_user_id_by_email",
+          "toolCallId": "call_00_slGELbUdd8oJMfuNnVEk7876",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e29388df78c9629aaed2db8d9731bd46d2ee89fca4d4db9f72d546ceea0b197d",
+              "resultSha256": "f32bd8b1034cff2a90a687d8a95f996bf84f3c5810c9ae55aeeffbd3abb7534c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e29388df78c9629aaed2db8d9731bd46d2ee89fca4d4db9f72d546ceea0b197d",
+              "resultSha256": "f32bd8b1034cff2a90a687d8a95f996bf84f3c5810c9ae55aeeffbd3abb7534c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_order_details",
+          "toolCallId": "call_00_NAD3Tg7xNYBJj1A7ssWh5960",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "be3dbe846a791c23edb33b955d1639489df2d8b44c8952c01a13b0c702b0d0ef",
+              "resultSha256": "28ef871509341268260c1ef2c1248918bc1cb388be6646f777e7859cffe3c656",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "be3dbe846a791c23edb33b955d1639489df2d8b44c8952c01a13b0c702b0d0ef",
+              "resultSha256": "28ef871509341268260c1ef2c1248918bc1cb388be6646f777e7859cffe3c656",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_product_details",
+          "toolCallId": "call_00_PQ83mvgkfo4yvauccAKA2007",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4eadf75a2e8c82c1af730f62d68adf9f98c6748e45b63d65027409188bc6c6e4",
+              "resultSha256": "7cac4fc332fc97927f8298857bc38bc6aac78283799e7cce90dac8097e03697d",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4eadf75a2e8c82c1af730f62d68adf9f98c6748e45b63d65027409188bc6c6e4",
+              "resultSha256": "7cac4fc332fc97927f8298857bc38bc6aac78283799e7cce90dac8097e03697d",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_user_details",
+          "toolCallId": "call_00_R7RemZyZbXR9H9BhjNDU0818",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "607af436c516fccf527ac25f55b3e2837ddc435bbd0b50c8ae7fd0d0718dca02",
+              "resultSha256": "cb781d766f6be273f9e7e409e0e9e8ebdd71e636bf5113959d9f7cf98d29aee0",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "607af436c516fccf527ac25f55b3e2837ddc435bbd0b50c8ae7fd0d0718dca02",
+              "resultSha256": "cb781d766f6be273f9e7e409e0e9e8ebdd71e636bf5113959d9f7cf98d29aee0",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "exchange_delivered_order_items",
+          "toolCallId": "call_00_Srl284XmZBnmU6QyDgTs5085",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b891b7fa888806f55af97a655dfde35e937afbb8123692ef69590d0995cba4b1",
+              "resultSha256": "85ac6e3ce02a6214e910bbfa2010f29527b27f3228ee0ca5a4f29f07e9f7e774",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b891b7fa888806f55af97a655dfde35e937afbb8123692ef69590d0995cba4b1",
+              "resultSha256": "85ac6e3ce02a6214e910bbfa2010f29527b27f3228ee0ca5a4f29f07e9f7e774",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "caseId": "airline-native-42",
+      "originalMethod": "native-tokenized-local-confirmation",
+      "actionsInSavedTrace": 18,
+      "actionsCompared": 18,
+      "samePrefixActions": 18,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a",
+        "scoped": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "get_user_details",
+          "toolCallId": "call_00_BXlPMtHBD4OhTof5sHWr6560",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "8140972b51fea809e87c7687ffce6d6d3415f57f3daedf5ccd41f2f0ba8d0165",
+              "resultSha256": "4771f42cf6cc338cd2d3d81b05d2172106b0f5d5923175b4f4653769d638e7d4",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "8140972b51fea809e87c7687ffce6d6d3415f57f3daedf5ccd41f2f0ba8d0165",
+              "resultSha256": "4771f42cf6cc338cd2d3d81b05d2172106b0f5d5923175b4f4653769d638e7d4",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_reservation_details",
+          "toolCallId": "call_00_Bch5IjoGGo8vZq1xYhvG3538",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "a103d444f015c96fc851ea096b1e6644840413f5b87a5e706e93c5ed85eea427",
+              "resultSha256": "70733a8c2f1cbd03bb6e2b3ec800a64cbabb47a0e09da887a9ed82fc6660db7b",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "a103d444f015c96fc851ea096b1e6644840413f5b87a5e706e93c5ed85eea427",
+              "resultSha256": "70733a8c2f1cbd03bb6e2b3ec800a64cbabb47a0e09da887a9ed82fc6660db7b",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_reservation_details",
+          "toolCallId": "call_01_cCBRSCncFHTGbzK9xGZl7112",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "63feb9ac146405555d2f56f21839ddbdefcf2a3eebbafad22c6a1de127abb2b8",
+              "resultSha256": "9d1ebbe8ce087c1de9f37407a1656f00d454af23be07e424f0285c0e460847f9",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "63feb9ac146405555d2f56f21839ddbdefcf2a3eebbafad22c6a1de127abb2b8",
+              "resultSha256": "9d1ebbe8ce087c1de9f37407a1656f00d454af23be07e424f0285c0e460847f9",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_reservation_details",
+          "toolCallId": "call_02_nmfyAtE2e2DHSng3SeDx6699",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "36e9f0544d1329742160fb62193f0e7a208be7cbfc603a43bd480a4436fc2c66",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "36e9f0544d1329742160fb62193f0e7a208be7cbfc603a43bd480a4436fc2c66",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_reservation_details",
+          "toolCallId": "call_03_tQsbm1RkEL1IUFOgpsYS6723",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "19117c3af19d68518b50d64f234bbc862288007934f069797916d9c00efece5d",
+              "resultSha256": "c18cfce5ced7654d38fb687f377241e89c0502015ec52fffde2a454525ecd584",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "19117c3af19d68518b50d64f234bbc862288007934f069797916d9c00efece5d",
+              "resultSha256": "c18cfce5ced7654d38fb687f377241e89c0502015ec52fffde2a454525ecd584",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_reservation_details",
+          "toolCallId": "call_04_rVF63mAWyG7SDtoxMZm41802",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "02cc458ac346738006b4c752e9657e901bb037a1b91d663da10940636b549b80",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "02cc458ac346738006b4c752e9657e901bb037a1b91d663da10940636b549b80",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "get_reservation_details",
+          "toolCallId": "call_05_10h5LUAE6jBrZHJ8sH4T4631",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "190cd953de5826dd1d10cd73a7eec6b8e737e6e00c59e652e3922e8176af457b",
+              "resultSha256": "afbd9d5dd685a10d82410394df11f25871b523cf7b9a5d50ea384808989ee0c2",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "190cd953de5826dd1d10cd73a7eec6b8e737e6e00c59e652e3922e8176af457b",
+              "resultSha256": "afbd9d5dd685a10d82410394df11f25871b523cf7b9a5d50ea384808989ee0c2",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "get_reservation_details",
+          "toolCallId": "call_06_Bzbe8mLr5rA8YbBQR9Vg3406",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e2c100c7470c95840522b22c76f381ef15924a717f5e14e6d1b8061486954dff",
+              "resultSha256": "d494fa4b2935dc3f835275cbc415e6f56b02540c393315d5644f75bcbb1ae664",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e2c100c7470c95840522b22c76f381ef15924a717f5e14e6d1b8061486954dff",
+              "resultSha256": "d494fa4b2935dc3f835275cbc415e6f56b02540c393315d5644f75bcbb1ae664",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 8,
+          "name": "get_flight_status",
+          "toolCallId": "call_00_RhHFdmzGxVGyJ8QqWXRU1747",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "5e87b5cd36862d9d9695122fb58858fea262a184371c3688b970c4f5fa024366",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "5e87b5cd36862d9d9695122fb58858fea262a184371c3688b970c4f5fa024366",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 9,
+          "name": "get_flight_status",
+          "toolCallId": "call_01_LT1pmNgQHjl9SIuEYxtC6699",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "d9e3e1b6da543e1c9afc7996c92d8cb76ce53f626eb54614a81d97a71b752646",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "d9e3e1b6da543e1c9afc7996c92d8cb76ce53f626eb54614a81d97a71b752646",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 10,
+          "name": "get_flight_status",
+          "toolCallId": "call_02_EQcKpN4nrgd6pogONkNs9801",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "87fa3048b49695f0383e7b66cb831239df3a3f65c50486bfdc874e7d6a72fdba",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "87fa3048b49695f0383e7b66cb831239df3a3f65c50486bfdc874e7d6a72fdba",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 11,
+          "name": "get_flight_status",
+          "toolCallId": "call_03_TfXOb8xak7QW4CQJlREw5302",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "33e5925bf4242f419fcc6cfa503b45729fbef7d1392a78cbcf56becd15dff166",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "33e5925bf4242f419fcc6cfa503b45729fbef7d1392a78cbcf56becd15dff166",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 12,
+          "name": "get_flight_status",
+          "toolCallId": "call_04_d3vljlrFvAgvH5WVMSmq3479",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9fbce27e6d75e5288d29450caa19adf39addf1d4f5705122ef08c10673e5feb0",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9fbce27e6d75e5288d29450caa19adf39addf1d4f5705122ef08c10673e5feb0",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 13,
+          "name": "get_flight_status",
+          "toolCallId": "call_05_645RXTCpodt0cBMnT6in2137",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "6442edfaa78c1a0251417fde8a849468ee54015ff02a13b0db7515027fff0ec2",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "6442edfaa78c1a0251417fde8a849468ee54015ff02a13b0db7515027fff0ec2",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 14,
+          "name": "get_flight_status",
+          "toolCallId": "call_06_HCQhCPnCrWVzWDT22oNi4620",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "21f950b3ec626e2b1ac83053d947c0dae79f6dc84ea99f7d8b3dbc2558441881",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "21f950b3ec626e2b1ac83053d947c0dae79f6dc84ea99f7d8b3dbc2558441881",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 15,
+          "name": "get_flight_status",
+          "toolCallId": "call_07_a1rT6W56OJmxOxIgfFTn6254",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "920ebf8ca4d5e08e43dedd5df61cec9f7094c6a7d49484860dd0afa19c7eb1d5",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "920ebf8ca4d5e08e43dedd5df61cec9f7094c6a7d49484860dd0afa19c7eb1d5",
+              "resultSha256": "8b7092cc4b053d88fdfb7df09c11c9242c36aba5d07e422786913868eda34bfc",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 16,
+          "name": "cancel_reservation",
+          "toolCallId": "call_00_dYPSBNSBDoR6BMgsbvkt8120",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "5436e34fa147f4e9cfa0f46a447bc5fb312d8ea5576acbf5c0781663a406cd01",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "5436e34fa147f4e9cfa0f46a447bc5fb312d8ea5576acbf5c0781663a406cd01",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 17,
+          "name": "cancel_reservation",
+          "toolCallId": "call_00_UhxAW64QwluSIxCTMatb3337",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "7369fd42aaae18898827ab752122e9b82fbc122ab185dbd7c53954a7382ebce0",
+              "dbBefore": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "dbAfter": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "7369fd42aaae18898827ab752122e9b82fbc122ab185dbd7c53954a7382ebce0",
+              "dbBefore": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "dbAfter": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "caseId": "airline-native-11",
+      "originalMethod": "native-tokenized-local-confirmation",
+      "actionsInSavedTrace": 5,
+      "actionsCompared": 5,
+      "samePrefixActions": 5,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "18bdc6dc3a30f4b2a504481663505be0fc2838ed7b1fd31efda5e025c616dae2",
+        "scoped": "18bdc6dc3a30f4b2a504481663505be0fc2838ed7b1fd31efda5e025c616dae2"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "get_user_details",
+          "toolCallId": "call_00_rwy0mTCmDFC7inCeGGkY9767",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b4392f436128e47819ef733e2b81c6930d05a07618814fb5e9074dea2883f221",
+              "resultSha256": "8c43e013c28b7e467bbe164a8c498acde10c30e7ccec506657960723452c7fda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b4392f436128e47819ef733e2b81c6930d05a07618814fb5e9074dea2883f221",
+              "resultSha256": "8c43e013c28b7e467bbe164a8c498acde10c30e7ccec506657960723452c7fda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_reservation_details",
+          "toolCallId": "call_00_8SoCGiFimVEh0Ctv7EXy7241",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca204bd2e829e3f775720a636140dfd3fabafae67fc6477ef2f8a5de2b656dba",
+              "resultSha256": "7918daa241726c119c9f3df0e8df5606d45978a04b4f77251d4766cd954c71f0",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca204bd2e829e3f775720a636140dfd3fabafae67fc6477ef2f8a5de2b656dba",
+              "resultSha256": "7918daa241726c119c9f3df0e8df5606d45978a04b4f77251d4766cd954c71f0",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_reservation_details",
+          "toolCallId": "call_01_N2UkCTWQa3N1fo4vntYn2610",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "31a7d3094a19b9f431f2a4e39b3464c0b674afbad36164b1565f79cb8158610a",
+              "resultSha256": "7f457a7d988f1684ef881f2e0829881cde7103d6783f52bb7da3b8d2872a2bda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "31a7d3094a19b9f431f2a4e39b3464c0b674afbad36164b1565f79cb8158610a",
+              "resultSha256": "7f457a7d988f1684ef881f2e0829881cde7103d6783f52bb7da3b8d2872a2bda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_reservation_details",
+          "toolCallId": "call_02_8tF5UlZpOvmIlU8doqz75197",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2fb2e70e3f3bd571456e25843d0a760c4c128ea1ad29b3dd8112e0e39576a5bc",
+              "resultSha256": "54c118b8c70cd03559a842c55cc27ef66bc6ede3afd8f3bc6b36d4bb0f936adb",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2fb2e70e3f3bd571456e25843d0a760c4c128ea1ad29b3dd8112e0e39576a5bc",
+              "resultSha256": "54c118b8c70cd03559a842c55cc27ef66bc6ede3afd8f3bc6b36d4bb0f936adb",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "cancel_reservation",
+          "toolCallId": "call_00_0ig9vKmoa2K2uFbtkOXx3931",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2fb2e70e3f3bd571456e25843d0a760c4c128ea1ad29b3dd8112e0e39576a5bc",
+              "resultSha256": "9bb708dc573e6b475fcef2d71950ca0d6dce2dfb788d1c38f65d80c90ddc4866",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "18bdc6dc3a30f4b2a504481663505be0fc2838ed7b1fd31efda5e025c616dae2",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2fb2e70e3f3bd571456e25843d0a760c4c128ea1ad29b3dd8112e0e39576a5bc",
+              "resultSha256": "9bb708dc573e6b475fcef2d71950ca0d6dce2dfb788d1c38f65d80c90ddc4866",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "18bdc6dc3a30f4b2a504481663505be0fc2838ed7b1fd31efda5e025c616dae2",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "caseId": "airline-native-23",
+      "originalMethod": "native-tokenized-local-confirmation",
+      "actionsInSavedTrace": 9,
+      "actionsCompared": 9,
+      "samePrefixActions": 9,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "2e88c2201194d27489ad97de902c50b7f4828f8b42bcd2f9bad4b1f4e3837592",
+        "scoped": "2e88c2201194d27489ad97de902c50b7f4828f8b42bcd2f9bad4b1f4e3837592"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "get_user_details",
+          "toolCallId": "call_00_oizFjhna0N2EPzujCpKi4825",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "cbe9ce3c93516a5fb0916bdcc782695fab0c9d850f7d046667684a008e677b40",
+              "resultSha256": "e5ef5bd8c1d6c04e48686cffe1df64c4e8070abbeb20a5c3839d5af056644bd5",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "cbe9ce3c93516a5fb0916bdcc782695fab0c9d850f7d046667684a008e677b40",
+              "resultSha256": "e5ef5bd8c1d6c04e48686cffe1df64c4e8070abbeb20a5c3839d5af056644bd5",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_reservation_details",
+          "toolCallId": "call_00_iqBB04xgjGr1W6CL42EV5974",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ae0a4df72ec02bf133f6db47a20a88b712683758b9a93442d00a48764c653a17",
+              "resultSha256": "a4fbcbf66367c3f75f7a559bdd77a6bec52c4e9820337db71bbf4dc6554de200",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ae0a4df72ec02bf133f6db47a20a88b712683758b9a93442d00a48764c653a17",
+              "resultSha256": "a4fbcbf66367c3f75f7a559bdd77a6bec52c4e9820337db71bbf4dc6554de200",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "search_direct_flight",
+          "toolCallId": "call_00_YJ24GZpKsgoQeNPXP4tW8679",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4e7405d7552646fccba3470fc83357b1a7578c32d6ac60aba6acd02601b9cbd9",
+              "resultSha256": "d109645c6152eab456a043c1020c1403625317a80f68cfdd977f8821e3c4432a",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4e7405d7552646fccba3470fc83357b1a7578c32d6ac60aba6acd02601b9cbd9",
+              "resultSha256": "d109645c6152eab456a043c1020c1403625317a80f68cfdd977f8821e3c4432a",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "search_onestop_flight",
+          "toolCallId": "call_01_2ZBAuauSPuhU6Io4cyBm4372",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4e7405d7552646fccba3470fc83357b1a7578c32d6ac60aba6acd02601b9cbd9",
+              "resultSha256": "304b72345053780fb47dcfd6990823dcaf7c0f2c79ac9974b5aca5ef4af790d6",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4e7405d7552646fccba3470fc83357b1a7578c32d6ac60aba6acd02601b9cbd9",
+              "resultSha256": "304b72345053780fb47dcfd6990823dcaf7c0f2c79ac9974b5aca5ef4af790d6",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "search_direct_flight",
+          "toolCallId": "call_02_pcbQQt86oA9LvqNbPTU81991",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "search_onestop_flight",
+          "toolCallId": "call_03_MKUvPihik1jde6JeiZCd6720",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "c3313c7c11cb3ef11706ea4a47c6ebad4f3edc80bd95da10d8e97e3527bbd165",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "c3313c7c11cb3ef11706ea4a47c6ebad4f3edc80bd95da10d8e97e3527bbd165",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "book_reservation",
+          "toolCallId": "call_00_7ynpFgEWBtJbiZoQizSm0049",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c44000e3538f53674eb048fc20400371f96d0067d9720bc7e65aa2a5020ad907",
+              "resultSha256": "e1a18662faf15f1563f955d463a353914d1fe4cd5b64b4b9688645b59e86f24d",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "798b2854882b2c6704c436b756de5d4de8d078e19b50bf624ba5e05856d848fc",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c44000e3538f53674eb048fc20400371f96d0067d9720bc7e65aa2a5020ad907",
+              "resultSha256": "e1a18662faf15f1563f955d463a353914d1fe4cd5b64b4b9688645b59e86f24d",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "798b2854882b2c6704c436b756de5d4de8d078e19b50bf624ba5e05856d848fc",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "book_reservation",
+          "toolCallId": "call_00_bVZdG9UVjtfVwo5h3iAZ1070",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "51e92e0c08cca945bc6ff7a2991486201b10920de87bc41ed4c21a13a01c48af",
+              "resultSha256": "ee1d918ed2c86e6a0c67bef45dede6e44a58b763208a0916a65e45d8c4352a43",
+              "dbBefore": "798b2854882b2c6704c436b756de5d4de8d078e19b50bf624ba5e05856d848fc",
+              "dbAfter": "6b09467fe97295c0a404081eb82dfd20b4ab31132e3cb8fb458a4c75ad0f27b1",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "51e92e0c08cca945bc6ff7a2991486201b10920de87bc41ed4c21a13a01c48af",
+              "resultSha256": "ee1d918ed2c86e6a0c67bef45dede6e44a58b763208a0916a65e45d8c4352a43",
+              "dbBefore": "798b2854882b2c6704c436b756de5d4de8d078e19b50bf624ba5e05856d848fc",
+              "dbAfter": "6b09467fe97295c0a404081eb82dfd20b4ab31132e3cb8fb458a4c75ad0f27b1",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 8,
+          "name": "book_reservation",
+          "toolCallId": "call_00_ZUMEe0Stvw8GdVGLnCsE8686",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4cf3901c8155d54e7c1b0b73e6624cef6f1201bd212511a8129d04144b6b8f62",
+              "resultSha256": "ddb51e8245d0abcfb4dca7031ec5d875365ef0995d30d725ba5830c2ef1c850f",
+              "dbBefore": "6b09467fe97295c0a404081eb82dfd20b4ab31132e3cb8fb458a4c75ad0f27b1",
+              "dbAfter": "2e88c2201194d27489ad97de902c50b7f4828f8b42bcd2f9bad4b1f4e3837592",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4cf3901c8155d54e7c1b0b73e6624cef6f1201bd212511a8129d04144b6b8f62",
+              "resultSha256": "ddb51e8245d0abcfb4dca7031ec5d875365ef0995d30d725ba5830c2ef1c850f",
+              "dbBefore": "6b09467fe97295c0a404081eb82dfd20b4ab31132e3cb8fb458a4c75ad0f27b1",
+              "dbAfter": "2e88c2201194d27489ad97de902c50b7f4828f8b42bcd2f9bad4b1f4e3837592",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "caseId": "retail-native-87",
+      "originalMethod": "native-scoped-local-confirmation",
+      "actionsInSavedTrace": 11,
+      "actionsCompared": 11,
+      "samePrefixActions": 11,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b",
+        "scoped": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "find_user_id_by_email",
+          "toolCallId": "call_00_sWG9W1FBLJR2OAXkekev7377",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "57ba775bda2bb852db2b0ab452377865826f7b48e5dbba393f312e45fc775b96",
+              "resultSha256": "ad3c8ff9bd53752bee4792c8806d439edbcda3f9ea03cf6e7e75a5bcf76fc86e",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "57ba775bda2bb852db2b0ab452377865826f7b48e5dbba393f312e45fc775b96",
+              "resultSha256": "ad3c8ff9bd53752bee4792c8806d439edbcda3f9ea03cf6e7e75a5bcf76fc86e",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_user_details",
+          "toolCallId": "call_00_4bsH3PZDsFamnJusu1k03504",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "09a56a925432c94cae74ebac3071f29f31d2d34cbab4d98c128af64b85182e5c",
+              "resultSha256": "5bea1bb410b7b11c4213a318db276e7fd3a9031ebdab4c81ab80b4b35aa6e0ff",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "09a56a925432c94cae74ebac3071f29f31d2d34cbab4d98c128af64b85182e5c",
+              "resultSha256": "5bea1bb410b7b11c4213a318db276e7fd3a9031ebdab4c81ab80b4b35aa6e0ff",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_order_details",
+          "toolCallId": "call_00_hwcnBFHYw9AF75tzp2jR7466",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9d341e5063dd7ed042f9457a5d1153076bb34b105718f0aae916c609906cd703",
+              "resultSha256": "861cf8abb2fa698098219b4f0c97203fcdc3a31eb019dd7e0746f09642b3e017",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9d341e5063dd7ed042f9457a5d1153076bb34b105718f0aae916c609906cd703",
+              "resultSha256": "861cf8abb2fa698098219b4f0c97203fcdc3a31eb019dd7e0746f09642b3e017",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_order_details",
+          "toolCallId": "call_01_1T1MGxZL3uNkyE5l6dAM0925",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "3e7663c9effed4fb68e208fd5eb95cdd2012435c0b7501e96a50059f499eb6c1",
+              "resultSha256": "9f399054c67550dd65981ad6202a9dfbf7ee8e05b072684d1286da43d9ede2df",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "3e7663c9effed4fb68e208fd5eb95cdd2012435c0b7501e96a50059f499eb6c1",
+              "resultSha256": "9f399054c67550dd65981ad6202a9dfbf7ee8e05b072684d1286da43d9ede2df",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_order_details",
+          "toolCallId": "call_02_Rdlgndor2LUD7T57r4yF1673",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ab454429f2d6968e2342eef844a0d6ccd6ed7a6938062ecec3e23c6c08faadfe",
+              "resultSha256": "3b8f282f821f3f42ed2612244edf48ecb4c4addec051f0fc0f15209aa7522048",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ab454429f2d6968e2342eef844a0d6ccd6ed7a6938062ecec3e23c6c08faadfe",
+              "resultSha256": "3b8f282f821f3f42ed2612244edf48ecb4c4addec051f0fc0f15209aa7522048",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_order_details",
+          "toolCallId": "call_03_1sfb6sjoZfdgPnt3aX6T4988",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca147d745bae4604b602006c9af2864e6fc4d34da766a49dfc2a20748bb9efab",
+              "resultSha256": "903ccd860d6eb34ca50bdbb979e5ed47edf2276ecacc3667cdaf933abca604a9",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca147d745bae4604b602006c9af2864e6fc4d34da766a49dfc2a20748bb9efab",
+              "resultSha256": "903ccd860d6eb34ca50bdbb979e5ed47edf2276ecacc3667cdaf933abca604a9",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "get_order_details",
+          "toolCallId": "call_04_sGi9fVwGFOeNXkBQfqQ20490",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "704fb0fcc8cd3bd50e76f33066a6fbe1ef5c1e5f6db6f0add360c2cee460ef46",
+              "resultSha256": "7819db6bfadbadfe725b8b5e6ac03b912b38ec8b2f230aa77cc9f0a4b5b9ed5c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "704fb0fcc8cd3bd50e76f33066a6fbe1ef5c1e5f6db6f0add360c2cee460ef46",
+              "resultSha256": "7819db6bfadbadfe725b8b5e6ac03b912b38ec8b2f230aa77cc9f0a4b5b9ed5c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "modify_pending_order_address",
+          "toolCallId": "call_00_YeLjcVw8dB3lUzXeV9740261",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "5a21c2739b635a0c34c2c6bd2f7ea16a71203000016be83fc420504df5ef3c6a",
+              "resultSha256": "975411c17f8dedd05e87cb7ab5d1fb2739139601ef414dcba44d400f4ee4f89f",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "5a21c2739b635a0c34c2c6bd2f7ea16a71203000016be83fc420504df5ef3c6a",
+              "resultSha256": "975411c17f8dedd05e87cb7ab5d1fb2739139601ef414dcba44d400f4ee4f89f",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 8,
+          "name": "modify_pending_order_address",
+          "toolCallId": "call_00_5M84u1JqhEHWgJgRjleT7197",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4c78cbc4d8c19e16e2c68d4bb5f4bdd79595d24687a55e5235f1a0f7f1ae787a",
+              "resultSha256": "e5e84c66a168c98550122e2da32f5f112e2339ba8fca3e98bb1f97077d67badf",
+              "dbBefore": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "dbAfter": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4c78cbc4d8c19e16e2c68d4bb5f4bdd79595d24687a55e5235f1a0f7f1ae787a",
+              "resultSha256": "e5e84c66a168c98550122e2da32f5f112e2339ba8fca3e98bb1f97077d67badf",
+              "dbBefore": "958622efd89392421f6714f3eed61e90490ff893cfadf22d63b70365af978dce",
+              "dbAfter": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 9,
+          "name": "modify_pending_order_address",
+          "toolCallId": "call_00_75ZzF0sUnLV2nNmb0O3O9384",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "158ad708ac3bd30596ce58b22590bbc67a53a350cd783204f8e1234c77a3c656",
+              "resultSha256": "2174f2db9e6b63a3d808c9d8392e9b6f9c6ab36bc8eda27e496fca2b08b01fa7",
+              "dbBefore": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "dbAfter": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "158ad708ac3bd30596ce58b22590bbc67a53a350cd783204f8e1234c77a3c656",
+              "resultSha256": "2174f2db9e6b63a3d808c9d8392e9b6f9c6ab36bc8eda27e496fca2b08b01fa7",
+              "dbBefore": "423c08e77c5f829d2c38d04b08ccaf6f858ee8c9aa145bb1a4834e737b30cfa3",
+              "dbAfter": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 10,
+          "name": "modify_user_address",
+          "toolCallId": "call_00_nTMpv7hmsIMtn5ZRjcg33535",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c423b361df0424064fd79441e4e6c699a2f155800d526b79f9abe83f38931035",
+              "resultSha256": "f9435ac3008dbb502b1456a0a0f0cef5bef52064126814c94bcc60b3c56694a3",
+              "dbBefore": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "dbAfter": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c423b361df0424064fd79441e4e6c699a2f155800d526b79f9abe83f38931035",
+              "resultSha256": "f9435ac3008dbb502b1456a0a0f0cef5bef52064126814c94bcc60b3c56694a3",
+              "dbBefore": "7ceb794e1195acb5773b06cc4ad69945c9044b4999f1a41f756fa928e46895f2",
+              "dbAfter": "facad1bdef80ec3f9c47e3ab90a31fd1d7d9d8a876a540a058fc0fed1cc6e48b",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "caseId": "retail-native-83",
+      "originalMethod": "native-scoped-local-confirmation",
+      "actionsInSavedTrace": 7,
+      "actionsCompared": 7,
+      "samePrefixActions": 7,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+        "scoped": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "find_user_id_by_name_zip",
+          "toolCallId": "call_00_C7EgGARd8KB0Qjq8lerj0662",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9688b72849c0948550ec5ffa2ff633e0ca7767be00688e9c15951df4032a9872",
+              "resultSha256": "8124990941ed9c1d1cad6023a40ac77de5038ceaaf03c19cfdb19fb9c39da55a",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "9688b72849c0948550ec5ffa2ff633e0ca7767be00688e9c15951df4032a9872",
+              "resultSha256": "8124990941ed9c1d1cad6023a40ac77de5038ceaaf03c19cfdb19fb9c39da55a",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_user_details",
+          "toolCallId": "call_00_lqNKwauDgIiafRN3ULk51326",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2f22b44fbca24414ee9ff9887c004cd82fd927ad20d35b1085b43d851564dc3f",
+              "resultSha256": "5a4af4d100868186194159e4cdc9318644f9cc905e10ffca97e8209e8bbdef34",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2f22b44fbca24414ee9ff9887c004cd82fd927ad20d35b1085b43d851564dc3f",
+              "resultSha256": "5a4af4d100868186194159e4cdc9318644f9cc905e10ffca97e8209e8bbdef34",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_order_details",
+          "toolCallId": "call_00_CntZqIuSfTN2FpaS5MH28170",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "960a19f6fbbf12ecdabeed88b18ee0d045125d4dd85933c2e2f9f1027a6f5b08",
+              "resultSha256": "f7e4b16ec36ceb86b5d3e476163c42c5b4c69acf358bfdeb9c4889368cb66ff2",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "960a19f6fbbf12ecdabeed88b18ee0d045125d4dd85933c2e2f9f1027a6f5b08",
+              "resultSha256": "f7e4b16ec36ceb86b5d3e476163c42c5b4c69acf358bfdeb9c4889368cb66ff2",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_order_details",
+          "toolCallId": "call_01_BivLMEt374JktV21n4Ih8243",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b64d38e0444572d692bd6cf17eb614e2674f8435b06cb224cce1922e05047eb0",
+              "resultSha256": "0108022505d29d6c9ee20200630c52153fc9727f92cfeb594d95729357681984",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b64d38e0444572d692bd6cf17eb614e2674f8435b06cb224cce1922e05047eb0",
+              "resultSha256": "0108022505d29d6c9ee20200630c52153fc9727f92cfeb594d95729357681984",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_order_details",
+          "toolCallId": "call_02_9b90eIU0u2P0D4dldzLA8735",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "06a08fb53edc547fcb88fc3c56e4d73f2638d11b688ed7299d1263f4ffce4566",
+              "resultSha256": "6a88865d8de2e7f59002f809e8ead3b633363b34cd44b1ad164dcee7881c2535",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "06a08fb53edc547fcb88fc3c56e4d73f2638d11b688ed7299d1263f4ffce4566",
+              "resultSha256": "6a88865d8de2e7f59002f809e8ead3b633363b34cd44b1ad164dcee7881c2535",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_order_details",
+          "toolCallId": "call_03_XcEkLy5SIel0OZScMYMZ7554",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "738ce696a7caffdcd228f7811d968297fda2e2f14ecf7f5e450395960616c64a",
+              "resultSha256": "8c9c02e16d7e09c4121584e363176fde18718fbc32972a72468e40532a4b79a6",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "738ce696a7caffdcd228f7811d968297fda2e2f14ecf7f5e450395960616c64a",
+              "resultSha256": "8c9c02e16d7e09c4121584e363176fde18718fbc32972a72468e40532a4b79a6",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "return_delivered_order_items",
+          "toolCallId": "call_00_LSqqqCjdonERiTcpfkVl5642",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "dc696d91e6256ce370875a9de21b033c62e7a1f6893994b4218cca3ea8769c1c",
+              "resultSha256": "94222401e6467b8c0d3efc13002fa7a5440565478e0d9218f570f2ba01f99722",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "dc696d91e6256ce370875a9de21b033c62e7a1f6893994b4218cca3ea8769c1c",
+              "resultSha256": "94222401e6467b8c0d3efc13002fa7a5440565478e0d9218f570f2ba01f99722",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "6d6c5796be53ea085ab9c5897824ec22c9c9de165259fbedc5d7dfe2064be2b9",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "caseId": "retail-native-75",
+      "originalMethod": "native-scoped-local-confirmation",
+      "actionsInSavedTrace": 7,
+      "actionsCompared": 7,
+      "samePrefixActions": 7,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011",
+        "scoped": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "find_user_id_by_email",
+          "toolCallId": "call_00_5oc94TNZu0MmAXgxGmU43597",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e29388df78c9629aaed2db8d9731bd46d2ee89fca4d4db9f72d546ceea0b197d",
+              "resultSha256": "f32bd8b1034cff2a90a687d8a95f996bf84f3c5810c9ae55aeeffbd3abb7534c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e29388df78c9629aaed2db8d9731bd46d2ee89fca4d4db9f72d546ceea0b197d",
+              "resultSha256": "f32bd8b1034cff2a90a687d8a95f996bf84f3c5810c9ae55aeeffbd3abb7534c",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_user_details",
+          "toolCallId": "call_00_peRUinc4taeL0jaFKzlf6263",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "607af436c516fccf527ac25f55b3e2837ddc435bbd0b50c8ae7fd0d0718dca02",
+              "resultSha256": "cb781d766f6be273f9e7e409e0e9e8ebdd71e636bf5113959d9f7cf98d29aee0",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "607af436c516fccf527ac25f55b3e2837ddc435bbd0b50c8ae7fd0d0718dca02",
+              "resultSha256": "cb781d766f6be273f9e7e409e0e9e8ebdd71e636bf5113959d9f7cf98d29aee0",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_order_details",
+          "toolCallId": "call_00_hB8nfOJa1HGGCMKpyvKz4459",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "3b382cc3fd704bbbd6cf7665bb2b7d421e02c72038a5fd86e4c97bda8b829682",
+              "resultSha256": "ee645328ea5c790fe34a45ea5674d7b7af770baf4a8e400e4ad9754598a7a135",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "3b382cc3fd704bbbd6cf7665bb2b7d421e02c72038a5fd86e4c97bda8b829682",
+              "resultSha256": "ee645328ea5c790fe34a45ea5674d7b7af770baf4a8e400e4ad9754598a7a135",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_order_details",
+          "toolCallId": "call_01_zLDA8Azw7YsIJNMwUPZj2915",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "be3dbe846a791c23edb33b955d1639489df2d8b44c8952c01a13b0c702b0d0ef",
+              "resultSha256": "28ef871509341268260c1ef2c1248918bc1cb388be6646f777e7859cffe3c656",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "be3dbe846a791c23edb33b955d1639489df2d8b44c8952c01a13b0c702b0d0ef",
+              "resultSha256": "28ef871509341268260c1ef2c1248918bc1cb388be6646f777e7859cffe3c656",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_order_details",
+          "toolCallId": "call_02_6CNeqVfy9w2Gc9TIwhXe6934",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "0840b54e7430f3d66f42a653a3021db6ce8034e53575b41778debea154af98bc",
+              "resultSha256": "24b0c19d8f161992fa571d3225771ed129868388674b345958556c90737aad53",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "0840b54e7430f3d66f42a653a3021db6ce8034e53575b41778debea154af98bc",
+              "resultSha256": "24b0c19d8f161992fa571d3225771ed129868388674b345958556c90737aad53",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_product_details",
+          "toolCallId": "call_00_WamoRdZwoA3VUOSBe5QJ6764",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4eadf75a2e8c82c1af730f62d68adf9f98c6748e45b63d65027409188bc6c6e4",
+              "resultSha256": "7cac4fc332fc97927f8298857bc38bc6aac78283799e7cce90dac8097e03697d",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4eadf75a2e8c82c1af730f62d68adf9f98c6748e45b63d65027409188bc6c6e4",
+              "resultSha256": "7cac4fc332fc97927f8298857bc38bc6aac78283799e7cce90dac8097e03697d",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "exchange_delivered_order_items",
+          "toolCallId": "call_00_nUlKwZCrdk1NT4yPsOTm2045",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b891b7fa888806f55af97a655dfde35e937afbb8123692ef69590d0995cba4b1",
+              "resultSha256": "85ac6e3ce02a6214e910bbfa2010f29527b27f3228ee0ca5a4f29f07e9f7e774",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b891b7fa888806f55af97a655dfde35e937afbb8123692ef69590d0995cba4b1",
+              "resultSha256": "85ac6e3ce02a6214e910bbfa2010f29527b27f3228ee0ca5a4f29f07e9f7e774",
+              "dbBefore": "b25c9cb211f5efcaee5dd646054a73c4a9f43f4f5acc32c10713cd9f9ac20e9c",
+              "dbAfter": "4715bef725f018044add89f1735e469169366c03443f759b8ec56c54bb4a8011",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "caseId": "airline-native-42",
+      "originalMethod": "native-scoped-local-confirmation",
+      "actionsInSavedTrace": 10,
+      "actionsCompared": 10,
+      "samePrefixActions": 10,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a",
+        "scoped": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "get_user_details",
+          "toolCallId": "call_00_cpRRu2F2b59jB9gZ5vZw8790",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "8140972b51fea809e87c7687ffce6d6d3415f57f3daedf5ccd41f2f0ba8d0165",
+              "resultSha256": "4771f42cf6cc338cd2d3d81b05d2172106b0f5d5923175b4f4653769d638e7d4",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "8140972b51fea809e87c7687ffce6d6d3415f57f3daedf5ccd41f2f0ba8d0165",
+              "resultSha256": "4771f42cf6cc338cd2d3d81b05d2172106b0f5d5923175b4f4653769d638e7d4",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_reservation_details",
+          "toolCallId": "call_00_cCkgO2qFFCQ7t1ddIsVO9940",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "a103d444f015c96fc851ea096b1e6644840413f5b87a5e706e93c5ed85eea427",
+              "resultSha256": "70733a8c2f1cbd03bb6e2b3ec800a64cbabb47a0e09da887a9ed82fc6660db7b",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "a103d444f015c96fc851ea096b1e6644840413f5b87a5e706e93c5ed85eea427",
+              "resultSha256": "70733a8c2f1cbd03bb6e2b3ec800a64cbabb47a0e09da887a9ed82fc6660db7b",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_reservation_details",
+          "toolCallId": "call_01_lh7n00dmfqAHv3sYas668438",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "63feb9ac146405555d2f56f21839ddbdefcf2a3eebbafad22c6a1de127abb2b8",
+              "resultSha256": "9d1ebbe8ce087c1de9f37407a1656f00d454af23be07e424f0285c0e460847f9",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "63feb9ac146405555d2f56f21839ddbdefcf2a3eebbafad22c6a1de127abb2b8",
+              "resultSha256": "9d1ebbe8ce087c1de9f37407a1656f00d454af23be07e424f0285c0e460847f9",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_reservation_details",
+          "toolCallId": "call_02_UtQf07nWF6Y5hQrhsSKx3146",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "36e9f0544d1329742160fb62193f0e7a208be7cbfc603a43bd480a4436fc2c66",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "36e9f0544d1329742160fb62193f0e7a208be7cbfc603a43bd480a4436fc2c66",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "get_reservation_details",
+          "toolCallId": "call_03_qwi6fyhUGGJeOM9JyJOQ1681",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "19117c3af19d68518b50d64f234bbc862288007934f069797916d9c00efece5d",
+              "resultSha256": "c18cfce5ced7654d38fb687f377241e89c0502015ec52fffde2a454525ecd584",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "19117c3af19d68518b50d64f234bbc862288007934f069797916d9c00efece5d",
+              "resultSha256": "c18cfce5ced7654d38fb687f377241e89c0502015ec52fffde2a454525ecd584",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "get_reservation_details",
+          "toolCallId": "call_04_rkR2URxOEKbwQB4oPW0w6889",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "02cc458ac346738006b4c752e9657e901bb037a1b91d663da10940636b549b80",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "02cc458ac346738006b4c752e9657e901bb037a1b91d663da10940636b549b80",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "get_reservation_details",
+          "toolCallId": "call_05_OsbaoAyQMLInhKhORQx63169",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "190cd953de5826dd1d10cd73a7eec6b8e737e6e00c59e652e3922e8176af457b",
+              "resultSha256": "afbd9d5dd685a10d82410394df11f25871b523cf7b9a5d50ea384808989ee0c2",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "190cd953de5826dd1d10cd73a7eec6b8e737e6e00c59e652e3922e8176af457b",
+              "resultSha256": "afbd9d5dd685a10d82410394df11f25871b523cf7b9a5d50ea384808989ee0c2",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "get_reservation_details",
+          "toolCallId": "call_06_1ku9MapnZU4qbgKDUkw31341",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e2c100c7470c95840522b22c76f381ef15924a717f5e14e6d1b8061486954dff",
+              "resultSha256": "d494fa4b2935dc3f835275cbc415e6f56b02540c393315d5644f75bcbb1ae664",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "e2c100c7470c95840522b22c76f381ef15924a717f5e14e6d1b8061486954dff",
+              "resultSha256": "d494fa4b2935dc3f835275cbc415e6f56b02540c393315d5644f75bcbb1ae664",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 8,
+          "name": "cancel_reservation",
+          "toolCallId": "call_00_EQDevBDrauHJywqtAL5F2953",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "5436e34fa147f4e9cfa0f46a447bc5fb312d8ea5576acbf5c0781663a406cd01",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "7d36a1dd03926cf9d90e5ce227dd88ee1d29761cc840c88a4b194b248e991028",
+              "resultSha256": "5436e34fa147f4e9cfa0f46a447bc5fb312d8ea5576acbf5c0781663a406cd01",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 9,
+          "name": "cancel_reservation",
+          "toolCallId": "call_00_X4itOE8BsxsNHlKplW9R3354",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "7369fd42aaae18898827ab752122e9b82fbc122ab185dbd7c53954a7382ebce0",
+              "dbBefore": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "dbAfter": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2a92f77b4ab193ba412c385cc29137eee74bf98ef6d862cce7009db0b25eddc9",
+              "resultSha256": "7369fd42aaae18898827ab752122e9b82fbc122ab185dbd7c53954a7382ebce0",
+              "dbBefore": "b639c432f8e71934af09e96cdec12c1d768daef8258450a25d7aed63ad8e1621",
+              "dbAfter": "768a1bf6bcedc298cdf5f7ce0d7956a12bfd383adcdc6531e8ed1ebfc605374a",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "caseId": "airline-native-11",
+      "originalMethod": "native-scoped-local-confirmation",
+      "actionsInSavedTrace": 8,
+      "actionsCompared": 8,
+      "samePrefixActions": 8,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "1e46d540ec2e530b9388347f5be682742e76f9c7cdd32c1c58438f765412f64f",
+        "scoped": "1e46d540ec2e530b9388347f5be682742e76f9c7cdd32c1c58438f765412f64f"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "get_user_details",
+          "toolCallId": "call_00_j9pUNqp1mm4wyJItj4Q89506",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b4392f436128e47819ef733e2b81c6930d05a07618814fb5e9074dea2883f221",
+              "resultSha256": "8c43e013c28b7e467bbe164a8c498acde10c30e7ccec506657960723452c7fda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "b4392f436128e47819ef733e2b81c6930d05a07618814fb5e9074dea2883f221",
+              "resultSha256": "8c43e013c28b7e467bbe164a8c498acde10c30e7ccec506657960723452c7fda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_reservation_details",
+          "toolCallId": "call_00_igLbtST0GjnMj4xm76Gs6701",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca204bd2e829e3f775720a636140dfd3fabafae67fc6477ef2f8a5de2b656dba",
+              "resultSha256": "7918daa241726c119c9f3df0e8df5606d45978a04b4f77251d4766cd954c71f0",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ca204bd2e829e3f775720a636140dfd3fabafae67fc6477ef2f8a5de2b656dba",
+              "resultSha256": "7918daa241726c119c9f3df0e8df5606d45978a04b4f77251d4766cd954c71f0",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "get_reservation_details",
+          "toolCallId": "call_01_TTy34CxQzpL7WDPVrhVn1074",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "31a7d3094a19b9f431f2a4e39b3464c0b674afbad36164b1565f79cb8158610a",
+              "resultSha256": "7f457a7d988f1684ef881f2e0829881cde7103d6783f52bb7da3b8d2872a2bda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "31a7d3094a19b9f431f2a4e39b3464c0b674afbad36164b1565f79cb8158610a",
+              "resultSha256": "7f457a7d988f1684ef881f2e0829881cde7103d6783f52bb7da3b8d2872a2bda",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "get_reservation_details",
+          "toolCallId": "call_02_8Wxz18pRbEdT7DxWjg2d3634",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2fb2e70e3f3bd571456e25843d0a760c4c128ea1ad29b3dd8112e0e39576a5bc",
+              "resultSha256": "54c118b8c70cd03559a842c55cc27ef66bc6ede3afd8f3bc6b36d4bb0f936adb",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2fb2e70e3f3bd571456e25843d0a760c4c128ea1ad29b3dd8112e0e39576a5bc",
+              "resultSha256": "54c118b8c70cd03559a842c55cc27ef66bc6ede3afd8f3bc6b36d4bb0f936adb",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "search_direct_flight",
+          "toolCallId": "call_00_bolZHbEYvovT5M3vrshK3419",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2000f96f4061db47c68e671a26a62c6c2c691a1154ae48da2f26f4f567e0fa22",
+              "resultSha256": "9f67ac5910a37867f9279ef2a6e7fa1fbc3c18a23d1bf6e064866861152ed431",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "2000f96f4061db47c68e671a26a62c6c2c691a1154ae48da2f26f4f567e0fa22",
+              "resultSha256": "9f67ac5910a37867f9279ef2a6e7fa1fbc3c18a23d1bf6e064866861152ed431",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "search_direct_flight",
+          "toolCallId": "call_01_pxLevR8d94w3YSRyzzVm4862",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "18694e995c1ee2cf216cace49022c512bcbed2f3f81a96c7840ab4ed4aa30c31",
+              "resultSha256": "06b2d2f7dde8c163916fce8a5499a403c7138c76cc419ed6faa1bb78030b2d8a",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "18694e995c1ee2cf216cace49022c512bcbed2f3f81a96c7840ab4ed4aa30c31",
+              "resultSha256": "06b2d2f7dde8c163916fce8a5499a403c7138c76cc419ed6faa1bb78030b2d8a",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "update_reservation_flights",
+          "toolCallId": "call_00_6hnjjrQ3J0KxvErvWpL87440",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": false,
+              "argumentsSha256": "5959a38dade49cb4cef2f97f0e3ca163e7a5b54580ad5d682297db08b095d344",
+              "resultSha256": "ca300f2a031423f55eaf459316296b3ec7bdf3ab8bdc3c0f6bb7d6274a28ca4f",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": "AdapterValidationError"
+            },
+            "scoped": {
+              "nativeExecuted": false,
+              "argumentsSha256": "5959a38dade49cb4cef2f97f0e3ca163e7a5b54580ad5d682297db08b095d344",
+              "resultSha256": "ca300f2a031423f55eaf459316296b3ec7bdf3ab8bdc3c0f6bb7d6274a28ca4f",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": "AdapterValidationError"
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "update_reservation_flights",
+          "toolCallId": "call_00_4OY4uccruLkKmQmn7oEJ1706",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4babf7b275fe01c9f52f962e7b1aebb11b96210e244a95ec02307be61aee0d96",
+              "resultSha256": "92a1a8e050b1c46e43d9b717f46f201845d8dd494e39a26e1fc573d41d04ecb8",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "1e46d540ec2e530b9388347f5be682742e76f9c7cdd32c1c58438f765412f64f",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4babf7b275fe01c9f52f962e7b1aebb11b96210e244a95ec02307be61aee0d96",
+              "resultSha256": "92a1a8e050b1c46e43d9b717f46f201845d8dd494e39a26e1fc573d41d04ecb8",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "1e46d540ec2e530b9388347f5be682742e76f9c7cdd32c1c58438f765412f64f",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "caseId": "airline-native-23",
+      "originalMethod": "native-scoped-local-confirmation",
+      "actionsInSavedTrace": 9,
+      "actionsCompared": 9,
+      "samePrefixActions": 9,
+      "firstDivergence": null,
+      "equivalentOnRecordedTrajectory": true,
+      "finalStates": {
+        "tokenized": "b46d1bed5ba2b9865240d1073bc143e93d59be2c363ed26e1a45523e929e6e11",
+        "scoped": "b46d1bed5ba2b9865240d1073bc143e93d59be2c363ed26e1a45523e929e6e11"
+      },
+      "steps": [
+        {
+          "index": 0,
+          "name": "get_user_details",
+          "toolCallId": "call_00_GBH3UsnrlUdAGOyWXTdW4111",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "cbe9ce3c93516a5fb0916bdcc782695fab0c9d850f7d046667684a008e677b40",
+              "resultSha256": "e5ef5bd8c1d6c04e48686cffe1df64c4e8070abbeb20a5c3839d5af056644bd5",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "cbe9ce3c93516a5fb0916bdcc782695fab0c9d850f7d046667684a008e677b40",
+              "resultSha256": "e5ef5bd8c1d6c04e48686cffe1df64c4e8070abbeb20a5c3839d5af056644bd5",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "name": "get_reservation_details",
+          "toolCallId": "call_00_cDepBXNRBC1iEaeff3wa0979",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ae0a4df72ec02bf133f6db47a20a88b712683758b9a93442d00a48764c653a17",
+              "resultSha256": "a4fbcbf66367c3f75f7a559bdd77a6bec52c4e9820337db71bbf4dc6554de200",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ae0a4df72ec02bf133f6db47a20a88b712683758b9a93442d00a48764c653a17",
+              "resultSha256": "a4fbcbf66367c3f75f7a559bdd77a6bec52c4e9820337db71bbf4dc6554de200",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "name": "cancel_reservation",
+          "toolCallId": "call_00_pTsU7OszlD4VP5IhhNCi3190",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ae0a4df72ec02bf133f6db47a20a88b712683758b9a93442d00a48764c653a17",
+              "resultSha256": "3fa18f9cdd058d14cfa19dacdb6e9a84ca18516710d1ff57812d236c0c9f59a8",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "ae0a4df72ec02bf133f6db47a20a88b712683758b9a93442d00a48764c653a17",
+              "resultSha256": "3fa18f9cdd058d14cfa19dacdb6e9a84ca18516710d1ff57812d236c0c9f59a8",
+              "dbBefore": "124e39a664b56402bcd09cb8a6a9cece6acb8462337c969799d5658e3250f263",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "name": "search_direct_flight",
+          "toolCallId": "call_00_0UUuFTa68Pvy9oIDIAVq0134",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4e7405d7552646fccba3470fc83357b1a7578c32d6ac60aba6acd02601b9cbd9",
+              "resultSha256": "d109645c6152eab456a043c1020c1403625317a80f68cfdd977f8821e3c4432a",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4e7405d7552646fccba3470fc83357b1a7578c32d6ac60aba6acd02601b9cbd9",
+              "resultSha256": "d109645c6152eab456a043c1020c1403625317a80f68cfdd977f8821e3c4432a",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "name": "search_direct_flight",
+          "toolCallId": "call_01_OK8c3M9N1DK7tA0fK8VS3277",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 5,
+          "name": "search_onestop_flight",
+          "toolCallId": "call_00_pxEKihkR8Zdig65uloIb9912",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "c3313c7c11cb3ef11706ea4a47c6ebad4f3edc80bd95da10d8e97e3527bbd165",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "759704e244bf57d067fdac9a66e025f14e76d2c29208632f01b54f8ad9ac8102",
+              "resultSha256": "c3313c7c11cb3ef11706ea4a47c6ebad4f3edc80bd95da10d8e97e3527bbd165",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 6,
+          "name": "book_reservation",
+          "toolCallId": "call_00_W5IoqHuv5PEiJm6FlhjY3812",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c44000e3538f53674eb048fc20400371f96d0067d9720bc7e65aa2a5020ad907",
+              "resultSha256": "e1a18662faf15f1563f955d463a353914d1fe4cd5b64b4b9688645b59e86f24d",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "7f3c4ce525f4d32bcc3b2c2b6e077e6e3553afed145d9e6225e22ed3467c225c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "c44000e3538f53674eb048fc20400371f96d0067d9720bc7e65aa2a5020ad907",
+              "resultSha256": "e1a18662faf15f1563f955d463a353914d1fe4cd5b64b4b9688645b59e86f24d",
+              "dbBefore": "ef1b513808e5a0584bea6f43ef9ea7ed4df6c746d9ce92492a465266116e8da5",
+              "dbAfter": "7f3c4ce525f4d32bcc3b2c2b6e077e6e3553afed145d9e6225e22ed3467c225c",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 7,
+          "name": "book_reservation",
+          "toolCallId": "call_00_WJL1whG27ghFxd1Nsuqh7994",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "51e92e0c08cca945bc6ff7a2991486201b10920de87bc41ed4c21a13a01c48af",
+              "resultSha256": "ee1d918ed2c86e6a0c67bef45dede6e44a58b763208a0916a65e45d8c4352a43",
+              "dbBefore": "7f3c4ce525f4d32bcc3b2c2b6e077e6e3553afed145d9e6225e22ed3467c225c",
+              "dbAfter": "66702684dc387ef26bbf17435654ae06930637137d49ec994a380d101de8312b",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "51e92e0c08cca945bc6ff7a2991486201b10920de87bc41ed4c21a13a01c48af",
+              "resultSha256": "ee1d918ed2c86e6a0c67bef45dede6e44a58b763208a0916a65e45d8c4352a43",
+              "dbBefore": "7f3c4ce525f4d32bcc3b2c2b6e077e6e3553afed145d9e6225e22ed3467c225c",
+              "dbAfter": "66702684dc387ef26bbf17435654ae06930637137d49ec994a380d101de8312b",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        },
+        {
+          "index": 8,
+          "name": "book_reservation",
+          "toolCallId": "call_00_NBkHxCvOHcZDpGnrRqbA6074",
+          "same": true,
+          "arms": {
+            "tokenized": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4cf3901c8155d54e7c1b0b73e6624cef6f1201bd212511a8129d04144b6b8f62",
+              "resultSha256": "ddb51e8245d0abcfb4dca7031ec5d875365ef0995d30d725ba5830c2ef1c850f",
+              "dbBefore": "66702684dc387ef26bbf17435654ae06930637137d49ec994a380d101de8312b",
+              "dbAfter": "b46d1bed5ba2b9865240d1073bc143e93d59be2c363ed26e1a45523e929e6e11",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            },
+            "scoped": {
+              "nativeExecuted": true,
+              "argumentsSha256": "4cf3901c8155d54e7c1b0b73e6624cef6f1201bd212511a8129d04144b6b8f62",
+              "resultSha256": "ddb51e8245d0abcfb4dca7031ec5d875365ef0995d30d725ba5830c2ef1c850f",
+              "dbBefore": "66702684dc387ef26bbf17435654ae06930637137d49ec994a380d101de8312b",
+              "dbAfter": "b46d1bed5ba2b9865240d1073bc143e93d59be2c363ed26e1a45523e929e6e11",
+              "bindingGuardRefusal": null,
+              "errorType": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
