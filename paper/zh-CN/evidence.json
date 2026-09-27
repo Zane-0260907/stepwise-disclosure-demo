@@ -1,0 +1,94 @@
+{
+  "scope": "Counts from separate studies are never pooled. V10 is development-only; the constructed contract check is not a task benchmark.",
+  "sourceDigest": "SHA-256 of parsed JSON serialized compactly in original key order; top-level verifiedAt is excluded from the financial summary only.",
+  "sources": [
+    {
+      "path": "evidence/validation-v8/summary.json",
+      "sha256": "3f596a1af9328ddcb1d347753ee6fc7b3459bf7917fb8521262fbf30a25cd8e7"
+    },
+    {
+      "path": "evidence/validation-v8/analysis.json",
+      "sha256": "3f841b4850bee925c5a4bc58c6e7ffde43bbd8108126753c28700e16e2e104be"
+    },
+    {
+      "path": "evidence/development-v10/analysis.json",
+      "sha256": "55451f38d1a8de568ef99fe1073b65fc5fbc36662e0b6060374240d022bea3f0"
+    },
+    {
+      "path": "evidence/development-v10/paired-replay.json",
+      "sha256": "de8e178ae3fe7a1911b13e5d9909ab50cc9c4df3cfc6e89b9df7827f223c4bf9"
+    },
+    {
+      "path": "evidence/requirement-demo/trace.json",
+      "sha256": "94f2ef342e8cc6430525e4dc52819bbdfad2d1f737cb9c052367f4ed354c328e"
+    }
+  ],
+  "financial": {
+    "questions": 24,
+    "modelCalls": 96,
+    "plans": 48,
+    "labelMatches": 28,
+    "runsPerMethod": 240,
+    "allExecutions": 1440,
+    "restartCalls": 331,
+    "reuseCalls": 261,
+    "restartFields": 724,
+    "reuseFields": 500,
+    "retainedComputations": 112,
+    "reductionPct": 21.148036253776436,
+    "interval": [
+      19.10828025477707,
+      23.841059602649008
+    ],
+    "planningMethodsAgree": true
+  },
+  "business": {
+    "uniqueTasks": 6,
+    "attempts": 54,
+    "allModelCalls": 952,
+    "allTokens": 4485819,
+    "methods": [
+      {
+        "method": "native-full-local-confirmation",
+        "attempts": 6,
+        "stateMatches": 5,
+        "agentCalls": 61,
+        "protectedToolLeavesShownRaw": 111,
+        "bindingGuardRefusals": 0,
+        "protocolViolations": 28
+      },
+      {
+        "method": "native-tokenized-local-confirmation",
+        "attempts": 6,
+        "stateMatches": 4,
+        "agentCalls": 67,
+        "protectedToolLeavesShownRaw": 0,
+        "bindingGuardRefusals": 0,
+        "protocolViolations": 29
+      },
+      {
+        "method": "native-scoped-local-confirmation",
+        "attempts": 6,
+        "stateMatches": 6,
+        "agentCalls": 67,
+        "protectedToolLeavesShownRaw": 0,
+        "bindingGuardRefusals": 0,
+        "protocolViolations": 31
+      }
+    ]
+  },
+  "mechanism": {
+    "recordedTrajectories": 12,
+    "uniqueTasks": 6,
+    "actionsCompared": 107,
+    "equivalentTrajectories": 12,
+    "divergentTrajectories": 0,
+    "newModelCalls": 0
+  },
+  "constructedCheck": {
+    "stages": 3,
+    "httpRequests": 2,
+    "cumulativeItems": 3,
+    "modelCalls": 0
+  }
+}

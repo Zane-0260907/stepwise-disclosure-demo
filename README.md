@@ -59,11 +59,15 @@ Node.js runs the step planner, receiver and web interface; PDF.js reads the synt
 
 ## Current version: real model graphs and bounded continuation
 
-> **V10 development evidence:** original multi-turn retail/airline tasks now execute native state-changing tools, with locally resolved references and a common confirmation layer. All 952 real model calls are available for offline audit. The six training tasks do not establish a new placement algorithm or an added strong-baseline benefit; the stable manuscript/UI remain v8. [Exact results, limitations and reproduction](evidence/development-v10/README.md).
+**Updated Chinese manuscript:** [editable four-page Word draft](paper/zh-CN/按步执行与信息共享_中文最新稿.docx) · [PDF](paper/zh-CN/按步执行与信息共享_中文最新稿.pdf). The manuscript now includes both the financial study and the native multi-turn development results, including the fixed-trajectory ablation. Its [numerical evidence map](paper/zh-CN/evidence.json) is regenerated from checked source records. The approved browser walkthrough continues to use the financial route; native business tasks remain a separate executable adapter.
+
+**Registered requirement controller:** run `node scripts/run-requirement-demo.mjs` for a real local HTTP example of derived input, capability withdrawal, rechecking and local completion. This is a constructed integration check, not a new benchmark or evidence of algorithmic superiority. [Inputs, decision rule, exact trace and limitations](docs/requirement-controller.md).
+
+> **V10 development evidence:** original multi-turn retail/airline tasks execute native state-changing tools, with locally resolved references and a common confirmation layer. All 952 real model calls are available for offline audit. The six training tasks do not establish a new placement algorithm or an added strong-baseline benefit. [Exact results, limitations and reproduction](evidence/development-v10/README.md).
 
 > **Mechanism gate:** a fixed-trajectory intervention compared 107 actions in 12 recorded trajectories. Removing the additional reference checks changed no business call or final state. The current candidate has not demonstrated an added mechanism benefit. [Evidence and related-work assessment](docs/mechanism-gate.zh-CN.md).
 
-> **Development branch:** the v9 delayed-view candidate did not pass its initial strong-baseline comparison. The stable interface and manuscript below remain v8. [Read the negative result and reproduce all 202 main-study calls offline](evidence/development-v9/README.md). This is not a new successful paper result.
+> **Earlier development:** the v9 delayed-view candidate did not pass its initial strong-baseline comparison. [Read the negative result and reproduce all 202 main-study calls offline](evidence/development-v9/README.md). This is not a new successful paper result.
 
 The original goal remains **where each step runs and what its recipient receives**. V8 connects real model tool calls, a calculation graph, source/capability changes, valid-result reuse and actual receiver records. A shared phase budget bounds repeated numeric-field transmissions relative to the same phase's greedy continuation.
 

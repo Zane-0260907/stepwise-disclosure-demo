@@ -1,0 +1,222 @@
+{
+  "scope": "Constructed integration check, not a natural-task experiment or evidence of novelty.",
+  "localData": {
+    "amount": 120,
+    "limit": 100
+  },
+  "steps": [
+    {
+      "label": "The registered service accepts a locally derived predicate.",
+      "ticket": {
+        "status": "ready",
+        "contract": "threshold-assessment",
+        "recipient": "registered-receiver",
+        "representation": "derived-result",
+        "kind": "remote",
+        "addedItems": 1,
+        "bytes": 97
+      },
+      "result": {
+        "aboveLimit": true
+      },
+      "cumulativeItems": 1
+    },
+    {
+      "label": "Derived representation is withdrawn; recheck and send permitted operands.",
+      "ticket": {
+        "status": "ready",
+        "contract": "threshold-assessment",
+        "recipient": "registered-receiver",
+        "representation": "raw-operands",
+        "kind": "remote",
+        "addedItems": 2,
+        "bytes": 102
+      },
+      "result": {
+        "aboveLimit": true
+      },
+      "cumulativeItems": 3
+    },
+    {
+      "label": "Local completion becomes available; no additional transmission.",
+      "ticket": {
+        "status": "ready",
+        "contract": "threshold-assessment",
+        "recipient": "registered-receiver",
+        "representation": "local-result",
+        "kind": "local",
+        "addedItems": 0,
+        "bytes": 0
+      },
+      "result": {
+        "aboveLimit": true
+      },
+      "cumulativeItems": 3
+    }
+  ],
+  "receipts": [
+    {
+      "representation": "derived-result",
+      "body": "{\"contract\":\"threshold-assessment\",\"representation\":\"derived-result\",\"input\":{\"aboveLimit\":true}}",
+      "requestSha256": "74da3f10fecb3405994059726c304cfffc4ad4c82b771a5964363912b16d5f52",
+      "result": {
+        "aboveLimit": true
+      }
+    },
+    {
+      "representation": "raw-operands",
+      "body": "{\"contract\":\"threshold-assessment\",\"representation\":\"raw-operands\",\"input\":{\"amount\":120,\"limit\":100}}",
+      "requestSha256": "0e29316aaa6865f9d8410eed9ef19747e8337375feb8b450f7aa4cc8760e2e07",
+      "result": {
+        "aboveLimit": true
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "requirements.checked",
+      "contract": "threshold-assessment",
+      "recipient": "registered-receiver",
+      "requirements": [
+        "above-limit"
+      ],
+      "alternatives": [
+        {
+          "id": "derived-result",
+          "kind": "remote",
+          "addedItems": 1,
+          "bytes": 97
+        },
+        {
+          "id": "raw-operands",
+          "kind": "remote",
+          "addedItems": 2,
+          "bytes": 102
+        }
+      ],
+      "unavailable": [
+        {
+          "id": "local-result",
+          "reason": "CAPABILITY_UNAVAILABLE"
+        }
+      ],
+      "selected": "derived-result"
+    },
+    {
+      "type": "transmission.attempted",
+      "recipient": "registered-receiver",
+      "representation": "derived-result",
+      "bodySha256": "74da3f10fecb3405994059726c304cfffc4ad4c82b771a5964363912b16d5f52",
+      "cumulativeItems": 1,
+      "bytes": 97
+    },
+    {
+      "type": "receipt.verified",
+      "recipient": "registered-receiver",
+      "bodySha256": "74da3f10fecb3405994059726c304cfffc4ad4c82b771a5964363912b16d5f52"
+    },
+    {
+      "type": "requirements.checked",
+      "contract": "threshold-assessment",
+      "recipient": "registered-receiver",
+      "requirements": [
+        "above-limit"
+      ],
+      "alternatives": [
+        {
+          "id": "derived-result",
+          "kind": "remote",
+          "addedItems": 0,
+          "bytes": 97
+        },
+        {
+          "id": "raw-operands",
+          "kind": "remote",
+          "addedItems": 2,
+          "bytes": 102
+        }
+      ],
+      "unavailable": [
+        {
+          "id": "local-result",
+          "reason": "CAPABILITY_UNAVAILABLE"
+        }
+      ],
+      "selected": "derived-result"
+    },
+    {
+      "type": "requirements.checked",
+      "contract": "threshold-assessment",
+      "recipient": "registered-receiver",
+      "requirements": [
+        "above-limit"
+      ],
+      "alternatives": [
+        {
+          "id": "raw-operands",
+          "kind": "remote",
+          "addedItems": 2,
+          "bytes": 102
+        }
+      ],
+      "unavailable": [
+        {
+          "id": "local-result",
+          "reason": "CAPABILITY_UNAVAILABLE"
+        },
+        {
+          "id": "derived-result",
+          "reason": "CAPABILITY_UNAVAILABLE"
+        }
+      ],
+      "selected": "raw-operands"
+    },
+    {
+      "type": "transmission.attempted",
+      "recipient": "registered-receiver",
+      "representation": "raw-operands",
+      "bodySha256": "0e29316aaa6865f9d8410eed9ef19747e8337375feb8b450f7aa4cc8760e2e07",
+      "cumulativeItems": 3,
+      "bytes": 102
+    },
+    {
+      "type": "receipt.verified",
+      "recipient": "registered-receiver",
+      "bodySha256": "0e29316aaa6865f9d8410eed9ef19747e8337375feb8b450f7aa4cc8760e2e07"
+    },
+    {
+      "type": "requirements.checked",
+      "contract": "threshold-assessment",
+      "recipient": "registered-receiver",
+      "requirements": [
+        "above-limit"
+      ],
+      "alternatives": [
+        {
+          "id": "local-result",
+          "kind": "local",
+          "addedItems": 0,
+          "bytes": 0
+        },
+        {
+          "id": "raw-operands",
+          "kind": "remote",
+          "addedItems": 0,
+          "bytes": 102
+        }
+      ],
+      "unavailable": [
+        {
+          "id": "derived-result",
+          "reason": "CAPABILITY_UNAVAILABLE"
+        }
+      ],
+      "selected": "local-result"
+    },
+    {
+      "type": "completed.locally",
+      "contract": "threshold-assessment",
+      "representation": "local-result"
+    }
+  ]
+}

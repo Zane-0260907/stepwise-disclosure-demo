@@ -24,6 +24,8 @@ jobs:
       - run: npm run verify:release
       - run: npm run check:inputs
       - run: npm test
+      - run: node scripts/run-requirement-demo.mjs --check
+      - run: node scripts/sync-paper-evidence.mjs --check
       - run: npm run test:boundaries
       - run: node scripts/verify-deepseek-records.mjs
       - run: node scripts/verify-progressive-showcase.mjs
@@ -63,6 +65,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python scripts/audit-paper.py
       - name: Verify external candidate inputs and evaluator separation
         shell: pwsh
         run: |
