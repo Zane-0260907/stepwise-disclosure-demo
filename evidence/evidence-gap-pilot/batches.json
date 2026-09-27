@@ -1,0 +1,37 @@
+{
+  "scope": "development records, not independent test results",
+  "independentSourceTasks": 4,
+  "batches": [
+    {
+      "runId": "gap-canary-01",
+      "attempts": 16,
+      "completed": 11,
+      "modelCalls": 26,
+      "tokens": 71333,
+      "archiveBytes": 420742,
+      "archiveSha256": "37e9ef1dda0da8efc279e09a771babcaedec96a7557c56b8b9ecc615ef44c972"
+    },
+    {
+      "runId": "gap-canary-02",
+      "attempts": 9,
+      "completed": 6,
+      "modelCalls": 40,
+      "tokens": 231566,
+      "archiveBytes": 708999,
+      "archiveSha256": "67af5d3db5ad140f1da7ae2f661741d92a19b38fb6365839c925e9812fb1c11c"
+    },
+    {
+      "runId": "gap-canary-03",
+      "attempts": 16,
+      "completed": 15,
+      "modelCalls": 38,
+      "tokens": 135216,
+      "archiveBytes": 559652,
+      "archiveSha256": "71585d86fd9bc27ac2c0c3b2ec398c9a821c3adff54dfd6d92662adaef900664"
+    }
+  ],
+  "modelCalls": 104,
+  "tokens": 438115,
+  "matchedDistinctProviderRecords": 104,
+  "candidateGate": "not passed: no controller effect on the eight final paired trajectories"
+}

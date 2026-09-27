@@ -1,0 +1,104 @@
+{
+  "scope": "offline verification of saved model responses; zero new provider requests",
+  "verifiedAttempts": 16,
+  "matchedProviderRecords": 26,
+  "modelCallsMadeByVerifier": 0,
+  "verified": [
+    {
+      "caseId": "gap-dev-01",
+      "method": "full",
+      "calls": 1,
+      "sourceCharacters": 39622
+    },
+    {
+      "caseId": "gap-dev-01",
+      "method": "static",
+      "calls": 2,
+      "sourceCharacters": 2282
+    },
+    {
+      "caseId": "gap-dev-01",
+      "method": "on_demand",
+      "calls": 1,
+      "sourceCharacters": 2282
+    },
+    {
+      "caseId": "gap-dev-01",
+      "method": "gap_repair",
+      "calls": 1,
+      "sourceCharacters": 2282
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "full",
+      "calls": 1,
+      "sourceCharacters": 21450
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "static",
+      "calls": 1,
+      "sourceCharacters": 2450
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "on_demand",
+      "calls": 1,
+      "sourceCharacters": 2450
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "gap_repair",
+      "calls": 4,
+      "sourceCharacters": 6378
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "full",
+      "calls": 4,
+      "sourceCharacters": 9700
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "static",
+      "calls": 1,
+      "sourceCharacters": 2464
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "on_demand",
+      "calls": 1,
+      "sourceCharacters": 2464
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "gap_repair",
+      "calls": 1,
+      "sourceCharacters": 2464
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "full",
+      "calls": 1,
+      "sourceCharacters": 8380
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "static",
+      "calls": 1,
+      "sourceCharacters": 2510
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "on_demand",
+      "calls": 2,
+      "sourceCharacters": 2510
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "gap_repair",
+      "calls": 3,
+      "sourceCharacters": 2510
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "post-hoc same-prefix controller intervention; not new model trials",
+  "runId": "gap-canary-03",
+  "independentSourceTasks": 4,
+  "trajectories": 8,
+  "changedTrajectories": 0,
+  "newModelCalls": 0,
+  "rows": [
+    {
+      "caseId": "gap-dev-01",
+      "from": "on_demand",
+      "to": "gap_repair",
+      "replayedIdenticalRequests": 5,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 11917,
+      "counterfactualSourceCharactersBeforeStop": 11917
+    },
+    {
+      "caseId": "gap-dev-01",
+      "from": "gap_repair",
+      "to": "on_demand",
+      "replayedIdenticalRequests": 5,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 11982,
+      "counterfactualSourceCharactersBeforeStop": 11982
+    },
+    {
+      "caseId": "gap-dev-02",
+      "from": "on_demand",
+      "to": "gap_repair",
+      "replayedIdenticalRequests": 3,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 10502,
+      "counterfactualSourceCharactersBeforeStop": 10502
+    },
+    {
+      "caseId": "gap-dev-02",
+      "from": "gap_repair",
+      "to": "on_demand",
+      "replayedIdenticalRequests": 3,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 11297,
+      "counterfactualSourceCharactersBeforeStop": 11297
+    },
+    {
+      "caseId": "gap-dev-03",
+      "from": "on_demand",
+      "to": "gap_repair",
+      "replayedIdenticalRequests": 4,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 7663,
+      "counterfactualSourceCharactersBeforeStop": 7663
+    },
+    {
+      "caseId": "gap-dev-03",
+      "from": "gap_repair",
+      "to": "on_demand",
+      "replayedIdenticalRequests": 4,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 9700,
+      "counterfactualSourceCharactersBeforeStop": 9700
+    },
+    {
+      "caseId": "gap-dev-04",
+      "from": "on_demand",
+      "to": "gap_repair",
+      "replayedIdenticalRequests": 3,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 8380,
+      "counterfactualSourceCharactersBeforeStop": 8380
+    },
+    {
+      "caseId": "gap-dev-04",
+      "from": "gap_repair",
+      "to": "on_demand",
+      "replayedIdenticalRequests": 3,
+      "originalAutomaticRepairs": 0,
+      "interventionChangedObservedExecution": false,
+      "divergence": null,
+      "identicalTerminal": true,
+      "originalSourceCharacters": 6632,
+      "counterfactualSourceCharactersBeforeStop": 6632
+    }
+  ],
+  "limits": "Identical executions demonstrate no effect on these observed trajectories only. Divergent trajectories stop before reusing an invalid downstream model response. This is not a population effect or privacy proof."
+}

@@ -2,7 +2,7 @@ name: Checks
 
 on:
   push:
-    branches: [main, codex/adaptive-views-v9, codex/dynamic-tasks-v10]
+    branches: [main, codex/adaptive-views-v9, codex/dynamic-tasks-v10, codex/evidence-gap-pilot]
   pull_request:
 
 permissions:
@@ -66,6 +66,20 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/audit-paper.py
+      - name: Verify evidence-gap development records and causal audit
+        shell: pwsh
+        run: |
+          python test/gap-score.test.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          foreach ($batch in @('gap-canary-01', 'gap-canary-02', 'gap-canary-03')) {
+            Expand-Archive -LiteralPath "evidence/evidence-gap-pilot/$batch-records.zip" -DestinationPath . -Force
+            node scripts/verify-gap-pilot.mjs "--run-id=$batch" --check
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+            python scripts/score-gap-pilot.py "--run-id=$batch" --check
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          node scripts/audit-gap-intervention.mjs --run-id=gap-canary-03 --check
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Verify external candidate inputs and evaluator separation
         shell: pwsh
         run: |

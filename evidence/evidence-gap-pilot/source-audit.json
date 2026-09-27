@@ -1,0 +1,707 @@
+{
+  "kind": "source parser audit; zero model calls, no task accuracy or effect estimate",
+  "inputSha256": "1ee6195e833b226546eb60e3fb23ba1c46225c069bfc9b970c8760db38e663f7",
+  "runtimeSha256": "5f0215e323daa0d586216b57834b78fc140bcf38fedc9299f7ce2f676ed32836",
+  "independentSources": 24,
+  "modelCalls": 0,
+  "sourcesWithResolvedInitialGap": 5,
+  "sourcesWithAmbiguousInitialReferences": 1,
+  "sourcesWithUnmatchedInitialReferences": 5,
+  "interpretation": "References are extracted from ALL initial chunks here, not model-selected answers. This is a parser opportunity audit, not evidence that the candidate would fire or help.",
+  "rows": [
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "category": "Termination For Convenience",
+      "sourceCharacters": 39622,
+      "chunks": 50,
+      "initialChunkIds": [
+        "p0023",
+        "p0014",
+        "p0022"
+      ],
+      "initialSourceCharacters": 2282,
+      "resolvedReferences": 1,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 1,
+      "missingTargetIds": [
+        "p0021"
+      ],
+      "obligations": [
+        {
+          "sourceChunk": "p0023",
+          "reference": "Section 6",
+          "key": "section:6",
+          "status": "resolved",
+          "targets": [
+            "p0021"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0014",
+          "reference": "Schedule 4",
+          "key": "schedule:4",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "category": "Anti-Assignment",
+      "sourceCharacters": 21450,
+      "chunks": 27,
+      "initialChunkIds": [
+        "p0015",
+        "p0004",
+        "p0003"
+      ],
+      "initialSourceCharacters": 2450,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-03",
+      "sourceGroup": "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+      "category": "Cap On Liability",
+      "sourceCharacters": 9700,
+      "chunks": 13,
+      "initialChunkIds": [
+        "p0005",
+        "p0004",
+        "p0003"
+      ],
+      "initialSourceCharacters": 2464,
+      "resolvedReferences": 2,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0003",
+          "reference": "paragraph 1.2",
+          "key": "section:1.2",
+          "status": "resolved",
+          "targets": [
+            "p0003"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0003",
+          "reference": "paragraph 1.3",
+          "key": "section:1.3",
+          "status": "resolved",
+          "targets": [
+            "p0003"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-04",
+      "sourceGroup": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+      "category": "Renewal Term",
+      "sourceCharacters": 8380,
+      "chunks": 11,
+      "initialChunkIds": [
+        "p0007",
+        "p0006",
+        "p0002"
+      ],
+      "initialSourceCharacters": 2510,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-05",
+      "sourceGroup": "TURNKEYCAPITAL,INC_07_20_2017-EX-1.1-Strategic Alliance Agreement",
+      "category": "Notice Period To Terminate Renewal",
+      "sourceCharacters": 12648,
+      "chunks": 17,
+      "initialChunkIds": [
+        "p0015",
+        "p0009",
+        "p0004"
+      ],
+      "initialSourceCharacters": 2076,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-06",
+      "sourceGroup": "TICKETSCOMINC_06_22_1999-EX-10.22-SPONSORSHIP AGREEMENT",
+      "category": "Governing Law",
+      "sourceCharacters": 8080,
+      "chunks": 10,
+      "initialChunkIds": [
+        "p0007",
+        "p0005",
+        "p0008"
+      ],
+      "initialSourceCharacters": 2402,
+      "resolvedReferences": 1,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0007",
+          "reference": "section 6",
+          "key": "section:6",
+          "status": "resolved",
+          "targets": [
+            "p0005"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-07",
+      "sourceGroup": "LOGANSROADHOUSEINC_03_27_1998-EX-10.17-SPONSORSHIP AGREEMENT",
+      "category": "Termination For Convenience",
+      "sourceCharacters": 19171,
+      "chunks": 24,
+      "initialChunkIds": [
+        "p0015",
+        "p0017",
+        "p0013"
+      ],
+      "initialSourceCharacters": 2411,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 1,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0017",
+          "reference": "Article 6",
+          "key": "article:6",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-08",
+      "sourceGroup": "SimplicityEsportsGamingCompany_20181130_8-K_EX-10.1_11444071_EX-10.1_Franchise Agreement",
+      "category": "Anti-Assignment",
+      "sourceCharacters": 28529,
+      "chunks": 37,
+      "initialChunkIds": [
+        "p0023",
+        "p0027",
+        "p0035"
+      ],
+      "initialSourceCharacters": 2330,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-09",
+      "sourceGroup": "ENTERTAINMENTGAMINGASIAINC_02_15_2005-EX-10.5-DISTRIBUTOR AGREEMENT",
+      "category": "Cap On Liability",
+      "sourceCharacters": 44702,
+      "chunks": 56,
+      "initialChunkIds": [
+        "p0037",
+        "p0002",
+        "p0039"
+      ],
+      "initialSourceCharacters": 2586,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-10",
+      "sourceGroup": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2",
+      "category": "Renewal Term",
+      "sourceCharacters": 7600,
+      "chunks": 11,
+      "initialChunkIds": [
+        "p0005",
+        "p0004",
+        "p0009"
+      ],
+      "initialSourceCharacters": 2088,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 4,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0005",
+          "reference": "Schedule 1",
+          "key": "schedule:1",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0005",
+          "reference": "Exhibit A",
+          "key": "exhibit:a",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0005",
+          "reference": "Exhibit A",
+          "key": "exhibit:a",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0005",
+          "reference": "Exhibit A",
+          "key": "exhibit:a",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-11",
+      "sourceGroup": "LECLANCHÉ S.A. - JOINT DEVELOPMENT AND MARKETING AGREEMENT",
+      "category": "Notice Period To Terminate Renewal",
+      "sourceCharacters": 20380,
+      "chunks": 26,
+      "initialChunkIds": [
+        "p0020",
+        "p0023",
+        "p0016"
+      ],
+      "initialSourceCharacters": 2546,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 1,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0023",
+          "reference": "Article 23",
+          "key": "article:23",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-12",
+      "sourceGroup": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1",
+      "category": "Governing Law",
+      "sourceCharacters": 42473,
+      "chunks": 55,
+      "initialChunkIds": [
+        "p0043",
+        "p0044",
+        "p0015"
+      ],
+      "initialSourceCharacters": 2273,
+      "resolvedReferences": 1,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [
+        "p0040"
+      ],
+      "obligations": [
+        {
+          "sourceChunk": "p0043",
+          "reference": "Section 11",
+          "key": "section:11",
+          "status": "resolved",
+          "targets": [
+            "p0040"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-13",
+      "sourceGroup": "ASHWORTHINC_01_29_1999-EX-10.(D)-PROMOTION AGREEMENT AND NANTZ COMMUNICATIONS, INC.",
+      "category": "Termination For Convenience",
+      "sourceCharacters": 24999,
+      "chunks": 32,
+      "initialChunkIds": [
+        "p0021",
+        "p0022",
+        "p0020"
+      ],
+      "initialSourceCharacters": 2320,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-14",
+      "sourceGroup": "PharmagenInc_20120803_8-KA_EX-10.1_7693204_EX-10.1_Endorsement Agreement",
+      "category": "Anti-Assignment",
+      "sourceCharacters": 17886,
+      "chunks": 23,
+      "initialChunkIds": [
+        "p0015",
+        "p0021",
+        "p0009"
+      ],
+      "initialSourceCharacters": 2312,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 3,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0009",
+          "reference": "Paragraph 10",
+          "key": "section:10",
+          "status": "ambiguous",
+          "targets": [],
+          "candidateCount": 2,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0009",
+          "reference": "Paragraph 10",
+          "key": "section:10",
+          "status": "ambiguous",
+          "targets": [],
+          "candidateCount": 2,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0009",
+          "reference": "paragraph 10",
+          "key": "section:10",
+          "status": "ambiguous",
+          "targets": [],
+          "candidateCount": 2,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-15",
+      "sourceGroup": "GLOBALTECHNOLOGIESLTD_06_08_2020-EX-10.16-CONSULTING AGREEMENT",
+      "category": "Cap On Liability",
+      "sourceCharacters": 20805,
+      "chunks": 27,
+      "initialChunkIds": [
+        "p0010",
+        "p0009",
+        "p0023"
+      ],
+      "initialSourceCharacters": 2097,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-16",
+      "sourceGroup": "Apollo Endosurgery - Manufacturing and Supply Agreement",
+      "category": "Renewal Term",
+      "sourceCharacters": 48253,
+      "chunks": 63,
+      "initialChunkIds": [
+        "p0006",
+        "p0047",
+        "p0023"
+      ],
+      "initialSourceCharacters": 2259,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-17",
+      "sourceGroup": "LifewayFoodsInc_20160316_10-K_EX-10.24_9489766_EX-10.24_Endorsement Agreement",
+      "category": "Notice Period To Terminate Renewal",
+      "sourceCharacters": 10996,
+      "chunks": 15,
+      "initialChunkIds": [
+        "p0011",
+        "p0010",
+        "p0012"
+      ],
+      "initialSourceCharacters": 2463,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-18",
+      "sourceGroup": "PacificapEntertainmentHoldingsInc_20051115_8-KA_EX-1.01_4300894_EX-1.01_Content License Agreement",
+      "category": "Governing Law",
+      "sourceCharacters": 18138,
+      "chunks": 24,
+      "initialChunkIds": [
+        "p0019",
+        "p0014",
+        "p0021"
+      ],
+      "initialSourceCharacters": 2361,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-19",
+      "sourceGroup": "VNUE,INC_07_10_2015-EX-10.1-SPONSORSHIP AGREEMENT",
+      "category": "Termination For Convenience",
+      "sourceCharacters": 20487,
+      "chunks": 26,
+      "initialChunkIds": [
+        "p0008",
+        "p0007",
+        "p0006"
+      ],
+      "initialSourceCharacters": 2462,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    },
+    {
+      "caseId": "gap-dev-20",
+      "sourceGroup": "ArmstrongFlooringInc_20190107_8-K_EX-10.2_11471795_EX-10.2_Intellectual Property Agreement",
+      "category": "Anti-Assignment",
+      "sourceCharacters": 56858,
+      "chunks": 72,
+      "initialChunkIds": [
+        "p0013",
+        "p0038",
+        "p0040"
+      ],
+      "initialSourceCharacters": 2327,
+      "resolvedReferences": 2,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 2,
+      "missingTargetIds": [
+        "p0023"
+      ],
+      "obligations": [
+        {
+          "sourceChunk": "p0013",
+          "reference": "Exhibit B",
+          "key": "exhibit:b",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0013",
+          "reference": "Exhibit C",
+          "key": "exhibit:c",
+          "status": "not_found",
+          "targets": [],
+          "candidateCount": 0,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0038",
+          "reference": "Section 7.1",
+          "key": "section:7.1",
+          "status": "resolved",
+          "targets": [
+            "p0023"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0040",
+          "reference": "Section 13.3",
+          "key": "section:13.3",
+          "status": "resolved",
+          "targets": [
+            "p0040"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-21",
+      "sourceGroup": "ETELOS,INC_03_09_2004-EX-10.8-DISTRIBUTOR AGREEMENT",
+      "category": "Cap On Liability",
+      "sourceCharacters": 25647,
+      "chunks": 33,
+      "initialChunkIds": [
+        "p0020",
+        "p0029",
+        "p0016"
+      ],
+      "initialSourceCharacters": 2191,
+      "resolvedReferences": 1,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [
+        "p0026"
+      ],
+      "obligations": [
+        {
+          "sourceChunk": "p0029",
+          "reference": "section 19",
+          "key": "section:19",
+          "status": "resolved",
+          "targets": [
+            "p0026"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-22",
+      "sourceGroup": "ULTRAGENYXPHARMACEUTICALINC_12_23_2013-EX-10.9-SUPPLY AGREEMENT",
+      "category": "Renewal Term",
+      "sourceCharacters": 14592,
+      "chunks": 19,
+      "initialChunkIds": [
+        "p0012",
+        "p0011",
+        "p0007"
+      ],
+      "initialSourceCharacters": 2387,
+      "resolvedReferences": 3,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": [
+        {
+          "sourceChunk": "p0012",
+          "reference": "Article 6",
+          "key": "article:6",
+          "status": "resolved",
+          "targets": [
+            "p0012"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0012",
+          "reference": "Article 7",
+          "key": "article:7",
+          "status": "resolved",
+          "targets": [
+            "p0012"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        },
+        {
+          "sourceChunk": "p0011",
+          "reference": "Article 5",
+          "key": "article:5",
+          "status": "resolved",
+          "targets": [
+            "p0011"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-23",
+      "sourceGroup": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding Agreement",
+      "category": "Notice Period To Terminate Renewal",
+      "sourceCharacters": 48159,
+      "chunks": 63,
+      "initialChunkIds": [
+        "p0059",
+        "p0047",
+        "p0052"
+      ],
+      "initialSourceCharacters": 2401,
+      "resolvedReferences": 1,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [
+        "p0025"
+      ],
+      "obligations": [
+        {
+          "sourceChunk": "p0047",
+          "reference": "Section 5.4",
+          "key": "section:5.4",
+          "status": "resolved",
+          "targets": [
+            "p0025"
+          ],
+          "candidateCount": 1,
+          "coverage": "chunk containing target heading; does not certify full section coverage"
+        }
+      ]
+    },
+    {
+      "caseId": "gap-dev-24",
+      "sourceGroup": "WARNINGMANAGEMENTSERVICESINC_12_10_1999-EX-10-ENDORSEMENT AGREEMENT",
+      "category": "Governing Law",
+      "sourceCharacters": 29724,
+      "chunks": 40,
+      "initialChunkIds": [
+        "p0035",
+        "p0022",
+        "p0018"
+      ],
+      "initialSourceCharacters": 2539,
+      "resolvedReferences": 0,
+      "ambiguousReferences": 0,
+      "unmatchedReferences": 0,
+      "missingTargetIds": [],
+      "obligations": []
+    }
+  ]
+}

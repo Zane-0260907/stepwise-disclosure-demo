@@ -1,0 +1,62 @@
+{
+  "scope": "offline verification of saved model responses; zero new provider requests",
+  "verifiedAttempts": 9,
+  "matchedProviderRecords": 40,
+  "modelCallsMadeByVerifier": 0,
+  "verified": [
+    {
+      "caseId": "gap-dev-01",
+      "method": "full",
+      "calls": 8,
+      "sourceCharacters": 39622
+    },
+    {
+      "caseId": "gap-dev-01",
+      "method": "static",
+      "calls": 8,
+      "sourceCharacters": 2282
+    },
+    {
+      "caseId": "gap-dev-01",
+      "method": "on_demand",
+      "calls": 4,
+      "sourceCharacters": 11843
+    },
+    {
+      "caseId": "gap-dev-01",
+      "method": "gap_repair",
+      "calls": 4,
+      "sourceCharacters": 11917
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "full",
+      "calls": 1,
+      "sourceCharacters": 21450
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "static",
+      "calls": 1,
+      "sourceCharacters": 2450
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "on_demand",
+      "calls": 4,
+      "sourceCharacters": 11330
+    },
+    {
+      "caseId": "gap-dev-02",
+      "method": "gap_repair",
+      "calls": 3,
+      "sourceCharacters": 11335
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "on_demand",
+      "calls": 7,
+      "sourceCharacters": 7021
+    }
+  ]
+}

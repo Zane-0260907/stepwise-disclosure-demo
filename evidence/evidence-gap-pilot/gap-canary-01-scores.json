@@ -1,0 +1,450 @@
+{
+  "scope": "development source-span diagnostic; not official CUAD or privacy evaluation",
+  "runId": "gap-canary-01",
+  "aggregates": {
+    "full": {
+      "attempts": 4,
+      "completed": 4,
+      "meanF1": 0.23475536147297482,
+      "sourceCharacters": 79152,
+      "modelCalls": 7
+    },
+    "static": {
+      "attempts": 4,
+      "completed": 4,
+      "meanF1": 0.5344394609117697,
+      "sourceCharacters": 9706,
+      "modelCalls": 5
+    },
+    "on_demand": {
+      "attempts": 4,
+      "completed": 1,
+      "meanF1": 0.1781874039938556,
+      "sourceCharacters": 9706,
+      "modelCalls": 5
+    },
+    "gap_repair": {
+      "attempts": 4,
+      "completed": 2,
+      "meanF1": 0.26542393795170105,
+      "sourceCharacters": 13634,
+      "modelCalls": 9
+    }
+  },
+  "paired": [
+    {
+      "caseId": "gap-dev-01",
+      "baselineF1": 0,
+      "candidateF1": 0,
+      "f1Difference": 0,
+      "sourceCharacterDifference": 0,
+      "modelCallDifference": 0
+    },
+    {
+      "caseId": "gap-dev-02",
+      "baselineF1": 0,
+      "candidateF1": 0.34894613583138173,
+      "f1Difference": 0.34894613583138173,
+      "sourceCharacterDifference": 3928,
+      "modelCallDifference": 3
+    },
+    {
+      "caseId": "gap-dev-03",
+      "baselineF1": 0,
+      "candidateF1": 0,
+      "f1Difference": 0,
+      "sourceCharacterDifference": 0,
+      "modelCallDifference": 0
+    },
+    {
+      "caseId": "gap-dev-04",
+      "baselineF1": 0.7127496159754224,
+      "candidateF1": 0.7127496159754224,
+      "f1Difference": 0.0,
+      "sourceCharacterDifference": 0,
+      "modelCallDifference": 1
+    }
+  ],
+  "rows": [
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "full",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 11233,
+        "localProxyRequestBytes": 45776,
+        "uniqueSourceCharacters": 39622,
+        "repeatedSourceCharacters": 39622,
+        "modelElapsedMs": 3102.3885,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 2964,
+        "goldCharacters": 0
+      }
+    },
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "static",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 2,
+        "tokens": 3604,
+        "localProxyRequestBytes": 11518,
+        "uniqueSourceCharacters": 2282,
+        "repeatedSourceCharacters": 4564,
+        "modelElapsedMs": 3162.0107999999996,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 1167,
+        "goldCharacters": 0
+      }
+    },
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "on_demand",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1699,
+        "localProxyRequestBytes": 6157,
+        "uniqueSourceCharacters": 2282,
+        "repeatedSourceCharacters": 2282,
+        "modelElapsedMs": 862.4290000000001,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "gap_repair",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1699,
+        "localProxyRequestBytes": 6157,
+        "uniqueSourceCharacters": 2282,
+        "repeatedSourceCharacters": 2282,
+        "modelElapsedMs": 1037.6906,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "full",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 5930,
+        "localProxyRequestBytes": 25608,
+        "uniqueSourceCharacters": 21450,
+        "repeatedSourceCharacters": 21450,
+        "modelElapsedMs": 1702.3208000000013,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.12756849315068494,
+        "recall": 1.0,
+        "f1": 0.22627182991647687,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 1168,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "static",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1398,
+        "localProxyRequestBytes": 5043,
+        "uniqueSourceCharacters": 2450,
+        "repeatedSourceCharacters": 2450,
+        "modelElapsedMs": 898.723399999999,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.2609457092819615,
+        "recall": 1.0,
+        "f1": 0.41388888888888886,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 571,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "on_demand",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1676,
+        "localProxyRequestBytes": 6305,
+        "uniqueSourceCharacters": 2450,
+        "repeatedSourceCharacters": 2450,
+        "modelElapsedMs": 730.546699999999,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "gap_repair",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 4,
+        "tokens": 10378,
+        "localProxyRequestBytes": 42381,
+        "uniqueSourceCharacters": 6378,
+        "repeatedSourceCharacters": 21584,
+        "modelElapsedMs": 3546.966199999999,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.21134751773049645,
+        "recall": 1.0,
+        "f1": 0.34894613583138173,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 705,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-03",
+      "sourceGroup": "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+      "method": "full",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 4,
+        "tokens": 15645,
+        "localProxyRequestBytes": 61553,
+        "uniqueSourceCharacters": 9700,
+        "repeatedSourceCharacters": 38800,
+        "modelElapsedMs": 5640.541699999998,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 28,
+        "goldCharacters": 0
+      }
+    },
+    {
+      "caseId": "gap-dev-03",
+      "sourceGroup": "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+      "method": "static",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1375,
+        "localProxyRequestBytes": 5194,
+        "uniqueSourceCharacters": 2464,
+        "repeatedSourceCharacters": 2464,
+        "modelElapsedMs": 689.5011999999988,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1.0,
+        "validSourceQuotes": true,
+        "emptyAnswer": true,
+        "predictedCharacters": 0,
+        "goldCharacters": 0
+      }
+    },
+    {
+      "caseId": "gap-dev-03",
+      "sourceGroup": "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+      "method": "on_demand",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1756,
+        "localProxyRequestBytes": 6456,
+        "uniqueSourceCharacters": 2464,
+        "repeatedSourceCharacters": 2464,
+        "modelElapsedMs": 845.8359,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-03",
+      "sourceGroup": "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+      "method": "gap_repair",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1753,
+        "localProxyRequestBytes": 6456,
+        "uniqueSourceCharacters": 2464,
+        "repeatedSourceCharacters": 2464,
+        "modelElapsedMs": 827.8772999999983,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-04",
+      "sourceGroup": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+      "method": "full",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 2758,
+        "localProxyRequestBytes": 11396,
+        "uniqueSourceCharacters": 8380,
+        "repeatedSourceCharacters": 8380,
+        "modelElapsedMs": 908.6911,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.5536992840095465,
+        "recall": 1.0,
+        "f1": 0.7127496159754224,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 419,
+        "goldCharacters": 232
+      }
+    },
+    {
+      "caseId": "gap-dev-04",
+      "sourceGroup": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+      "method": "static",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1434,
+        "localProxyRequestBytes": 5138,
+        "uniqueSourceCharacters": 2510,
+        "repeatedSourceCharacters": 2510,
+        "modelElapsedMs": 841.5384000000013,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.5672371638141809,
+        "recall": 1.0,
+        "f1": 0.7238689547581902,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 409,
+        "goldCharacters": 232
+      }
+    },
+    {
+      "caseId": "gap-dev-04",
+      "sourceGroup": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+      "method": "on_demand",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 2,
+        "tokens": 3482,
+        "localProxyRequestBytes": 13136,
+        "uniqueSourceCharacters": 2510,
+        "repeatedSourceCharacters": 5020,
+        "modelElapsedMs": 1506.0865000000013,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.5536992840095465,
+        "recall": 1.0,
+        "f1": 0.7127496159754224,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 419,
+        "goldCharacters": 232
+      }
+    },
+    {
+      "caseId": "gap-dev-04",
+      "sourceGroup": "SIBANNAC,INC_12_04_2017-EX-2.1-Strategic Alliance Agreement",
+      "method": "gap_repair",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 3,
+        "tokens": 5513,
+        "localProxyRequestBytes": 20741,
+        "uniqueSourceCharacters": 2510,
+        "repeatedSourceCharacters": 7530,
+        "modelElapsedMs": 2497.7230999999992,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.5536992840095465,
+        "recall": 1.0,
+        "f1": 0.7127496159754224,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 419,
+        "goldCharacters": 232
+      }
+    }
+  ],
+  "limits": [
+    "No statistical superiority inferred from this pilot.",
+    "No human semantic-quality scores.",
+    "Cross-reference matching alone does not prove necessity or sufficiency.",
+    "Source characters and bytes are not semantic privacy risk."
+  ]
+}

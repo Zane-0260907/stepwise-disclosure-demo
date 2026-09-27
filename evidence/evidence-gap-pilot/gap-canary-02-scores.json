@@ -1,0 +1,305 @@
+{
+  "scope": "development source-span diagnostic; not official CUAD or privacy evaluation",
+  "runId": "gap-canary-02",
+  "aggregates": {
+    "full": {
+      "attempts": 2,
+      "completed": 1,
+      "meanF1": 0.11313591495823844,
+      "sourceCharacters": 61072,
+      "modelCalls": 9
+    },
+    "static": {
+      "attempts": 2,
+      "completed": 1,
+      "meanF1": 0.20694444444444443,
+      "sourceCharacters": 4732,
+      "modelCalls": 9
+    },
+    "on_demand": {
+      "attempts": 3,
+      "completed": 2,
+      "meanF1": 0.09442332065906212,
+      "sourceCharacters": 30194,
+      "modelCalls": 15
+    },
+    "gap_repair": {
+      "attempts": 2,
+      "completed": 2,
+      "meanF1": 0.14163498098859317,
+      "sourceCharacters": 23252,
+      "modelCalls": 7
+    }
+  },
+  "paired": [
+    {
+      "caseId": "gap-dev-01",
+      "baselineF1": 0,
+      "candidateF1": 0,
+      "f1Difference": 0,
+      "sourceCharacterDifference": 74,
+      "modelCallDifference": 0
+    },
+    {
+      "caseId": "gap-dev-02",
+      "baselineF1": 0.28326996197718635,
+      "candidateF1": 0.28326996197718635,
+      "f1Difference": 0.0,
+      "sourceCharacterDifference": 5,
+      "modelCallDifference": -1
+    }
+  ],
+  "rows": [
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "full",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 8,
+        "tokens": 116150,
+        "localProxyRequestBytes": 480952,
+        "uniqueSourceCharacters": 39622,
+        "repeatedSourceCharacters": 316976,
+        "modelElapsedMs": 24228.5166,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "static",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 8,
+        "tokens": 22660,
+        "localProxyRequestBytes": 85073,
+        "uniqueSourceCharacters": 2282,
+        "repeatedSourceCharacters": 18256,
+        "modelElapsedMs": 11176.462099999997,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "on_demand",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 4,
+        "tokens": 15733,
+        "localProxyRequestBytes": 61915,
+        "uniqueSourceCharacters": 11843,
+        "repeatedSourceCharacters": 35976,
+        "modelElapsedMs": 5092.100599999998,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 1756,
+        "goldCharacters": 0
+      }
+    },
+    {
+      "caseId": "gap-dev-01",
+      "sourceGroup": "GopageCorp_20140221_10-K_EX-10.1_8432966_EX-10.1_Content License Agreement",
+      "method": "gap_repair",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 4,
+        "tokens": 15848,
+        "localProxyRequestBytes": 62044,
+        "uniqueSourceCharacters": 11917,
+        "repeatedSourceCharacters": 36050,
+        "modelElapsedMs": 4853.996200000001,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 2000,
+        "goldCharacters": 0
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "full",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 5903,
+        "localProxyRequestBytes": 25704,
+        "uniqueSourceCharacters": 21450,
+        "repeatedSourceCharacters": 21450,
+        "modelElapsedMs": 1207.5676000000021,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.12756849315068494,
+        "recall": 1.0,
+        "f1": 0.22627182991647687,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 1168,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "static",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 1,
+        "tokens": 1416,
+        "localProxyRequestBytes": 5139,
+        "uniqueSourceCharacters": 2450,
+        "repeatedSourceCharacters": 2450,
+        "modelElapsedMs": 901.6863999999987,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.2609457092819615,
+        "recall": 1.0,
+        "f1": 0.41388888888888886,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 571,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "on_demand",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 4,
+        "tokens": 16370,
+        "localProxyRequestBytes": 66381,
+        "uniqueSourceCharacters": 11330,
+        "repeatedSourceCharacters": 36440,
+        "modelElapsedMs": 4328.211700000014,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.16500553709856036,
+        "recall": 1.0,
+        "f1": 0.28326996197718635,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 903,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-02",
+      "sourceGroup": "BORROWMONEYCOM,INC_06_11_2020-EX-10.1-JOINT VENTURE AGREEMENT",
+      "method": "gap_repair",
+      "status": "completed",
+      "metrics": {
+        "modelCalls": 3,
+        "tokens": 10389,
+        "localProxyRequestBytes": 42148,
+        "uniqueSourceCharacters": 11335,
+        "repeatedSourceCharacters": 24388,
+        "modelElapsedMs": 2692.579899999997,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0.16500553709856036,
+        "recall": 1.0,
+        "f1": 0.28326996197718635,
+        "validSourceQuotes": true,
+        "emptyAnswer": false,
+        "predictedCharacters": 903,
+        "goldCharacters": 149
+      }
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "full",
+      "status": "not_run"
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "static",
+      "status": "not_run"
+    },
+    {
+      "caseId": "gap-dev-03",
+      "sourceGroup": "SECURIANFUNDSTRUST_05_01_2012-EX-99.28.H.9-NET INVESTMENT INCOME MAINTENANCE AGREEMENT",
+      "method": "on_demand",
+      "status": "failed",
+      "metrics": {
+        "modelCalls": 7,
+        "tokens": 27097,
+        "localProxyRequestBytes": 105506,
+        "uniqueSourceCharacters": 7021,
+        "repeatedSourceCharacters": 44590,
+        "modelElapsedMs": 7098.649499999992,
+        "automaticRepairs": 0
+      },
+      "score": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "validSourceQuotes": false,
+        "emptyAnswer": false
+      }
+    },
+    {
+      "caseId": "gap-dev-03",
+      "method": "gap_repair",
+      "status": "not_run"
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "full",
+      "status": "not_run"
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "static",
+      "status": "not_run"
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "on_demand",
+      "status": "not_run"
+    },
+    {
+      "caseId": "gap-dev-04",
+      "method": "gap_repair",
+      "status": "not_run"
+    }
+  ],
+  "limits": [
+    "No statistical superiority inferred from this pilot.",
+    "No human semantic-quality scores.",
+    "Cross-reference matching alone does not prove necessity or sufficiency.",
+    "Source characters and bytes are not semantic privacy risk."
+  ]
+}
