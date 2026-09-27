@@ -1,0 +1,71 @@
+{
+  "scope": "Development only. No held-out benchmark or independently adjudicated conversation score. Every diagnostic and failed run is retained.",
+  "upstream": {
+    "repository": "sierra-research/tau2-bench",
+    "revision": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+    "archiveSha256": "578fed48ad285ffcac9506b933fdb46020ce2dfd10435934ba8aa5c5a2e3c94f"
+  },
+  "runs": [
+    {
+      "runId": "dev-v10-full-local-01",
+      "attempts": 6,
+      "calls": 100,
+      "archiveSha256": "22a4aafcb33365f15cb0eafb288f83643369532d774488dc015ea074317f9e71"
+    },
+    {
+      "runId": "dev-v10-local-01",
+      "attempts": 1,
+      "calls": 22,
+      "archiveSha256": "ef22c6111b7267b883277d076eb80bbd942640228358eab6cfed8210eb5a3d6f"
+    },
+    {
+      "runId": "dev-v10-local-02",
+      "attempts": 5,
+      "calls": 92,
+      "archiveSha256": "5a78b67c55fce299039d5c5279d636286b4887c1848dac6d9fac4425df8033c7"
+    },
+    {
+      "runId": "dev-v10-matched-full-02",
+      "attempts": 6,
+      "calls": 110,
+      "archiveSha256": "662f094b11ff8a14528f0cdc3e1b564229b3fa4827abbed3a679b53d031ce426"
+    },
+    {
+      "runId": "dev-v10-matched-scoped-02",
+      "attempts": 6,
+      "calls": 121,
+      "archiveSha256": "3a687203745033b9e9074bf6152584a8d7a29b94ccec85251d9a588c2745cde7"
+    },
+    {
+      "runId": "dev-v10-matched-tokenized-02",
+      "attempts": 6,
+      "calls": 122,
+      "archiveSha256": "d5c95fcba6f25bbc4b4f1e93da38444201246b9d51c712702c14c246089c6e03"
+    },
+    {
+      "runId": "dev-v10-native-01",
+      "attempts": 6,
+      "calls": 63,
+      "archiveSha256": "1025084cf5c4b98d375fec7515ab89067d8506ec028587b46dd285c18a2bda85"
+    },
+    {
+      "runId": "dev-v10-native-02",
+      "attempts": 6,
+      "calls": 101,
+      "archiveSha256": "25965b881a30dcd766839ef68ea5e00f0ac38dc968765b7d8eea7f424ac0b77e"
+    },
+    {
+      "runId": "dev-v10-scoped-01",
+      "attempts": 6,
+      "calls": 95,
+      "archiveSha256": "92f8acd15ab810964f42d9062150b473be8d05cab6af7864e85b91c9fbc231cc"
+    },
+    {
+      "runId": "dev-v10-token-local-01",
+      "attempts": 6,
+      "calls": 126,
+      "archiveSha256": "31e05d87c4b3d7c100b640cd341e2c44fb8322cb936e4d059c28f11a9222fbd1"
+    }
+  ],
+  "upstreamBundleSha256": "75c6052775f40afc0a4b83fd42a4d888e2b5316c6e298f2fb93723ba47a02a00"
+}

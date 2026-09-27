@@ -2,7 +2,7 @@ name: Checks
 
 on:
   push:
-    branches: [main, codex/adaptive-views-v9]
+    branches: [main, codex/adaptive-views-v9, codex/dynamic-tasks-v10]
   pull_request:
 
 permissions:
@@ -87,3 +87,13 @@ jobs:
           python scripts/score-v9-development.py dev-v9-strong-02 --check
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python scripts/analyze-v9-development.py --check
+
+      - name: Verify original multi-turn development tasks offline
+        shell: pwsh
+        run: |
+          python -m pip install --require-hashes -r requirements-v10.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/unpack-native-v10.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python scripts/check-all-native-v10.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

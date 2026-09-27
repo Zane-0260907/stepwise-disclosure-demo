@@ -1,0 +1,12 @@
+import {startDeepSeekProxy} from '../src/research/deepseek-live.mjs';
+import {mkdir,writeFile,unlink} from 'node:fs/promises';
+const key=process.env.DEEPSEEK_API_KEY;delete process.env.DEEPSEEK_API_KEY;
+if(!key)throw Error('Set DEEPSEEK_API_KEY locally before starting this optional live proxy.');
+const directory=new URL('../data/research/v8-session/',import.meta.url);
+await mkdir(directory,{recursive:true});
+const proxy=await startDeepSeekProxy({key,recordDirectory:new URL('provider-egress/',directory)});
+const connection=new URL('connection.json',directory);
+await writeFile(connection,JSON.stringify({url:proxy.url,token:proxy.internalToken}),{mode:0o600});
+console.log('Local DeepSeek proxy ready. Run the native experiment in a second terminal. Ctrl+C stops this proxy.');
+let stopping=false;
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,async()=>{if(stopping)return;stopping=true;await proxy.close();await unlink(connection).catch(()=>{});process.exit(0);});
